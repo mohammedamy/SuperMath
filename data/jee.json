@@ -1231,5 +1231,1885 @@
       }
     },
     "correct_index": "1"
+  },
+  {
+    "id": "JEE-042",
+    "track": "jee",
+    "level": "Grade 12",
+    "topic": "Complex Numbers",
+    "type": "MCQ",
+    "difficulty": "hard",
+    "content": {
+      "en": {
+        "question": "Let \\( z \\) be a complex number satisfying \\( |z - 3 - 4i| = 2 \\). Find the value of \\( |z|^2 + |z - 6 - 8i|^2 \\).",
+        "options": [
+          "58",
+          "50",
+          "64",
+          "52"
+        ],
+        "hint": "Use Apollonius's theorem on the triangle formed by the origin, $z$, and $6+8i$.",
+        "explanation": "Let $A = 0$, $B = 6 + 8i$, and $C = 3 + 4i$ be points in the Argand plane. Note that $C$ is the midpoint of segment $AB$. By Apollonius's theorem, $|z - A|^2 + |z - B|^2 = 2(|z - C|^2 + |AC|^2)$. Given $|z - C| = 2$ and $|AC| = \\sqrt{3^2 + 4^2} = 5$, we get $|z|^2 + |z - 6 - 8i|^2 = 2(2^2 + 5^2) = 2(4 + 25) = 58$."
+      },
+      "ar": {
+        "question": "ليكون \\( z \\) عدداً مركباً يحقق \\( |z - 3 - 4i| = 2 \\). أوجد قيمة \\( |z|^2 + |z - 6 - 8i|^2 \\).",
+        "options": [
+          "58",
+          "50",
+          "64",
+          "52"
+        ],
+        "hint": "استخدم مبرهنة أبولونيوس على المثلث المكون من نقطة الأصل، $z$، و $6+8i$.",
+        "explanation": "لتكن $A = 0$ و $B = 6 + 8i$ و $C = 3 + 4i$ نقاطاً في مستوى أرغاند. نلاحظ أن $C$ هي منتصف القطعة المستقيمة $AB$. باستخدام مبرهنة أبولونيوس، فإن $|z - A|^2 + |z - B|^2 = 2(|z - C|^2 + |AC|^2)$. وبما أن $|z - C| = 2$ و $|AC| = 5$، نجد أن $|z|^2 + |z - 6 - 8i|^2 = 2(4 + 25) = 58$."
+      }
+    },
+    "correct_index": "0"
+  },
+  {
+    "id": "JEE-043",
+    "track": "jee",
+    "level": "Grade 12",
+    "topic": "Definite Integrals",
+    "type": "MCQ",
+    "difficulty": "hard",
+    "content": {
+      "en": {
+        "question": "Evaluate the definite integral $$ I = \\int_{0}^{\\pi} \\frac{x \\sin x}{1 + \\cos^2 x} \\, dx $$",
+        "options": [
+          "\\( \\frac{\\pi^2}{8} \\)",
+          "\\( \\frac{\\pi^2}{4} \\)",
+          "\\( \\frac{\\pi^2}{2} \\)",
+          "\\( \\pi^2 \\)"
+        ],
+        "hint": "Use King's property: $\\int_0^a f(x)dx = \\int_0^a f(a-x)dx$.",
+        "explanation": "Applying King's property gives $I = \\int_0^{\\pi} \\frac{(\\pi - x) \\sin x}{1 + \\cos^2 x} dx$. Adding the two expressions yields $2I = \\pi \\int_0^{\\pi} \\frac{\\sin x}{1 + \\cos^2 x} dx$. Using substitution $u = \\cos x$, we get $2I = \\pi [-\\arctan(\\cos x)]_0^{\\pi} = \\pi (\\frac{\\pi}{4} - (-\\frac{\\pi}{4})) = \\frac{\\pi^2}{2}$. Thus, $I = \\frac{\\pi^2}{4}$."
+      },
+      "ar": {
+        "question": "احسب قيمة التكامل المحدود $$ I = \\int_{0}^{\\pi} \\frac{x \\sin x}{1 + \\cos^2 x} \\, dx $$",
+        "options": [
+          "\\( \\frac{\\pi^2}{8} \\)",
+          "\\( \\frac{\\pi^2}{4} \\)",
+          "\\( \\frac{\\pi^2}{2} \\)",
+          "\\( \\pi^2 \\)"
+        ],
+        "hint": "استخدم خاصية الملك: $\\int_0^a f(x)dx = \\int_0^a f(a-x)dx$.",
+        "explanation": "بتطبيق خاصية الملك نجد أن $I = \\int_0^{\\pi} \\frac{(\\pi - x) \\sin x}{1 + \\cos^2 x} dx$. بجمع المعادلتين نحصل على $2I = \\pi \\int_0^{\\pi} \\frac{\\sin x}{1 + \\cos^2 x} dx$. بالتعويض $u = \\cos x$ نجد أن $2I = \\pi [-\\arctan(\\cos x)]_0^{\\pi} = \\frac{\\pi^2}{2}$، وبالتالي $I = \\frac{\\pi^2}{4}$."
+      }
+    },
+    "correct_index": "1"
+  },
+  {
+    "id": "JEE-044",
+    "track": "jee",
+    "level": "Grade 12",
+    "topic": "Coordinate Geometry",
+    "type": "MCQ",
+    "difficulty": "hard",
+    "content": {
+      "en": {
+        "question": "If the normals at three distinct points \\( P, Q, R \\) on the parabola \\( y^2 = 4x \\) pass through the point \\( (3, 0) \\), then the area of triangle \\( PQR \\) is:",
+        "options": [
+          "2",
+          "4",
+          "\\( \\frac{5}{2} \\)",
+          "1"
+        ],
+        "hint": "The equation of the normal in slope form is $y = mx - 2am - am^3$ with $a=1$.",
+        "explanation": "For $y^2 = 4x$, $a=1$. Equation of normal: $y = mx - 2m - m^3$. Passing through $(3,0)$ gives $0 = 3m - 2m - m^3 \\Rightarrow m(1 - m^2) = 0$, so $m = 0, 1, -1$. The points of contact $(am^2, -2am)$ are $P(0,0)$, $Q(1,-2)$, and $R(1,2)$. Area of $\\triangle PQR = \\frac{1}{2} \\times \\text{base} \\times \\text{height} = \\frac{1}{2} \\times 4 \\times 1 = 2$."
+      },
+      "ar": {
+        "question": "إذا كانت الناظمات عند ثلاث نقاط مختلفة \\( P, Q, R \\) على المكافئ \\( y^2 = 4x \\) تمر بالنقطة \\( (3, 0) \\)، فإن مساحة المثلث \\( PQR \\) تساوي:",
+        "options": [
+          "2",
+          "4",
+          "\\( \\frac{5}{2} \\)",
+          "1"
+        ],
+        "hint": "معادلة الناظم بدلالة الميل هي $y = mx - 2am - am^3$ حيث $a=1$.",
+        "explanation": "بالنسبة للمكافئ $y^2 = 4x$، $a=1$. معادلة الناظم هي $y = mx - 2m - m^3$. بالتعويض بالنقطة $(3,0)$ نجد أن $m(1 - m^2) = 0$، أي $m = 0, 1, -1$. نقاط التماس $(am^2, -2am)$ هي $P(0,0)$ و $Q(1,-2)$ و $R(1,2)$. مساحة المثلث تساوي $\\frac{1}{2} \\times 4 \\times 1 = 2$."
+      }
+    },
+    "correct_index": "0"
+  },
+  {
+    "id": "JEE-045",
+    "track": "jee",
+    "level": "Grade 12",
+    "topic": "Calculus",
+    "type": "MCQ",
+    "difficulty": "medium",
+    "content": {
+      "en": {
+        "question": "Evaluate the limit $$ \\lim_{n \\to \\infty} \\sum_{k=1}^n \\frac{n}{n^2 + k^2} $$",
+        "options": [
+          "\\( \\frac{\\pi}{2} \\)",
+          "\\( \\frac{\\pi}{4} \\)",
+          "\\( \\frac{\\pi}{3} \\)",
+          "\\( \\ln 2 \\)"
+        ],
+        "hint": "Convert the limit of sum into a definite integral Riemann sum.",
+        "explanation": "Rewrite as $\\lim_{n \\to \\infty} \\frac{1}{n} \\sum_{k=1}^n \\frac{1}{1 + (k/n)^2} = \\int_0^1 \\frac{dx}{1 + x^2} = [\\arctan x]_0^1 = \\frac{\\pi}{4}$."
+      },
+      "ar": {
+        "question": "احسب قيمة النهاية $$ \\lim_{n \\to \\infty} \\sum_{k=1}^n \\frac{n}{n^2 + k^2} $$",
+        "options": [
+          "\\( \\frac{\\pi}{2} \\)",
+          "\\( \\frac{\\pi}{4} \\)",
+          "\\( \\frac{\\pi}{3} \\)",
+          "\\( \\ln 2 \\)"
+        ],
+        "hint": "حوّل نهاية المجموع إلى تكامل محدود باستخدام مجموع ريمان.",
+        "explanation": "نكتب النهاية بالشكل $\\lim_{n \\to \\infty} \\frac{1}{n} \\sum_{k=1}^n \\frac{1}{1 + (k/n)^2} = \\int_0^1 \\frac{dx}{1 + x^2} = [\\arctan x]_0^1 = \\frac{\\pi}{4}$."
+      }
+    },
+    "correct_index": "1"
+  },
+  {
+    "id": "JEE-046",
+    "track": "jee",
+    "level": "Grade 12",
+    "topic": "Matrices and Determinants",
+    "type": "MCQ",
+    "difficulty": "hard",
+    "content": {
+      "en": {
+        "question": "Let \\( A = \\begin{pmatrix} 1 & 0 & 0 \\\\ 2 & 1 & 0 \\\\ 3 & 2 & 1 \\end{pmatrix} \\). If \\( U_1, U_2, U_3 \\) are column vectors such that \\( A U_1 = \\begin{pmatrix} 1 \\\\ 0 \\\\ 0 \\end{pmatrix} \\), \\( A U_2 = \\begin{pmatrix} 2 \\\\ 3 \\\\ 0 \\end{pmatrix} \\), \\( A U_3 = \\begin{pmatrix} 2 \\\\ 3 \\\\ 1 \\end{pmatrix} \\), and \\( U \\) is the matrix whose columns are \\( U_1, U_2, U_3 \\), find \\( \\det(U) \\).",
+        "options": [
+          "3",
+          "1",
+          "0",
+          "6"
+        ],
+        "hint": "Write $A U = B$ where $B$ is the matrix formed by the given column vectors.",
+        "explanation": "We are given $A U = \\begin{pmatrix} 1 & 2 & 2 \\\\ 0 & 3 & 3 \\\\ 0 & 0 & 1 \\end{pmatrix} = B$. Taking determinants gives $\\det(A) \\det(U) = \\det(B)$. Since $A$ is lower triangular with 1s on the diagonal, $\\det(A) = 1$. The upper triangular matrix $B$ has determinant $1 \\times 3 \\times 1 = 3$. Hence $\\det(U) = 3$."
+      },
+      "ar": {
+        "question": "لتكن \\( A = \\begin{pmatrix} 1 & 0 & 0 \\\\ 2 & 1 & 0 \\\\ 3 & 2 & 1 \\end{pmatrix} \\). إذا كانت \\( U_1, U_2, U_3 \\) متجهات أعمدة بحيث \\( A U_1 = \\begin{pmatrix} 1 \\\\ 0 \\\\ 0 \\end{pmatrix} \\)، \\( A U_2 = \\begin{pmatrix} 2 \\\\ 3 \\\\ 0 \\end{pmatrix} \\)، \\( A U_3 = \\begin{pmatrix} 2 \\\\ 3 \\\\ 1 \\end{pmatrix} \\)، وكانت \\( U \\) هي المصفوفة التي أعمدتها \\( U_1, U_2, U_3 \\)، أوجد \\( \\det(U) \\).",
+        "options": [
+          "3",
+          "1",
+          "0",
+          "6"
+        ],
+        "hint": "اكتب $A U = B$ حيث $B$ هي المصفوفة المكونة من متجهات الأعمدة المعطاة.",
+        "explanation": "لدينا $A U = \\begin{pmatrix} 1 & 2 & 2 \\\\ 0 & 3 & 3 \\\\ 0 & 0 & 1 \\end{pmatrix} = B$. بأخذ المحدد للطرفين نجد أن $\\det(A) \\det(U) = \\det(B)$. وبما أن $\\det(A) = 1$ و $\\det(B) = 3$، فإن $\\det(U) = 3$."
+      }
+    },
+    "correct_index": "0"
+  },
+  {
+    "id": "JEE-047",
+    "track": "jee",
+    "level": "Grade 12",
+    "topic": "Differential Equations",
+    "type": "MCQ",
+    "difficulty": "medium",
+    "content": {
+      "en": {
+        "question": "Solve the linear differential equation \\( \\frac{dy}{dx} + y \\tan x = \\sec x \\) with initial condition \\( y(0) = 1 \\).",
+        "options": [
+          "\\( y = \\sin x + \\cos x \\)",
+          "\\( y = \\tan x + \\cos x \\)",
+          "\\( y = \\sec x + \\tan x \\)",
+          "\\( y = \\sin x - \\cos x \\)"
+        ],
+        "hint": "Find the integrating factor $\\text{I.F.} = e^{\\int \\tan x dx}$.",
+        "explanation": "Integrating factor $\\text{I.F.} = e^{\\int \\tan x dx} = e^{\\ln \\sec x} = \\sec x$. The solution is $y \\sec x = \\int \\sec^2 x dx = \\tan x + C$. Using $y(0) = 1$, we get $1 \\cdot 1 = 0 + C \\Rightarrow C = 1$. Thus $y \\sec x = \\tan x + 1 \\Rightarrow y = \\sin x + \\cos x$."
+      },
+      "ar": {
+        "question": "حل المعادلة التفاضلية الخطية \\( \\frac{dy}{dx} + y \\tan x = \\sec x \\) مع الشرط الابتدائي \\( y(0) = 1 \\).",
+        "options": [
+          "\\( y = \\sin x + \\cos x \\)",
+          "\\( y = \\tan x + \\cos x \\)",
+          "\\( y = \\sec x + \\tan x \\)",
+          "\\( y = \\sin x - \\cos x \\)"
+        ],
+        "hint": "أوجد عامل التكامل $\\text{I.F.} = e^{\\int \\tan x dx}$.",
+        "explanation": "عامل التكامل هو $\\text{I.F.} = \\sec x$. الحل العام هو $y \\sec x = \\tan x + C$. بالتعويض بالشرط الابتدائي $y(0) = 1$ نجد $C = 1$. بالتالي $y = \\sin x + \\cos x$."
+      }
+    },
+    "correct_index": "0"
+  },
+  {
+    "id": "JEE-048",
+    "track": "jee",
+    "level": "Grade 12",
+    "topic": "3D Geometry",
+    "type": "MCQ",
+    "difficulty": "hard",
+    "content": {
+      "en": {
+        "question": "Find the shortest distance between the lines \\( \\vec{r} = (\\hat{i} + 2\\hat{j} + \\hat{k}) + \\lambda (\\hat{i} - \\hat{j} + \\hat{k}) \\) and \\( \\vec{r} = (2\\hat{i} - \\hat{j} - \\hat{k}) + \\mu (2\\hat{i} + \\hat{j} + 2\\hat{k}) \\).",
+        "options": [
+          "\\( \\frac{3}{\\sqrt{2}} \\)",
+          "\\( \\frac{3}{2} \\)",
+          "\\( \\sqrt{6} \\)",
+          "\\( \\frac{1}{\\sqrt{2}} \\)"
+        ],
+        "hint": "Use the shortest distance formula $d = \\frac{|(\\vec{a}_2 - \\vec{a}_1) \\cdot (\\vec{b}_1 \\times \\vec{b}_2)|}{|\\vec{b}_1 \\times \\vec{b}_2|}$.",
+        "explanation": "$\\vec{a}_2 - \\vec{a}_1 = (1, -3, -2)$. $\\vec{b}_1 \\times \\vec{b}_2 = (-3, 0, 3)$, so $|\\vec{b}_1 \\times \\vec{b}_2| = \\sqrt{18} = 3\\sqrt{2}$. Now $(\\vec{a}_2 - \\vec{a}_1) \\cdot (\\vec{b}_1 \\times \\vec{b}_2) = 1(-3) + (-3)(0) + (-2)(3) = -9$. Shortest distance $d = \\frac{|-9|}{3\\sqrt{2}} = \\frac{3}{\\sqrt{2}}$."
+      },
+      "ar": {
+        "question": "أوجد أقصر مسافة بين المستقيمين \\( \\vec{r} = (\\hat{i} + 2\\hat{j} + \\hat{k}) + \\lambda (\\hat{i} - \\hat{j} + \\hat{k}) \\) و \\( \\vec{r} = (2\\hat{i} - \\hat{j} - \\hat{k}) + \\mu (2\\hat{i} + \\hat{j} + 2\\hat{k}) \\).",
+        "options": [
+          "\\( \\frac{3}{\\sqrt{2}} \\)",
+          "\\( \\frac{3}{2} \\)",
+          "\\( \\sqrt{6} \\)",
+          "\\( \\frac{1}{\\sqrt{2}} \\)"
+        ],
+        "hint": "استخدم قانون أقصر مسافة $d = \\frac{|(\\vec{a}_2 - \\vec{a}_1) \\cdot (\\vec{b}_1 \\times \\vec{b}_2)|}{|\\vec{b}_1 \\times \\vec{b}_2|}$.",
+        "explanation": "$\\vec{a}_2 - \\vec{a}_1 = (1, -3, -2)$، و $\\vec{b}_1 \\times \\vec{b}_2 = (-3, 0, 3)$ وشده يساوي $3\\sqrt{2}$. الجداء السلمي يساوي $-9$. أقصر مسافة $d = \\frac{|-9|}{3\\sqrt{2}} = \\frac{3}{\\sqrt{2}}$."
+      }
+    },
+    "correct_index": "0"
+  },
+  {
+    "id": "JEE-049",
+    "track": "jee",
+    "level": "Grade 12",
+    "topic": "Calculus",
+    "type": "FRQ",
+    "difficulty": "medium",
+    "content": {
+      "en": {
+        "question": "Find the absolute maximum value of \\( f(x) = x^3 - 3x + 2 \\) on the closed interval \\( [-2, 2] \\).",
+        "options": [],
+        "hint": "Check the critical points where $f'(x) = 0$ and the endpoints of the interval.",
+        "explanation": "$f'(x) = 3x^2 - 3 = 0 \\Rightarrow x = \\pm 1$. Evaluate at critical points and endpoints: $f(-2) = -8 + 6 + 2 = 0$, $f(-1) = -1 + 3 + 2 = 4$, $f(1) = 1 - 3 + 2 = 0$, and $f(2) = 8 - 6 + 2 = 4$. Absolute maximum value is 4."
+      },
+      "ar": {
+        "question": "أوجد القيمة العظمى المطلقة للدالة \\( f(x) = x^3 - 3x + 2 \\) على الفترة المغلقة \\( [-2, 2] \\).",
+        "options": [],
+        "hint": "افحص النقاط الحرجة التي عندها $f'(x) = 0$ وطرفي الفترة.",
+        "explanation": "$f'(x) = 3x^2 - 3 = 0 \\Rightarrow x = \\pm 1$. بحساب قيم الدالة عند النقاط الحرجة والطرفين: $f(-2) = 0$ و $f(-1) = 4$ و $f(1) = 0$ و $f(2) = 4$. القيمة العظمى المطلقة هي 4."
+      }
+    },
+    "correct_index": "4"
+  },
+  {
+    "id": "JEE-050",
+    "track": "jee",
+    "level": "Grade 12",
+    "topic": "Coordinate Geometry",
+    "type": "MCQ",
+    "difficulty": "medium",
+    "content": {
+      "en": {
+        "question": "If the line \\( y = mx + c \\) is a tangent to the ellipse \\( \\frac{x^2}{16} + \\frac{y^2}{9} = 1 \\), then \\( c^2 \\) is equal to:",
+        "options": [
+          "\\( 16m^2 + 9 \\)",
+          "\\( 9m^2 + 16 \\)",
+          "\\( 16m^2 - 9 \\)",
+          "\\( \\sqrt{16m^2 + 9} \\)"
+        ],
+        "hint": "The condition for tangency for an ellipse $\\frac{x^2}{a^2} + \\frac{y^2}{b^2} = 1$ is $c^2 = a^2m^2 + b^2$.",
+        "explanation": "Comparing with $\\frac{x^2}{a^2} + \\frac{y^2}{b^2} = 1$, we have $a^2 = 16$ and $b^2 = 9$. The condition for line $y = mx + c$ to be tangent is $c^2 = a^2m^2 + b^2 = 16m^2 + 9$."
+      },
+      "ar": {
+        "question": "إذا كان المستقيم \\( y = mx + c \\) مماساً للقطع الناقص \\( \\frac{x^2}{16} + \\frac{y^2}{9} = 1 \\)، فإن \\( c^2 \\) تساوي:",
+        "options": [
+          "\\( 16m^2 + 9 \\)",
+          "\\( 9m^2 + 16 \\)",
+          "\\( 16m^2 - 9 \\)",
+          "\\( \\sqrt{16m^2 + 9} \\)"
+        ],
+        "hint": "شرط التماس للقطع الناقص $\\frac{x^2}{a^2} + \\frac{y^2}{b^2} = 1$ هو $c^2 = a^2m^2 + b^2$.",
+        "explanation": "بالمقارنة مع القطع الناقص القياسي، لدينا $a^2 = 16$ و $b^2 = 9$. شرط التماس هو $c^2 = a^2m^2 + b^2 = 16m^2 + 9$."
+      }
+    },
+    "correct_index": "0"
+  },
+  {
+    "id": "JEE-051",
+    "track": "jee",
+    "level": "Grade 12",
+    "topic": "Probability",
+    "type": "MCQ",
+    "difficulty": "medium",
+    "content": {
+      "en": {
+        "question": "Two fair dice are rolled. Given that the sum of the numbers showing is odd, what is the conditional probability that at least one die shows a 2?",
+        "options": [
+          "\\( \\frac{1}{3} \\)",
+          "\\( \\frac{1}{6} \\)",
+          "\\( \\frac{5}{18} \\)",
+          "\\( \\frac{1}{2} \\)"
+        ],
+        "hint": "Find the number of outcomes with an odd sum, then count how many of these contain a 2.",
+        "explanation": "Total outcomes with odd sum = $3 \\times 3 + 3 \\times 3 = 18$. The outcomes containing a 2 and having an odd sum require the other die to be odd (1, 3, 5). These pairs are (2,1), (2,3), (2,5), (1,2), (3,2), (5,2) — total 6 outcomes. Probability = $\\frac{6}{18} = \\frac{1}{3}$."
+      },
+      "ar": {
+        "question": "تم إلقاء حجرَي نرد عادلين. إذا علمت أن مجموع العددين الظاهرين فردي، فما هو الاحتمال الشرطي لأن يظهر الرقم 2 على حجر واحد على الأقل؟",
+        "options": [
+          "\\( \\frac{1}{3} \\)",
+          "\\( \\frac{1}{6} \\)",
+          "\\( \\frac{5}{18} \\)",
+          "\\( \\frac{1}{2} \\)"
+        ],
+        "hint": "أوجد عدد النواتج ذات المجموع الفردي، ثم احسب كم منها يحوي الرقم 2.",
+        "explanation": "عدد النواتج ذات المجموع الفردي = 18. الأزواج التي تحوي الرقم 2 وبمجموع فردي تتطلب أن يكون الرقم الآخر فردياً، وهي 6 أزواج. الاحتمال الشرطي = $\\frac{6}{18} = \\frac{1}{3}$."
+      }
+    },
+    "correct_index": "0"
+  },
+  {
+    "id": "JEE-052",
+    "track": "jee",
+    "level": "Grade 12",
+    "topic": "Complex Numbers",
+    "type": "MCQ",
+    "difficulty": "hard",
+    "content": {
+      "en": {
+        "question": "If \\( \\omega \\) is a complex cube root of unity with \\( \\omega \\neq 1 \\), evaluate \\( (1 - \\omega + \\omega^2)^5 + (1 + \\omega - \\omega^2)^5 \\).",
+        "options": [
+          "32",
+          "-32",
+          "16",
+          "0"
+        ],
+        "hint": "Use $1 + \\omega + \\omega^2 = 0$.",
+        "explanation": "Since $1 + \\omega + \\omega^2 = 0$, $1 + \\omega^2 = -\\omega$ and $1 + \\omega = -\\omega^2$. So $1 - \\omega + \\omega^2 = -2\\omega$ and $1 + \\omega - \\omega^2 = -2\\omega^2$. Expression becomes $(-2\\omega)^5 + (-2\\omega^2)^5 = -32\\omega^5 - 32\\omega^{10} = -32(\\omega^2 + \\omega) = -32(-1) = 32$."
+      },
+      "ar": {
+        "question": "إذا كانت \\( \\omega \\) جذراً تكييفياً مركبّاً للواحد الصحيح حيث \\( \\omega \\neq 1 \\)، احسب قيمة \\( (1 - \\omega + \\omega^2)^5 + (1 + \\omega - \\omega^2)^5 \\).",
+        "options": [
+          "32",
+          "-32",
+          "16",
+          "0"
+        ],
+        "hint": "استخدم العلاقة $1 + \\omega + \\omega^2 = 0$.",
+        "explanation": "بما أن $1 + \\omega + \\omega^2 = 0$، فإن $1 + \\omega^2 = -\\omega$ و $1 + \\omega = -\\omega^2$. التعبير يصبح $(-2\\omega)^5 + (-2\\omega^2)^5 = -32\\omega^5 - 32\\omega^{10} = -32(\\omega^2 + \\omega) = 32$."
+      }
+    },
+    "correct_index": "0"
+  },
+  {
+    "id": "JEE-053",
+    "track": "jee",
+    "level": "Grade 12",
+    "topic": "Calculus",
+    "type": "MCQ",
+    "difficulty": "hard",
+    "content": {
+      "en": {
+        "question": "Let \\( f(x) = \\begin{cases} x^p \\sin(1/x) & x \\neq 0 \\\\ 0 & x = 0 \\end{cases} \\). Find the minimum integer value of \\( p \\) for which \\( f(x) \\) is differentiable at \\( x = 0 \\).",
+        "options": [
+          "\\( p = 2 \\)",
+          "\\( p = 1 \\)",
+          "\\( p = 0 \\)",
+          "\\( p = 3 \\)"
+        ],
+        "hint": "Compute $f'(0) = \\lim_{h \\to 0} \\frac{f(h) - f(0)}{h}$.",
+        "explanation": "$f'(0) = \\lim_{h \\to 0} \\frac{h^p \\sin(1/h) - 0}{h} = \\lim_{h \\to 0} h^{p-1} \\sin(1/h)$. For this limit to exist and be finite (equal to 0), we require $p - 1 > 0 \\Rightarrow p > 1$. The minimum integer value is $p = 2$."
+      },
+      "ar": {
+        "question": "لتكن \\( f(x) = \\begin{cases} x^p \\sin(1/x) & x \\neq 0 \\\\ 0 & x = 0 \\end{cases} \\). أوجد أصغر قيمة صحيحة لـ \\( p \\) بحيث تكون الدالة \\( f(x) \\) قابلة للاستتقاق عند \\( x = 0 \\).",
+        "options": [
+          "\\( p = 2 \\)",
+          "\\( p = 1 \\)",
+          "\\( p = 0 \\)",
+          "\\( p = 3 \\)"
+        ],
+        "hint": "احسب $f'(0) = \\lim_{h \\to 0} \\frac{f(h) - f(0)}{h}$.",
+        "explanation": "$f'(0) = \\lim_{h \\to 0} h^{p-1} \\sin(1/h)$. لكي توجد هذه النهاية وتكون منتهية، يجب أن يكون $p - 1 > 0 \\Rightarrow p > 1$. أصغر قيمة صحيحة هي $p = 2$."
+      }
+    },
+    "correct_index": "0"
+  },
+  {
+    "id": "JEE-054",
+    "track": "jee",
+    "level": "Grade 12",
+    "topic": "Trigonometry",
+    "type": "FRQ",
+    "difficulty": "extreme",
+    "content": {
+      "en": {
+        "question": "Find the value of \\( \\tan\\left( \\sum_{r=1}^{\\infty} \\arctan\\left(\\frac{1}{2r^2}\\right) \\right) \\).",
+        "options": [],
+        "hint": "Rewrite $\\frac{1}{2r^2} = \\frac{(2r+1) - (2r-1)}{1 + (2r+1)(2r-1)}$ to make the sum telescope.",
+        "explanation": "$\\arctan\\left(\\frac{1}{2r^2}\\right) = \\arctan(2r+1) - \\arctan(2r-1)$. Summing from $r=1$ to $N$ gives a telescoping sum $\\arctan(2N+1) - \\arctan(1)$. As $N \\to \\infty$, this approaches $\\frac{\\pi}{2} - \\frac{\\pi}{4} = \\frac{\\pi}{4}$. Thus, $\\tan(\\pi/4) = 1$."
+      },
+      "ar": {
+        "question": "أحسب قيمة \\( \\tan\\left( \\sum_{r=1}^{\\infty} \\arctan\\left(\\frac{1}{2r^2}\\right) \\right) \\).",
+        "options": [],
+        "hint": "أعد كتابة $\\frac{1}{2r^2} = \\frac{(2r+1) - (2r-1)}{1 + (2r+1)(2r-1)}$ للحصول على مجموع تلسكوبي.",
+        "explanation": "$\\arctan\\left(\\frac{1}{2r^2}\\right) = \\arctan(2r+1) - \\arctan(2r-1)$. المجموع اللانهائي يتلسكب إلى $\\frac{\\pi}{2} - \\frac{\\pi}{4} = \\frac{\\pi}{4}$. بالتالي، $\\tan(\\pi/4) = 1$."
+      }
+    },
+    "correct_index": "1"
+  },
+  {
+    "id": "JEE-055",
+    "track": "jee",
+    "level": "Grade 12",
+    "topic": "Coordinate Geometry",
+    "type": "MCQ",
+    "difficulty": "hard",
+    "content": {
+      "en": {
+        "question": "Find the radius of the circle which passes through the origin and cuts orthogonally the two circles \\( x^2 + y^2 - 2x + 4y + 4 = 0 \\) and \\( x^2 + y^2 + 4x - 2y + 4 = 0 \\).",
+        "options": [
+          "\\( 2\\sqrt{2} \\)",
+          "4",
+          "2",
+          "\\( \\sqrt{2} \\)"
+        ],
+        "hint": "Use the orthogonality condition $2g_1g_2 + 2f_1f_2 = c_1 + c_2$.",
+        "explanation": "Let circle equation be $x^2 + y^2 + 2gx + 2fy = 0$ since it passes through $(0,0) \\Rightarrow c = 0$. Orthogonality with first circle gives $-2g + 4f = 4 \\Rightarrow -g + 2f = 2$. Orthogonality with second circle gives $4g - 2f = 4 \\Rightarrow 2g - f = 2$. Solving gives $g = 2, f = 2$. Radius $R = \\sqrt{g^2 + f^2 - c} = \\sqrt{4 + 4 - 0} = 2\\sqrt{2}$."
+      },
+      "ar": {
+        "question": "أوجد نصف قطر الدائرة التي تمر بنقطة الأصل وتقطع متعامدة الدائرتين \\( x^2 + y^2 - 2x + 4y + 4 = 0 \\) و \\( x^2 + y^2 + 4x - 2y + 4 = 0 \\).",
+        "options": [
+          "\\( 2\\sqrt{2} \\)",
+          "4",
+          "2",
+          "\\( \\sqrt{2} \\)"
+        ],
+        "hint": "استخدم شرط التعامد بين دائرتين $2g_1g_2 + 2f_1f_2 = c_1 + c_2$.",
+        "explanation": "معادلة الدائرة المطلوبة $x^2 + y^2 + 2gx + 2fy = 0$ لأنها تمر بنقطة الأصل ($c=0$). بتطبيق شرط التعامد مع كلتا الدائرتين نحصل على نظام معادلات حله $g=2$ و $f=2$. نصف القطر $R = \\sqrt{2^2 + 2^2 - 0} = 2\\sqrt{2}$."
+      }
+    },
+    "correct_index": "0"
+  },
+  {
+    "id": "JEE-056",
+    "track": "jee",
+    "level": "Grade 12",
+    "topic": "Calculus",
+    "type": "MCQ",
+    "difficulty": "medium",
+    "content": {
+      "en": {
+        "question": "Find the area bounded by the curves \\( y = |x - 1| \\) and \\( y = 3 - |x| \\).",
+        "options": [
+          "4",
+          "3",
+          "2",
+          "6"
+        ],
+        "hint": "Find points of intersection by setting $|x-1| = 3 - |x|$.",
+        "explanation": "Intersections occur at $x = -1$ and $x = 2$. Area is given by $\\int_{-1}^2 (3 - |x| - |x-1|) dx$. Splitting the integral at $x = 0$ and $x = 1$: $\\int_{-1}^0 (2 + 2x)dx + \\int_0^1 2 dx + \\int_1^2 (4 - 2x)dx = 1 + 2 + 1 = 4$."
+      },
+      "ar": {
+        "question": "أوجد مساحة المنطقة المحصورة بين المنحنيين \\( y = |x - 1| \\) و \\( y = 3 - |x| \\).",
+        "options": [
+          "4",
+          "3",
+          "2",
+          "6"
+        ],
+        "hint": "أوجد نقاط التقاطع بوضع $|x-1| = 3 - |x|$.",
+        "explanation": "يتقاطع المنحنيان عند $x = -1$ و $x = 2$. المساحة تساوي $\\int_{-1}^2 (3 - |x| - |x-1|) dx$. بتقسيم التكامل عند $x=0$ و $x=1$ نحصل على $1 + 2 + 1 = 4$."
+      }
+    },
+    "correct_index": "0"
+  },
+  {
+    "id": "JEE-057",
+    "track": "jee",
+    "level": "Grade 12",
+    "topic": "Calculus",
+    "type": "MCQ",
+    "difficulty": "hard",
+    "content": {
+      "en": {
+        "question": "If \\( f(x) = \\int_{0}^{x^2} \\frac{\\sin \\sqrt{t}}{1 + t} \\, dt \\), find \\( f'(\\pi/2) \\).",
+        "options": [
+          "\\( \\frac{4\\pi}{4 + \\pi^2} \\)",
+          "\\( \\frac{2\\pi}{4 + \\pi^2} \\)",
+          "\\( \\frac{\\pi}{1 + \\pi^2} \\)",
+          "\\( \\frac{4}{4 + \\pi^2} \\)"
+        ],
+        "hint": "Apply the Leibniz integral rule.",
+        "explanation": "By Leibniz rule, $f'(x) = \\frac{\\sin \\sqrt{x^2}}{1 + x^2} \\cdot \\frac{d}{dx}(x^2) = \\frac{\\sin x}{1 + x^2} \\cdot 2x$. Evaluating at $x = \\pi/2$: $f'(\\pi/2) = \\frac{\\sin(\\pi/2)}{1 + (\\pi/2)^2} \\cdot 2(\\pi/2) = \\frac{1 \\cdot \\pi}{1 + \\pi^2/4} = \\frac{4\\pi}{4 + \\pi^2}$."
+      },
+      "ar": {
+        "question": "إذا كانت \\( f(x) = \\int_{0}^{x^2} \\frac{\\sin \\sqrt{t}}{1 + t} \\, dt \\)، فأوجد \\( f'(\\pi/2) \\).",
+        "options": [
+          "\\( \\frac{4\\pi}{4 + \\pi^2} \\)",
+          "\\( \\frac{2\\pi}{4 + \\pi^2} \\)",
+          "\\( \\frac{\\pi}{1 + \\pi^2} \\)",
+          "\\( \\frac{4}{4 + \\pi^2} \\)"
+        ],
+        "hint": "طبق قاعدة لايبنتز للتفاضل تحت علامة التكامل.",
+        "explanation": "باستخدام قاعدة لايبنتز: $f'(x) = \\frac{\\sin x}{1 + x^2} \\cdot 2x$. بالتعويض بـ $x = \\pi/2$ نجد $f'(\\pi/2) = \\frac{\\pi}{1 + \\pi^2/4} = \\frac{4\\pi}{4 + \\pi^2}$."
+      }
+    },
+    "correct_index": "0"
+  },
+  {
+    "id": "JEE-058",
+    "track": "jee",
+    "level": "Grade 12",
+    "topic": "Coordinate Geometry",
+    "type": "MCQ",
+    "difficulty": "easy",
+    "content": {
+      "en": {
+        "question": "If the eccentricity of the hyperbola \\( \\frac{x^2}{a^2} - \\frac{y^2}{b^2} = 1 \\) is \\( e_1 \\) and the eccentricity of its conjugate hyperbola is \\( e_2 \\), find \\( \\frac{1}{e_1^2} + \\frac{1}{e_2^2} \\).",
+        "options": [
+          "1",
+          "2",
+          "\\( \\frac{1}{2} \\)",
+          "4"
+        ],
+        "hint": "Recall that $e_1^2 = 1 + b^2/a^2$ and $e_2^2 = 1 + a^2/b^2$.",
+        "explanation": "$e_1^2 = \\frac{a^2 + b^2}{a^2} \\Rightarrow \\frac{1}{e_1^2} = \\frac{a^2}{a^2 + b^2}$. Similarly, $e_2^2 = \\frac{a^2 + b^2}{b^2} \\Rightarrow \\frac{1}{e_2^2} = \\frac{b^2}{a^2 + b^2}$. Thus $\\frac{1}{e_1^2} + \\frac{1}{e_2^2} = \\frac{a^2 + b^2}{a^2 + b^2} = 1$."
+      },
+      "ar": {
+        "question": "إذا كانت الاختلاف المركزي للقطع الزائد \\( \\frac{x^2}{a^2} - \\frac{y^2}{b^2} = 1 \\) هو \\( e_1 \\) وللقطع الزائد المرافق له هو \\( e_2 \\)، فأوجد \\( \\frac{1}{e_1^2} + \\frac{1}{e_2^2} \\).",
+        "options": [
+          "1",
+          "2",
+          "\\( \\frac{1}{2} \\)",
+          "4"
+        ],
+        "hint": "تذكر أن $e_1^2 = 1 + b^2/a^2$ و $e_2^2 = 1 + a^2/b^2$.",
+        "explanation": "$\\frac{1}{e_1^2} = \\frac{a^2}{a^2 + b^2}$ و $\\frac{1}{e_2^2} = \\frac{b^2}{a^2 + b^2}$. بجمعهما نحصل على $\\frac{a^2 + b^2}{a^2 + b^2} = 1$."
+      }
+    },
+    "correct_index": "0"
+  },
+  {
+    "id": "JEE-059",
+    "track": "jee",
+    "level": "Grade 12",
+    "topic": "Sequences and Series",
+    "type": "FRQ",
+    "difficulty": "medium",
+    "content": {
+      "en": {
+        "question": "Find the sum of the infinite series $$ S = \\sum_{n=1}^{\\infty} \\frac{n}{3^n} $$",
+        "options": [],
+        "hint": "This is an Arithmetico-Geometric Progression (AGP). Multiply $S$ by $1/3$ and subtract.",
+        "explanation": "$S = \\frac{1}{3} + \\frac{2}{3^2} + \\frac{3}{3^3} + \\dots$. Then $\\frac{1}{3}S = \\frac{1}{3^2} + \\frac{2}{3^3} + \\dots$. Subtracting gives $\\frac{2}{3}S = \\frac{1}{3} + \\frac{1}{3^2} + \\frac{1}{3^3} + \\dots = \\frac{1/3}{1 - 1/3} = \\frac{1}{2}$. Hence $S = \\frac{3}{4}$."
+      },
+      "ar": {
+        "question": "أوجد مجموع المتسلسلة اللانهائية $$ S = \\sum_{n=1}^{\\infty} \\frac{n}{3^n} $$",
+        "options": [],
+        "hint": "هذه متتالية حسابية هندسية (AGP). اضرب $S$ في $1/3$ واطرح.",
+        "explanation": "$S = \\frac{1}{3} + \\frac{2}{3^2} + \\frac{3}{3^3} + \\dots$. بطرح $\\frac{1}{3}S$ من $S$ نحصل على $\\frac{2}{3}S = \\frac{1/3}{1 - 1/3} = \\frac{1}{2}$، بالتالي $S = \\frac{3}{4}$."
+      }
+    },
+    "correct_index": "3/4"
+  },
+  {
+    "id": "JEE-060",
+    "track": "jee",
+    "level": "Grade 12",
+    "topic": "Vectors",
+    "type": "MCQ",
+    "difficulty": "hard",
+    "content": {
+      "en": {
+        "question": "Let \\( \\vec{a} = \\hat{i} + \\hat{j} + \\hat{k} \\), \\( \\vec{b} = \\hat{i} - \\hat{j} + \\hat{k} \\), and \\( \\vec{c} = \\hat{i} + \\hat{j} - \\hat{k} \\). A vector \\( \\vec{v} \\) lying in the plane of \\( \\vec{a} \\) and \\( \\vec{b} \\) whose projection on \\( \\vec{c} \\) is \\( \\frac{1}{\\sqrt{3}} \\) is:",
+        "options": [
+          "\\( 3\\hat{i} + \\hat{j} + 3\\hat{k} \\)",
+          "\\( 2\\hat{i} + \\hat{j} + 2\\hat{k} \\)",
+          "\\( \\hat{i} - 2\\hat{j} + \\hat{k} \\)",
+          "\\( 4\\hat{i} + 2\\hat{j} + 4\\hat{k} \\)"
+        ],
+        "hint": "Express $\\vec{v} = x\\vec{a} + y\\vec{b}$ and use projection formula $\\frac{\\vec{v} \\cdot \\vec{c}}{|\\vec{c}|} = \\frac{1}{\\sqrt{3}}$.",
+        "explanation": "$\\vec{v} = x(\\hat{i} + \\hat{j} + \\hat{k}) + y(\\hat{i} - \\hat{j} + \\hat{k}) = (x+y)\\hat{i} + (x-y)\\hat{j} + (x+y)\\hat{k}$. Given projection on $\\vec{c}$ is $\\frac{\\vec{v} \\cdot \\vec{c}}{\\sqrt{3}} = \\frac{1}{\\sqrt{3}} \\Rightarrow \\vec{v} \\cdot \\vec{c} = 1 \\Rightarrow (x+y) + (x-y) - (x+y) = 1 \\Rightarrow x-y = 1$. Choosing $x=2, y=1$ gives $\\vec{v} = 3\\hat{i} + \\hat{j} + 3\\hat{k}$."
+      },
+      "ar": {
+        "question": "لتكن \\( \\vec{a} = \\hat{i} + \\hat{j} + \\hat{k} \\)، \\( \\vec{b} = \\hat{i} - \\hat{j} + \\hat{k} \\)، و \\( \\vec{c} = \\hat{i} + \\hat{j} - \\hat{k} \\). أوجد متجهاً \\( \\vec{v} \\) يقع في المستوى الذي يحوي \\( \\vec{a} \\) و \\( \\vec{b} \\) ومسقطه على \\( \\vec{c} \\) يساوي \\( \\frac{1}{\\sqrt{3}} \\):",
+        "options": [
+          "\\( 3\\hat{i} + \\hat{j} + 3\\hat{k} \\)",
+          "\\( 2\\hat{i} + \\hat{j} + 2\\hat{k} \\)",
+          "\\( \\hat{i} - 2\\hat{j} + \\hat{k} \\)",
+          "\\( 4\\hat{i} + 2\\hat{j} + 4\\hat{k} \\)"
+        ],
+        "hint": "اكتب $\\vec{v} = x\\vec{a} + y\\vec{b}$ واستخدم قانون المسقط الصادي.",
+        "explanation": "$\\vec{v} = (x+y)\\hat{i} + (x-y)\\hat{j} + (x+y)\\hat{k}$. بشرط أن المسقط على $\\vec{c}$ يساوي $\\frac{1}{\\sqrt{3}}$ نجد $x - y = 1$. باختيار $x=2, y=1$ نحصل على المتجه $3\\hat{i} + \\hat{j} + 3\\hat{k}$."
+      }
+    },
+    "correct_index": "0"
+  },
+  {
+    "id": "JEE-061",
+    "track": "jee",
+    "level": "Grade 12",
+    "topic": "Algebra",
+    "type": "FRQ",
+    "difficulty": "hard",
+    "content": {
+      "en": {
+        "question": "If \\( \\alpha \\) and \\( \\beta \\) are the roots of \\( x^2 - 6x - 2 = 0 \\), and \\( a_n = \\alpha^n - \\beta^n \\) for \\( n \\ge 1 \\), evaluate \\( \\frac{a_{10} - 2 a_8}{2 a_9} \\).",
+        "options": [],
+        "hint": "Use Newton's sums relation: $\\alpha^2 - 6\\alpha - 2 = 0 \\implies a_n - 6a_{n-1} - 2a_{n-2} = 0$.",
+        "explanation": "Since $\\alpha$ and $\\beta$ are roots, $\\alpha^{10} - 6\\alpha^9 - 2\\alpha^8 = 0$ and $\\beta^{10} - 6\\beta^9 - 2\\beta^8 = 0$. Subtracting gives $a_{10} - 6a_9 - 2a_8 = 0 \\implies a_{10} - 2a_8 = 6a_9$. Thus $\\frac{a_{10} - 2a_8}{2a_9} = \\frac{6a_9}{2a_9} = 3$."
+      },
+      "ar": {
+        "question": "إذا كان \\( \\alpha \\) و \\( \\beta \\) هما جذرا المعادلة \\( x^2 - 6x - 2 = 0 \\)، وكان \\( a_n = \\alpha^n - \\beta^n \\) لكل \\( n \\ge 1 \\)، احسب قيمة \\( \\frac{a_{10} - 2 a_8}{2 a_9} \\).",
+        "options": [],
+        "hint": "استخدم علاقة مجموع نيوتن: $\\alpha^2 - 6\\alpha - 2 = 0 \\implies a_n - 6a_{n-1} - 2a_{n-2} = 0$.",
+        "explanation": "من خوص جذور المعادلة لدينا $a_{10} - 6a_9 - 2a_8 = 0 \\implies a_{10} - 2a_8 = 6a_9$. بالتالي فإن $\\frac{a_{10} - 2a_8}{2a_9} = \\frac{6a_9}{2a_9} = 3$."
+      }
+    },
+    "correct_index": "3"
+  },
+  {
+    "id": "JEE-062",
+    "track": "jee",
+    "level": "Grade 12",
+    "topic": "Calculus",
+    "type": "MCQ",
+    "difficulty": "hard",
+    "content": {
+      "en": {
+        "question": "Evaluate the definite integral: $$ I = \\int_0^{\\pi/2} \\frac{x}{\\sin x + \\cos x} \\, dx $$",
+        "options": [
+          "\\( \\frac{\\pi}{4\\sqrt{2}} \\ln(\\sqrt{2}+1) \\)",
+          "\\( \\frac{\\pi}{2\\sqrt{2}} \\ln(\\sqrt{2}+1) \\)",
+          "\\( \\frac{\\pi}{4} \\ln(\\sqrt{2}+1) \\)",
+          "\\( \\frac{\\pi}{2} \\ln(\\sqrt{2}-1) \\)"
+        ],
+        "hint": "Use the property \\( \\int_0^a f(x) dx = \\int_0^a f(a-x) dx \\) and express \\( \\sin x + \\cos x \\) as \\( \\sqrt{2}\\sin(x + \\pi/4) \\).",
+        "explanation": "Let \\( I = \\int_0^{\\pi/2} \\frac{x}{\\sin x + \\cos x} dx \\). Using \\( x \\to \\pi/2 - x \\), we get \\( I = \\int_0^{\\pi/2} \\frac{\\pi/2 - x}{\\cos x + \\sin x} dx \\). Adding both yields \\( 2I = \\frac{\\pi}{2} \\int_0^{\\pi/2} \\frac{dx}{\\sin x + \\cos x} = \\frac{\\pi}{2\\sqrt{2}} \\int_0^{\\pi/2} \\csc(x + \\pi/4) dx \\). Integrating gives \\( 2I = \\frac{\\pi}{2\\sqrt{2}} \\ln(\\sqrt{2}+1) \\), so \\( I = \\frac{\\pi}{4\\sqrt{2}} \\ln(\\sqrt{2}+1) \\)."
+      },
+      "ar": {
+        "question": "احسب قيمة التكامل المحدد: $$ I = \\int_0^{\\pi/2} \\frac{x}{\\sin x + \\cos x} \\, dx $$",
+        "options": [
+          "\\( \\frac{\\pi}{4\\sqrt{2}} \\ln(\\sqrt{2}+1) \\)",
+          "\\( \\frac{\\pi}{2\\sqrt{2}} \\ln(\\sqrt{2}+1) \\)",
+          "\\( \\frac{\\pi}{4} \\ln(\\sqrt{2}+1) \\)",
+          "\\( \\frac{\\pi}{2} \\ln(\\sqrt{2}-1) \\)"
+        ],
+        "hint": "استخدم الخاصية \\( \\int_0^a f(x) dx = \\int_0^a f(a-x) dx \\) وعبر عن \\( \\sin x + \\cos x \\) في الصورة \\( \\sqrt{2}\\sin(x + \\pi/4) \\).",
+        "explanation": "بفرض \\( I = \\int_0^{\\pi/2} \\frac{x}{\\sin x + \\cos x} dx \\). باستخدام التعويض \\( x \\to \\pi/2 - x \\)، نحصل على \\( I = \\int_0^{\\pi/2} \\frac{\\pi/2 - x}{\\cos x + \\sin x} dx \\). بجمع المعادلتين نحصل على \\( 2I = \\frac{\\pi}{2} \\int_0^{\\pi/2} \\frac{dx}{\\sin x + \\cos x} = \\frac{\\pi}{2\\sqrt{2}} \\int_0^{\\pi/2} \\csc(x + \\pi/4) dx \\). بحساب التكامل نجد أن \\( 2I = \\frac{\\pi}{2\\sqrt{2}} \\ln(\\sqrt{2}+1) \\)، وبالتالي \\( I = \\frac{\\pi}{4\\sqrt{2}} \\ln(\\sqrt{2}+1) \\)."
+      }
+    },
+    "correct_index": "0"
+  },
+  {
+    "id": "JEE-063",
+    "track": "jee",
+    "level": "Grade 12",
+    "topic": "Complex Numbers",
+    "type": "MCQ",
+    "difficulty": "hard",
+    "content": {
+      "en": {
+        "question": "Let \\( z \\) be a complex number satisfying \\( |z - 3 - 4i| \\le 2 \\). Find the minimum value of \\( |z - 1|^2 + |z - 5i|^2 \\).",
+        "options": [
+          "\\( 38 - 4\\sqrt{34} \\)",
+          "\\( 26 - 2\\sqrt{34} \\)",
+          "\\( 38 + 4\\sqrt{34} \\)",
+          "\\( 26 \\)"
+        ],
+        "hint": "Expand \\( |z - 1|^2 + |z - 5i|^2 \\) using Cartesian coordinates or distance to the midpoint of \\( 1 \\) and \\( 5i \\).",
+        "explanation": "Let \\( z = x + iy \\). The expression \\( E = |z-1|^2 + |z-5i|^2 = 2(x - 1/2)^2 + 2(y - 5/2)^2 + 13 = 2|z - (1/2 + 5/2 i)|^2 + 13 \\). The region is a disk centered at \\( C(3,4) \\) with radius \\( R=2 \\). The distance from point \\( M(1/2, 5/2) \\) to \\( C(3,4) \\) is \\( \\sqrt{(5/2)^2 + (3/2)^2} = \\frac{\\sqrt{34}}{2} \\). The minimum distance from \\( M \\) to the disk is \\( \\frac{\\sqrt{34}}{2} - 2 \\). Hence, \\( E_{\\min} = 2\\left(\\frac{\\sqrt{34}}{2} - 2\\right)^2 + 13 = 38 - 4\\sqrt{34} \\)."
+      },
+      "ar": {
+        "question": "ليكن \\( z \\) عددًا مركبًا يحقق \\( |z - 3 - 4i| \\le 2 \\). أوجد القيمة الصغرى للـ \\( |z - 1|^2 + |z - 5i|^2 \\).",
+        "options": [
+          "\\( 38 - 4\\sqrt{34} \\)",
+          "\\( 26 - 2\\sqrt{34} \\)",
+          "\\( 38 + 4\\sqrt{34} \\)",
+          "\\( 26 \\)"
+        ],
+        "hint": "فك العبارة \\( |z - 1|^2 + |z - 5i|^2 \\) باستخدام الإحداثيات الديكارتية أو المسافة إلى منتصف القطعة بين \\( 1 \\) و \\( 5i \\).",
+        "explanation": "بفرض \\( z = x + iy \\). المقدار \\( E = |z-1|^2 + |z-5i|^2 = 2|z - (1/2 + 5/2 i)|^2 + 13 \\). المنطقة هي قرص مركزه \\( C(3,4) \\) ونصف قطره \\( R=2 \\). المسافة من النقطة \\( M(1/2, 5/2) \\) إلى \\( C(3,4) \\) هي \\( \\frac{\\sqrt{34}}{2} \\). أقصر مسافة من \\( M \\) إلى القرص هي \\( \\frac{\\sqrt{34}}{2} - 2 \\). بالتالي، القيمة الصغرى هي \\( 2\\left(\\frac{\\sqrt{34}}{2} - 2\\right)^2 + 13 = 38 - 4\\sqrt{34} \\)."
+      }
+    },
+    "correct_index": "0"
+  },
+  {
+    "id": "JEE-064",
+    "track": "jee",
+    "level": "Grade 12",
+    "topic": "Coordinate Geometry",
+    "type": "FRQ",
+    "difficulty": "medium",
+    "content": {
+      "en": {
+        "question": "If the normal to the parabola \\( y^2 = 4x \\) at point \\( P(1, 2) \\) touches the ellipse \\( \\frac{x^2}{a^2} + \\frac{y^2}{b^2} = 1 \\), find the value of \\( a^2 + b^2 \\).",
+        "options": [],
+        "hint": "Find the equation of the normal at \\( P(1, 2) \\) and apply the condition of tangency \\( c^2 = a^2 m^2 + b^2 \\).",
+        "explanation": "Differentiating \\( y^2 = 4x \\) gives \\( 2y y' = 4 \\implies y' = 1 \\) at \\( (1,2) \\). Slope of the normal is \\( m = -1 \\). Equation of normal: \\( y - 2 = -1(x - 1) \\implies y = -x + 3 \\). Here slope \\( m = -1 \\) and y-intercept \\( c = 3 \\). The condition for \\( y = mx + c \\) to be tangent to \\( \\frac{x^2}{a^2} + \\frac{y^2}{b^2} = 1 \\) is \\( c^2 = a^2 m^2 + b^2 \\). Substituting \\( c = 3 \\) and \\( m = -1 \\) yields \\( 9 = a^2(1) + b^2 \\implies a^2 + b^2 = 9 \\)."
+      },
+      "ar": {
+        "question": "إذا كان العمودي على القطع المكافئ \\( y^2 = 4x \\) عند النقطة \\( P(1, 2) \\) يمس القطع الناقص \\( \\frac{x^2}{a^2} + \\frac{y^2}{b^2} = 1 \\)، فأوجد قيمة \\( a^2 + b^2 \\).",
+        "options": [],
+        "hint": "أوجد معادلة العمودي عند \\( P(1, 2) \\) ثم طبق شرط التماس \\( c^2 = a^2 m^2 + b^2 \\).",
+        "explanation": "باشتقاق \\( y^2 = 4x \\) نجد أن \\( 2y y' = 4 \\implies y' = 1 \\) عند \\( (1,2) \\). ميل العمودي هو \\( m = -1 \\). معادلة العمودي: \\( y - 2 = -1(x - 1) \\implies y = -x + 3 \\). هنا الميل \\( m = -1 \\) والجزء المقطوع \\( c = 3 \\). شرط تماس المستقيم \\( y = mx + c \\) مع القطع الناقص هو \\( c^2 = a^2 m^2 + b^2 \\). بالتعويض نجد \\( 9 = a^2(1) + b^2 \\implies a^2 + b^2 = 9 \\)."
+      }
+    },
+    "correct_index": "9"
+  },
+  {
+    "id": "JEE-065",
+    "track": "jee",
+    "level": "Grade 12",
+    "topic": "Differential Equations",
+    "type": "MCQ",
+    "difficulty": "medium",
+    "content": {
+      "en": {
+        "question": "Let \\( y(x) \\) be the solution of the differential equation \\( \\frac{dy}{dx} + \\frac{2x}{1+x^2}y = \\frac{1}{(1+x^2)^2} \\) with initial condition \\( y(0) = 0 \\). Find the value of \\( y(1) \\).",
+        "options": [
+          "\\( \\frac{\\pi}{8} \\)",
+          "\\( \\frac{\\pi}{4} \\)",
+          "\\( \\frac{\\pi}{16} \\)",
+          "\\( \\frac{\\pi}{2} \\)"
+        ],
+        "hint": "Find the integrating factor \\( I(x) = e^{\\int \\frac{2x}{1+x^2}dx} \\).",
+        "explanation": "Integrating factor \\( I(x) = e^{\\int \\frac{2x}{1+x^2} dx} = 1 + x^2 \\). Multiplying the DE by \\( I(x) \\) gives \\( \\frac{d}{dx}[(1+x^2)y] = \\frac{1}{1+x^2} \\). Integrating both sides gives \\( (1+x^2)y = \\arctan x + C \\). Since \\( y(0) = 0 \\), \\( C = 0 \\). Thus \\( y(x) = \\frac{\\arctan x}{1+x^2} \\). Evaluating at \\( x = 1 \\) gives \\( y(1) = \\frac{\\pi/4}{2} = \\frac{\\pi}{8} \\)."
+      },
+      "ar": {
+        "question": "ليكن \\( y(x) \\) حل المعادلة التفاضلية \\( \\frac{dy}{dx} + \\frac{2x}{1+x^2}y = \\frac{1}{(1+x^2)^2} \\) بالشرط الابتدائي \\( y(0) = 0 \\). أوجد قيمة \\( y(1) \\).",
+        "options": [
+          "\\( \\frac{\\pi}{8} \\)",
+          "\\( \\frac{\\pi}{4} \\)",
+          "\\( \\frac{\\pi}{16} \\)",
+          "\\( \\frac{\\pi}{2} \\)"
+        ],
+        "hint": "أوجد عامل التكامل \\( I(x) = e^{\\int \\frac{2x}{1+x^2}dx} \\).",
+        "explanation": "عامل التكامل \\( I(x) = e^{\\int \\frac{2x}{1+x^2} dx} = 1 + x^2 \\). بضرب المعادلة التفاضلية في \\( I(x) \\) نحصل على \\( \\frac{d}{dx}[(1+x^2)y] = \\frac{1}{1+x^2} \\). بالتكامل نجد \\( (1+x^2)y = \\arctan x + C \\). بما أن \\( y(0) = 0 \\)، فإن \\( C = 0 \\). إذن \\( y(x) = \\frac{\\arctan x}{1+x^2} \\). عند \\( x = 1 \\)، نجد \\( y(1) = \\frac{\\pi/4}{2} = \\frac{\\pi}{8} \\)."
+      }
+    },
+    "correct_index": "0"
+  },
+  {
+    "id": "JEE-066",
+    "track": "jee",
+    "level": "Grade 12",
+    "topic": "Calculus",
+    "type": "MCQ",
+    "difficulty": "medium",
+    "content": {
+      "en": {
+        "question": "Evaluate the limit: $$ \\lim_{n \\to \\infty} \\sum_{k=1}^n \\frac{k}{n^2 + k^2} $$",
+        "options": [
+          "\\( \\frac{1}{2}\\ln 2 \\)",
+          "\\( \\ln 2 \\)",
+          "\\( \\frac{1}{4}\\ln 2 \\)",
+          "\\( \\frac{1}{2}\\ln 3 \\)"
+        ],
+        "hint": "Rewrite as a Riemann sum \\( \\lim_{n \\to \\infty} \\frac{1}{n} \\sum_{k=1}^n f(k/n) \\).",
+        "explanation": "Rewrite the sum: \\( \\lim_{n \\to \\infty} \\frac{1}{n} \\sum_{k=1}^n \\frac{k/n}{1 + (k/n)^2} \\). This is the Riemann sum for \\( \\int_0^1 \\frac{x}{1+x^2} dx = \\left[ \\frac{1}{2}\\ln(1+x^2) \\right]_0^1 = \\frac{1}{2}\\ln 2 \\)."
+      },
+      "ar": {
+        "question": "احسب النهاية التالية: $$ \\lim_{n \\to \\infty} \\sum_{k=1}^n \\frac{k}{n^2 + k^2} $$",
+        "options": [
+          "\\( \\frac{1}{2}\\ln 2 \\)",
+          "\\( \\ln 2 \\)",
+          "\\( \\frac{1}{4}\\ln 2 \\)",
+          "\\( \\frac{1}{2}\\ln 3 \\)"
+        ],
+        "hint": "أعد كتابة المجموع على شكل مجموع ريمان \\( \\lim_{n \\to \\infty} \\frac{1}{n} \\sum_{k=1}^n f(k/n) \\).",
+        "explanation": "نكتب المجموع بالشكل: \\( \\lim_{n \\to \\infty} \\frac{1}{n} \\sum_{k=1}^n \\frac{k/n}{1 + (k/n)^2} \\). هذا يمثل مجموع ريمان للتكامل \\( \\int_0^1 \\frac{x}{1+x^2} dx = \\left[ \\frac{1}{2}\\ln(1+x^2) \\right]_0^1 = \\frac{1}{2}\\ln 2 \\)."
+      }
+    },
+    "correct_index": "0"
+  },
+  {
+    "id": "JEE-067",
+    "track": "jee",
+    "level": "Grade 12",
+    "topic": "Complex Numbers",
+    "type": "MCQ",
+    "difficulty": "hard",
+    "content": {
+      "en": {
+        "question": "Let \\( \\omega = e^{2\\pi i / 7} \\). Evaluate the product: $$ \\prod_{k=1}^3 (\\omega^k + \\omega^{-k}) $$",
+        "options": [
+          "\\( 1 \\)",
+          "\\( -1 \\)",
+          "\\( 7 \\)",
+          "\\( \\frac{1}{7} \\)"
+        ],
+        "hint": "Notice \\( \\omega^k + \\omega^{-k} = 2\\cos\\left(\\frac{2k\\pi}{7}\\right) \\) and use trigonometric identity for product of cosines.",
+        "explanation": "The product is \\( P = 8 \\cos\\frac{2\\pi}{7} \\cos\\frac{4\\pi}{7} \\cos\\frac{6\\pi}{7} = -8 \\cos\\frac{\\pi}{7} \\cos\\frac{2\\pi}{7} \\cos\\frac{4\\pi}{7} \\). Using \\( \\prod_{k=0}^{n-1} \\cos(2^k x) = \\frac{\\sin(2^n x)}{2^n \\sin x} \\), we get \\( P = -8 \\frac{\\sin(8\\pi/7)}{8\\sin(\\pi/7)} = -8 \\frac{-\\sin(\\pi/7)}{8\\sin(\\pi/7)} = 1 \\)."
+      },
+      "ar": {
+        "question": "لتكن \\( \\omega = e^{2\\pi i / 7} \\). احسب حاصل الضرب: $$ \\prod_{k=1}^3 (\\omega^k + \\omega^{-k}) $$",
+        "options": [
+          "\\( 1 \\)",
+          "\\( -1 \\)",
+          "\\( 7 \\)",
+          "\\( \\frac{1}{7} \\)"
+        ],
+        "hint": "لاحظ أن \\( \\omega^k + \\omega^{-k} = 2\\cos\\left(\\frac{2k\\pi}{7}\\right) \\) واستخدم المتطابقة المثلثية لحاصل ضرب جيب التمام.",
+        "explanation": "حاصل الضرب هو \\( P = 8 \\cos\\frac{2\\pi}{7} \\cos\\frac{4\\pi}{7} \\cos\\frac{6\\pi}{7} = -8 \\cos\\frac{\\pi}{7} \\cos\\frac{2\\pi}{7} \\cos\\frac{4\\pi}{7} \\). باستخدام المتطابقة \\( \\prod_{k=0}^{n-1} \\cos(2^k x) = \\frac{\\sin(2^n x)}{2^n \\sin x} \\)، نحصل على \\( P = -8 \\frac{\\sin(8\\pi/7)}{8\\sin(\\pi/7)} = 1 \\)."
+      }
+    },
+    "correct_index": "0"
+  },
+  {
+    "id": "JEE-068",
+    "track": "jee",
+    "level": "Grade 12",
+    "topic": "Coordinate Geometry",
+    "type": "MCQ",
+    "difficulty": "medium",
+    "content": {
+      "en": {
+        "question": "If the line \\( 2x + \\sqrt{6}y = 2 \\) is tangent to the hyperbola \\( x^2 - 2y^2 = 4 \\), then the point of contact is:",
+        "options": [
+          "\\( (4, -\\sqrt{6}) \\)",
+          "\\( (4, \\sqrt{6}) \\)",
+          "\\( (2, -\\sqrt{6}) \\)",
+          "\\( (2, \\sqrt{3}) \\)"
+        ],
+        "hint": "Compare the equation of tangent at \\( (x_1, y_1) \\) with the given line equation.",
+        "explanation": "The hyperbola is \\( \\frac{x^2}{4} - \\frac{y^2}{2} = 1 \\). Tangent at \\( (x_1, y_1) \\) is \\( \\frac{x x_1}{4} - \\frac{y y_1}{2} = 1 \\). Given line equation is \\( x + \\frac{\\sqrt{6}}{2}y = 1 \\). Comparing coefficients gives \\( \\frac{x_1}{4} = 1 \\implies x_1 = 4 \\), and \\( -\\frac{y_1}{2} = \\frac{\\sqrt{6}}{2} \\implies y_1 = -\\sqrt{6} \\). Thus, point of contact is \\( (4, -\\sqrt{6}) \\)."
+      },
+      "ar": {
+        "question": "إذا كان المستقيم \\( 2x + \\sqrt{6}y = 2 \\) مماسًا للقطع الزائد \\( x^2 - 2y^2 = 4 \\)، فإن نقطة التماس هي:",
+        "options": [
+          "\\( (4, -\\sqrt{6}) \\)",
+          "\\( (4, \\sqrt{6}) \\)",
+          "\\( (2, -\\sqrt{6}) \\)",
+          "\\( (2, \\sqrt{3}) \\)"
+        ],
+        "hint": "قارن معادلة المماس عند النقطة \\( (x_1, y_1) \\) بمعادلة المستقيم المعطاة.",
+        "explanation": "القطع الزائد هو \\( \\frac{x^2}{4} - \\frac{y^2}{2} = 1 \\). المماس عند \\( (x_1, y_1) \\) هو \\( \\frac{x x_1}{4} - \\frac{y y_1}{2} = 1 \\). المعادلة المعطاة هي \\( x + \\frac{\\sqrt{6}}{2}y = 1 \\). بمقارنة المعاملات نجد أن \\( x_1 = 4 \\) و \\( y_1 = -\\sqrt{6} \\). إذن نقطة التماس هي \\( (4, -\\sqrt{6}) \\)."
+      }
+    },
+    "correct_index": "0"
+  },
+  {
+    "id": "JEE-069",
+    "track": "jee",
+    "level": "Grade 12",
+    "topic": "Calculus",
+    "type": "FRQ",
+    "difficulty": "medium",
+    "content": {
+      "en": {
+        "question": "Let \\( f(x) = [x]^2 + [x+1] - 3 \\), where \\( [x] \\) denotes the greatest integer function. Find the number of points of discontinuity of \\( f(x) \\) in the interval \\( [-1, 2] \\).",
+        "options": [],
+        "hint": "Check continuity at integer points \\( x = 0, 1, 2 \\).",
+        "explanation": "For \\( x \\in [-1, 0) \\), \\( [x] = -1, [x+1] = 0 \\implies f(x) = 1 + 0 - 3 = -2 \\). At \\( x = 0 \\), \\( f(0) = -2 \\). For \\( x \\in [0, 1) \\), \\( f(x) = -2 \\), so \\( f \\) is continuous at \\( x=0 \\). At \\( x = 1 \\), \\( f(1) = 0 \\), but \\( \\lim_{x \\to 1^-} f(x) = -2 \\), so discontinuous at \\( x = 1 \\). At \\( x = 2 \\), \\( f(2) = 4 \\), but \\( \\lim_{x \\to 2^-} f(x) = 0 \\), so discontinuous at \\( x = 2 \\). Total points of discontinuity = 2."
+      },
+      "ar": {
+        "question": "لتكن \\( f(x) = [x]^2 + [x+1] - 3 \\)، حيث \\( [x] \\) يمثل دالة أكبر عدد صحيح. أوجد عدد نقاط عدم الاتصال للدالة \\( f(x) \\) في الفترة \\( [-1, 2] \\).",
+        "options": [],
+        "hint": "افحص الاتصال عند النقاط الصحيحة \\( x = 0, 1, 2 \\).",
+        "explanation": "لكل \\( x \\in [-1, 0) \\)، يكون \\( f(x) = -2 \\). عند \\( x = 0 \\)، \\( f(0) = -2 \\). ولكل \\( x \\in [0, 1) \\)، \\( f(x) = -2 \\)، فالدالة متصلة عند \\( x=0 \\). عند \\( x = 1 \\)، \\( f(1) = 0 \\) ولكن النهاية اليسرى تساوي \\( -2 \\)، إذن غير متصلة عند \\( x=1 \\). عند \\( x = 2 \\)، \\( f(2) = 4 \\) ولكن النهاية اليسرى تساوي \\( 0 \\)، إذن غير متصلة عند \\( x=2 \\). عدد نقاط عدم الاتصال يساوي 2."
+      }
+    },
+    "correct_index": "2"
+  },
+  {
+    "id": "JEE-070",
+    "track": "jee",
+    "level": "Grade 12",
+    "topic": "Vector Algebra",
+    "type": "FRQ",
+    "difficulty": "hard",
+    "content": {
+      "en": {
+        "question": "Let \\( \\vec{a} = \\hat{i} + \\hat{j} + \\hat{k} \\), \\( \\vec{b} = \\hat{i} - \\hat{j} + \\hat{k} \\), and \\( \\vec{c} = \\hat{i} + 2\\hat{j} - \\hat{k} \\). Find the volume of the parallelepiped formed by vectors \\( \\vec{a} \\times \\vec{b} \\), \\( \\vec{b} \\times \\vec{c} \\), and \\( \\vec{c} \\times \\vec{a} \\).",
+        "options": [],
+        "hint": "Use the vector identity \\( [\\vec{a} \\times \\vec{b}, \\vec{b} \\times \\vec{c}, \\vec{c} \\times \\vec{a}] = [\\vec{a}, \\vec{b}, \\vec{c}]^2 \\).",
+        "explanation": "First find the scalar triple product \\( [\\vec{a}, \\vec{b}, \\vec{c}] = \\begin{vmatrix} 1 & 1 & 1 \\\\ 1 & -1 & 1 \\\\ 1 & 2 & -1 \\end{vmatrix} = 1(1-2) - 1(-1-1) + 1(2+1) = -1 + 2 + 3 = 4 \\). The volume of the parallelepiped spanned by cross products is \\( [\\vec{a}, \\vec{b}, \\vec{c}]^2 = 4^2 = 16 \\)."
+      },
+      "ar": {
+        "question": "لتكن \\( \\vec{a} = \\hat{i} + \\hat{j} + \\hat{k} \\)، و \\( \\vec{b} = \\hat{i} - \\hat{j} + \\hat{k} \\)، و \\( \\vec{c} = \\hat{i} + 2\\hat{j} - \\hat{k} \\). أوجد حجم متوازي السطوح المكون من المتجهات \\( \\vec{a} \\times \\vec{b} \\) و \\( \\vec{b} \\times \\vec{c} \\) و \\( \\vec{c} \\times \\vec{a} \\).",
+        "options": [],
+        "hint": "استخدم المتطابقة الاتجاهية \\( [\\vec{a} \\times \\vec{b}, \\vec{b} \\times \\vec{c}, \\vec{c} \\times \\vec{a}] = [\\vec{a}, \\vec{b}, \\vec{c}]^2 \\).",
+        "explanation": "أولاً نحسب الضرب الثلاثي القياسي \\( [\\vec{a}, \\vec{b}, \\vec{c}] = \\begin{vmatrix} 1 & 1 & 1 \\\\ 1 & -1 & 1 \\\\ 1 & 2 & -1 \\end{vmatrix} = 4 \\). حجم متوازي السطوح المتكون من الضرب الاتجاهي يساوي \\( [\\vec{a}, \\vec{b}, \\vec{c}]^2 = 4^2 = 16 \\)."
+      }
+    },
+    "correct_index": "16"
+  },
+  {
+    "id": "JEE-071",
+    "track": "jee",
+    "level": "Grade 12",
+    "topic": "Calculus",
+    "type": "MCQ",
+    "difficulty": "medium",
+    "content": {
+      "en": {
+        "question": "Find the minimum value of \\( f(x) = e^x + e^{-x} + 2\\cos x \\) for all \\( x \\in \\mathbb{R} \\).",
+        "options": [
+          "\\( 4 \\)",
+          "\\( 2 \\)",
+          "\\( 0 \\)",
+          "\\( 2\\sqrt{2} \\)"
+        ],
+        "hint": "Analyze the second derivative \\( f''(x) \\) to prove convexity.",
+        "explanation": "\\( f'(x) = e^x - e^{-x} - 2\\sin x \\) and \\( f''(x) = e^x + e^{-x} - 2\\cos x \\). By AM-GM inequality, \\( e^x + e^{-x} \\ge 2 \\). Since \\( \\cos x \\le 1 \\), \\( f''(x) \\ge 2 - 2 = 0 \\) for all \\( x \\). Thus, \\( f(x) \\) is strictly convex. Since \\( f'(0) = 0 \\), \\( x = 0 \\) is the global minimum point. \\( f(0) = e^0 + e^0 + 2\\cos 0 = 4 \\)."
+      },
+      "ar": {
+        "question": "أوجد القيمة الصغرى للدالة \\( f(x) = e^x + e^{-x} + 2\\cos x \\) لجميع \\( x \\in \\mathbb{R} \\).",
+        "options": [
+          "\\( 4 \\)",
+          "\\( 2 \\)",
+          "\\( 0 \\)",
+          "\\( 2\\sqrt{2} \\)"
+        ],
+        "hint": "احسب المشتقة الثانية \\( f''(x) \\) لإثبات تقعر الدالة للأعلى.",
+        "explanation": "\\( f'(x) = e^x - e^{-x} - 2\\sin x \\) و \\( f''(x) = e^x + e^{-x} - 2\\cos x \\). بمتوسط AM-GM، \\( e^x + e^{-x} \\ge 2 \\). وبما أن \\( \\cos x \\le 1 \\)، فإن \\( f''(x) \\ge 2 - 2 = 0 \\) لجميع \\( x \\). إذن الدالة محدبة تمامًا، وحيث أن \\( f'(0) = 0 \\)، فإن \\( x = 0 \\) نقطة صغرى مطلقة. \\( f(0) = 4 \\)."
+      }
+    },
+    "correct_index": "0"
+  },
+  {
+    "id": "JEE-072",
+    "track": "jee",
+    "level": "Grade 12",
+    "topic": "Probability",
+    "type": "MCQ",
+    "difficulty": "medium",
+    "content": {
+      "en": {
+        "question": "A bag contains 4 red and 6 black balls. A ball is drawn at random, its color noted, and returned with 2 extra balls of the same color. A second ball is then drawn. What is the probability that the second ball is red?",
+        "options": [
+          "\\( \\frac{2}{5} \\)",
+          "\\( \\frac{1}{2} \\)",
+          "\\( \\frac{3}{5} \\)",
+          "\\( \\frac{4}{25} \\)"
+        ],
+        "hint": "Apply the law of total probability based on the outcome of the first draw.",
+        "explanation": "Let \\( R_1, B_1 \\) be the events that the first ball drawn is Red, Black respectively. \\( P(R_1) = 4/10 \\), \\( P(B_1) = 6/10 \\). If Red is drawn first, the bag now has 6 Red and 6 Black balls, so \\( P(R_2|R_1) = 6/12 \\). If Black is drawn first, the bag has 4 Red and 8 Black balls, so \\( P(R_2|B_1) = 4/12 \\). By total probability: \\( P(R_2) = \\frac{4}{10} \\times \\frac{6}{12} + \\frac{6}{10} \\times \\frac{4}{12} = \\frac{24+24}{120} = \\frac{48}{120} = \\frac{2}{5} \\)."
+      },
+      "ar": {
+        "question": "يحتوي كيس على 4 كرات حمراء و6 كرات سوداء. سُحبت كرة عشوائيًا، وسُجل لونها، ثم أُعيدت إلى الكيس مع إضافة كرتين إضافيتين من نفس اللون. ثم سُحبت كرة ثانية. ما احتمال أن تكون الكرة الثانية حمراء؟",
+        "options": [
+          "\\( \\frac{2}{5} \\)",
+          "\\( \\frac{1}{2} \\)",
+          "\\( \\frac{3}{5} \\)",
+          "\\( \\frac{4}{25} \\)"
+        ],
+        "hint": "طبق قانون الاحتمال الكلي بناءً على نتيجة السحبة الأولى.",
+        "explanation": "احتمال سحب كرة حمراء أولاً هو \\( 4/10 \\)، والسوداء هو \\( 6/10 \\). إذا كانت الأولى حمراء، يصبح الكيس فيه 6 حمراء و6 سوداء، فيكون الاحتمال الشرطي \\( 6/12 \\). وإذا كانت الأولى سوداء، يصبح فيه 4 حمراء و8 سوداء، فيكون الاحتمال الشرطي \\( 4/12 \\). باستخدام الاحتمال الكلي: \\( P(R_2) = \\frac{4}{10} \\times \\frac{6}{12} + \\frac{6}{10} \\times \\frac{4}{12} = \\frac{48}{120} = \\frac{2}{5} \\)."
+      }
+    },
+    "correct_index": "0"
+  },
+  {
+    "id": "JEE-073",
+    "track": "jee",
+    "level": "Grade 12",
+    "topic": "Matrices",
+    "type": "FRQ",
+    "difficulty": "hard",
+    "content": {
+      "en": {
+        "question": "Let \\( A = \\begin{pmatrix} 1 & 0 & 0 \\\\ 2 & 1 & 0 \\\\ 3 & 2 & 1 \\end{pmatrix} \\). If \\( S_{10} \\) denotes the sum of all elements of the matrix \\( A^{10} \\), find \\( S_{10} \\).",
+        "options": [],
+        "hint": "Write \\( A = I + N \\) where \\( N \\) is nilpotent of order 3.",
+        "explanation": "Let \\( A = I + N \\), where \\( N = \\begin{pmatrix} 0 & 0 & 0 \\\\ 2 & 0 & 0 \\\\ 3 & 2 & 0 \\end{pmatrix} \\). Note \\( N^2 = \\begin{pmatrix} 0 & 0 & 0 \\\\ 0 & 0 & 0 \\\\ 4 & 0 & 0 \\end{pmatrix} \\) and \\( N^3 = O \\). Thus \\( A^n = I + nN + \\frac{n(n-1)}{2}N^2 = \\begin{pmatrix} 1 & 0 & 0 \\\\ 2n & 1 & 0 \\\\ 2n^2 + n & 2n & 1 \\end{pmatrix} \\). Sum of elements \\( S_n = 2n^2 + 5n + 3 = (2n+3)(n+1) \\). For \\( n = 10 \\), \\( S_{10} = (23)(11) = 253 \\)."
+      },
+      "ar": {
+        "question": "لتكن \\( A = \\begin{pmatrix} 1 & 0 & 0 \\\\ 2 & 1 & 0 \\\\ 3 & 2 & 1 \\end{pmatrix} \\). إذا كانت \\( S_{10} \\) تمثل مجموع جميع عناصر المصفوفة \\( A^{10} \\)، فأوجد \\( S_{10} \\).",
+        "options": [],
+        "hint": "اكتب \\( A = I + N \\) حيث \\( N \\) مصفوفة معدومة القوى من الدرجة 3.",
+        "explanation": "نكتب \\( A = I + N \\)، حيث \\( N^3 = O \\). مفكوك ذات الحدين يعطي \\( A^n = I + nN + \\frac{n(n-1)}{2}N^2 = \\begin{pmatrix} 1 & 0 & 0 \\\\ 2n & 1 & 0 \\\\ 2n^2 + n & 2n & 1 \\end{pmatrix} \\). مجموع العناصر \\( S_n = 2n^2 + 5n + 3 \\). عند \\( n = 10 \\)، نجد \\( S_{10} = 2(100) + 5(10) + 3 = 253 \\)."
+      }
+    },
+    "correct_index": "253"
+  },
+  {
+    "id": "JEE-074",
+    "track": "jee",
+    "level": "Grade 12",
+    "topic": "Coordinate Geometry",
+    "type": "MCQ",
+    "difficulty": "medium",
+    "content": {
+      "en": {
+        "question": "The locus of the mid-points of chords of the circle \\( x^2 + y^2 = 25 \\) which pass through the fixed point \\( (3, 4) \\) is:",
+        "options": [
+          "\\( x^2 + y^2 - 3x - 4y = 0 \\)",
+          "\\( x^2 + y^2 + 3x + 4y = 0 \\)",
+          "\\( x^2 + y^2 - 6x - 8y = 0 \\)",
+          "\\( x^2 + y^2 - 4x - 3y = 0 \\)"
+        ],
+        "hint": "Use the equation of chord with a given midpoint: \\( T = S_1 \\).",
+        "explanation": "Equation of chord with midpoint \\( (h, k) \\) is \\( x h + y k - 25 = h^2 + k^2 - 25 \\implies x h + y k = h^2 + k^2 \\). Since it passes through \\( (3, 4) \\), we get \\( 3h + 4k = h^2 + k^2 \\). Replacing \\( (h, k) \\) with \\( (x, y) \\), the locus is \\( x^2 + y^2 - 3x - 4y = 0 \\)."
+      },
+      "ar": {
+        "question": "المحل الهندسي لمنتصفات أوتار الدائرة \\( x^2 + y^2 = 25 \\) التي تمر بالنقطة الثابتة \\( (3, 4) \\) هو:",
+        "options": [
+          "\\( x^2 + y^2 - 3x - 4y = 0 \\)",
+          "\\( x^2 + y^2 + 3x + 4y = 0 \\)",
+          "\\( x^2 + y^2 - 6x - 8y = 0 \\)",
+          "\\( x^2 + y^2 - 4x - 3y = 0 \\)"
+        ],
+        "hint": "استخدم معادلة الوتر بمعلومية منتصفه: \\( T = S_1 \\).",
+        "explanation": "معادلة الوتر الذي منتصفه \\( (h, k) \\) هي \\( x h + y k = h^2 + k^2 \\). وبما أنه يمر بالنقطة \\( (3, 4) \\)، فإن \\( 3h + 4k = h^2 + k^2 \\). باستبدال \\( (h, k) \\) بـ \\( (x, y) \\)، نجد أن المحل الهندسي هو \\( x^2 + y^2 - 3x - 4y = 0 \\)."
+      }
+    },
+    "correct_index": "0"
+  },
+  {
+    "id": "JEE-075",
+    "track": "jee",
+    "level": "Grade 12",
+    "topic": "Calculus",
+    "type": "MCQ",
+    "difficulty": "medium",
+    "content": {
+      "en": {
+        "question": "The acute angle between the curves \\( y = |x^2 - 1| \\) and \\( y = |x^2 - 3| \\) at their point of intersection is:",
+        "options": [
+          "\\( \\tan^{-1}\\left(\\frac{4\\sqrt{2}}{7}\\right) \\)",
+          "\\( \\tan^{-1}\\left(\\frac{2\\sqrt{2}}{7}\\right) \\)",
+          "\\( \\tan^{-1}\\left(\\frac{4\\sqrt{2}}{9}\\right) \\)",
+          "\\( \\frac{\\pi}{4} \\)"
+        ],
+        "hint": "Find point of intersection for positive \\( x \\) and calculate slopes of tangents at that point.",
+        "explanation": "Equating \\( x^2 - 1 = -(x^2 - 3) \\implies 2x^2 = 4 \\implies x = \\sqrt{2} \\). At \\( x = \\sqrt{2} \\), \\( y_1 = x^2 - 1 \\implies m_1 = 2\\sqrt{2} \\), and \\( y_2 = 3 - x^2 \\implies m_2 = -2\\sqrt{2} \\). The acute angle \\( \\theta \\) satisfies \\( \\tan\\theta = \\left| \\frac{m_1 - m_2}{1 + m_1 m_2} \\right| = \\left| \\frac{4\\sqrt{2}}{1 - 8} \\right| = \\frac{4\\sqrt{2}}{7} \\). Thus, \\( \\theta = \\tan^{-1}\\left(\\frac{4\\sqrt{2}}{7}\\right) \\)."
+      },
+      "ar": {
+        "question": "الزاوية الحادة بين المنحنيين \\( y = |x^2 - 1| \\) و \\( y = |x^2 - 3| \\) عند نقطة تقاطعهما هي:",
+        "options": [
+          "\\( \\tan^{-1}\\left(\\frac{4\\sqrt{2}}{7}\\right) \\)",
+          "\\( \\tan^{-1}\\left(\\frac{2\\sqrt{2}}{7}\\right) \\)",
+          "\\( \\tan^{-1}\\left(\\frac{4\\sqrt{2}}{9}\\right) \\)",
+          "\\( \\frac{\\pi}{4} \\)"
+        ],
+        "hint": "أوجد نقطة التقاطع لـ \\( x \\) الموجبة واحسب ميلي المماسين عند تلك النقطة.",
+        "explanation": "بمساواة المعادلتين \\( x^2 - 1 = 3 - x^2 \\implies x = \\sqrt{2} \\). عند هذه النقطة، ميلا المماسين هما \\( m_1 = 2\\sqrt{2} \\) و \\( m_2 = -2\\sqrt{2} \\). الزاوية الحادة \\( \\theta \\) تحقق \\( \\tan\\theta = \\left| \\frac{4\\sqrt{2}}{1 - 8} \\right| = \\frac{4\\sqrt{2}}{7} \\). بالتالي \\( \\theta = \\tan^{-1}\\left(\\frac{4\\sqrt{2}}{7}\\right) \\)."
+      }
+    },
+    "correct_index": "0"
+  },
+  {
+    "id": "JEE-076",
+    "track": "jee",
+    "level": "Grade 12",
+    "topic": "Sequences and Series",
+    "type": "MCQ",
+    "difficulty": "medium",
+    "content": {
+      "en": {
+        "question": "Find the sum of the infinite series $$ 1 + \\frac{2}{3} + \\frac{6}{9} + \\frac{10}{27} + \\frac{14}{81} + \\dots $$",
+        "options": [
+          "\\( 3 \\)",
+          "\\( 2 \\)",
+          "\\( 4 \\)",
+          "\\( \\frac{5}{2} \\)"
+        ],
+        "hint": "Notice that after the first term, the series is an Arithmetico-Geometric Progression (AGP).",
+        "explanation": "Let \\( S = 1 + \\sum_{n=1}^\\infty \\frac{4n-2}{3^n} = 1 + \\left( \\frac{2}{3} + \\frac{6}{9} + \\frac{10}{27} + \\dots \\right) \\). Multiplying by \\( 1/3 \\): \\( \\frac{1}{3}S = \\frac{1}{3} + \\frac{2}{9} + \\frac{6}{27} + \\dots \\). Subtracting yields \\( \\frac{2}{3}S = 1 + \\left(\\frac{2}{3} - \\frac{1}{3}\\right) + \\frac{4}{9} + \\frac{4}{27} + \\dots = 1 + \\frac{1}{3} + \\frac{4/9}{1 - 1/3} = \\frac{4}{3} + \\frac{2}{3} = 2 \\). Hence, \\( S = 3 \\)."
+      },
+      "ar": {
+        "question": "أوجد مجموع المتسلسلة اللانهائية $$ 1 + \\frac{2}{3} + \\frac{6}{9} + \\frac{10}{27} + \\frac{14}{81} + \\dots $$",
+        "options": [
+          "\\( 3 \\)",
+          "\\( 2 \\)",
+          "\\( 4 \\)",
+          "\\( \\frac{5}{2} \\)"
+        ],
+        "hint": "لاحظ أن الحدود بعد الحد الأول تشكل متتالية حسابية هندسية (AGP).",
+        "explanation": "بفرض المجموع \\( S \\). بضرب الطرفين في \\( 1/3 \\) ثم الطرح، نحصل على \\( \\frac{2}{3}S = 1 + \\frac{1}{3} + \\frac{4/9}{2/3} = 2 \\). وبالتالي \\( S = 3 \\)."
+      }
+    },
+    "correct_index": "0"
+  },
+  {
+    "id": "JEE-077",
+    "track": "jee",
+    "level": "Grade 12",
+    "topic": "Complex Numbers",
+    "type": "MCQ",
+    "difficulty": "hard",
+    "content": {
+      "en": {
+        "question": "If \\( z_1, z_2, z_3 \\) are the vertices of an equilateral triangle inscribed in the circle \\( |z| = 2 \\), and \\( z_1 = 1 + i\\sqrt{3} \\), find the value of \\( z_2 z_3 \\).",
+        "options": [
+          "\\( -2 + 2i\\sqrt{3} \\)",
+          "\\( 2 - 2i\\sqrt{3} \\)",
+          "\\( -2 - 2i\\sqrt{3} \\)",
+          "\\( 4 \\)"
+        ],
+        "hint": "The centroid of an inscribed equilateral triangle is at the origin, so \\( z_1 + z_2 + z_3 = 0 \\).",
+        "explanation": "Since the triangle is equilateral and inscribed in a circle centered at origin, \\( z_1, z_2, z_3 \\) are of the form \\( z_1, z_1 e^{i 2\\pi/3}, z_1 e^{i 4\\pi/3} \\). The product \\( z_2 z_3 = z_1^2 e^{i 2\\pi} = z_1^2 \\). Given \\( z_1 = 1 + i\\sqrt{3} = 2 e^{i\\pi/3} \\), we have \\( z_1^2 = 4 e^{i 2\\pi/3} = 4\\left(-\\frac{1}{2} + i\\frac{\\sqrt{3}}{2}\\right) = -2 + 2i\\sqrt{3} \\)."
+      },
+      "ar": {
+        "question": "إذا كانت \\( z_1, z_2, z_3 \\) رؤوس مثلث متساوي الأضلاع محاط بالدائرة \\( |z| = 2 \\)، وكان \\( z_1 = 1 + i\\sqrt{3} \\)، فأوجد قيمة \\( z_2 z_3 \\).",
+        "options": [
+          "\\( -2 + 2i\\sqrt{3} \\)",
+          "\\( 2 - 2i\\sqrt{3} \\)",
+          "\\( -2 - 2i\\sqrt{3} \\)",
+          "\\( 4 \\)"
+        ],
+        "hint": "مركز ثقل المثلث متساوي الأضلاع يقع في الأصل، مما يعني أن \\( z_1 + z_2 + z_3 = 0 \\).",
+        "explanation": "بما أن المثلث متساوي الأضلاع ومركزه الأصل، فإن \\( z_2 z_3 = z_1^2 \\). وحيث أن \\( z_1 = 1 + i\\sqrt{3} = 2 e^{i\\pi/3} \\)، فإن \\( z_1^2 = 4 e^{i 2\\pi/3} = -2 + 2i\\sqrt{3} \\)."
+      }
+    },
+    "correct_index": "0"
+  },
+  {
+    "id": "JEE-078",
+    "track": "jee",
+    "level": "Grade 12",
+    "topic": "Calculus",
+    "type": "MCQ",
+    "difficulty": "medium",
+    "content": {
+      "en": {
+        "question": "Find the area enclosed between the curves \\( x = e^y \\), \\( x = -e^y \\), \\( y = 1 \\), and \\( y = -1 \\).",
+        "options": [
+          "\\( 2(e - e^{-1}) \\)",
+          "\\( e - e^{-1} \\)",
+          "\\( 2(e + e^{-1}) \\)",
+          "\\( 2e \\)"
+        ],
+        "hint": "Integrate with respect to \\( y \\) from \\( -1 \\) to \\( 1 \\).",
+        "explanation": "The horizontal distance between the curves at any \\( y \\) is \\( e^y - (-e^y) = 2e^y \\). The enclosed area is \\( A = \\int_{-1}^1 2e^y dy = \\left[ 2e^y \\right]_{-1}^1 = 2(e - e^{-1}) \\)."
+      },
+      "ar": {
+        "question": "أوجد المساحة المحصورة بين المنحنيات \\( x = e^y \\) و \\( x = -e^y \\) و \\( y = 1 \\) و \\( y = -1 \\).",
+        "options": [
+          "\\( 2(e - e^{-1}) \\)",
+          "\\( e - e^{-1} \\)",
+          "\\( 2(e + e^{-1}) \\)",
+          "\\( 2e \\)"
+        ],
+        "hint": "احسب التكامل بالنسبة لـ \\( y \\) من \\( -1 \\) إلى \\( 1 \\).",
+        "explanation": "المسافة الأفقية بين المنحنيين عند أي \\( y \\) هي \\( 2e^y \\). المساحة تساوي \\( A = \\int_{-1}^1 2e^y dy = 2(e - e^{-1}) \\)."
+      }
+    },
+    "correct_index": "0"
+  },
+  {
+    "id": "JEE-079",
+    "track": "jee",
+    "level": "Grade 12",
+    "topic": "Combinatorics",
+    "type": "FRQ",
+    "difficulty": "medium",
+    "content": {
+      "en": {
+        "question": "Find the number of integral solutions to the equation \\( x + y + z + w = 20 \\) such that \\( x \\ge 1 \\), \\( y \\ge 2 \\), \\( z \\ge 3 \\), and \\( w \\ge 4 \\).",
+        "options": [],
+        "hint": "Substitute \\( x' = x-1, y' = y-2, z' = z-3, w' = w-4 \\) to convert to non-negative integer solutions.",
+        "explanation": "Let \\( x' = x-1 \\ge 0 \\), \\( y' = y-2 \\ge 0 \\), \\( z' = z-3 \\ge 0 \\), \\( w' = w-4 \\ge 0 \\). Substituting gives \\( x' + y' + z' + w' = 20 - (1+2+3+4) = 10 \\). The number of non-negative integer solutions is given by stars and bars: \\( \\binom{10 + 4 - 1}{4 - 1} = \\binom{13}{3} = \\frac{13 \\times 12 \\times 11}{6} = 286 \\)."
+      },
+      "ar": {
+        "question": "أوجد عدد الحلول الصحيحة للمعادلة \\( x + y + z + w = 20 \\) بحيث \\( x \\ge 1 \\) و \\( y \\ge 2 \\) و \\( z \\ge 3 \\) و \\( w \\ge 4 \\).",
+        "options": [],
+        "hint": "عوض بـ \\( x' = x-1, y' = y-2, z' = z-3, w' = w-4 \\) لتحويلها إلى حلول صحيحة غير سالبة.",
+        "explanation": "بفرض المتغيرات الجديدة، تصبح المعادلة \\( x' + y' + z' + w' = 10 \\). عدد الحلول غير السالبة يعطى بالتوافيق \\( \\binom{10 + 4 - 1}{4 - 1} = \\binom{13}{3} = 286 \\)."
+      }
+    },
+    "correct_index": "286"
+  },
+  {
+    "id": "JEE-080",
+    "track": "jee",
+    "level": "Grade 12",
+    "topic": "Calculus",
+    "type": "MCQ",
+    "difficulty": "hard",
+    "content": {
+      "en": {
+        "question": "Evaluate the indefinite integral: $$ \\int \\frac{dx}{\\sin^4 x + \\cos^4 x} $$",
+        "options": [
+          "\\( \\frac{1}{\\sqrt{2}} \\tan^{-1}\\left(\\frac{\\tan x - \\cot x}{\\sqrt{2}}\\right) + C \\)",
+          "\\( \\frac{1}{2} \\tan^{-1}\\left(\\frac{\\tan x - \\cot x}{2}\\right) + C \\)",
+          "\\( \\sqrt{2} \\tan^{-1}\\left(\\frac{\\tan x + \\cot x}{\\sqrt{2}}\\right) + C \\)",
+          "\\( \\frac{1}{\\sqrt{2}} \\tan^{-1}\\left(\\frac{\\tan x + \\cot x}{\\sqrt{2}}\\right) + C \\)"
+        ],
+        "hint": "Divide numerator and denominator by \\( \\cos^4 x \\) and substitute \\( t = \\tan x \\).",
+        "explanation": "Dividing numerator and denominator by \\( \\cos^4 x \\) gives \\( \\int \\frac{(1+\\tan^2 x)\\sec^2 x}{\\tan^4 x + 1} dx \\). Let \\( t = \\tan x \\), integral becomes \\( \\int \\frac{t^2+1}{t^4+1} dt = \\int \\frac{1 + 1/t^2}{t^2 + 1/t^2} dt = \\int \\frac{d(t - 1/t)}{(t - 1/t)^2 + 2} = \\frac{1}{\\sqrt{2}}\\tan^{-1}\\left(\\frac{t - 1/t}{\\sqrt{2}}\\right) + C = \\frac{1}{\\sqrt{2}} \\tan^{-1}\\left(\\frac{\\tan x - \\cot x}{\\sqrt{2}}\\right) + C \\)."
+      },
+      "ar": {
+        "question": "احسب التكامل غير المحدد: $$ \\int \\frac{dx}{\\sin^4 x + \\cos^4 x} $$",
+        "options": [
+          "\\( \\frac{1}{\\sqrt{2}} \\tan^{-1}\\left(\\frac{\\tan x - \\cot x}{\\sqrt{2}}\\right) + C \\)",
+          "\\( \\frac{1}{2} \\tan^{-1}\\left(\\frac{\\tan x - \\cot x}{2}\\right) + C \\)",
+          "\\( \\sqrt{2} \\tan^{-1}\\left(\\frac{\\tan x + \\cot x}{\\sqrt{2}}\\right) + C \\)",
+          "\\( \\frac{1}{\\sqrt{2}} \\tan^{-1}\\left(\\frac{\\tan x + \\cot x}{\\sqrt{2}}\\right) + C \\)"
+        ],
+        "hint": "اقسم البسط والمقام على \\( \\cos^4 x \\) ثم استخدم التعويض \\( t = \\tan x \\).",
+        "explanation": "بقسمة البسط والمقام على \\( \\cos^4 x \\) والتعويض \\( t = \\tan x \\)، نحصل على التكامل \\( \\int \\frac{1+1/t^2}{t^2+1/t^2} dt = \\frac{1}{\\sqrt{2}}\\tan^{-1}\\left(\\frac{t - 1/t}{\\sqrt{2}}\\right) + C = \\frac{1}{\\sqrt{2}} \\tan^{-1}\\left(\\frac{\\tan x - \\cot x}{\\sqrt{2}}\\right) + C \\)."
+      }
+    },
+    "correct_index": "0"
+  },
+  {
+    "id": "JEE-081",
+    "track": "jee",
+    "level": "Grade 12",
+    "topic": "3D Geometry",
+    "type": "FRQ",
+    "difficulty": "medium",
+    "content": {
+      "en": {
+        "question": "The distance of the point \\( P(1, -2, 3) \\) from the plane \\( x - y + z = 5 \\) measured parallel to the line \\( \\frac{x}{2} = \\frac{y}{3} = \\frac{z}{-6} \\) is:",
+        "options": [],
+        "hint": "Write the parametric equation of the line passing through \\( P \\) in the given direction.",
+        "explanation": "Line passing through \\( P(1, -2, 3) \\) parallel to \\( (2, 3, -6) \\) has points \\( (1 + 2t, -2 + 3t, 3 - 6t) \\). Substituting into plane equation: \\( (1 + 2t) - (-2 + 3t) + (3 - 6t) = 5 \\implies 6 - 7t = 5 \\implies t = 1/7 \\). Distance = \\( |t| \\sqrt{2^2 + 3^2 + (-6)^2} = \\frac{1}{7} \\times 7 = 1 \\)."
+      },
+      "ar": {
+        "question": "مسافة النقطة \\( P(1, -2, 3) \\) عن المستوى \\( x - y + z = 5 \\) المقاسة بموازاة المستقيم \\( \\frac{x}{2} = \\frac{y}{3} = \\frac{z}{-6} \\) هي:",
+        "options": [],
+        "hint": "اكتب المعادلة الوسيطية للمستقيم المار بالنقطة \\( P \\) في الاتجاه المعطى.",
+        "explanation": "المستقيم المار بـ \\( P \\) والموازي للمتجه \\( (2, 3, -6) \\) نقاطه هي \\( (1 + 2t, -2 + 3t, 3 - 6t) \\). بالتعويض في معادلة المستوى نجد \\( 6 - 7t = 5 \\implies t = 1/7 \\). المسافة تساوي \\( |t| \\sqrt{2^2 + 3^2 + (-6)^2} = \\frac{1}{7} \\times 7 = 1 \\)."
+      }
+    },
+    "correct_index": "1"
+  },
+  {
+    "id": "JEE-082",
+    "track": "jee",
+    "level": "Grade 12",
+    "topic": "Definite Integrals",
+    "type": "MCQ",
+    "difficulty": "hard",
+    "content": {
+      "en": {
+        "question": "Evaluate the definite integral $$ I = \\int_0^{\\pi/2} \\frac{\\sin^3 x}{\\sin x + \\cos x} dx $$",
+        "options": [
+          "\\( \\frac{\\pi - 1}{4} \\)",
+          "\\( \\frac{\\pi + 1}{4} \\)",
+          "\\( \\frac{\\pi - 1}{2} \\)",
+          "\\( \\frac{\\pi}{4} \\)"
+        ],
+        "hint": "Use King's property of definite integrals \\( \\int_a^b f(x)dx = \\int_a^b f(a+b-x)dx \\) and sum the two integrals.",
+        "explanation": "Using King's property, \\( I = \\int_0^{\\pi/2} \\frac{\\cos^3 x}{\\cos x + \\sin x} dx \\). Adding the two integrals yields \\( 2I = \\int_0^{\\pi/2} \\frac{\\sin^3 x + \\cos^3 x}{\\sin x + \\cos x} dx = \\int_0^{\\pi/2} (1 - \\sin x \\cos x) dx = [x - \\frac{1}{2}\\sin^2 x]_0^{\\pi/2} = \\frac{\\pi}{2} - \\frac{1}{2} \\). Hence, \\( I = \\frac{\\pi - 1}{4} \\)."
+      },
+      "ar": {
+        "question": "أوجد قيمة التكامل المحدود $$ I = \\int_0^{\\pi/2} \\frac{\\sin^3 x}{\\sin x + \\cos x} dx $$",
+        "options": [
+          "\\( \\frac{\\pi - 1}{4} \\)",
+          "\\( \\frac{\\pi + 1}{4} \\)",
+          "\\( \\frac{\\pi - 1}{2} \\)",
+          "\\( \\frac{\\pi}{4} \\)"
+        ],
+        "hint": "استخدم خاصية الملك للتكامل المحدود \\( \\int_a^b f(x)dx = \\int_a^b f(a+b-x)dx \\) ثم اجمع التكاملين.",
+        "explanation": "باستخدام خاصية الملك، نجد أن \\( I = \\int_0^{\\pi/2} \\frac{\\cos^3 x}{\\cos x + \\sin x} dx \\). بجمع المعادلتين نجد \\( 2I = \\int_0^{\\pi/2} (1 - \\sin x \\cos x) dx = \\frac{\\pi}{2} - \\frac{1}{2} \\). بالتالي فإن \\( I = \\frac{\\pi - 1}{4} \\)."
+      }
+    },
+    "correct_index": "0"
+  },
+  {
+    "id": "JEE-083",
+    "track": "jee",
+    "level": "Grade 12",
+    "topic": "Complex Numbers",
+    "type": "MCQ",
+    "difficulty": "hard",
+    "content": {
+      "en": {
+        "question": "Let \\( w = e^{2\\pi i / 7} \\). Find the value of \\( \\sum_{k=1}^6 \\frac{1}{1 + w^k + w^{2k}} \\).",
+        "options": [
+          "1",
+          "2",
+          "3",
+          "4"
+        ],
+        "hint": "Express \\( 1 + w^k + w^{2k} \\) using geometric progression and roots of unity properties.",
+        "explanation": "Note that \\( 1 + w^k + w^{2k} = \\frac{1 - w^{3k}}{1 - w^k} \\). By taking the sum over all non-trivial 7th roots of unity, symmetry and polynomial identities yield the value 2."
+      },
+      "ar": {
+        "question": "لتكن \\( w = e^{2\\pi i / 7} \\). أوجد قيمة \\( \\sum_{k=1}^6 \\frac{1}{1 + w^k + w^{2k}} \\).",
+        "options": [
+          "1",
+          "2",
+          "3",
+          "4"
+        ],
+        "hint": "عبّر عن \\( 1 + w^k + w^{2k} \\) باستخدام المتتالية الهندسية وخواز جذور الوحدة.",
+        "explanation": "نلاحظ أن \\( 1 + w^k + w^{2k} = \\frac{1 - w^{3k}}{1 - w^k} \\). بحساب المجموع على جميع جذور الوحدة السابعة غير الصفرية، تنتج القيمة 2."
+      }
+    },
+    "correct_index": "1"
+  },
+  {
+    "id": "JEE-084",
+    "track": "jee",
+    "level": "Grade 12",
+    "topic": "Coordinate Geometry",
+    "type": "MCQ",
+    "difficulty": "hard",
+    "content": {
+      "en": {
+        "question": "Let \\( P \\) be a point on the hyperbola \\( \\frac{x^2}{a^2} - \\frac{y^2}{b^2} = 1 \\). If the normal at \\( P \\) intersects the transverse axis at \\( G \\), and \\( S, S' \\) are the foci, then \\( |SG - S'G| \\) is equal to:",
+        "options": [
+          "\\( 2a \\)",
+          "\\( 2b \\)",
+          "\\( 2ae \\)",
+          "\\( 2be \\)"
+        ],
+        "hint": "Find the x-coordinate of the normal intersection point G and calculate distance from foci.",
+        "explanation": "The normal at \\( P(a\\sec\\theta, b\\tan\\theta) \\) intersects the x-axis at \\( G(ae^2\\sec\\theta, 0) \\). Foci are \\( S(ae, 0) \\) and \\( S'(-ae, 0) \\). Calculating \\( |SG - S'G| \\) yields \\( 2ae \\)."
+      },
+      "ar": {
+        "question": "لتكن \\( P \\) نقطة على القطع الزائد \\( \\frac{x^2}{a^2} - \\frac{y^2}{b^2} = 1 \\). إذا كان العمودي عند \\( P \\) يقطع المحور القاطع في \\( G \\)، وكان \\( S, S' \\) بؤرتي القطع، فإن \\( |SG - S'G| \\) يساوي:",
+        "options": [
+          "\\( 2a \\)",
+          "\\( 2b \\)",
+          "\\( 2ae \\)",
+          "\\( 2be \\)"
+        ],
+        "hint": "أوجد الإحداثي السيني لنقطة تقاطع العمودي G واحسب المسافة من البؤرتين.",
+        "explanation": "العمودي عند النقطة \\( P(a\\sec\\theta, b\\tan\\theta) \\) يقطع محور السينات عند \\( G(ae^2\\sec\\theta, 0) \\). البؤرتان هما \\( S(ae, 0) \\) و \\( S'(-ae, 0) \\). بحساب \\( |SG - S'G| \\) نجد أن الناتج يساوي \\( 2ae \\)."
+      }
+    },
+    "correct_index": "2"
+  },
+  {
+    "id": "JEE-085",
+    "track": "jee",
+    "level": "Grade 12",
+    "topic": "Differential Equations",
+    "type": "MCQ",
+    "difficulty": "medium",
+    "content": {
+      "en": {
+        "question": "The solution of the differential equation \\( \\frac{dy}{dx} + y \\tan x = x^2 \\cos x \\) satisfying \\( y(0) = 0 \\) is:",
+        "options": [
+          "\\( y = \\frac{x^3}{3} \\cos x \\)",
+          "\\( y = \\frac{x^3}{3} \\sin x \\)",
+          "\\( y = x^2 \\cos x \\)",
+          "\\( y = \\frac{x^2}{2} \\cos x \\)"
+        ],
+        "hint": "Find the integrating factor \\( I.F. = e^{\\int \\tan x dx} = \\sec x \\).",
+        "explanation": "Multiplying by integrating factor \\( \\sec x \\) gives \\( \\frac{d}{dx}(y \\sec x) = x^2 \\). Integrating both sides gives \\( y \\sec x = \\frac{x^3}{3} + C \\). Since \\( y(0) = 0 \\), \\( C = 0 \\), so \\( y = \\frac{x^3}{3} \\cos x \\)."
+      },
+      "ar": {
+        "question": "حل المعادلة التفاضلية \\( \\frac{dy}{dx} + y \\tan x = x^2 \\cos x \\) التي تحقق الشروط \\( y(0) = 0 \\) هو:",
+        "options": [
+          "\\( y = \\frac{x^3}{3} \\cos x \\)",
+          "\\( y = \\frac{x^3}{3} \\sin x \\)",
+          "\\( y = x^2 \\cos x \\)",
+          "\\( y = \\frac{x^2}{2} \\cos x \\)"
+        ],
+        "hint": "أوجد عامل المكاملة \\( I.F. = e^{\\int \\tan x dx} = \\sec x \\).",
+        "explanation": "بالضرب في عامل المكاملة \\( \\sec x \\) نحصل على \\( \\frac{d}{dx}(y \\sec x) = x^2 \\). بمكاملة الطرفين نحصل على \\( y \\sec x = \\frac{x^3}{3} + C \\). وبما أن \\( y(0) = 0 \\) فإن \\( C = 0 \\)، وبذلك يكون \\( y = \\frac{x^3}{3} \\cos x \\)."
+      }
+    },
+    "correct_index": "0"
+  },
+  {
+    "id": "JEE-086",
+    "track": "jee",
+    "level": "Grade 12",
+    "topic": "Matrices & Determinants",
+    "type": "MCQ",
+    "difficulty": "hard",
+    "content": {
+      "en": {
+        "question": "Let \\( A \\) be a \\( 3 \\times 3 \\) matrix such that \\( A^2 = A + 2I \\). Find \\( \\det(A^3 - 3A) \\).",
+        "options": [
+          "0",
+          "4",
+          "8",
+          "16"
+        ],
+        "hint": "Find the possible eigenvalues of A using the characteristic polynomial relation.",
+        "explanation": "The polynomial relation \\( \\lambda^2 - \\lambda - 2 = 0 \\) gives eigenvalues \\( \\lambda \\in \\{2, -1\\} \\). For any eigenvalue \\( \\lambda \\), the corresponding eigenvalue of \\( A^3 - 3A \\) is \\( \\lambda^3 - 3\\lambda \\). For both 2 and -1, \\( \\lambda^3 - 3\\lambda = 2 \\). Hence, \\( \\det(A^3 - 3A) = 2^3 = 8 \\)."
+      },
+      "ar": {
+        "question": "لتكن \\( A \\) مصفوفة برتبة \\( 3 \\times 3 \\) بحيث \\( A^2 = A + 2I \\). أوجد قيمة \\( \\det(A^3 - 3A) \\).",
+        "options": [
+          "0",
+          "4",
+          "8",
+          "16"
+        ],
+        "hint": "أوجد القيم الذاتية الممكنة للمصفوفة A باستخدام العلاقة الكثيرة الحدود.",
+        "explanation": "معادلة القيم الذاتية هي \\( \\lambda^2 - \\lambda - 2 = 0 \\) وتنتج \\( \\lambda \\in \\{2, -1\\} \\). لأي قيمة ذاتية \\( \\lambda \\)، تكون القيمة الذاتية المناظرة للمصفوفة \\( A^3 - 3A \\) هي \\( \\lambda^3 - 3\\lambda \\). لكلا القيمتين 2 و -1 تكون النتيجة 2. وبالتالي فإن المححدد هو \\( 2^3 = 8 \\)."
+      }
+    },
+    "correct_index": "2"
+  },
+  {
+    "id": "JEE-087",
+    "track": "jee",
+    "level": "Grade 12",
+    "topic": "Probability",
+    "type": "MCQ",
+    "difficulty": "hard",
+    "content": {
+      "en": {
+        "question": "A bag contains 4 red balls and 6 black balls. Balls are drawn one by one without replacement until all 4 red balls are drawn. Find the expected number of draws.",
+        "options": [
+          "\\( \\frac{38}{5} \\)",
+          "\\( \\frac{42}{5} \\)",
+          "\\( \\frac{44}{5} \\)",
+          "\\( \\frac{48}{5} \\)"
+        ],
+        "hint": "Use indicator variables or the standard standard identity for target draw expectations.",
+        "explanation": "The expected number of non-target (black) balls drawn before all 4 red balls are drawn is \\( 6 \\times \\frac{4}{4+1} = \\frac{24}{5} \\). Adding the 4 red balls yields \\( 4 + \\frac{24}{5} = \\frac{44}{5} = 8.8 \\)."
+      },
+      "ar": {
+        "question": "يحتوي كيس على 4 كرات حمراء و6 كرات سوداء. تُسحب الكرات واحدة تلو الأخرى دون إعادة حتى يتم سحب جميع الكرات الحمراء الأربع. أوجد القيمة المتوقعة لعدد السحبات.",
+        "options": [
+          "\\( \\frac{38}{5} \\)",
+          "\\( \\frac{42}{5} \\)",
+          "\\( \\frac{44}{5} \\)",
+          "\\( \\frac{48}{5} \\)"
+        ],
+        "hint": "استخدم المتغيرات المؤشرية أو الصيغة القياسية لتوقع السحب للوصول للهدف.",
+        "explanation": "عدد الكرات السوداء المتوقع سحبها قبل إتمام سحب الكرات الحمراء الأربع هو \\( 6 \\times \\frac{4}{4+1} = \\frac{24}{5} \\). بإضافة 4 كرات حمراء نحصل على \\( 4 + \\frac{24}{5} = \\frac{44}{5} \\)."
+      }
+    },
+    "correct_index": "2"
+  },
+  {
+    "id": "JEE-088",
+    "track": "jee",
+    "level": "Grade 12",
+    "topic": "Vector & 3D Geometry",
+    "type": "MCQ",
+    "difficulty": "medium",
+    "content": {
+      "en": {
+        "question": "Find the shortest distance between the skew lines \\( \\vec{r}_1 = (1, 2, 3) + t(2, 3, 4) \\) and \\( \\vec{r}_2 = (2, 4, 5) + s(3, 4, 5) \\).",
+        "options": [
+          "\\( \\frac{1}{\\sqrt{6}} \\)",
+          "\\( \\frac{1}{\\sqrt{3}} \\)",
+          "\\( \\frac{2}{\\sqrt{6}} \\)",
+          "\\( \\sqrt{6} \\)"
+        ],
+        "hint": "Use the distance formula \\( d = \\frac{|(\\vec{a}_2 - \\vec{a}_1) \\cdot (\\vec{b}_1 \\times \\vec{b}_2)|}{|\\vec{b}_1 \\times \\vec{b}_2|} \\).",
+        "explanation": "\\( \\vec{a}_2 - \\vec{a}_1 = (1, 2, 2) \\). The cross product \\( \\vec{b}_1 \\times \\vec{b}_2 = (2,3,4) \\times (3,4,5) = (-1, 2, -1) \\). Magnitude is \\( \\sqrt{1+4+1} = \\sqrt{6} \\). The dot product is \\( 1(-1) + 2(2) + 2(-1) = 1 \\). Distance is \\( \\frac{1}{\\sqrt{6}} \\)."
+      },
+      "ar": {
+        "question": "أوجد أقصر مسافة بين المستقيمين المتخالفين \\( \\vec{r}_1 = (1, 2, 3) + t(2, 3, 4) \\) و \\( \\vec{r}_2 = (2, 4, 5) + s(3, 4, 5) \\).",
+        "options": [
+          "\\( \\frac{1}{\\sqrt{6}} \\)",
+          "\\( \\frac{1}{\\sqrt{3}} \\)",
+          "\\( \\frac{2}{\\sqrt{6}} \\)",
+          "\\( \\sqrt{6} \\)"
+        ],
+        "hint": "استخدم صيغة المسافة \\( d = \\frac{|(\\vec{a}_2 - \\vec{a}_1) \\cdot (\\vec{b}_1 \\times \\vec{b}_2)|}{|\\vec{b}_1 \\times \\vec{b}_2|} \\).",
+        "explanation": "نجد أن \\( \\vec{a}_2 - \\vec{a}_1 = (1, 2, 2) \\). الضرب الاتجاهي \\( \\vec{b}_1 \\times \\vec{b}_2 = (-1, 2, -1) \\) وطوله \\( \\sqrt{6} \\). والضرب القياسي يساوي 1. لذا فإن المسافة هي \\( \\frac{1}{\\sqrt{6}} \\)."
+      }
+    },
+    "correct_index": "0"
+  },
+  {
+    "id": "JEE-089",
+    "track": "jee",
+    "level": "Grade 12",
+    "topic": "Limits & Calculus",
+    "type": "MCQ",
+    "difficulty": "hard",
+    "content": {
+      "en": {
+        "question": "Evaluate \\( \\lim_{x \\to 0} \\frac{\\cos(\\sin x) - \\cos x}{x^4} \\).",
+        "options": [
+          "\\( \\frac{1}{12} \\)",
+          "\\( \\frac{1}{6} \\)",
+          "\\( \\frac{1}{3} \\)",
+          "\\( \\frac{1}{2} \\)"
+        ],
+        "hint": "Use Taylor expansions for \\( \\sin x \\) and \\( \\cos x \\) up to degree 4.",
+        "explanation": "Using Taylor series: \\( \\sin x = x - \\frac{x^3}{6} + O(x^5) \\). Then \\( \\cos(\\sin x) = 1 - \\frac{\\sin^2 x}{2} + \\frac{\\sin^4 x}{24} = 1 - \\frac{x^2}{2} + \\frac{5x^4}{24} + O(x^6) \\). Also \\( \\cos x = 1 - \\frac{x^2}{2} + \\frac{x^4}{24} + O(x^6) \\). Thus numerator is \\( \\frac{4x^4}{24} = \\frac{x^4}{6} \\), giving limit \\( \\frac{1}{6} \\)."
+      },
+      "ar": {
+        "question": "أوجد قيمة النهاية التالية: \\( \\lim_{x \\to 0} \\frac{\\cos(\\sin x) - \\cos x}{x^4} \\).",
+        "options": [
+          "\\( \\frac{1}{12} \\)",
+          "\\( \\frac{1}{6} \\)",
+          "\\( \\frac{1}{3} \\)",
+          "\\( \\frac{1}{2} \\)"
+        ],
+        "hint": "استخدم مفكوك تايلور لـ \\( \\sin x \\) و \\( \\cos x \\) حتى القوة الرابعة.",
+        "explanation": "باستخدام متسلسلة تايلور: \\( \\cos(\\sin x) = 1 - \\frac{x^2}{2} + \\frac{5x^4}{24} \\) و \\( \\cos x = 1 - \\frac{x^2}{2} + \\frac{x^4}{24} \\). الفرق بينهما يساوي \\( \\frac{x^4}{6} \\)، بالتالي تكون النهاية مساوية لـ \\( \\frac{1}{6} \\)."
+      }
+    },
+    "correct_index": "1"
+  },
+  {
+    "id": "JEE-090",
+    "track": "jee",
+    "level": "Grade 12",
+    "topic": "Functions & Continuity",
+    "type": "MCQ",
+    "difficulty": "medium",
+    "content": {
+      "en": {
+        "question": "Let \\( f(x) = \\lfloor x \\rfloor + \\sqrt{x - \\lfloor x \\rfloor} \\) for \\( x \\in \\mathbb{R} \\). Which of the following statements is true?",
+        "options": [
+          "f(x) is continuous everywhere on \\( \\mathbb{R} \\)",
+          "f(x) is discontinuous at all integers",
+          "f(x) is discontinuous only at negative integers",
+          "f(x) is continuous nowhere"
+        ],
+        "hint": "Check left and right limits at integer values \\( x = n \\).",
+        "explanation": "At any integer \\( n \\), \\( \\lim_{x \\to n^+} f(x) = n + 0 = n \\), and \\( \\lim_{x \\to n^-} f(x) = (n-1) + \\sqrt{1} = n \\). Since \\( f(n) = n \\), \\( f(x) \\) is continuous everywhere on \\( \\mathbb{R} \\)."
+      },
+      "ar": {
+        "question": "لتكن \\( f(x) = \\lfloor x \\rfloor + \\sqrt{x - \\lfloor x \\rfloor} \\) لجميع \\( x \\in \\mathbb{R} \\). أيُّ الجمل التالية صحيحة؟",
+        "options": [
+          "f(x) مستمرة على جميع أعداد \\( \\mathbb{R} \\)",
+          "f(x) غير مستمرة عند جميع الأعداد الصحيحة",
+          "f(x) غير مستمرة فقط عند الأعداد الصحيحة السالبة",
+          "f(x) غير مستمرة في أي نقطة"
+        ],
+        "hint": "افحص النهاية اليمنى واليسرى عند الأعداد الصحيحة \\( x = n \\).",
+        "explanation": "عند أي عدد صحيح \\( n \\)، نجد أن النهاية اليمنى تساوي \\( n \\) والنهاية اليسرى تساوي \\( n \\) ومقدار الدالة يساوي \\( n \\). بالتالي فإن الدالة مستمرة على كل \\( \\mathbb{R} \\)."
+      }
+    },
+    "correct_index": "0"
+  },
+  {
+    "id": "JEE-091",
+    "track": "jee",
+    "level": "Grade 12",
+    "topic": "Sequences & Series",
+    "type": "MCQ",
+    "difficulty": "medium",
+    "content": {
+      "en": {
+        "question": "The sum of the infinite series \\( \\sum_{n=1}^{\\infty} \\frac{n^2}{n!} \\) is equal to:",
+        "options": [
+          "\\( e \\)",
+          "\\( 2e \\)",
+          "\\( 3e \\)",
+          "\\( e^2 \\)"
+        ],
+        "hint": "Rewrite \\( n^2 = n(n-1) + n \\).",
+        "explanation": "\\( \\sum_{n=1}^{\\infty} \\frac{n^2}{n!} = \\sum_{n=2}^{\\infty} \\frac{1}{(n-2)!} + \\sum_{n=1}^{\\infty} \\frac{1}{(n-1)!} = e + e = 2e \\)."
+      },
+      "ar": {
+        "question": "مجموع السلسلة اللانهائية \\( \\sum_{n=1}^{\\infty} \\frac{n^2}{n!} \\) يساوي:",
+        "options": [
+          "\\( e \\)",
+          "\\( 2e \\)",
+          "\\( 3e \\)",
+          "\\( e^2 \\)"
+        ],
+        "hint": "أعد كتابة \\( n^2 = n(n-1) + n \\).",
+        "explanation": "بالتحليل نجد أن \\( \\sum_{n=1}^{\\infty} \\frac{n^2}{n!} = \\sum_{n=2}^{\\infty} \\frac{1}{(n-2)!} + \\sum_{n=1}^{\\infty} \\frac{1}{(n-1)!} = e + e = 2e \\)."
+      }
+    },
+    "correct_index": "1"
+  },
+  {
+    "id": "JEE-092",
+    "track": "jee",
+    "level": "Grade 12",
+    "topic": "Complex Numbers",
+    "type": "MCQ",
+    "difficulty": "easy",
+    "content": {
+      "en": {
+        "question": "If non-zero complex numbers \\( z_1, z_2 \\) satisfy \\( |z_1 + z_2| = |z_1 - z_2| \\), then \\( \\arg(z_1) - \\arg(z_2) \\) is equal to:",
+        "options": [
+          "0",
+          "\\( \\frac{\\pi}{4} \\)",
+          "\\( \\frac{\\pi}{2} \\)",
+          "\\( \\pi \\)"
+        ],
+        "hint": "Squaring both sides leads to \\( Re(z_1 \\bar{z}_2) = 0 \\).",
+        "explanation": "Squaring gives \\( |z_1|^2 + |z_2|^2 + 2Re(z_1 \\bar{z}_2) = |z_1|^2 + |z_2|^2 - 2Re(z_1 \\bar{z}_2) \\Rightarrow Re(z_1 \\bar{z}_2) = 0 \\). Thus \\( z_1/z_2 \\) is purely imaginary, so argument difference is \\( \\frac{\\pi}{2} \\)."
+      },
+      "ar": {
+        "question": "إذا كان للأعداد المركبة غير الصفرية \\( z_1, z_2 \\) الشرط \\( |z_1 + z_2| = |z_1 - z_2| \\)، فإن فرق السعتين \\( \\arg(z_1) - \\arg(z_2) \\) يساوي:",
+        "options": [
+          "0",
+          "\\( \\frac{\\pi}{4} \\)",
+          "\\( \\frac{\\pi}{2} \\)",
+          "\\( \\pi \\)"
+        ],
+        "hint": "تربيع الطرفين يؤدي إلى \\( Re(z_1 \\bar{z}_2) = 0 \\).",
+        "explanation": "بتربيع الطرفين نجد أن الجزء الحقيقي لـ \\( z_1 \\bar{z}_2 \\) يساوي 0، وهذا يعني أن \\( z_1/z_2 \\) عدد تخيلي صرف، وبالتالي تكون فرق السعة مساوية لـ \\( \\frac{\\pi}{2} \\)."
+      }
+    },
+    "correct_index": "2"
+  },
+  {
+    "id": "JEE-093",
+    "track": "jee",
+    "level": "Grade 12",
+    "topic": "Area under Curves",
+    "type": "MCQ",
+    "difficulty": "hard",
+    "content": {
+      "en": {
+        "question": "The area bounded by \\( y = |x^2 - 1| \\) and \\( y = 1 \\) is:",
+        "options": [
+          "\\( \\frac{4(\\sqrt{2}-1)}{3} \\)",
+          "\\( \\frac{8(\\sqrt{2}-1)}{3} \\)",
+          "\\( \\frac{8\\sqrt{2}}{3} \\)",
+          "\\( \\frac{4\\sqrt{2}}{3} \\)"
+        ],
+        "hint": "Use symmetry about y-axis and split integral at x = 1.",
+        "explanation": "By symmetry, Area = \\( 2 \\left( \\int_0^1 (1 - (1-x^2))dx + \\int_1^{\\sqrt{2}} (1 - (x^2-1))dx \\right) = 2 \\left( \\frac{1}{3} + \\frac{4\\sqrt{2}-5}{3} \\right) = \\frac{8(\\sqrt{2}-1)}{3} \\)."
+      },
+      "ar": {
+        "question": "المساحة المحصورة بين \\( y = |x^2 - 1| \\) و \\( y = 1 \\) تساوي:",
+        "options": [
+          "\\( \\frac{4(\\sqrt{2}-1)}{3} \\)",
+          "\\( \\frac{8(\\sqrt{2}-1)}{3} \\)",
+          "\\( \\frac{8\\sqrt{2}}{3} \\)",
+          "\\( \\frac{4\\sqrt{2}}{3} \\)"
+        ],
+        "hint": "استخدم التماثل حول محور الصادات وقسّم التكامل عند x = 1.",
+        "explanation": "بالتماثل، تكون المساحة = \\( 2 \\left( \\int_0^1 x^2 dx + \\int_1^{\\sqrt{2}} (2-x^2) dx \\right) = \\frac{8(\\sqrt{2}-1)}{3} \\)."
+      }
+    },
+    "correct_index": "1"
+  },
+  {
+    "id": "JEE-094",
+    "track": "jee",
+    "level": "Grade 12",
+    "topic": "Coordinate Geometry",
+    "type": "MCQ",
+    "difficulty": "hard",
+    "content": {
+      "en": {
+        "question": "If two tangents drawn from a point \\( P \\) to the parabola \\( y^2 = 4ax \\) make an angle of \\( 45^\\circ \\) with each other, then the locus of \\( P \\) is:",
+        "options": [
+          "\\( x^2 + 6ax + a^2 - y^2 = 0 \\)",
+          "\\( x^2 - 6ax + a^2 + y^2 = 0 \\)",
+          "\\( x^2 + 4ax + a^2 - y^2 = 0 \\)",
+          "\\( y^2 = 4a(x+a) \\)"
+        ],
+        "hint": "Use the condition for the angle between lines \\( \\tan 45^\\circ = |\\frac{m_1 - m_2}{1 + m_1 m_2}| \\).",
+        "explanation": "A tangent is \\( y = mx + a/m \\Rightarrow m^2 x - my + a = 0 \\). For a point \\( P(x, y) \\), \\( m_1 + m_2 = y/x \\) and \\( m_1 m_2 = a/x \\). Setting \\( \\tan 45^\\circ = 1 = \\frac{\\sqrt{(m_1+m_2)^2 - 4m_1 m_2}}{|1 + m_1 m_2|} \\) gives \\( (x+a)^2 = y^2 - 4ax \\Rightarrow x^2 + 6ax + a^2 - y^2 = 0 \\)."
+      },
+      "ar": {
+        "question": "إذا كان المماسان الممروران من نقطة \\( P \\) للقطع المكافئ \\( y^2 = 4ax \\) يصنعان زاوية \\( 45^\\circ \\) بينهما، فإن المحل الهندسي للنقطة \\( P \\) هو:",
+        "options": [
+          "\\( x^2 + 6ax + a^2 - y^2 = 0 \\)",
+          "\\( x^2 - 6ax + a^2 + y^2 = 0 \\)",
+          "\\( x^2 + 4ax + a^2 - y^2 = 0 \\)",
+          "\\( y^2 = 4a(x+a) \\)"
+        ],
+        "hint": "استخدم شرط الزاوية بين مستقيمين \\( \\tan 45^\\circ = |\\frac{m_1 - m_2}{1 + m_1 m_2}| \\).",
+        "explanation": "المماس هو \\( y = mx + a/m \\). بتعويض العلاقات في قانون الزاوية بين خطين \\( \\tan 45^\\circ = 1 \\)، نحصل على المعادلة \\( x^2 + 6ax + a^2 - y^2 = 0 \\)."
+      }
+    },
+    "correct_index": "0"
+  },
+  {
+    "id": "JEE-095",
+    "track": "jee",
+    "level": "Grade 12",
+    "topic": "Trigonometry",
+    "type": "MCQ",
+    "difficulty": "medium",
+    "content": {
+      "en": {
+        "question": "The value of \\( \\tan\\left( \\frac{1}{2} \\arcsin \\frac{4}{5} \\right) \\) is:",
+        "options": [
+          "\\( \\frac{1}{3} \\)",
+          "\\( \\frac{1}{2} \\)",
+          "\\( \\frac{2}{3} \\)",
+          "\\( \\frac{3}{4} \\)"
+        ],
+        "hint": "Let \\( \\theta = \\arcsin(4/5) \\) and use half-angle formula \\( \\tan(\\theta/2) = \\frac{1 - \\cos \\theta}{\\sin \\theta} \\).",
+        "explanation": "If \\( \\theta = \\arcsin(4/5) \\), then \\( \\sin \\theta = 4/5 \\) and \\( \\cos \\theta = 3/5 \\). Then \\( \\tan(\\theta/2) = \\frac{1 - 3/5}{4/5} = \\frac{2/5}{4/5} = \\frac{1}{2} \\)."
+      },
+      "ar": {
+        "question": "قيمة \\( \\tan\\left( \\frac{1}{2} \\arcsin \\frac{4}{5} \\right) \\) تساوي:",
+        "options": [
+          "\\( \\frac{1}{3} \\)",
+          "\\( \\frac{1}{2} \\)",
+          "\\( \\frac{2}{3} \\)",
+          "\\( \\frac{3}{4} \\)"
+        ],
+        "hint": "افرض أن \\( \\theta = \\arcsin(4/5) \\) واستخدم صيغة نصف الزاوية \\( \\tan(\\theta/2) = \\frac{1 - \\cos \\theta}{\\sin \\theta} \\).",
+        "explanation": "إذا كانت \\( \\theta = \\arcsin(4/5) \\)، فإن \\( \\sin \\theta = 4/5 \\) و \\( \\cos \\theta = 3/5 \\). وبالتالي فإن \\( \\tan(\\theta/2) = \\frac{1 - 3/5}{4/5} = \\frac{1}{2} \\)."
+      }
+    },
+    "correct_index": "1"
+  },
+  {
+    "id": "JEE-096",
+    "track": "jee",
+    "level": "Grade 12",
+    "topic": "Differential Equations",
+    "type": "MCQ",
+    "difficulty": "medium",
+    "content": {
+      "en": {
+        "question": "The solution of the differential equation \\( (x^2 + y^2) dx - 2xy dy = 0 \\) passing through \\( (1, 1) \\) is:",
+        "options": [
+          "\\( x^2 - y^2 = 0 \\)",
+          "\\( x^2 + y^2 = 2 \\)",
+          "\\( y^2 = x \\)",
+          "\\( x^2 - y^2 = x \\)"
+        ],
+        "hint": "This is a homogeneous differential equation. Substitute \\( y = vx \\).",
+        "explanation": "Rewriting: \\( \\frac{dy}{dx} = \\frac{x^2+y^2}{2xy} \\). Substitute \\( y = vx \\) to get \\( x \\frac{dv}{dx} = \\frac{1-v^2}{2v} \\). Integrating gives \\( x(1-v^2) = C \\Rightarrow x^2 - y^2 = Cx \\). Since it passes through \\( (1, 1) \\), \\( C = 0 \\), so \\( x^2 - y^2 = 0 \\)."
+      },
+      "ar": {
+        "question": "حل المعادلة التفاضلية \\( (x^2 + y^2) dx - 2xy dy = 0 \\) المار بالنقطة \\( (1, 1) \\) هو:",
+        "options": [
+          "\\( x^2 - y^2 = 0 \\)",
+          "\\( x^2 + y^2 = 2 \\)",
+          "\\( y^2 = x \\)",
+          "\\( x^2 - y^2 = x \\)"
+        ],
+        "hint": "هذه معادلة تفاضلية متجانسة. استخدم التعويض \\( y = vx \\).",
+        "explanation": "بإعادة كتابة المعادلة واستخدام التعويض \\( y = vx \\)، نحصل على الحل العام \\( x^2 - y^2 = Cx \\). بالتعويض بالنقطة \\( (1, 1) \\) نجد أن \\( C = 0 \\)، وبذلك فإن الحل هو \\( x^2 - y^2 = 0 \\)."
+      }
+    },
+    "correct_index": "0"
+  },
+  {
+    "id": "JEE-097",
+    "track": "jee",
+    "level": "Grade 12",
+    "topic": "Combinatorics",
+    "type": "MCQ",
+    "difficulty": "medium",
+    "content": {
+      "en": {
+        "question": "Find the number of positive even integer solutions to \\( x_1 + x_2 + x_3 + x_4 = 20 \\).",
+        "options": [
+          "56",
+          "70",
+          "84",
+          "120"
+        ],
+        "hint": "Substitute \\( x_i = 2y_i \\) where \\( y_i \\ge 1 \\) is an integer.",
+        "explanation": "Substituting \\( x_i = 2y_i \\) reduces the equation to \\( y_1 + y_2 + y_3 + y_4 = 10 \\) with \\( y_i \\ge 1 \\). The number of positive integer solutions is \\( \\binom{10-1}{4-1} = \\binom{9}{3} = 84 \\)."
+      },
+      "ar": {
+        "question": "أوجد عدد الحلول الصحيحة الزوجية الموجبة للمعادلة \\( x_1 + x_2 + x_3 + x_4 = 20 \\).",
+        "options": [
+          "56",
+          "70",
+          "84",
+          "120"
+        ],
+        "hint": "استبدل \\( x_i = 2y_i \\) حيث \\( y_i \\ge 1 \\) عدد صحيح.",
+        "explanation": "بالتعويض \\( x_i = 2y_i \\) تبسط المعادلة إلى \\( y_1 + y_2 + y_3 + y_4 = 10 \\) بحلول موجبة. عدد الحلول هو \\( \\binom{9}{3} = 84 \\)."
+      }
+    },
+    "correct_index": "2"
+  },
+  {
+    "id": "JEE-098",
+    "track": "jee",
+    "level": "Grade 12",
+    "topic": "Algebra & Binomial Theorem",
+    "type": "MCQ",
+    "difficulty": "medium",
+    "content": {
+      "en": {
+        "question": "Find the coefficient of \\( x^4 \\) in the expansion of \\( (1 + x + x^2 + x^3)^6 \\).",
+        "options": [
+          "90",
+          "105",
+          "120",
+          "135"
+        ],
+        "hint": "Factorize as \\( (1+x)^6 (1+x^2)^6 \\).",
+        "explanation": "\\( (1+x+x^2+x^3)^6 = (1+x)^6 (1+x^2)^6 \\). Expand each using binomial theorem: \\( (1+x)^6 = 1 + 6x + 15x^2 + 20x^3 + 15x^4 + \\dots \\) and \\( (1+x^2)^6 = 1 + 6x^2 + 15x^4 + \\dots \\). Coefficient of \\( x^4 \\) is \\( 1(15) + 6(15) + 15(1) = 15 + 90 + 15 = 120 \\)."
+      },
+      "ar": {
+        "question": "أوجد معامل \\( x^4 \\) في مفكوك \\( (1 + x + x^2 + x^3)^6 \\).",
+        "options": [
+          "90",
+          "105",
+          "120",
+          "135"
+        ],
+        "hint": "حلل المقدار إلى \\( (1+x)^6 (1+x^2)^6 \\).",
+        "explanation": "باستخدام مفكوك ذات الحدين لكلا القوسين \\( (1+x)^6 \\) و \\( (1+x^2)^6 \\)، وبجمع المعاملات المكونة لـ \\( x^4 \\) نحصل على \\( 1(15) + 6(15) + 15(1) = 120 \\)."
+      }
+    },
+    "correct_index": "2"
+  },
+  {
+    "id": "JEE-099",
+    "track": "jee",
+    "level": "Grade 12",
+    "topic": "3D Geometry",
+    "type": "MCQ",
+    "difficulty": "medium",
+    "content": {
+      "en": {
+        "question": "The equation of the plane passing through \\( (1, 1, 1) \\) and perpendicular to both planes \\( x - 2y + z = 2 \\) and \\( 2x - y - z = 3 \\) is:",
+        "options": [
+          "\\( x + y + z = 3 \\)",
+          "\\( x - y + z = 1 \\)",
+          "\\( x + 2y - z = 2 \\)",
+          "\\( 3x + 3y + z = 7 \\)"
+        ],
+        "hint": "The normal vector is the cross product of normal vectors of the two given planes.",
+        "explanation": "Normal vector \\( \\vec{n} = (1, -2, 1) \\times (2, -1, -1) = (3, 3, 3) \\), which is parallel to \\( (1, 1, 1) \\). The plane equation is \\( 1(x-1) + 1(y-1) + 1(z-1) = 0 \\Rightarrow x + y + z = 3 \\)."
+      },
+      "ar": {
+        "question": "معادلة المستوى المار بالنقطة \\( (1, 1, 1) \\) والعمودي على كل من المستويين \\( x - 2y + z = 2 \\) و \\( 2x - y - z = 3 \\) هي:",
+        "options": [
+          "\\( x + y + z = 3 \\)",
+          "\\( x - y + z = 1 \\)",
+          "\\( x + 2y - z = 2 \\)",
+          "\\( 3x + 3y + z = 7 \\)"
+        ],
+        "hint": "المتجه العمودي للمستوى المطلوب هو الضرب الاتجاهي لمتجهي العمودي للمستويين.",
+        "explanation": "المتجه العمودي \\( \\vec{n} = (1, -2, 1) \\times (2, -1, -1) = (3, 3, 3) \\) الموازي لـ \\( (1, 1, 1) \\). معادلة المستوى تكون \\( x + y + z = 3 \\)."
+      }
+    },
+    "correct_index": "0"
+  },
+  {
+    "id": "JEE-100",
+    "track": "jee",
+    "level": "Grade 12",
+    "topic": "Calculus",
+    "type": "MCQ",
+    "difficulty": "easy",
+    "content": {
+      "en": {
+        "question": "The maximum value of \\( f(x) = \\sin x + \\cos x \\) on the interval \\( [0, \\pi/2] \\) is:",
+        "options": [
+          "1",
+          "\\( \\sqrt{2} \\)",
+          "\\( \\frac{\\sqrt{3}+1}{2} \\)",
+          "2"
+        ],
+        "hint": "Rewrite \\( \\sin x + \\cos x = \\sqrt{2} \\sin(x + \\pi/4) \\).",
+        "explanation": "Since \\( f(x) = \\sqrt{2} \\sin(x + \\pi/4) \\), the maximum value occurs at \\( x = \\pi/4 \\) and is equal to \\( \\sqrt{2} \\)."
+      },
+      "ar": {
+        "question": "القيمة العظمى للدالة \\( f(x) = \\sin x + \\cos x \\) على الفترة \\( [0, \\pi/2] \\) تساوي:",
+        "options": [
+          "1",
+          "\\( \\sqrt{2} \\)",
+          "\\( \\frac{\\sqrt{3}+1}{2} \\)",
+          "2"
+        ],
+        "hint": "أعد كتابة الدالة على الشكل \\( \\sin x + \\cos x = \\sqrt{2} \\sin(x + \\pi/4) \\).",
+        "explanation": "بما أن \\( f(x) = \\sqrt{2} \\sin(x + \\pi/4) \\)، فإن القيمة العظمى تحدث عند \\( x = \\pi/4 \\) وتساوي \\( \\sqrt{2} \\)."
+      }
+    },
+    "correct_index": "1"
+  },
+  {
+    "id": "JEE-101",
+    "track": "jee",
+    "level": "Grade 12",
+    "topic": "Definite Integrals",
+    "type": "MCQ",
+    "difficulty": "hard",
+    "content": {
+      "en": {
+        "question": "Evaluate the integral $$ I = \\int_{-2}^{2} \\frac{x^4 + |x| + 1}{1 + e^x} dx $$",
+        "options": [
+          "\\( \\frac{26}{5} \\)",
+          "\\( \\frac{52}{5} \\)",
+          "\\( \\frac{32}{5} \\)",
+          "\\( \\frac{64}{5} \\)"
+        ],
+        "hint": "Use property \\( \\int_{-a}^a \\frac{g(x)}{1+e^x}dx = \\int_0^a g(x)dx \\) when \\( g(x) \\) is an even function.",
+        "explanation": "The numerator \\( g(x) = x^4 + |x| + 1 \\) is an even function. Therefore, \\( I = \\int_0^2 (x^4 + x + 1) dx = [\\frac{x^5}{5} + \\frac{x^2}{2} + x]_0^2 = \\frac{32}{5} + 2 + 2 = \\frac{52}{5} \\)."
+      },
+      "ar": {
+        "question": "احسب قيمة التكامل $$ I = \\int_{-2}^{2} \\frac{x^4 + |x| + 1}{1 + e^x} dx $$",
+        "options": [
+          "\\( \\frac{26}{5} \\)",
+          "\\( \\frac{52}{5} \\)",
+          "\\( \\frac{32}{5} \\)",
+          "\\( \\frac{64}{5} \\)"
+        ],
+        "hint": "استخدم الخاصية \\( \\int_{-a}^a \\frac{g(x)}{1+e^x}dx = \\int_0^a g(x)dx \\) عندما تكون \\( g(x) \\) دالة زوجية.",
+        "explanation": "البسط \\( g(x) = x^4 + |x| + 1 \\) دالة زوجية. بالتالي فإن \\( I = \\int_0^2 (x^4 + x + 1) dx = [\\frac{x^5}{5} + \\frac{x^2}{2} + x]_0^2 = \\frac{32}{5} + 4 = \\frac{52}{5} \\)."
+      }
+    },
+    "correct_index": "1"
   }
 ]
