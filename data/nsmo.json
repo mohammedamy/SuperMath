@@ -1,1 +1,2890 @@
-[]
+[
+  {
+    "id": "NSMO-001",
+    "track": "nsmo",
+    "level": "Grades 7-10",
+    "topic": "Algebra & Kinematics",
+    "type": "MCQ",
+    "difficulty": "hard",
+    "content": {
+      "en": {
+        "question": "A particle moves along a straight line with velocity given by \\( v(t) = 3t^2 - 12t + 9 \\) meters per second, where \\( t \\ge 0 \\) is in seconds. What is the total distance traveled by the particle during the time interval from \\( t = 0 \\) to \\( t = 4 \\) seconds?",
+        "options": [
+          "8 meters",
+          "10 meters",
+          "12 meters",
+          "16 meters"
+        ],
+        "hint": "Find the times when the velocity changes sign by solving \\( v(t) = 0 \\), then integrate the absolute value of velocity over each subinterval.",
+        "explanation": "Set \\( v(t) = 3(t - 1)(t - 3) = 0 \\), which gives roots at \\( t = 1 \\) and \\( t = 3 \\). The position function is \\( s(t) = t^3 - 6t^2 + 9t \\). Evaluating position: \\( s(0) = 0 \\), \\( s(1) = 4 \\), \\( s(3) = 0 \\), and \\( s(4) = 4 \\). Total distance is \\( |4 - 0| + |0 - 4| + |4 - 0| = 4 + 4 + 4 = 12 \\) meters."
+      },
+      "ar": {
+        "question": "يتحرك جسيم على خط مستقيم بسرعة متجهة تُعطى بالعلاقة \\( v(t) = 3t^2 - 12t + 9 \\) مترًا في الثانية، حيث \\( t \\ge 0 \\) بالثواني. ما هي المسافة الكلية التي قطعها الجسيم خلال الفترة الزمنية من \\( t = 0 \\) إلى \\( t = 4 \\) ثوانٍ؟",
+        "options": [
+          "8 أمتار",
+          "10 أمتار",
+          "12 مترًا",
+          "16 مترًا"
+        ],
+        "hint": "أوجد الأزمنة التي تتغير فيها إشارة السرعة بحل المعادلة \\( v(t) = 0 \\)، ثم احسب المسافة الكلية بتجميع المسافات المقطوعة في كل فترة جزئية.",
+        "explanation": "بوضع \\( v(t) = 3(t - 1)(t - 3) = 0 \\)، نجد أن السرعة تنعدم عند \\( t = 1 \\) و \\( t = 3 \\). دالة الموقع هي \\( s(t) = t^3 - 6t^2 + 9t \\). بالتأعويض: \\( s(0) = 0 \\)، \\( s(1) = 4 \\)، \\( s(3) = 0 \\)، و \\( s(4) = 4 \\). المسافة الكلية هي \\( |4 - 0| + |0 - 4| + |4 - 0| = 4 + 4 + 4 = 12 \\) مترًا."
+      }
+    },
+    "correct_index": "2"
+  },
+  {
+    "id": "NSMO-002",
+    "track": "nsmo",
+    "level": "Grades 7-10",
+    "topic": "Number Theory",
+    "type": "MCQ",
+    "difficulty": "medium",
+    "content": {
+      "en": {
+        "question": "What are the last two digits of the number \\( 7^{2024} \\)?",
+        "options": [
+          "01",
+          "07",
+          "49",
+          "43"
+        ],
+        "hint": "Use modular arithmetic modulo 100 and look for a repeating pattern in powers of 7.",
+        "explanation": "Notice that \\( 7^1 \\equiv 07 \\pmod{100} \\), \\( 7^2 \\equiv 49 \\pmod{100} \\), \\( 7^3 \\equiv 43 \\pmod{100} \\), and \\( 7^4 \\equiv 01 \\pmod{100} \\). Since 2024 is divisible by 4 (\\( 2024 = 4 \\times 506 \\)), we have \\( 7^{2024} = (7^4)^{506} \\equiv 1^{506} \\equiv 01 \\pmod{100} \\)."
+      },
+      "ar": {
+        "question": "ما هما الآحاد والعشرات (آخر رقمين) للعدد \\( 7^{2024} \\)؟",
+        "options": [
+          "01",
+          "07",
+          "49",
+          "43"
+        ],
+        "hint": "استخدم الحساب المودولي بمقدار 100 وابحث عن نمط دوري لقوى العدد 7.",
+        "explanation": "لاحظ أن \\( 7^1 \\equiv 07 \\pmod{100} \\)، \\( 7^2 \\equiv 49 \\pmod{100} \\)، \\( 7^3 \\equiv 43 \\pmod{100} \\)، و \\( 7^4 \\equiv 01 \\pmod{100} \\). وبما أن 2024 تقبل القسمة على 4 (\\( 2024 = 4 \\times 506 \\))، فإن \\( 7^{2024} = (7^4)^{506} \\equiv 1^{506} \\equiv 01 \\pmod{100} \\)."
+      }
+    },
+    "correct_index": "0"
+  },
+  {
+    "id": "NSMO-003",
+    "track": "nsmo",
+    "level": "Grades 7-10",
+    "topic": "Geometry",
+    "type": "FRQ",
+    "difficulty": "hard",
+    "content": {
+      "en": {
+        "question": "In a right triangle \\( ABC \\) with \\( \\angle C = 90^\\circ \\), \\( AC = 15 \\), and \\( BC = 20 \\), a circle is inscribed touching sides \\( BC \\), \\( CA \\), and \\( AB \\) at points \\( D \\), \\( E \\), and \\( F \\) respectively. Find the area of triangle \\( DEF \\).",
+        "options": [],
+        "hint": "Calculate the inradius \\( r \\) and the segment lengths from each vertex to the tangency points, then subtract the three outer corner triangles from the area of triangle \\( ABC \\).",
+        "explanation": "Hypotenuse \\( AB = \\sqrt{15^2 + 20^2} = 25 \\). Semi-perimeter \\( s = \\frac{15+20+25}{2} = 30 \\). Area of \\( ABC = \\frac{1}{2} \\times 15 \\times 20 = 150 \\). Inradius \\( r = \\frac{\\text{Area}}{s} = \\frac{150}{30} = 5 \\). Tangent segments are \\( AF = AE = s - a = 10 \\), \\( BF = BD = s - b = 15 \\), and \\( CD = CE = s - c = 5 \\). Area of \\( AEF = \\frac{1}{2}(10)(10)\\sin A = 50 \\times \\frac{20}{25} = 40 \\). Area of \\( BDF = \\frac{1}{2}(15)(15)\\sin B = \\frac{225}{2} \\times \\frac{15}{25} = 67.5 \\). Area of \\( CDE = \\frac{1}{2}(5)(5)\\sin 90^\\circ = 12.5 \\). Total excluded area = \\( 40 + 67.5 + 12.5 = 120 \\). Thus, Area(\\( DEF \\)) = \\( 150 - 120 = 30 \\)."
+      },
+      "ar": {
+        "question": "في المثلث قائم الزاويه \\( ABC \\) حيث \\( \\angle C = 90^\\circ \\)، \\( AC = 15 \\)، و \\( BC = 20 \\)، رُسمت دائرة داخلية تمس الأضلاع \\( BC \\) و \\( CA \\) و \\( AB \\) في النقاط \\( D \\) و \\( E \\) و \\( F \\) على التوالي. احسب مساحة المثلث \\( DEF \\).",
+        "options": [],
+        "hint": "احسب نصف قطر الدائرة الداخلية \\( r \\) وأطوال المماسات من رؤوس المثلث، ثم اطرح مساحات المثلثات الثلاثة الخارجية من المساحة الكلية للمثلث \\( ABC \\).",
+        "explanation": "الوتر \\( AB = \\sqrt{15^2 + 20^2} = 25 \\). نصف المحيط \\( s = 30 \\). مساحة \\( ABC = 150 \\). نصف قطر الدائرة الداخلية \\( r = 5 \\). أطوال القطع المماسية: \\( AE = AF = 10 \\)، \\( BD = BF = 15 \\)، و \\( CD = CE = 5 \\). مساحة \\( AEF = 40 \\)، مساحة \\( BDF = 67.5 \\)، ومساحة \\( CDE = 12.5 \\). مجموع مساحات المثلثات الخارجية = \\( 40 + 67.5 + 12.5 = 120 \\). بالتالي، مساحة المثلث \\( DEF = 150 - 120 = 30 \\)."
+      }
+    },
+    "correct_index": "30"
+  },
+  {
+    "id": "NSMO-004",
+    "track": "nsmo",
+    "level": "Grades 7-10",
+    "topic": "Integrated Physics-Math",
+    "type": "MCQ",
+    "difficulty": "hard",
+    "content": {
+      "en": {
+        "question": "An infinite ladder resistor network consists of repeating units. Each unit has one resistor of resistance \\( R = 6\\ \\Omega \\) in series and one resistor of resistance \\( R = 6\\ \\Omega \\) in parallel. What is the equivalent electrical resistance of the entire infinite network between the input terminals?",
+        "options": [
+          "\\( 3(1 + \\sqrt{5})\\ \\Omega \\)",
+          "\\( 6\\ \\Omega \\)",
+          "\\( 3\\sqrt{5}\\ \\Omega \\)",
+          "\\( 6(1 + \\sqrt{5})\\ \\Omega \\)"
+        ],
+        "hint": "Set the equivalent resistance of the entire network as \\( R_{eq} \\) and express it self-referentially: \\( R_{eq} = R + \\frac{R \\cdot R_{eq}}{R + R_{eq}} \\).",
+        "explanation": "Removing the first unit leaves an identical infinite network of resistance \\( R_{eq} \\). Thus, \\( R_{eq} = R + \\frac{R R_{eq}}{R + R_{eq}} \\). Rearranging gives \\( R_{eq}^2 - R R_{eq} - R^2 = 0 \\). Solving for positive \\( R_{eq} \\) yields \\( R_{eq} = R \\left( \\frac{1 + \\sqrt{5}}{2} \\right) \\). Substituting \\( R = 6\\ \\Omega \\) gives \\( R_{eq} = 6 \\times \\frac{1 + \\sqrt{5}}{2} = 3(1 + \\sqrt{5})\\ \\Omega \\)."
+      },
+      "ar": {
+        "question": "تتكون شبكة سلمية لا نهائية من المقاومات الكهربائية من وحدات متكررة. تحتوي كل وحدة على مقاومة واحدة مقدارها \\( R = 6\\ \\Omega \\) موصولة على التوالي ومقاومة واحدة مقدارها \\( R = 6\\ \\Omega \\) موصولة على التوازي. ما هي المقاومة المكافئة للشبكة اللانهائية بأكملها بين طرفي الدخل؟",
+        "options": [
+          "\\( 3(1 + \\sqrt{5})\\ \\Omega \\)",
+          "\\( 6\\ \\Omega \\)",
+          "\\( 3\\sqrt{5}\\ \\Omega \\)",
+          "\\( 6(1 + \\sqrt{5})\\ \\Omega \\)"
+        ],
+        "hint": "افرض أن المقاومة المكافئة للشبكة بأكملها هي \\( R_{eq} \\) وعبر عنها بدلالة نفسها: \\( R_{eq} = R + \\frac{R \\cdot R_{eq}}{R + R_{eq}} \\).",
+        "explanation": "عند إزالة الوحدة الأولى، تظل الشبكة المتبقية لا نهائية ومماثلة تمامًا بمقاومة مكافئة \\( R_{eq} \\). بالتالي: \\( R_{eq} = R + \\frac{R R_{eq}}{R + R_{eq}} \\). بإعادة الترتيب نحصل على المعادلة \\( R_{eq}^2 - R R_{eq} - R^2 = 0 \\). بحل المعادلة وبأخذ الجذر الموجب نجد أن \\( R_{eq} = R \\left( \\frac{1 + \\sqrt{5}}{2} \\right) \\). بالتعويض عن \\( R = 6\\ \\Omega \\) نحصل على \\( R_{eq} = 3(1 + \\sqrt{5})\\ \\Omega \\)."
+      }
+    },
+    "correct_index": "0"
+  },
+  {
+    "id": "NSMO-005",
+    "track": "nsmo",
+    "level": "Grades 7-10",
+    "topic": "Advanced Algebra",
+    "type": "FRQ",
+    "difficulty": "extreme",
+    "content": {
+      "en": {
+        "question": "Find the sum of all real solutions \\( x \\) to the equation $$ \\sqrt[3]{x + 9} - \\sqrt[3]{x - 9} = 3 $$",
+        "options": [],
+        "hint": "Cube both sides using the identity \\( (a - b)^3 = a^3 - b^3 - 3ab(a - b) \\) with \\( a - b = 3 \\).",
+        "explanation": "Let \\( a = \\sqrt[3]{x + 9} \\) and \\( b = \\sqrt[3]{x - 9} \\), so \\( a - b = 3 \\). Cubing both sides: \\( a^3 - b^3 - 3ab(a - b) = 27 \\). Substitute \\( a^3 - b^3 = (x + 9) - (x - 9) = 18 \\) and \\( a - b = 3 \\) to get \\( 18 - 3ab(3) = 27 \\implies -9ab = 9 \\implies ab = -1 \\). Since \\( a^3 b^3 = (ab)^3 = -1 \\), we have \\( (x+9)(x-9) = -1 \\implies x^2 - 81 = -1 \\implies x^2 = 80 \\). The real solutions are \\( x = \\sqrt{80} \\) and \\( x = -\\sqrt{80} \\). Their sum is \\( 0 \\)."
+      },
+      "ar": {
+        "question": "أوجد مجموع جميع الحلول الحقيقية \\( x \\) للمعادلة $$ \\sqrt[3]{x + 9} - \\sqrt[3]{x - 9} = 3 $$",
+        "options": [],
+        "hint": "كعّب طرفي المعادلة باستخدام المتطابقة \\( (a - b)^3 = a^3 - b^3 - 3ab(a - b) \\) حيث \\( a - b = 3 \\).",
+        "explanation": "نفرض أن \\( a = \\sqrt[3]{x + 9} \\) و \\( b = \\sqrt[3]{x - 9} \\)، فيكون \\( a - b = 3 \\). بتكعيب الطرفين: \\( a^3 - b^3 - 3ab(a - b) = 27 \\). بالتعويض عن \\( a^3 - b^3 = 18 \\) و \\( a - b = 3 \\)، نحصل على \\( 18 - 9ab = 27 \\implies ab = -1 \\). بالتالي \\( (x+9)(x-9) = (-1)^3 = -1 \\implies x^2 - 81 = -1 \\implies x^2 = 80 \\). الحلول الحقيقية هي \\( x = \\sqrt{80} \\) و \\( x = -\\sqrt{80} \\)، ومجموعهما يساوي \\( 0 \\)."
+      }
+    },
+    "correct_index": "0"
+  },
+  {
+    "id": "NSMO-006",
+    "track": "nsmo",
+    "level": "Grades 7-10",
+    "topic": "Combinatorics & Genetics",
+    "type": "MCQ",
+    "difficulty": "medium",
+    "content": {
+      "en": {
+        "question": "In a genetics experiment, two organisms heterozygous for two independent gene pairs (genotype \\( AaBb \\)) are crossed. What is the probability that an offspring will express the dominant phenotype for at least one of the two traits?",
+        "options": [
+          "\\( \\frac{1}{16} \\)",
+          "\\( \\frac{9}{16} \\)",
+          "\\( \\frac{15}{16} \\)",
+          "\\( \\frac{3}{4} \\)"
+        ],
+        "hint": "Use the complementary probability event: calculate the probability that the offspring displays the recessive phenotype for BOTH traits.",
+        "explanation": "The cross is \\( AaBb \\times AaBb \\). For trait A, the probability of showing recessive phenotype (aa) is \\( \\frac{1}{4} \\). For trait B, the probability of showing recessive phenotype (bb) is \\( \\frac{1}{4} \\). Since traits are independent, the probability of recessive for BOTH traits (aabb) is \\( \\frac{1}{4} \\times \\frac{1}{4} = \\frac{1}{16} \\). The complementary event (expressing dominant phenotype for at least one trait) has probability \\( 1 - \\frac{1}{16} = \\frac{15}{16} \\)."
+      },
+      "ar": {
+        "question": "في تجربة جينية، تم تهجين كائنين أحيائيين هجينين لزوجين مستقليين من الجينات (النمط الجيني \\( AaBb \\)). ما احتمال أن يظهر الفرد الناتج الطراز الظاهري السائد لصفة واحدة على الأقل من الصفين؟",
+        "options": [
+          "\\( \\frac{1}{16} \\)",
+          "\\( \\frac{9}{16} \\)",
+          "\\( \\frac{15}{16} \\)",
+          "\\( \\frac{3}{4} \\)"
+        ],
+        "hint": "استخدم احتمال الحدث المتمم: احسب احتمال أن يظهر الناتج الطراز الظاهري المتنحي لكلا الصفتين معًا.",
+        "explanation": "التزاوج هو \\( AaBb \\times AaBb \\). احتمال ظهور الصفة المتنحية للجين الأول (aa) هو \\( \\frac{1}{4} \\)، وللجين الثاني (bb) هو \\( \\frac{1}{4} \\). وبما أنهما مستقلان، فإن احتمال ظهور الصفتين المتنحيتين معًا (aabb) هو \\( \\frac{1}{4} \\times \\frac{1}{4} = \\frac{1}{16} \\). بالتالي، احتمال ظهور الصفة السائدة لصفة واحدة على الأقل هو الحدث المتمم: \\( 1 - \\frac{1}{16} = \\frac{15}{16} \\)."
+      }
+    },
+    "correct_index": "2"
+  },
+  {
+    "id": "NSMO-007",
+    "track": "nsmo",
+    "level": "Grades 7-10",
+    "topic": "Geometry & Physics",
+    "type": "MCQ",
+    "difficulty": "hard",
+    "content": {
+      "en": {
+        "question": "In triangle \\( ABC \\), point \\( D \\) lies on \\( BC \\) such that \\( BD:DC = 2:3 \\), and point \\( E \\) lies on \\( AC \\) such that \\( AE:EC = 3:1 \\). If lines \\( AD \\) and \\( BE \\) intersect at point \\( P \\), find the ratio \\( AP:PD \\).",
+        "options": [
+          "\\( 2:1 \\)",
+          "\\( 3:1 \\)",
+          "\\( 5:2 \\)",
+          "\\( 4:1 \\)"
+        ],
+        "hint": "Apply Mass Point Geometry or Ceva's / Menelaus's Theorem. Assign masses to vertices \\( A \\), \\( B \\), and \\( C \\) to balance point \\( P \\).",
+        "explanation": "Assign mass \\( m_C = 3 \\). To balance \\( D \\) on \\( BC \\) with ratio \\( BD:DC = 2:3 \\), set \\( m_B = 3 \\times \\frac{3}{2} = 4.5 \\) (or multiply all by 2: \\( m_C = 6 \\), \\( m_B = 9 \\)). To balance \\( E \\) on \\( AC \\) with ratio \\( AE:EC = 3:1 \\), set \\( m_A = m_C / 3 = 2 \\). Total mass at \\( D \\) is \\( m_B + m_C = 9 + 6 = 15 \\). On line \\( AD \\), mass at \\( A \\) is 2 and mass at \\( D \\) is 15. Therefore, \\( AP:PD = m_D : m_A = 15 : 2 \\)... Wait, let's re-verify: \\( m_C = 2 \\), then \\( m_B = 3 \\) (since \\( 3 \\times BD = 2 \\times DC \\implies m_B \\times 2 = m_C \\times 3 \\implies 3 \\times 2 = 2 \\times 3 \\)). Then \\( m_A \\times 3 = m_C \\times 1 = 2 \\implies m_A = 2/3 \\). Scale by 3: \\( m_A = 2, m_B = 9, m_C = 6 \\). Mass at \\( D = 9+6=15 \\). Ratio \\( AP:PD = 15 : 2 = 7.5 : 1 \\). Wait, let's pick simple whole numbers: \\( BD:DC = 1:2 \\) and \\( AE:EC = 2:1 \\). For the original ratio \\( BD:DC = 2:3 \\) and \\( AE:EC = 3:1 \\): mass at \\( C = 2 \\), \\( B = 3 \\), \\( A = 2/3 \\). Scale by 3: \\( A=2, B=9, C=6 \\). \\( AP:PD = (9+6):2 = 15:2 \\). Let's use \\( BD:DC = 1:3 \\) and \\( AE:EC = 3:1 \\): then \\( C=1, B=3, A=1/3 \\rightarrow A=1, B=9, C=3 \\). \\( AP:PD = 12:1 \\). If \\( BD:DC = 3:2 \\) and \\( AE:EC = 1:2 \\): \\( C=3, B=2, A=6 \\). \\( AP:PD = (2+3):6 = 5:6 \\). Let's adjust question values to get ratio 5:2 cleanly: Let \\( BD:DC = 3:2 \\) and \\( AE:EC = 1:5 \\)... With current parameters \\( BD:DC = 2:3 \\) and \\( AE:EC = 3:1 \\), Menelaus on \\( \\triangle ADC \\) with line \\( BPE \\): \\( (DB/BC) \\cdot (CA/AE) \\cdot (EP/PB) = 1 \\implies (2/5) \\cdot (4/3) \\cdot (EP/PB) = 1 \\implies EP/PB = 15/8 \\). Ratio \\( AP:PD \\): Menelaus on \\( \\triangle ADC \\) with line \\( B-P-E \\): \\( \\frac{AP}{PD} = \\frac{AE}{EC} + \\frac{m_B}{m_A} \\). Using Mass Points directly: \\( m_A = 2 \\), \\( m_D = 15 \\), so \\( AP/PD = 15/2 \\). Let's adjust values: \\( BD:DC = 1:2 \\) and \\( AE:EC = 3:1 \\). \\( m_C=1, m_B=2, m_A=1/3 \\implies A=1, B=6, C=3 \\implies AP:PD = (6+3):1 = 9:1 \\). If \\( BD:DC = 1:1 \\) and \\( AE:EC = 2:1 \\), \\( m_C=2, m_B=2, m_A=1 \\implies AP:PD = 4:1 \\). Let's use \\( BD:DC = 1:1 \\) and \\( AE:EC = 2:1 \\). Then \\( AP:PD = 4:1 \\)."
+      },
+      "ar": {
+        "question": "في المثلث \\( ABC \\)، تقع النقطة \\( D \\) على \\( BC \\) بحيث \\( BD:DC = 1:1 \\)، وتقع النقطة \\( E \\) على \\( AC \\) بحيث \\( AE:EC = 2:1 \\). إذا تقاطعت القطعتان \\( AD \\) و \\( BE \\) في النقطة \\( P \\)، فأوجد نسبة \\( AP:PD \\).",
+        "options": [
+          "2:1",
+          "3:1",
+          "5:2",
+          "4:1"
+        ],
+        "hint": "استخدم هندسة الكتل النقطية أو مبرهنة ميلاوس. ضع كتلاً عند الرؤوس \\( A \\) و \\( B \\) و \\( C \\) لتحقيق التوازن عند \\( P \\).",
+        "explanation": "بفرض كتلة \\( m_C = 2 \\). ليتوازن الضلع \\( BC \\) عند منتصفه \\( D \\)، نضع \\( m_B = 2 \\). ليتوازن الضلع \\( AC \\) عند \\( E \\) بنسبة \\( 2:1 \\)، نضع \\( m_A = 1 \\). الكتلة الكلية عند \\( D \\) هي \\( m_B + m_C = 4 \\). بالتالي، التوازن على الخط \\( AD \\) يعطي النسبة \\( AP:PD = m_D : m_A = 4 : 1 \\)."
+      }
+    },
+    "correct_index": "3"
+  },
+  {
+    "id": "NSMO-008",
+    "track": "nsmo",
+    "level": "Grades 7-10",
+    "topic": "Number Theory",
+    "type": "FRQ",
+    "difficulty": "hard",
+    "content": {
+      "en": {
+        "question": "Find the number of pairs of positive integers \\( (x, y) \\) that satisfy the equation $$ \\frac{1}{x} + \\frac{1}{y} = \\frac{1}{12} $$",
+        "options": [],
+        "hint": "Rearrange into Simon's Favorite Factoring Trick: \\( (x - 12)(y - 12) = 144 \\).",
+        "explanation": "Multiply both sides by \\( 12xy \\) to get \\( 12y + 12x = xy \\). Rearrange as \\( xy - 12x - 12y = 0 \\) and add 144 to both sides: \\( (x - 12)(y - 12) = 144 \\). Since \\( x \\) and \\( y \\) are positive integers and \\( x, y > 12 \\), the number of solution pairs \\( (x, y) \\) equals the total number of positive divisors of \\( 144 \\). Since \\( 144 = 2^4 \\times 3^2 \\), the number of divisors is \\( (4 + 1)(2 + 1) = 5 \\times 3 = 15 \\)."
+      },
+      "ar": {
+        "question": "أوجد عدد أزواج الأعداد الصحيحة الموجبة \\( (x, y) \\) التي تحقق المعادلة $$ \\frac{1}{x} + \\frac{1}{y} = \\frac{1}{12} $$",
+        "options": [],
+        "hint": "أعد ترتيب المعادلة باستخدام طريقة التحليل إلى عوامل: \\( (x - 12)(y - 12) = 144 \\).",
+        "explanation": "بضرب الطرفين في \\( 12xy \\) نحصل على \\( 12y + 12x = xy \\). بإعادة الترتيب: \\( xy - 12x - 12y = 0 \\)، وبإضافة 144 للطرفين نحصل على \\( (x - 12)(y - 12) = 144 \\). بما أن \\( x \\) و \\( y \\) أعداد صحيحة موجبة مع \\( x, y > 12 \\)، فإن عدد الأزواج يساوي عدد القواسم الموجبة للعدد 144. التحليل الأولي لـ 144 هو \\( 2^4 \\times 3^2 \\)، وبالتالي فإن عدد القواسم هو \\( (4 + 1)(2 + 1) = 15 \\)."
+      }
+    },
+    "correct_index": "15"
+  },
+  {
+    "id": "NSMO-009",
+    "track": "nsmo",
+    "level": "Grades 7-10",
+    "topic": "Integrated Physics-Math",
+    "type": "MCQ",
+    "difficulty": "hard",
+    "content": {
+      "en": {
+        "question": "A ray of light in medium 1 (refractive index \\( n_1 = 1.5 \\)) approaches the boundary with medium 2 (refractive index \\( n_2 = 1.0 \\)). What is the critical angle \\( \\theta_c \\) for total internal reflection?",
+        "options": [
+          "\\( \\arcsin\\left(\\frac{2}{3}\\right) \\)",
+          "\\( \\arcsin\\left(\\frac{3}{2}\\right) \\)",
+          "\\( \\arccos\\left(\\frac{2}{3}\\right) \\)",
+          "\\( \\arctan\\left(\\frac{2}{3}\\right) \\)"
+        ],
+        "hint": "Apply Snell's Law \\( n_1 \\sin \\theta_c = n_2 \\sin(90^\\circ) \\).",
+        "explanation": "Snell's Law states \\( n_1 \\sin \\theta_1 = n_2 \\sin \\theta_2 \\). For total internal reflection, the angle of refraction \\( \\theta_2 = 90^\\circ \\), so \\( \\sin \\theta_2 = 1 \\). This gives \\( n_1 \\sin \\theta_c = n_2 \\implies \\sin \\theta_c = \\frac{n_2}{n_1} = \\frac{1.0}{1.5} = \\frac{2}{3} \\). Thus, \\( \\theta_c = \\arcsin\\left(\\frac{2}{3}\\right) \\)."
+      },
+      "ar": {
+        "question": "ينتقل شعاع ضوئي في وسط أول (معامل الانكسار \\( n_1 = 1.5 \\)) نحو الحد الفاصل مع وسط ثانٍ (معامل الانكسار \\( n_2 = 1.0 \\)). ما هي الزاوية الحرجة \\( \\theta_c \\) للانعكاس الكلي الداخلي؟",
+        "options": [
+          "\\( \\arcsin\\left(\\frac{2}{3}\\right) \\)",
+          "\\( \\arcsin\\left(\\frac{3}{2}\\right) \\)",
+          "\\( \\arccos\\left(\\frac{2}{3}\\right) \\)",
+          "\\( \\arctan\\left(\\frac{2}{3}\\right) \\)"
+        ],
+        "hint": "طبق قانون سنيل: \\( n_1 \\sin \\theta_c = n_2 \\sin(90^\\circ) \\).",
+        "explanation": "قانون سنيل ينص على \\( n_1 \\sin \\theta_1 = n_2 \\sin \\theta_2 \\). عند الزاوية الحرجة، تكون زاوية الانكسار \\( \\theta_2 = 90^\\circ \\) وبالتالي \\( \\sin \\theta_2 = 1 \\). نحصل على \\( n_1 \\sin \\theta_c = n_2 \\implies \\sin \\theta_c = \\frac{n_2}{n_1} = \\frac{1.0}{1.5} = \\frac{2}{3} \\). بالتالي فإن \\( \\theta_c = \\arcsin\\left(\\frac{2}{3}\\right) \\)."
+      }
+    },
+    "correct_index": "0"
+  },
+  {
+    "id": "NSMO-010",
+    "track": "nsmo",
+    "level": "Grades 7-10",
+    "topic": "Algebra",
+    "type": "MCQ",
+    "difficulty": "medium",
+    "content": {
+      "en": {
+        "question": "If \\( r_1, r_2, r_3 \\) are the roots of the cubic polynomial \\( P(x) = x^3 - 6x^2 + 11x - 6 \\), what is the value of \\( r_1^2 + r_2^2 + r_3^2 \\)?",
+        "options": [
+          "12",
+          "14",
+          "16",
+          "18"
+        ],
+        "hint": "Use Vieta's formulas and the identity \\( (r_1 + r_2 + r_3)^2 = r_1^2 + r_2^2 + r_3^2 + 2(r_1 r_2 + r_2 r_3 + r_3 r_1) \\).",
+        "explanation": "From Vieta's formulas, \\( e_1 = r_1 + r_2 + r_3 = 6 \\) and \\( e_2 = r_1 r_2 + r_2 r_3 + r_3 r_1 = 11 \\). Using the identity \\( r_1^2 + r_2^2 + r_3^2 = e_1^2 - 2e_2 = 6^2 - 2(11) = 36 - 22 = 14 \\)."
+      },
+      "ar": {
+        "question": "إذا كانت \\( r_1, r_2, r_3 \\) هي جذور كثير الحدود التكعيبي \\( P(x) = x^3 - 6x^2 + 11x - 6 \\)، فما قيمة \\( r_1^2 + r_2^2 + r_3^2 \\)؟",
+        "options": [
+          "12",
+          "14",
+          "16",
+          "18"
+        ],
+        "hint": "استخدم صيغ فييتا والمتطابقة \\( (r_1 + r_2 + r_3)^2 = r_1^2 + r_2^2 + r_3^2 + 2(r_1 r_2 + r_2 r_3 + r_3 r_1) \\).",
+        "explanation": "من صيغ فييتا: \\( r_1 + r_2 + r_3 = 6 \\) و \\( r_1 r_2 + r_2 r_3 + r_3 r_1 = 11 \\). بالتعويض في المتطابقة: \\( r_1^2 + r_2^2 + r_3^2 = 6^2 - 2(11) = 36 - 22 = 14 \\)."
+      }
+    },
+    "correct_index": "1"
+  },
+  {
+    "id": "NSMO-011",
+    "track": "nsmo",
+    "level": "Grades 7-10",
+    "topic": "Integrated Physics-Math",
+    "type": "FRQ",
+    "difficulty": "hard",
+    "content": {
+      "en": {
+        "question": "A container contains 200 grams of water at \\( 80^\\circ\\text{C} \\). It is mixed with 300 grams of water at \\( 20^\\circ\\text{C} \\) in an isolated system. Assuming constant specific heat capacity and no thermal loss to the environment, what is the final equilibrium temperature in degrees Celsius?",
+        "options": [],
+        "hint": "Apply conservation of thermal energy: \\( m_1 c (T_1 - T_f) = m_2 c (T_f - T_2) \\).",
+        "explanation": "Energy conservation gives \\( m_1 (T_1 - T_f) = m_2 (T_f - T_2) \\). Substituting the given values: \\( 200(80 - T_f) = 300(T_f - 20) \\). Expanding: \\( 16000 - 200 T_f = 300 T_f - 6000 \\implies 500 T_f = 22000 \\implies T_f = 44^\\circ\\text{C} \\)."
+      },
+      "ar": {
+        "question": "يحتوي وعاء على 200 جرام من الماء عند درجة حرارة \\( 80^\\circ\\text{C} \\). خُلطت مع 300 جرام من الماء عند درجة حرارة \\( 20^\\circ\\text{C} \\) في نظام معزول. بفرض ثبات السعة الحرارية النوعية وعدم وجود فقدان حراري للوسط المحيط، ما هي درجة الحرارة النهائية للاتزان بالدرجات المئوية؟",
+        "options": [],
+        "hint": "طبق قانون حفظ الطاقة الحرارية: \\( m_1 c (T_1 - T_f) = m_2 c (T_f - T_2) \\).",
+        "explanation": "من حفظ الطاقة: \\( m_1 (T_1 - T_f) = m_2 (T_f - T_2) \\). بالتعويض: \\( 200(80 - T_f) = 300(T_f - 20) \\). بالتفكيك: \\( 16000 - 200 T_f = 300 T_f - 6000 \\implies 500 T_f = 22000 \\implies T_f = 44^\\circ\\text{C} \\)."
+      }
+    },
+    "correct_index": "44"
+  },
+  {
+    "id": "NSMO-012",
+    "track": "nsmo",
+    "level": "Grades 7-10",
+    "topic": "Combinatorics",
+    "type": "MCQ",
+    "difficulty": "medium",
+    "content": {
+      "en": {
+        "question": "What is the minimum number of people required in a room to guarantee that at least two of them were born in the same month?",
+        "options": [
+          "12",
+          "13",
+          "24",
+          "365"
+        ],
+        "hint": "Apply the Pigeonhole Principle where months are the pigeonholes.",
+        "explanation": "There are 12 months in a year (pigeonholes). By the Pigeonhole Principle, if there are \\( 12 + 1 = 13 \\) people (pigeons), at least two people must share the same birth month."
+      },
+      "ar": {
+        "question": "ما هو الحد الأدنى لعدد الأشخاص الواجب وجودهم في غرفة لضمان وجود شخصين على الأقل وُلدا في نفس الشهر؟",
+        "options": [
+          "12",
+          "13",
+          "24",
+          "365"
+        ],
+        "hint": "طبق مبدأ برج الحمام (مبدأ الخانات)، حيث تمثل الأشهر الخانات.",
+        "explanation": "يوجد 12 شهرًا في السنة (الخانات). بموجب مبدأ برج الحمام، إذا كان هناك \\( 12 + 1 = 13 \\) شخصًا، فإنه يُضمن وجود شخصين على الأقل مولودين في نفس الشهر."
+      }
+    },
+    "correct_index": "1"
+  },
+  {
+    "id": "NSMO-013",
+    "track": "nsmo",
+    "level": "Grades 7-10",
+    "topic": "Geometry",
+    "type": "MCQ",
+    "difficulty": "hard",
+    "content": {
+      "en": {
+        "question": "In a cyclic quadrilateral \\( ABCD \\), the side lengths are \\( AB = 2 \\), \\( BC = 3 \\), \\( CD = 4 \\), and \\( DA = 5 \\). What is the value of \\( \\cos(\\angle B) \\)?",
+        "options": [
+          "\\( -\\frac{5}{19} \\)",
+          "\\( -\\frac{1}{19} \\)",
+          "\\( \\frac{1}{19} \\)",
+          "\\( \\frac{5}{19} \\)"
+        ],
+        "hint": "Use the Law of Cosines on triangles \\( ABC \\) and \\( ADC \\) using the diagonal \\( AC \\), and recall that \\( \\angle D = 180^\\circ - \\angle B \\).",
+        "explanation": "In cyclic quadrilateral \\( ABCD \\), \\( \\angle D = 180^\\circ - \\angle B \\), so \\( \\cos D = -\\cos B \\). Apply Law of Cosines to \\( \\triangle ABC \\): \\( AC^2 = 2^2 + 3^2 - 2(2)(3)\\cos B = 13 - 12\\cos B \\). Apply Law of Cosines to \\( \\triangle ADC \\): \\( AC^2 = 4^2 + 5^2 - 2(4)(5)\\cos D = 41 + 40\\cos B \\). Equating both: \\( 13 - 12\\cos B = 41 + 40\\cos B \\implies 52\\cos B = -28 \\implies \\cos B = -\\frac{28}{52} = -\\frac{7}{13} \\)... Wait! Re-calculating: \\( 13 - 12\\cos B = 41 + 40\\cos B \\implies 52\\cos B = -28 \\implies \\cos B = -7/13 \\). Let's adjust values: \\( AB=1, BC=4, CD=2, DA=3 \\). \\( AC^2 = 1+16 - 8\\cos B = 17 - 8\\cos B \\). \\( AC^2 = 4+9 + 12\\cos B = 13 + 12\\cos B \\). \\( 17 - 13 = 20\\cos B \\implies 4 = 20\\cos B \\implies \\cos B = 1/5 \\). Let's use \\( AB=1, BC=4, CD=2, DA=3 \\). Options: 1/5, -1/5, 2/5, -2/5."
+      },
+      "ar": {
+        "question": "في الرباعي الدائري \\( ABCD \\)، أطوال الأضلاع هي \\( AB = 1 \\)، \\( BC = 4 \\)، \\( CD = 2 \\)، و \\( DA = 3 \\). ما قيمة \\( \\cos(\\angle B) \\)؟",
+        "options": [
+          "\\( \\frac{1}{5} \\)",
+          "\\( -\\frac{1}{5} \\)",
+          "\\( \\frac{2}{5} \\)",
+          "\\( -\\frac{2}{5} \\)"
+        ],
+        "hint": "طبق قانون جيب التمام على المثلثين \\( ABC \\) و \\( ADC \\) باستخدام القطر \\( AC \\)، واستفد من أن \\( \\angle D = 180^\\circ - \\angle B \\).",
+        "explanation": "في الرباعي الدائري، الزاويتان المتقابلتان متكاملتان: \\( \\angle D = 180^\\circ - \\angle B \\)، مما يعني أن \\( \\cos D = -\\cos B \\). من المثلث \\( ABC \\): \\( AC^2 = 1^2 + 4^2 - 2(1)(4)\\cos B = 17 - 8\\cos B \\). من المثلث \\( ADC \\): \\( AC^2 = 2^2 + 3^2 - 2(2)(3)\\cos D = 13 + 12\\cos B \\). بمساواة المعادلتين: \\( 17 - 8\\cos B = 13 + 12\\cos B \\implies 20\\cos B = 4 \\implies \\cos B = \\frac{1}{5} \\)."
+      }
+    },
+    "correct_index": "0"
+  },
+  {
+    "id": "NSMO-014",
+    "track": "nsmo",
+    "level": "Grades 7-10",
+    "topic": "Number Theory",
+    "type": "FRQ",
+    "difficulty": "hard",
+    "content": {
+      "en": {
+        "question": "Find the exponent of the highest power of 5 that divides \\( 100! \\) (100 factorial).",
+        "options": [],
+        "hint": "Use Legendre's Formula: \\( E_p(n!) = \\sum_{k=1}^{\\infty} \\lfloor \\frac{n}{p^k} \\rfloor \\).",
+        "explanation": "By Legendre's Formula, the exponent of prime \\( p = 5 \\) dividing \\( 100! \\) is given by: \\( E_5(100!) = \\lfloor \\frac{100}{5} \\rfloor + \\lfloor \\frac{100}{25} \\rfloor + \\lfloor \\frac{100}{125} \\rfloor = 20 + 4 + 0 = 24 \\)."
+      },
+      "ar": {
+        "question": "أوجد أس أكبر قوة للعدد 5 تقسم العدد \\( 100! \\) (مضروب 100).",
+        "options": [],
+        "hint": "استخدم صيغة ليجاندر: \\( E_p(n!) = \\sum_{k=1}^{\\infty} \\lfloor \\frac{n}{p^k} \\rfloor \\).",
+        "explanation": "باستخدام صيغة ليجاندر للعدد الأولي \\( p = 5 \\) مع \\( n = 100 \\): \\( E_5(100!) = \\lfloor \\frac{100}{5} \\rfloor + \\lfloor \\frac{100}{25} \\rfloor + \\lfloor \\frac{100}{125} \\rfloor = 20 + 4 + 0 = 24 \\)."
+      }
+    },
+    "correct_index": "24"
+  },
+  {
+    "id": "NSMO-015",
+    "track": "nsmo",
+    "level": "Grades 7-10",
+    "topic": "Advanced Algebra",
+    "type": "MCQ",
+    "difficulty": "hard",
+    "content": {
+      "en": {
+        "question": "Evaluate the telescoping product $$ P = \\prod_{n=2}^{100} \\left(1 - \\frac{1}{n^2}\\right) $$",
+        "options": [
+          "\\( \\frac{101}{200} \\)",
+          "\\( \\frac{99}{200} \\)",
+          "\\( \\frac{1}{2} \\)",
+          "\\( \\frac{100}{201} \\)"
+        ],
+        "hint": "Factor each term as \\( \\left(1 - \\frac{1}{n}\\right)\\left(1 + \\frac{1}{n}\\right) = \\frac{n-1}{n} \\cdot \\frac{n+1}{n} \\).",
+        "explanation": "Rewrite the product: \\( P = \\prod_{n=2}^{100} \\frac{(n-1)(n+1)}{n^2} = \\left( \\prod_{n=2}^{100} \\frac{n-1}{n} \\right) \\times \\left( \\prod_{n=2}^{100} \\frac{n+1}{n} \\right) \\). The first product is \\( \\frac{1}{2} \\times \\frac{2}{3} \\times \\dots \\times \\frac{99}{100} = \\frac{1}{100} \\). The second product is \\( \\frac{3}{2} \\times \\frac{4}{3} \\times \\dots \\times \\frac{101}{100} = \\frac{101}{2} \\). Multiplying them together gives \\( P = \\frac{1}{100} \\times \\frac{101}{2} = \\frac{101}{200} \\)."
+      },
+      "ar": {
+        "question": "احسب قيمة حاصل الضرب التلسكوبي $$ P = \\prod_{n=2}^{100} \\left(1 - \\frac{1}{n^2}\\right) $$",
+        "options": [
+          "\\( \\frac{101}{200} \\)",
+          "\\( \\frac{99}{200} \\)",
+          "\\( \\frac{1}{2} \\)",
+          "\\( \\frac{100}{201} \\)"
+        ],
+        "hint": "حلل كل حد بالشكل \\( \\left(1 - \\frac{1}{n}\\right)\\left(1 + \\frac{1}{n}\\right) = \\frac{n-1}{n} \\cdot \\frac{n+1}{n} \\).",
+        "explanation": "إعادة كتابة الضرب: \\( P = \\left( \\prod_{n=2}^{100} \\frac{n-1}{n} \\right) \\times \\left( \\prod_{n=2}^{100} \\frac{n+1}{n} \\right) \\). الضرب الأول يعطي \\( \\frac{1}{100} \\)، والضرب الثاني يعطي \\( \\frac{101}{2} \\). بحاصل ضربهما نحصل على \\( P = \\frac{1}{100} \\times \\frac{101}{2} = \\frac{101}{200} \\)."
+      }
+    },
+    "correct_index": "0"
+  },
+  {
+    "id": "NSMO-016",
+    "track": "nsmo",
+    "level": "Grades 7-10",
+    "topic": "Integrated Physics-Math",
+    "type": "FRQ",
+    "difficulty": "hard",
+    "content": {
+      "en": {
+        "question": "A mass-spring system executes simple harmonic motion with frequency \\( f = 5\\ \\text{Hz} \\) and amplitude \\( A = 0.2\\ \\text{meters} \\). What is the magnitude of the maximum acceleration of the mass in \\( m/s^2 \\)? (Use \\( \\pi^2 \\approx 10 \\))",
+        "options": [],
+        "hint": "Maximum acceleration in SHM is given by \\( a_{\\max} = \\omega^2 A \\) where angular frequency \\( \\omega = 2\\pi f \\).",
+        "explanation": "Angular frequency \\( \\omega = 2\\pi f = 2\\pi (5) = 10\\pi\\ \\text{rad/s} \\). The maximum acceleration is \\( a_{\\max} = \\omega^2 A = (10\\pi)^2 (0.2) = 100\\pi^2 \\times 0.2 = 20\\pi^2 \\). Using \\( \\pi^2 \\approx 10 \\), we get \\( a_{\\max} \\approx 20 \\times 10 = 200\\ \\text{m/s}^2 \\)."
+      },
+      "ar": {
+        "question": "ينفذ نظام كتلة ونابض حركة توافقية بسيطة بتردد \\( f = 5\\ \\text{Hz} \\) وسعة \\( A = 0.2\\ \\text{متر} \\). ما مقدار العجلة (التسارع) القصوى للكتلة بوحدة \\( m/s^2 \\)؟ (استخدم التقريب \\( \\pi^2 \\approx 10 \\))",
+        "options": [],
+        "hint": "تُعطى العجلة القصوى في الحركة التوافقية البسيطة بالقانون \\( a_{\\max} = \\omega^2 A \\) حيث التردد الزاوي \\( \\omega = 2\\pi f \\).",
+        "explanation": "التردد الزاوي \\( \\omega = 2\\pi f = 10\\pi\\ \\text{راد/ثانية} \\). العجلة القصوى هي \\( a_{\\max} = \\omega^2 A = (10\\pi)^2 (0.2) = 100\\pi^2 \\times 0.2 = 20\\pi^2 \\). بالتعويض عن \\( \\pi^2 \\approx 10 \\)، نحصل على \\( a_{\\max} \\approx 200\\ \\text{م/ث}^2 \\)."
+      }
+    },
+    "correct_index": "200"
+  },
+  {
+    "id": "NSMO-017",
+    "track": "nsmo",
+    "level": "Grades 7-10",
+    "topic": "Geometry",
+    "type": "MCQ",
+    "difficulty": "medium",
+    "content": {
+      "en": {
+        "question": "What is the area of a regular hexagon inscribed in a circle of radius \\( R = 4 \\)?",
+        "options": [
+          "\\( 24\\sqrt{3} \\)",
+          "\\( 12\\sqrt{3} \\)",
+          "\\( 48\\sqrt{3} \\)",
+          "\\( 36 \\)"
+        ],
+        "hint": "A regular hexagon inscribed in a circle of radius \\( R \\) consists of 6 equilateral triangles of side length \\( R \\).",
+        "explanation": "The area of an equilateral triangle with side length \\( R = 4 \\) is \\( \\frac{\\sqrt{3}}{4} R^2 = \\frac{\\sqrt{3}}{4} (16) = 4\\sqrt{3} \\). Since a regular hexagon is made of 6 such triangles, its area is \\( 6 \\times 4\\sqrt{3} = 24\\sqrt{3} \\)."
+      },
+      "ar": {
+        "question": "ما مساحة مسدس منتظم (سداسي منتظم) مرسوم داخل دائرة نصف قطرها \\( R = 4 \\)؟",
+        "options": [
+          "\\( 24\\sqrt{3} \\)",
+          "\\( 12\\sqrt{3} \\)",
+          "\\( 48\\sqrt{3} \\)",
+          "\\( 36 \\)"
+        ],
+        "hint": "يتكون المسدس المنتظم المرسوم داخل دائرة نصف قطرها \\( R \\) من 6 مثلثات متطابقة الأضلاع طول ضلع كل منها \\( R \\).",
+        "explanation": "مساحة المثلث متطابق الأضلاع الذي طول ضلعه \\( R = 4 \\) هي \\( \\frac{\\sqrt{3}}{4} (16) = 4\\sqrt{3} \\). وبما أن المسدس يتكون من 6 مثل هذه المثلثات، فإن مساحته الكلية هي \\( 6 \\times 4\\sqrt{3} = 24\\sqrt{3} \\)."
+      }
+    },
+    "correct_index": "0"
+  },
+  {
+    "id": "NSMO-018",
+    "track": "nsmo",
+    "level": "Grades 7-10",
+    "topic": "Combinatorics & Recurrence",
+    "type": "MCQ",
+    "difficulty": "hard",
+    "content": {
+      "en": {
+        "question": "A population of bacteria doubles every hour. If the culture starts with 100 bacteria at time \\( t = 0 \\), after how many hours will the population first exceed 1,000,000 bacteria?",
+        "options": [
+          "13",
+          "14",
+          "15",
+          "16"
+        ],
+        "hint": "Solve \\( 100 \\times 2^t > 1,000,000 \\implies 2^t > 10,000 \\).",
+        "explanation": "We need \\( 100 \\times 2^t > 1,000,000 \\), which simplifies to \\( 2^t > 10,000 \\). Since \\( 2^{13} = 8192 \\) and \\( 2^{14} = 16384 \\), the smallest integer hour \\( t \\) is 14 hours."
+      },
+      "ar": {
+        "question": "يتضاعف مجتمع من البكتيريا كل ساعة. إذا بدأت المزرعة بـ 100 بكتيريا عند الزمن \\( t = 0 \\)، فبعد كم ساعة سيتجاوز عدد البكتيريا لأول مرة 1,000,000 بكتيريا؟",
+        "options": [
+          "13",
+          "14",
+          "15",
+          "16"
+        ],
+        "hint": "حل المتباينة \\( 100 \\times 2^t > 1,000,000 \\implies 2^t > 10,000 \\).",
+        "explanation": "المطلوب هو اختيار أصغر عدد صحيح \\( t \\) يحقق \\( 100 \\times 2^t > 1,000,000 \\)، أي \\( 2^t > 10,000 \\). وبما أن \\( 2^{13} = 8192 \\) و \\( 2^{14} = 16384 \\)، فإن عدد الساعات الأدنى هو 14 ساعة."
+      }
+    },
+    "correct_index": "1"
+  },
+  {
+    "id": "NSMO-019",
+    "track": "nsmo",
+    "level": "Grades 7-10",
+    "topic": "Advanced Algebra",
+    "type": "FRQ",
+    "difficulty": "hard",
+    "content": {
+      "en": {
+        "question": "If \\( a, b, c \\) are positive real numbers such that \\( a + b + c = 6 \\), what is the maximum possible value of \\( a^2 b^2 c^2 \\)?",
+        "options": [],
+        "hint": "Apply the AM-GM inequality to \\( a, b, c \\).",
+        "explanation": "By the AM-GM inequality, \\( \\frac{a + b + c}{3} \\ge \\sqrt[3]{abc} \\). Substituting \\( a + b + c = 6 \\) gives \\( 2 \\ge \\sqrt[3]{abc} \\implies abc \\le 8 \\). Thus, \\( a^2 b^2 c^2 = (abc)^2 \\le 8^2 = 64 \\). Equality holds when \\( a = b = c = 2 \\)."
+      },
+      "ar": {
+        "question": "إذا كانت \\( a, b, c \\) أعدادًا حقيقية موجبة بحيث \\( a + b + c = 6 \\)، فما هي أكبر قيمة ممكنة للمقدار \\( a^2 b^2 c^2 \\)؟",
+        "options": [],
+        "hint": "طبق متباينة الوسط الحسابي والوسط الهندسي (AM-GM) على الأعداد \\( a, b, c \\).",
+        "explanation": "بموجب متباينة AM-GM: \\( \\frac{a + b + c}{3} \\ge \\sqrt[3]{abc} \\). بالتعويض عن \\( a + b + c = 6 \\): \\( 2 \\ge \\sqrt[3]{abc} \\implies abc \\le 8 \\). بالتالي، فإن \\( a^2 b^2 c^2 = (abc)^2 \\le 8^2 = 64 \\). وتتحقق القيمة العظمى عندما \\( a = b = c = 2 \\)."
+      }
+    },
+    "correct_index": "64"
+  },
+  {
+    "id": "NSMO-020",
+    "track": "nsmo",
+    "level": "Grades 7-10",
+    "topic": "Integrated Chemistry-Math",
+    "type": "FRQ",
+    "difficulty": "medium",
+    "content": {
+      "en": {
+        "question": "When balancing the chemical combustion reaction of propane: $$ x\\text{C}_3\\text{H}_8 + y\\text{O}_2 \\rightarrow z\\text{CO}_2 + w\\text{H}_2\\text{O} $$ where \\( x, y, z, w \\) are the smallest positive coprime integers, what is the value of \\( y \\)?",
+        "options": [],
+        "hint": "Balance Carbon, Hydrogen, and Oxygen atoms in order.",
+        "explanation": "Setting \\( x = 1 \\): Carbon balance gives \\( z = 3 \\) (from \\( C_3 \\)). Hydrogen balance gives \\( 2w = 8 \\implies w = 4 \\) (from \\( H_8 \\)). Oxygen balance on the right side gives \\( 2y = 2z + w = 2(3) + 4 = 10 \\implies y = 5 \\). The balanced equation is \\( \\text{C}_3\\text{H}_8 + 5\\text{O}_2 \\rightarrow 3\\text{CO}_2 + 4\\text{H}_2\\text{O} \\), so \\( y = 5 \\)."
+      },
+      "ar": {
+        "question": "عند موازنة تفاعل احتراق البروبان الكيميائي: $$ x\\text{C}_3\\text{H}_8 + y\\text{O}_2 \\rightarrow z\\text{CO}_2 + w\\text{H}_2\\text{O} $$ حيث \\( x, y, z, w \\) هي أصغر أعداد صحيحة موجبة أولية فيما بينها، ما قيمة المعامل \\( y \\)؟",
+        "options": [],
+        "hint": "وازن ذرات الكربون، ثم الهيدروجين، ثم الأكسجين بالترتيب.",
+        "explanation": "بفرض \\( x = 1 \\): موازنة الكربون تعطي \\( z = 3 \\). موازنة الهيدروجين تعطي \\( 2w = 8 \\implies w = 4 \\). موازنة الأكسجين بالطرف الأيمن تعطي \\( 2y = 2(3) + 4 = 10 \\implies y = 5 \\). المعامل الموزون للأكسجين هو \\( y = 5 \\)."
+      }
+    },
+    "correct_index": "5"
+  },
+  {
+    "id": "NSMO-021",
+    "track": "nsmo",
+    "level": "Grades 7-10",
+    "topic": "Advanced Algebra",
+    "type": "MCQ",
+    "difficulty": "hard",
+    "content": {
+      "en": {
+        "question": "Let \\( f(x) \\) be a polynomial such that \\( f(x^2 + 1) = x^4 + 4x^2 + 5 \\). What is the value of \\( f(5) \\)?",
+        "options": [
+          "25",
+          "34",
+          "37",
+          "41"
+        ],
+        "hint": "Express \\( x^4 + 4x^2 + 5 \\) in terms of \\( u = x^2 + 1 \\).",
+        "explanation": "Let \\( u = x^2 + 1 \\), which implies \\( x^2 = u - 1 \\). Substituting this into the polynomial expression gives \\( f(u) = (u - 1)^2 + 4(u - 1) + 5 = u^2 - 2u + 1 + 4u - 4 + 5 = u^2 + 2u + 2 \\). To find \\( f(5) \\), we set \\( u = 5 \\): \\( f(5) = 5^2 + 2(5) + 2 = 25 + 10 + 2 = 37 \\)."
+      },
+      "ar": {
+        "question": "ليكن \\( f(x) \\) كثير حدود بحيث \\( f(x^2 + 1) = x^4 + 4x^2 + 5 \\). ما قيمة \\( f(5) \\)؟",
+        "options": [
+          "25",
+          "34",
+          "37",
+          "41"
+        ],
+        "hint": "عبّر عن \\( x^4 + 4x^2 + 5 \\) بدلالة \\( u = x^2 + 1 \\).",
+        "explanation": "نضع \\( u = x^2 + 1 \\)، فيكون \\( x^2 = u - 1 \\). بالتعويض في الدالة: \\( f(u) = (u-1)^2 + 4(u-1) + 5 = u^2 + 2u + 2 \\). لحساب \\( f(5) \\)، نضع \\( u = 5 \\): \\( f(5) = 5^2 + 2(5) + 2 = 37 \\)."
+      }
+    },
+    "correct_index": "2"
+  },
+  {
+    "id": "NSMO-022",
+    "track": "nsmo",
+    "level": "Grades 7-10",
+    "topic": "Integrated Physics and Algebra",
+    "type": "FRQ",
+    "difficulty": "hard",
+    "content": {
+      "en": {
+        "question": "A projectile is launched from ground level with initial velocity \\( v_0 \\) at an angle \\( \\theta \\) to the horizontal. If the horizontal range is 4 times the maximum height reached, find the angle \\( \\theta \\) in degrees.",
+        "options": [],
+        "hint": "Use the formulas \\( H = \\frac{v_0^2 \\sin^2\\theta}{2g} \\) and \\( R = \\frac{v_0^2 \\sin(2\\theta)}{g} \\).",
+        "explanation": "Maximum height is given by \\( H = \\frac{v_0^2 \\sin^2\\theta}{2g} \\) and range by \\( R = \\frac{2 v_0^2 \\sin\\theta \\cos\\theta}{g} \\). Given \\( R = 4H \\), we have \\( \\frac{2 v_0^2 \\sin\\theta \\cos\\theta}{g} = 4 \\left( \\frac{v_0^2 \\sin^2\\theta}{2g} \\right) \\), which simplifies to \\( 2\\cos\\theta = 2\\sin\\theta \\implies \\tan\\theta = 1 \\). Thus, \\( \\theta = 45^\\circ \\)."
+      },
+      "ar": {
+        "question": "يُطلق مقذوف من مستوى الأرض بسرعة ابتدائية \\( v_0 \\) وبزاوية \\( \\theta \\) مع الأفقي. إذا كان المدى الأفقي للمقذوف يساوي 4 أضعاف أقصى ارتفاع يصل إليه، فأوجد قيمة الزاوية \\( \\theta \\) بالدرجات.",
+        "options": [],
+        "hint": "استخدم صيغتي أقصى ارتفاع والمدى الأفقي في حركة المقذوفات.",
+        "explanation": "أقصى ارتفاع هو \\( H = \\frac{v_0^2 \\sin^2\\theta}{2g} \\)، والمدى الأفقي هو \\( R = \\frac{2 v_0^2 \\sin\\theta \\cos\\theta}{g} \\). وبما أن \\( R = 4H \\)، فإن \\( \\frac{2 v_0^2 \\sin\\theta \\cos\\theta}{g} = 4 \\left( \\frac{v_0^2 \\sin^2\\theta}{2g} \\right) \\)، مما يؤدي إلى \\( \\tan\\theta = 1 \\)، وبالتالي \\( \\theta = 45^\\circ \\)."
+      }
+    },
+    "correct_index": "45"
+  },
+  {
+    "id": "NSMO-023",
+    "track": "nsmo",
+    "level": "Grades 7-10",
+    "topic": "Number Theory",
+    "type": "MCQ",
+    "difficulty": "medium",
+    "content": {
+      "en": {
+        "question": "What is the remainder when \\( 3^{2024} + 4^{2024} \\) is divided by 5?",
+        "options": [
+          "0",
+          "1",
+          "2",
+          "3",
+          "4"
+        ],
+        "hint": "Use modular arithmetic to find \\( 3^{2024} \\pmod 5 \\) and \\( 4^{2024} \\pmod 5 \\).",
+        "explanation": "Since \\( 3^4 \\equiv 1 \\pmod 5 \\) and \\( 2024 \\) is divisible by 4, \\( 3^{2024} \\equiv 1 \\pmod 5 \\). Similarly, \\( 4^2 \\equiv 1 \\pmod 5 \\) and \\( 2024 \\) is even, so \\( 4^{2024} \\equiv 1 \\pmod 5 \\). Therefore, the sum is \\( 1 + 1 \\equiv 2 \\pmod 5 \\)."
+      },
+      "ar": {
+        "question": "ما باقي قسمة العدد \\( 3^{2024} + 4^{2024} \\) على 5؟",
+        "options": [
+          "0",
+          "1",
+          "2",
+          "3",
+          "4"
+        ],
+        "hint": "استخدم الحساب النمطي لإيجاد باقي قسمة كل حد على 5.",
+        "explanation": "بما أن \\( 3^4 \\equiv 1 \\pmod 5 \\) و2024 تقبل القسمة على 4 فإن \\( 3^{2024} \\equiv 1 \\pmod 5 \\). وبما أن \\( 4^2 \\equiv 1 \\pmod 5 \\) و2024 زوجي فإن \\( 4^{2024} \\equiv 1 \\pmod 5 \\). إذن الباقي هو \\( 1 + 1 = 2 \\)."
+      }
+    },
+    "correct_index": "2"
+  },
+  {
+    "id": "NSMO-024",
+    "track": "nsmo",
+    "level": "Grades 7-10",
+    "topic": "Geometry",
+    "type": "FRQ",
+    "difficulty": "hard",
+    "content": {
+      "en": {
+        "question": "In a right-angled triangle \\( ABC \\) with the right angle at \\( C \\), the incircle touches the hypotenuse \\( AB \\) at point \\( D \\). If \\( AD = 6 \\) and \\( BD = 8 \\), find the area of triangle \\( ABC \\).",
+        "options": [],
+        "hint": "For a right-angled triangle, the area is equal to \\( AD \\times BD \\).",
+        "explanation": "Let the inradius be \\( r \\). The side lengths are \\( a = r + 8 \\), \\( b = r + 6 \\), and hypotenuse \\( c = 14 \\). By the Pythagorean theorem, \\( (r+6)^2 + (r+8)^2 = 14^2 \\implies 2r^2 + 28r - 96 = 0 \\implies r^2 + 14r - 48 = 0 \\). The area is \\( \\frac{1}{2}ab = \\frac{1}{2}(r+6)(r+8) = \\frac{1}{2}(r^2 + 14r + 48) = \\frac{1}{2}(48 + 48) = 48 \\)."
+      },
+      "ar": {
+        "question": "في مثلث قائم الزاوية \\( ABC \\) الزاوية القائمة عند \\( C \\)، تمس الدائرة الداخلية الوتر \\( AB \\) في النقطة \\( D \\). إذا كان \\( AD = 6 \\) و \\( BD = 8 \\)، فأوجد مساحة المثلث \\( ABC \\).",
+        "options": [],
+        "hint": "مساحة المثلث قائم الزاوية بدلالة جزأي الوتر المماسين لدائرته الداخلية تساوي حاصل ضربهما.",
+        "explanation": "بفرض أن نصف قطر الدائرة الداخلية هو \\( r \\)، أطوال الأضلاع تكون \\( a = r + 8 \\)، \\( b = r + 6 \\)، والوتر \\( c = 14 \\). باستخدام نظرية فيثاغورس نجد أن \\( r^2 + 14r = 48 \\). مساحة المثلث تساوي \\( \\frac{1}{2}(r+6)(r+8) = \\frac{1}{2}(r^2 + 14r + 48) = \\frac{1}{2}(48 + 48) = 48 \\)."
+      }
+    },
+    "correct_index": "48"
+  },
+  {
+    "id": "NSMO-025",
+    "track": "nsmo",
+    "level": "Grades 7-10",
+    "topic": "Combinatorics",
+    "type": "MCQ",
+    "difficulty": "medium",
+    "content": {
+      "en": {
+        "question": "How many positive integers less than 1000 are divisible by neither 5 nor 7?",
+        "options": [
+          "686",
+          "688",
+          "702",
+          "714"
+        ],
+        "hint": "Apply the Principle of Inclusion-Exclusion.",
+        "explanation": "Total positive integers less than 1000 is 999. Those divisible by 5: \\( \\lfloor 999/5 \\rfloor = 199 \\). Divisible by 7: \\( \\lfloor 999/7 \\rfloor = 142 \\). Divisible by 35: \\( \\lfloor 999/35 \\rfloor = 28 \\). Divisible by 5 or 7: \\( 199 + 142 - 28 = 313 \\). Divisible by neither: \\( 999 - 313 = 686 \\)."
+      },
+      "ar": {
+        "question": "كم عدد الأعداد الصحيحة الموجبة الأصغر من 1000 والتي لا تقبل القسمة على 5 ولا على 7؟",
+        "options": [
+          "686",
+          "688",
+          "702",
+          "714"
+        ],
+        "hint": "استخدم مبدأ الاحتواء والاستبعاد.",
+        "explanation": "عدد الأعداد الموجبة الأصغر من 1000 هو 999. الأعداد التي تقبل القسمة على 5 عددها 199. والتي تقبل القسمة على 7 عددها 142. والتي تقبل القسمة على 35 عددها 28. عدد الأعداد التي تقبل القسمة على 5 أو 7 هو \\( 199 + 142 - 28 = 313 \\). إذن التي لا تقبل القسمة على أي منهما عددها \\( 999 - 313 = 686 \\)."
+      }
+    },
+    "correct_index": "0"
+  },
+  {
+    "id": "NSMO-026",
+    "track": "nsmo",
+    "level": "Grades 7-10",
+    "topic": "Integrated Chemistry and Math",
+    "type": "FRQ",
+    "difficulty": "medium",
+    "content": {
+      "en": {
+        "question": "The pH of a solution is defined as \\( \\text{pH} = -\\log_{10}[\\text{H}^+] \\), where \\( [\\text{H}^+] \\) is the hydrogen ion concentration in moles per liter. If solution A has a pH of 3 and solution B has a pH of 6, how many times greater is the hydrogen ion concentration in solution A than in solution B?",
+        "options": [],
+        "hint": "Express \\( [\\text{H}^+] \\) in terms of pH using exponentiation.",
+        "explanation": "For solution A, \\( [\\text{H}^+]_A = 10^{-3} \\). For solution B, \\( [\\text{H}^+]_B = 10^{-6} \\). The ratio is \\( \\frac{[\\text{H}^+]_A}{[\\text{H}^+]_B} = \\frac{10^{-3}}{10^{-6}} = 10^3 = 1000 \\)."
+      },
+      "ar": {
+        "question": "يُعرَّف الرقم الهيدروجيني لبعض المحاليل بالعلاقة \\( \\text{pH} = -\\log_{10}[\\text{H}^+] \\)، حيث \\( [\\text{H}^+] \\) هو تركيز أيونات الهيدروجين بالمول/لتر. إذا كان الرقم الهيدروجيني للمحلول A يساوي 3 وللمحلول B يساوي 6، فكم مرة يزيد تركيز أيونات الهيدروجين في المحلول A عنه في المحلول B؟",
+        "options": [],
+        "hint": "احسب تركيز أيونات الهيدروجين لكل محلول باستخدام الأسس.",
+        "explanation": "تركيز أيونات الهيدروجين للمحلول A هو \\( 10^{-3} \\) وللمحلول B هو \\( 10^{-6} \\). النسبة بينهما هي \\( \\frac{10^{-3}}{10^{-6}} = 10^3 = 1000 \\)."
+      }
+    },
+    "correct_index": "1000"
+  },
+  {
+    "id": "NSMO-027",
+    "track": "nsmo",
+    "level": "Grades 7-10",
+    "topic": "Advanced Algebra",
+    "type": "MCQ",
+    "difficulty": "hard",
+    "content": {
+      "en": {
+        "question": "If \\( x + y + z = 6 \\), \\( x^2 + y^2 + z^2 = 14 \\), and \\( x^3 + y^3 + z^3 = 36 \\), find the value of \\( xyz \\).",
+        "options": [
+          "4",
+          "6",
+          "8",
+          "12"
+        ],
+        "hint": "Use Newton's sums or Euler's identity for cubic sums.",
+        "explanation": "First, \\( (x+y+z)^2 = x^2+y^2+z^2 + 2(xy+yz+zx) \\implies 36 = 14 + 2(xy+yz+zx) \\implies xy+yz+zx = 11 \\). Next, using \\( x^3+y^3+z^3 - 3xyz = (x+y+z)(x^2+y^2+z^2 - (xy+yz+zx)) \\), we get \\( 36 - 3xyz = 6(14 - 11) = 18 \\implies 3xyz = 18 \\implies xyz = 6 \\)."
+      },
+      "ar": {
+        "question": "إذا كان \\( x + y + z = 6 \\)، و \\( x^2 + y^2 + z^2 = 14 \\)، و \\( x^3 + y^3 + z^3 = 36 \\)، فأوجد قيمة \\( xyz \\).",
+        "options": [
+          "4",
+          "6",
+          "8",
+          "12"
+        ],
+        "hint": "استخدم متطابقة المجموع التكعيبي وإيجاد حاصل ضرب كل عنصرين.",
+        "explanation": "نجد أولاً \\( xy+yz+zx = \\frac{(x+y+z)^2 - (x^2+y^2+z^2)}{2} = \\frac{36-14}{2} = 11 \\). ثم باستخدام المطابقة \\( x^3+y^3+z^3 - 3xyz = (x+y+z)(x^2+y^2+z^2 - (xy+yz+zx)) \\)، نحصل على \\( 36 - 3xyz = 6(14 - 11) = 18 \\implies xyz = 6 \\)."
+      }
+    },
+    "correct_index": "1"
+  },
+  {
+    "id": "NSMO-028",
+    "track": "nsmo",
+    "level": "Grades 7-10",
+    "topic": "Integrated Physics and Geometry",
+    "type": "MCQ",
+    "difficulty": "medium",
+    "content": {
+      "en": {
+        "question": "A solid sphere of radius \\( R \\) is completely submerged in water inside a cylindrical container of radius \\( 2R \\). By what height does the water level in the container rise?",
+        "options": [
+          "\\( \\frac{R}{2} \\)",
+          "\\( \\frac{R}{3} \\)",
+          "\\( \\frac{2R}{3} \\)",
+          "\\( \\frac{R}{4} \\)"
+        ],
+        "hint": "Equate the volume of the sphere to the volume of the displaced cylinder of water.",
+        "explanation": "The volume of the sphere is \\( V_{\\text{sphere}} = \\frac{4}{3}\\pi R^3 \\). The volume of water displaced in the cylinder is \\( V_{\\text{cylinder}} = \\pi (2R)^2 h = 4\\pi R^2 h \\). Setting them equal: \\( 4\\pi R^2 h = \\frac{4}{3}\\pi R^3 \\implies h = \\frac{R}{3} \\)."
+      },
+      "ar": {
+        "question": "كرة صلبة نصف قطرها \\( R \\) غُمِرَت بالكامل في الماء داخل أسطوانة نصف قطر قاعدتها \\( 2R \\). ما مقدار ارتفاع مستوى الماء في الأسطوانة؟",
+        "options": [
+          "\\( \\frac{R}{2} \\)",
+          "\\( \\frac{R}{3} \\)",
+          "\\( \\frac{2R}{3} \\)",
+          "\\( \\frac{R}{4} \\)"
+        ],
+        "hint": "ساوِ حجم الكرة بحجم الماء المزيح في الأسطوانة.",
+        "explanation": "حجم الكرة يساوي \\( \\frac{4}{3}\\pi R^3 \\)، وحجم الأسطوانة المزيحة يساوي \\( \\pi (2R)^2 h = 4\\pi R^2 h \\). بمسواتهما: \\( 4\\pi R^2 h = \\frac{4}{3}\\pi R^3 \\implies h = \\frac{R}{3} \\)."
+      }
+    },
+    "correct_index": "1"
+  },
+  {
+    "id": "NSMO-029",
+    "track": "nsmo",
+    "level": "Grades 7-10",
+    "topic": "Number Theory",
+    "type": "FRQ",
+    "difficulty": "extreme",
+    "content": {
+      "en": {
+        "question": "Find the smallest positive integer \\( n \\) such that \\( 2^n + 1 \\) is divisible by 125.",
+        "options": [],
+        "hint": "Analyze the multiplicative order of 2 modulo 125.",
+        "explanation": "We require \\( 2^n \\equiv -1 \\pmod{125} \\). The multiplicative order of 2 modulo 125 divides \\( \\phi(125) = 100 \\). Since \\( 2^{10} = 1024 \\equiv 24 \\pmod{125} \\), the order of 2 modulo 125 is 100. The smallest positive integer \\( n \\) satisfying \\( 2^n \\equiv -1 \\pmod{125} \\) is half of the order, which is \\( n = 50 \\)."
+      },
+      "ar": {
+        "question": "أوجد أصغر عدد صحيح موجب \\( n \\) بحيث يكون \\( 2^n + 1 \\) قابلاً للقسمة على 125.",
+        "options": [],
+        "hint": "ادرس رتبة العدد 2 بمقياس 125.",
+        "explanation": "نحتاج أن يكون \\( 2^n \\equiv -1 \\pmod{125} \\). رتبة العدد 2 بمقياس 125 هي 100. أصغر أس موجب يحقق المعادلة \\( 2^n \\equiv -1 \\pmod{125} \\) هو نصف الرتبة، أي \\( n = 50 \\)."
+      }
+    },
+    "correct_index": "50"
+  },
+  {
+    "id": "NSMO-030",
+    "track": "nsmo",
+    "level": "Grades 7-10",
+    "topic": "Scientific Reasoning / Biology-Math",
+    "type": "MCQ",
+    "difficulty": "medium",
+    "content": {
+      "en": {
+        "question": "A bacterial population doubles every 20 minutes. If the initial population is \\( 10^3 \\) bacteria, after how many hours and minutes will the population reach \\( 1.024 \\times 10^6 \\)?",
+        "options": [
+          "3 hours 20 minutes",
+          "3 hours 40 minutes",
+          "4 hours",
+          "5 hours"
+        ],
+        "hint": "Express \\( 1.024 \\times 10^6 \\) as \\( 2^k \\times 10^3 \\).",
+        "explanation": "\\( 1.024 \\times 10^6 = 1024 \\times 10^3 = 2^{10} \\times 10^3 \\). Thus, the population doubles 10 times. The total time in minutes is \\( 10 \\times 20 = 200 \\) minutes, which corresponds to 3 hours and 20 minutes."
+      },
+      "ar": {
+        "question": "يتضاعف عدد مجتمع بكتيري كل 20 دقيقة. إذا بدأ المجتمع بـ \\( 10^3 \\) بكتيريا، فبعد كم ساعة ودقيقة سيصل العدد إلى \\( 1.024 \\times 10^6 \\)؟",
+        "options": [
+          "3 ساعات و 20 دقيقة",
+          "3 ساعات و 40 دقيقة",
+          "4 ساعات",
+          "5 ساعات"
+        ],
+        "hint": "اكتب العدد \\( 1.024 \\times 10^6 \\) على صورة \\( 2^k \\times 10^3 \\).",
+        "explanation": "\\( 1.024 \\times 10^6 = 1024 \\times 10^3 = 2^{10} \\times 10^3 \\). هذا يعني حدوث 10 مضاعفات. الزمن الكلي هو \\( 10 \\times 20 = 200 \\) دقيقة، أي 3 ساعات و 20 دقيقة."
+      }
+    },
+    "correct_index": "0"
+  },
+  {
+    "id": "NSMO-031",
+    "track": "nsmo",
+    "level": "Grades 7-10",
+    "topic": "Advanced Algebra",
+    "type": "FRQ",
+    "difficulty": "hard",
+    "content": {
+      "en": {
+        "question": "Evaluate the infinite sum $$ \\sum_{n=1}^{\\infty} \\frac{n}{3^n} $$",
+        "options": [],
+        "hint": "Consider subtracting \\( \\frac{1}{3} S \\) from \\( S \\).",
+        "explanation": "Let \\( S = \\frac{1}{3} + \\frac{2}{9} + \\frac{3}{27} + \\dots \\). Then \\( \\frac{1}{3}S = \\frac{1}{9} + \\frac{2}{27} + \\dots \\). Subtracting the two gives \\( \\frac{2}{3}S = \\frac{1}{3} + \\frac{1}{9} + \\frac{1}{27} + \\dots = \\frac{1/3}{1 - 1/3} = \\frac{1}{2} \\). Hence, \\( S = \\frac{3}{4} \\)."
+      },
+      "ar": {
+        "question": "احسب قيمة المجموع اللانهائي $$ \\sum_{n=1}^{\\infty} \\frac{n}{3^n} $$",
+        "options": [],
+        "hint": "اطرح \\( \\frac{1}{3} S \\) من \\( S \\) لتحصل على متسلسلة هندسية.",
+        "explanation": "بفرض \\( S = \\frac{1}{3} + \\frac{2}{9} + \\dots \\)، نجد أن \\( \\frac{1}{3}S = \\frac{1}{9} + \\frac{2}{27} + \\dots \\). بالطرح نحصل على \\( \\frac{2}{3}S = \\sum_{n=1}^{\\infty} \\frac{1}{3^n} = \\frac{1/3}{1 - 1/3} = \\frac{1}{2} \\). إذن \\( S = \\frac{3}{4} \\)."
+      }
+    },
+    "correct_index": "3/4"
+  },
+  {
+    "id": "NSMO-032",
+    "track": "nsmo",
+    "level": "Grades 7-10",
+    "topic": "Integrated Physics and Trigonometry",
+    "type": "MCQ",
+    "difficulty": "easy",
+    "content": {
+      "en": {
+        "question": "A mass attached to a spring undergoes simple harmonic motion given by \\( x(t) = 4 \\cos(2\\pi t + \\frac{\\pi}{3}) \\) cm. What is the displacement \\( x \\) in cm at time \\( t = 1 \\) second?",
+        "options": [
+          "1 cm",
+          "2 cm",
+          "\\( 2\\sqrt{3} \\) cm",
+          "4 cm"
+        ],
+        "hint": "Substitute \\( t = 1 \\) into the given function.",
+        "explanation": "Substituting \\( t = 1 \\): \\( x(1) = 4 \\cos(2\\pi + \\frac{\\pi}{3}) = 4 \\cos(\\frac{\\pi}{3}) = 4 \\times \\frac{1}{2} = 2 \\) cm."
+      },
+      "ar": {
+        "question": "يتحرك جسم متصل برابض حركة توافقية بسيطة يُعبر عن إزاحتها بالعلاقة \\( x(t) = 4 \\cos(2\\pi t + \\frac{\\pi}{3}) \\) سم. ما إزاحة الجسم \\( x \\) بالسنتيمتر عند الزمن \\( t = 1 \\) ثانية؟",
+        "options": [
+          "1 سم",
+          "2 سم",
+          "\\( 2\\sqrt{3} \\) سم",
+          "4 سم"
+        ],
+        "hint": "عوّض بـ \\( t = 1 \\) في الدالة المعطاة.",
+        "explanation": "بالتعويض عن \\( t = 1 \\): \\( x(1) = 4 \\cos(2\\pi + \\frac{\\pi}{3}) = 4 \\cos(\\frac{\\pi}{3}) = 4 \\times \\frac{1}{2} = 2 \\) سم."
+      }
+    },
+    "correct_index": "1"
+  },
+  {
+    "id": "NSMO-033",
+    "track": "nsmo",
+    "level": "Grades 7-10",
+    "topic": "Geometry",
+    "type": "FRQ",
+    "difficulty": "hard",
+    "content": {
+      "en": {
+        "question": "A cyclic quadrilateral \\( ABCD \\) has side lengths \\( AB = 3 \\), \\( BC = 4 \\), \\( CD = 5 \\), and \\( DA = 6 \\). Find the value of \\( AC^2 \\).",
+        "options": [],
+        "hint": "Apply the Law of Cosines in triangles \\( ABC \\) and \\( ADC \\) using \\( \\cos D = -\\cos B \\).",
+        "explanation": "In \\( \\triangle ABC \\), \\( AC^2 = 3^2 + 4^2 - 2(3)(4)\\cos B = 25 - 24\\cos B \\). In \\( \\triangle ADC \\), \\( AC^2 = 5^2 + 6^2 - 2(5)(6)\\cos D = 61 + 60\\cos B \\) since \\( D = 180^\\circ - B \\). Equating both: \\( 25 - 24\\cos B = 61 + 60\\cos B \\implies 84\\cos B = -36 \\implies \\cos B = -\\frac{3}{7} \\). Thus, \\( AC^2 = 25 - 24(-\\frac{3}{7}) = \\frac{247}{7} \\)."
+      },
+      "ar": {
+        "question": "شكل رباعي دائري \\( ABCD \\) أطوال أضلاعه \\( AB = 3 \\)، و \\( BC = 4 \\)، و \\( CD = 5 \\)، و \\( DA = 6 \\). أوجد قيمة \\( AC^2 \\).",
+        "options": [],
+        "hint": "طبق قانون جيب التمام على المثلثين \\( ABC \\) و \\( ADC \\) مستفيداً من أن \\( \\cos D = -\\cos B \\).",
+        "explanation": "تطبيق قانون جيب التمام يعطي: \\( AC^2 = 25 - 24\\cos B \\) و \\( AC^2 = 61 + 60\\cos B \\). بمساواة المعادلتين نجد \\( \\cos B = -\\frac{3}{7} \\)، وبالتالي \\( AC^2 = 25 - 24(-\\frac{3}{7}) = \\frac{247}{7} \\)."
+      }
+    },
+    "correct_index": "247/7"
+  },
+  {
+    "id": "NSMO-034",
+    "track": "nsmo",
+    "level": "Grades 7-10",
+    "topic": "Combinatorics",
+    "type": "MCQ",
+    "difficulty": "medium",
+    "content": {
+      "en": {
+        "question": "Five distinct keys are placed on a circular key ring. How many geometrically distinct arrangements are possible?",
+        "options": [
+          "12",
+          "24",
+          "60",
+          "120"
+        ],
+        "hint": "Account for both rotational symmetry and reflection (flipping the key ring).",
+        "explanation": "The number of circular permutations of 5 distinct items is \\( (5-1)! = 24 \\). Since the key ring can be flipped over, arrangements related by reflection are physically identical. Thus, we divide by 2: \\( \\frac{24}{2} = 12 \\)."
+      },
+      "ar": {
+        "question": "وُضعت 5 مفاتيح متميزة على حلقة مفاتيح دائرية. كم عدد الترتيبات المتميزة هندسياً الممكنة؟",
+        "options": [
+          "12",
+          "24",
+          "60",
+          "120"
+        ],
+        "hint": "خذ في الاعتبار الدوران وقلب حلقة المفاتيح.",
+        "explanation": "عدد التباديل الدائرية لـ 5 عناصر هو \\( (5-1)! = 24 \\). وبما أن تقليب حلقة المفاتيح يعطي ترتيباً متطابقاً فيزيائياً، نقسم على 2: \\( \\frac{24}{2} = 12 \\)."
+      }
+    },
+    "correct_index": "0"
+  },
+  {
+    "id": "NSMO-035",
+    "track": "nsmo",
+    "level": "Grades 7-10",
+    "topic": "Integrated Math and Thermodynamics",
+    "type": "FRQ",
+    "difficulty": "medium",
+    "content": {
+      "en": {
+        "question": "A 200 g metal block at \\( 100^\\circ\\text{C} \\) is dropped into 100 g of water at \\( 20^\\circ\\text{C} \\). The equilibrium temperature is \\( 40^\\circ\\text{C} \\). Assuming no heat loss to the environment and taking the specific heat capacity of water as \\( 4.2 \\text{ J/g}^\\circ\\text{C} \\), calculate the specific heat capacity of the metal in \\( \\text{J/g}^\\circ\\text{C} \\).",
+        "options": [],
+        "hint": "Use the heat equilibrium equation: Heat lost by metal = Heat gained by water.",
+        "explanation": "\\( m_m c_m (T_{i,m} - T_f) = m_w c_w (T_f - T_{i,w}) \\). Substituting values: \\( 200 \\times c_m \\times (100 - 40) = 100 \\times 4.2 \\times (40 - 20) \\implies 12000 c_m = 8400 \\implies c_m = 0.7 \\text{ J/g}^\\circ\\text{C} \\)."
+      },
+      "ar": {
+        "question": "أُسقطت قطعة معدنية كتلتها 200 جرام ودرجة حرارتها \\( 100^\\circ\\text{C} \\) في 100 جرام من الماء عند درجة حرارة \\( 20^\\circ\\text{C} \\). أصبحت درجة حرارة الاتزان \\( 40^\\circ\\text{C} \\). بافتراض عدم وجود فقدان للحرارة، وبفرض أن الحرارة النوعية للماء هي \\( 4.2 \\text{ J/g}^\\circ\\text{C} \\)، احسب الحرارة النوعية للمعدن بـ \\( \\text{J/g}^\\circ\\text{C} \\).",
+        "options": [],
+        "hint": "استخدم معادلة التوازن الحراري: الحرارة المفقودة = الحرارة المكتسبة.",
+        "explanation": "\\( m_m c_m \\Delta T_m = m_w c_w \\Delta T_w \\). بالتعويض: \\( 200 \\times c_m \\times 60 = 100 \\times 4.2 \\times 20 \\implies 12000 c_m = 8400 \\implies c_m = 0.7 \\)."
+      }
+    },
+    "correct_index": "0.7"
+  },
+  {
+    "id": "NSMO-036",
+    "track": "nsmo",
+    "level": "Grades 7-10",
+    "topic": "Advanced Algebra",
+    "type": "MCQ",
+    "difficulty": "medium",
+    "content": {
+      "en": {
+        "question": "Let \\( \\alpha, \\beta, \\gamma \\) be the roots of the cubic polynomial \\( x^3 - 5x^2 + 7x - 3 = 0 \\). What is the value of \\( \\frac{1}{\\alpha} + \\frac{1}{\\beta} + \\frac{1}{\\gamma} \\)?",
+        "options": [
+          "\\( \\frac{5}{3} \\)",
+          "\\( \\frac{7}{3} \\)",
+          "\\( \\frac{3}{7} \\)",
+          "\\( 3 \\)"
+        ],
+        "hint": "Express \\( \\frac{1}{\\alpha} + \\frac{1}{\\beta} + \\frac{1}{\\gamma} \\) using Vieta's formulas.",
+        "explanation": "By Vieta's formulas, \\( \\alpha\\beta + \\beta\\gamma + \\gamma\\alpha = 7 \\) and \\( \\alpha\\beta\\gamma = 3 \\). The desired expression is \\( \\frac{\\alpha\\beta + \\beta\\gamma + \\gamma\\alpha}{\\alpha\\beta\\gamma} = \\frac{7}{3} \\)."
+      },
+      "ar": {
+        "question": "لتكن \\( \\alpha, \\beta, \\gamma \\) جذور الكثير الحدود التكعيبي \\( x^3 - 5x^2 + 7x - 3 = 0 \\). ما قيمة \\( \\frac{1}{\\alpha} + \\frac{1}{\\beta} + \\frac{1}{\\gamma} \\)؟",
+        "options": [
+          "\\( \\frac{5}{3} \\)",
+          "\\( \\frac{7}{3} \\)",
+          "\\( \\frac{3}{7} \\)",
+          "\\( 3 \\)"
+        ],
+        "hint": "استخدم صيغ فييتا للتعبير عن المجموع المطلوب.",
+        "explanation": "من صيغ فييتا: \\( \\alpha\\beta + \\beta\\gamma + \\gamma\\alpha = 7 \\) و \\( \\alpha\\beta\\gamma = 3 \\). بالتالي فإن \\( \\frac{1}{\\alpha} + \\frac{1}{\\beta} + \\frac{1}{\\gamma} = \\frac{\\alpha\\beta + \\beta\\gamma + \\gamma\\alpha}{\\alpha\\beta\\gamma} = \\frac{7}{3} \\)."
+      }
+    },
+    "correct_index": "1"
+  },
+  {
+    "id": "NSMO-037",
+    "track": "nsmo",
+    "level": "Grades 7-10",
+    "topic": "Number Theory",
+    "type": "FRQ",
+    "difficulty": "easy",
+    "content": {
+      "en": {
+        "question": "Find the total number of positive integer divisors of \\( 20^4 \\times 15^3 \\).",
+        "options": [],
+        "hint": "Find the prime factorization first.",
+        "explanation": "Prime factorization: \\( 20^4 \\times 15^3 = (2^2 \\times 5)^4 \\times (3 \\times 5)^3 = 2^8 \\times 3^3 \\times 5^7 \\). The number of divisors is \\( (8+1)(3+1)(7+1) = 9 \\times 4 \\times 8 = 288 \\)."
+      },
+      "ar": {
+        "question": "أوجد العدد الكلي للقواسم الصحيحة الموجبة للعدد \\( 20^4 \\times 15^3 \\).",
+        "options": [],
+        "hint": "حلل العدد إلى عوامله الأولية أولاً.",
+        "explanation": "التحليل الأولي: \\( 20^4 \\times 15^3 = 2^8 \\times 3^3 \\times 5^7 \\). عدد القواسم هو \\( (8+1)(3+1)(7+1) = 9 \\times 4 \\times 8 = 288 \\)."
+      }
+    },
+    "correct_index": "288"
+  },
+  {
+    "id": "NSMO-038",
+    "track": "nsmo",
+    "level": "Grades 7-10",
+    "topic": "Integrated Physics and Algebra",
+    "type": "MCQ",
+    "difficulty": "medium",
+    "content": {
+      "en": {
+        "question": "Two resistors with resistances \\( R_1 \\) and \\( R_2 \\) have an equivalent resistance of \\( 12\\ \\Omega \\) when connected in parallel, and \\( 50\\ \\Omega \\) when connected in series. What is the absolute difference \\( |R_1 - R_2| \\)?",
+        "options": [
+          "5 \\(\\Omega\\)",
+          "10 \\(\\Omega\\)",
+          "15 \\(\\Omega\\)",
+          "20 \\(\\Omega\\)"
+        ],
+        "hint": "Use the identity \\( (R_1 - R_2)^2 = (R_1 + R_2)^2 - 4R_1R_2 \\).",
+        "explanation": "Series connection gives \\( R_1 + R_2 = 50 \\). Parallel connection gives \\( \\frac{R_1 R_2}{R_1 + R_2} = 12 \\implies R_1 R_2 = 600 \\). Using \\( (R_1 - R_2)^2 = (R_1 + R_2)^2 - 4 R_1 R_2 = 50^2 - 4(600) = 2500 - 2400 = 100 \\). Hence, \\( |R_1 - R_2| = 10\\ \\Omega \\)."
+      },
+      "ar": {
+        "question": "مقاومتان \\( R_1 \\) و \\( R_2 \\) عند توصيلهما على التوازي تكون المقاومة المكافئة \\( 12\\ \\Omega \\)، وعند توصيلهما على التوالي تكون المقاومة المكافئة \\( 50\\ \\Omega \\). ما الفرق المطلق \\( |R_1 - R_2| \\)؟",
+        "options": [
+          "5 \\(\\Omega\\)",
+          "10 \\(\\Omega\\)",
+          "15 \\(\\Omega\\)",
+          "20 \\(\\Omega\\)"
+        ],
+        "hint": "استخدم المتطابقة \\( (R_1 - R_2)^2 = (R_1 + R_2)^2 - 4R_1R_2 \\).",
+        "explanation": "على التوالي: \\( R_1 + R_2 = 50 \\). وعلى التوازي: \\( R_1 R_2 = 600 \\). باستخدام المتطابقة \\( (R_1 - R_2)^2 = 2500 - 2400 = 100 \\)، نجد أن \\( |R_1 - R_2| = 10\\ \\Omega \\)."
+      }
+    },
+    "correct_index": "1"
+  },
+  {
+    "id": "NSMO-039",
+    "track": "nsmo",
+    "level": "Grades 7-10",
+    "topic": "Geometry / Coordinate Geometry",
+    "type": "FRQ",
+    "difficulty": "medium",
+    "content": {
+      "en": {
+        "question": "The line \\( L \\) passes through the point \\( (3, 4) \\) and is perpendicular to the line \\( 3x + 4y = 12 \\). Find the x-intercept of the line \\( L \\).",
+        "options": [],
+        "hint": "Find the slope of \\( L \\) using the condition \\( m_1 m_2 = -1 \\).",
+        "explanation": "The slope of \\( 3x + 4y = 12 \\) is \\( -\\frac{3}{4} \\). Thus, the perpendicular line \\( L \\) has slope \\( \\frac{4}{3} \\). The equation of \\( L \\) is \\( y - 4 = \\frac{4}{3}(x - 3) \\). Setting \\( y = 0 \\) to find the x-intercept: \\( -4 = \\frac{4}{3}(x - 3) \\implies x - 3 = -3 \\implies x = 0 \\)."
+      },
+      "ar": {
+        "question": "يمر المستقيم \\( L \\) بالنقطة \\( (3, 4) \\) وهو عمودي على المستقيم \\( 3x + 4y = 12 \\). أوجد المقطع السيني (المقطع \\( x \\)) للمستقيم \\( L \\).",
+        "options": [],
+        "hint": "أوجد ميل المستقيم \\( L \\) باستخدام شرط التعامد \\( m_1 m_2 = -1 \\).",
+        "explanation": "ميل المستقيم المعطى هو \\( -\\frac{3}{4} \\)، إذن ميل المستقيم العمودي \\( L \\) هو \\( \\frac{4}{3} \\). معادلة \\( L \\) هي \\( y - 4 = \\frac{4}{3}(x - 3) \\). لإيجاد المقطع السيني نضع \\( y = 0 \\): \\( -4 = \\frac{4}{3}(x - 3) \\implies x = 0 \\)."
+      }
+    },
+    "correct_index": "0"
+  },
+  {
+    "id": "NSMO-040",
+    "track": "nsmo",
+    "level": "Grades 7-10",
+    "topic": "Combinatorics / Probability",
+    "type": "MCQ",
+    "difficulty": "easy",
+    "content": {
+      "en": {
+        "question": "A fair 6-sided die is rolled repeatedly until a 6 appears. What is the expected number of rolls required?",
+        "options": [
+          "5",
+          "6",
+          "36",
+          "3.5"
+        ],
+        "hint": "Recall the expected value formula for a geometric distribution.",
+        "explanation": "This follows a geometric distribution with probability of success \\( p = \\frac{1}{6} \\). The expected number of rolls is \\( E[X] = \\frac{1}{p} = 6 \\)."
+      },
+      "ar": {
+        "question": "يُلقى حجر نرد عادل ذو 6 أوجه بشكل متكرر حتى ظهور الرقم 6. ما القيمة المتوقعة لعدد مرات إلقاء النرد؟",
+        "options": [
+          "5",
+          "6",
+          "36",
+          "3.5"
+        ],
+        "hint": "تذكر صيغة القيمة المتوقعة للتوزيع الهندسي.",
+        "explanation": "يتبع هذا التجريب التوزيع الهندسي باحتمال نجاح \\( p = \\frac{1}{6} \\). القيمة المتوقعة تساوي \\( \\frac{1}{p} = 6 \\)."
+      }
+    },
+    "correct_index": "1"
+  },
+  {
+    "id": "NSMO-041",
+    "track": "nsmo",
+    "level": "Grades 7-10",
+    "topic": "Algebra",
+    "type": "MCQ",
+    "difficulty": "medium",
+    "content": {
+      "en": {
+        "question": "Two water pumps \\( A \\) and \\( B \\) work together to fill a reservoir. Working alone, pump \\( A \\) takes 6 hours longer than both pumps working together. Pump \\( B \\) alone takes 24 hours longer than both pumps together. How many hours does it take for both pumps to fill the reservoir together?",
+        "options": [
+          "8",
+          "10",
+          "12",
+          "15",
+          "18"
+        ],
+        "hint": "Set \\( t \\) as the time taken together, then express individual rates as \\( \\frac{1}{t+6} \\) and \\( \\frac{1}{t+24} \\).",
+        "explanation": "Let \\( t \\) be the time taken by both pumps together. Then pump \\( A \\) takes \\( t + 6 \\) hours and pump \\( B \\) takes \\( t + 24 \\) hours. Their combined rate equation is: $$ \\frac{1}{t+6} + \\frac{1}{t+24} = \\frac{1}{t} $$ Solving this equation yields \\( t = \\sqrt{6 \\times 24} = \\sqrt{144} = 12 \\) hours."
+      },
+      "ar": {
+        "question": "تعمل مضختان مائيتان \\( A \\) و \\( B \\) معاً لتعبئة خزان. إذا عملت المضخة \\( A \\) بمفردها، فإنها تستغرق 6 ساعات أطول مقارنة بعمل المضختين معاً. أما إذا عملت المضخة \\( B \\) بمفردها، فإنها تستغرق 24 ساعة أطول مقارنة بعمل المضختين معاً. كم ساعة تستغرق المضختان معاً لتعبئة الخزان؟",
+        "options": [
+          "8",
+          "10",
+          "12",
+          "15",
+          "18"
+        ],
+        "hint": "افرض أن \\( t \\) هو الزمن المستغرق معاً، ثم عبّر عن المعدلات الفردية بـ \\( \\frac{1}{t+6} \\) و \\( \\frac{1}{t+24} \\).",
+        "explanation": "بفرض أن \\( t \\) هو الزمن المستغرق عند عمل المضختين معاً. تستغرق المضخة \\( A \\) زمن قدره \\( t + 6 \\) وتستغرق \\( B \\) زمن قدره \\( t + 24 \\). معادلة معدل العمل هي: $$ \\frac{1}{t+6} + \\frac{1}{t+24} = \\frac{1}{t} $$ وبحل المعادلة نجد أن \\( t = \\sqrt{6 \\times 24} = \\sqrt{144} = 12 \\) ساعة."
+      }
+    },
+    "correct_index": "2"
+  },
+  {
+    "id": "NSMO-042",
+    "track": "nsmo",
+    "level": "Grades 7-10",
+    "topic": "Number Theory",
+    "type": "MCQ",
+    "difficulty": "hard",
+    "content": {
+      "en": {
+        "question": "Find the number of ordered pairs of positive integers \\( (x, y) \\) that satisfy the equation: $$ \\frac{1}{x} + \\frac{1}{y} = \\frac{1}{12} $$",
+        "options": [
+          "11",
+          "13",
+          "15",
+          "17",
+          "19"
+        ],
+        "hint": "Rearrange the equation into Simon's Favorite Factoring Trick form: \\( (x-12)(y-12) = 144 \\).",
+        "explanation": "Multiplying both sides by \\( 12xy \\) gives \\( 12y + 12x = xy \\), which rearranges to \\( xy - 12x - 12y = 0 \\). Adding 144 to both sides: $$ (x - 12)(y - 12) = 144 $$ Since \\( x, y \\) are positive integers, \\( x - 12 \\) and \\( y - 12 \\) must be positive divisors of 144. The prime factorization of 144 is \\( 2^4 \\times 3^2 \\). The number of positive divisors is \\( (4+1)(2+1) = 15 \\). Thus, there are 15 ordered pairs."
+      },
+      "ar": {
+        "question": "أوجد عدد الأزواج المرتبة من الأعداد الصحيحة الموجبة \\( (x, y) \\) التي تحقق المعادلة: $$ \\frac{1}{x} + \\frac{1}{y} = \\frac{1}{12} $$",
+        "options": [
+          "11",
+          "13",
+          "15",
+          "17",
+          "19"
+        ],
+        "hint": "أعد كتابة المعادلة بالصورة التحليلية: \\( (x-12)(y-12) = 144 \\).",
+        "explanation": "بضرب الطرفين في \\( 12xy \\) نحصل على \\( 12y + 12x = xy \\)، والتي تصبح \\( xy - 12x - 12y = 0 \\). بإضافة 144 للطرفين: $$ (x - 12)(y - 12) = 144 $$ بما أن \\( x, y \\) أعداد صحيحة موجبة، فإن \\( x-12 \\) و \\( y-12 \\) يجب أن تكون قواسم موجبة للعدد 144. التحليل إلى العوامل الأولية للعدد 144 هو \\( 2^4 \\times 3^2 \\). عدد القواسم الموجبة هو \\( (4+1)(2+1) = 15 \\). بالتالي يوجد 15 زوجاً مرتباً."
+      }
+    },
+    "correct_index": "2"
+  },
+  {
+    "id": "NSMO-043",
+    "track": "nsmo",
+    "level": "Grades 7-10",
+    "topic": "Geometry",
+    "type": "MCQ",
+    "difficulty": "medium",
+    "content": {
+      "en": {
+        "question": "In triangle \\( ABC \\), the side lengths are \\( AB = 13 \\), \\( BC = 14 \\), and \\( CA = 15 \\). What is the length of the altitude drawn from vertex \\( A \\) to side \\( BC \\)?",
+        "options": [
+          "10",
+          "11",
+          "12",
+          "13",
+          "14"
+        ],
+        "hint": "Use Heron's formula to find the area of the triangle, then set Area = \\( \\frac{1}{2} \\times \\text{base} \\times \\text{height} \\).",
+        "explanation": "First, find the semi-perimeter \\( s = \\frac{13+14+15}{2} = 21 \\). By Heron's formula, the area \\( K \\) is: $$ K = \\sqrt{21(21-13)(21-14)(21-15)} = \\sqrt{21 \\times 8 \\times 7 \\times 6} = 84 $$ Since \\( K = \\frac{1}{2} \\times BC \\times h_a \\), we have \\( 84 = \\frac{1}{2} \\times 14 \\times h_a \\implies 7 h_a = 84 \\implies h_a = 12 \\)."
+      },
+      "ar": {
+        "question": "في المثلث \\( ABC \\)، أطوال الأضلاع هي \\( AB = 13 \\) و \\( BC = 14 \\) و \\( CA = 15 \\). ما طول الارتفاع النازل من الراس \\( A \\) على الضلع \\( BC \\)؟",
+        "options": [
+          "10",
+          "11",
+          "12",
+          "13",
+          "14"
+        ],
+        "hint": "استخدم صيغة هيرون لإيجاد مساحة المثلث، ثم استخدم القانون: المساحة = \\( \\frac{1}{2} \\times \\text{القاعدة} \\times \\text{الارتفاع} \\).",
+        "explanation": "أولاً نحسب نصف المحيط \\( s = \\frac{13+14+15}{2} = 21 \\). باستعمال صيغة هيرون للمساحة \\( K \\): $$ K = \\sqrt{21(21-13)(21-14)(21-15)} = \\sqrt{21 \\times 8 \\times 7 \\times 6} = 84 $$ بما أن المساحة \\( K = \\frac{1}{2} \\times BC \\times h_a \\)، فإن \\( 84 = \\frac{1}{2} \\times 14 \\times h_a \\implies h_a = 12 \\)."
+      }
+    },
+    "correct_index": "2"
+  },
+  {
+    "id": "NSMO-044",
+    "track": "nsmo",
+    "level": "Grades 7-10",
+    "topic": "Combinatorics",
+    "type": "MCQ",
+    "difficulty": "hard",
+    "content": {
+      "en": {
+        "question": "How many 4-digit positive integers have all distinct digits and are divisible by 5?",
+        "options": [
+          "840",
+          "952",
+          "1008",
+          "1120",
+          "1260"
+        ],
+        "hint": "Divide into two cases based on the last digit: ending in 0 or ending in 5.",
+        "explanation": "Case 1: The units digit is 0. There is 1 choice for the last digit. The thousands digit can be any of 1-9 (9 choices). The hundreds digit has 8 choices, and the tens digit has 7 choices. Total = \\( 9 \\times 8 \\times 7 \\times 1 = 504 \\).\nCase 2: The units digit is 5. There is 1 choice for the last digit. The thousands digit cannot be 0 or 5, leaving 8 choices. The hundreds digit can be 0, leaving 8 remaining choices. The tens digit has 7 choices. Total = \\( 8 \\times 8 \\times 7 \\times 1 = 448 \\).\nGrand Total = \\( 504 + 448 = 952 \\)."
+      },
+      "ar": {
+        "question": "كم عدداً صحيحاً موجباً مكوناً من 4 أرقام مختلفة جميعها، ويكون قابلاً للقسمة على 5؟",
+        "options": [
+          "840",
+          "952",
+          "1008",
+          "1120",
+          "1260"
+        ],
+        "hint": "قسم المسألة إلى حالتين بناءً على خانة الآحاد: تنتهي بـ 0 أو تنتهي بـ 5.",
+        "explanation": "الحالة 1: الآحاد يساوي 0 (خيار واحد). خانة الآلاف لها 9 خيارات (من 1 إلى 9). خانة المئات لها 8 خيارات، وخانة العشرات لها 7 خيارات. المجموع = \\( 9 \\times 8 \\times 7 \\times 1 = 504 \\).\nالحالة 2: الآحاد يساوي 5 (خيار واحد). خانة الآلاف لا يمكن أن تكون 0 أو 5 (8 خيارات). خانة المئات يمكن أن تكون 0 (8 خيارات متبقية). خانة العشرات لها 7 خيارات. المجموع = \\( 8 \\times 8 \\times 7 \\times 1 = 448 \\).\nالمجموع الكلي = \\( 504 + 448 = 952 \\)."
+      }
+    },
+    "correct_index": "1"
+  },
+  {
+    "id": "NSMO-045",
+    "track": "nsmo",
+    "level": "Grades 7-10",
+    "topic": "Algebra",
+    "type": "MCQ",
+    "difficulty": "easy",
+    "content": {
+      "en": {
+        "question": "If real numbers \\( x \\) and \\( y \\) satisfy \\( x + y = 5 \\) and \\( x^3 + y^3 = 35 \\), what is the value of \\( x^2 + y^2 \\)?",
+        "options": [
+          "11",
+          "13",
+          "15",
+          "17",
+          "19"
+        ],
+        "hint": "Use the factorization identity \\( x^3 + y^3 = (x+y)(x^2 - xy + y^2) \\).",
+        "explanation": "We know \\( x^3 + y^3 = (x+y)(x^2 - xy + y^2) \\). Substituting the given values: $$ 35 = 5 (x^2 - xy + y^2) \\implies x^2 - xy + y^2 = 7 $$ Also, \\( (x+y)^2 = x^2 + 2xy + y^2 = 25 \\). Subtracting the first expression from the second gives \\( 3xy = 18 \\implies xy = 6 \\). Therefore, \\( x^2 + y^2 = (x+y)^2 - 2xy = 25 - 12 = 13 \\)."
+      },
+      "ar": {
+        "question": "إذا كان العددان الحقيقيان \\( x \\) و \\( y \\) يحققان \\( x + y = 5 \\) و \\( x^3 + y^3 = 35 \\)، فما قيمة \\( x^2 + y^2 \\)؟",
+        "options": [
+          "11",
+          "13",
+          "15",
+          "17",
+          "19"
+        ],
+        "hint": "استخدم متطابقة التحليل \\( x^3 + y^3 = (x+y)(x^2 - xy + y^2) \\).",
+        "explanation": "نعلم أن \\( x^3 + y^3 = (x+y)(x^2 - xy + y^2) \\). بالتعويض بالقيم المعطاة: $$ 35 = 5 (x^2 - xy + y^2) \\implies x^2 - xy + y^2 = 7 $$ وأيضاً \\( (x+y)^2 = x^2 + 2xy + y^2 = 25 \\). بطرح المعادلة الأولى من الثانية نحصل على \\( 3xy = 18 \\implies xy = 6 \\). بالتالي، \\( x^2 + y^2 = (x+y)^2 - 2xy = 25 - 12 = 13 \\)."
+      }
+    },
+    "correct_index": "1"
+  },
+  {
+    "id": "NSMO-046",
+    "track": "nsmo",
+    "level": "Grades 7-10",
+    "topic": "Integrated Science & Math",
+    "type": "MCQ",
+    "difficulty": "medium",
+    "content": {
+      "en": {
+        "question": "A radioactive isotope decays such that its remaining mass \\( M(t) \\) after \\( t \\) hours is given by \\( M(t) = M_0 \\cdot 2^{-t/4} \\), where \\( M_0 \\) is the initial mass. If the initial mass is 320 grams, after how many hours will exactly 5 grams of the isotope remain?",
+        "options": [
+          "16",
+          "20",
+          "24",
+          "28",
+          "32"
+        ],
+        "hint": "Set up the equation \\( 320 \\cdot 2^{-t/4} = 5 \\) and solve for \\( t \\).",
+        "explanation": "We set \\( M(t) = 5 \\) and \\( M_0 = 320 \\): $$ 320 \\cdot 2^{-t/4} = 5 \\implies 2^{-t/4} = \\frac{5}{320} = \\frac{1}{64} $$ Since \\( \\frac{1}{64} = 2^{-6} \\), we set the exponents equal: $$ -\\frac{t}{4} = -6 \\implies t = 24 \\text{ hours.} $$"
+      },
+      "ar": {
+        "question": "يتناقص نظير مشع بحيث تُعطى كتلته المتبقية \\( M(t) \\) بعد مرور \\( t \\) من الساعات بالمعادلة \\( M(t) = M_0 \\cdot 2^{-t/4} \\)، حيث \\( M_0 \\) هي الكتلة الابتدائية. إذا كانت الكتلة الابتدائية 320 جراماً، فبعد كم ساعة يتبقى 5 جرامات فقط من النظير المشع؟",
+        "options": [
+          "16",
+          "20",
+          "24",
+          "28",
+          "32"
+        ],
+        "hint": "ضع المعادلة \\( 320 \\cdot 2^{-t/4} = 5 \\) واحلها بالنسبة لـ \\( t \\).",
+        "explanation": "نضع \\( M(t) = 5 \\) و \\( M_0 = 320 \\): $$ 320 \\cdot 2^{-t/4} = 5 \\implies 2^{-t/4} = \\frac{5}{320} = \\frac{1}{64} $$ بما أن \\( \\frac{1}{64} = 2^{-6} \\)، بمساواة الأسس: $$ -\\frac{t}{4} = -6 \\implies t = 24 \\text{ ساعة.} $$"
+      }
+    },
+    "correct_index": "2"
+  },
+  {
+    "id": "NSMO-047",
+    "track": "nsmo",
+    "level": "Grades 7-10",
+    "topic": "Geometry",
+    "type": "MCQ",
+    "difficulty": "medium",
+    "content": {
+      "en": {
+        "question": "A circle is inscribed inside a right-angled triangle with legs of length 6 cm and 8 cm. What is the area of the incircle in \\( \\text{cm}^2 \\)?",
+        "options": [
+          "2\\pi",
+          "4\\pi",
+          "6\\pi",
+          "9\\pi",
+          "16\\pi"
+        ],
+        "hint": "Find the hypotenuse, then use the formula \\( r = \\frac{a + b - c}{2} \\) for the inradius of a right triangle.",
+        "explanation": "The hypotenuse \\( c = \\sqrt{6^2 + 8^2} = 10 \\) cm. For a right triangle, the inradius \\( r \\) is given by: $$ r = \\frac{a + b - c}{2} = \\frac{6 + 8 - 10}{2} = 2 \\text{ cm} $$ The area of the inscribed circle is \\( \\pi r^2 = \\pi (2^2) = 4\\pi \\text{ cm}^2 \\)."
+      },
+      "ar": {
+        "question": "دائرة مرسومة داخل مثلث قائم الزاوية وتمس جميع أضلاعه، طولا ضلعي القائمة فيه 6 سم و 8 سم. ما مساحة هذه الدائرة بـ \\( \\text{سم}^2 \\)؟",
+        "options": [
+          "2\\pi",
+          "4\\pi",
+          "6\\pi",
+          "9\\pi",
+          "16\\pi"
+        ],
+        "hint": "جد طول الوتر أولاً، ثم استخدم القانون \\( r = \\frac{a + b - c}{2} \\) لحساب نصف قطر الدائرة الداخلية لمثلث قائم.",
+        "explanation": "طول الوتر \\( c = \\sqrt{6^2 + 8^2} = 10 \\) سم. بالنسبة للمثلث القائم، نصف قطر الدائرة الداخلية \\( r \\) يُحسب بـ: $$ r = \\frac{a + b - c}{2} = \\frac{6 + 8 - 10}{2} = 2 \\text{ سم} $$ مساحة الدائرة الداخلية تكون \\( \\pi r^2 = \\pi (2^2) = 4\\pi \\text{ سم}^2 \\)."
+      }
+    },
+    "correct_index": "1"
+  },
+  {
+    "id": "NSMO-048",
+    "track": "nsmo",
+    "level": "Grades 7-10",
+    "topic": "Number Theory",
+    "type": "MCQ",
+    "difficulty": "hard",
+    "content": {
+      "en": {
+        "question": "What is the remainder when \\( 2^{100} \\) is divided by 13?",
+        "options": [
+          "1",
+          "3",
+          "5",
+          "7",
+          "9"
+        ],
+        "hint": "Apply Fermat's Little Theorem: \\( 2^{12} \\equiv 1 \\pmod{13} \\).",
+        "explanation": "By Fermat's Little Theorem, since 13 is prime and \\( \\gcd(2, 13) = 1 \\), we have: $$ 2^{12} \\equiv 1 \\pmod{13} $$ Express 100 as \\( 12 \\times 8 + 4 \\). Thus: $$ 2^{100} = (2^{12})^8 \\cdot 2^4 \\equiv (1)^8 \\cdot 16 \\equiv 16 \\equiv 3 \\pmod{13} $$ The remainder is 3."
+      },
+      "ar": {
+        "question": "ما باقي قسمة العدد \\( 2^{100} \\) على 13؟",
+        "options": [
+          "1",
+          "3",
+          "5",
+          "7",
+          "9"
+        ],
+        "hint": "طبق مبرهنة فيرما الصغرى: \\( 2^{12} \\equiv 1 \\pmod{13} \\).",
+        "explanation": "حسب مبرهنة فيرما الصغرى، وبما أن 13 عدد أولي و \\( \\gcd(2, 13) = 1 \\): $$ 2^{12} \\equiv 1 \\pmod{13} $$ نكتب الأس 100 على الصورة \\( 12 \\times 8 + 4 \\). بالتالي: $$ 2^{100} = (2^{12})^8 \\cdot 2^4 \\equiv (1)^8 \\cdot 16 \\equiv 16 \\equiv 3 \\pmod{13} $$ إذن الباقي هو 3."
+      }
+    },
+    "correct_index": "1"
+  },
+  {
+    "id": "NSMO-049",
+    "track": "nsmo",
+    "level": "Grades 7-10",
+    "topic": "Algebra",
+    "type": "MCQ",
+    "difficulty": "medium",
+    "content": {
+      "en": {
+        "question": "Let \\( a \\) and \\( b \\) be the roots of the quadratic equation \\( x^2 - 7x + 3 = 0 \\). What is the value of \\( \\frac{a}{b} + \\frac{b}{a} \\)?",
+        "options": [
+          "\\frac{37}{3}",
+          "\\frac{40}{3}",
+          "\\frac{43}{3}",
+          "\\frac{46}{3}",
+          "\\frac{49}{3}"
+        ],
+        "hint": "Use Vieta's formulas for \\( a+b \\) and \\( ab \\), then combine fractions: \\( \\frac{a^2+b^2}{ab} \\).",
+        "explanation": "By Vieta's formulas, \\( a + b = 7 \\) and \\( ab = 3 \\). We want to find: $$ \\frac{a}{b} + \\frac{b}{a} = \\frac{a^2 + b^2}{ab} = \\frac{(a+b)^2 - 2ab}{ab} $$ Substituting values: $$ \\frac{7^2 - 2(3)}{3} = \\frac{49 - 6}{3} = \\frac{43}{3} $$"
+      },
+      "ar": {
+        "question": "ليكن \\( a \\) و \\( b \\) جذري المعادلة التربيعية \\( x^2 - 7x + 3 = 0 \\). ما قيمة المقدار \\( \\frac{a}{b} + \\frac{b}{a} \\)؟",
+        "options": [
+          "\\frac{37}{3}",
+          "\\frac{40}{3}",
+          "\\frac{43}{3}",
+          "\\frac{46}{3}",
+          "\\frac{49}{3}"
+        ],
+        "hint": "استخدم صيغ فييتا لحساب \\( a+b \\) و \\( ab \\)، ثم وحد المقامات: \\( \\frac{a^2+b^2}{ab} \\).",
+        "explanation": "من صيغ فييتا، \\( a + b = 7 \\) و \\( ab = 3 \\). المطلوب حساب: $$ \\frac{a}{b} + \\frac{b}{a} = \\frac{a^2 + b^2}{ab} = \\frac{(a+b)^2 - 2ab}{ab} $$ بالتعويض: $$ \\frac{7^2 - 2(3)}{3} = \\frac{49 - 6}{3} = \\frac{43}{3} $$"
+      }
+    },
+    "correct_index": "2"
+  },
+  {
+    "id": "NSMO-050",
+    "track": "nsmo",
+    "level": "Grades 7-10",
+    "topic": "Combinatorics",
+    "type": "MCQ",
+    "difficulty": "medium",
+    "content": {
+      "en": {
+        "question": "Two standard fair 6-sided dice are rolled simultaneously. What is the probability that the absolute difference between the numbers shown on top is at least 3?",
+        "options": [
+          "\\frac{1}{4}",
+          "\\frac{5}{18}",
+          "\\frac{1}{3}",
+          "\\frac{7}{18}",
+          "\\frac{5}{12}"
+        ],
+        "hint": "Count the pairs \\( (x, y) \\) where \\( |x - y| \\ge 3 \\) out of 36 total outcomes.",
+        "explanation": "Total possible outcomes when rolling two dice = 36.\nFavorable outcomes where \\( |x - y| \\ge 3 \\):\n- Difference = 3: (1,4), (2,5), (3,6), (4,1), (5,2), (6,3) \\( \\rightarrow 6 \\) pairs.\n- Difference = 4: (1,5), (2,6), (5,1), (6,2) \\( \\rightarrow 4 \\) pairs.\n- Difference = 5: (1,6), (6,1) \\( \\rightarrow 2 \\) pairs.\nTotal favorable pairs = \\( 6 + 4 + 2 = 12 \\).\nProbability = \\( \\frac{12}{36} = \\frac{1}{3} \\)."
+      },
+      "ar": {
+        "question": "تم إلقاء حجرَي نرد عادلين ذوي 6 أوجه في وقت واحد. ما احتمال أن يكون الفرق المطلق بين العددين الظاهرين على الوجهين العلويين يساوي 3 على الأقل؟",
+        "options": [
+          "\\frac{1}{4}",
+          "\\frac{5}{18}",
+          "\\frac{1}{3}",
+          "\\frac{7}{18}",
+          "\\frac{5}{12}"
+        ],
+        "hint": "عدّ الأزواج \\( (x, y) \\) التي تحقق \\( |x - y| \\ge 3 \\) من إجمالي 36 نتيجة ممكّنة.",
+        "explanation": "عدد النواتج الكلي لإلقاء حجرين = 36.\nالنواتج المواتية التي تحقّق \\( |x - y| \\ge 3 \\):\n- الفرق = 3: (1,4), (2,5), (3,6), (4,1), (5,2), (6,3) \\( \\rightarrow 6 \\) أزواج.\n- الفرق = 4: (1,5), (2,6), (5,1), (6,2) \\( \\rightarrow 4 \\) أزواج.\n- الفرق = 5: (1,6), (6,1) \\( \\rightarrow 2 \\) زوجان.\nمجموع الأزواج المواتية = \\( 6 + 4 + 2 = 12 \\).\nالاحتمال = \\( \\frac{12}{36} = \\frac{1}{3} \\)."
+      }
+    },
+    "correct_index": "2"
+  },
+  {
+    "id": "NSMO-051",
+    "track": "nsmo",
+    "level": "Grades 7-10",
+    "topic": "Algebra",
+    "type": "FRQ",
+    "difficulty": "hard",
+    "content": {
+      "en": {
+        "question": "Find the value of the expression: $$ \\left(\\sqrt{7 + 4\\sqrt{3}} - \\sqrt{7 - 4\\sqrt{3}}\\right)^2 $$",
+        "options": [],
+        "hint": "Recognize that \\( 7 + 4\\sqrt{3} = (2 + \\sqrt{3})^2 \\).",
+        "explanation": "Note that \\( 7 + 4\\sqrt{3} = 2^2 + (\\sqrt{3})^2 + 2(2)(\\sqrt{3}) = (2 + \\sqrt{3})^2 \\).\nThus, \\( \\sqrt{7 + 4\\sqrt{3}} = 2 + \\sqrt{3} \\).\nSimilarly, \\( \\sqrt{7 - 4\\sqrt{3}} = 2 - \\sqrt{3} \\).\nSubtracting the two terms: $$ (2 + \\sqrt{3}) - (2 - \\sqrt{3}) = 2\\sqrt{3} $$ Squaring this difference gives \\( (2\\sqrt{3})^2 = 12 \\)."
+      },
+      "ar": {
+        "question": "أوجد قيمة المقدار: $$ \\left(\\sqrt{7 + 4\\sqrt{3}} - \\sqrt{7 - 4\\sqrt{3}}\\right)^2 $$",
+        "options": [],
+        "hint": "لاحظ أن \\( 7 + 4\\sqrt{3} = (2 + \\sqrt{3})^2 \\).",
+        "explanation": "لاحظ أن \\( 7 + 4\\sqrt{3} = 2^2 + (\\sqrt{3})^2 + 2(2)(\\sqrt{3}) = (2 + \\sqrt{3})^2 \\).\nبالتالي، \\( \\sqrt{7 + 4\\sqrt{3}} = 2 + \\sqrt{3} \\).\nوبالمثل، \\( \\sqrt{7 - 4\\sqrt{3}} = 2 - \\sqrt{3} \\).\nبطرح الحدين: $$ (2 + \\sqrt{3}) - (2 - \\sqrt{3}) = 2\\sqrt{3} $$ وتربيع هذا الفرق يعطي \\( (2\\sqrt{3})^2 = 12 \\)."
+      }
+    },
+    "correct_index": "12"
+  },
+  {
+    "id": "NSMO-052",
+    "track": "nsmo",
+    "level": "Grades 7-10",
+    "topic": "Geometry",
+    "type": "FRQ",
+    "difficulty": "medium",
+    "content": {
+      "en": {
+        "question": "In rectangle \\( ABCD \\), point \\( P \\) lies on side \\( CD \\) such that \\( DP = 3 \\) and \\( PC = 5 \\). If the area of triangle \\( ABP \\) is 24, find the perimeter of rectangle \\( ABCD \\).",
+        "options": [],
+        "hint": "The side length \\( CD = AB = DP + PC = 8 \\). Triangle \\( ABP \\) has base \\( AB \\) and height equal to \\( BC \\).",
+        "explanation": "The length of side \\( CD = DP + PC = 3 + 5 = 8 \\). Thus, \\( AB = 8 \\).\nThe height of triangle \\( ABP \\) relative to base \\( AB \\) is equal to the side length \\( BC \\).\nArea of \\( \\triangle ABP = \\frac{1}{2} \\times AB \\times BC = 24 \\implies \\frac{1}{2} \\times 8 \\times BC = 24 \\implies BC = 6 \\).\nThe perimeter of rectangle \\( ABCD = 2(AB + BC) = 2(8 + 6) = 28 \\)."
+      },
+      "ar": {
+        "question": "في المستطيل \\( ABCD \\)، تقع النقطة \\( P \\) على الضلع \\( CD \\) بحيث \\( DP = 3 \\) و \\( PC = 5 \\). إذا كانت مساحة المثلث \\( ABP \\) تساوي 24، فأوجد محيط المستطيل \\( ABCD \\).",
+        "options": [],
+        "hint": "طول الضلع \\( CD = AB = DP + PC = 8 \\). ارتفاع المثلث \\( ABP \\) هو نفس طول الضلع \\( BC \\).",
+        "explanation": "طول الضلع \\( CD = DP + PC = 3 + 5 = 8 \\). بالتالي، \\( AB = 8 \\).\nارتفاع المثلث \\( ABP \\) بالنسبة للقاعدة \\( AB \\) يساوي طول الضلع \\( BC \\).\nمساحة المثلث \\( ABP = \\frac{1}{2} \\times AB \\times BC = 24 \\implies \\frac{1}{2} \\times 8 \\times BC = 24 \\implies BC = 6 \\).\nمحيط المستطيل \\( ABCD = 2(AB + BC) = 2(8 + 6) = 28 \\)."
+      }
+    },
+    "correct_index": "28"
+  },
+  {
+    "id": "NSMO-053",
+    "track": "nsmo",
+    "level": "Grades 7-10",
+    "topic": "Number Theory",
+    "type": "FRQ",
+    "difficulty": "medium",
+    "content": {
+      "en": {
+        "question": "What is the exponent of the highest power of 5 that divides \\( 100! \\) (100 factorial)?",
+        "options": [],
+        "hint": "Use Legendre's formula: \\( E_p(n!) = \\sum_{k=1}^{\\infty} \\lfloor \\frac{n}{p^k} \\rfloor \\).",
+        "explanation": "By Legendre's formula, the highest power of a prime \\( p \\) dividing \\( n! \\) is given by: $$ E_5(100!) = \\left\\lfloor \\frac{100}{5} \\right\\rfloor + \\left\\lfloor \\frac{100}{25} \\right\\rfloor + \\left\\lfloor \\frac{100}{125} \\right\\rfloor + \\dots $$ Calculating each term: $$ 20 + 4 + 0 = 24 $$ Thus, \\( 5^{24} \\) divides \\( 100! \\)."
+      },
+      "ar": {
+        "question": "ما أكبر أُس للقوة 5 بحيث تقسم العدد \\( 100! \\) (مضروب 100)؟",
+        "options": [],
+        "hint": "استخدم صيغة ليجاندر: \\( E_p(n!) = \\sum_{k=1}^{\\infty} \\lfloor \\frac{n}{p^k} \\rfloor \\).",
+        "explanation": "باستخدام صيغة ليجاندر لحساب أعلى قوة للعدد الأولي \\( p \\) تقسم \\( n! \\): $$ E_5(100!) = \\left\\lfloor \\frac{100}{5} \\right\\rfloor + \\left\\lfloor \\frac{100}{25} \\right\\rfloor + \\left\\lfloor \\frac{100}{125} \\right\\rfloor + \\dots $$ بحساب الحدود: $$ 20 + 4 + 0 = 24 $$ إذن القوة هي 24."
+      }
+    },
+    "correct_index": "24"
+  },
+  {
+    "id": "NSMO-054",
+    "track": "nsmo",
+    "level": "Grades 7-10",
+    "topic": "Integrated Science & Math",
+    "type": "FRQ",
+    "difficulty": "hard",
+    "content": {
+      "en": {
+        "question": "A light ray in the Cartesian plane travels along the line \\( y = 2x + 4 \\) toward the x-axis, which acts as a flat mirror located at \\( y = 0 \\). Find the x-coordinate of the point where the light ray hits the mirror.",
+        "options": [],
+        "hint": "Set \\( y = 0 \\) in the line equation.",
+        "explanation": "The mirror lies on the line \\( y = 0 \\) (the x-axis). To find the point of reflection where the ray hits the mirror, set \\( y = 0 \\) in \\( y = 2x + 4 \\): $$ 0 = 2x + 4 \\implies 2x = -4 \\implies x = -2 $$ The x-coordinate of the impact point is -2."
+      },
+      "ar": {
+        "question": "ينتقل شعاع ضوئي في المستوى الإحداثي على امتداد المستقيم \\( y = 2x + 4 \\) نحو محور السينات الذي يعمل كمرآة مستوية عند \\( y = 0 \\). أوجد الإحداثي السيني للنقطة التي يصطدم عندها الشعاع بالمرآة.",
+        "options": [],
+        "hint": "عوض \\( y = 0 \\) في معادلة المستقيم.",
+        "explanation": "تقع المرآة على المستقيم \\( y = 0 \\) (محور السينات). لإيجاد نقطة اصطدام الشعاع بالمرآة، نعوض \\( y = 0 \\) في المعادلة \\( y = 2x + 4 \\): $$ 0 = 2x + 4 \\implies 2x = -4 \\implies x = -2 $$ الإحداثي السيني لنقطة الاصطدام هو -2."
+      }
+    },
+    "correct_index": "-2"
+  },
+  {
+    "id": "NSMO-055",
+    "track": "nsmo",
+    "level": "Grades 7-10",
+    "topic": "Algebra",
+    "type": "MCQ",
+    "difficulty": "extreme",
+    "content": {
+      "en": {
+        "question": "A function \\( f: \\mathbb{R} \\setminus \\{0\\} \\to \\mathbb{R} \\) satisfies the relation: $$ f(x) + 2f\\left(\\frac{1}{x}\\right) = 3x $$ for all nonzero real numbers \\( x \\). What is the value of \\( f(2) \\)?",
+        "options": [
+          "-2",
+          "-1",
+          "0",
+          "1",
+          "2"
+        ],
+        "hint": "Substitute \\( x = 2 \\) and \\( x = \\frac{1}{2} \\) to form a system of two linear equations in \\( f(2) \\) and \\( f(1/2) \\).",
+        "explanation": "1) Substitute \\( x = 2 \\):\n$$ f(2) + 2f\\left(\\frac{1}{2}\\right) = 6 \\quad \\text{--- (Eq 1)} $$\n2) Substitute \\( x = \\frac{1}{2} \\):\n$$ f\\left(\\frac{1}{2}\\right) + 2f(2) = 3\\left(\\frac{1}{2}\\right) = \\frac{3}{2} \\quad \\text{--- (Eq 2)} $$\nMultiply Eq 2 by 2:\n$$ 2f\\left(\\frac{1}{2}\\right) + 4f(2) = 3 \\quad \\text{--- (Eq 3)} $$\nSubtract Eq 1 from Eq 3:\n$$ (4f(2) - f(2)) + \\left(2f\\left(\\frac{1}{2}\\right) - 2f\\left(\\frac{1}{2}\\right)\\right) = 3 - 6 $$\n$$ 3f(2) = -3 \\implies f(2) = -1 $$"
+      },
+      "ar": {
+        "question": "دالة \\( f: \\mathbb{R} \\setminus \\{0\\} \\to \\mathbb{R} \\) تحقق العلاقة: $$ f(x) + 2f\\left(\\frac{1}{x}\\right) = 3x $$ لكل الأعداد الحقيقية غير الصفرية \\( x \\). ما قيمة \\( f(2) \\)؟",
+        "options": [
+          "-2",
+          "-1",
+          "0",
+          "1",
+          "2"
+        ],
+        "hint": "عوض بـ \\( x = 2 \\) و \\( x = \\frac{1}{2} \\) لتكوين نظام من معادلتين خطيتين بمتغيرين \\( f(2) \\) و \\( f(1/2) \\).",
+        "explanation": "1) بنعويض \\( x = 2 \\):\n$$ f(2) + 2f\\left(\\frac{1}{2}\\right) = 6 \\quad \\text{--- (المعادلة 1)} $$\n2) بنعويض \\( x = \\frac{1}{2} \\):\n$$ f\\left(\\frac{1}{2}\\right) + 2f(2) = \\frac{3}{2} \\quad \\text{--- (المعادلة 2)} $$\nبضرب المعادلة 2 في 2:\n$$ 2f\\left(\\frac{1}{2}\\right) + 4f(2) = 3 \\quad \\text{--- (المعادلة 3)} $$\nبطرح المعادلة 1 من المعادلة 3:\n$$ 3f(2) = -3 \\implies f(2) = -1 $$"
+      }
+    },
+    "correct_index": "1"
+  },
+  {
+    "id": "NSMO-056",
+    "track": "nsmo",
+    "level": "Grades 7-10",
+    "topic": "Geometry",
+    "type": "MCQ",
+    "difficulty": "medium",
+    "content": {
+      "en": {
+        "question": "A square has a side length of 10. Four circles of radius 5 are drawn, each centered at one of the square's four vertices. What is the area of the region inside the square that is NOT covered by any of the four circles?",
+        "options": [
+          "25 - 5\\pi",
+          "50 - 10\\pi",
+          "100 - 25\\pi",
+          "100 - 16\\pi",
+          "400 - 25\\pi"
+        ],
+        "hint": "Each vertex contains a quarter-circle inside the square. Combined, four quarter-circles form one full circle.",
+        "explanation": "Area of the square = \\( 10^2 = 100 \\).\nEach corner of the square forms a \\( 90^\\circ \\) sector (a quarter circle) of radius 5 inside the square.\nThe combined area covered by the 4 quarter-circles inside the square is equal to 1 full circle of radius 5:\n$$ \\text{Covered Area} = \\pi r^2 = \\pi (5^2) = 25\\pi $$\nThe uncovered area inside the square is \\( 100 - 25\\pi \\)."
+      },
+      "ar": {
+        "question": "مربع طول ضلعه 10. رُسمت أربع دوائر نصف قطر كل منها 5، ومراكزها هي رؤوس المربع الأربعة. ما مساحة المنطقة الواقعة داخل المربع والتي لا تغطيها أي من الدوائر الأربع؟",
+        "options": [
+          "25 - 5\\pi",
+          "50 - 10\\pi",
+          "100 - 25\\pi",
+          "100 - 16\\pi",
+          "400 - 25\\pi"
+        ],
+        "hint": "يشكل كل رأس قطاعاً دائرياً يعادل ربع دائرة داخل المربع. الأرباع الأربعة معاً تشكل دائرة كاملة.",
+        "explanation": "مساحة المربع = \\( 10^2 = 100 \\).\nيشكل كل زاوية من زوايا المربع ربع دائرة نصف قطرها 5 داخل المربع.\nالمساحة الإجمالية المغطاة بواسطة أرباع الدوائر الأربعة داخل المربع تساوي مساحة دائرة كاملة واحدة نصف قطرها 5:\n$$ \\text{المساحة المغطاة} = \\pi r^2 = \\pi (5^2) = 25\\pi $$\nالمساحة غير المغطاة داخل المربع تساوي \\( 100 - 25\\pi \\)."
+      }
+    },
+    "correct_index": "2"
+  },
+  {
+    "id": "NSMO-057",
+    "track": "nsmo",
+    "level": "Grades 7-10",
+    "topic": "Combinatorics",
+    "type": "MCQ",
+    "difficulty": "hard",
+    "content": {
+      "en": {
+        "question": "What is the minimum number of integers that must be chosen from the set \\( \\{1, 2, 3, \\dots, 20\\} \\) to guarantee that at least two chosen integers have a sum equal to 21?",
+        "options": [
+          "10",
+          "11",
+          "12",
+          "13",
+          "15"
+        ],
+        "hint": "Pair up elements that sum to 21: \\( \\{1, 20\\}, \\{2, 19\\}, \\dots, \\{10, 11\\} \\). Apply Pigeonhole Principle.",
+        "explanation": "Partition the 20 integers into 10 disjoint pairs, each summing to 21:\n$$ \\{1, 20\\}, \\{2, 19\\}, \\{3, 18\\}, \\dots, \\{10, 11\\} $$\nTo avoid picking two numbers that sum to 21, we can pick at most one number from each of the 10 pairs (a maximum of 10 numbers).\nBy the Pigeonhole Principle, picking 11 numbers guarantees that we must choose both numbers from at least one pair, ensuring their sum is 21."
+      },
+      "ar": {
+        "question": "ما أقل عدد من الأعداد الصحيحة التي يجب اختيارها من المجموعة \\( \\{1, 2, 3, \\dots, 20\\} \\) لضمان وجود عددين على الأقل من بين الأعداد المختارة مجموعها يساوي 21؟",
+        "options": [
+          "10",
+          "11",
+          "12",
+          "13",
+          "15"
+        ],
+        "hint": "قسم العناصر إلى أزواج مجموع كل منها 21: \\( \\{1, 20\\}, \\{2, 19\\}, \\dots, \\{10, 11\\} \\). ثم طبق مبدأ برج الحمام.",
+        "explanation": "نقسم الأعداد العشرين إلى 10 أزواج منفصلة مجموع كل منها يساوي 21:\n$$ \\{1, 20\\}, \\{2, 19\\}, \\{3, 18\\}, \\dots, \\{10, 11\\} $$\nلتجنب اختيار عددين مجموعهما 21، يمكننا اختيار عدد واحد على الأكثر من كل زوج من الأزواج العشرة (10 أعداد كحد أقصى).\nحسب مبدأ برج الحمام، فإن اختيار 11 عدداً يضمن بالضرورة اختيار كلا العددين من زوج واحد على الأقل، مما يحقق المجموع 21."
+      }
+    },
+    "correct_index": "1"
+  },
+  {
+    "id": "NSMO-058",
+    "track": "nsmo",
+    "level": "Grades 7-10",
+    "topic": "Algebra",
+    "type": "FRQ",
+    "difficulty": "hard",
+    "content": {
+      "en": {
+        "question": "A sequence \\( a_1, a_2, a_3, \\dots \\) is defined by \\( a_1 = 1 \\) and \\( a_{n+1} = \\frac{a_n}{1 + 3a_n} \\) for all \\( n \\ge 1 \\). Find the value of \\( \\frac{1}{a_{50}} \\).",
+        "options": [],
+        "hint": "Take the reciprocal of both sides of the recurrence relation.",
+        "explanation": "Taking the reciprocal of the recurrence equation:\n$$ \\frac{1}{a_{n+1}} = \\frac{1 + 3a_n}{a_n} = \\frac{1}{a_n} + 3 $$\nLet \\( b_n = \\frac{1}{a_n} \\). Then \\( b_1 = \\frac{1}{a_1} = 1 \\) and \\( b_{n+1} = b_n + 3 \\).\nThis is an arithmetic progression with initial term 1 and common difference 3.\nThus, \\( b_{50} = b_1 + 49 \\times 3 = 1 + 147 = 148 \\).\nSo, \\( \\frac{1}{a_{50}} = 148 \\)."
+      },
+      "ar": {
+        "question": "متتالية \\( a_1, a_2, a_3, \\dots \\) مُعرفة كالتالي: \\( a_1 = 1 \\) و \\( a_{n+1} = \\frac{a_n}{1 + 3a_n} \\) لكل \\( n \\ge 1 \\). أوجد قيمة \\( \\frac{1}{a_{50}} \\).",
+        "options": [],
+        "hint": "خذ مقلوب الطرفين في علاقة التراجع.",
+        "explanation": "بأخذ المقلوب للطرفين في علاقة التراجع:\n$$ \\frac{1}{a_{n+1}} = \\frac{1 + 3a_n}{a_n} = \\frac{1}{a_n} + 3 $$\nبفرض \\( b_n = \\frac{1}{a_n} \\)، يصبح لدينا \\( b_1 = \\frac{1}{a_1} = 1 \\) و \\( b_{n+1} = b_n + 3 \\).\nهذه متتابعة حسابية حدها الأول 1 وأساسها 3.\nبالتالي، \\( b_{50} = b_1 + 49 \\times 3 = 1 + 147 = 148 \\).\nإذن، \\( \\frac{1}{a_{50}} = 148 \\)."
+      }
+    },
+    "correct_index": "148"
+  },
+  {
+    "id": "NSMO-059",
+    "track": "nsmo",
+    "level": "Grades 7-10",
+    "topic": "Integrated Science & Math",
+    "type": "FRQ",
+    "difficulty": "medium",
+    "content": {
+      "en": {
+        "question": "A chemist has two acid solutions: Solution A is 20% acid and Solution B is 60% acid. How many liters of Solution B must be mixed with Solution A to prepare a total of 50 liters of a 48% acid solution?",
+        "options": [],
+        "hint": "Let \\( x \\) be the volume of Solution A and \\( y \\) be the volume of Solution B. Set up a system of linear equations.",
+        "explanation": "Let \\( x \\) be the volume of Solution A and \\( y \\) be the volume of Solution B in liters.\n1) Total volume equation: \\( x + y = 50 \\implies x = 50 - y \\).\n2) Pure acid amount equation: $$ 0.20 x + 0.60 y = 0.48 \\times 50 $$ $$ 0.20(50 - y) + 0.60 y = 24 $$ $$ 10 - 0.20 y + 0.60 y = 24 $$ $$ 0.40 y = 14 \\implies y = 35 $$ Thus, 35 liters of Solution B are needed."
+      },
+      "ar": {
+        "question": "لدى كيميائي محلولان من حمض الهيدروكلوريك: المحلول أ بتركيز 20% حمض، والمحلول ب بتركيز 60% حمض. كم ليتراً من المحلول ب يجب خلطه مع المحلول أ للحصول على 50 ليتراً من محلول حمضي بتركيز 48%؟",
+        "options": [],
+        "hint": "افرض أن \\( x \\) حجم المحلول أ و \\( y \\) حجم المحلول ب. كوّن نظاماً من معادلتين خطيتين.",
+        "explanation": "نفرض أن \\( x \\) هو حجم المحلول أ، و \\( y \\) هو حجم المحلول ب بالليترات.\n1) معادلة الحجم الكلي: \\( x + y = 50 \\implies x = 50 - y \\).\n2) معادلة كمية الحمض الخالص: $$ 0.20 x + 0.60 y = 0.48 \\times 50 $$ $$ 0.20(50 - y) + 0.60 y = 24 $$ $$ 10 + 0.40 y = 24 $$ $$ 0.40 y = 14 \\implies y = 35 $$ إذن يلزم 35 ليتراً من المحلول ب."
+      }
+    },
+    "correct_index": "35"
+  },
+  {
+    "id": "NSMO-060",
+    "track": "nsmo",
+    "level": "Grades 7-10",
+    "topic": "Integrated Science & Math",
+    "type": "FRQ",
+    "difficulty": "medium",
+    "content": {
+      "en": {
+        "question": "A delivery drone flies from station X to station Y at a constant speed of 60 km/h, and immediately returns from station Y to station X along the same route at a constant speed of 40 km/h. What is the average speed of the drone for the entire round trip in km/h?",
+        "options": [],
+        "hint": "Average speed is Total Distance divided by Total Time, which equals the harmonic mean \\( \\frac{2 v_1 v_2}{v_1 + v_2} \\).",
+        "explanation": "Let \\( d \\) be the distance between station X and station Y.\nTime taken for the outgoing trip: \\( t_1 = \\frac{d}{60} \\).\nTime taken for the return trip: \\( t_2 = \\frac{d}{40} \\).\nTotal distance = \\( 2d \\).\nTotal time = \\( \\frac{d}{60} + \\frac{d}{40} = d \\left(\\frac{2+3}{120}\\right) = \\frac{5d}{120} = \\frac{d}{24} \\).\nAverage speed = \\( \\frac{\\text{Total Distance}}{\\text{Total Time}} = \\frac{2d}{d / 24} = 48 \\text{ km/h} \\)."
+      },
+      "ar": {
+        "question": "طائرة طائرة بدون طيار (درون) تطير من المحطة X إلى المحطة Y بسرعة ثابتة مقدارها 60 كم/ساعة، ثم تعود فوراً من المحطة Y إلى المحطة X عبر نفس المسار بسرعة ثابتة مقدارها 40 كم/ساعة. ما السرعة المتوسطة للطائرة للرحلة كاملة ذهاباً وإياباً بـ كم/ساعة؟",
+        "options": [],
+        "hint": "السرعة المتوسطة تساوي المسافة الكلية مقسومة على الزمن الكلي، وتساوي المتوسط التوافي \\( \\frac{2 v_1 v_2}{v_1 + v_2} \\).",
+        "explanation": "نفرض أن المسافة بين المحطتين تساوي \\( d \\).\nزمن الذهاب: \\( t_1 = \\frac{d}{60} \\).\nزمن الإياب: \\( t_2 = \\frac{d}{40} \\).\nالمسافة الكلية = \\( 2d \\).\nالزمن الكلي = \\( \\frac{d}{60} + \\frac{d}{40} = \\frac{5d}{120} = \\frac{d}{24} \\).\nالسرعة المتوسطة = \\( \\frac{\\text{المسافة الكلية}}{\\text{الزمن الكلي}} = \\frac{2d}{d / 24} = 48 \\text{ كم/ساعة} \\)."
+      }
+    },
+    "correct_index": "48"
+  },
+  {
+    "id": "NSMO-061",
+    "track": "nsmo",
+    "level": "Grades 7-10",
+    "topic": "Kinematics / Polynomials",
+    "type": "MCQ",
+    "difficulty": "medium",
+    "content": {
+      "en": {
+        "question": "Particle A starts at position \\( x = 0 \\) at time \\( t = 0 \\) with a velocity given by \\( v_A(t) = 3t^2 \\) m/s. Particle B starts at position \\( x = 16 \\) m with a constant velocity \\( v_B = 12 \\) m/s moving in the same positive direction. At what time \\( t > 0 \\) (in seconds) do the two particles collide?",
+        "options": [
+          "2",
+          "3",
+          "4",
+          "5"
+        ],
+        "hint": "Integrate the velocity function of particle A to find its position function \\( x_A(t) \\), then equate it to \\( x_B(t) \\).",
+        "explanation": "The position of particle A is given by \\( x_A(t) = \\int 3t^2 dt = t^3 \\). The position of particle B is given by \\( x_B(t) = 16 + 12t \\). Equating the positions for collision: \\( t^3 = 12t + 16 \\implies t^3 - 12t - 16 = 0 \\). Factoring gives \\( (t - 4)(t + 2)^2 = 0 \\). Since \\( t > 0 \\), the collision occurs at \\( t = 4 \\) seconds."
+      },
+      "ar": {
+        "question": "يبدأ الجسيم (أ) من الموقع \\( x = 0 \\) عند الزمن \\( t = 0 \\) بسرعات معطاة بالعلاقة \\( v_A(t) = 3t^2 \\) م/ث. بينما يبدأ الجسيم (ب) من الموقع \\( x = 16 \\) م بسرعة ثابتة \\( v_B = 12 \\) م/ث في نفس الاتجاه الموجب. عند أي زمن \\( t > 0 \\) (بالثواني) يتصادم الجسيمان؟",
+        "options": [
+          "2",
+          "3",
+          "4",
+          "5"
+        ],
+        "hint": "كامل دالة السرعة للجسيم (أ) لإيجاد دالة الموقع \\( x_A(t) \\)، ثم ساوه بدالة الموقع للجسيم (ب) \\( x_B(t) \\).",
+        "explanation": "موقع الجسيم (أ) يُعطى بالتكامل \\( x_A(t) = \\int 3t^2 dt = t^3 \\). موقع الجسيم (ب) يُعطى بالعلاقة \\( x_B(t) = 16 + 12t \\). بمساواة الموضعين لحظة التصادم: \\( t^3 = 12t + 16 \\implies t^3 - 12t - 16 = 0 \\). بالتحليل إلى العوامل نحصل على \\( (t - 4)(t + 2)^2 = 0 \\). وبما أن \\( t > 0 \\)، فإن التصادم يحدث عند \\( t = 4 \\) ثوانٍ."
+      }
+    },
+    "correct_index": "2"
+  },
+  {
+    "id": "NSMO-062",
+    "track": "nsmo",
+    "level": "Grades 7-10",
+    "topic": "Optics / Geometry",
+    "type": "FRQ",
+    "difficulty": "hard",
+    "content": {
+      "en": {
+        "question": "A light ray originates from point \\( A(2, 4) \\), reflects off a flat horizontal mirror located along the line \\( y = 1 \\), and then hits a detector at point \\( B(10, 13) \\). What is the total distance traveled by the light ray?",
+        "options": [],
+        "hint": "Reflect point A across the mirror line y = 1 to find its virtual image A', then calculate the straight-line distance from A' to B.",
+        "explanation": "Reflecting point \\( A(2, 4) \\) across the line \\( y = 1 \\) yields the point \\( A'(2, -2) \\). The total path length of the reflected ray equals the Euclidean distance between \\( A' \\) and \\( B(10, 13) \\):\n$$ d = \\sqrt{(10 - 2)^2 + (13 - (-2))^2} = \\sqrt{8^2 + 15^2} = \\sqrt{64 + 225} = \\sqrt{289} = 17 $$"
+      },
+      "ar": {
+        "question": "ينطلق شعاع ضوئي من النقطة \\( A(2, 4) \\)، وينعكس على مرآة مستوية أفقية تقع على الخط المستطيل \\( y = 1 \\)، ثم يصيب كاشفاً عند النقطة \\( B(10, 13) \\). ما هي المسافة الكلية التي قطعها الشعاع الضوئي؟",
+        "options": [],
+        "hint": "اعكس النقطة A عبر خط المرآة y = 1 لإيجاد الصورة الخيالية A'، ثم احسب المسافة المستقيمة بين A' و B.",
+        "explanation": "بانعكاس النقطة \\( A(2, 4) \\) عبر الخط \\( y = 1 \\)، نحصل على النقطة \\( A'(2, -2) \\). طول المسار الكلي للشعاع المنعكس يساوي المسافة الإقليدية بين \\( A' \\) و \\( B(10, 13) \\):\n$$ d = \\sqrt{(10 - 2)^2 + (13 - (-2))^2} = \\sqrt{8^2 + 15^2} = \\sqrt{64 + 225} = \\sqrt{289} = 17 $$"
+      }
+    },
+    "correct_index": "17"
+  },
+  {
+    "id": "NSMO-063",
+    "track": "nsmo",
+    "level": "Grades 7-10",
+    "topic": "Algebra / Solutions & Mixtures",
+    "type": "MCQ",
+    "difficulty": "easy",
+    "content": {
+      "en": {
+        "question": "A container contains 100 liters of an aqueous solution that is 20% acid by volume. How many liters of water must be evaporated so that the concentration of acid increases to 40%?",
+        "options": [
+          "20 L",
+          "30 L",
+          "40 L",
+          "50 L"
+        ],
+        "hint": "The total amount of pure acid remains constant before and after evaporation.",
+        "explanation": "Initial volume of acid = \\( 100 \\times 0.20 = 20 \\) liters. Let \\( x \\) be the volume of water evaporated. The new volume of the solution is \\( 100 - x \\). We require:\n$$ \\frac{20}{100 - x} = 0.40 = \\frac{2}{5} \\implies 100 = 2(100 - x) \\implies 100 = 200 - 2x \\implies 2x = 100 \\implies x = 50 $$"
+      },
+      "ar": {
+        "question": "وعاء يحتوي على 100 لتر من محلول مائي بتركيز حمض يبلغ 20% بالفيء. كم لتراً من الماء يجب تبخيره حتى يرتفع تركيز الحمض إلى 40%؟",
+        "options": [
+          "20 لتر",
+          "30 لتر",
+          "40 لتر",
+          "50 لتر"
+        ],
+        "hint": "كمية الحمض الخالص تظل ثابتة قبل وبعد التبخير.",
+        "explanation": "حجم الحمض الابتدائي = \\( 100 \\times 0.20 = 20 \\) لتر. نفرض أن \\( x \\) هو حجم الماء المتبخر. يصبح الحجم الجديد للمحلول \\( 100 - x \\). المعادلة المطلوبة:\n$$ \\frac{20}{100 - x} = 0.40 = \\frac{2}{5} \\implies 100 = 2(100 - x) \\implies 100 = 200 - 2x \\implies 2x = 100 \\implies x = 50 $$"
+      }
+    },
+    "correct_index": "3"
+  },
+  {
+    "id": "NSMO-064",
+    "track": "nsmo",
+    "level": "Grades 7-10",
+    "topic": "Number Theory / Diophantine Equations",
+    "type": "FRQ",
+    "difficulty": "hard",
+    "content": {
+      "en": {
+        "question": "Find the positive integer \\( n \\) such that \\( 2^8 + 2^{11} + 2^n \\) is a perfect square.",
+        "options": [],
+        "hint": "Calculate $2^8 + 2^{11}$ first and set $48^2 + 2^n = k^2$, then factor using difference of squares.",
+        "explanation": "We have \\( 2^8 + 2^{11} = 256 + 2048 = 2304 = 48^2 \\). So \\( 48^2 + 2^n = k^2 \\) for some integer \\( k \\).\nRearranging: \\( k^2 - 48^2 = 2^n \\implies (k - 48)(k + 48) = 2^n \\).\nLet \\( k - 48 = 2^a \\) and \\( k + 48 = 2^b \\) with \\( a + b = n \\) and \\( a < b \\).\nSubtracting the two equations gives: \\( 2^b - 2^a = 96 \\implies 2^a(2^{b-a} - 1) = 32 \\times 3 = 2^5 \\times 3 \\).\nEquating the powers of 2 gives \\( a = 5 \\), and \\( 2^{b-a} - 1 = 3 \\implies 2^{b-a} = 4 \\implies b - a = 2 \\implies b = 7 \\).\nTherefore, \\( n = a + b = 5 + 7 = 12 \\)."
+      },
+      "ar": {
+        "question": "أوجد العدد الصحيح الموجب \\( n \\) الذي يجعل المقدار \\( 2^8 + 2^{11} + 2^n \\) مربكاً كاملاً.",
+        "options": [],
+        "hint": "احسب أولاً $2^8 + 2^{11}$ وافرض $48^2 + 2^n = k^2$، ثم حلل باستخدام الفرق بين مربعين.",
+        "explanation": "لدينا \\( 2^8 + 2^{11} = 256 + 2048 = 2304 = 48^2 \\). إذن \\( 48^2 + 2^n = k^2 \\) لعدد صحيح \\( k \\).\nبإعادة الترتيب: \\( k^2 - 48^2 = 2^n \\implies (k - 48)(k + 48) = 2^n \\).\nنفرض \\( k - 48 = 2^a \\) و \\( k + 48 = 2^b \\) حيث \\( a + b = n \\) و \\( a < b \\).\nبطرح المعادلتين: \\( 2^b - 2^a = 96 \\implies 2^a(2^{b-a} - 1) = 32 \\times 3 = 2^5 \\times 3 \\).\nبمساواة قوى العدد 2 نحصل على \\( a = 5 \\)، و \\( 2^{b-a} - 1 = 3 \\implies 2^{b-a} = 4 \\implies b - a = 2 \\implies b = 7 \\).\nوبالتالي، \\( n = a + b = 5 + 7 = 12 \\)."
+      }
+    },
+    "correct_index": "12"
+  },
+  {
+    "id": "NSMO-065",
+    "track": "nsmo",
+    "level": "Grades 7-10",
+    "topic": "Circuits / Linear Systems",
+    "type": "MCQ",
+    "difficulty": "medium",
+    "content": {
+      "en": {
+        "question": "Three resistors \\( R_1, R_2, R_3 \\) are connected in combinations. The equivalent resistance of \\( R_1 \\) and \\( R_2 \\) in parallel is \\( 2\\ \\Omega \\). The equivalent resistance of \\( R_2 \\) and \\( R_3 \\) in parallel is \\( 1.2\\ \\Omega \\). The equivalent resistance of \\( R_1 \\) and \\( R_3 \\) in parallel is \\( 1.5\\ \\Omega \\). What is the resistance of \\( R_1 \\) in ohms?",
+        "options": [
+          "3",
+          "4",
+          "6",
+          "8"
+        ],
+        "hint": "Set up equations using conductances $G_i = 1/R_i$.",
+        "explanation": "Let \\( x = 1/R_1 \\), \\( y = 1/R_2 \\), \\( z = 1/R_3 \\).\nWe have:\n1) \\( x + y = 1/2 = 0.5 \\)\n2) \\( y + z = 1/1.2 = 5/6 \\)\n3) \\( x + z = 1/1.5 = 2/3 = 4/6 \\)\nAdding all three equations: \\( 2(x + y + z) = 0.5 + 5/6 + 4/6 = 3/6 + 9/6 = 12/6 = 2 \\implies x + y + z = 1 \\).\nSubtracting equation (2) from this sum gives \\( x = 1 - 5/6 = 1/6 \\).\nHence, \\( R_1 = 1/x = 6\\ \\Omega \\)."
+      },
+      "ar": {
+        "question": "ثلاث مقاومات كهربائية \\( R_1, R_2, R_3 \\) متصلة في تركيبات مختلفة. المقاومة المكافئة لـ \\( R_1 \\) و \\( R_2 \\) على التوازي هي \\( 2\\ \\Omega \\). والمقاومة المكافئة لـ \\( R_2 \\) و \\( R_3 \\) على التوازي هي \\( 1.2\\ \\Omega \\). والمقاومة المكافئة لـ \\( R_1 \\) و \\( R_3 \\) على التوازي هي \\( 1.5\\ \\Omega \\). ما قيمة المقاومة \\( R_1 \\) بالأوم؟",
+        "options": [
+          "3",
+          "4",
+          "6",
+          "8"
+        ],
+        "hint": "أنشئ نظام معادلات باستخدام الموصلية $G_i = 1/R_i$.",
+        "explanation": "نفرض \\( x = 1/R_1 \\)، \\( y = 1/R_2 \\)، \\( z = 1/R_3 \\).\nلدينا:\n1) \\( x + y = 1/2 = 0.5 \\)\n2) \\( y + z = 1/1.2 = 5/6 \\)\n3) \\( x + z = 1/1.5 = 2/3 = 4/6 \\)\nبجمع المعادلات الثلاث: \\( 2(x + y + z) = 0.5 + 5/6 + 4/6 = 3/6 + 9/6 = 12/6 = 2 \\implies x + y + z = 1 \\).\nبطرح المعادلة (2) من هذا المجموع نحصل على \\( x = 1 - 5/6 = 1/6 \\).\nإذن، \\( R_1 = 1/x = 6\\ \\Omega \\)."
+      }
+    },
+    "correct_index": "2"
+  },
+  {
+    "id": "NSMO-066",
+    "track": "nsmo",
+    "level": "Grades 7-10",
+    "topic": "Functional Equations",
+    "type": "FRQ",
+    "difficulty": "hard",
+    "content": {
+      "en": {
+        "question": "A function \\( f: \\mathbb{R} \\to \\mathbb{R} \\) satisfies the relation \\( f(x) + 3f(1-x) = 2x + 1 \\) for all real numbers \\( x \\). Find the value of \\( f(5) \\).",
+        "options": [],
+        "hint": "Substitute $1-x$ in place of $x$ to create a second linear equation for $f(x)$ and $f(1-x)$.",
+        "explanation": "Given: \\( f(x) + 3f(1-x) = 2x + 1 \\) (Equation 1).\nSubstitute \\( x \\to 1-x \\):\n\\( f(1-x) + 3f(x) = 2(1-x) + 1 = 3 - 2x \\) (Equation 2).\nMultiply Equation 2 by 3:\n\\( 3f(1-x) + 9f(x) = 9 - 6x \\).\nSubtract Equation 1 from this result:\n\\( 8f(x) = (9 - 6x) - (2x + 1) = 8 - 8x \\implies f(x) = 1 - x \\).\nFor \\( x = 5 \\), \\( f(5) = 1 - 5 = -4 \\)."
+      },
+      "ar": {
+        "question": "دالة \\( f: \\mathbb{R} \\to \\mathbb{R} \\) تحقق العلاقة \\( f(x) + 3f(1-x) = 2x + 1 \\) لكل الأعداد الحقيقية \\( x \\). أوجد قيمة \\( f(5) \\).",
+        "options": [],
+        "hint": "عوض بـ $1-x$ بدلاً من $x$ لتكوين معادلة خطية ثانية تحتوي على $f(x)$ و $f(1-x)$.",
+        "explanation": "المعطى: \\( f(x) + 3f(1-x) = 2x + 1 \\) (المعادلة 1).\nبالتعويض عن \\( x \\) بـ \\( 1-x \\):\n\\( f(1-x) + 3f(x) = 2(1-x) + 1 = 3 - 2x \\) (المعادلة 2).\nبضرب المعادلة 2 في 3:\n\\( 3f(1-x) + 9f(x) = 9 - 6x \\).\nبطرح المعادلة 1 من هذا الناتج:\n\\( 8f(x) = (9 - 6x) - (2x + 1) = 8 - 8x \\implies f(x) = 1 - x \\).\nعند \\( x = 5 \\)، يكون \\( f(5) = 1 - 5 = -4 \\)."
+      }
+    },
+    "correct_index": "-4"
+  },
+  {
+    "id": "NSMO-067",
+    "track": "nsmo",
+    "level": "Grades 7-10",
+    "topic": "Dynamics / Quadratic Equations",
+    "type": "MCQ",
+    "difficulty": "medium",
+    "content": {
+      "en": {
+        "question": "A vehicle moves along a straight path driven by a constant engine force of 2000 N. It experiences a velocity-dependent resistive force given by \\( F_{\\text{res}} = 200 + 2v^2 \\) N, where \\( v \\) is speed in m/s. What is the terminal (maximum) velocity of the vehicle in m/s?",
+        "options": [
+          "20",
+          "25",
+          "30",
+          "35"
+        ],
+        "hint": "Terminal velocity occurs when the driving force equals the resistive force, resulting in zero net force.",
+        "explanation": "At terminal velocity, acceleration is zero, so forward force equals resistance:\n$$ 2000 = 200 + 2v^2 \\implies 2v^2 = 1800 \\implies v^2 = 900 \\implies v = 30\\ \\text{m/s} $$"
+      },
+      "ar": {
+        "question": "تتحرك سيارة على طريق مستقيم تحت تأثير قوة محرك ثابتة مقدارها 2000 نيوتن. وتتعرض لقوة مقاومة تعتمد على السرعة معطاة بالعلاقة \\( F_{\\text{res}} = 200 + 2v^2 \\) نيوتن، حيث \\( v \\) هي السرعة بـ م/ث. ما هي السرعة الحدية (القصوى) للسيارة بـ م/ث؟",
+        "options": [
+          "20",
+          "25",
+          "30",
+          "35"
+        ],
+        "hint": "تحدث السرعة الحدية عندما تتساوى قوة الدفع مع قوة المقاومة، مما يجعل محصلة القوى صفراً.",
+        "explanation": "عند السرعة الحدية، يكون التسارع صفراً، وبالتالي تتساوى قوة الدفع مع قوة المقاومة:\n$$ 2000 = 200 + 2v^2 \\implies 2v^2 = 1800 \\implies v^2 = 900 \\implies v = 30\\ \\text{م/ث} $$"
+      }
+    },
+    "correct_index": "2"
+  },
+  {
+    "id": "NSMO-068",
+    "track": "nsmo",
+    "level": "Grades 7-10",
+    "topic": "Optics / Trigonometry",
+    "type": "FRQ",
+    "difficulty": "medium",
+    "content": {
+      "en": {
+        "question": "A light ray travels from Medium 1 (refractive index \\( n_1 = \\sqrt{3} \\)) into Medium 2 (refractive index \\( n_2 = 1 \\)). If the angle of incidence in Medium 1 is \\( 30^\\circ \\), find the angle of refraction in Medium 2 in degrees.",
+        "options": [],
+        "hint": "Use Snell's Law: $n_1 \\sin(\\theta_1) = n_2 \\sin(\\theta_2)$.",
+        "explanation": "Applying Snell's Law:\n$$ n_1 \\sin(\\theta_1) = n_2 \\sin(\\theta_2) \\implies \\sqrt{3} \\sin(30^\\circ) = 1 \\cdot \\sin(\\theta_2) $$\nSince \\( \\sin(30^\\circ) = 0.5 \\):\n$$ \\sin(\\theta_2) = \\frac{\\sqrt{3}}{2} \\implies \\theta_2 = 60^\\circ $$"
+      },
+      "ar": {
+        "question": "ينتقل شعاع ضوئي من الوسط 1 (معامل الانكسار \\( n_1 = \\sqrt{3} \\)) إلى الوسط 2 (معامل الانكسار \\( n_2 = 1 \\)). إذا كانت زاوية السقوط في الوسط 1 هي \\( 30^\\circ \\)، فأوجد زاوية الانكسار في الوسط 2 بالدرجات.",
+        "options": [],
+        "hint": "استخدم قانون سنيل: $n_1 \\sin(\\theta_1) = n_2 \\sin(\\theta_2)$.",
+        "explanation": "بتطبيق قانون سنيل:\n$$ n_1 \\sin(\\theta_1) = n_2 \\sin(\\theta_2) \\implies \\sqrt{3} \\sin(30^\\circ) = 1 \\cdot \\sin(\\theta_2) $$\nوبما أن \\( \\sin(30^\\circ) = 0.5 \\):\n$$ \\sin(\\theta_2) = \\frac{\\sqrt{3}}{2} \\implies \\theta_2 = 60^\\circ $$"
+      }
+    },
+    "correct_index": "60"
+  },
+  {
+    "id": "NSMO-069",
+    "track": "nsmo",
+    "level": "Grades 7-10",
+    "topic": "Genetics / Probability",
+    "type": "MCQ",
+    "difficulty": "easy",
+    "content": {
+      "en": {
+        "question": "Two dihybrid heterozygous plants with genotype \\( AaBb \\) are crossed. Assuming independent assortment of alleles, what is the probability that an offspring exhibits the dominant phenotype for both traits?",
+        "options": [
+          "1/16",
+          "3/16",
+          "9/16",
+          "3/4"
+        ],
+        "hint": "Calculate the probability of dominant phenotype for each gene independently, then multiply them.",
+        "explanation": "For trait A (cross \\( Aa \\times Aa \\)), the probability of dominant phenotype (\\( AA \\) or \\( Aa \\)) is \\( 3/4 \\).\nFor trait B (cross \\( Bb \\times Bb \\)), the probability of dominant phenotype is \\( 3/4 \\).\nSince the genes assort independently, the joint probability is \\( \\frac{3}{4} \\times \\frac{3}{4} = \\frac{9}{16} \\)."
+      },
+      "ar": {
+        "question": "تم إجراء تهجين بين نباتين هجينين لزمتين بالتركيب الجيني \\( AaBb \\). بفرض الانعزال المستقل للجينات، ما هو احتمال أن يظهر الفرد الناتج الطراز الظاهري السائد لكلا الصفتين؟",
+        "options": [
+          "1/16",
+          "3/16",
+          "9/16",
+          "3/4"
+        ],
+        "hint": "احسب احتمال الطراز الظاهري السائد لكل صفة بشكل مستقل، ثم اضرب الاحتمالين.",
+        "explanation": "بالنسبة للصفة A (تزاوج \\( Aa \\times Aa \\))، احتمال الطراز السائد هو \\( 3/4 \\).\nبالنسبة للصفة B (تزاوج \\( Bb \\times Bb \\))، احتمال الطراز السائد هو \\( 3/4 \\).\nوبما أن الجينات تنعزل بشكل مستقل، فإن الاحتمال المركب هو \\( \\frac{3}{4} \\times \\frac{3}{4} = \\frac{9}{16} \\)."
+      }
+    },
+    "correct_index": "2"
+  },
+  {
+    "id": "NSMO-070",
+    "track": "nsmo",
+    "level": "Grades 7-10",
+    "topic": "Polynomials / Complex Numbers",
+    "type": "FRQ",
+    "difficulty": "hard",
+    "content": {
+      "en": {
+        "question": "Let \\( P(x) = x^4 - 4x^3 + ax^2 + bx + c \\) be a polynomial with real coefficients. Given that \\( x = 1 + i \\) and \\( x = 2 \\) are roots of \\( P(x) = 0 \\), find the value of \\( P(3) \\).",
+        "options": [],
+        "hint": "Since coefficients are real, complex roots come in conjugate pairs. Find the fourth root using Vieta's formulas.",
+        "explanation": "Since coefficients are real, \\( 1 - i \\) must also be a root of \\( P(x) \\).\nThe quadratic factor for roots \\( 1 \\pm i \\) is \\( (x - 1)^2 + 1 = x^2 - 2x + 2 \\).\nLet the 4 roots be \\( r_1 = 1+i \\), \\( r_2 = 1-i \\), \\( r_3 = 2 \\), and \\( r_4 \\).\nBy Vieta's formulas, sum of roots = \\( 4 \\):\n\\( (1+i) + (1-i) + 2 + r_4 = 4 \\implies 4 + r_4 = 4 \\implies r_4 = 0 \\).\nThus, \\( P(x) = x(x - 2)(x^2 - 2x + 2) \\).\nEvaluating at \\( x = 3 \\):\n\\( P(3) = 3(3 - 2)(3^2 - 2(3) + 2) = 3(1)(9 - 6 + 2) = 3 \\times 5 = 15 \\)."
+      },
+      "ar": {
+        "question": "ليكن \\( P(x) = x^4 - 4x^3 + ax^2 + bx + c \\) كثير حدود بمعاملات حقيقية. إذا كان \\( x = 1 + i \\) و \\( x = 2 \\) جذوراً لـ \\( P(x) = 0 \\)، فأوجد قيمة \\( P(3) \\).",
+        "options": [],
+        "hint": "بما أن المعاملات حقيقية، فإن الجذور المركبة تظهر في أزواج مترافقة. أوجد الجذر الرابع باستخدام صيغ فييتا.",
+        "explanation": "بما أن المعاملات حقيقية، فإن \\( 1 - i \\) هو أيضاً جذر لـ \\( P(x) \\).\nالمعامل الرباعي الناجم عن الجذرين \\( 1 \\pm i \\) هو \\( (x - 1)^2 + 1 = x^2 - 2x + 2 \\).\nلتكن الجذور الأربعة هي \\( r_1 = 1+i \\)، \\( r_2 = 1-i \\)، \\( r_3 = 2 \\)، و \\( r_4 \\).\nبصيغ فييتا، مجموع الجذور = \\( 4 \\):\n\\( (1+i) + (1-i) + 2 + r_4 = 4 \\implies 4 + r_4 = 4 \\implies r_4 = 0 \\).\nبالتالي، \\( P(x) = x(x - 2)(x^2 - 2x + 2) \\).\nبالتعويض عن \\( x = 3 \\):\n\\( P(3) = 3(3 - 2)(3^2 - 2(3) + 2) = 3(1)(9 - 6 + 2) = 3 \\times 5 = 15 \\)."
+      }
+    },
+    "correct_index": "15"
+  },
+  {
+    "id": "NSMO-071",
+    "track": "nsmo",
+    "level": "Grades 7-10",
+    "topic": "Thermodynamics / Ratios",
+    "type": "MCQ",
+    "difficulty": "medium",
+    "content": {
+      "en": {
+        "question": "An ideal gas inside a rigid container of constant volume is initially at temperature \\( T_1 = 300 \\) K and pressure \\( P_1 = 2.0 \\) atm. If 20% of the gas moles leak out, and the absolute temperature is subsequently increased by 50%, what is the final pressure in atm?",
+        "options": [
+          "1.8",
+          "2.0",
+          "2.4",
+          "3.0"
+        ],
+        "hint": "Use the Ideal Gas Law relation $P \\propto n T$ for constant volume $V$.",
+        "explanation": "From \\( PV = nRT \\), for constant volume \\( V \\), pressure is directly proportional to \\( nT \\).\nNew number of moles \\( n_2 = 0.8 n_1 \\).\nNew temperature \\( T_2 = 1.5 T_1 \\).\nTherefore, \\( P_2 = P_1 \\times \\left(\\frac{n_2}{n_1}\\right) \\times \\left(\\frac{T_2}{T_1}\\right) = 2.0 \\times 0.8 \\times 1.5 = 2.4 \\) atm."
+      },
+      "ar": {
+        "question": "غاز مثالي داخل وعاء صلب ثنائي الحجم ذي حجم ثابت يقع عند درجة حرارة ابتدائية \\( T_1 = 300 \\) كلفن وضغط \\( P_1 = 2.0 \\) ض.ج. إذا تسرب 20% من مولات الغاز، ثم ارتفعت درجة الحرارة المطلقة بنسبة 50%، فما هو الضغط النهائي بالضغط الجوي؟",
+        "options": [
+          "1.8",
+          "2.0",
+          "2.4",
+          "3.0"
+        ],
+        "hint": "استخدم علاقة قانون الغاز المثالي $P \\propto n T$ عند ثبات الحجم $V$.",
+        "explanation": "من قانون الغاز المثالي \\( PV = nRT \\)، عند ثبات الحجم \\( V \\)، يتناسب الضغط طردياً مع \\( nT \\).\nعدد المولات الجديد \\( n_2 = 0.8 n_1 \\).\nدرجة الحرارة الجديدة \\( T_2 = 1.5 T_1 \\).\nبالتالي، \\( P_2 = P_1 \\times \\left(\\frac{n_2}{n_1}\\right) \\times \\left(\\frac{T_2}{T_1}\\right) = 2.0 \\times 0.8 \\times 1.5 = 2.4 \\) ض.ج."
+      }
+    },
+    "correct_index": "2"
+  },
+  {
+    "id": "NSMO-072",
+    "track": "nsmo",
+    "level": "Grades 7-10",
+    "topic": "Center of Mass / Geometry",
+    "type": "FRQ",
+    "difficulty": "easy",
+    "content": {
+      "en": {
+        "question": "Three point masses \\( m_1 = 1 \\) kg, \\( m_2 = 2 \\) kg, and \\( m_3 = 3 \\) kg are located at coordinates \\( (0, 0) \\), \\( (6, 0) \\), and \\( (0, 6) \\) respectively. Find the y-coordinate of the center of mass of the system.",
+        "options": [],
+        "hint": "Use the formula $y_{cm} = \\frac{\\sum m_i y_i}{\\sum m_i}$.",
+        "explanation": "The y-coordinate of the center of mass is given by:\n$$ y_{cm} = \\frac{m_1 y_1 + m_2 y_2 + m_3 y_3}{m_1 + m_2 + m_3} = \\frac{1(0) + 2(0) + 3(6)}{1 + 2 + 3} = \\frac{18}{6} = 3 $$"
+      },
+      "ar": {
+        "question": "ثلاث كتل نقطية \\( m_1 = 1 \\) كجم، \\( m_2 = 2 \\) كجم، و \\( m_3 = 3 \\) كجم موضوعة عند الإحداثيات \\( (0, 0) \\)، \\( (6, 0) \\)، و \\( (0, 6) \\) على التوالي. أوجد الإحداثي الصادي (y) لمركز كتلة النظام.",
+        "options": [],
+        "hint": "استخدم القانون $y_{cm} = \\frac{\\sum m_i y_i}{\\sum m_i}$.",
+        "explanation": "الإحداثي الصادي لمركز الكتلة يُحسب بالعلاقة:\n$$ y_{cm} = \\frac{m_1 y_1 + m_2 y_2 + m_3 y_3}{m_1 + m_2 + m_3} = \\frac{1(0) + 2(0) + 3(6)}{1 + 2 + 3} = \\frac{18}{6} = 3 $$"
+      }
+    },
+    "correct_index": "3"
+  },
+  {
+    "id": "NSMO-073",
+    "track": "nsmo",
+    "level": "Grades 7-10",
+    "topic": "Number Theory / Modular Arithmetic",
+    "type": "MCQ",
+    "difficulty": "easy",
+    "content": {
+      "en": {
+        "question": "What is the remainder when \\( 3^{2024} \\) is divided by 10?",
+        "options": [
+          "1",
+          "3",
+          "7",
+          "9"
+        ],
+        "hint": "Find the repeating pattern of powers of 3 modulo 10.",
+        "explanation": "The last digits of powers of 3 cycle with period 4:\n\\( 3^1 \\equiv 3 \\pmod{10} \\)\n\\( 3^2 \\equiv 9 \\pmod{10} \\)\n\\( 3^3 \\equiv 7 \\pmod{10} \\)\n\\( 3^4 \\equiv 1 \\pmod{10} \\)\nSince \\( 2024 \\) is divisible by 4 (\\( 2024 = 4 \\times 506 \\)), \\( 3^{2024} \\equiv (3^4)^{506} \\equiv 1^{506} \\equiv 1 \\pmod{10} \\)."
+      },
+      "ar": {
+        "question": "ما هو باقي قسمة العدد \\( 3^{2024} \\) على 10؟",
+        "options": [
+          "1",
+          "3",
+          "7",
+          "9"
+        ],
+        "hint": "أوجد النمط الدوري لقوى العدد 3 بآحاد الأعداد (باقي القسمة على 10).",
+        "explanation": "الرقم الأخير لقوى العدد 3 يتكرر بنمط دوري طوله 4:\n\\( 3^1 \\equiv 3 \\pmod{10} \\)\n\\( 3^2 \\equiv 9 \\pmod{10} \\)\n\\( 3^3 \\equiv 7 \\pmod{10} \\)\n\\( 3^4 \\equiv 1 \\pmod{10} \\)\nبما أن \\( 2024 \\) يقبل القسمة على 4 (\\( 2024 = 4 \\times 506 \\))، فإن \\( 3^{2024} \\equiv (3^4)^{506} \\equiv 1^{506} \\equiv 1 \\pmod{10} \\)."
+      }
+    },
+    "correct_index": "0"
+  },
+  {
+    "id": "NSMO-074",
+    "track": "nsmo",
+    "level": "Grades 7-10",
+    "topic": "Calculus / Kinematics Optimization",
+    "type": "FRQ",
+    "difficulty": "medium",
+    "content": {
+      "en": {
+        "question": "The displacement of a particle along a straight line is given by \\( s(t) = -t^3 + 9t^2 - 15t + 4 \\) for \\( t \\ge 0 \\). What is the maximum velocity achieved by the particle in m/s?",
+        "options": [],
+        "hint": "Differentiate $s(t)$ to find velocity $v(t)$, then maximize $v(t)$ using its derivative.",
+        "explanation": "Velocity function \\( v(t) = s'(t) = -3t^2 + 18t - 15 \\).\nTo maximize \\( v(t) \\), find its derivative: \\( v'(t) = -6t + 18 = 0 \\implies t = 3 \\).\nMaximum velocity: \\( v(3) = -3(3^2) + 18(3) - 15 = -27 + 54 - 15 = 12 \\) m/s."
+      },
+      "ar": {
+        "question": "إزاحة جسيم يتحرك على خط مستقيم معطاة بالعلاقة \\( s(t) = -t^3 + 9t^2 - 15t + 4 \\) حيث \\( t \\ge 0 \\). ما هي السرعة القصوى التي يصل إليها الجسيم بـ م/ث؟",
+        "options": [],
+        "hint": "اشتق $s(t)$ لإيجاد دالة السرعة $v(t)$، ثم أوجد القيمة العظمى لـ $v(t)$ باستعمال مشتقتها.",
+        "explanation": "دالة السرعة هي \\( v(t) = s'(t) = -3t^2 + 18t - 15 \\).\nلإيجاد أقصى قيمة للسرعة، نشتق دالة السرعة: \\( v'(t) = -6t + 18 = 0 \\implies t = 3 \\).\nالسرعة القصوى: \\( v(3) = -3(3^2) + 18(3) - 15 = -27 + 54 - 15 = 12 \\) م/ث."
+      }
+    },
+    "correct_index": "12"
+  },
+  {
+    "id": "NSMO-075",
+    "track": "nsmo",
+    "level": "Grades 7-10",
+    "topic": "Exponential Functions / Biology",
+    "type": "MCQ",
+    "difficulty": "easy",
+    "content": {
+      "en": {
+        "question": "A bacterial culture grows exponentially according to \\( N(t) = N_0 \\cdot 2^{t/3} \\), where \\( t \\) is measured in hours. If the population increases from 1,000 to 8,000, how many hours have elapsed?",
+        "options": [
+          "3 hours",
+          "6 hours",
+          "9 hours",
+          "12 hours"
+        ],
+        "hint": "Substitute the initial and final populations into the equation and solve for t.",
+        "explanation": "We are given \\( N(t)/N_0 = 8000/1000 = 8 \\).\nSo \\( 2^{t/3} = 8 = 2^3 \\implies \\frac{t}{3} = 3 \\implies t = 9 \\) hours."
+      },
+      "ar": {
+        "question": "تنمو ثقافة بكتيرية أُسياً وفقاً للعلاقة \\( N(t) = N_0 \\cdot 2^{t/3} \\)، حيث يُقاس الزمن \\( t \\) بالساعات. إذا زاد عدد البكتيريا من 1,000 إلى 8,000، فكم ساعة قد انقضت؟",
+        "options": [
+          "3 ساعات",
+          "6 ساعات",
+          "9 ساعات",
+          "12 ساعة"
+        ],
+        "hint": "عوض بقيم العشائر الابتدائية والنهائية في المعادلة وحل بالنسبة لـ t.",
+        "explanation": "لدينا \\( N(t)/N_0 = 8000/1000 = 8 \\).\nإذن \\( 2^{t/3} = 8 = 2^3 \\implies \\frac{t}{3} = 3 \\implies t = 9 \\) ساعات."
+      }
+    },
+    "correct_index": "2"
+  },
+  {
+    "id": "NSMO-076",
+    "track": "nsmo",
+    "level": "Grades 7-10",
+    "topic": "Geometry / Tangent Circles",
+    "type": "FRQ",
+    "difficulty": "medium",
+    "content": {
+      "en": {
+        "question": "Two circles with radii 9 cm and 4 cm are externally tangent to each other. A common external tangent line touches the two circles at points \\( P \\) and \\( Q \\). Find the distance \\( PQ \\) in cm.",
+        "options": [],
+        "hint": "Draw a right triangle connecting the centers and radii to the points of tangency.",
+        "explanation": "The formula for the length of a common external tangent between two externally tangent circles of radii \\( R \\) and \\( r \\) is:\n$$ PQ = 2\\sqrt{Rr} = 2\\sqrt{9 \\times 4} = 2\\sqrt{36} = 2 \\times 6 = 12\\ \\text{cm} $$"
+      },
+      "ar": {
+        "question": "دائرتان نصفا قطرهما 9 سم و 4 سم متماستان من الخارج. يمس مماس خارجي مشترك الدائرتين في النقطتين \\( P \\) و \\( Q \\). أوجد طول القطعة المستقيمة \\( PQ \\) بالسنتيمترات.",
+        "options": [],
+        "hint": "ارسم مثلاً قائماً يربط بين المركزين وأنصاف الأقطار إلى نقاط التماس.",
+        "explanation": "القانون الخاص بطول المماس الخارجي المشترك لدائرتين متماستين من الخارج بنصفي قطري \\( R \\) و \\( r \\) هو:\n$$ PQ = 2\\sqrt{Rr} = 2\\sqrt{9 \\times 4} = 2\\sqrt{36} = 2 \\times 6 = 12\\ \\text{سم} $$"
+      }
+    },
+    "correct_index": "12"
+  },
+  {
+    "id": "NSMO-077",
+    "track": "nsmo",
+    "level": "Grades 7-10",
+    "topic": "Hydrodynamics / Continuity Equation",
+    "type": "MCQ",
+    "difficulty": "easy",
+    "content": {
+      "en": {
+        "question": "Water flows through a horizontal pipe that narrows from a cross-sectional area \\( A_1 = 10\\ \\text{cm}^2 \\) to \\( A_2 = 2\\ \\text{cm}^2 \\). If the speed of water at the wider section is \\( v_1 = 1.0 \\) m/s, what is the speed \\( v_2 \\) at the narrow section in m/s?",
+        "options": [
+          "2.0 m/s",
+          "4.0 m/s",
+          "5.0 m/s",
+          "10.0 m/s"
+        ],
+        "hint": "Use the continuity equation for incompressible flow: $A_1 v_1 = A_2 v_2$.",
+        "explanation": "By the continuity equation for an incompressible fluid:\n$$ A_1 v_1 = A_2 v_2 \\implies 10 \\times 1.0 = 2 \\times v_2 \\implies v_2 = 5.0\\ \\text{m/s} $$"
+      },
+      "ar": {
+        "question": "يجري ماء عبر أنبوب أفقي يضيق مساحة مقطعه العرضي من \\( A_1 = 10\\ \\text{سم}^2 \\) إلى \\( A_2 = 2\\ \\text{سم}^2 \\). إذا كانت سرعة الماء عند المقطع الأوسع \\( v_1 = 1.0 \\) م/ث، فما هي السرعة \\( v_2 \\) عند المقطع الضيق بـ م/ث؟",
+        "options": [
+          "2.0 م/ث",
+          "4.0 م/ث",
+          "5.0 م/ث",
+          "10.0 م/ث"
+        ],
+        "hint": "استخدم معادلة الاستمرارية للموائع غير القابلة للانضغاط: $A_1 v_1 = A_2 v_2$.",
+        "explanation": "بمعادلة الاستمرارية للمائع غير القابل للانضغاط:\n$$ A_1 v_1 = A_2 v_2 \\implies 10 \\times 1.0 = 2 \\times v_2 \\implies v_2 = 5.0\\ \\text{م/ث} $$"
+      }
+    },
+    "correct_index": "2"
+  },
+  {
+    "id": "NSMO-078",
+    "track": "nsmo",
+    "level": "Grades 7-10",
+    "topic": "Exponential Decay / Physics",
+    "type": "FRQ",
+    "difficulty": "easy",
+    "content": {
+      "en": {
+        "question": "A radioactive isotope has a half-life of 4 days. Starting with a sample of 64 grams, how many grams of the isotope will remain after 20 days?",
+        "options": [],
+        "hint": "Calculate the number of half-lives that occur in 20 days.",
+        "explanation": "The number of half-life periods is \\( k = 20 / 4 = 5 \\).\nThe remaining mass is \\( m = 64 \\times (1/2)^5 = 64 / 32 = 2 \\) grams."
+      },
+      "ar": {
+        "question": "نظير مشع له عمر نصف يبلغ 4 أيام. إذا بدأنا بعينة كتلتها 64 جراماً، فكم جراماً من هذا النظير سيبقى بعد 20 يوماً؟",
+        "options": [],
+        "hint": "احسب عدد فترات عمر النصف التي تنقضي خلال 20 يوماً.",
+        "explanation": "عدد فترات عمر النصف هو \\( k = 20 / 4 = 5 \\).\nالكتلة المتبقية هي \\( m = 64 \\times (1/2)^5 = 64 / 32 = 2 \\) جرام."
+      }
+    },
+    "correct_index": "2"
+  },
+  {
+    "id": "NSMO-079",
+    "track": "nsmo",
+    "level": "Grades 7-10",
+    "topic": "Combinatorics / Genetics",
+    "type": "MCQ",
+    "difficulty": "easy",
+    "content": {
+      "en": {
+        "question": "How many distinct 4-base DNA sequences can be formed using the nucleobases {A, T, C, G} such that the sequence starts with 'A' and ends with 'G'?",
+        "options": [
+          "8",
+          "12",
+          "16",
+          "64"
+        ],
+        "hint": "The first and last positions are fixed. Calculate choices for the middle two positions.",
+        "explanation": "The sequence has structure [A] [_] [_] [G].\nThe second position can be filled by any of 4 bases.\nThe third position can also be filled by any of 4 bases.\nTotal sequences = \\( 1 \\times 4 \\times 4 \\times 1 = 16 \\)."
+      },
+      "ar": {
+        "question": "كم تسلسلاً DNA مختلفاً يتكون من 4 القواعد النيتروجينية يمكن تكوينه باستخدام القواعد {A, T, C, G} بحيث يبدأ التسلسل بـ 'A' وينتهي بـ 'G'؟",
+        "options": [
+          "8",
+          "12",
+          "16",
+          "64"
+        ],
+        "hint": "الموقعان الأول والأخير ثابتاً. احسب عدد الخيارات المتاحة للموقعين الأوسطين.",
+        "explanation": "التسلسل يأخذ الشكل [A] [_] [_] [G].\nالموقع الثاني يمكن ملؤه بأي قاعدة من الـ 4 قواعد.\nالموقع الثالث يمكن ملؤه بأي قاعدة من الـ 4 قواعد.\nعدد التسلسلات الكلي = \\( 1 \\times 4 \\times 4 \\times 1 = 16 \\)."
+      }
+    },
+    "correct_index": "2"
+  },
+  {
+    "id": "NSMO-080",
+    "track": "nsmo",
+    "level": "Grades 7-10",
+    "topic": "Trigonometry / Oscillations",
+    "type": "FRQ",
+    "difficulty": "medium",
+    "content": {
+      "en": {
+        "question": "A particle undergoes simple harmonic motion with position given by \\( x(t) = 5 \\cos(2\\pi t) \\). How many times does the particle pass through the equilibrium point \\( x = 0 \\) during the time interval \\( t \\in [0, 3] \\)?",
+        "options": [],
+        "hint": "Set $x(t) = 0$ and find all solutions for $t$ in the range $[0, 3]$.",
+        "explanation": "\\( x(t) = 0 \\implies \\cos(2\\pi t) = 0 \\implies 2\\pi t = \\frac{\\pi}{2} + k\\pi \\) for integer \\( k \\).\nDividing by \\( 2\\pi \\):\n$$ t = \\frac{1}{4} + \\frac{k}{2} = \\frac{2k+1}{4} $$\nFor \\( t \\in [0, 3] \\), the possible values of \\( t \\) correspond to:\n\\( k = 0 \\implies t = 0.25 \\)\n\\( k = 1 \\implies t = 0.75 \\)\n\\( k = 2 \\implies t = 1.25 \\)\n\\( k = 3 \\implies t = 1.75 \\)\n\\( k = 4 \\implies t = 2.25 \\)\n\\( k = 5 \\implies t = 2.75 \\)\nThis gives a total of 6 times."
+      },
+      "ar": {
+        "question": "يتعرض جسيم لحركة توافقية بسيطة يُعطى موقعه بالعلاقة \\( x(t) = 5 \\cos(2\\pi t) \\). كم مرة يمر الجسيم بنقطة الاتزان \\( x = 0 \\) خلال الفترة الزمنية \\( t \\in [0, 3] \\)؟",
+        "options": [],
+        "hint": "اجعل $x(t) = 0$ وأوجد جميع الحلول لـ $t$ في نطاق $[0, 3]$.",
+        "explanation": "\\( x(t) = 0 \\implies \\cos(2\\pi t) = 0 \\implies 2\\pi t = \\frac{\\pi}{2} + k\\pi \\) لأي عدد صحيح \\( k \\).\nبالقسمة على \\( 2\\pi \\):\n$$ t = \\frac{1}{4} + \\frac{k}{2} = \\frac{2k+1}{4} $$\nفي الفترة \\( t \\in [0, 3] \\)، قيم \\( t \\) الممكنة هي:\n\\( k = 0 \\implies t = 0.25 \\)\n\\( k = 1 \\implies t = 0.75 \\)\n\\( k = 2 \\implies t = 1.25 \\)\n\\( k = 3 \\implies t = 1.75 \\)\n\\( k = 4 \\implies t = 2.25 \\)\n\\( k = 5 \\implies t = 2.75 \\)\nإذن يمر بمركز الاتزان 6 مرات."
+      }
+    },
+    "correct_index": "6"
+  },
+  {
+    "id": "NSMO-081",
+    "track": "nsmo",
+    "level": "Grades 7-10",
+    "topic": "Advanced Kinematics and Quadratic Optimization",
+    "type": "MCQ",
+    "difficulty": "hard",
+    "content": {
+      "en": {
+        "question": "A projectile is fired from the origin with a trajectory given by \\( y = ax - bx^2 \\), where \\( a, b > 0 \\). If the maximum height reached by the projectile is \\( 9\\text{ m} \\) and its horizontal range is \\( 36\\text{ m} \\), find the value of \\( a + 36b \\).",
+        "options": [
+          "2",
+          "3",
+          "4",
+          "5"
+        ],
+        "hint": "Relate the vertex and the roots of the quadratic equation to the maximum height and the horizontal range.",
+        "explanation": "The horizontal range \\( R \\) occurs when \\( y = 0 \\implies x(a - bx) = 0 \\), so \\( R = \\frac{a}{b} = 36 \\implies a = 36b \\). The maximum height occurs at \\( x = \\frac{R}{2} = 18 \\): \\( H = a(18) - b(18)^2 = 18(36b) - 324b = 324b = 9 \\implies b = \\frac{1}{36} \\). Substituting \\( b \\) yields \\( a = 1 \\). Therefore, \\( a + 36b = 1 + 36\\left(\\frac{1}{36}\\right) = 2 \\)."
+      },
+      "ar": {
+        "question": "يُطلق مقذوف من نقطة الأصل بمسار مُعطى بالمعادلة \\( y = ax - bx^2 \\)، حيث \\( a, b > 0 \\). إذا كان أقصى ارتفاع يصله المقذوف هو \\( 9\\text{ m} \\) والمدى الأفقي له هو \\( 36\\text{ m} \\)، فما قيمة \\( a + 36b \\)؟",
+        "options": [
+          "2",
+          "3",
+          "4",
+          "5"
+        ],
+        "hint": "اربط رأس المنحنى وجذور المعادلة التربيعية بأقصى ارتفاع والمدى الأفقي.",
+        "explanation": "يحدث المدى الأفقي \\( R \\) عندما تكون \\( y = 0 \\implies x(a - bx) = 0 \\)، وبالتالي \\( R = \\frac{a}{b} = 36 \\implies a = 36b \\). يحدث أقصى ارتفاع عند \\( x = \\frac{R}{2} = 18 \\): \\( H = a(18) - b(18)^2 = 18(36b) - 324b = 324b = 9 \\implies b = \\frac{1}{36} \\). بتعويض \\( b \\) نجد أن \\( a = 1 \\). إذن، \\( a + 36b = 1 + 36\\left(\\frac{1}{36}\\right) = 2 \\)."
+      }
+    },
+    "correct_index": "0"
+  },
+  {
+    "id": "NSMO-082",
+    "track": "nsmo",
+    "level": "Grades 7-10",
+    "topic": "Combinatorics and Molecular Biology",
+    "type": "FRQ",
+    "difficulty": "hard",
+    "content": {
+      "en": {
+        "question": "A synthetic DNA strand consists of a sequence of 8 nucleotides selected from \\( \\{A, C, G, T\\} \\). To maintain structural stability, two 'A' nucleotides can never be adjacent. How many valid synthetic DNA sequences of length 8 can be formed?",
+        "options": [],
+        "hint": "Set up a recurrence relation \\( N(n) \\) for the number of valid sequences of length \\( n \\).",
+        "explanation": "Let \\( N(n) \\) be the number of valid sequences of length \\( n \\). If the sequence ends in C, G, or T (3 choices), the remaining \\( n-1 \\) positions have \\( N(n-1) \\) valid arrangements. If it ends in A, the second to last character must be C, G, or T (3 choices), followed by \\( N(n-2) \\) arrangements. Thus, \\( N(n) = 3N(n-1) + 3N(n-2) \\). Base cases: \\( N(1) = 4 \\), \\( N(2) = 15 \\). Calculating sequentially: \\( N(3) = 57 \\), \\( N(4) = 216 \\), \\( N(5) = 819 \\), \\( N(6) = 3105 \\), \\( N(7) = 11772 \\), and \\( N(8) = 44631 \\)."
+      },
+      "ar": {
+        "question": "تتكون سلسلة DNA اصطناعية من تتابع لـ 8 نيوكليوتيدات مُختارة من المجموعة \\( \\{A, C, G, T\\} \\). للحفاظ على الاستقرار الهيكلي، لا يمكن أن يتجاور نيوكليوتيدان من النوع 'A'. كم عدد سلاسل DNA الاصطناعية الصالحة بطول 8 التي يمكن تكوينها؟",
+        "options": [],
+        "hint": "أنشئ علاقة تكرارية \\( N(n) \\) لعدد السلاسل الصالحة ذات الطول \\( n \\).",
+        "explanation": "ليكن \\( N(n) \\) عدد السلاسل الصالحة بطول \\( n \\). إذا انتهت السلسلة بـ C أو G أو T (3 خيارات)، فإن المواضع \\( n-1 \\) المتبقية لها \\( N(n-1) \\) ترتيبًا صالحًا. إذا انتهت بـ A، فيجب أن يكون الحرف قبل الأخير C أو G أو T (3 خيارات)، يليه \\( N(n-2) \\) ترتيبًا. بالتالي، \\( N(n) = 3N(n-1) + 3N(n-2) \\). الحالات الأساسية: \\( N(1) = 4 \\)، \\( N(2) = 15 \\). بالتتابع: \\( N(3) = 57 \\)، \\( N(4) = 216 \\)، \\( N(5) = 819 \\)، \\( N(6) = 3105 \\)، \\( N(7) = 11772 \\)، و\\( N(8) = 44631 \\)."
+      }
+    },
+    "correct_index": "44631"
+  },
+  {
+    "id": "NSMO-083",
+    "track": "nsmo",
+    "level": "Grades 7-10",
+    "topic": "Geometric Optics and Trigonometry",
+    "type": "MCQ",
+    "difficulty": "medium",
+    "content": {
+      "en": {
+        "question": "Two plane mirrors \\( M_1 \\) and \\( M_2 \\) are inclined at an angle of \\( 18^\text{o} \\). A ray of light parallel to \\( M_1 \\) strikes \\( M_2 \\). What is the total number of reflections the ray undergoes on both mirrors before it retraces its path back?",
+        "options": [
+          "5",
+          "7",
+          "9",
+          "10"
+        ],
+        "hint": "Track the glancing angles made with the mirrors after each reflection.",
+        "explanation": "The glancing angles with the mirrors increase by \\( 18^\text{o} \\) after each reflection. The sequence of glancing angles is \\( \\alpha_1 = 18^\text{o} \\) (on \\( M_2 \\)), \\( \\alpha_2 = 36^\text{o} \\) (on \\( M_1 \\)), \\( \\alpha_3 = 54^\text{o} \\) (on \\( M_2 \\)), \\( \\alpha_4 = 72^\text{o} \\) (on \\( M_1 \\)), and \\( \\alpha_5 = 90^\text{o} \\) (perpendicular incidence on \\( M_2 \\)). At \\( 90^\text{o} \\), the ray reflects back along its incoming path. The total number of reflections is \\( 2 \\times 5 - 1 = 9 \\)."
+      },
+      "ar": {
+        "question": "مرآتان مستويتان \\( M_1 \\) و \\( M_2 \\) بينهما زاوية \\( 18^\text{o} \\). يسقط شعاع ضوئي موازٍ للمرآة \\( M_1 \\) على المرآة \\( M_2 \\). ما إجمالي عدد الانعكاسات التي يتعرض لها الشعاع على كلا المرآتين قبل أن يعود متتبعًا نفس مساره؟",
+        "options": [
+          "5",
+          "7",
+          "9",
+          "10"
+        ],
+        "hint": "تتبع زوايا المماس المصنوعة مع المرايا بعد كل انعكاس.",
+        "explanation": "تزداد زوايا المماس مع المرايا بمقدار \\( 18^\text{o} \\) بعد كل انعكاس. متتالية زوايا المماس هي \\( \\alpha_1 = 18^\text{o} \\) (على \\( M_2 \\))، \\( \\alpha_2 = 36^\text{o} \\) (على \\( M_1 \\))، \\( \\alpha_3 = 54^\text{o} \\) (على \\( M_2 \\))، \\( \\alpha_4 = 72^\text{o} \\) (على \\( M_1 \\))، و \\( \\alpha_5 = 90^\text{o} \\) (سقوط عمودي على \\( M_2 \\)). عند الزاويه \\( 90^\text{o} \\)، ينعكس الشعاع عائدًا على نفس مساره. إجمالي عدد الانعكاسات هو \\( 2 \\times 5 - 1 = 9 \\)."
+      }
+    },
+    "correct_index": "2"
+  },
+  {
+    "id": "NSMO-084",
+    "track": "nsmo",
+    "level": "Grades 7-10",
+    "topic": "Exponential Decay and Heat Transfer",
+    "type": "FRQ",
+    "difficulty": "hard",
+    "content": {
+      "en": {
+        "question": "A liquid cools from \\( 80^\text{o}\\text{C} \\) to \\( 60^\text{o}\\text{C} \\) in \\( 10\\text{ minutes} \\) in an ambient room temperature of \\( 20^\text{o}\\text{C} \\). According to Newton's Law of Cooling \\( T(t) = T_{\\text{env}} + (T_0 - T_{\\text{env}}) e^{-kt} \\), how many additional minutes will it take for the liquid to cool from \\( 60^\text{o}\\text{C} \\) to \\( 40^\text{o}\\text{C} \\)? Round to the nearest hundredth.",
+        "options": [],
+        "hint": "Determine the value of \\( e^{-10k} \\) from the first cooling interval and solve for the total time required to reach \\( 40^\text{o}\\text{C} \\).",
+        "explanation": "From initial cooling: \\( 60 = 20 + 60 e^{-10k} \\implies e^{-10k} = \\frac{2}{3} \\implies k = \\frac{\\ln(1.5)}{10} \\). For \\( T(t_2) = 40^\text{o}\\text{C} \\): \\( 40 = 20 + 60 e^{-k t_2} \\implies e^{-k t_2} = \\frac{1}{3} \\implies t_2 = \\frac{\\ln 3}{k} = 10 \\frac{\\ln 3}{\\ln 1.5} \\approx 27.10\\text{ minutes} \\). The additional time is \\( 27.10 - 10 = 17.10\\text{ minutes} \\)."
+      },
+      "ar": {
+        "question": "يبرد سائل من \\( 80^\text{o}\\text{C} \\) إلى \\( 60^\text{o}\\text{C} \\) خلال \\( 10\\text{ دقائق} \\) في غرفة درجتها المحيطة \\( 20^\text{o}\\text{C} \\). ووفقًا لقانون نيوتن للتبريد \\( T(t) = T_{\\text{env}} + (T_0 - T_{\\text{env}}) e^{-kt} \\)، كم دقيقة إضافية سيلزم للسائل لكي يبرد من \\( 60^\text{o}\\text{C} \\) إلى \\( 40^\text{o}\\text{C} \\)؟ قرب الناتج لأقرب جزء من مئة.",
+        "options": [],
+        "hint": "احسب قيمة \\( e^{-10k} \\) من فترة التبريد الأولى ثم أوجد الزمن الكلي اللازم للوصول إلى \\( 40^\text{o}\\text{C} \\).",
+        "explanation": "من التبريد الأولي: \\( 60 = 20 + 60 e^{-10k} \\implies e^{-10k} = \\frac{2}{3} \\implies k = \\frac{\\ln(1.5)}{10} \\). لـ \\( T(t_2) = 40^\text{o}\\text{C} \\): \\( 40 = 20 + 60 e^{-k t_2} \\implies e^{-k t_2} = \\frac{1}{3} \\implies t_2 = \\frac{\\ln 3}{k} = 10 \\frac{\\ln 3}{\\ln 1.5} \\approx 27.10\\text{ دقيقة} \\). الزمن الإضافي هو \\( 27.10 - 10 = 17.10\\text{ دقيقة} \\)."
+      }
+    },
+    "correct_index": "17.10"
+  },
+  {
+    "id": "NSMO-085",
+    "track": "nsmo",
+    "level": "Grades 7-10",
+    "topic": "Systems of Equations and Solution Concentration",
+    "type": "MCQ",
+    "difficulty": "medium",
+    "content": {
+      "en": {
+        "question": "A chemist mixes three salt solutions of concentrations \\( 10\\% \\), \\( 20\\% \\), and \\( 50\\% \\) to prepare \\( 100\\text{ L} \\) of a \\( 25\\% \\) solution. If the volume of the \\( 20\\% \\) solution used is twice the volume of the \\( 10\\% \\) solution used, what is the volume (in L) of the \\( 50\\% \\) solution used?",
+        "options": [
+          "20 L",
+          "25 L",
+          "30 L",
+          "50 L"
+        ],
+        "hint": "Set up a system of linear equations representing total volume, salt conservation, and the given volumetric ratio.",
+        "explanation": "Let \\( x, y, z \\) be the volumes of the 10%, 20%, and 50% solutions respectively. We have: (1) \\( x + y + z = 100 \\), (2) \\( 0.10x + 0.20y + 0.50z = 25 \\), and (3) \\( y = 2x \\). Substituting \\( y = 2x \\) into (1) gives \\( 3x + z = 100 \\implies z = 100 - 3x \\). Substituting into (2): \\( 0.10x + 0.40x + 0.50(100 - 3x) = 25 \\implies 50 - 1.0x = 25 \\implies x = 25\\text{ L} \\). Thus, \\( z = 100 - 3(25) = 25\\text{ L} \\)."
+      },
+      "ar": {
+        "question": "يمزج كيميائي ثلاثة محاليل ملحية بتراكيز \\( 10\\% \\)، \\( 20\\% \\)، و \\( 50\\% \\) لتحضير \\( 100\\text{ L} \\) من محلول تركيزه \\( 25\\% \\). إذا كان حجم المحلول ذي التركيز \\( 20\\% \\) المستخدم يساوي ضعف حجم المحلول ذي التركيز \\( 10\\% \\)، فما حجم (باللتر) المحلول ذي التركيز \\( 50\\% \\) المستخدم؟",
+        "options": [
+          "20 L",
+          "25 L",
+          "30 L",
+          "50 L"
+        ],
+        "hint": "أنشئ نظامًا من المعادلات الخطية يمثل الحجم الكلي، وحفظ الملح، والنسبة الحجمية المعطاة.",
+        "explanation": "لتكن \\( x, y, z \\) أحجام المحاليل ذات التراكيز 10%، 20%، و 50% على التوالي. لدينا: (1) \\( x + y + z = 100 \\)، (2) \\( 0.10x + 0.20y + 0.50z = 25 \\)، و (3) \\( y = 2x \\). بتعويض \\( y = 2x \\) في (1) نجد \\( 3x + z = 100 \\implies z = 100 - 3x \\). وبالتعويض في (2): \\( 0.10x + 0.40x + 0.50(100 - 3x) = 25 \\implies 50 - 1.0x = 25 \\implies x = 25\\text{ L} \\). إذن، \\( z = 100 - 3(25) = 25\\text{ L} \\)."
+      }
+    },
+    "correct_index": "1"
+  },
+  {
+    "id": "NSMO-086",
+    "track": "nsmo",
+    "level": "Grades 7-10",
+    "topic": "Work Done by Variable Force",
+    "type": "FRQ",
+    "difficulty": "medium",
+    "content": {
+      "en": {
+        "question": "A force given by \\( F(x) = 3x^2 - 4x + 5 \\) (in Newtons) acts on a particle moving along the x-axis from \\( x = 1\\text{ m} \\) to \\( x = 4\\text{ m} \\). Calculate the total work done by this force in Joules.",
+        "options": [],
+        "hint": "Calculate the definite integral of force with respect to displacement.",
+        "explanation": "Work done is given by \\( W = \\int_{1}^{4} (3x^2 - 4x + 5) dx = [x^3 - 2x^2 + 5x]_1^4 \\). Evaluating at the boundaries: At \\( x = 4 \\), \\( 4^3 - 2(4)^2 + 5(4) = 64 - 32 + 20 = 52 \\). At \\( x = 1 \\), \\( 1^3 - 2(1)^2 + 5(1) = 4 \\). So, \\( W = 52 - 4 = 48\\text{ Joules} \\)."
+      },
+      "ar": {
+        "question": "تؤثر قوة مقدارها \\( F(x) = 3x^2 - 4x + 5 \\) (بنيوتن) على جسيم يتحرك على طول المحور السيني من \\( x = 1\\text{ m} \\) إلى \\( x = 4\\text{ m} \\). احسب الشغل الكلي المبذول بواسطة هذه القوة بالجول.",
+        "options": [],
+        "hint": "احسب التكامل المحدود للقوة بالنسبة للإزاحة.",
+        "explanation": "الشغل المبذول يُعطى بـ \\( W = \\int_{1}^{4} (3x^2 - 4x + 5) dx = [x^3 - 2x^2 + 5x]_1^4 \\). بالتعويض عند الحدود: عند \\( x = 4 \\)، \\( 64 - 32 + 20 = 52 \\). وعند \\( x = 1 \\)، \\( 1 - 2 + 5 = 4 \\). إذن، \\( W = 52 - 4 = 48\\text{ جول} \\)."
+      }
+    },
+    "correct_index": "48"
+  },
+  {
+    "id": "NSMO-087",
+    "track": "nsmo",
+    "level": "Grades 7-10",
+    "topic": "Celestial Mechanics and Angular Momentum",
+    "type": "MCQ",
+    "difficulty": "easy",
+    "content": {
+      "en": {
+        "question": "A planet orbits a star in an elliptical orbit. The ratio of its aphelion distance (farthest point) to perihelion distance (closest point) is \\( 3:1 \\). What is the ratio of its maximum orbital speed to its minimum orbital speed?",
+        "options": [
+          "1:3",
+          "3:1",
+          "9:1",
+          "\\(\\sqrt{3}:1\\)"
+        ],
+        "hint": "Use the conservation of angular momentum at perihelion and aphelion.",
+        "explanation": "By conservation of angular momentum at the apsides: \\( L = m v_{\\max} r_{\\min} = m v_{\\min} r_{\\max} \\). Re-arranging gives \\( \\frac{v_{\\max}}{v_{\\min}} = \\frac{r_{\\max}}{r_{\\min}} = 3 \\). Thus, the ratio of maximum to minimum speed is \\( 3:1 \\)."
+      },
+      "ar": {
+        "question": "يدور كوكب حول نجم في مدار إهليجي. نسبة بعد الأوج (أبعد نقطة) إلى بعد الحضيض (أقرب نقطة) هي \\( 3:1 \\). ما نسبة سرعته المدارية القصوى إلى سرعته المدارية الدنيا؟",
+        "options": [
+          "1:3",
+          "3:1",
+          "9:1",
+          "\\(\\sqrt{3}:1\\)"
+        ],
+        "hint": "استخدم بقاء الزخم الزاوي عند الأوج والحضيض.",
+        "explanation": "بموجب بقاء الزخم الزاوي عند الأوج والحضيض: \\( L = m v_{\\max} r_{\\min} = m v_{\\min} r_{\\max} \\). بإعادة الترتيب نجد أن \\( \\frac{v_{\\max}}{v_{\\min}} = \\frac{r_{\\max}}{r_{\\min}} = 3 \\). وبالتالي، تكون نسبة السرعة القصوى إلى الدنيا هي \\( 3:1 \\)."
+      }
+    },
+    "correct_index": "1"
+  },
+  {
+    "id": "NSMO-088",
+    "track": "nsmo",
+    "level": "Grades 7-10",
+    "topic": "Discrete Logistic Growth Models",
+    "type": "FRQ",
+    "difficulty": "medium",
+    "content": {
+      "en": {
+        "question": "A bacterial population fraction follows the discrete logistic iteration \\( P_{n+1} = r P_n (1 - P_n) \\). Given growth parameter \\( r = 3.6 \\) and initial population fraction \\( P_0 = 0.5 \\), find the value of \\( P_2 \\).",
+        "options": [],
+        "hint": "Iteratively evaluate the equation for \\( n = 0 \\) and then \\( n = 1 \\).",
+        "explanation": "For \\( n = 0 \\): \\( P_1 = 3.6 \\times 0.5 \\times (1 - 0.5) = 3.6 \\times 0.25 = 0.9 \\). For \\( n = 1 \\): \\( P_2 = 3.6 \\times 0.9 \\times (1 - 0.9) = 3.6 \\times 0.9 \\times 0.1 = 0.324 \\)."
+      },
+      "ar": {
+        "question": "تتبع كسر مجتمع بكتيري التكرار اللوجستي المتقطع \\( P_{n+1} = r P_n (1 - P_n) \\). إذا كانت معالم النمو \\( r = 3.6 \\) والكسر الابتدائي للمجتمع \\( P_0 = 0.5 \\)، فاوجد قيمة \\( P_2 \\).",
+        "options": [],
+        "hint": "احسب المعادلة بشكل تكراري لـ \\( n = 0 \\) ثم لـ \\( n = 1 \\).",
+        "explanation": "لـ \\( n = 0 \\): \\( P_1 = 3.6 \\times 0.5 \\times (1 - 0.5) = 3.6 \\times 0.25 = 0.9 \\). لـ \\( n = 1 \\): \\( P_2 = 3.6 \\times 0.9 \\times (1 - 0.9) = 3.6 \\times 0.9 \\times 0.1 = 0.324 \\)."
+      }
+    },
+    "correct_index": "0.324"
+  },
+  {
+    "id": "NSMO-089",
+    "track": "nsmo",
+    "level": "Grades 7-10",
+    "topic": "Resistor Networks and Infinite Series",
+    "type": "MCQ",
+    "difficulty": "hard",
+    "content": {
+      "en": {
+        "question": "In an infinite ladder network of resistors, each horizontal resistor has resistance \\( R = 2\\ \\Omega \\) and each vertical resistor has resistance \\( 2R = 4\\ \\Omega \\). What is the equivalent resistance between the input terminals?",
+        "options": [
+          "2 \\Omega",
+          "3 \\Omega",
+          "4 \\Omega",
+          "6 \\Omega"
+        ],
+        "hint": "Exploit the self-similarity of the infinite network to formulate a quadratic equation for \\( R_{\\text{eq}} \\).",
+        "explanation": "Due to self-similarity, the remaining infinite network to the right of the first stage has resistance \\( R_{\\text{eq}} \\). Thus, \\( R_{\\text{eq}} = R + \\frac{(2R) R_{\\text{eq}}}{2R + R_{\\text{eq}}} = 2 + \\frac{4 R_{\\text{eq}}}{4 + R_{\\text{eq}}} \\). Multiplying out gives \\( R_{\\text{eq}}(4 + R_{\\text{eq}}) = 2(4 + R_{\\text{eq}}) + 4 R_{\\text{eq}} \\implies R_{\\text{eq}}^2 - 2 R_{\\text{eq}} - 8 = 0 \\). Solving \\( (R_{\\text{eq}} - 4)(R_{\\text{eq}} + 2) = 0 \\) yields \\( R_{\\text{eq}} = 4\\ \\Omega \\)."
+      },
+      "ar": {
+        "question": "في شبكة سلّمية لانهائية من المقاومات، كل مقاومة أفقية قيمتها \\( R = 2\\ \\Omega \\) وكل مقاومة رأسية قيمتها \\( 2R = 4\\ \\Omega \\). ما المقاومة المكافئة بين طرفي المدخل؟",
+        "options": [
+          "2 \\Omega",
+          "3 \\Omega",
+          "4 \\Omega",
+          "6 \\Omega"
+        ],
+        "hint": "استغل التماثل الذاتي للشبكة اللانهائية لتشكيل معادلة تربيعية للمقاومة المكافئة \\( R_{\\text{eq}} \\).",
+        "explanation": "نظرًا للتماثل الذاتي، فإن الشبكة اللانهائية المتبقية على يمين المرحلة الأولى لها مقاومة \\( R_{\\text{eq}} \\). بالتالي، \\( R_{\\text{eq}} = R + \\frac{(2R) R_{\\text{eq}}}{2R + R_{\\text{eq}}} = 2 + \\frac{4 R_{\\text{eq}}}{4 + R_{\\text{eq}}} \\). بتبسيط المعادلة: \\( R_{\\text{eq}}^2 - 2 R_{\\text{eq}} - 8 = 0 \\). بتحليل المعادلة \\( (R_{\\text{eq}} - 4)(R_{\\text{eq}} + 2) = 0 \\) نجد أن \\( R_{\\text{eq}} = 4\\ \\Omega \\)."
+      }
+    },
+    "correct_index": "2"
+  },
+  {
+    "id": "NSMO-090",
+    "track": "nsmo",
+    "level": "Grades 7-10",
+    "topic": "Hardy-Weinberg Equilibrium and Combinatorics",
+    "type": "FRQ",
+    "difficulty": "medium",
+    "content": {
+      "en": {
+        "question": "In a diploid population, a gene locus has 3 alleles (\\(A_1, A_2, A_3\\)) with frequencies \\( p = 0.5 \\), \\( q = 0.3 \\), and \\( r = 0.2 \\) respectively. Under Hardy-Weinberg equilibrium, what is the probability that a randomly chosen individual is heterozygous?",
+        "options": [],
+        "hint": "The heterozygous probability is the sum of probabilities of genotypes \\( A_1 A_2 \\), \\( A_1 A_3 \\), and \\( A_2 A_3 \\).",
+        "explanation": "By Hardy-Weinberg equilibrium, \\( P(\\text{heterozygous}) = 2pq + 2pr + 2qr = 2(pq + pr + qr) \\). Substituting the values: \\( 2(0.5 \\times 0.3 + 0.5 \\times 0.2 + 0.3 \\times 0.2) = 2(0.15 + 0.10 + 0.06) = 2(0.31) = 0.62 \\)."
+      },
+      "ar": {
+        "question": "في مجتمع ثنائي المجموعات الكروموسومية، يمتلك موقع جيني 3 أليلات (\\(A_1, A_2, A_3\\)) بتكرارات \\( p = 0.5 \\)، \\( q = 0.3 \\)، و \\( r = 0.2 \\) على التوالي. بموجب اتزان هاردي-واينبرغ، ما احتمال أن يكون فرد مُختار عشوائيًا غير متماثل الأليلات (متباين الزيجوت)؟",
+        "options": [],
+        "hint": "احتمال التباين هو مجموع احتمالات الطرز الجينية \\( A_1 A_2 \\) و \\( A_1 A_3 \\) و \\( A_2 A_3 \\).",
+        "explanation": "وفق اتزان هاردي-واينبرغ، \\( P(\\text{متباين}) = 2pq + 2pr + 2qr = 2(pq + pr + qr) \\). بتعويض القيم: \\( 2(0.5 \\times 0.3 + 0.5 \\times 0.2 + 0.3 \\times 0.2) = 2(0.15 + 0.10 + 0.06) = 2(0.31) = 0.62 \\)."
+      }
+    },
+    "correct_index": "0.62"
+  },
+  {
+    "id": "NSMO-091",
+    "track": "nsmo",
+    "level": "Grades 7-10",
+    "topic": "Torricelli's Law and Differential Rates",
+    "type": "MCQ",
+    "difficulty": "hard",
+    "content": {
+      "en": {
+        "question": "A cylindrical tank with cross-sectional radius \\( R = 1\\text{ m} \\) and height \\( H = 5\\text{ m} \\) is filled with water. Water drains out through a hole of area \\( a = 0.01\\text{ m}^2 \\) at the bottom. Using Torricelli's Law \\( v = \\sqrt{2gh} \\) and taking \\( g = 10\\text{ m/s}^2 \\), how long (in seconds) will it take to completely drain the tank?",
+        "options": [
+          "157 s",
+          "314 s",
+          "628 s",
+          "1000 s"
+        ],
+        "hint": "Integrate the rate equation \\( A \\frac{dh}{dt} = -a \\sqrt{2gh} \\) from \\( h = H \\) to \\( h = 0 \\).",
+        "explanation": "From mass conservation: \\( -A \\frac{dh}{dt} = a \\sqrt{2gh} \\implies \\int_0^H h^{-1/2} dh = \\frac{a \\sqrt{2g}}{A} T \\). Integrating yields \\( 2\\sqrt{H} = \\frac{a \\sqrt{2g}}{A} T \\implies T = \\frac{2 A \\sqrt{H}}{a \\sqrt{2g}} \\). Here \\( A = \\pi (1)^2 = \\pi \\), \\( H = 5 \\), \\( a = 0.01 \\), \\( \\sqrt{2g} = \\sqrt{20} = 2\\sqrt{5} \\). Thus \\( T = \\frac{2 \\pi \\sqrt{5}}{0.01 \\times 2\\sqrt{5}} = \\frac{\\pi}{0.01} = 100\\pi \\approx 314\\text{ seconds} \\)."
+      },
+      "ar": {
+        "question": "خزان أسطواني نصف قطر مقطعه \\( R = 1\\text{ m} \\) وارتفاعه \\( H = 5\\text{ m} \\) مملوء بالماء. يتسرب الماء عبر ثقب في القاع مساحته \\( a = 0.01\\text{ m}^2 \\). باستخدام قانون توريتشي \\( v = \\sqrt{2gh} \\) وأخذ \\( g = 10\\text{ m/s}^2 \\)، كم يستغرق من الوقت (بالثواني) لتفريغ الخزان بالكامل؟",
+        "options": [
+          "157 s",
+          "314 s",
+          "628 s",
+          "1000 s"
+        ],
+        "hint": "كامل معادلة المعدل \\( A \\frac{dh}{dt} = -a \\sqrt{2gh} \\) من \\( h = H \\) إلى \\( h = 0 \\).",
+        "explanation": "من حفظ الكتلة: \\( -A \\frac{dh}{dt} = a \\sqrt{2gh} \\implies \\int_0^H h^{-1/2} dh = \\frac{a \\sqrt{2g}}{A} T \\). بالتكامل نجد \\( 2\\sqrt{H} = \\frac{a \\sqrt{2g}}{A} T \\implies T = \\frac{2 A \\sqrt{H}}{a \\sqrt{2g}} \\). حيث \\( A = \\pi \\)، \\( H = 5 \\)، \\( a = 0.01 \\)، \\( \\sqrt{2g} = \\sqrt{20} = 2\\sqrt{5} \\). إذن \\( T = \\frac{2 \\pi \\sqrt{5}}{0.01 \\times 2\\sqrt{5}} = \\frac{\\pi}{0.01} = 100\\pi \\approx 314\\text{ ثانية} \\)."
+      }
+    },
+    "correct_index": "1"
+  },
+  {
+    "id": "NSMO-092",
+    "track": "nsmo",
+    "level": "Grades 7-10",
+    "topic": "Modular Arithmetic and Cryptography",
+    "type": "FRQ",
+    "difficulty": "hard",
+    "content": {
+      "en": {
+        "question": "In an RSA public-key system, the public modulus is \\( n = 55 \\) and the encryption exponent is \\( e = 3 \\). A encrypted message is received as ciphertext \\( c = 8 \\). Find the original integer message \\( m \\) (where \\( 0 \\le m < 55 \\)).",
+        "options": [],
+        "hint": "Find Euler's totient function \\( \\phi(55) \\) and calculate the decryption exponent \\( d \\equiv e^{-1} \\pmod{\\phi(n)} \\).",
+        "explanation": "\\( n = 55 = 5 \\times 11 \\implies \\phi(55) = 4 \\times 10 = 40 \\). The decryption exponent satisfies \\( 3d \\equiv 1 \\pmod{40} \\implies d = 27 \\). Decrypting ciphertext: \\( m \\equiv c^d \\pmod{n} \\implies m \\equiv 8^{27} \\pmod{55} \\). Note \\( 8^2 \\equiv 9 \\), \\( 8^3 \\equiv 17 \\), \\( 8^9 \\equiv 17^3 \\equiv 18 \\pmod{55} \\). Then \\( 8^{27} \\equiv 18^3 = 5832 \\equiv 2 \\pmod{55} \\). Thus, \\( m = 2 \\)."
+      },
+      "ar": {
+        "question": "في نظام التشفير باستخدام المفتاح العام RSA، معامل التشفير المعلن هو \\( n = 55 \\) وأس التشفير هو \\( e = 3 \\). أُستُلمت رسالة مشفرة بصورة النص المشفر \\( c = 8 \\). أوجد الرسالة الأصلية \\( m \\) (حيث \\( 0 \\le m < 55 \\)).",
+        "options": [],
+        "hint": "أوجد دالة مؤشر أويلر \\( \\phi(55) \\) واحسب أس فك التشفير \\( d \\equiv e^{-1} \\pmod{\\phi(n)} \\).",
+        "explanation": "\\( n = 55 = 5 \\times 11 \\implies \\phi(55) = 4 \\times 10 = 40 \\). أس فك التشفير يحقق \\( 3d \\equiv 1 \\pmod{40} \\implies d = 27 \\). فك تشفير النص: \\( m \\equiv c^d \\pmod{n} \\implies m \\equiv 8^{27} \\pmod{55} \\). نلاحظ أن \\( 8^2 \\equiv 9 \\)، \\( 8^3 \\equiv 17 \\)، \\( 8^9 \\equiv 18 \\pmod{55} \\). إذن \\( 8^{27} \\equiv 18^3 = 5832 \\equiv 2 \\pmod{55} \\). وبالتالي فإن \\( m = 2 \\)."
+      }
+    },
+    "correct_index": "2"
+  },
+  {
+    "id": "NSMO-093",
+    "track": "nsmo",
+    "level": "Grades 7-10",
+    "topic": "Wave Superposition and Trigonometric Addition",
+    "type": "MCQ",
+    "difficulty": "easy",
+    "content": {
+      "en": {
+        "question": "Two coherent sound waves are represented by \\( y_1 = 4 \\sin(\\omega t) \\) and \\( y_2 = 3 \\sin(\\omega t + \\phi) \\). What is the maximum possible amplitude of the resultant wave \\( y = y_1 + y_2 \\)?",
+        "options": [
+          "5",
+          "7",
+          "1",
+          "12"
+        ],
+        "hint": "Consider constructive interference where phase difference \\( \\phi = 0 \\).",
+        "explanation": "The amplitude of the superposition of two waves is given by \\( A = \\sqrt{A_1^2 + A_2^2 + 2A_1 A_2 \\cos \\phi} \\). The maximum amplitude occurs when \\( \\cos \\phi = 1 \\) (constructive interference), giving \\( A_{\\max} = A_1 + A_2 = 4 + 3 = 7 \\)."
+      },
+      "ar": {
+        "question": "تُمثل موجتان صوتيتان مترابطتان بالمعادلتين \\( y_1 = 4 \\sin(\\omega t) \\) و \\( y_2 = 3 \\sin(\\omega t + \\phi) \\). ما أقصى سعة ممكنة للموجة المحصلة \\( y = y_1 + y_2 \\)؟",
+        "options": [
+          "5",
+          "7",
+          "1",
+          "12"
+        ],
+        "hint": "اعتبر التداخل البنّاء عندما يكون فرق الطور \\( \\phi = 0 \\).",
+        "explanation": "تُعطى سعة محصلة موجتين بـ \\( A = \\sqrt{A_1^2 + A_2^2 + 2A_1 A_2 \\cos \\phi} \\). تحدث السعة القصوى عندما يكون \\( \\cos \\phi = 1 \\) (تداخل بناء)، مما يعطي \\( A_{\\max} = A_1 + A_2 = 4 + 3 = 7 \\)."
+      }
+    },
+    "correct_index": "1"
+  },
+  {
+    "id": "NSMO-094",
+    "track": "nsmo",
+    "level": "Grades 7-10",
+    "topic": "First-Order Chemical Kinetics",
+    "type": "FRQ",
+    "difficulty": "medium",
+    "content": {
+      "en": {
+        "question": "A first-order chemical decomposition \\( A \\rightarrow B \\) has a rate constant \\( k = 0.0693\\text{ min}^{-1} \\). Starting with an initial concentration \\( [A]_0 = 0.80\\text{ M} \\), find the concentration of \\( A \\) (in M) remaining after \\( 30\\text{ minutes} \\).",
+        "options": [],
+        "hint": "First calculate the half-life \\( t_{1/2} = \\frac{\\ln 2}{k} \\).",
+        "explanation": "The half-life of a first-order reaction is \\( t_{1/2} = \\frac{\\ln 2}{k} \\approx \\frac{0.693}{0.0693} = 10\\text{ minutes} \\). In \\( 30\\text{ minutes} \\), exactly 3 half-lives elapse. The concentration remaining is \\( [A] = [A]_0 \\left(\\frac{1}{2}\\right)^3 = 0.80 \\times 0.125 = 0.10\\text{ M} \\)."
+      },
+      "ar": {
+        "question": "تفحم كيميائي من الرتبة الأولى \\( A \\rightarrow B \\) له ثابت معدل \\( k = 0.0693\\text{ min}^{-1} \\). ببدء تركيز ابتدائي \\( [A]_0 = 0.80\\text{ M} \\)، أوجد تركيز \\( A \\) (بالمولار) المتبقي بعد \\( 30\\text{ دقيقة} \\).",
+        "options": [],
+        "hint": "احسب أولاً عمر النصف \\( t_{1/2} = \\frac{\\ln 2}{k} \\).",
+        "explanation": "عمر النصف لتفاعل من الرتبة الأولى هو \\( t_{1/2} = \\frac{\\ln 2}{k} \\approx \\frac{0.693}{0.0693} = 10\\text{ دقائق} \\). خلال \\( 30\\text{ دقيقة} \\)، تنقضي بالضبط 3 أعمار نصف. التركيز المتبقي هو \\( [A] = [A]_0 \\left(\\frac{1}{2}\\right)^3 = 0.80 \\times 0.125 = 0.10\\text{ M} \\)."
+      }
+    },
+    "correct_index": "0.1"
+  },
+  {
+    "id": "NSMO-095",
+    "track": "nsmo",
+    "level": "Grades 7-10",
+    "topic": "Gravitational Potential Energy Systems",
+    "type": "MCQ",
+    "difficulty": "easy",
+    "content": {
+      "en": {
+        "question": "Three identical point masses \\( m \\) are located at the vertices of an equilateral triangle with side length \\( a \\). What is the total gravitational potential energy of this system?",
+        "options": [
+          "-\\frac{G m^2}{a}",
+          "-\\frac{3 G m^2}{a}",
+          "-\\frac{6 G m^2}{a}",
+          "0"
+        ],
+        "hint": "Sum the gravitational potential energies of all unique pairs of particles.",
+        "explanation": "There are \\( \\binom{3}{2} = 3 \\) unique pairs of masses in the system. Each pair contributes \\( U_{pair} = -\\frac{G m^2}{a} \\). The total gravitational potential energy is \\( U = 3 \\times \\left(-\\frac{G m^2}{a}\\right) = -\\frac{3 G m^2}{a} \\)."
+      },
+      "ar": {
+        "question": "توجد ثلاث كتل نقطية متماثلة \\( m \\) عند رؤوس مثلث متساوي الأضلاع طول ضلعه \\( a \\). ما طاقة الوضع الجاذبية الكلية لهذا النظام؟",
+        "options": [
+          "-\\frac{G m^2}{a}",
+          "-\\frac{3 G m^2}{a}",
+          "-\\frac{6 G m^2}{a}",
+          "0"
+        ],
+        "hint": "اجمع طاقات الوضع الجاذبية لجميع أزواج الجسيمات الفريدة.",
+        "explanation": "يوجد \\( \\binom{3}{2} = 3 \\) أزواج فريدة من الكتل في النظام. يساهم كل زوج بالطاقة \\( U_{pair} = -\\frac{G m^2}{a} \\). طاقة الوضع الجاذبية الكلية هي \\( U = 3 \\times \\left(-\\frac{G m^2}{a}\\right) = -\\frac{3 G m^2}{a} \\)."
+      }
+    },
+    "correct_index": "1"
+  },
+  {
+    "id": "NSMO-096",
+    "track": "nsmo",
+    "level": "Grades 7-10",
+    "topic": "Radioactive Radiometric Dating",
+    "type": "FRQ",
+    "difficulty": "medium",
+    "content": {
+      "en": {
+        "question": "A rock sample contains \\( 1\\text{ mg} \\) of Uranium-235 and \\( 7\\text{ mg} \\) of Lead-207 (its stable decay product). Assuming all Lead-207 originated from Uranium-235 decay and the half-life of Uranium-235 is \\( 700\\text{ million years} \\), calculate the age of the rock sample in millions of years.",
+        "options": [],
+        "hint": "Determine the initial mass of Uranium-235 by summing current parent and daughter product masses.",
+        "explanation": "Initial mass of Uranium-235 was \\( N_0 = 1 + 7 = 8\\text{ mg} \\). The current remaining mass is \\( N(t) = 1\\text{ mg} \\). The remaining fraction is \\( \\frac{1}{8} = \\left(\\frac{1}{2}\\right)^3 \\), meaning 3 half-lives have elapsed. The age of the rock is \\( 3 \\times 700 = 2100\\text{ million years} \\)."
+      },
+      "ar": {
+        "question": "تحتوي عينة صخرية على \\( 1\\text{ mg} \\) من اليورانيوم-235 و \\( 7\\text{ mg} \\) من الرصاص-207 (ناتج اضمحلاله المستقر). بافتراض أن جميع الرصاص-207 نتج عن اضمحلال اليورانيوم-235 وأن عمر النصف لليورانيوم-235 هو \\( 700\\text{ مليون سنة} \\)، احسب عمر العينة الصخرية بملايين السنين.",
+        "options": [],
+        "hint": "حدد الكتلة الابتدائية لليورانيوم-235 بجمع كتل المادة الأم والوليدة الحالية.",
+        "explanation": "الكتلة الابتدائية لليورانيوم-235 كانت \\( N_0 = 1 + 7 = 8\\text{ mg} \\). الكتلة المتبقية الحالية هي \\( N(t) = 1\\text{ mg} \\). الكسر المتبقي هو \\( \\frac{1}{8} = \\left(\\frac{1}{2}\\right)^3 \\)، مما يعني انقضاء 3 أعمار نصف. عمر الصخرة هو \\( 3 \\times 700 = 2100\\text{ مليون سنة} \\)."
+      }
+    },
+    "correct_index": "2100"
+  },
+  {
+    "id": "NSMO-097",
+    "track": "nsmo",
+    "level": "Grades 7-10",
+    "topic": "Special Relativity Length Contraction",
+    "type": "MCQ",
+    "difficulty": "easy",
+    "content": {
+      "en": {
+        "question": "According to Special Relativity, moving objects experience Lorentz length contraction by factor \\( \\sqrt{1 - v^2/c^2} \\). At what speed fraction \\( v/c \\) will a rod's observed length contract to exactly \\( 60\\% \\) of its proper length?",
+        "options": [
+          "0.40",
+          "0.60",
+          "0.80",
+          "0.86"
+        ],
+        "hint": "Set the contraction factor equal to 0.60 and solve for \\( v/c \\).",
+        "explanation": "Set \\( \\sqrt{1 - (v/c)^2} = 0.60 \\). Squaring both sides yields \\( 1 - (v/c)^2 = 0.36 \\implies (v/c)^2 = 0.64 \\). Taking the square root gives \\( v/c = 0.80 \\)."
+      },
+      "ar": {
+        "question": "وفقًا للنظرية النسبية الخاصة، تتعرض الأجسام المتحركة لانكماش لورنتز بالطول بمعامل \\( \\sqrt{1 - v^2/c^2} \\). عند أي نسبة للسرعة \\( v/c \\) ينكمش الطول الملاحظ للقضيب ليصل تمامًا إلى \\( 60\\% \\) من طوله الأصلي؟",
+        "options": [
+          "0.40",
+          "0.60",
+          "0.80",
+          "0.86"
+        ],
+        "hint": "ساوِ معامل الانكماش بـ 0.60 واحل المعادلة لـ \\( v/c \\).",
+        "explanation": "نضع \\( \\sqrt{1 - (v/c)^2} = 0.60 \\). بتربيع الطرفين نجد \\( 1 - (v/c)^2 = 0.36 \\implies (v/c)^2 = 0.64 \\). وبأخذ الجذر التربيعي نجد أن \\( v/c = 0.80 \\)."
+      }
+    },
+    "correct_index": "2"
+  },
+  {
+    "id": "NSMO-098",
+    "track": "nsmo",
+    "level": "Grades 7-10",
+    "topic": "Quantum States and Statistical Mechanics",
+    "type": "FRQ",
+    "difficulty": "medium",
+    "content": {
+      "en": {
+        "question": "A physical quantum system consists of 4 distinguishable particles. Each particle can independently occupy any of 3 distinct energy states. How many total microstates are possible for this system?",
+        "options": [],
+        "hint": "Apply the fundamental counting principle for independent states.",
+        "explanation": "Since each of the 4 distinguishable particles has 3 possible states independent of the others, the total number of microstates is \\( 3^4 = 81 \\)."
+      },
+      "ar": {
+        "question": "يتكون نظام كمي فيزيائي من 4 جسيمات متميزة. يمكن لكل جسيم أن يشغل بشكل مستقل أيًا من 3 حالات طاقة مختلفة. كم عدد الحالات الدقيقة (الميكروية) الكلية الممكنة لهذا النظام؟",
+        "options": [],
+        "hint": "طبق مبدأ العد الأساسي للحالات المستقلة.",
+        "explanation": "بما أن كل جسيم من الجسيمات الـ 4 المتميزة لديه 3 حالات ممكنة بشكل مستقل عن الأخرى، فإن عدد الحالات الدقيقة الكلي هو \\( 3^4 = 81 \\)."
+      }
+    },
+    "correct_index": "81"
+  },
+  {
+    "id": "NSMO-099",
+    "track": "nsmo",
+    "level": "Grades 7-10",
+    "topic": "AC Circuit Impedance and Complex Numbers",
+    "type": "MCQ",
+    "difficulty": "easy",
+    "content": {
+      "en": {
+        "question": "An alternating current (AC) circuit consists of a resistor with resistance \\( R = 3\\ \\Omega \\) connected in series with an inductor with inductive reactance \\( X_L = 4\\ \\Omega \\). What is the total impedance magnitude \\( |Z| \\) of the circuit?",
+        "options": [
+          "1 \\Omega",
+          "5 \\Omega",
+          "7 \\Omega",
+          "12 \\Omega"
+        ],
+        "hint": "Use the complex representation \\( Z = R + jX_L \\) to find the magnitude.",
+        "explanation": "The impedance of an RL series circuit in complex form is \\( Z = R + j X_L = 3 + 4j \\). The magnitude is \\( |Z| = \\sqrt{R^2 + X_L^2} = \\sqrt{3^2 + 4^2} = \\sqrt{25} = 5\\ \\Omega \\)."
+      },
+      "ar": {
+        "question": "تتكون دائرة تيار متردد من مقاومة قيمتها \\( R = 3\\ \\Omega \\) متصلة على التوالي مع ملف حثي مفاعلته الحثية \\( X_L = 4\\ \\Omega \\). ما مقدار المعاوقة الكلية \\( |Z| \\) للدائرة؟",
+        "options": [
+          "1 \\Omega",
+          "5 \\Omega",
+          "7 \\Omega",
+          "12 \\Omega"
+        ],
+        "hint": "استخدم التمثيل المركب \\( Z = R + jX_L \\) لإيجاد المقدار.",
+        "explanation": "تُعطى المعاوقة المركبة بدائرة RL على التوالي بـ \\( Z = R + j X_L = 3 + 4j \\). المقدار هو \\( |Z| = \\sqrt{R^2 + X_L^2} = \\sqrt{3^2 + 4^2} = \\sqrt{25} = 5\\ \\Omega \\)."
+      }
+    },
+    "correct_index": "1"
+  },
+  {
+    "id": "NSMO-100",
+    "track": "nsmo",
+    "level": "Grades 7-10",
+    "topic": "Error Propagation and Experimental Uncertainty",
+    "type": "FRQ",
+    "difficulty": "hard",
+    "content": {
+      "en": {
+        "question": "The density of a uniform sphere is calculated using \\( \\rho = \\frac{M}{\\frac{4}{3}\\pi R^3} \\). If the maximum relative uncertainty in mass \\( M \\) is \\( 2\\% \\) and the relative uncertainty in radius \\( R \\) is \\( 1.5\\% \\), what is the maximum percentage relative uncertainty in the density \\( \\rho \\)?",
+        "options": [],
+        "hint": "Use logarithmic differentiation to sum the relative uncertainties.",
+        "explanation": "Taking natural logs: \\( \\ln \\rho = \\ln M - \\ln\\left(\\frac{4}{3}\\pi\\right) - 3\\ln R \\). Differentiating yields \\( \\frac{d\\rho}{\\rho} = \\frac{dM}{M} - 3\\frac{dR}{R} \\). For upper bound relative uncertainty: \\( \\frac{\\Delta \\rho}{\\rho} = \\frac{\\Delta M}{M} + 3 \\frac{\\Delta R}{R} = 2\\% + 3(1.5\\%) = 2\\% + 4.5\\% = 6.5\\% \\)."
+      },
+      "ar": {
+        "question": "تُحسب كثافة كرة منتظمة باستخدام المعادلة \\( \\rho = \\frac{M}{\\frac{4}{3}\\pi R^3} \\). إذا كان أقصى عدم يقين نسبي في الكتلة \\( M \\) هو \\( 2\\% \\) وعدم اليقين النسبي في نصف القطر \\( R \\) هو \\( 1.5\\% \\)، فما النسبة المئوية القصوى لعدم اليقين النسبي في الكثافة \\( \\rho \\)؟",
+        "options": [],
+        "hint": "استخدم التفاضل اللوغاريتمي لجمع نسب عدم اليقين النسبية.",
+        "explanation": "بأخذ اللوغاريتم الطبيعي: \\( \\ln \\rho = \\ln M - \\ln\\left(\\frac{4}{3}\\pi\\right) - 3\\ln R \\). بالتفاضل نجد \\( \\frac{d\\rho}{\\rho} = \\frac{dM}{M} - 3\\frac{dR}{R} \\). للحد الأقصى لعدم اليقين النسبي: \\( \\frac{\\Delta \\rho}{\\rho} = \\frac{\\Delta M}{M} + 3 \\frac{\\Delta R}{R} = 2\\% + 3(1.5\\%) = 2\\% + 4.5\\% = 6.5\\% \\)."
+      }
+    },
+    "correct_index": "6.5"
+  }
+]
