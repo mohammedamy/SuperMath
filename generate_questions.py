@@ -153,6 +153,11 @@ def main():
                 print(f"Error generating batch for {track_id}: {e}", flush=True)
                 print("Retrying in 10 seconds...", flush=True)
                 time.sleep(10)
+        
+        # Track finished, push to git
+        if current_count >= TOTAL_WANTED:
+            print(f"[{track_id}] Reached target! Pushing to GitHub...", flush=True)
+            os.system(f"git add {file_path} && git commit -m 'Auto-push {track_id} track (100 questions)' && git push origin main")
 
 if __name__ == "__main__":
     print("Starting the Math Database Generation Protocol...", flush=True)
