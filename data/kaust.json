@@ -21,5 +21,2873 @@
       }
     },
     "correct_index": "336"
+  },
+  {
+    "id": "KAUST-001",
+    "track": "kaust",
+    "level": "High School (Gifted)",
+    "topic": "Applied Probability & Markov Chains",
+    "type": "MCQ",
+    "difficulty": "hard",
+    "content": {
+      "en": {
+        "question": "A wireless sensor node alternates between active state \\( A \\) and sleep state \\( B \\). The state transition matrix is given by \\( P = \\begin{pmatrix} 0.7 & 0.3 \\\\ 0.4 & 0.6 \\end{pmatrix} \\), where \\( P_{ij} \\) is the probability of transitioning from state \\( i \\) to state \\( j \\). What is the long-term steady-state probability that the sensor node is in state \\( A \\)?",
+        "options": [
+          "\\( \\frac{3}{7} \\)",
+          "\\( \\frac{4}{7} \\)",
+          "\\( \\frac{3}{5} \\)",
+          "\\( \\frac{2}{3} \\)"
+        ],
+        "hint": "Set up the steady-state equation \\( \\pi P = \\pi \\) subject to \\( \\pi_A + \\pi_B = 1 \\).",
+        "explanation": "Let \\( \\pi = [\\pi_A, \\pi_B] \\) be the stationary distribution. Then \\( 0.7 \\pi_A + 0.4 \\pi_B = \\pi_A \\), which simplifies to \\( 0.4 \\pi_B = 0.3 \\pi_A \\), or \\( \\pi_B = \\frac{3}{4} \\pi_A \\). Using \\( \\pi_A + \\pi_B = 1 \\), we get \\( \\pi_A + \\frac{3}{4} \\pi_A = 1 \\implies \\frac{7}{4} \\pi_A = 1 \\implies \\pi_A = \\frac{4}{7} \\)."
+      },
+      "ar": {
+        "question": "يتناوب موجه استشعار لاسلكي بين الحالة النشطة \\( A \\) وحالة الخمول \\( B \\). مصفوفة الانتقال للحالة هي \\( P = \\begin{pmatrix} 0.7 & 0.3 \\\\ 0.4 & 0.6 \\end{pmatrix} \\)، حيث \\( P_{ij} \\) هو احتمال الانتقال من الحالة \\( i \\) إلى الحالة \\( j \\). ما هو احتمال المستقر على المدى الطويل لوجود عقدة الاستشعار في الحالة \\( A \\)؟",
+        "options": [
+          "\\( \\frac{3}{7} \\)",
+          "\\( \\frac{4}{7} \\)",
+          "\\( \\frac{3}{5} \\)",
+          "\\( \\frac{2}{3} \\)"
+        ],
+        "hint": "ضع معادلة الحالة المستقرة \\( \\pi P = \\pi \\) بشرط \\( \\pi_A + \\pi_B = 1 \\).",
+        "explanation": "لتكن \\( \\pi = [\\pi_A, \\pi_B] \\) التوزيع المستقر. إذن \\( 0.7 \\pi_A + 0.4 \\pi_B = \\pi_A \\)، وتبسيطها يقتضي \\( 0.4 \\pi_B = 0.3 \\pi_A \\)، أي \\( \\pi_B = \\frac{3}{4} \\pi_A \\). باستخدام \\( \\pi_A + \\pi_B = 1 \\)، نحصل على \\( \\pi_A = \\frac{4}{7} \\)."
+      }
+    },
+    "correct_index": "1"
+  },
+  {
+    "id": "KAUST-002",
+    "track": "kaust",
+    "level": "High School (Gifted)",
+    "topic": "Number Theory",
+    "type": "FRQ",
+    "difficulty": "hard",
+    "content": {
+      "en": {
+        "question": "Find the smallest positive integer \\( n \\) such that \\( 17n \\equiv 1 \\pmod{1001} \\).",
+        "options": [],
+        "hint": "Use the Extended Euclidean Algorithm to compute the modular inverse of 17 modulo 1001.",
+        "explanation": "Applying the Euclidean Algorithm: \\( 1001 = 17 \\times 58 + 15 \\), \\( 17 = 15 \\times 1 + 2 \\), \\( 15 = 2 \\times 7 + 1 \\). Working backwards: \\( 1 = 15 - 2(7) = 15 - (17 - 15)(7) = 8(15) - 7(17) = 8(1001 - 58 \\times 17) - 7(17) = 8(1001) - 471(17) \\). Thus, \\( -471 \\times 17 \\equiv 1 \\pmod{1001} \\). The positive representative modulo 1001 is \\( -471 + 1001 = 530 \\)."
+      },
+      "ar": {
+        "question": "أوجد أصغر عدد صحيح موجب \\( n \\) بحيث تحقق المعادلة: \\( 17n \\equiv 1 \\pmod{1001} \\).",
+        "options": [],
+        "hint": "استخدم خوارزمية إقليدس الممتدة لحساب المعكوس الضربي لـ 17 بمقياس 1001.",
+        "explanation": "بتطبيق خوارزمية إقليدس: \\( 1001 = 17 \\times 58 + 15 \\)، \\( 17 = 15 \\times 1 + 2 \\)، \\( 15 = 2 \\times 7 + 1 \\). بالتعويض العكسي نحصل على: \\( 1 = 8(1001) - 471(17) \\). وبالتالي \\( -471 \\times 17 \\equiv 1 \\pmod{1001} \\). العدد الموجب الأصغر بمقياس 1001 هو \\( -471 + 1001 = 530 \\)."
+      }
+    },
+    "correct_index": "530"
+  },
+  {
+    "id": "KAUST-003",
+    "track": "kaust",
+    "level": "High School (Gifted)",
+    "topic": "Graph Theory",
+    "type": "MCQ",
+    "difficulty": "hard",
+    "content": {
+      "en": {
+        "question": "A connected simple graph has 10 vertices and 22 edges. What is the minimum possible number of vertices in this graph that have degree at least 5?",
+        "options": [
+          "1",
+          "2",
+          "3",
+          "4"
+        ],
+        "hint": "Use the Handshaking Lemma: the sum of degrees is twice the number of edges, which is 44.",
+        "explanation": "The sum of all degrees is \\( 2 \\times 22 = 44 \\). Let \\( k \\) be the number of vertices with degree \\( \\ge 5 \\). The maximum degree of any vertex in a simple graph with 10 vertices is 9. Therefore, the sum of degrees is at most \\( 9k + 4(10-k) = 5k + 40 \\). We require \\( 5k + 40 \\ge 44 \\implies 5k \\ge 4 \\implies k \\ge 1 \\). A valid graph with degree sequence (9, 4, 4, 4, 4, 4, 4, 4, 4, 3) exists, so the minimum is 1."
+      },
+      "ar": {
+        "question": "رسم بياني بسيط ومتصل يتكون من 10 رؤوس و22 ضلعًا. ما هو أقل عدد ممكن من الرؤوس التي تملك درجة (degree) لا تقل عن 5؟",
+        "options": [
+          "1",
+          "2",
+          "3",
+          "4"
+        ],
+        "hint": "استخدم مبرهنة المصافحة: مجموع الدرجات يساوي ضعف عدد الأضلاع، أي 44.",
+        "explanation": "مجموع الدرجات لجميع الرؤوس يساوي \\( 2 \\times 22 = 44 \\). ليكن \\( k \\) عدد الرؤوس ذات الدرجة \\( \\ge 5 \\). أقصى درجة لرأس في رسم بياني بسيط ذي 10 رؤوس هي 9. بالتالي المجموع الأقصى للدرجات هو \\( 9k + 4(10-k) = 5k + 40 \\). يلزم أن يكون \\( 5k + 40 \\ge 44 \\implies k \\ge 1 \\). توجد متتالية درجات صالحة وهي (9, 4, 4, 4, 4, 4, 4, 4, 4, 3)، لذا فإن الحد الأدنى هو 1."
+      }
+    },
+    "correct_index": "0"
+  },
+  {
+    "id": "KAUST-004",
+    "track": "kaust",
+    "level": "High School (Gifted)",
+    "topic": "Combinatorics & Recurrences",
+    "type": "FRQ",
+    "difficulty": "hard",
+    "content": {
+      "en": {
+        "question": "A binary string is called valid if it does not contain three consecutive 1s. How many valid binary strings of length 12 are there?",
+        "options": [],
+        "hint": "Set up a linear recurrence relation \\( a_n = a_{n-1} + a_{n-2} + a_{n-3} \\).",
+        "explanation": "Let \\( a_n \\) be the number of valid binary strings of length \\( n \\). By ending conditions: a string can end in 0 (followed by valid string of length \\( n-1 \\)), 01 (valid string of length \\( n-2 \\)), or 011 (valid string of length \\( n-3 \\)). Thus \\( a_n = a_{n-1} + a_{n-2} + a_{n-3} \\). Base cases: \\( a_0 = 1, a_1 = 2, a_2 = 4 \\). Computing up to \\( n=12 \\): \\( a_3=7, a_4=13, a_5=24, a_6=44, a_7=81, a_8=149, a_9=274, a_{10}=504, a_{11}=927, a_{12}=1705 \\)."
+      },
+      "ar": {
+        "question": "تُسمى السلسلة الثنائية صالحة إذا كانت لا تحتوي على ثلاثة أرقام 1 متتالية. كم عدد السلاسل الثنائية الصالحة التي طولها 12؟",
+        "options": [],
+        "hint": "أنشئ علاقة تكرارية خطية من الشكل \\( a_n = a_{n-1} + a_{n-2} + a_{n-3} \\).",
+        "explanation": "ليكن \\( a_n \\) عدد السلاسل الثنائية الصالحة من الطول \\( n \\). بالعلاقة التكرارية \\( a_n = a_{n-1} + a_{n-2} + a_{n-3} \\) مع الحالات الأساسية \\( a_0=1, a_1=2, a_2=4 \\). بحساب الحدود حتى \\( n=12 \\) نحصل على: \\( a_3=7, a_4=13, a_5=24, a_6=44, a_7=81, a_8=149, a_9=274, a_{10}=504, a_{11}=927, a_{12}=1705 \\)."
+      }
+    },
+    "correct_index": "1705"
+  },
+  {
+    "id": "KAUST-005",
+    "track": "kaust",
+    "level": "High School (Gifted)",
+    "topic": "Linear Algebra",
+    "type": "MCQ",
+    "difficulty": "medium",
+    "content": {
+      "en": {
+        "question": "Let \\( A \\) be a \\( 3 \\times 3 \\) matrix with determinant \\( \\det(A) = 5 \\). What is the value of \\( \\det(2 A^{-1} \\text{adj}(A)) \\)?",
+        "options": [
+          "20",
+          "40",
+          "200",
+          "1000"
+        ],
+        "hint": "Recall that \\( A \\cdot \\text{adj}(A) = \\det(A) I \\) and \\( \\det(k M) = k^n \\det(M) \\) for an \\( n \\times n \\) matrix.",
+        "explanation": "Since \\( \\text{adj}(A) = \\det(A) A^{-1} \\), we have \\( 2 A^{-1} \\text{adj}(A) = 2 A^{-1} (\\det(A) A^{-1}) = 2 \\det(A) (A^{-1})^2 = 10 (A^{-1})^2 \\). Taking the determinant of a \\( 3 \\times 3 \\) matrix: \\( \\det(10 (A^{-1})^2) = 10^3 \\cdot (\\det(A^{-1}))^2 = 1000 \\cdot \\left(\\frac{1}{5}\\right)^2 = \\frac{1000}{25} = 40 \\)."
+      },
+      "ar": {
+        "question": "لتكن \\( A \\) مصفوفة من الرتبة \\( 3 \\times 3 \\) مع محدد \\( \\det(A) = 5 \\). ما هي قيمة \\( \\det(2 A^{-1} \\text{adj}(A)) \\)؟",
+        "options": [
+          "20",
+          "40",
+          "200",
+          "1000"
+        ],
+        "hint": "تذكر أن \\( A \\cdot \\text{adj}(A) = \\det(A) I \\) وأن \\( \\det(k M) = k^n \\det(M) \\) لمصفوفة من الرتبة \\( n \\times n \\).",
+        "explanation": "بما أن \\( \\text{adj}(A) = \\det(A) A^{-1} \\)، فإن \\( 2 A^{-1} \\text{adj}(A) = 10 (A^{-1})^2 \\). بأخذ المحدد لمصفوفة \\( 3 \\times 3 \\): \\( \\det(10 (A^{-1})^2) = 10^3 \\cdot (\\det(A^{-1}))^2 = 1000 \\cdot \\left(\\frac{1}{5}\\right)^2 = 40 \\)."
+      }
+    },
+    "correct_index": "1"
+  },
+  {
+    "id": "KAUST-006",
+    "track": "kaust",
+    "level": "High School (Gifted)",
+    "topic": "Applied Probability",
+    "type": "FRQ",
+    "difficulty": "medium",
+    "content": {
+      "en": {
+        "question": "A fair 6-sided die is rolled repeatedly until a 6 appears. Given that all rolls prior to stopping resulted in even numbers, what is the expected number of total rolls?",
+        "options": [],
+        "hint": "Conditioned on the outcomes being even, the possible results for each roll are strictly {2, 4, 6}.",
+        "explanation": "Given that all rolls are even, each roll is restricted to the set \\( \\{2, 4, 6\\} \\), with each outcome having equal probability \\( 1/3 \\). Rolling until a 6 appears under this condition is a geometric distribution with success probability \\( p = 1/3 \\). The expected number of rolls is \\( 1/p = 3 \\)."
+      },
+      "ar": {
+        "question": "يتم إلقاء نرد عادل ذو 6 أوجه بشكل متكرر حتى يظهر الرقم 6. إذا علمت أن جميع الرميات التي سبقت التوقف كانت أعدادًا زوجية، فما هو القيمة المتوقعة لإجمالي عدد الرميات؟",
+        "options": [],
+        "hint": "مشروطًا بكون جميع الرميات زوجية، فإن النواتج الممكنة لكل رمية محصورة في المجموعة {2, 4, 6}.",
+        "explanation": "مشروطًا بأن جميع الرميات زوجية، فإن كل رمية محصورة في \\( \\{2, 4, 6\\} \\) باحتمال متساوٍ \\( 1/3 \\). إلقاء النرد حتى ظهور الرقم 6 يتبع توزيعًا هندسيًا باحتمال نجاح \\( p = 1/3 \\). القيمة المتوقعة لعدد الرميات هي \\( 1/p = 3 \\)."
+      }
+    },
+    "correct_index": "3"
+  },
+  {
+    "id": "KAUST-007",
+    "track": "kaust",
+    "level": "High School (Gifted)",
+    "topic": "Number Theory",
+    "type": "MCQ",
+    "difficulty": "medium",
+    "content": {
+      "en": {
+        "question": "How many pairs of positive integers \\( (x, y) \\) satisfy the equation \\( x^2 + y^2 = 1000 \\) with \\( x > 0 \\) and \\( y > 0 \\)?",
+        "options": [
+          "2",
+          "4",
+          "8",
+          "16"
+        ],
+        "hint": "Factor 1000 into prime factors: \\( 1000 = 2^3 \\times 5^3 \\). Use sum of two squares theorem.",
+        "explanation": "We write \\( 1000 = 10^2 \\times 10 = 100(3^2 + 1^2) \\). The integer representations of \\( 1000 \\) as a sum of two squares come from prime factorization \\( 1000 = 2^3 \\times 5^3 \\). The number of Gaussian integer representations is \\( 4 \\times (3+1) = 16 \\). These 16 signed pairs correspond to 4 positive integer pairs in the first quadrant: \\( (10, 30), (30, 10), (18, 26), (26, 18) \\)."
+      },
+      "ar": {
+        "question": "كم عدد أزواج الأعداد الصحيحة الموجبة \\( (x, y) \\) التي تحقق المعادلة \\( x^2 + y^2 = 1000 \\) مع \\( x > 0 \\) و \\( y > 0 \\)؟",
+        "options": [
+          "2",
+          "4",
+          "8",
+          "16"
+        ],
+        "hint": "حلل العدد 1000 إلى عوامله الأولية: \\( 1000 = 2^3 \\times 5^3 \\). استخدم مبرهنة مجموع مربعين.",
+        "explanation": "نكتب \\( 1000 = 2^3 \\times 5^3 \\). عدد طرق تمثيل العدد كـ مجموع مربعين بالأعداد الصحيحة هو \\( 4 \\times (3+1) = 16 \\) ثنائية مع مراعاة الإشارات والترتيب. توزيعها في الأرباع الأربعة يعطي 4 أزواج موجبة تمامًا في الربع الأول: \\( (10, 30), (30, 10), (18, 26), (26, 18) \\)."
+      }
+    },
+    "correct_index": "1"
+  },
+  {
+    "id": "KAUST-008",
+    "track": "kaust",
+    "level": "High School (Gifted)",
+    "topic": "Game Theory & Logic",
+    "type": "FRQ",
+    "difficulty": "hard",
+    "content": {
+      "en": {
+        "question": "Two players play a game with a heap of 50 stones. On their turn, a player may remove 1, 2, or 4 stones. The player who takes the last stone wins. Assuming optimal play, how many stones should the first player remove on their first turn to guarantee a win?",
+        "options": [],
+        "hint": "Analyze the winning (N) and losing (P) positions modulo 3.",
+        "explanation": "Allowed moves are 1, 2, or 4 stones. Modulo 3, these moves are 1, 2, and 1. Thus, from any multiple of 3 (i.e. \\( n \\equiv 0 \\pmod 3 \\)), every move leaves a non-multiple of 3. From any non-multiple of 3, a player can always move to a multiple of 3. Hence, multiples of 3 are losing positions (P-positions). Since 50 leaves a remainder of 2 modulo 3, the first player must remove 2 stones to leave 48 (a multiple of 3), guaranteeing a win."
+      },
+      "ar": {
+        "question": "يلعب لاعبان لعبة بكومة من 50 حجرًا. في كل دور، يمكن للاعب إزالة 1 أو 2 أو 4 أحجار. اللاعب الذي يأخذ الحجر الأخير هو الفائز. بفرض اللعب الأمثل، كم حجرًا يجب أن يزيل اللاعب الأول في دوره الأول لضمان الفوز؟",
+        "options": [],
+        "hint": "حلل مواضع الفوز (N) والخسارة (P) بمقياس 3.",
+        "explanation": "النقلات المسموحة هي 1، 2، 4 أحجار. بمقياس 3، هذه النقلات تكافئ 1، 2، 1. بالتالي، من أي عدد مضاعف لـ 3، أي نقلة تترك عددًا غير مضاعف لـ 3. ومن أي عدد غير مضاعف لـ 3، يمكن دائمًا النقل إلى مضاعف لـ 3. إذن مضاعفات 3 هي مواضع خسارة. بما أن 50 تعطي باقي 2 عند القسمة على 3، يجب على اللاعب الأول إزالة حجرين ليترك 48 حجرًا (مضاعف لـ 3)، مما يضمن فوزه."
+      }
+    },
+    "correct_index": "2"
+  },
+  {
+    "id": "KAUST-009",
+    "track": "kaust",
+    "level": "High School (Gifted)",
+    "topic": "Algebra & Polynomials",
+    "type": "MCQ",
+    "difficulty": "medium",
+    "content": {
+      "en": {
+        "question": "Let \\( P(x) = x^4 - 4x^3 + 6x^2 - 4x + 5 \\). Find the sum of the squares of all complex roots of \\( P(x) \\).",
+        "options": [
+          "0",
+          "4",
+          "8",
+          "16"
+        ],
+        "hint": "Use Vieta's formulas: \\( \\sum r_i^2 = (\\sum r_i)^2 - 2 \\sum r_i r_j \\).",
+        "explanation": "From Vieta's formulas for \\( x^4 - 4x^3 + 6x^2 - 4x + 5 = 0 \\): the sum of roots is \\( e_1 = 4 \\), and the sum of products taken two at a time is \\( e_2 = 6 \\). The sum of the squares of roots is \\( e_1^2 - 2 e_2 = 4^2 - 2(6) = 16 - 12 = 4 \\)."
+      },
+      "ar": {
+        "question": "ليكن \\( P(x) = x^4 - 4x^3 + 6x^2 - 4x + 5 \\). أوجد مجموع مربعات جميع الجذور المركبة لكثير الحدود \\( P(x) \\).",
+        "options": [
+          "0",
+          "4",
+          "8",
+          "16"
+        ],
+        "hint": "استخدم صيغ فييتا: \\( \\sum r_i^2 = (\\sum r_i)^2 - 2 \\sum r_i r_j \\).",
+        "explanation": "من صيغ فييتا للمعادلة \\( x^4 - 4x^3 + 6x^2 - 4x + 5 = 0 \\): مجموع الجذور هو \\( e_1 = 4 \\)، ومجموع حاصل ضرب كل جذرين هو \\( e_2 = 6 \\). مجموع مربعات الجذور يساوي \\( e_1^2 - 2 e_2 = 16 - 12 = 4 \\)."
+      }
+    },
+    "correct_index": "1"
+  },
+  {
+    "id": "KAUST-010",
+    "track": "kaust",
+    "level": "High School (Gifted)",
+    "topic": "Modular Arithmetic",
+    "type": "FRQ",
+    "difficulty": "medium",
+    "content": {
+      "en": {
+        "question": "Find the remainder when \\( 3^{1000} \\) is divided by 100.",
+        "options": [],
+        "hint": "Use Euler's totient theorem or Carmichael function on 100.",
+        "explanation": "By Carmichael function, \\( \\lambda(100) = \\text{lcm}(\\phi(4), \\phi(25)) = \\text{lcm}(2, 20) = 20 \\). Since \\( \\gcd(3, 100) = 1 \\), we have \\( 3^{20} \\equiv 1 \\pmod{100} \\). Since 1000 is a multiple of 20, \\( 3^{1000} = (3^{20})^{50} \\equiv 1^{50} \\equiv 1 \\pmod{100} \\)."
+      },
+      "ar": {
+        "question": "أوجد باقي قسمة \\( 3^{1000} \\) على 100.",
+        "options": [],
+        "hint": "استخدم مبرهنة إيولر أو دالة كارمايكل للعدد 100.",
+        "explanation": "باستخدام دالة كارمايكل، \\( \\lambda(100) = \\text{lcm}(2, 20) = 20 \\). بما أن \\( \\gcd(3, 100) = 1 \\)، فإن \\( 3^{20} \\equiv 1 \\pmod{100} \\). وبما أن 1000 من مضاعفات 20، فإن \\( 3^{1000} = (3^{20})^{50} \\equiv 1 \\pmod{100} \\)."
+      }
+    },
+    "correct_index": "1"
+  },
+  {
+    "id": "KAUST-011",
+    "track": "kaust",
+    "level": "High School (Gifted)",
+    "topic": "Probability & Infinite Series",
+    "type": "MCQ",
+    "difficulty": "medium",
+    "content": {
+      "en": {
+        "question": "Two players, A and B, take turns rolling a fair 6-sided die, with player A going first. The first player to roll a prime number (2, 3, or 5) wins the game. What is the probability that player A wins?",
+        "options": [
+          "\\( \\frac{1}{2} \\)",
+          "\\( \\frac{3}{5} \\)",
+          "\\( \\frac{2}{3} \\)",
+          "\\( \\frac{3}{4} \\)"
+        ],
+        "hint": "The probability of rolling a prime on any single roll is 1/2. Sum the geometric series.",
+        "explanation": "The probability of rolling a prime number is \\( p = 3/6 = 1/2 \\). Player A wins on turn 1 with probability \\( 1/2 \\), on turn 3 with probability \\( (1/2)^2 \\times 1/2 = 1/8 \\), and on turn \\( 2k+1 \\) with probability \\( (1/2)^{2k+1} \\). Summing this infinite geometric series yields: \\( P(A) = \\frac{1/2}{1 - (1/2)^2} = \\frac{1/2}{3/4} = \\frac{2}{3} \\)."
+      },
+      "ar": {
+        "question": "يلعب لاعبان، A و B، لعبة رمي نرد عادل ذي 6 أوجه بالتناوب، حيث يبدأ اللاعب A أولاً. أول لاعب يرمي عددًا أوليًا (2، 3، أو 5) يفوز باللعبة. ما هو احتمال فوز اللاعب A؟",
+        "options": [
+          "\\( \\frac{1}{2} \\)",
+          "\\( \\frac{3}{5} \\)",
+          "\\( \\frac{2}{3} \\)",
+          "\\( \\frac{3}{4} \\)"
+        ],
+        "hint": "احتمال الحصول على عدد أولي في رمية واحدة هو 1/2. اجمع المتسلسلة الهندسية.",
+        "explanation": "احتمال الحصول على عدد أولي هو \\( p = 3/6 = 1/2 \\). يفوز اللاعب A في الدور الأول باحتمال \\( 1/2 \\)، وفي الدور الثالث باحتمال \\( (1/2)^3 = 1/8 \\). بجمع حدود المتسلسلة الهندسية اللانهائية: \\( P(A) = \\frac{1/2}{1 - 1/4} = \\frac{2}{3} \\)."
+      }
+    },
+    "correct_index": "2"
+  },
+  {
+    "id": "KAUST-012",
+    "track": "kaust",
+    "level": "High School (Gifted)",
+    "topic": "Discrete Math & Grid Paths",
+    "type": "FRQ",
+    "difficulty": "hard",
+    "content": {
+      "en": {
+        "question": "Consider a grid of size \\( 4 \\times 4 \\). How many paths are there from the top-left corner \\( (0,0) \\) to the bottom-right corner \\( (4,4) \\) moving only right or down, such that the path never goes strictly above the diagonal line \\( y = x \\)?",
+        "options": [],
+        "hint": "This problem corresponds to evaluating the Catalan number \\( C_4 \\).",
+        "explanation": "The number of grid paths from \\( (0,0) \\) to \\( (n,n) \\) that do not cross above the diagonal is given by the \\( n \\)-th Catalan number \\( C_n = \\frac{1}{n+1} \\binom{2n}{n} \\). For \\( n = 4 \\), \\( C_4 = \\frac{1}{5} \\binom{8}{4} = \\frac{70}{5} = 14 \\)."
+      },
+      "ar": {
+        "question": "في شبكة أبعادها \\( 4 \\times 4 \\)، كم عدد المسارات من الزاوية العلوية اليسرى \\( (0,0) \\) إلى الزاوية السفلية اليمنى \\( (4,4) \\) بالتحرك يمينًا أو لأسفل فقط، بحيث لا يرتفع المسار مطلقًا فوق القطر \\( y = x \\)؟",
+        "options": [],
+        "hint": "هذه المسألة تكافئ حساب عدد كاتالان الرابع \\( C_4 \\).",
+        "explanation": "عدد مسارات الشبكة من \\( (0,0) \\) إلى \\( (n,n) \\) دون تجاوز القطر يُعطى بعدد كاتالان \\( C_n = \\frac{1}{n+1} \\binom{2n}{n} \\). بالنسبة لـ \\( n = 4 \\)، نحصل على \\( C_4 = \\frac{1}{5} \\binom{8}{4} = 14 \\)."
+      }
+    },
+    "correct_index": "14"
+  },
+  {
+    "id": "KAUST-013",
+    "track": "kaust",
+    "level": "High School (Gifted)",
+    "topic": "Generating Functions & Combinatorics",
+    "type": "MCQ",
+    "difficulty": "hard",
+    "content": {
+      "en": {
+        "question": "Find the coefficient of \\( x^6 \\) in the power series expansion of \\( \\frac{1}{(1-x)(1-x^2)(1-x^3)} \\).",
+        "options": [
+          "5",
+          "6",
+          "7",
+          "8"
+        ],
+        "hint": "This coefficient represents the number of integer partitions of 6 into parts of size at most 3.",
+        "explanation": "The generating function counts partitions of 6 using parts from \\( \\{1, 2, 3\\} \\). The valid partitions of 6 are: 3+3, 3+2+1, 3+1+1+1, 2+2+2, 2+2+1+1, 2+1+1+1+1, 1+1+1+1+1+1. There are 7 such partitions."
+      },
+      "ar": {
+        "question": "أوجد معامل \\( x^6 \\) في مفكوك المتسلسلة للمقدار \\( \\frac{1}{(1-x)(1-x^2)(1-x^3)} \\).",
+        "options": [
+          "5",
+          "6",
+          "7",
+          "8"
+        ],
+        "hint": "يمثل هذا المعامل عدد تجزئات العدد 6 إلى أجزاء لا تتجاوز حجمها 3.",
+        "explanation": "دالة التوليد تحسب تجزئات العدد 6 باستخدام الأعداد \\( \\{1, 2, 3\\} \\). التجزئات هي: 3+3، 3+2+1، 3+1+1+1، 2+2+2، 2+2+1+1، 2+1+1+1+1، 1+1+1+1+1+1. توجد 7 تجزئات."
+      }
+    },
+    "correct_index": "2"
+  },
+  {
+    "id": "KAUST-014",
+    "track": "kaust",
+    "level": "High School (Gifted)",
+    "topic": "Linear Algebra & Eigenvalues",
+    "type": "FRQ",
+    "difficulty": "hard",
+    "content": {
+      "en": {
+        "question": "Let \\( A = \\begin{pmatrix} 2 & 3 \\\\ 1 & 4 \\end{pmatrix} \\). Find the trace of the matrix \\( A^5 \\).",
+        "options": [],
+        "hint": "Find the eigenvalues of \\( A \\) first, then use \\( \\text{tr}(A^5) = \\lambda_1^5 + \\lambda_2^5 \\).",
+        "explanation": "The characteristic polynomial of \\( A \\) is \\( \\det(A - \\lambda I) = (2-\\lambda)(4-\\lambda) - 3 = \\lambda^2 - 6\\lambda + 5 = 0 \\). Roots are \\( \\lambda_1 = 1 \\) and \\( \\lambda_2 = 5 \\). The trace of \\( A^5 \\) is the sum of the 5th powers of its eigenvalues: \\( \\text{tr}(A^5) = 1^5 + 5^5 = 1 + 3125 = 3126 \\)."
+      },
+      "ar": {
+        "question": "لتكن المصفوفة \\( A = \\begin{pmatrix} 2 & 3 \\\\ 1 & 4 \\end{pmatrix} \\). أوجد أثر (trace) المصفوفة \\( A^5 \\).",
+        "options": [],
+        "hint": "أوجد القيم الذاتية للمصفوفة \\( A \\) أولاً، ثم استخدم العلاقة \\( \\text{tr}(A^5) = \\lambda_1^5 + \\lambda_2^5 \\).",
+        "explanation": "الكثيرة الحدود المميزة للمصفوفة \\( A \\) هي \\( \\lambda^2 - 6\\lambda + 5 = 0 \\). الجذور هي \\( \\lambda_1 = 1 \\) و \\( \\lambda_2 = 5 \\). أثر المصفوفة \\( A^5 \\) هو مجموع القوى الخامسة للقيم الذاتية: \\( \\text{tr}(A^5) = 1^5 + 5^5 = 3126 \\)."
+      }
+    },
+    "correct_index": "3126"
+  },
+  {
+    "id": "KAUST-015",
+    "track": "kaust",
+    "level": "High School (Gifted)",
+    "topic": "Graph Theory & Topology",
+    "type": "MCQ",
+    "difficulty": "medium",
+    "content": {
+      "en": {
+        "question": "A connected planar graph has 12 vertices, and every face (including the outer face) is bounded by exactly 3 edges. How many edges does this graph have?",
+        "options": [
+          "20",
+          "24",
+          "30",
+          "36"
+        ],
+        "hint": "Use Euler's formula \\( V - E + F = 2 \\) alongside the handshaking property for faces \\( 2E = 3F \\).",
+        "explanation": "Since every face has 3 edges, each edge belongs to 2 faces, giving \\( 3F = 2E \\implies F = \\frac{2}{3}E \\). Substituting into Euler's formula \\( V - E + F = 2 \\): \\( 12 - E + \\frac{2}{3}E = 2 \\implies 10 = \\frac{1}{3}E \\implies E = 30 \\)."
+      },
+      "ar": {
+        "question": "رسم بياني مستوٍ ومتصل يحتوي على 12 رأسًا، وكل وجه فيه (بما في ذلك الوجه الخارجي) محاط بـ 3 أضلاع تمامًا. كم عدد أضلاع هذا الرسم البياني؟",
+        "options": [
+          "20",
+          "24",
+          "30",
+          "36"
+        ],
+        "hint": "استخدم صيغة إيولر \\( V - E + F = 2 \\) مع علاقة المصافحة للأوجه \\( 2E = 3F \\).",
+        "explanation": "بما أن كل وجه محاط بـ 3 أضلاع، فإن \\( 3F = 2E \\implies F = \\frac{2}{3}E \\). بالتعويض في صيغة إيولر \\( 12 - E + \\frac{2}{3}E = 2 \\) نحصل على \\( E = 30 \\)."
+      }
+    },
+    "correct_index": "2"
+  },
+  {
+    "id": "KAUST-016",
+    "track": "kaust",
+    "level": "High School (Gifted)",
+    "topic": "Number Theory",
+    "type": "FRQ",
+    "difficulty": "hard",
+    "content": {
+      "en": {
+        "question": "Find the smallest positive integer \\( x \\) that satisfies the system of congruences: \\( x \\equiv 2 \\pmod 5 \\), \\( x \\equiv 3 \\pmod 7 \\), \\( x \\equiv 4 \\pmod 9 \\).",
+        "options": [],
+        "hint": "Apply the Chinese Remainder Theorem for modulus \\( M = 5 \\times 7 \\times 9 = 315 \\).",
+        "explanation": "Modulus \\( M = 315 \\). Components: \\( M_1 = 63 \\equiv 3 \\pmod 5 \\) (inverse is 2); \\( M_2 = 45 \\equiv 3 \\pmod 7 \\) (inverse is 5); \\( M_3 = 35 \\equiv 8 \\pmod 9 \\) (inverse is 8). \\( x = 2(63 \\times 2) + 3(45 \\times 5) + 4(35 \\times 8) = 252 + 675 + 1120 = 2047 \\). Modulo 315, \\( 2047 \\pmod{315} = 157 \\)."
+      },
+      "ar": {
+        "question": "أوجد أصغر عدد صحيح موجب \\( x \\) يحقق نظام التكافؤات التالي: \\( x \\equiv 2 \\pmod 5 \\)، \\( x \\equiv 3 \\pmod 7 \\)، \\( x \\equiv 4 \\pmod 9 \\).",
+        "options": [],
+        "hint": "طبق مبرهنة الباقي الصينية للمقياس \\( M = 5 \\times 7 \\times 9 = 315 \\).",
+        "explanation": "المقياس الكلي \\( M = 315 \\). بتطبيق مبرهنة الباقي الصينية نحصل على الحل العام \\( x = 2047 \\). بأخذ الباقي بمقياس 315: \\( 2047 \\pmod{315} = 157 \\)."
+      }
+    },
+    "correct_index": "157"
+  },
+  {
+    "id": "KAUST-017",
+    "track": "kaust",
+    "level": "High School (Gifted)",
+    "topic": "Geometry & Optimization",
+    "type": "MCQ",
+    "difficulty": "medium",
+    "content": {
+      "en": {
+        "question": "Consider a point \\( P \\) inside an equilateral triangle \\( ABC \\) of side length 2. What is the exact sum of the perpendicular distances from \\( P \\) to the three sides of the triangle?",
+        "options": [
+          "1",
+          "\\( \\sqrt{2} \\)",
+          "\\( \\sqrt{3} \\)",
+          "2"
+        ],
+        "hint": "Use Viviani's Theorem, which states that the sum of distances to the sides is constant and equal to the height.",
+        "explanation": "By Viviani's Theorem, for any point inside an equilateral triangle, the sum of perpendicular distances to the sides equals the altitude \\( h \\) of the triangle. For side length \\( s = 2 \\), \\( h = \\frac{\\sqrt{3}}{2} \\times 2 = \\sqrt{3} \\)."
+      },
+      "ar": {
+        "question": "لتكن النقطة \\( P \\) داخل مثلث متساوي الأضلاع \\( ABC \\) طول ضلعه 2. ما هو المجموع الدقيق للأبعاد العمودية من \\( P \\) إلى أضلاع المثلث الثلاثة؟",
+        "options": [
+          "1",
+          "\\( \\sqrt{2} \\)",
+          "\\( \\sqrt{3} \\)",
+          "2"
+        ],
+        "hint": "استخدم مبرهنة فيفياني التي تنص على أن مجموع الأبعاد عن الأضلاع ثابت ويساوي ارتفاع المثلث.",
+        "explanation": "حسب مبرهنة فيفياني، فإن مجموع الأبعاد العمودية من أي نقطة داخل مثلث متساوي الأضلاع يساوي ارتفاع المثلث \\( h \\). لضلع طوله \\( s = 2 \\)، الارتفاع هو \\( h = \\frac{\\sqrt{3}}{2} \\times 2 = \\sqrt{3} \\)."
+      }
+    },
+    "correct_index": "2"
+  },
+  {
+    "id": "KAUST-018",
+    "track": "kaust",
+    "level": "High School (Gifted)",
+    "topic": "Applied Math & Financial Modeling",
+    "type": "FRQ",
+    "difficulty": "easy",
+    "content": {
+      "en": {
+        "question": "An account starts with a balance of $1000. At the end of each year, 10% interest is added to the account balance, and immediately after, a fixed amount of $100 is withdrawn. What is the account balance at the end of 3 years?",
+        "options": [],
+        "hint": "Track the balance year by year using the recurrence relation \\( B_{k} = 1.10 B_{k-1} - 100 \\).",
+        "explanation": "Year 1: \\( 1000 \\times 1.10 - 100 = 1100 - 100 = 1000 \\). Year 2: \\( 1000 \\times 1.10 - 100 = 1000 \\). Year 3: \\( 1000 \\times 1.10 - 100 = 1000 \\). The balance remains constant at 1000."
+      },
+      "ar": {
+        "question": "يبدأ حساب بمبلغ 1000 دولار. في نهاية كل عام، تُضاف فائدة بنسبة 10% إلى الرصيد، ثم يتم سحب مبلغ ثابت قدره 100 دولار فورًا. ما هو رصيد الحساب في نهاية 3 سنوات؟",
+        "options": [],
+        "hint": "تتبع الرصيد سنة بسنة باستخدام العلاقة التكرارية \\( B_{k} = 1.10 B_{k-1} - 100 \\).",
+        "explanation": "السنة 1: \\( 1000 \\times 1.10 - 100 = 1000 \\). السنة 2: \\( 1000 \\times 1.10 - 100 = 1000 \\). السنة 3: \\( 1000 \\times 1.10 - 100 = 1000 \\). يظل الرصيد ثابتًا عند 1000."
+      }
+    },
+    "correct_index": "1000"
+  },
+  {
+    "id": "KAUST-019",
+    "track": "kaust",
+    "level": "High School (Gifted)",
+    "topic": "Group Theory & Combinatorics",
+    "type": "MCQ",
+    "difficulty": "extreme",
+    "content": {
+      "en": {
+        "question": "How many distinct colorings of the 4 vertices of a square are possible using at most 2 colors, up to rotational symmetry (cyclic group \\( C_4 \\))?",
+        "options": [
+          "4",
+          "6",
+          "8",
+          "16"
+        ],
+        "hint": "Apply Burnside's Lemma over the 4 rotational symmetries of the square.",
+        "explanation": "By Burnside's Lemma, the number of orbits is \\( \\frac{1}{|G|} \\sum_{g \\in G} |X^g| \\). Group \\( C_4 \\) consists of 4 rotations: identity (0°): \\( 2^4 = 16 \\) fixed colorings; 90° rotation: \\( 2^1 = 2 \\); 180° rotation: \\( 2^2 = 4 \\); 270° rotation: \\( 2^1 = 2 \\). Average = \\( \\frac{16 + 2 + 4 + 2}{4} = \\frac{24}{4} = 6 \\)."
+      },
+      "ar": {
+        "question": "كم عدد التلوينات المختلفة الممكنة لرؤوس مربع عددها 4 باستخدام لونين على الأكثر، مع اعتبار التماثل الدوراني فقط (المجموعة الدائرية \\( C_4 \\))؟",
+        "options": [
+          "4",
+          "6",
+          "8",
+          "16"
+        ],
+        "hint": "طبق لمة بيرنسايد على التماثلات الدورانية الأربعة للمربع.",
+        "explanation": "باستخدام لمة بيرنسايد: الدوران 0° يثبت \\( 2^4 = 16 \\) تلوينًا؛ الدوران 90° يثبت \\( 2^1 = 2 \\)؛ الدوران 180° يثبت \\( 2^2 = 4 \\)؛ الدوران 270° يثبت \\( 2^1 = 2 \\). المتوسط يساوي \\( \\frac{16 + 2 + 4 + 2}{4} = 6 \\)."
+      }
+    },
+    "correct_index": "1"
+  },
+  {
+    "id": "KAUST-020",
+    "track": "kaust",
+    "level": "High School (Gifted)",
+    "topic": "Probability & Expectation",
+    "type": "FRQ",
+    "difficulty": "hard",
+    "content": {
+      "en": {
+        "question": "A fair coin is flipped repeatedly until two consecutive heads (HH) appear. What is the expected number of total flips?",
+        "options": [],
+        "hint": "Set up a system of linear equations for the expected remaining flips from each state.",
+        "explanation": "Let \\( E \\) be the expected flips from start, and \\( E_H \\) be expected flips after getting one Head. \\( E = 1 + \\frac{1}{2} E + \\frac{1}{2} E_H \\). If we roll T from state H, we return to start: \\( E_H = 1 + \\frac{1}{2}(0) + \\frac{1}{2} E = 1 + \\frac{1}{2} E \\). Substituting \\( E_H \\) gives \\( E = 1 + \\frac{1}{2} E + \\frac{1}{2}\\left(1 + \\frac{1}{2} E\\right) = \\frac{3}{2} + \\frac{3}{4} E \\implies \\frac{1}{4} E = \\frac{3}{2} \\implies E = 6 \\)."
+      },
+      "ar": {
+        "question": "يتم إلقاء قطعة نقدية عادلة بشكل متكرر حتى يظهر وجهان متتاليان (HH). ما هي القيمة المتوقعة لإجمالي عدد الرميات؟",
+        "options": [],
+        "hint": "أنشئ نظامًا من المعادلات الخطية للقيم المتوقعة للرميات المتبقية من كل حالة.",
+        "explanation": "لتكن \\( E \\) القيمة المتوقعة للرميات من البداية، و \\( E_H \\) القيمة المتوقعة بعد ظهور وجه واحد. المعادلات: \\( E = 1 + \\frac{1}{2} E + \\frac{1}{2} E_H \\) و \\( E_H = 1 + \\frac{1}{2} E \\). بالتعويض نجد أن \\( \\frac{1}{4} E = \\frac{3}{2} \\implies E = 6 \\)."
+      }
+    },
+    "correct_index": "6"
+  },
+  {
+    "id": "KAUST-022",
+    "track": "kaust",
+    "level": "High School (Gifted)",
+    "topic": "Graph Theory",
+    "type": "MCQ",
+    "difficulty": "hard",
+    "content": {
+      "en": {
+        "question": "In a simple connected graph with 12 vertices and 20 edges, what is the maximum possible number of vertices of degree 1?",
+        "options": [
+          "5",
+          "6",
+          "7",
+          "8"
+        ],
+        "hint": "Consider the relation between the number of leaves and the maximum possible number of edges in the remaining graph.",
+        "explanation": "Let \\( k \\) be the number of degree-1 vertices (leaves). The remaining \\( 12-k \\) vertices can have at most \\( \\binom{12-k}{2} \\) edges among themselves. The \\( k \\) leaves contribute \\( k \\) edges. Thus, the total number of edges is at most \\( k + \\binom{12-k}{2} \\). Setting \\( k + \\frac{(12-k)(11-k)}{2} \\ge 20 \\), we find that \\( k=6 \\) gives \\( 6 + 15 = 21 \\ge 20 \\), whereas \\( k=7 \\) gives \\( 7 + 10 = 17 < 20 \\). Hence, the maximum number of leaves is 6."
+      },
+      "ar": {
+        "question": "في رسم بياني بسيط ومتصل يحتوي على 12 رأساً و20 ضلعاً، ما هو أقصى عدد ممكن من الرؤوس التي درجتها 1؟",
+        "options": [
+          "5",
+          "6",
+          "7",
+          "8"
+        ],
+        "hint": "انظر في العلاقة بين عدد الأوراق وأقصى عدد ممكن من الأضلاع في الرسم البياني المتبقي.",
+        "explanation": "نفرض أن \\( k \\) هو عدد الرؤوس ذات الدرجة 1. يمكن للرؤوس المتبقية وعددها \\( 12-k \\) أن تُنشئ على الأكثر \\( \\binom{12-k}{2} \\) ضلعاً فيما بينها. وتساهم الرؤوس الذيلية بـ \\( k \\) من الأضلاع. بالتالي، إجمالي عدد الأضلاع هو على الأكثر \\( k + \\binom{12-k}{2} \\). بوضع \\( k + \\frac{(12-k)(11-k)}{2} \\ge 20 \\)، نجد أن \\( k=6 \\) يعطي \\( 6 + 15 = 21 \\ge 20 \\)، بينما \\( k=7 \\) يعطي \\( 7 + 10 = 17 < 20 \\). بالتالي، أقصى عدد للرؤوس ذات الدرجة 1 هو 6."
+      }
+    },
+    "correct_index": "1"
+  },
+  {
+    "id": "KAUST-023",
+    "track": "kaust",
+    "level": "High School (Gifted)",
+    "topic": "Number Theory",
+    "type": "FRQ",
+    "difficulty": "hard",
+    "content": {
+      "en": {
+        "question": "Find the remainder when \\( 7^{2024} \\) is divided by \\( 100 \\).",
+        "options": [],
+        "hint": "Find the period of the powers of 7 modulo 100.",
+        "explanation": "We compute powers of 7 modulo 100: \\( 7^1 = 7 \\), \\( 7^2 = 49 \\), \\( 7^3 = 343 \\equiv 43 \\), \\( 7^4 = 2401 \\equiv 1 \\pmod{100} \\). Thus, the order of 7 modulo 100 is 4. Since 2024 is divisible by 4 (\\( 2024 = 4 \\times 506 \\)), we have \\( 7^{2024} = (7^4)^{506} \\equiv 1^{506} \\equiv 1 \\pmod{100} \\)."
+      },
+      "ar": {
+        "question": "أوجد الباقي عند قسمة \\( 7^{2024} \\) على \\( 100 \\).",
+        "options": [],
+        "hint": "أوجد دورية قوى العدد 7 بمقياس 100.",
+        "explanation": "نحسب قوى العدد 7 بمقياس 100: \\( 7^1 = 7 \\)، \\( 7^2 = 49 \\)، \\( 7^3 = 343 \\equiv 43 \\)، \\( 7^4 = 2401 \\equiv 1 \\pmod{100} \\). بالتالي، رتبة العدد 7 بمقياس 100 هي 4. وبما أن 2024 يقبل القسمة على 4 (\\( 2024 = 4 \\times 506 \\))، فإن \\( 7^{2024} = (7^4)^{506} \\equiv 1^{506} \\equiv 1 \\pmod{100} \\)."
+      }
+    },
+    "correct_index": "1"
+  },
+  {
+    "id": "KAUST-024",
+    "track": "kaust",
+    "level": "High School (Gifted)",
+    "topic": "Applied Math",
+    "type": "MCQ",
+    "difficulty": "medium",
+    "content": {
+      "en": {
+        "question": "A particle moves along the integer line starting at position 0. At each step, it moves +1 with probability \\( \\frac{2}{3} \\) and -1 with probability \\( \\frac{1}{3} \\). What is the probability that the particle ever reaches position -1?",
+        "options": [
+          "1/3",
+          "1/2",
+          "2/3",
+          "3/4"
+        ],
+        "hint": "Set up a recurrence relation for the probability of reaching -1 from position 0.",
+        "explanation": "Let \\( p \\) be the probability of reaching -1 starting from 0. By law of total probability, \\( p = \\frac{1}{3} + \\frac{2}{3} p^2 \\). Rearranging yields \\( 2p^2 - 3p + 1 = 0 \\), which factors as \\( (2p-1)(p-1) = 0 \\). Since the drift is positive, \\( p < 1 \\), so \\( p = \\frac{1}{2} \\)."
+      },
+      "ar": {
+        "question": "يتحرك جسيم على خط الأعداد الصحيحة ببدء من الموقع 0. في كل خطوة، ينتقل بـ +1 باحتمال \\( \\frac{2}{3} \\) وبـ -1 باحتمال \\( \\frac{1}{3} \\). ما هو احتمال أن يصل الجسيم في أي وقت إلى الموقع -1؟",
+        "options": [
+          "1/3",
+          "1/2",
+          "2/3",
+          "3/4"
+        ],
+        "hint": "أنشئ علاقة تكرارية لاحتمالية الوصول إلى الموقع -1 بدءاً من الموقع 0.",
+        "explanation": "نفرض أن \\( p \\) هو احتمال الوصول إلى الموقع -1 بدءاً من 0. باستخدام قانون الاحتمال الكلي، \\( p = \\frac{1}{3} + \\frac{2}{3} p^2 \\). بإعادة الترتيب نحصل على \\( 2p^2 - 3p + 1 = 0 \\)، والتي تُحلل إلى \\( (2p-1)(p-1) = 0 \\). بما أن الاتجاه العام موجب، فإن \\( p < 1 \\)، وبالتالي فإن \\( p = \\frac{1}{2} \\)."
+      }
+    },
+    "correct_index": "1"
+  },
+  {
+    "id": "KAUST-025",
+    "track": "kaust",
+    "level": "High School (Gifted)",
+    "topic": "Discrete Mathematics",
+    "type": "FRQ",
+    "difficulty": "hard",
+    "content": {
+      "en": {
+        "question": "Consider a \\( 4 \\times 4 \\) grid graph with 16 vertices. What is the minimum size of a dominating set for this graph?",
+        "options": [],
+        "hint": "A single vertex in a grid graph can dominate at most 5 vertices.",
+        "explanation": "Each vertex in a grid graph can dominate at most 5 vertices (itself and up to 4 neighbors). Thus, to dominate 16 vertices, we need at least \\( \\lceil 16/5 \\rceil = 4 \\) vertices. Choosing vertices at positions \\( (1,2) \\), \\( (2,4) \\), \\( (3,1) \\), and \\( (4,3) \\) successfully dominates all 16 vertices. Thus, the minimum size is 4."
+      },
+      "ar": {
+        "question": "نعتبر رسم شبكي بمقاس \\( 4 \\times 4 \\) يتكون من 16 رأساً. ما هو الحد الأدنى لحجم المجموعة المهيمنة (Dominating Set) لهذا الرسم البياني؟",
+        "options": [],
+        "hint": "يمكن لرأس واحد في الرسم الشبكي أن يهيمن على 5 رؤوس على الأكثر.",
+        "explanation": "يمكن لرأس واحد في الرسم الشبكي أن يهيمن على 5 رؤوس كحد أقصى (نفسه وما يصل إلى 4 مجاورين). بالتالي، للهيمنة على 16 رأساً، نحتاج على الأقل إلى \\( \\lceil 16/5 \\rceil = 4 \\) رؤوس. بانتخاب الرؤوس في المواقع \\( (1,2) \\)، \\( (2,4) \\)، \\( (3,1) \\)، و \\( (4,3) \\)، يتم الهيمنة بنجاح على جميع الرؤوس الـ 16. بالتالي فإن الحد الأدنى للحجم هو 4."
+      }
+    },
+    "correct_index": "4"
+  },
+  {
+    "id": "KAUST-026",
+    "track": "kaust",
+    "level": "High School (Gifted)",
+    "topic": "Combinatorics",
+    "type": "MCQ",
+    "difficulty": "medium",
+    "content": {
+      "en": {
+        "question": "How many paths are there from \\( (0,0) \\) to \\( (5,5) \\) in the Cartesian plane using only steps of \\( (+1,0) \\) and \\( (0,+1) \\) that do not pass through the point \\( (2,2) \\)?",
+        "options": [
+          "112",
+          "120",
+          "132",
+          "144"
+        ],
+        "hint": "Use the principle of inclusion-exclusion: subtract the number of paths passing through (2,2) from the total paths.",
+        "explanation": "Total paths from \\( (0,0) \\) to \\( (5,5) \\) is \\( \\binom{10}{5} = 252 \\). Paths from \\( (0,0) \\) to \\( (2,2) \\) is \\( \\binom{4}{2} = 6 \\). Paths from \\( (2,2) \\) to \\( (5,5) \\) is \\( \\binom{6}{3} = 20 \\). Paths through \\( (2,2) \\) is \\( 6 \\times 20 = 120 \\). Paths avoiding \\( (2,2) \\) is \\( 252 - 120 = 132 \\)."
+      },
+      "ar": {
+        "question": "كم عدد المسارات من نقطة الأصل \\( (0,0) \\) إلى \\( (5,5) \\) في المستوى الإحداثي باستخدام خطوات من النوع \\( (+1,0) \\) و \\( (0,+1) \\) فقط، والتي لا تمر بالنقطة \\( (2,2) \\)؟",
+        "options": [
+          "112",
+          "120",
+          "132",
+          "144"
+        ],
+        "hint": "استخدم مبدأ الإبعاد والاحتواء: اطرح عدد المسارات التي تمر بالنقطة (2,2) من إجمالي المسارات.",
+        "explanation": "إجمالي المسارات من \\( (0,0) \\) إلى \\( (5,5) \\) هو \\( \\binom{10}{5} = 252 \\). عدد المسارات من \\( (0,0) \\) إلى \\( (2,2) \\) هو \\( \\binom{4}{2} = 6 \\). وعدد المسارات من \\( (2,2) \\) إلى \\( (5,5) \\) هو \\( \\binom{6}{3} = 20 \\). بالتالي عدد المسارات المارة بـ \\( (2,2) \\) هو \\( 6 \\times 20 = 120 \\). المسارات التي تتجنب النقطة \\( (2,2) \\) هي \\( 252 - 120 = 132 \\)."
+      }
+    },
+    "correct_index": "2"
+  },
+  {
+    "id": "KAUST-027",
+    "track": "kaust",
+    "level": "High School (Gifted)",
+    "topic": "Optimization",
+    "type": "FRQ",
+    "difficulty": "hard",
+    "content": {
+      "en": {
+        "question": "Find the maximum value of \\( f(x,y,z) = xyz \\) given that \\( x, y, z \\ge 0 \\) and \\( x + 2y + 3z = 18 \\).",
+        "options": [],
+        "hint": "Apply the AM-GM inequality to the terms x, 2y, and 3z.",
+        "explanation": "By AM-GM inequality, \\( \\frac{x + 2y + 3z}{3} \\ge \\sqrt[3]{x \\cdot 2y \\cdot 3z} \\). Substituting \\( x + 2y + 3z = 18 \\) yields \\( 6 \\ge \\sqrt[3]{6xyz} \\implies 216 \\ge 6xyz \\implies xyz \\le 36 \\). Maximum value is achieved when \\( x = 2y = 3z = 6 \\), giving \\( xyz = 36 \\)."
+      },
+      "ar": {
+        "question": "أوجد القيمة العظمى للندالة \\( f(x,y,z) = xyz \\) بشرط أن تكون \\( x, y, z \\ge 0 \\) و \\( x + 2y + 3z = 18 \\).",
+        "options": [],
+        "hint": "طبق متباينة الوسط الحسابي والوسط الهندسي (AM-GM) على الحدود \\( x \\)، \\( 2y \\)، و \\( 3z \\).",
+        "explanation": "بموجب متباينة الوسط الحسابي والهندسي، \\( \\frac{x + 2y + 3z}{3} \\ge \\sqrt[3]{x \\cdot 2y \\cdot 3z} \\). بالتعويض عما يساوي \\( x + 2y + 3z = 18 \\)، نحصل على \\( 6 \\ge \\sqrt[3]{6xyz} \\implies 216 \\ge 6xyz \\implies xyz \\le 36 \\). يتم تحقيق القيمة العظمى عندما \\( x = 2y = 3z = 6 \\)، مما يعطي \\( xyz = 36 \\)."
+      }
+    },
+    "correct_index": "36"
+  },
+  {
+    "id": "KAUST-028",
+    "track": "kaust",
+    "level": "High School (Gifted)",
+    "topic": "Discrete Mathematics",
+    "type": "MCQ",
+    "difficulty": "hard",
+    "content": {
+      "en": {
+        "question": "A set \\( S \\) contains 10 distinct integers. What is the minimum number of elements we must choose from \\( S \\) to guarantee that at least two chosen elements have a difference that is a multiple of 7?",
+        "options": [
+          "6",
+          "7",
+          "8",
+          "9"
+        ],
+        "hint": "Consider the possible remainders when integers are divided by 7.",
+        "explanation": "There are 7 possible remainders modulo 7: \\( \\{0, 1, 2, 3, 4, 5, 6\\} \\). By the Pigeonhole Principle, if we select 8 elements, at least two of them must share the same remainder modulo 7, meaning their difference is a multiple of 7. Selecting 7 elements might yield all distinct remainders. Thus, 8 elements are required."
+      },
+      "ar": {
+        "question": "تحتوي المجموعة \\( S \\) على 10 أعداد صحيحة مختلفة. ما هو الحد الأدنى لعدد العناصر التي يجب اختيارها من \\( S \\) لضمان وجود عنصرين على الأقل يكون الفرق بينهما مضاعفاً للعدد 7؟",
+        "options": [
+          "6",
+          "7",
+          "8",
+          "9"
+        ],
+        "hint": "انظر في البواقي الممكنة عند قسمة الأعداد الصحيحة على 7.",
+        "explanation": "هناك 7 بواقٍ ممكنة بمقياس 7: \\( \\{0, 1, 2, 3, 4, 5, 6\\} \\). وفقاً لمبدأ برج الحمام، إذا اخترنا 8 عناصر، فلابد أن يتشارك عنصران على الأقل في نفس الباقي بمقياس 7، مما يعني أن الفرق بينهما مضاعف للعدد 7. خيار 7 عناصر قد يعطي بواقي مختلفة تماماً. بالتالي، نحتاج اختيار 8 عناصر."
+      }
+    },
+    "correct_index": "2"
+  },
+  {
+    "id": "KAUST-029",
+    "track": "kaust",
+    "level": "High School (Gifted)",
+    "topic": "Game Theory",
+    "type": "FRQ",
+    "difficulty": "medium",
+    "content": {
+      "en": {
+        "question": "Two players play a game with a pile of 50 stones. Players alternate taking 1, 2, or 4 stones. The player who takes the last stone wins. Assuming both play optimally, how many stones should the first player take on their first turn to guarantee a win?",
+        "options": [],
+        "hint": "Identify the winning and losing positions (modulo pattern) for this game.",
+        "explanation": "Analyzing P-positions (losing states for turn player) and N-positions (winning states): 0 is P, 1, 2 are N. From 3, moves lead to 2, 1, or -1 (invalid), so 3 is P. From 4, take 1 -> 3 (N). From 5, take 2 -> 3 (N). 6 is P. Thus, positions divisible by 3 are P-positions. Since \\( 50 \\equiv 2 \\pmod 3 \\), the first player must take 2 stones to leave 48 (a multiple of 3) for the second player."
+      },
+      "ar": {
+        "question": "يلعب لاعبان لعبة بـ 50 حصاة. يتناوب اللاعبان على أخذ 1 أو 2 أو 4 حصوات. الفائز هو من يأخذ الحصاة الأخيرة. بفرض أن كلا اللاعبين يلعبان بأسلوب أمثل، كم حصاة يجب أن يأخذ اللاعب الأول في دورته الأولى لضمان الفوز؟",
+        "options": [],
+        "hint": "حدد مواضع الفوز والخسارة (نمط الموديولو) لهذه اللعبة.",
+        "explanation": "بتحليل المواضع الخاسرة (P) والرابحة (N): الموضع 0 خاسر، 1 و2 رابحة. من 3، تؤدي الخيارات إلى 2، 1 (رابحة)، لذا 3 خاسر. النمط يظهر أن الأعداد القابلة للقسمة على 3 هي مواضع خاسرة. بما أن \\( 50 \\equiv 2 \\pmod 3 \\)، يجب على اللاعب الأول أخذ حصوتين ليترك 48 (مضاعف للعدد 3) للاعب الثاني."
+      }
+    },
+    "correct_index": "2"
+  },
+  {
+    "id": "KAUST-030",
+    "track": "kaust",
+    "level": "High School (Gifted)",
+    "topic": "Algebra",
+    "type": "MCQ",
+    "difficulty": "medium",
+    "content": {
+      "en": {
+        "question": "If \\( \\omega \\) is a complex cube root of unity (\\( \\omega \\ne 1 \\)), evaluate \\( (1 - \\omega + \\omega^2)^4 + (1 + \\omega - \\omega^2)^4 \\).",
+        "options": [
+          "-16",
+          "0",
+          "16",
+          "32"
+        ],
+        "hint": "Use the identity 1 + \\omega + \\omega^2 = 0.",
+        "explanation": "Since \\( 1 + \\omega + \\omega^2 = 0 \\), we have \\( 1 + \\omega^2 = -\\omega \\) and \\( 1 + \\omega = -\\omega^2 \\). Thus, \\( 1 - \\omega + \\omega^2 = -2\\omega \\) and \\( 1 + \\omega - \\omega^2 = -2\\omega^2 \\). The expression becomes \\( (-2\\omega)^4 + (-2\\omega^2)^4 = 16\\omega^4 + 16\\omega^8 = 16\\omega + 16\\omega^2 = 16(\\omega + \\omega^2) = 16(-1) = -16 \\)."
+      },
+      "ar": {
+        "question": "إذا كان \\( \\omega \\) جذراً تكعيبياً مركباً للواحد الصحيح (\\( \\omega \\ne 1 \\))، أحسب قيمة \\( (1 - \\omega + \\omega^2)^4 + (1 + \\omega - \\omega^2)^4 \\).",
+        "options": [
+          "-16",
+          "0",
+          "16",
+          "32"
+        ],
+        "hint": "استخدم المتطابقة \\( 1 + \\omega + \\omega^2 = 0 \\).",
+        "explanation": "بما أن \\( 1 + \\omega + \\omega^2 = 0 \\)، فإن \\( 1 + \\omega^2 = -\\omega \\) و \\( 1 + \\omega = -\\omega^2 \\). بالتالي، \\( 1 - \\omega + \\omega^2 = -2\\omega \\) و \\( 1 + \\omega - \\omega^2 = -2\\omega^2 \\). يصبح المقدار \\( (-2\\omega)^4 + (-2\\omega^2)^4 = 16\\omega^4 + 16\\omega^8 = 16\\omega + 16\\omega^2 = 16(\\omega + \\omega^2) = 16(-1) = -16 \\)."
+      }
+    },
+    "correct_index": "0"
+  },
+  {
+    "id": "KAUST-031",
+    "track": "kaust",
+    "level": "High School (Gifted)",
+    "topic": "Number Theory",
+    "type": "FRQ",
+    "difficulty": "hard",
+    "content": {
+      "en": {
+        "question": "How many pairs of positive integers \\( (x, y) \\) satisfy the equation \\( \\frac{1}{x} + \\frac{1}{y} = \\frac{1}{12} \\)?",
+        "options": [],
+        "hint": "Rewrite the equation in the form (x - a)(y - a) = a^2.",
+        "explanation": "Rearranging \\( \\frac{1}{x} + \\frac{1}{y} = \\frac{1}{12} \\) gives \\( 12(x + y) = xy \\implies (x - 12)(y - 12) = 144 \\). Positive integer solutions for \\( x, y \\) correspond to positive factorizations of 144. Prime factorization is \\( 144 = 2^4 \\times 3^2 \\), so it has \\( (4+1)(2+1) = 15 \\) positive divisors. Thus, there are 15 pairs."
+      },
+      "ar": {
+        "question": "كم عدد أزواج الأعداد الصحيحة الموجبة \\( (x, y) \\) التي تحقق المعادلة \\( \\frac{1}{x} + \\frac{1}{y} = \\frac{1}{12} \\)؟",
+        "options": [],
+        "hint": "أعد كتابة المعادلة على الصورة \\( (x - a)(y - a) = a^2 \\).",
+        "explanation": "بتبسيط المعادلة \\( \\frac{1}{x} + \\frac{1}{y} = \\frac{1}{12} \\) نحصل على \\( 12(x + y) = xy \\implies (x - 12)(y - 12) = 144 \\). الحلول الصحيحة الموجبة لـ \\( x, y \\) تناظر قواسم العدد 144. التحليل إلى العوامل الأولية للعدد 144 هو \\( 2^4 \\times 3^2 \\)، بالتالي عدد القواسم الموجبة هو \\( (4+1)(2+1) = 15 \\). إذن يوجد 15 زوجاً."
+      }
+    },
+    "correct_index": "15"
+  },
+  {
+    "id": "KAUST-032",
+    "track": "kaust",
+    "level": "High School (Gifted)",
+    "topic": "Graph Theory",
+    "type": "MCQ",
+    "difficulty": "medium",
+    "content": {
+      "en": {
+        "question": "How many spanning trees does the complete bipartite graph \\( K_{2,3} \\) have?",
+        "options": [
+          "6",
+          "9",
+          "12",
+          "16"
+        ],
+        "hint": "Use the formula for the number of spanning trees in a complete bipartite graph K_{m,n}, which is m^{n-1} n^{m-1}.",
+        "explanation": "For a complete bipartite graph \\( K_{m,n} \\), the Matrix Tree Theorem gives \\( m^{n-1} n^{m-1} \\) spanning trees. For \\( K_{2,3} \\), with \\( m=2 \\) and \\( n=3 \\), the number of spanning trees is \\( 2^{3-1} \\cdot 3^{2-1} = 2^2 \\cdot 3^1 = 12 \\)."
+      },
+      "ar": {
+        "question": "كم عدد الأشجار الممتدة (Spanning Trees) للرسم البياني الثنائي التام \\( K_{2,3} \\)؟",
+        "options": [
+          "6",
+          "9",
+          "12",
+          "16"
+        ],
+        "hint": "استخدم صيغة عدد الأشجار الممتدة في الرسم الثنائي التام \\( K_{m,n} \\)، وهي \\( m^{n-1} n^{m-1} \\).",
+        "explanation": "بالنسبة للرسم البياني الثنائي التام \\( K_{m,n} \\)، تعطي مبرهنة أشجار المصفوفة عدد الأشجار الممتدة بالصيغة \\( m^{n-1} n^{m-1} \\). بالنسبة لـ \\( K_{2,3} \\)، حيث \\( m=2 \\) و \\( n=3 \\)، فإن عدد الأشجار الممتدة هو \\( 2^{3-1} \\cdot 3^{2-1} = 2^2 \\cdot 3^1 = 12 \\)."
+      }
+    },
+    "correct_index": "2"
+  },
+  {
+    "id": "KAUST-033",
+    "track": "kaust",
+    "level": "High School (Gifted)",
+    "topic": "Applied Math",
+    "type": "FRQ",
+    "difficulty": "hard",
+    "content": {
+      "en": {
+        "question": "A fair 6-sided die is rolled repeatedly until every face has appeared at least once. What is the expected total number of rolls?",
+        "options": [],
+        "hint": "Apply the Coupon Collector's Problem expectation formula.",
+        "explanation": "By the Coupon Collector's Problem formula, the expected number of rolls is \\( E[X] = 6 \\left( \\frac{1}{6} + \\frac{1}{5} + \\frac{1}{4} + \\frac{1}{3} + \\frac{1}{2} + \\frac{1}{1} \\right) = 6 \\times \\frac{147}{60} = 14.7 \\)."
+      },
+      "ar": {
+        "question": "يُلقى حجر نرد عادل ذو 6 أوجه بشكل متكرر حتى يظهر كل وجه من الأوجه مرة واحدة على الأقل. ما هو العدد المتوقع لإجمالي رميات حجر النرد؟",
+        "options": [],
+        "hint": "طبق صيغة القيمة المتوقعة لمسألة جامع الكوبونات (Coupon Collector's Problem).",
+        "explanation": "باستخدام صيغة مسألة جامع الكوبونات، يكون العدد المتوقع للرميات هو \\( E[X] = 6 \\left( \\frac{1}{6} + \\frac{1}{5} + \\frac{1}{4} + \\frac{1}{3} + \\frac{1}{2} + \\frac{1}{1} \\right) = 6 \\times \\frac{147}{60} = 14.7 \\)."
+      }
+    },
+    "correct_index": "14.7"
+  },
+  {
+    "id": "KAUST-034",
+    "track": "kaust",
+    "level": "High School (Gifted)",
+    "topic": "Combinatorics",
+    "type": "MCQ",
+    "difficulty": "hard",
+    "content": {
+      "en": {
+        "question": "What is the coefficient of \\( x^7 \\) in the expansion of \\( (1 + x + x^2 + x^3)^5 \\)?",
+        "options": [
+          "120",
+          "145",
+          "155",
+          "165"
+        ],
+        "hint": "Express 1 + x + x^2 + x^3 as \\frac{1-x^4}{1-x} and use binomial series expansions.",
+        "explanation": "We write \\( (1+x+x^2+x^3)^5 = \\frac{(1-x^4)^5}{(1-x)^5} = (1 - 5x^4 + 10x^8 - \\dots) \\sum_{k=0}^\\infty \\binom{k+4}{4} x^k \\). The coefficient of \\( x^7 \\) is \\( 1 \\cdot \\binom{7+4}{4} - 5 \\cdot \\binom{3+4}{4} = \\binom{11}{4} - 5 \\binom{7}{4} = 330 - 175 = 155 \\)."
+      },
+      "ar": {
+        "question": "ما هو معامل \\( x^7 \\) في مفكوك \\( (1 + x + x^2 + x^3)^5 \\)؟",
+        "options": [
+          "120",
+          "145",
+          "155",
+          "165"
+        ],
+        "hint": "عبر عن \\( 1 + x + x^2 + x^3 \\) بالصورة \\( \\frac{1-x^4}{1-x} \\) واستخدم مفكوك ذات الحدين.",
+        "explanation": "نكتب \\( (1+x+x^2+x^3)^5 = \\frac{(1-x^4)^5}{(1-x)^5} = (1 - 5x^4 + 10x^8 - \\dots) \\sum_{k=0}^\\infty \\binom{k+4}{4} x^k \\). معامل \\( x^7 \\) هو \\( 1 \\cdot \\binom{7+4}{4} - 5 \\cdot \\binom{3+4}{4} = \\binom{11}{4} - 5 \\binom{7}{4} = 330 - 175 = 155 \\)."
+      }
+    },
+    "correct_index": "2"
+  },
+  {
+    "id": "KAUST-035",
+    "track": "kaust",
+    "level": "High School (Gifted)",
+    "topic": "Geometry",
+    "type": "FRQ",
+    "difficulty": "hard",
+    "content": {
+      "en": {
+        "question": "In three-dimensional space, find the distance from the origin \\( (0,0,0) \\) to the plane passing through the points \\( (6,0,0) \\), \\( (0,3,0) \\), and \\( (0,0,3) \\).",
+        "options": [],
+        "hint": "Find the equation of the plane using intercept form \\frac{x}{a} + \\frac{y}{b} + \\frac{z}{c} = 1.",
+        "explanation": "The intercept form of the plane is \\( \\frac{x}{6} + \\frac{y}{3} + \\frac{z}{3} = 1 \\), which simplifies to \\( x + 2y + 2z - 6 = 0 \\). The perpendicular distance from \\( (0,0,0) \\) to \\( Ax + By + Cz + D = 0 \\) is \\( \\frac{|D|}{\\sqrt{A^2 + B^2 + C^2}} = \\frac{|-6|}{\\sqrt{1^2 + 2^2 + 2^2}} = \\frac{6}{3} = 2 \\)."
+      },
+      "ar": {
+        "question": "في الفراغ ثلاثي الأبعاد، أوجد المسافة من نقطة الأصل \\( (0,0,0) \\) إلى المستوى الذي يمر بالنواط \\( (6,0,0) \\)، \\( (0,3,0) \\)، و \\( (0,0,3) \\).",
+        "options": [],
+        "hint": "أوجد معادلة المستوى باستخدام صيغة أجزاء المحاور المقطوعة \\( \\frac{x}{a} + \\frac{y}{b} + \\frac{z}{c} = 1 \\).",
+        "explanation": "صيغة أجزاء المحاور للمستوى هي \\( \\frac{x}{6} + \\frac{y}{3} + \\frac{z}{3} = 1 \\)، والتي تتبسط إلى \\( x + 2y + 2z - 6 = 0 \\). المسافة العمودية من نقطة الأصل إلى المستوى تكون \\( \\frac{|D|}{\\sqrt{A^2 + B^2 + C^2}} = \\frac{|-6|}{\\sqrt{1^2 + 2^2 + 2^2}} = \\frac{6}{3} = 2 \\)."
+      }
+    },
+    "correct_index": "2"
+  },
+  {
+    "id": "KAUST-036",
+    "track": "kaust",
+    "level": "High School (Gifted)",
+    "topic": "Logical Deduction",
+    "type": "MCQ",
+    "difficulty": "medium",
+    "content": {
+      "en": {
+        "question": "Four people each put their hat into a box. If each person randomly selects one hat from the box, what is the probability that no person gets their own hat?",
+        "options": [
+          "1/4",
+          "1/3",
+          "3/8",
+          "1/2"
+        ],
+        "hint": "Find the number of derangements D_4 of 4 items.",
+        "explanation": "The problem asks for the probability of a derangement of 4 items. The number of derangements of 4 items is \\( D_4 = 4! (1 - \\frac{1}{1!} + \\frac{1}{2!} - \\frac{1}{3!} + \\frac{1}{4!}) = 9 \\). Total possible permutations is \\( 4! = 24 \\). The probability is \\( \\frac{9}{24} = \\frac{3}{8} \\)."
+      },
+      "ar": {
+        "question": "وضع أربعة أشخاص قبعاتهم في صندوق. إذا اختار كل شخص قبعة عشوائياً من الصندوق، فما هو احتمال ألا يحصل أي شخص على قبعته الخاصة؟",
+        "options": [
+          "1/4",
+          "1/3",
+          "3/8",
+          "1/2"
+        ],
+        "hint": "احسب عدد الاضطرابات الكاملة (Derangements) \\( D_4 \\) لـ 4 عناصر.",
+        "explanation": "المسألة تطلب احتمال عدم حصول أي شخص على قبعته (Derangement). عدد الاختلالات الكاملة لـ 4 عناصر هو \\( D_4 = 4! (1 - \\frac{1}{1!} + \\frac{1}{2!} - \\frac{1}{3!} + \\frac{1}{4!}) = 9 \\). إجمالي التباديل الممكنة هو \\( 4! = 24 \\). الاحتمال المطلوب هو \\( \\frac{9}{24} = \\frac{3}{8} \\)."
+      }
+    },
+    "correct_index": "2"
+  },
+  {
+    "id": "KAUST-037",
+    "track": "kaust",
+    "level": "High School (Gifted)",
+    "topic": "Number Theory",
+    "type": "FRQ",
+    "difficulty": "hard",
+    "content": {
+      "en": {
+        "question": "What is the smallest positive integer \\( n \\) such that \\( 2^n \\equiv 1 \\pmod{17} \\)?",
+        "options": [],
+        "hint": "Check powers of 2 modulo 17, knowing n must divide \\phi(17) = 16.",
+        "explanation": "The order of 2 modulo 17 must divide 16. Testing powers: \\( 2^1 = 2 \\), \\( 2^2 = 4 \\), \\( 2^4 = 16 \\equiv -1 \\pmod{17} \\), so \\( 2^8 = (2^4)^2 \\equiv (-1)^2 \\equiv 1 \\pmod{17} \\). Thus, the smallest positive integer is 8."
+      },
+      "ar": {
+        "question": "ما هو أصغر عدد صحيح موجب \\( n \\) بحيث يكون \\( 2^n \\equiv 1 \\pmod{17} \\)؟",
+        "options": [],
+        "hint": "افحص قوى العدد 2 بمقياس 17، مع العلم أن \\( n \\) يجب أن يقسم \\( \\phi(17) = 16 \\).",
+        "explanation": "رتبة العدد 2 بمقياس 17 يجب أن تقسم 16. باختبار القوى: \\( 2^1 = 2 \\)، \\( 2^2 = 4 \\)، \\( 2^4 = 16 \\equiv -1 \\pmod{17} \\)، بالتالي \\( 2^8 = (2^4)^2 \\equiv (-1)^2 \\equiv 1 \\pmod{17} \\). إذن أصغر عدد صحيح موجب هو 8."
+      }
+    },
+    "correct_index": "8"
+  },
+  {
+    "id": "KAUST-038",
+    "track": "kaust",
+    "level": "High School (Gifted)",
+    "topic": "Discrete Mathematics",
+    "type": "MCQ",
+    "difficulty": "hard",
+    "content": {
+      "en": {
+        "question": "Evaluate the determinant of the matrix \\( A = \\begin{pmatrix} 1 & 1 & 1 \\\\ 1 & 2 & 3 \\\\ 1 & 4 & 9 \\end{pmatrix} \\).",
+        "options": [
+          "1",
+          "2",
+          "3",
+          "6"
+        ],
+        "hint": "Recognize this as a 3 \\times 3 Vandermonde determinant.",
+        "explanation": "Matrix \\( A \\) is a Vandermonde matrix with \\( x_1 = 1, x_2 = 2, x_3 = 3 \\). Its determinant is given by \\( (x_2 - x_1)(x_3 - x_1)(x_3 - x_2) = (2 - 1)(3 - 1)(3 - 2) = 1 \\cdot 2 \\cdot 1 = 2 \\)."
+      },
+      "ar": {
+        "question": "احسب محددة المصفوفة \\( A = \\begin{pmatrix} 1 & 1 & 1 \\\\ 1 & 2 & 3 \\\\ 1 & 4 & 9 \\end{pmatrix} \\).",
+        "options": [
+          "1",
+          "2",
+          "3",
+          "6"
+        ],
+        "hint": "تعرّف على هذه المصفوفة كمحدد فانديرموند (Vandermonde determinant) من الرتبة \\( 3 \\times 3 \\).",
+        "explanation": "المصفوفة \\( A \\) هي مصفوفة فانديرموند لعناصر \\( x_1 = 1, x_2 = 2, x_3 = 3 \\). يُعطى محددها بالصيغة \\( (x_2 - x_1)(x_3 - x_1)(x_3 - x_2) = (2 - 1)(3 - 1)(3 - 2) = 1 \\cdot 2 \\cdot 1 = 2 \\)."
+      }
+    },
+    "correct_index": "1"
+  },
+  {
+    "id": "KAUST-039",
+    "track": "kaust",
+    "level": "High School (Gifted)",
+    "topic": "Applied Math",
+    "type": "FRQ",
+    "difficulty": "hard",
+    "content": {
+      "en": {
+        "question": "A flow network consists of a source \\( S \\), a sink \\( T \\), and intermediate nodes \\( A \\) and \\( B \\). Directed capacities are: \\( S \\to A: 10 \\), \\( S \\to B: 10 \\), \\( A \\to B: 2 \\), \\( A \\to T: 8 \\), \\( B \\to T: 7 \\). What is the maximum flow from \\( S \\) to \\( T \\)?",
+        "options": [],
+        "hint": "Apply the Max-Flow Min-Cut Theorem.",
+        "explanation": "Consider the cut separating \\( \\{S, A, B\\} \\) from \\( \\{T\\} \\). The capacity of edges going from \\( \\{S, A, B\\} \\) to \\( \\{T\\} \\) is \\( c(A \\to T) + c(B \\to T) = 8 + 7 = 15 \\). By the Max-Flow Min-Cut theorem, max flow cannot exceed min cut capacity 15. Since flow of 8 via \\( S \\to A \\to T \\) and 7 via \\( S \\to B \\to T \\) is feasible, the maximum flow is 15."
+      },
+      "ar": {
+        "question": "شبكة تدفق تتكون من المصدر \\( S \\)، والمصب \\( T \\)، وعقدتين وسيطتين \\( A \\) و \\( B \\). السعات الموجهة هي: \\( S \\to A: 10 \\)، \\( S \\to B: 10 \\)، \\( A \\to B: 2 \\)، \\( A \\to T: 8 \\)، \\( B \\to T: 7 \\). ما هو التدفق الأقصى من \\( S \\) إلى \\( T \\)؟",
+        "options": [],
+        "hint": "طبق نظرية التدفق الأقصى والقطع الأدنى (Max-Flow Min-Cut Theorem).",
+        "explanation": "نعتبر القطع الذي يفصل \\( \\{S, A, B\\} \\) عن \\( \\{T\\} \\). سعة الأضلاع الخارجة من المجموع إلى \\( \\{T\\} \\) هي \\( c(A \\to T) + c(B \\to T) = 8 + 7 = 15 \\). بموجب نظرية التدفق الأقصى والقطع الأدنى، لا يمكن للتدفق الأقصى أن يتجاوز سعة القطع الأدنى وهي 15. وبما أنه يمكن تحقيق تدفق بمقدار 8 عبر \\( S \\to A \\to T \\) و7 عبر \\( S \\to B \\to T \\)، فإن التدفق الأقصى هو 15."
+      }
+    },
+    "correct_index": "15"
+  },
+  {
+    "id": "KAUST-040",
+    "track": "kaust",
+    "level": "High School (Gifted)",
+    "topic": "Discrete Mathematics",
+    "type": "MCQ",
+    "difficulty": "hard",
+    "content": {
+      "en": {
+        "question": "What is the maximum number of subsets of a 5-element set such that no subset is contained in another subset?",
+        "options": [
+          "8",
+          "10",
+          "12",
+          "16"
+        ],
+        "hint": "Apply Sperner's Theorem for the maximum size of an antichain.",
+        "explanation": "By Sperner's Theorem, the maximum size of an antichain of subsets of an \\( n \\)-element set is given by \\( \\binom{n}{\\lfloor n/2 \\rfloor} \\). For \\( n=5 \\), this maximum is \\( \\binom{5}{2} = 10 \\)."
+      },
+      "ar": {
+        "question": "ما هو أقصى عدد للمجموعات الجزئية من مجموعة تحتوي على 5 عناصر بحيث لا تكون أي مجموعة جزئية محتواة في مجموعة جزئية أخرى؟",
+        "options": [
+          "8",
+          "10",
+          "12",
+          "16"
+        ],
+        "hint": "طبق مبرهنة سبيرنر (Sperner's Theorem) لأقصى حجم لسلسلة مضادة (antichain).",
+        "explanation": "وفقاً لمبرهنة سبيرنر، أقصى حجم لسلسلة مضادة للمجموعات الجزئية من مجموعة بها \\( n \\) من العناصر هو \\( \\binom{n}{\\lfloor n/2 \\rfloor} \\). بالنسبة لـ \\( n=5 \\)، هذه القيمة هي \\( \\binom{5}{2} = 10 \\)."
+      }
+    },
+    "correct_index": "1"
+  },
+  {
+    "id": "KAUST-041",
+    "track": "kaust",
+    "level": "High School (Gifted)",
+    "topic": "Combinatorics",
+    "type": "FRQ",
+    "difficulty": "hard",
+    "content": {
+      "en": {
+        "question": "How many valid parenthesis expressions can be formed using exactly 5 pairs of parentheses?",
+        "options": [],
+        "hint": "The number of valid parenthesis matchings is given by the Catalan numbers.",
+        "explanation": "The number of valid parenthesizations of \\( n \\) pairs is given by the \\( n \\)-th Catalan number \\( C_n = \\frac{1}{n+1} \\binom{2n}{n} \\). For \\( n=5 \\), \\( C_5 = \\frac{1}{6} \\binom{10}{5} = \\frac{252}{6} = 42 \\)."
+      },
+      "ar": {
+        "question": "كم عدد تعابير الأقواس الصحيحة التي يمكن تكوينها باستخدام 5 أزواج من الأقواس بالضبط؟",
+        "options": [],
+        "hint": "عدد مطابقات الأقواس الصحيحة يُعطى بأعداد أعداد كاتالان (Catalan numbers).",
+        "explanation": "يُعطى عدد مطابقات الأقواس الصحيحة لـ \\( n \\) من الأزواج بـ عدد كاتالان الخامس \\( C_n = \\frac{1}{n+1} \\binom{2n}{n} \\). بالنسبة لـ \\( n=5 \\)، فإن \\( C_5 = \\frac{1}{6} \\binom{10}{5} = \\frac{252}{6} = 42 \\)."
+      }
+    },
+    "correct_index": "42"
+  },
+  {
+    "id": "KAUST-042",
+    "track": "kaust",
+    "level": "High School (Gifted)",
+    "topic": "Graph Theory",
+    "type": "MCQ",
+    "difficulty": "hard",
+    "content": {
+      "en": {
+        "question": "A hypercube graph \\( Q_4 \\) has 16 vertices. How many simple paths of length 4 exist between two antipodal vertices (vertices at distance 4)?",
+        "options": [
+          "24",
+          "16",
+          "48",
+          "12",
+          "32"
+        ],
+        "hint": "Consider the Hamming distance between antipodal vertices in a binary hypercube.",
+        "explanation": "In a 4-dimensional hypercube \\( Q_4 \\), two antipodal vertices differ in all 4 coordinates (Hamming distance 4). Any path of length 4 must change one coordinate at each step without reversing any step. This corresponds to permuting the order in which the 4 coordinates are flipped, which can be done in \\( 4! = 24 \\) ways."
+      },
+      "ar": {
+        "question": "يحتوي رسم المكعب الفائق \\( Q_4 \\) على 16 رأساً. كم عدد المسارات البسيطة ذات الطول 4 الموجودة بين رأسين متقابلين قُطرياً (رأسين على مسافة 4)؟",
+        "options": [
+          "24",
+          "16",
+          "48",
+          "12",
+          "32"
+        ],
+        "hint": "فكّر في مسافة هامينغ بين الرؤوس المتقابلة قطرياً في المكعب الفائق.",
+        "explanation": "في المكعب الفائق رباعي الأبعاد \\( Q_4 \\)، يختلف الرأسين المتقابلان في جميع الإحداثيات الأربعة (مسافة هامينغ تساوي 4). أي مسار بطول 4 يجب أن يغير إحداثياً واحداً في كل خطوة دون تكرار. هذا يتوافق مع تبديل الترتيب الذي نغير به الإحداثيات الأربعة، وهو ما يمكن عمله بـ \\( 4! = 24 \\) طريقة."
+      }
+    },
+    "correct_index": "0"
+  },
+  {
+    "id": "KAUST-043",
+    "track": "kaust",
+    "level": "High School (Gifted)",
+    "topic": "Probability",
+    "type": "FRQ",
+    "difficulty": "hard",
+    "content": {
+      "en": {
+        "question": "A particle performs a random walk on the vertices of a regular tetrahedron. At each step, it moves to one of the other 3 adjacent vertices with equal probability \\( 1/3 \\). If it starts at vertex \\( A \\), what is the probability that it returns to vertex \\( A \\) for the first time on its 4th step?",
+        "options": [],
+        "hint": "Track the position of the particle at each step ensuring it does not reach vertex A before step 4.",
+        "explanation": "At step 0, particle is at A.\nAt step 1, it must move to a non-A vertex (probability 1).\nAt step 2, to avoid A, it must move to one of the other 2 non-A vertices (probability 2/3).\nAt step 3, to avoid A, it must again move to one of the other 2 non-A vertices (probability 2/3).\nAt step 4, it must return to A (probability 1/3).\nThus, the total probability is \\( 1 \\times \\frac{2}{3} \\times \\frac{2}{3} \\times \\frac{1}{3} = \\frac{4}{27} \\)."
+      },
+      "ar": {
+        "question": "تتحرك جسيمة حركة عشوائية على رؤوس هرم منتظم رباعي الوجوه. في كل خطوة، تنتقل إلى أحد الرؤوس الثلاثة المجاورة باحتمال متساوٍ \\( 1/3 \\). إذا بدأت الجسيمة من الرأس \\( A \\)، فما احتمال أن تعود إلى الرأس \\( A \\) لأول مرة في الخطوة الرابعة؟",
+        "options": [],
+        "hint": "تتبع موقع الجسيمة في كل خطوة مع التأكد من عدم وصولها إلى الرأس A قبل الخطوة الرابعة.",
+        "explanation": "في الخطوة 0، تكون الجسيمة عند A.\nفي الخطوة 1، تنتقل حتماً إلى رأس غير A (بإحتمال 1).\nفي الخطوة 2، لعدم الوصول إلى A، يجب أن تنتقل إلى أحد الرأسين الآخرين غير A (بإحتمال 2/3).\nفي الخطوة 3، لعدم الوصول إلى A، يجب أن تنتقل مجدداً إلى أحد الرأسين الآخرين غير A (بإحتمال 2/3).\nفي الخطوة 4، يجب أن تعود إلى A (بإحتمال 1/3).\nبالتالي، الاحتمال الإجمالي هو \\( 1 \\times \\frac{2}{3} \\times \\frac{2}{3} \\times \\frac{1}{3} = \\frac{4}{27} \\)."
+      }
+    },
+    "correct_index": "4/27"
+  },
+  {
+    "id": "KAUST-044",
+    "track": "kaust",
+    "level": "High School (Gifted)",
+    "topic": "Number Theory",
+    "type": "MCQ",
+    "difficulty": "medium",
+    "content": {
+      "en": {
+        "question": "Find the remainder when \\( 3^{2024} \\) is divided by 100.",
+        "options": [
+          "81",
+          "01",
+          "21",
+          "41",
+          "61"
+        ],
+        "hint": "Use Euler's Totient Theorem or binomial expansion mod 100.",
+        "explanation": "Note that \\( 3^4 = 81 \\equiv -19 \\pmod{100} \\). We have \\( 3^{2024} = (3^4)^{506} = 81^{506} = (1 + 80)^{506} \\pmod{100} \\). Using the binomial expansion: \\( (1 + 80)^{506} \\equiv 1 + 506 \\times 80 \\equiv 1 + 6 \\times 80 = 1 + 480 \\equiv 81 \\pmod{100} \\)."
+      },
+      "ar": {
+        "question": "أوجد باقي قسمة \\( 3^{2024} \\) على 100.",
+        "options": [
+          "81",
+          "01",
+          "21",
+          "41",
+          "61"
+        ],
+        "hint": "استخدم نظرية أيلر أو مفكوك ذات الحدين بمقاييس 100.",
+        "explanation": "لاحظ أن \\( 3^4 = 81 \\equiv -19 \\pmod{100} \\). لدينا \\( 3^{2024} = (3^4)^{506} = 81^{506} = (1 + 80)^{506} \\pmod{100} \\). باستخدام مفكوك ذات الحدين: \\( (1 + 80)^{506} \\equiv 1 + 506 \\times 80 \\equiv 1 + 6 \\times 80 = 1 + 480 \\equiv 81 \\pmod{100} \\)."
+      }
+    },
+    "correct_index": "0"
+  },
+  {
+    "id": "KAUST-045",
+    "track": "kaust",
+    "level": "High School (Gifted)",
+    "topic": "Calculus",
+    "type": "FRQ",
+    "difficulty": "hard",
+    "content": {
+      "en": {
+        "question": "Evaluate the definite integral $$ \\int_0^{\\pi/2} \\frac{\\sin^3 x}{\\sin x + \\cos x} dx $$",
+        "options": [],
+        "hint": "Use King's Property for integrals: \\( \\int_a^b f(x) dx = \\int_a^b f(a+b-x) dx \\).",
+        "explanation": "Let \\( I = \\int_0^{\\pi/2} \\frac{\\sin^3 x}{\\sin x + \\cos x} dx \\). Applying \\( x \\to \\pi/2 - x \\), we get \\( I = \\int_0^{\\pi/2} \\frac{\\cos^3 x}{\\cos x + \\sin x} dx \\). Adding both expressions:\n$$ 2I = \\int_0^{\\pi/2} \\frac{\\sin^3 x + \\cos^3 x}{\\sin x + \\cos x} dx = \\int_0^{\\pi/2} (1 - \\sin x \\cos x) dx = \\left[ x - \\frac{1}{2}\\sin^2 x \\right]_0^{\\pi/2} = \\frac{\\pi}{2} - \\frac{1}{2} = \\frac{\\pi - 1}{2} $$\nThus, \\( I = \\frac{\\pi - 1}{4} \\)."
+      },
+      "ar": {
+        "question": "احسب قيمة التكامل المحدود $$ \\int_0^{\\pi/2} \\frac{\\sin^3 x}{\\sin x + \\cos x} dx $$",
+        "options": [],
+        "hint": "استخدم خاصية كينج للتكاملات: \\( \\int_a^b f(x) dx = \\int_a^b f(a+b-x) dx \\).",
+        "explanation": "ليكن \\( I = \\int_0^{\\pi/2} \\frac{\\sin^3 x}{\\sin x + \\cos x} dx \\). بتطبيق التعويض \\( x \\to \\pi/2 - x \\)، نحصل على \\( I = \\int_0^{\\pi/2} \\frac{\\cos^3 x}{\\cos x + \\sin x} dx \\). بجمع المعادلتين:\n$$ 2I = \\int_0^{\\pi/2} \\frac{\\sin^3 x + \\cos^3 x}{\\sin x + \\cos x} dx = \\int_0^{\\pi/2} (1 - \\sin x \\cos x) dx = \\left[ x - \\frac{1}{2}\\sin^2 x \\right]_0^{\\pi/2} = \\frac{\\pi}{2} - \\frac{1}{2} = \\frac{\\pi - 1}{2} $$\nبالتالي، \\( I = \\frac{\\pi - 1}{4} \\)."
+      }
+    },
+    "correct_index": "(pi-1)/4"
+  },
+  {
+    "id": "KAUST-046",
+    "track": "kaust",
+    "level": "High School (Gifted)",
+    "topic": "Discrete Mathematics",
+    "type": "MCQ",
+    "difficulty": "medium",
+    "content": {
+      "en": {
+        "question": "How many binary strings of length 10 do not contain three consecutive 1s?",
+        "options": [
+          "504",
+          "274",
+          "149",
+          "81",
+          "512"
+        ],
+        "hint": "Set up a recurrence relation: Tribonacci sequence.",
+        "explanation": "Let \\( a_n \\) be the number of valid binary strings of length \\( n \\). A string can end in 0, 01, or 011. Thus, \\( a_n = a_{n-1} + a_{n-2} + a_{n-3} \\). Base values: \\( a_1 = 2 \\), \\( a_2 = 4 \\), \\( a_3 = 7 \\). Sequence: \\( a_4=13, a_5=24, a_6=44, a_7=81, a_8=149, a_9=274, a_{10}=504 \\)."
+      },
+      "ar": {
+        "question": "كم عدد السلاسل الثنائية ذات الطول 10 التي لا تحتوي على ثلاثة آحاد متتالية؟",
+        "options": [
+          "504",
+          "274",
+          "149",
+          "81",
+          "512"
+        ],
+        "hint": "أنشئ علاقة تكرارية: متتالية تريبوناتشي.",
+        "explanation": "لتكن \\( a_n \\) عدد السلاسل الثنائية الصالحة ذات الطول \\( n \\). يمكن أن تنتهي السلسلة بـ 0 أو 01 أو 011. بالتالي، \\( a_n = a_{n-1} + a_{n-2} + a_{n-3} \\). القيم الأساسية: \\( a_1 = 2 \\), \\( a_2 = 4 \\), \\( a_3 = 7 \\). الحدود: \\( a_4=13, a_5=24, a_6=44, a_7=81, a_8=149, a_9=274, a_{10}=504 \\)."
+      }
+    },
+    "correct_index": "0"
+  },
+  {
+    "id": "KAUST-047",
+    "track": "kaust",
+    "level": "High School (Gifted)",
+    "topic": "Linear Algebra",
+    "type": "MCQ",
+    "difficulty": "hard",
+    "content": {
+      "en": {
+        "question": "Let \\( A \\) be a \\( 3 \\times 3 \\) matrix with eigenvalues 1, -2, and 3. What is the determinant of \\( A^3 - 2A + I \\)?",
+        "options": [
+          "0",
+          "-60",
+          "120",
+          "-120",
+          "60"
+        ],
+        "hint": "Eigenvalues of a polynomial function of a matrix \\( f(A) \\) are \\( f(\\lambda) \\).",
+        "explanation": "If \\( \\lambda \\) is an eigenvalue of \\( A \\), then \\( f(\\lambda) = \\lambda^3 - 2\\lambda + 1 \\) is an eigenvalue of \\( f(A) = A^3 - 2A + I \\). Evaluating \\( f(\\lambda) \\):\nFor \\( \\lambda_1 = 1 \\): \\( f(1) = 1^3 - 2(1) + 1 = 0 \\).\nFor \\( \\lambda_2 = -2 \\): \\( f(-2) = -8 + 4 + 1 = -3 \\).\nFor \\( \\lambda_3 = 3 \\): \\( f(3) = 27 - 6 + 1 = 22 \\).\nThe determinant is the product of the eigenvalues: \\( \\det(f(A)) = 0 \\times (-3) \\times 22 = 0 \\)."
+      },
+      "ar": {
+        "question": "لتكن \\( A \\) مصفوفة بمقاس \\( 3 \\times 3 \\) ذات قيم ذاتية 1 و -2 و 3. ما قيمة محدد المصفوفة \\( A^3 - 2A + I \\)؟",
+        "options": [
+          "0",
+          "-60",
+          "120",
+          "-120",
+          "60"
+        ],
+        "hint": "القيم الذاتية لدالة متعددة الحدود لمصفوفة \\( f(A) \\) هي \\( f(\\lambda) \\).",
+        "explanation": "إذا كانت \\( \\lambda \\) قيمة ذاتية للمصفوفة \\( A \\)، فإن \\( f(\\lambda) = \\lambda^3 - 2\\lambda + 1 \\) تكون قيمة ذاتية لـ \\( f(A) = A^3 - 2A + I \\). بحساب \\( f(\\lambda) \\):\nللقيمة \\( \\lambda_1 = 1 \\): \\( f(1) = 1^3 - 2(1) + 1 = 0 \\).\nللقيمة \\( \\lambda_2 = -2 \\): \\( f(-2) = -8 + 4 + 1 = -3 \\).\nللقيمة \\( \\lambda_3 = 3 \\): \\( f(3) = 27 - 6 + 1 = 22 \\).\nمحدد المصفوفة هو حاصل ضرب القيم الذاتية: \\( \\det(f(A)) = 0 \\times (-3) \\times 22 = 0 \\)."
+      }
+    },
+    "correct_index": "0"
+  },
+  {
+    "id": "KAUST-048",
+    "track": "kaust",
+    "level": "High School (Gifted)",
+    "topic": "Applied Math",
+    "type": "FRQ",
+    "difficulty": "medium",
+    "content": {
+      "en": {
+        "question": "In a game, two players take turns removing either 1, 2, or 4 stones from a pile. The player who takes the last stone wins. If the pile initially contains 100 stones, how many stones should the first player remove on the first turn to guarantee a win, assuming optimal play? (If multiple, give the smallest number).",
+        "options": [],
+        "hint": "Analyze the winning and losing positions modulo 3.",
+        "explanation": "Positions that are multiples of 3 are losing positions (L), because any allowed move (subtract 1, 2, or 4) leaves a non-multiple of 3, from which the opponent can move back to a multiple of 3. Since 100 \\( \\equiv 1 \\pmod 3 \\), the first player can leave 99 stones (a multiple of 3) by removing 1 stone (or 96 by removing 4). The smallest valid move to force a win is 1 stone."
+      },
+      "ar": {
+        "question": "في لعبة، يتناوب لاعبان على إزالة 1 أو 2 أو 4 أحجار من كومة. اللاعب الذي يأخذ الحجر الأخير هو الفائز. إذا كانت الكومة تحتوي في البداية على 100 حجر، كم حجراً يجب أن يزيل اللاعب الأول في دورته الأولى لضمان الفوز، بفرض اللعب الأمثل؟ (إذا وجد أكثر من خيار، أذكر أصغر عدد).",
+        "options": [],
+        "hint": "حلّل مواضع الفوز والخسارة بمقاييس 3.",
+        "explanation": "المواضع التي تقبل القسمة على 3 هي مواضع خسارة (L)، لأن أي نقلة مسموحة (طرح 1 أو 2 أو 4) تترك عدداً لا يقبل القسمة على 3، والتي يمكن للخصم منها العودة إلى مضاعف للعدد 3. بما أن 100 \\( \\equiv 1 \\pmod 3 \\)، فإن اللاعب الأول يستطيع ترك 99 حجراً (مضاعف لـ 3) عن طريق إزالة حجر واحد. أصغر حركة مسموحة لضمان الفوز هي إزالة حجر واحد."
+      }
+    },
+    "correct_index": "1"
+  },
+  {
+    "id": "KAUST-049",
+    "track": "kaust",
+    "level": "High School (Gifted)",
+    "topic": "Probability",
+    "type": "MCQ",
+    "difficulty": "medium",
+    "content": {
+      "en": {
+        "question": "A fair 6-sided die is rolled repeatedly until all 6 faces have appeared at least once. What is the expected total number of rolls?",
+        "options": [
+          "14.7",
+          "12.0",
+          "18.0",
+          "15.0",
+          "13.5"
+        ],
+        "hint": "Apply the Coupon Collector's Problem expected value formula.",
+        "explanation": "By the Coupon Collector's problem, the expected number of rolls is \\( E = 6 \\left( \\frac{1}{6} + \\frac{1}{5} + \\frac{1}{4} + \\frac{1}{3} + \\frac{1}{2} + \\frac{1}{1} \\right) = 6 \\times \\frac{147}{60} = 14.7 \\)."
+      },
+      "ar": {
+        "question": "يتم رمي حجر نرد منتظم ذي 6 أوجه بشكل متكرر حتى تظهر جميع الأوجه الستة مرة واحدة على الأقل. ما هو العدد المتوقع لإجمالي الرميات؟",
+        "options": [
+          "14.7",
+          "12.0",
+          "18.0",
+          "15.0",
+          "13.5"
+        ],
+        "hint": "طبق صيغة القيمة المتوقعة لمسألة جامع الكوبونات.",
+        "explanation": "حسب مسألة جامع الكوبونات، فإن العدد المتوقع للرميات هو \\( E = 6 \\left( \\frac{1}{6} + \\frac{1}{5} + \\frac{1}{4} + \\frac{1}{3} + \\frac{1}{2} + \\frac{1}{1} \\right) = 6 \\times \\frac{147}{60} = 14.7 \\)."
+      }
+    },
+    "correct_index": "0"
+  },
+  {
+    "id": "KAUST-050",
+    "track": "kaust",
+    "level": "High School (Gifted)",
+    "topic": "Applied Math",
+    "type": "FRQ",
+    "difficulty": "easy",
+    "content": {
+      "en": {
+        "question": "Consider the vectors \\( \\vec{u} = (1, 2, 2) \\) and \\( \\vec{v} = (2, -1, 2) \\). Find the magnitude of the vector projection of \\( \\vec{u} \\) onto \\( \\vec{v} \\).",
+        "options": [],
+        "hint": "The magnitude of the scalar projection is \\( \\frac{|\\vec{u} \\cdot \\vec{v}|}{\\|\\vec{v}\\|} \\).",
+        "explanation": "Calculate the dot product: \\( \\vec{u} \\cdot \\vec{v} = 1(2) + 2(-1) + 2(2) = 4 \\).\nCalculate magnitude of \\( \\vec{v} \\): \\( \\|\\vec{v}\\| = \\sqrt{2^2 + (-1)^2 + 2^2} = 3 \\).\nThe magnitude of the projection is \\( \\frac{4}{3} \\)."
+      },
+      "ar": {
+        "question": "لتكن المتجهات \\( \\vec{u} = (1, 2, 2) \\) و \\( \\vec{v} = (2, -1, 2) \\). أوجد مقدار مسقط المتجه \\( \\vec{u} \\) على \\( \\vec{v} \\).",
+        "options": [],
+        "hint": "مقدار المسقط السلمي هو \\( \\frac{|\\vec{u} \\cdot \\vec{v}|}{\\|\\vec{v}\\|} \\).",
+        "explanation": "نحسب الضرب القياسي: \\( \\vec{u} \\cdot \\vec{v} = 1(2) + 2(-1) + 2(2) = 4 \\).\nنحسب طول المتجه \\( \\vec{v} \\): \\( \\|\\vec{v}\\| = \\sqrt{2^2 + (-1)^2 + 2^2} = 3 \\).\nمقدار المسقط يساوي \\( \\frac{4}{3} \\)."
+      }
+    },
+    "correct_index": "4/3"
+  },
+  {
+    "id": "KAUST-051",
+    "track": "kaust",
+    "level": "High School (Gifted)",
+    "topic": "Number Theory",
+    "type": "MCQ",
+    "difficulty": "easy",
+    "content": {
+      "en": {
+        "question": "How many positive integers \\( n \\le 100 \\) satisfy \\( 2^n \\equiv 1 \\pmod{7} \\)?",
+        "options": [
+          "33",
+          "32",
+          "34",
+          "14",
+          "50"
+        ],
+        "hint": "Determine the multiplicative order of 2 modulo 7.",
+        "explanation": "Powers of 2 modulo 7: \\( 2^1 \\equiv 2, 2^2 \\equiv 4, 2^3 \\equiv 1 \\pmod 7 \\). The order is 3. Thus \\( 2^n \\equiv 1 \\pmod 7 \\) if and only if \\( n \\) is a multiple of 3. In the range \\( 1 \\le n \\le 100 \\), there are \\( \\lfloor 100 / 3 \\rfloor = 33 \\) multiples of 3."
+      },
+      "ar": {
+        "question": "كم عدد الأعداد الصحيحة الموجبة \\( n \\le 100 \\) التي تحقّق \\( 2^n \\equiv 1 \\pmod{7} \\)؟",
+        "options": [
+          "33",
+          "32",
+          "34",
+          "14",
+          "50"
+        ],
+        "hint": "احسب الرتبة الضربية للعدد 2 بمقياس 7.",
+        "explanation": "قوى العدد 2 بمقياس 7: \\( 2^1 \\equiv 2, 2^2 \\equiv 4, 2^3 \\equiv 1 \\pmod 7 \\). الرتبة هي 3. بالتالي \\( 2^n \\equiv 1 \\pmod 7 \\) إذا وفقط إذا كان \\( n \\) مضاعفاً للعدد 3. في الفترة \\( 1 \\le n \\le 100 \\)، يوجد \\( \\lfloor 100 / 3 \\rfloor = 33 \\) مضاعفاً للعدد 3."
+      }
+    },
+    "correct_index": "0"
+  },
+  {
+    "id": "KAUST-052",
+    "track": "kaust",
+    "level": "High School (Gifted)",
+    "topic": "Combinatorics",
+    "type": "FRQ",
+    "difficulty": "medium",
+    "content": {
+      "en": {
+        "question": "Find the number of derangements of 5 elements (i.e., permutations of \\( \\{1, 2, 3, 4, 5\\} \\) with no fixed points).",
+        "options": [],
+        "hint": "Use the formula \\( !n = n! \\sum_{k=0}^n \\frac{(-1)^k}{k!} \\).",
+        "explanation": "For \\( n = 5 \\):\n\\( !5 = 5! \\left( 1 - 1 + \\frac{1}{2!} - \\frac{1}{3!} + \\frac{1}{4!} - \\frac{1}{5!} \\right) = 120 \\left( \\frac{1}{2} - \\frac{1}{6} + \\frac{1}{24} - \\frac{1}{120} \\right) = 60 - 20 + 5 - 1 = 44 \\)."
+      },
+      "ar": {
+        "question": "أوجد عدد الاضطرابات (التباديل الشواذ بدون نقاط ثابتة) لمجموعة تحتوي على 5 عناصر.",
+        "options": [],
+        "hint": "استخدم الصيغة \\( !n = n! \\sum_{k=0}^n \\frac{(-1)^k}{k!} \\).",
+        "explanation": "من أجل \\( n = 5 \\):\n\\( !5 = 5! \\left( 1 - 1 + \\frac{1}{2!} - \\frac{1}{3!} + \\frac{1}{4!} - \\frac{1}{5!} \\right) = 120 \\left( \\frac{1}{2} - \\frac{1}{6} + \\frac{1}{24} - \\frac{1}{120} \\right) = 60 - 20 + 5 - 1 = 44 \\)."
+      }
+    },
+    "correct_index": "44"
+  },
+  {
+    "id": "KAUST-053",
+    "track": "kaust",
+    "level": "High School (Gifted)",
+    "topic": "Calculus",
+    "type": "MCQ",
+    "difficulty": "easy",
+    "content": {
+      "en": {
+        "question": "Evaluate the infinite sum $$ \\sum_{n=1}^{\\infty} \\frac{n}{2^n} $$",
+        "options": [
+          "2",
+          "1",
+          "3",
+          "4",
+          "3/2"
+        ],
+        "hint": "Differentiate the geometric series formula \\( \\sum_{n=0}^{\\infty} x^n = \\frac{1}{1-x} \\).",
+        "explanation": "We know \\( \\sum_{n=0}^{\\infty} x^n = \\frac{1}{1-x} \\). Differentiating both sides gives \\( \\sum_{n=1}^{\\infty} n x^{n-1} = \\frac{1}{(1-x)^2} \\). Multiplying by \\( x \\) gives \\( \\sum_{n=1}^{\\infty} n x^n = \\frac{x}{(1-x)^2} \\). Substituting \\( x = 1/2 \\):\n$$ \\sum_{n=1}^{\\infty} \\frac{n}{2^n} = \\frac{1/2}{(1 - 1/2)^2} = \\frac{1/2}{1/4} = 2 $$"
+      },
+      "ar": {
+        "question": "احسب مجموع السلسلة اللانهائية $$ \\sum_{n=1}^{\\infty} \\frac{n}{2^n} $$",
+        "options": [
+          "2",
+          "1",
+          "3",
+          "4",
+          "3/2"
+        ],
+        "hint": "اشتق صيغة السلسلة الهندسية \\( \\sum_{n=0}^{\\infty} x^n = \\frac{1}{1-x} \\).",
+        "explanation": "نعلم أن \\( \\sum_{n=0}^{\\infty} x^n = \\frac{1}{1-x} \\). باشتفاق الطرفين نحصل على \\( \\sum_{n=1}^{\\infty} n x^{n-1} = \\frac{1}{(1-x)^2} \\). بالضرب في \\( x \\) نحصل على \\( \\sum_{n=1}^{\\infty} n x^n = \\frac{x}{(1-x)^2} \\). بالتعويض بـ \\( x = 1/2 \\):\n$$ \\sum_{n=1}^{\\infty} \\frac{n}{2^n} = \\frac{1/2}{(1 - 1/2)^2} = \\frac{1/2}{1/4} = 2 $$"
+      }
+    },
+    "correct_index": "0"
+  },
+  {
+    "id": "KAUST-054",
+    "track": "kaust",
+    "level": "High School (Gifted)",
+    "topic": "Discrete Mathematics",
+    "type": "FRQ",
+    "difficulty": "medium",
+    "content": {
+      "en": {
+        "question": "On an island, Knights always tell the truth and Knaves always lie. You meet three inhabitants: A, B, and C. A says: 'All of us are Knaves.' B says: 'Exactly one of us is a Knight.' How many Knights are there among A, B, and C?",
+        "options": [],
+        "hint": "Analyze A's identity first.",
+        "explanation": "If A were a Knight, then A's statement 'All of us are Knaves' would be true, meaning A is a Knave (contradiction). So A must be a Knave, making his statement false, so at least one inhabitant is a Knight.\nNow test B:\nIf B is a Knight, B's statement 'Exactly one of us is a Knight' is true. Thus, B is the only Knight, and C is a Knave. This is consistent (A: Knave, B: Knight, C: Knave).\nIf B were a Knave, then C would have to be a Knight (since at least one is Knight). But then there would be exactly one Knight (C), which would make B's statement true, contradicting B being a Knave.\nHence, B is the only Knight. There is 1 Knight."
+      },
+      "ar": {
+        "question": "في جزيرة ما، يقول الفرسان الحقيقة دائماً بينما يكذب الأشرار دائماً. التقيت بثلاثة من السكان: A و B و C. قال A: 'كلنا أشرار.' وقال B: 'واحد منا فقط فارس.' كم عدد الفرسان بين A و B و C؟",
+        "options": [],
+        "hint": "حلل هوية A أولاً.",
+        "explanation": "لو كان A فارساً، لكانت عبارته 'كلنا أشرار' صحيحة، مما يعني أن A شرير (تناقض). إذن A شرير وعبارته كاذبة، مما يعني وجود فارس واحد على الأقل.\nالآن نختبر B:\nإذا كان B فارساً، فعبارته 'واحد منا فقط فارس' صحيحة. إذن B هو الفارس الوحيد، وC شرير. هذا متسق تماماً (A: شرير، B: فارس، C: شرير).\nلو كان B شريراً، لكان C فارساً (لأن هناك فارساً واحداً على الأقل). لكن حينها سيكون هناك فارس واحد فقط (C)، مما يجعل عبارة B صحيحة وهو ما يناقض أنه شرير.\nإذن B هو الفارس الوحيد. يوجد فارس واحد فقط."
+      }
+    },
+    "correct_index": "1"
+  },
+  {
+    "id": "KAUST-055",
+    "track": "kaust",
+    "level": "High School (Gifted)",
+    "topic": "Probability",
+    "type": "MCQ",
+    "difficulty": "hard",
+    "content": {
+      "en": {
+        "question": "Two real numbers \\( x \\) and \\( y \\) are chosen independently and uniformly at random from the interval \\( [0, 1] \\). What is the conditional probability that \\( x + y \\le 1 \\) given that \\( x^2 + y^2 \\le 1 \\)?",
+        "options": [
+          "\\( \\frac{2}{\\pi} \\)",
+          "\\( \\frac{1}{\\pi} \\)",
+          "\\( \\frac{4}{\\pi} \\)",
+          "\\( \\frac{\\pi}{4} \\)",
+          "\\( \\frac{1}{2} \\)"
+        ],
+        "hint": "Represent the regions geometrically in the first quadrant.",
+        "explanation": "The condition \\( x^2 + y^2 \\le 1 \\) defines the quarter unit disk in the first quadrant with area \\( \\frac{\\pi}{4} \\).\nThe event \\( x + y \\le 1 \\) represents a triangle with vertices \\( (0,0), (1,0), (0,1) \\) and area \\( \\frac{1}{2} \\).\nSince the triangle is entirely contained within the quarter disk, the intersection area is \\( \\frac{1}{2} \\).\nThus, \\( P(x+y \\le 1 \\mid x^2+y^2 \\le 1) = \\frac{1/2}{\\pi/4} = \\frac{2}{\\pi} \\)."
+      },
+      "ar": {
+        "question": "تم اختيار عددين حقيقيين \\( x \\) و \\( y \\) بشكل مستقل وعشوائي منتظم من الفترة \\( [0, 1] \\). ما احتمال أن يكون \\( x + y \\le 1 \\) بشرط أن يكون \\( x^2 + y^2 \\le 1 \\)؟",
+        "options": [
+          "\\( \\frac{2}{\\pi} \\)",
+          "\\( \\frac{1}{\\pi} \\)",
+          "\\( \\frac{4}{\\pi} \\)",
+          "\\( \\frac{\\pi}{4} \\)",
+          "\\( \\frac{1}{2} \\)"
+        ],
+        "hint": "مثّل المناطق هندسياً في الربع الأول.",
+        "explanation": "الشرط \\( x^2 + y^2 \\le 1 \\) يمثل ربع قرص الوحدة في الربع الأول ومساحته \\( \\frac{\\pi}{4} \\).\nالحدث \\( x + y \\le 1 \\) يمثل مثلثاً رؤوسه \\( (0,0), (1,0), (0,1) \\) ومساحته \\( \\frac{1}{2} \\).\nبما أن المثلث محتوى بالكامل داخل ربع القرص، فإن مساحة التقاطع هي \\( \\frac{1}{2} \\).\nبالتالي، \\( P(x+y \\le 1 \\mid x^2+y^2 \\le 1) = \\frac{1/2}{\\pi/4} = \\frac{2}{\\pi} \\)."
+      }
+    },
+    "correct_index": "0"
+  },
+  {
+    "id": "KAUST-056",
+    "track": "kaust",
+    "level": "High School (Gifted)",
+    "topic": "Linear Algebra",
+    "type": "FRQ",
+    "difficulty": "medium",
+    "content": {
+      "en": {
+        "question": "For what value of \\( k \\) does the following system of linear equations have infinitely many solutions?\n$$ x + 2y - z = 3 $$\n$$ 2x + 5y + z = 7 $$\n$$ 3x + 7y + kz = 10 $$",
+        "options": [],
+        "hint": "Check linear dependence of the equations (Row 3 vs Row 1 + Row 2).",
+        "explanation": "Adding equation 1 and equation 2:\n\\( (x + 2y - z) + (2x + 5y + z) = 3x + 7y + 0z = 3 + 7 = 10 \\).\nFor equation 3, \\( 3x + 7y + kz = 10 \\), to be dependent and consistent with the first two equations, the coefficient of \\( z \\) must be 0. Thus, \\( k = 0 \\)."
+      },
+      "ar": {
+        "question": "ما قيمة \\( k \\) التي تجعل لنظام المعادلتين الخطية التالي عدد غير منتهٍ من الحلول؟\n$$ x + 2y - z = 3 $$\n$$ 2x + 5y + z = 7 $$\n$$ 3x + 7y + kz = 10 $$",
+        "options": [],
+        "hint": "افحص التبعية الخطية للمعادلات (الصف 3 مقابل الصف 1 + الصف 2).",
+        "explanation": "بجمع المعادلة الأولى والثانية:\n\\( (x + 2y - z) + (2x + 5y + z) = 3x + 7y + 0z = 3 + 7 = 10 \\).\nلكي تكون المعادلة الثالثة \\( 3x + 7y + kz = 10 \\) تابعة ومتبقة مع أول معادلتين، يجب أن يكون معامل \\( z \\) مساوياً لـ 0. وبالتالي \\( k = 0 \\)."
+      }
+    },
+    "correct_index": "0"
+  },
+  {
+    "id": "KAUST-057",
+    "track": "kaust",
+    "level": "High School (Gifted)",
+    "topic": "Applied Math",
+    "type": "MCQ",
+    "difficulty": "easy",
+    "content": {
+      "en": {
+        "question": "What is the sum of the squares of the roots of the polynomial \\( P(x) = x^3 - 4x^2 + 2x - 7 \\)?",
+        "options": [
+          "12",
+          "16",
+          "8",
+          "20",
+          "10"
+        ],
+        "hint": "Use Vieta's formulas: \\( a^2 + b^2 + c^2 = (a+b+c)^2 - 2(ab+bc+ca) \\).",
+        "explanation": "Let the roots be \\( a, b, c \\). By Vieta's formulas:\n\\( a + b + c = 4 \\)\n\\( ab + bc + ca = 2 \\)\nThen, \\( a^2 + b^2 + c^2 = (a+b+c)^2 - 2(ab+bc+ca) = 4^2 - 2(2) = 16 - 4 = 12 \\)."
+      },
+      "ar": {
+        "question": "ما هو مجموع مربعات جذور الكثير الحدود \\( P(x) = x^3 - 4x^2 + 2x - 7 \\)؟",
+        "options": [
+          "12",
+          "16",
+          "8",
+          "20",
+          "10"
+        ],
+        "hint": "استخدم صيغ فييتا: \\( a^2 + b^2 + c^2 = (a+b+c)^2 - 2(ab+bc+ca) \\).",
+        "explanation": "لتكن الجذور هي \\( a, b, c \\). حسب صيغ فييتا:\n\\( a + b + c = 4 \\)\n\\( ab + bc + ca = 2 \\)\nإذن، \\( a^2 + b^2 + c^2 = (a+b+c)^2 - 2(ab+bc+ca) = 4^2 - 2(2) = 16 - 4 = 12 \\)."
+      }
+    },
+    "correct_index": "0"
+  },
+  {
+    "id": "KAUST-058",
+    "track": "kaust",
+    "level": "High School (Gifted)",
+    "topic": "Combinatorics",
+    "type": "FRQ",
+    "difficulty": "medium",
+    "content": {
+      "en": {
+        "question": "How many paths are there from \\( (0,0) \\) to \\( (4,4) \\) on a grid using only steps of \\( (1,0) \\) and \\( (0,1) \\) that do not cross above the diagonal \\( y = x \\)?",
+        "options": [],
+        "hint": "This problem relates to Catalan numbers \\( C_n \\).",
+        "explanation": "The number of monotonic paths from \\( (0,0) \\) to \\( (n,n) \\) that do not cross above the line \\( y = x \\) is given by the \\( n \\)-th Catalan number \\( C_n = \\frac{1}{n+1} \\binom{2n}{n} \\). For \\( n = 4 \\):\n$$ C_4 = \\frac{1}{5} \\binom{8}{4} = \\frac{70}{5} = 14 $$"
+      },
+      "ar": {
+        "question": "كم عدد المسارات من \\( (0,0) \\) إلى \\( (4,4) \\) على شبكة باستخدام خطوات \\( (1,0) \\) و \\( (0,1) \\) والتي لا تتجاوز الخط \\( y = x \\) إلى الأعلى؟",
+        "options": [],
+        "hint": "ترتبط هذه المسألة بأعداد كاتالان \\( C_n \\).",
+        "explanation": "عدد المسارات المطردة من \\( (0,0) \\) إلى \\( (n,n) \\) والتي لا تتعدى الخط \\( y = x \\) يعطى بعدد كاتالان \\( C_n = \\frac{1}{n+1} \\binom{2n}{n} \\). من أجل \\( n = 4 \\):\n$$ C_4 = \\frac{1}{5} \\binom{8}{4} = \\frac{70}{5} = 14 $$"
+      }
+    },
+    "correct_index": "14"
+  },
+  {
+    "id": "KAUST-059",
+    "track": "kaust",
+    "level": "High School (Gifted)",
+    "topic": "Applied Math",
+    "type": "MCQ",
+    "difficulty": "hard",
+    "content": {
+      "en": {
+        "question": "Let \\( f(x) = 4x(1-x) \\) for \\( x \\in [0,1] \\). How many fixed points does the second iterate \\( f(f(x)) \\) have in \\( [0,1] \\)?",
+        "options": [
+          "4",
+          "2",
+          "3",
+          "1",
+          "8"
+        ],
+        "hint": "Fixed points satisfy \\( f(f(x)) = x \\). Consider the graph or factor out the fixed points of \\( f(x) \\).",
+        "explanation": "The fixed points of \\( f(f(x)) \\) satisfy \\( f(f(x)) - x = 0 \\). Since \\( f(x) \\) is quadratic, \\( f(f(x)) \\) is a degree 4 polynomial. The two fixed points of \\( f(x) \\) (which are \\( x = 0 \\) and \\( x = 3/4 \\)) are also fixed points of \\( f(f(x)) \\). The polynomial \\( f(f(x)) - x \\) has 4 distinct real roots in \\( [0,1] \\) because the map oscillates twice across \\( [0,1] \\) and intersects \\( y = x \\) 4 times."
+      },
+      "ar": {
+        "question": "ليكن \\( f(x) = 4x(1-x) \\) لـ \\( x \\in [0,1] \\). كم عدد النقاط الثابتة للتركيب الثاني \\( f(f(x)) \\) في الفترة \\( [0,1] \\)؟",
+        "options": [
+          "4",
+          "2",
+          "3",
+          "1",
+          "8"
+        ],
+        "hint": "النقاط الثابتة تحقّق \\( f(f(x)) = x \\). استثنِ النقاط الثابتة لـ \\( f(x) \\).",
+        "explanation": "النقاط الثابتة لـ \\( f(f(x)) \\) تحقّق \\( f(f(x)) - x = 0 \\). بما أن \\( f(x) \\) تربيعية، فإن \\( f(f(x)) \\) من الدرجة الرابعة. النقطتان الثابتتان لـ \\( f(x) \\) (وهما \\( x = 0 \\) و \\( x = 3/4 \\)) هما أيضاً نقطتان ثابتتان لـ \\( f(f(x)) \\). كثير الحدود \\( f(f(x)) - x \\) له 4 جذور حقيقية متميزة في الفترة \\( [0,1] \\) لأن الدالة تتذبذب مرتين وتقطع المستقيم \\( y = x \\) في 4 نقاط."
+      }
+    },
+    "correct_index": "0"
+  },
+  {
+    "id": "KAUST-060",
+    "track": "kaust",
+    "level": "High School (Gifted)",
+    "topic": "Calculus",
+    "type": "MCQ",
+    "difficulty": "medium",
+    "content": {
+      "en": {
+        "question": "Solve the initial value problem \\( \\frac{dy}{dx} + y = e^{-x} \\) with \\( y(0) = 2 \\). What is the value of \\( y(1) \\)?",
+        "options": [
+          "\\( 3e^{-1} \\)",
+          "\\( 2e^{-1} \\)",
+          "\\( e^{-1} \\)",
+          "\\( 3e \\)",
+          "\\( 2e \\)"
+        ],
+        "hint": "Use an integrating factor \\( I(x) = e^{\\int 1 dx} = e^x \\).",
+        "explanation": "Multiplying by integrating factor \\( e^x \\):\n$$ \\frac{d}{dx} (y e^x) = 1 \\implies y e^x = x + C $$\nUsing initial condition \\( y(0) = 2 \\):\n\\( 2 e^0 = 0 + C \\implies C = 2 \\).\nThus, \\( y(x) = (x + 2) e^{-x} \\).\nAt \\( x = 1 \\), \\( y(1) = (1 + 2) e^{-1} = 3e^{-1} \\)."
+      },
+      "ar": {
+        "question": "أوجد حل مسألة القيمة الابتدائية \\( \\frac{dy}{dx} + y = e^{-x} \\) بشرط \\( y(0) = 2 \\). ما قيمة \\( y(1) \\)؟",
+        "options": [
+          "\\( 3e^{-1} \\)",
+          "\\( 2e^{-1} \\)",
+          "\\( e^{-1} \\)",
+          "\\( 3e \\)",
+          "\\( 2e \\)"
+        ],
+        "hint": "استخدم عامل التكامل \\( I(x) = e^{\\int 1 dx} = e^x \\).",
+        "explanation": "بالضرب في عامل التكامل \\( e^x \\):\n$$ \\frac{d}{dx} (y e^x) = 1 \\implies y e^x = x + C $$\nباستخدام الشرط الابتدائي \\( y(0) = 2 \\):\n\\( 2 e^0 = 0 + C \\implies C = 2 \\).\nبالتالي، \\( y(x) = (x + 2) e^{-x} \\).\nعند \\( x = 1 \\)، نجد أن \\( y(1) = (1 + 2) e^{-1} = 3e^{-1} \\)."
+      }
+    },
+    "correct_index": "0"
+  },
+  {
+    "id": "KAUST-061",
+    "track": "kaust",
+    "level": "High School (Gifted)",
+    "topic": "Graph Theory",
+    "type": "FRQ",
+    "difficulty": "easy",
+    "content": {
+      "en": {
+        "question": "A connected planar graph has 12 vertices and divides the plane into 8 regions. How many edges does this graph have?",
+        "options": [],
+        "hint": "Use Euler's formula for planar graphs: \\( V - E + F = 2 \\).",
+        "explanation": "By Euler's formula for connected planar graphs:\n\\( V - E + F = 2 \\)\nSubstitute \\( V = 12 \\) and \\( F = 8 \\):\n\\( 12 - E + 8 = 2 \\implies 20 - E = 2 \\implies E = 18 \\)."
+      },
+      "ar": {
+        "question": "رسم بياني مستوٍ ومتصل يحتوي على 12 رأساً ويقسم المستوي إلى 8 مناطق. كم عدد حواف هذا الرسم البياني؟",
+        "options": [],
+        "hint": "استخدم صيغة أيلر للرسوم البيانية المستوية: \\( V - E + F = 2 \\).",
+        "explanation": "حسب صيغة أيلر للرسوم البيانية المستوية المتصلة:\n\\( V - E + F = 2 \\)\nبالتعويض عن \\( V = 12 \\) و \\( F = 8 \\):\n\\( 12 - E + 8 = 2 \\implies 20 - E = 2 \\implies E = 18 \\)."
+      }
+    },
+    "correct_index": "18"
+  },
+  {
+    "id": "KAUST-062",
+    "track": "kaust",
+    "level": "High School (Gifted)",
+    "topic": "Graph Theory",
+    "type": "MCQ",
+    "difficulty": "medium",
+    "content": {
+      "en": {
+        "question": "In a connected planar graph, every vertex has degree 4. If the graph divides the plane into 12 regions (including the unbounded face), how many vertices does the graph have?",
+        "options": [
+          "6",
+          "8",
+          "10",
+          "12",
+          "14"
+        ],
+        "hint": "Use Euler's Planar Formula \\( V - E + F = 2 \\) and the sum-of-degrees theorem.",
+        "explanation": "By the degree-sum formula, \\( 2E = \\sum \\text{deg}(v) = 4V \\implies E = 2V \\). Substituting \\( E = 2V \\) and \\( F = 12 \\) into Euler's formula \\( V - E + F = 2 \\) gives \\( V - 2V + 12 = 2 \\), which yields \\( V = 10 \\)."
+      },
+      "ar": {
+        "question": "في رسم بياني مستوٍ ومتصل، درجة كل رأس هي 4. إذا كان الرسم البياني يقسم المستوي إلى 12 منطقة (بما في ذلك الوجه غير المحدود)، فكم عدد رؤوس الرسم البياني؟",
+        "options": [
+          "6",
+          "8",
+          "10",
+          "12",
+          "14"
+        ],
+        "hint": "استخدم صيغة أويلر للرسوم البيانية المستوية \\( V - E + F = 2 \\) ومجموع درجات الرؤوس.",
+        "explanation": "بموجب صيغة مجموع الدرجات، فإن \\( 2E = \\sum \\text{deg}(v) = 4V \\implies E = 2V \\). بالتعويض عن \\( E = 2V \\) و \\( F = 12 \\) في صيغة أويلر \\( V - E + F = 2 \\)، نحصل على \\( V - 2V + 12 = 2 \\)، مما يعطي \\( V = 10 \\)."
+      }
+    },
+    "correct_index": "2"
+  },
+  {
+    "id": "KAUST-063",
+    "track": "kaust",
+    "level": "High School (Gifted)",
+    "topic": "Number Theory",
+    "type": "FRQ",
+    "difficulty": "hard",
+    "content": {
+      "en": {
+        "question": "Find the last two digits (the remainder when divided by 100) of the expression \\( 3^{3^{2024}} \\).",
+        "options": [],
+        "hint": "Use Euler's Totient Theorem modulo 100 and modulo \\( \\phi(100) = 40 \\).",
+        "explanation": "Since \\( \\gcd(3, 100) = 1 \\), we use Euler's Totient Theorem: \\( 3^{\\phi(100)} = 3^{40} \\equiv 1 \\pmod{100} \\). Next, we find \\( 3^{2024} \\pmod{40} \\). Since \\( \\phi(40) = 16 \\) and \\( 2024 \\equiv 8 \\pmod{16} \\), we have \\( 3^{2024} \\equiv 3^8 = (3^4)^2 = 81^2 \\equiv 1^2 = 1 \\pmod{40} \\). Thus, \\( 3^{2024} = 40k + 1 \\), so \\( 3^{3^{2024}} = 3^{40k + 1} = (3^{40})^k \\cdot 3 \\equiv 1^k \\cdot 3 = 3 \\pmod{100} \\). The last two digits are 03, so the numerical answer is 3."
+      },
+      "ar": {
+        "question": "أوجد آخر رقمين (باقي القسمة على 100) للتعبيير \\( 3^{3^{2024}} \\).",
+        "options": [],
+        "hint": "استخدم مبرهنة مؤشر أويلر بالقياس 100 وبالقياس \\( \\phi(100) = 40 \\).",
+        "explanation": "بما أن \\( \\gcd(3, 100) = 1 \\)، نستخدم مبرهنة أويلر: \\( 3^{\\phi(100)} = 3^{40} \\equiv 1 \\pmod{100} \\). بعد ذلك، نجد \\( 3^{2024} \\pmod{40} \\). بما أن \\( \\phi(40) = 16 \\) و \\( 2024 \\equiv 8 \\pmod{16} \\)، فإن \\( 3^{2024} \\equiv 3^8 = (3^4)^2 = 81^2 \\equiv 1 \\pmod{40} \\). بالتالي \\( 3^{2024} = 40k + 1 \\)، مما يعني أن \\( 3^{3^{2024}} = 3^{40k + 1} \\equiv 3 \\pmod{100} \\). إذن الرقم المطلوب هو 3."
+      }
+    },
+    "correct_index": "3"
+  },
+  {
+    "id": "KAUST-064",
+    "track": "kaust",
+    "level": "High School (Gifted)",
+    "topic": "Probability",
+    "type": "MCQ",
+    "difficulty": "medium",
+    "content": {
+      "en": {
+        "question": "A particle moves between 4 positions \\( \\{1, 2, 3, 4\\} \\) arranged in a line. Position 1 and position 4 are absorbing boundaries. From position 2, the particle moves to 1 with probability \\( 1/3 \\) and to 3 with probability \\( 2/3 \\). From position 3, it moves to 2 with probability \\( 1/2 \\) and to 4 with probability \\( 1/2 \\). If the particle starts at position 2, what is the probability that it eventually reaches position 4?",
+        "options": [
+          "1/3",
+          "1/2",
+          "2/5",
+          "3/5",
+          "2/3"
+        ],
+        "hint": "Set up a system of linear equations for the absorption probabilities \\( P_2 \\) and \\( P_3 \\).",
+        "explanation": "Let \\( P_2 \\) and \\( P_3 \\) be the probabilities of reaching 4 starting from positions 2 and 3, respectively. We have \\( P_2 = \\frac{1}{3}(0) + \\frac{2}{3}P_3 = \\frac{2}{3}P_3 \\) and \\( P_3 = \\frac{1}{2}P_2 + \\frac{1}{2}(1) = \\frac{1}{2}P_2 + \\frac{1}{2} \\). Substituting \\( P_2 \\) into the second equation gives \\( P_3 = \\frac{1}{3}P_3 + \\frac{1}{2} \\implies \\frac{2}{3}P_3 = \\frac{1}{2} \\implies P_3 = \\frac{3}{4} \\). Then \\( P_2 = \\frac{2}{3} \\times \\frac{3}{4} = \\frac{1}{2} \\)."
+      },
+      "ar": {
+        "question": "يتحرك جسيم بين 4 مواضع \\( \\{1, 2, 3, 4\\} \\) مرتبة على خط مستقيم. الموضعان 1 و 4 حادان ماصان. من الموضع 2، ينتقل الجسيم إلى 1 باحتمال \\( 1/3 \\) وإلى 3 باحتمال \\( 2/3 \\). ومن الموضع 3، ينتقل إلى 2 باحتمال \\( 1/2 \\) وإلى 4 باحتمال \\( 1/2 \\). إذا بدأ الجسيم عند الموضع 2، فما احتمال أنه يصل في النهاية إلى الموضع 4؟",
+        "options": [
+          "1/3",
+          "1/2",
+          "2/5",
+          "3/5",
+          "2/3"
+        ],
+        "hint": "أنشئ نظامًا من المعادلات الخطية لاحتمالات الامتصاص \\( P_2 \\) و \\( P_3 \\).",
+        "explanation": "لتكن \\( P_2 \\) و \\( P_3 \\) احتماَلي الوصول إلى الموضع 4 انطلاقًا من 2 و 3 على التوالي. لدينا \\( P_2 = \\frac{2}{3}P_3 \\) و \\( P_3 = \\frac{1}{2}P_2 + \\frac{1}{2} \\). بالتعويض نجد \\( P_3 = \\frac{3}{4} \\)، ومن ثم \\( P_2 = \\frac{1}{2} \\)."
+      }
+    },
+    "correct_index": "1"
+  },
+  {
+    "id": "KAUST-065",
+    "track": "kaust",
+    "level": "High School (Gifted)",
+    "topic": "Combinatorics",
+    "type": "FRQ",
+    "difficulty": "medium",
+    "content": {
+      "en": {
+        "question": "How many paths are there from \\( (0,0) \\) to \\( (5,5) \\) on a grid using unit steps \\( (1,0) \\) and \\( (0,1) \\) such that the path never crosses above the diagonal line \\( y = x \\)?",
+        "options": [],
+        "hint": "This problem is equivalent to finding the 5th Catalan number \\( C_5 \\).",
+        "explanation": "The number of monotonic paths on an \\( n \\times n \\) grid that do not cross above the main diagonal is given by the \\( n \\)-th Catalan number \\( C_n = \\frac{1}{n+1} \\binom{2n}{n} \\). For \\( n = 5 \\), we have \\( C_5 = \\frac{1}{6} \\binom{10}{5} = \\frac{252}{6} = 42 \\)."
+      },
+      "ar": {
+        "question": "كم عدد المسارات من \\( (0,0) \\) إلى \\( (5,5) \\) على شبكة باستخدام خطوات وحدة \\( (1,0) \\) و \\( (0,1) \\) بحيث لا يعبر المسار أبدًا فوق الخط القطري \\( y = x \\)؟",
+        "options": [],
+        "hint": "تتطلب هذه المسألة إيجاد عدد كاتالان الخامس \\( C_5 \\).",
+        "explanation": "عدد المسارات على شبكة \\( n \\times n \\) التي لا تتجاوز القطر هو عدد كاتالان \\( C_n = \\frac{1}{n+1} \\binom{2n}{n} \\). لـ \\( n = 5 \\)، لدينا \\( C_5 = \\frac{1}{6} \\binom{10}{5} = 42 \\)."
+      }
+    },
+    "correct_index": "42"
+  },
+  {
+    "id": "KAUST-066",
+    "track": "kaust",
+    "level": "High School (Gifted)",
+    "topic": "Calculus & Optimization",
+    "type": "MCQ",
+    "difficulty": "easy",
+    "content": {
+      "en": {
+        "question": "A bacterial population grows exponentially according to \\( P(t) = P_0 e^{kt} \\). If the population doubles every 3 hours, by what factor does the population increase after 12 hours?",
+        "options": [
+          "8",
+          "12",
+          "16",
+          "24",
+          "64"
+        ],
+        "hint": "Calculate the number of doubling periods in 12 hours.",
+        "explanation": "The doubling period is 3 hours. In 12 hours, there are \\( 12 / 3 = 4 \\) doubling periods. Therefore, the population increases by a factor of \\( 2^4 = 16 \\)."
+      },
+      "ar": {
+        "question": "تتزايد عشيرة بكتيرية بشكل أسي وفق العلاقة \\( P(t) = P_0 e^{kt} \\). إذا كانت العشيرة تتضاعف كل 3 ساعات، فما عامل تضاعف العشيرة بعد 12 ساعة؟",
+        "options": [
+          "8",
+          "12",
+          "16",
+          "24",
+          "64"
+        ],
+        "hint": "احسب عدد فترات التضاعف في 12 ساعة.",
+        "explanation": "فترة التضاعف هي 3 ساعات. في 12 ساعة، توجد \\( 12 / 3 = 4 \\) فترات تضاعف. بالتالي، تتضاعف العشيرة بمقدار \\( 2^4 = 16 \\) مرة."
+      }
+    },
+    "correct_index": "2"
+  },
+  {
+    "id": "KAUST-067",
+    "track": "kaust",
+    "level": "High School (Gifted)",
+    "topic": "Algebra",
+    "type": "FRQ",
+    "difficulty": "hard",
+    "content": {
+      "en": {
+        "question": "The cubic polynomial \\( P(x) = x^3 - 9x^2 + 23x - k \\) has three real roots that form an arithmetic progression. Find the value of \\( k \\).",
+        "options": [],
+        "hint": "Use Vieta's formulas. The middle root must be equal to one-third of the sum of the roots.",
+        "explanation": "Let the roots be \\( a - d, a, a + d \\). By Vieta's formulas, the sum of roots is \\( (a - d) + a + (a + d) = 3a = 9 \\implies a = 3 \\). Since \\( a = 3 \\) is a root, \\( P(3) = 0 \\). Substituting \\( x = 3 \\) into \\( P(x) \\): \\( 3^3 - 9(3^2) + 23(3) - k = 0 \\implies 27 - 81 + 69 - k = 0 \\implies 15 - k = 0 \\implies k = 15 \\)."
+      },
+      "ar": {
+        "question": "كثيرة الحدود التكعيبية \\( P(x) = x^3 - 9x^2 + 23x - k \\) لها ثلاثة جذور حقيقية تشكل متتالية حسابية. أوجد قيمة \\( k \\).",
+        "options": [],
+        "hint": "استخدم صيغ فييتا. الجذر الأوسط يساوي ثلث مجموع الجذور.",
+        "explanation": "لتكن الجذور \\( a - d, a, a + d \\). بموجب صيغ فييتا، مجموع الجذور هو \\( 3a = 9 \\implies a = 3 \\). بما أن \\( a = 3 \\) جذر لكثيرة الحدود، فإن \\( P(3) = 0 \\). بالتعويض عن \\( x = 3 \\): \\( 27 - 81 + 69 - k = 0 \\implies k = 15 \\)."
+      }
+    },
+    "correct_index": "15"
+  },
+  {
+    "id": "KAUST-068",
+    "track": "kaust",
+    "level": "High School (Gifted)",
+    "topic": "Logic",
+    "type": "MCQ",
+    "difficulty": "easy",
+    "content": {
+      "en": {
+        "question": "Consider the following three logical statements:\n1. If it rains, the ground gets wet.\n2. If the ground gets wet, the match is cancelled.\n3. The match was NOT cancelled.\nWhich of the following conclusions must be true?",
+        "options": [
+          "It rained.",
+          "The ground is wet.",
+          "It did not rain.",
+          "The match was postponed."
+        ],
+        "hint": "Apply the rule of Modus Tollens sequentially.",
+        "explanation": "By Modus Tollens on statement 2 and the negation of 'the match is cancelled', we deduce that the ground did NOT get wet. Applying Modus Tollens again on statement 1 and 'the ground did NOT get wet', we conclude that 'It did not rain'."
+      },
+      "ar": {
+        "question": "تأمل العبارات المنطقية الثلاث التالية:\n1. إذا أمطرت، تصبح الأرض مبتلة.\n2. إذا أصبحت الأرض مبتلة، تُدغى المباراة.\n3. لم تُلغَ المباراة.\nأي من الاستنتاجات التالية يجب أن يكون صحيحًا؟",
+        "options": [
+          "أمطرت.",
+          "الأرض مبتلة.",
+          "لم تمطر.",
+          "تأجلت المباراة."
+        ],
+        "hint": "طبق قاعدة نفي التالي (Modus Tollens) بالتتابع.",
+        "explanation": "بتطبيق نفي التالي على العبارة 2 ونفي 'إلغاء المباراة'، نستنتج أن الأرض لم تبتل. بتطبيق نفي التالي مرة أخرى على العبارة 1 ونفي 'ابتلال الأرض'، نستنتج أنه 'لم تمطر'."
+      }
+    },
+    "correct_index": "2"
+  },
+  {
+    "id": "KAUST-069",
+    "track": "kaust",
+    "level": "High School (Gifted)",
+    "topic": "Linear Algebra",
+    "type": "FRQ",
+    "difficulty": "medium",
+    "content": {
+      "en": {
+        "question": "Given the matrix \\( A = \\begin{pmatrix} 1 & 2 \\\\ 0 & 1 \\end{pmatrix} \\), find the sum of all entries of the matrix \\( A^{100} \\).",
+        "options": [],
+        "hint": "Compute \\( A^2 \\) and \\( A^3 \\) to find a general expression for \\( A^n \\).",
+        "explanation": "By mathematical induction, \\( A^n = \\begin{pmatrix} 1 & 2n \\\\ 0 & 1 \\end{pmatrix} \\). For \\( n = 100 \\), \\( A^{100} = \\begin{pmatrix} 1 & 200 \\\\ 0 & 1 \\end{pmatrix} \\). The sum of all entries is \\( 1 + 200 + 0 + 1 = 202 \\)."
+      },
+      "ar": {
+        "question": "لتكن المصفوفة \\( A = \\begin{pmatrix} 1 & 2 \\\\ 0 & 1 \\end{pmatrix} \\)، أوجد مجموع جميع مدخلات المصفوفة \\( A^{100} \\).",
+        "options": [],
+        "hint": "احسب \\( A^2 \\) و \\( A^3 \\) لإيجاد صيغة عامة للمصفوفة \\( A^n \\).",
+        "explanation": "باستخدام الاستقراء الرياضي، نجد أن \\( A^n = \\begin{pmatrix} 1 & 2n \\\\ 0 & 1 \\end{pmatrix} \\). من أجل \\( n = 100 \\)، يكون \\( A^{100} = \\begin{pmatrix} 1 & 200 \\\\ 0 & 1 \\end{pmatrix} \\). مجموع المدخلات هو \\( 1 + 200 + 0 + 1 = 202 \\)."
+      }
+    },
+    "correct_index": "202"
+  },
+  {
+    "id": "KAUST-070",
+    "track": "kaust",
+    "level": "High School (Gifted)",
+    "topic": "Operations Research",
+    "type": "MCQ",
+    "difficulty": "hard",
+    "content": {
+      "en": {
+        "question": "A factory produces products X and Y. Each unit of X requires 2 hours of labor and 1 unit of raw material. Each unit of Y requires 1 hour of labor and 3 units of raw material. Total available resources are 80 hours of labor and 90 units of raw material. If the profit per unit is $40 for X and $30 for Y, what is the maximum achievable profit?",
+        "options": [
+          "$1600",
+          "$1700",
+          "$1800",
+          "$1900",
+          "$2000"
+        ],
+        "hint": "Formulate as a linear programming problem and evaluate the profit at the vertices of the feasible region.",
+        "explanation": "Maximize \\( Z = 40X + 30Y \\) subject to \\( 2X + Y \\le 80 \\), \\( X + 3Y \\le 90 \\), and \\( X, Y \\ge 0 \\). Solving the system of equalities \\( 2X + Y = 80 \\) and \\( X + 3Y = 90 \\) gives the vertex \\( (X,Y) = (30, 20) \\). The vertices of the feasible region are \\( (0,0) \\), \\( (40,0) \\), \\( (0,30) \\), and \\( (30,20) \\). Evaluating \\( Z \\):\n- \\( (0,0) \\implies 0 \\)\n- \\( (40,0) \\implies 1600 \\)\n- \\( (0,30) \\implies 900 \\)\n- \\( (30,20) \\implies 40(30) + 30(20) = 1800 \\).\nThe maximum profit is $1800."
+      },
+      "ar": {
+        "question": "ينتج مصنع منتجين X و Y. تطلب كل وحدة من X ساعتي عمل ووحدة واحدة من المواد الخام. بينما تطلب كل وحدة من Y ساعة عمل واحدة و 3 وحدات من المواد الخام. الموارد المتاحة هي 80 ساعة عمل و 90 وحدة من المواد الخام. إذا كان الربح للوحدة هو 40 دولارًا لـ X و 30 دولارًا لـ Y، فما هو أقصى ربح يمكن تحقيقه؟",
+        "options": [
+          "$1600",
+          "$1700",
+          "$1800",
+          "$1900",
+          "$2000"
+        ],
+        "hint": "صغ المسألة كبرمجة خطية وافحص الربح عند رؤوس منطقة الحلول الممكنة.",
+        "explanation": "نعظم دالة الربح \\( Z = 40X + 30Y \\) تحت القيود \\( 2X + Y \\le 80 \\) و \\( X + 3Y \\le 90 \\). بحل المعادلتين نجد نقطة التقاطع \\( (30, 20) \\). قيمة الربح عند النقاط الحرجة هي:\n- \\( (40,0) \\implies 1600 \\)\n- \\( (0,30) \\implies 900 \\)\n- \\( (30,20) \\implies 40(30) + 30(20) = 1800 \\).\nأقصى ربح هو 1800 دولار."
+      }
+    },
+    "correct_index": "2"
+  },
+  {
+    "id": "KAUST-071",
+    "track": "kaust",
+    "level": "High School (Gifted)",
+    "topic": "Number Theory",
+    "type": "FRQ",
+    "difficulty": "medium",
+    "content": {
+      "en": {
+        "question": "Find the number of positive integers \\( n \\le 1000 \\) that are divisible by neither 6 nor 10.",
+        "options": [],
+        "hint": "Apply the Principle of Inclusion-Exclusion.",
+        "explanation": "Let \\( N = 1000 \\). Divisible by 6: \\( \\lfloor 1000/6 \\rfloor = 166 \\). Divisible by 10: \\( \\lfloor 1000/10 \\rfloor = 100 \\). Divisible by \\( \\text{lcm}(6,10) = 30 \\): \\( \\lfloor 1000/30 \\rfloor = 33 \\). By inclusion-exclusion, the count of integers divisible by 6 or 10 is \\( 166 + 100 - 33 = 233 \\). Thus, the number of integers divisible by neither is \\( 1000 - 233 = 767 \\)."
+      },
+      "ar": {
+        "question": "أوجد عدد الأعداد الصحيحة الموجبة \\( n \\le 1000 \\) التي لا تقبل القسمة على 6 ولا على 10.",
+        "options": [],
+        "hint": "طبق مبدأ الإدراج والاستبعاد.",
+        "explanation": "عدد الأعداد المتقابلة للقسمة على 6 هو \\( 166 \\)، وعلى 10 هو \\( 100 \\)، وعلى المضاعف المشترك الأصغر 30 هو \\( 33 \\). بمبدأ الإدراج والاستبعاد، عدد الأعداد القابلة للقسمة على أحدهما هو \\( 166 + 100 - 33 = 233 \\). بالتالي، عدد الأعداد التي لا تقبل القسمة على أي منهما هو \\( 1000 - 233 = 767 \\)."
+      }
+    },
+    "correct_index": "767"
+  },
+  {
+    "id": "KAUST-072",
+    "track": "kaust",
+    "level": "High School (Gifted)",
+    "topic": "Game Theory",
+    "type": "MCQ",
+    "difficulty": "medium",
+    "content": {
+      "en": {
+        "question": "In a game of Nim with three piles of sizes 3, 5, and 7, which player has a guaranteed winning strategy assuming optimal play?",
+        "options": [
+          "First player",
+          "Second player",
+          "Neither player can force a win",
+          "Depends on who starts second"
+        ],
+        "hint": "Calculate the Nim-sum (bitwise XOR) of the pile sizes.",
+        "explanation": "The Nim-sum is \\( 3 \\oplus 5 \\oplus 7 \\). Convert to binary: \\( 3 = 011_2 \\), \\( 5 = 101_2 \\), \\( 7 = 111_2 \\). Computing XOR: \\( 011 \\oplus 101 \\oplus 111 = 001_2 = 1 \\neq 0 \\). Since the Nim-sum is non-zero, the position is an 'N-position', meaning the First player has a winning strategy."
+      },
+      "ar": {
+        "question": "في لعبة نيم (Nim) تحتوي على ثلاثة أكوام بأحجام 3 و 5 و 7، أي لاعب لديه استراتيجية فوز مضمونة بفرض اللعب الأمثل؟",
+        "options": [
+          "اللاعب الأول",
+          "اللاعب الثاني",
+          "لا يمكن لأي لاعب فرض الفوز",
+          "يعتمد على من يبدأ ثانياً"
+        ],
+        "hint": "احسب مجموع نيم (XOR الثنائي) لأحجام الأكوام.",
+        "explanation": "مجموع نيم هو \\( 3 \\oplus 5 \\oplus 7 \\). بالتمثيل الثنائي: \\( 011 \\oplus 101 \\oplus 111 = 001_2 = 1 \\neq 0 \\). بما أن المجموع لا يساوي الصفر، فإن الوضع يعتبر وضع فوز للاعب الأول."
+      }
+    },
+    "correct_index": "0"
+  },
+  {
+    "id": "KAUST-073",
+    "track": "kaust",
+    "level": "High School (Gifted)",
+    "topic": "Discrete Mathematics",
+    "type": "FRQ",
+    "difficulty": "hard",
+    "content": {
+      "en": {
+        "question": "A sequence is defined by \\( a_0 = 1 \\), \\( a_1 = 3 \\), and \\( a_n = 3a_{n-1} - 2a_{n-2} \\) for \\( n \\ge 2 \\). Find \\( a_{10} \\).",
+        "options": [],
+        "hint": "Solve the characteristic equation \\( r^2 - 3r + 2 = 0 \\).",
+        "explanation": "The characteristic equation is \\( r^2 - 3r + 2 = 0 \\implies (r-1)(r-2) = 0 \\), so roots are \\( r = 1, 2 \\). The general solution is \\( a_n = C_1(1^n) + C_2(2^n) = C_1 + C_2 2^n \\). Using initial conditions: \\( a_0 = C_1 + C_2 = 1 \\) and \\( a_1 = C_1 + 2C_2 = 3 \\). Subtracting gives \\( C_2 = 2 \\) and \\( C_1 = -1 \\). Thus, \\( a_n = 2^{n+1} - 1 \\). For \\( n = 10 \\), \\( a_{10} = 2^{11} - 1 = 2048 - 1 = 2047 \\)."
+      },
+      "ar": {
+        "question": "متتالية معرّفة بـ \\( a_0 = 1 \\)، \\( a_1 = 3 \\)، و \\( a_n = 3a_{n-1} - 2a_{n-2} \\) لـ \\( n \\ge 2 \\). أوجد \\( a_{10} \\).",
+        "options": [],
+        "hint": "حل المعادلة المميزة \\( r^2 - 3r + 2 = 0 \\).",
+        "explanation": "المعادلة المميزة هي \\( r^2 - 3r + 2 = 0 \\implies r = 1, 2 \\). الحل العام هو \\( a_n = C_1 + C_2 2^n \\). باستخدام الشروط الابتدائية نجد \\( C_2 = 2 \\) و \\( C_1 = -1 \\)، بالتالي \\( a_n = 2^{n+1} - 1 \\). عند \\( n = 10 \\)، يكون \\( a_{10} = 2^{11} - 1 = 2047 \\)."
+      }
+    },
+    "correct_index": "2047"
+  },
+  {
+    "id": "KAUST-074",
+    "track": "kaust",
+    "level": "High School (Gifted)",
+    "topic": "Probability",
+    "type": "MCQ",
+    "difficulty": "easy",
+    "content": {
+      "en": {
+        "question": "A fair 6-sided die is rolled repeatedly until the number 6 appears. What is the expected number of rolls?",
+        "options": [
+          "5",
+          "6",
+          "36",
+          "1/6",
+          "3.5"
+        ],
+        "hint": "The number of rolls follows a Geometric distribution.",
+        "explanation": "For a Geometric random variable with success probability \\( p = 1/6 \\), the expected value is \\( E[X] = 1/p = 1/(1/6) = 6 \\)."
+      },
+      "ar": {
+        "question": "يتم إلقاء نرد عادل ذي 6 أوجه بشكل متكرر حتى يظهر الرقم 6. ما هو عدد المرات المتوقع لإلقاء النرد؟",
+        "options": [
+          "5",
+          "6",
+          "36",
+          "1/6",
+          "3.5"
+        ],
+        "hint": "عدد الرميات يتبع التوزيع الهندسي.",
+        "explanation": "بالنسبة لمتغير عشوائي هندسي باحتمال نجاح \\( p = 1/6 \\)، القيمة المتوقعة هي \\( E[X] = 1/p = 6 \\)."
+      }
+    },
+    "correct_index": "1"
+  },
+  {
+    "id": "KAUST-075",
+    "track": "kaust",
+    "level": "High School (Gifted)",
+    "topic": "Functional Equations",
+    "type": "FRQ",
+    "difficulty": "hard",
+    "content": {
+      "en": {
+        "question": "A continuous function \\( f: \\mathbb{R} \\to \\mathbb{R} \\) satisfies \\( f(x + y) = f(x) + f(y) + 2xy \\) for all real numbers \\( x, y \\). If \\( f(1) = 4 \\), find \\( f(5) \\).",
+        "options": [],
+        "hint": "Consider the auxiliary function \\( g(x) = f(x) - x^2 \\).",
+        "explanation": "Let \\( g(x) = f(x) - x^2 \\). Then \\( g(x+y) = f(x+y) - (x+y)^2 = f(x) + f(y) + 2xy - (x^2 + 2xy + y^2) = (f(x)-x^2) + (f(y)-y^2) = g(x) + g(y) \\). Since \\( g \\) is continuous, \\( g(x) = cx \\) for some constant \\( c \\). Thus, \\( f(x) = x^2 + cx \\). Given \\( f(1) = 1^2 + c(1) = 4 \\implies c = 3 \\). So \\( f(x) = x^2 + 3x \\). Evaluating at \\( x = 5 \\): \\( f(5) = 5^2 + 3(5) = 25 + 15 = 40 \\)."
+      },
+      "ar": {
+        "question": "دالة متصلة \\( f: \\mathbb{R} \\to \\mathbb{R} \\) تحقق \\( f(x + y) = f(x) + f(y) + 2xy \\) لكل الأعداد الحقيقية \\( x, y \\). إذا كان \\( f(1) = 4 \\)، فأوجد \\( f(5) \\).",
+        "options": [],
+        "hint": "اعتبر الدالة المساعدة \\( g(x) = f(x) - x^2 \\).",
+        "explanation": "نضع \\( g(x) = f(x) - x^2 \\). نجد أن \\( g(x+y) = g(x) + g(y) \\). وبما أن \\( g \\) دالة متصلة، فإن \\( g(x) = cx \\)، وبالتالي \\( f(x) = x^2 + cx \\). بما أن \\( f(1) = 4 \\)، فإن \\( 1 + c = 4 \\implies c = 3 \\). إذن \\( f(x) = x^2 + 3x \\)، ومن ثم \\( f(5) = 25 + 15 = 40 \\)."
+      }
+    },
+    "correct_index": "40"
+  },
+  {
+    "id": "KAUST-076",
+    "track": "kaust",
+    "level": "High School (Gifted)",
+    "topic": "Discrete Geometry",
+    "type": "MCQ",
+    "difficulty": "medium",
+    "content": {
+      "en": {
+        "question": "What is the maximum number of regions into which 6 straight lines can divide a 2D plane?",
+        "options": [
+          "16",
+          "20",
+          "22",
+          "24",
+          "32"
+        ],
+        "hint": "Use the formula for Lazy Caterer's sequence: \\( L_n = \\frac{n(n+1)}{2} + 1 \\).",
+        "explanation": "The maximum number of regions created by \\( n \\) straight lines in general position is given by \\( L_n = \\frac{n(n+1)}{2} + 1 \\). For \\( n = 6 \\), \\( L_6 = \\frac{6 \\times 7}{2} + 1 = 21 + 1 = 22 \\)."
+      },
+      "ar": {
+        "question": "ما هو أقصى عدد من المناطق التي يمكن لـ 6 خطوط مستقيمة أن تقسم إليها مستويًا ثنائي الأبعاد؟",
+        "options": [
+          "16",
+          "20",
+          "22",
+          "24",
+          "32"
+        ],
+        "hint": "استخدم صيغة متتالية الخباز الكسول: \\( L_n = \\frac{n(n+1)}{2} + 1 \\).",
+        "explanation": "أقصى عدد من المناطق الناتجة عن \\( n \\) خطًا مستقيمًا هو \\( L_n = \\frac{n(n+1)}{2} + 1 \\). لـ \\( n = 6 \\)، لدينا \\( L_6 = \\frac{6 \\times 7}{2} + 1 = 22 \\)."
+      }
+    },
+    "correct_index": "2"
+  },
+  {
+    "id": "KAUST-077",
+    "track": "kaust",
+    "level": "High School (Gifted)",
+    "topic": "Combinatorics",
+    "type": "FRQ",
+    "difficulty": "medium",
+    "content": {
+      "en": {
+        "question": "What is the expected number of fixed points in a uniformly random permutation of the set \\( \\{1, 2, 3, 4, 5\\} \\)?",
+        "options": [],
+        "hint": "Use indicator random variables and linearity of expectation.",
+        "explanation": "Let \\( X_i \\) be the indicator random variable that element \\( i \\) is a fixed point (i.e. \\( \\pi(i) = i \\)). The probability that element \\( i \\) is fixed in a random permutation of \\( n \\) elements is \\( 1/n \\). The expected value of \\( X_i \\) is \\( E[X_i] = 1/n \\). By linearity of expectation, the expected total number of fixed points is \\( E[X] = \\sum_{i=1}^n E[X_i] = n \\times \\frac{1}{n} = 1 \\). For \\( n = 5 \\), the answer is 1."
+      },
+      "ar": {
+        "question": "ما هو العدد المتوقع للنقاط الثابتة في تبديلة عشوائية منتظمة للمجموعة \\( \\{1, 2, 3, 4, 5\\} \\)؟",
+        "options": [],
+        "hint": "استخدم متغيرات المبدال العشوائية وخاصية خطية التوقع.",
+        "explanation": "ليكن \\( X_i \\) متغيرًا عشوائيًا دالاً على أن العنصر \\( i \\) نقطة ثابتة. احتمال أن يكون العنصر ثابتًا في تبديلة عشوائية لـ \\( n \\) عنصرًا هو \\( 1/n \\). بخطية التوقع، فإن القيمة المتوقعة الإجمالية هي \\( E[X] = n \\times (1/n) = 1 \\). لـ \\( n = 5 \\)، الإجابة هي 1."
+      }
+    },
+    "correct_index": "1"
+  },
+  {
+    "id": "KAUST-078",
+    "track": "kaust",
+    "level": "High School (Gifted)",
+    "topic": "Cryptography",
+    "type": "MCQ",
+    "difficulty": "medium",
+    "content": {
+      "en": {
+        "question": "In an RSA cryptography setup, the public modulus is \\( n = 33 \\) (product of primes 3 and 11) and the encryption exponent is \\( e = 7 \\). What is the private decryption exponent \\( d \\)?",
+        "options": [
+          "3",
+          "7",
+          "11",
+          "13",
+          "17"
+        ],
+        "hint": "Find the modular inverse of \\( e \\pmod{\\phi(n)} \\).",
+        "explanation": "First, compute \\( \\phi(n) = (3-1)(11-1) = 20 \\). The private exponent \\( d \\) must satisfy \\( e \\cdot d \\equiv 1 \\pmod{\\phi(n)} \\), which means \\( 7d \\equiv 1 \\pmod{20} \\). Since \\( 7 \\times 3 = 21 \\equiv 1 \\pmod{20} \\), we get \\( d = 3 \\)."
+      },
+      "ar": {
+        "question": "في نظام تشفير RSA، المعيار العام هو \\( n = 33 \\) (حاصل ضرب الأعداد الأولية 3 و 11) وأس التشفير هو \\( e = 7 \\). ما هو أس فك التشفير الخاص \\( d \\)؟",
+        "options": [
+          "3",
+          "7",
+          "11",
+          "13",
+          "17"
+        ],
+        "hint": "أوجد المعكوس الضربي لـ \\( e \\pmod{\\phi(n)} \\).",
+        "explanation": "أولاً، نحسب \\( \\phi(n) = (3-1)(11-1) = 20 \\). يجب أن يحقق الأس الخاص \\( d \\) الشرط \\( 7d \\equiv 1 \\pmod{20} \\). بما أن \\( 7 \\times 3 = 21 \\equiv 1 \\pmod{20} \\)، فإن \\( d = 3 \\)."
+      }
+    },
+    "correct_index": "0"
+  },
+  {
+    "id": "KAUST-079",
+    "track": "kaust",
+    "level": "High School (Gifted)",
+    "topic": "Combinatorics",
+    "type": "FRQ",
+    "difficulty": "easy",
+    "content": {
+      "en": {
+        "question": "In how many distinct ways can 10 identical candies be distributed among 3 distinct children such that each child receives at least 1 candy?",
+        "options": [],
+        "hint": "Use the Stars and Bars theorem for positive integer solutions.",
+        "explanation": "Using the Stars and Bars formula for distributing \\( n \\) identical items to \\( k \\) distinct bins with at least 1 per bin, the number of ways is \\( \\binom{n-1}{k-1} \\). Here, \\( n = 10 \\) and \\( k = 3 \\), so \\( \\binom{10-1}{3-1} = \\binom{9}{2} = \\frac{9 \\times 8}{2} = 36 \\)."
+      },
+      "ar": {
+        "question": "بكم طريقة مختلفة يمكن توزيع 10 قطع حلوى متماثلة على 3 أطفال مختلفين بحيث يحصل كل طفل على قطعة حلوى واحدة على الأقل؟",
+        "options": [],
+        "hint": "استخدم نظرية النجوم والأشرطة للحلول الصحيحة الموجبة.",
+        "explanation": "باستخدام صيغة النجوم والأشرطة لتوزيع \\( n \\) عنصرًا متماثلاً على \\( k \\) مجموعات بحيث تحصل كل مجموعة على عنصر واحد على الأقل، عدد الطرق هو \\( \\binom{n-1}{k-1} \\). هنا \\( n = 10 \\) و \\( k = 3 \\)، إذن \\( \\binom{9}{2} = 36 \\)."
+      }
+    },
+    "correct_index": "36"
+  },
+  {
+    "id": "KAUST-080",
+    "track": "kaust",
+    "level": "High School (Gifted)",
+    "topic": "Calculus & Optimization",
+    "type": "MCQ",
+    "difficulty": "medium",
+    "content": {
+      "en": {
+        "question": "An open-top rectangular box is constructed from a square piece of cardboard of side length 12 cm by cutting equal squares of side length \\( x \\) from each corner and folding up the sides. What value of \\( x \\) maximizes the volume of the box?",
+        "options": [
+          "1 cm",
+          "2 cm",
+          "3 cm",
+          "4 cm",
+          "6 cm"
+        ],
+        "hint": "Express volume \\( V(x) \\) as a polynomial in \\( x \\) and find its critical points using derivatives.",
+        "explanation": "The volume of the box is \\( V(x) = x(12 - 2x)^2 = 4x^3 - 48x^2 + 144x \\) for \\( 0 < x < 6 \\). Differentiating with respect to \\( x \\): \\( V'(x) = 12x^2 - 96x + 144 = 0 \\implies x^2 - 8x + 12 = 0 \\implies (x-2)(x-6) = 0 \\). Since \\( x < 6 \\), the critical point is \\( x = 2 \\) cm, which corresponds to the maximum volume."
+      },
+      "ar": {
+        "question": "صندوق مستطيل الشكل مفتوح من الأعلى يُصنع من قطعة ورق مقوى مربعة طول ضلعها 12 سم عن طريق قص مربعات متساوية طول ضلعها \\( x \\) من كل زاوية وطي الجوانب. ما هي قيمة \\( x \\) التي تجعل حجم الصندوق أكبر ما يمكن؟",
+        "options": [
+          "1 cm",
+          "2 cm",
+          "3 cm",
+          "4 cm",
+          "6 cm"
+        ],
+        "hint": "عبّر عن الحجم \\( V(x) \\) كدالة لكثيرة الحدود واوجد النقاط الحرجة باستخدام المشتقة.",
+        "explanation": "حجم الصندوق هو \\( V(x) = x(12 - 2x)^2 = 4x^3 - 48x^2 + 144x \\). باشتقاق الدالة ومساواتها بالصفر: \\( V'(x) = 12(x^2 - 8x + 12) = 0 \\implies (x-2)(x-6) = 0 \\). بما أن \\( x < 6 \\)، فإن النقطة الحرجة المقبولة هي \\( x = 2 \\) سم."
+      }
+    },
+    "correct_index": "1"
+  },
+  {
+    "id": "KAUST-081",
+    "track": "kaust",
+    "level": "High School (Gifted)",
+    "topic": "Graph Theory",
+    "type": "FRQ",
+    "difficulty": "hard",
+    "content": {
+      "en": {
+        "question": "Consider a complete graph \\( K_5 \\) with vertices labeled \\( \\{1, 2, 3, 4, 5\\} \\). The weight of the edge between vertex \\( i \\) and vertex \\( j \\) is given by \\( w(i, j) = |i^2 - j^2| \\). What is the total weight of the Minimum Spanning Tree (MST) of this graph?",
+        "options": [],
+        "hint": "Apply Kruskal's or Prim's algorithm after listing the edge weights in ascending order.",
+        "explanation": "List the edge weights between vertices:\n- \\( w(1,2) = |1-4| = 3 \\)\n- \\( w(2,3) = |4-9| = 5 \\)\n- \\( w(3,4) = |9-16| = 7 \\)\n- \\( w(4,5) = |16-25| = 9 \\)\n- \\( w(1,3) = 8 \\), \\( w(2,4) = 12 \\), \\( w(3,5) = 16 \\), etc.\nUsing Kruskal's algorithm, we select the smallest edges that do not form a cycle:\n1. Edge (1,2) of weight 3\n2. Edge (2,3) of weight 5\n3. Edge (3,4) of weight 7\n4. Edge (4,5) of weight 9\nThese 4 edges span all 5 vertices without cycles. Total weight = \\( 3 + 5 + 7 + 9 = 24 \\)."
+      },
+      "ar": {
+        "question": "تأمل رسمًا بيانيًا مكتملاً \\( K_5 \\) لرؤوسه العناوين \\( \\{1, 2, 3, 4, 5\\} \\). وزن الضلع بين الرأسين \\( i \\) و \\( j \\) معطى بالعلاقة \\( w(i, j) = |i^2 - j^2| \\). ما هو الوزن الإجمالي لشجرة الامتداد الأدنى (MST) لهذا الرسم البياني؟",
+        "options": [],
+        "hint": "طبق خوارزمية كروشكال أو بريم بعد ترتيب أوزان الأضلاع تصاعديًا.",
+        "explanation": "أوزان الأضلاع بين الرؤوس المتبادلة هي:\n- \\( w(1,2) = 3 \\)\n- \\( w(2,3) = 5 \\)\n- \\( w(3,4) = 7 \\)\n- \\( w(4,5) = 9 \\)\nباستخدام خوارزمية كروشكال، نختار الأضلاع ذات الأوزان الأصغر والتي لا تشكل دورتين: الأضلاع (1,2)، (2,3)، (3,4)، و (4,5). المجموع الإجمالي للأوزان = \\( 3 + 5 + 7 + 9 = 24 \\)."
+      }
+    },
+    "correct_index": "24"
+  },
+  {
+    "id": "KAUST-082",
+    "track": "kaust",
+    "level": "High School (Gifted)",
+    "topic": "Combinatorics",
+    "type": "MCQ",
+    "difficulty": "hard",
+    "content": {
+      "en": {
+        "question": "How many binary strings of length 10 do not contain three consecutive 1s?",
+        "options": [
+          "274",
+          "488",
+          "504",
+          "512",
+          "720"
+        ],
+        "hint": "Define a recurrence relation \\( F_n = F_{n-1} + F_{n-2} + F_{n-3} \\) for the number of valid strings of length \\( n \\).",
+        "explanation": "Let \\( F_n \\) be the number of valid binary strings of length \\( n \\). A valid string of length \\( n \\) can end in 0 (preceded by any valid string of length \\( n-1 \\)), 01 (preceded by any valid string of length \\( n-2 \\)), or 011 (preceded by any valid string of length \\( n-3 \\)). Thus, \\( F_n = F_{n-1} + F_{n-2} + F_{n-3} \\). With initial conditions \\( F_0 = 1 \\), \\( F_1 = 2 \\), \\( F_2 = 4 \\), we compute \\( F_3=7, F_4=13, F_5=24, F_6=44, F_7=81, F_8=149, F_9=274, F_{10}=504 \\)."
+      },
+      "ar": {
+        "question": "كم عدد السلاسل الثنائية بطول 10 التي لا تحتوي على ثلاثة آحاد متتالية؟",
+        "options": [
+          "274",
+          "488",
+          "504",
+          "512",
+          "720"
+        ],
+        "hint": "عرف علاقة تكرارية \\( F_n = F_{n-1} + F_{n-2} + F_{n-3} \\) لعدد السلاسل الصالحة ذات الطول \\( n \\).",
+        "explanation": "لتكن \\( F_n \\) عدد السلاسل الثنائية الصالحة بطول \\( n \\). يمكن للسلسلة الصالحة أن تنتهي بـ 0، أو 01، أو 011. بالتالي تكون العلاقة التكرارية \\( F_n = F_{n-1} + F_{n-2} + F_{n-3} \\). بالبدء من الشروط الأولية \\( F_0 = 1, F_1 = 2, F_2 = 4 \\)، نصل إلى \\( F_{10} = 504 \\)."
+      }
+    },
+    "correct_index": "2"
+  },
+  {
+    "id": "KAUST-083",
+    "track": "kaust",
+    "level": "High School (Gifted)",
+    "topic": "Number Theory",
+    "type": "FRQ",
+    "difficulty": "hard",
+    "content": {
+      "en": {
+        "question": "Find the remainder when \\( 2^{2024} \\) is divided by \\( 1000 \\).",
+        "options": [],
+        "hint": "Use the Chinese Remainder Theorem on modulo 8 and modulo 125.",
+        "explanation": "We need to find \\( 2^{2024} \\pmod{1000} \\). Since \\( 1000 = 8 \\times 125 \\), we have \\( 2^{2024} \\equiv 0 \\pmod 8 \\). By Euler's Totient Theorem, \\( \\phi(125) = 100 \\), so \\( 2^{100} \\equiv 1 \\pmod{125} \\). Thus, \\( 2^{2024} \\equiv 2^{24} \\pmod{125} \\). Since \\( 2^7 = 128 \\equiv 3 \\pmod{125} \\), \\( 2^{21} \\equiv 27 \\pmod{125} \\) and \\( 2^{24} \\equiv 27 \\times 8 = 216 \\equiv 91 \\pmod{125} \\). Solving \\( x \\equiv 0 \\pmod 8 \\) and \\( x \\equiv 91 \\pmod{125} \\) yields \\( x = 216 \\)."
+      },
+      "ar": {
+        "question": "أوجد باقي قسمة \\( 2^{2024} \\) على \\( 1000 \\).",
+        "options": [],
+        "hint": "استخدم مبرهنة الباقي الصينية على باقي القسمة على 8 وعلى 125.",
+        "explanation": "نعلم أن \\( 1000 = 8 \\times 125 \\). بالتالي \\( 2^{2024} \\equiv 0 \\pmod 8 \\). باستخدام مبرهنة أويلر، \\( \\phi(125) = 100 \\)، إذن \\( 2^{2024} \\equiv 2^{24} \\pmod{125} \\). بحساب \\( 2^{24} \\pmod{125} \\) نجد أنه يساوي \\( 91 \\). بحل نظام التطابقات \\( x \\equiv 0 \\pmod 8 \\) و \\( x \\equiv 91 \\pmod{125} \\) نحصل على \\( x = 216 \\)."
+      }
+    },
+    "correct_index": "216"
+  },
+  {
+    "id": "KAUST-084",
+    "track": "kaust",
+    "level": "High School (Gifted)",
+    "topic": "Game Theory",
+    "type": "MCQ",
+    "difficulty": "medium",
+    "content": {
+      "en": {
+        "question": "In a Nim game with 3 piles of sizes 5, 11, and 14, how many opening moves guarantee a winning strategy for the first player?",
+        "options": [
+          "0",
+          "1",
+          "2",
+          "3",
+          "5"
+        ],
+        "hint": "Calculate the Nim-sum (bitwise XOR) of the pile sizes.",
+        "explanation": "The Nim-sum is \\( 5 \\oplus 11 \\oplus 14 \\). Converting to binary: \\( 5 = 0101_2 \\), \\( 11 = 1011_2 \\), \\( 14 = 1110_2 \\). Their XOR sum is \\( 0101_2 \\oplus 1011_2 \\oplus 1110_2 = 0000_2 = 0 \\). Since the Nim-sum is 0, the current state is a second-player winning position (P-position). Thus, the first player has 0 winning opening moves."
+      },
+      "ar": {
+        "question": "في لعبة نيم (Nim) تحتوي على 3 كوم من الأحجار بأحجام 5 و 11 و 14، كم عدد النقلات الافتتاحية التي تضمن استراتيجية فوز لللاعب الأول؟",
+        "options": [
+          "0",
+          "1",
+          "2",
+          "3",
+          "5"
+        ],
+        "hint": "احسب المجموع الثنائي (XOR) لأحجام الكوم.",
+        "explanation": "مجموع نيم الثنائي هو \\( 5 \\oplus 11 \\oplus 14 \\). بالتحويل للنظام الثنائي: \\( 5 = 0101_2 \\)، \\( 11 = 1011_2 \\)، \\( 14 = 1110_2 \\). حاصل XOR يساوي 0. بما أن المجموع يساوي صفرًا، فإن الوضع الحالي هو وضع فوز لللاعب الثاني، وبالتالي لا توجد أي نقلة رابحة لللاعب الأول (0)."
+      }
+    },
+    "correct_index": "0"
+  },
+  {
+    "id": "KAUST-085",
+    "track": "kaust",
+    "level": "High School (Gifted)",
+    "topic": "Graph Theory",
+    "type": "FRQ",
+    "difficulty": "easy",
+    "content": {
+      "en": {
+        "question": "A connected planar graph has 12 vertices, each of degree 3. Into how many regions (faces) does this graph divide the plane?",
+        "options": [],
+        "hint": "Use Euler's formula for planar graphs: \\( V - E + F = 2 \\).",
+        "explanation": "The sum of the degrees of all vertices is \\( 12 \\times 3 = 36 \\). By the Handshaking Lemma, \\( 2E = 36 \\implies E = 18 \\). Using Euler's planar formula \\( V - E + F = 2 \\), we substitute \\( V = 12 \\) and \\( E = 18 \\) to get \\( 12 - 18 + F = 2 \\implies F = 8 \\)."
+      },
+      "ar": {
+        "question": "رسم بياني مستوٍ ومترابط يحتوي على 12 رأسًا، درجة كل رأس منها تساوي 3. إلى كم منطقة (وجه) يقسم هذا الرسم البياني المستوي؟",
+        "options": [],
+        "hint": "استخدم صيغة أويلر للرسوم البيانية المستوية: \\( V - E + F = 2 \\).",
+        "explanation": "مجموع درجات جميع رؤوس الرسم هو \\( 12 \\times 3 = 36 \\). بموجب مبرهنة المصافحة، فإن عدد الحواف \\( E = 18 \\). باستخدام صيغة أويلر \\( V - E + F = 2 \\)، نعوض \\( V = 12 \\) و \\( E = 18 \\) لنحصل على \\( F = 8 \\)."
+      }
+    },
+    "correct_index": "8"
+  },
+  {
+    "id": "KAUST-086",
+    "track": "kaust",
+    "level": "High School (Gifted)",
+    "topic": "Algebra",
+    "type": "MCQ",
+    "difficulty": "medium",
+    "content": {
+      "en": {
+        "question": "Let \\( f: \\mathbb{R} \\setminus \\{0\\} \\to \\mathbb{R} \\) be a function satisfying \\( f(x) + 2f\\left(\\frac{1}{x}\\right) = 3x \\) for all \\( x \\neq 0 \\). Find the value of \\( f(2) \\).",
+        "options": [
+          "-2",
+          "-1",
+          "0",
+          "1",
+          "3"
+        ],
+        "hint": "Replace \\( x \\) with \\( \\frac{1}{x} \\) to set up a system of linear equations.",
+        "explanation": "Given \\( f(x) + 2f(1/x) = 3x \\) (Eq 1). Substituting \\( x \\to 1/x \\) gives \\( f(1/x) + 2f(x) = 3/x \\) (Eq 2). Multiplying Eq 2 by 2 yields \\( 4f(x) + 2f(1/x) = 6/x \\). Subtracting Eq 1 from this gives \\( 3f(x) = \\frac{6}{x} - 3x \\implies f(x) = \\frac{2}{x} - x \\). Evaluating at \\( x = 2 \\): \\( f(2) = \\frac{2}{2} - 2 = -1 \\)."
+      },
+      "ar": {
+        "question": "لتكن \\( f: \\mathbb{R} \\setminus \\{0\\} \\to \\mathbb{R} \\) دالة تحقق \\( f(x) + 2f\\left(\\frac{1}{x}\\right) = 3x \\) لكل \\( x \\neq 0 \\). أوجد قيمة \\( f(2) \\).",
+        "options": [
+          "-2",
+          "-1",
+          "0",
+          "1",
+          "3"
+        ],
+        "hint": "ستبدل \\( x \\) بـ \\( \\frac{1}{x} \\) لتكوين نظام من المعادلات الخطية.",
+        "explanation": "لدينا المعادلة الأولى \\( f(x) + 2f(1/x) = 3x \\). باستبدال \\( x \\) بـ \\( 1/x \\) نحصل على المعادلة الثانية \\( f(1/x) + 2f(x) = 3/x \\). بضرب المعادلة الثانية في 2 وطرح الأولى منها نجد أن \\( f(x) = \\frac{2}{x} - x \\). عند \\( x = 2 \\)، تكون القيمة \\( f(2) = 1 - 2 = -1 \\)."
+      }
+    },
+    "correct_index": "1"
+  },
+  {
+    "id": "KAUST-087",
+    "track": "kaust",
+    "level": "High School (Gifted)",
+    "topic": "Probability",
+    "type": "FRQ",
+    "difficulty": "medium",
+    "content": {
+      "en": {
+        "question": "Two real numbers \\( x \\) and \\( y \\) are chosen independently and uniformly at random from the interval \\( [0, 1] \\). What is the probability that \\( |x - y| \\le \\frac{1}{3} \\)? Express your answer as a fraction.",
+        "options": [],
+        "hint": "Geometrically represent the sample space as the unit square \\( [0,1]^2 \\) and calculate the valid region's area.",
+        "explanation": "The sample space is the square \\( [0,1]^2 \\) with total area 1. The condition \\( |x - y| > 1/3 \\) corresponds to two right triangles in the corners with legs of length \\( 2/3 \\). The combined area of these two excluded triangles is \\( 2 \\times \\frac{1}{2} \\times \\left(\\frac{2}{3}\\right)^2 = \\frac{4}{9} \\). Therefore, the desired probability is \\( 1 - \\frac{4}{9} = \\frac{5}{9} \\)."
+      },
+      "ar": {
+        "question": "تم اختيار عددين حقيقيين \\( x \\) و \\( y \\) بشكل عشوائي ومستقل من الفترة \\( [0, 1] \\). ما احتمال أن يكون \\( |x - y| \\le \\frac{1}{3} \\)؟ اكتب الإجابة على شكل كسر.",
+        "options": [],
+        "hint": "مثل فضاء العينة هندسيًا كمربع وحدة \\( [0,1]^2 \\) واحسب مساحة المنطقة المطلوبة.",
+        "explanation": "فضاء العينة هو المربع \\( [0,1]^2 \\) ومساحته 1. الشرط المكمل \\( |x - y| > 1/3 \\) يمثل مثلثين قائمين في الزاويتين طول ضلع كل منهما \\( 2/3 \\). مجموع مساحتي المثلثين هو \\( 4/9 \\). بالتالي فإن الاحتمال المطلوب هو \\( 1 - 4/9 = 5/9 \\)."
+      }
+    },
+    "correct_index": "5/9"
+  },
+  {
+    "id": "KAUST-088",
+    "track": "kaust",
+    "level": "High School (Gifted)",
+    "topic": "Logic",
+    "type": "MCQ",
+    "difficulty": "hard",
+    "content": {
+      "en": {
+        "question": "Among five islanders (A, B, C, D, E), exactly one is a knight (who always tells the truth) and four are knaves (who always lie). They make the following statements:\nA says: 'B is a knight.'\nB says: 'D is a knight.'\nC says: 'A is a knave.'\nD says: 'E is a knight.'\nE says: 'C is a knave.'\nWho is the knight?",
+        "options": [
+          "A",
+          "B",
+          "C",
+          "D",
+          "E"
+        ],
+        "hint": "Analyze the truthful implications assuming each person is the single knight.",
+        "explanation": "If A is knight, B is knight (contradiction: only 1 knight). If B is knight, D is knight (contradiction). If D is knight, E is knight (contradiction). If C is knight, then A is knave (true), B is knave (so 'D is knight' is false -> D is knave), D is knave (so 'E is knight' is false -> E is knave), E is knave (so 'C is knave' is false -> C is knight). All statements are completely consistent if and only if C is the knight."
+      },
+      "ar": {
+        "question": "من بين خمسة أفراد (A, B, C, D, E)، يوجد شخص واحد فقط صادق (يقول الحقيقة دائمًا) والأربعة الآخرون كاذبون (يكذبون دائمًا). قالوا ما يلي:\nقال A: 'B شخص صادق.'\nقال B: 'D شخص صادق.'\nقال C: 'A شخص كاذب.'\nقال D: 'E شخص صادق.'\nقال E: 'C شخص كاذب.'\nمن هو الشخص الصادق الوحيد؟",
+        "options": [
+          "A",
+          "B",
+          "C",
+          "D",
+          "E"
+        ],
+        "hint": "افترض أن كل شخص هو الصادق على حدة وافحص اتساق العبارات.",
+        "explanation": "إذا كان A صادقًا فسيتبعه B صادقًا (تناقض). إذا كان B صادقًا فسيتبعه D صادقًا (تناقض). إذا كان D صادقًا فسيتبعه E صادقًا (تناقض). أما إذا كان C هو الصادق: فإن عبارته 'A كاذب' صحيحة، وعبارات باقي الكاذبين ستكون كلها كاذبة بشكل متسق. إذن C هو الصادق الوحيد."
+      }
+    },
+    "correct_index": "2"
+  },
+  {
+    "id": "KAUST-089",
+    "track": "kaust",
+    "level": "High School (Gifted)",
+    "topic": "Linear Algebra",
+    "type": "FRQ",
+    "difficulty": "hard",
+    "content": {
+      "en": {
+        "question": "Find the trace of the matrix \\( A^{10} \\), where \\( A = \\begin{pmatrix} 1 & 1 \\\\ 1 & 0 \\end{pmatrix} \\).",
+        "options": [],
+        "hint": "Relate the trace of powers of \\( A \\) to the Fibonacci and Lucas numbers.",
+        "explanation": "The characteristic polynomial of \\( A \\) is \\( \\det(A - \\lambda I) = \\lambda^2 - \\lambda - 1 = 0 \\). Its eigenvalues are \\( \\lambda_1 = \\frac{1+\\sqrt{5}}{2} \\) and \\( \\lambda_2 = \\frac{1-\\sqrt{5}}{2} \\). The trace of \\( A^{10} \\) is \\( \\lambda_1^{10} + \\lambda_2^{10} \\), which is the 10th Lucas number \\( L_{10} \\). Computing the Lucas sequence: \\( L_0=2, L_1=1, L_2=3, L_3=4, L_4=7, L_5=11, L_6=18, L_7=29, L_8=47, L_9=76, L_{10}=123 \\)."
+      },
+      "ar": {
+        "question": "أوجد أثر (Trace) المصفوفة \\( A^{10} \\)، حيث \\( A = \\begin{pmatrix} 1 & 1 \\\\ 1 & 0 \\end{pmatrix} \\).",
+        "options": [],
+        "hint": "اربط أثر القوى للمصفوفة \\( A \\) بأعداد لوكاس (Lucas numbers).",
+        "explanation": "المعامل المميز للمصفوفة \\( A \\) هو \\( \\lambda^2 - \\lambda - 1 = 0 \\). قيمها الذاتية هما \\( \\lambda_1, \\lambda_2 \\). أثر المصفوفة \\( A^{10} \\) يساوي \\( \\lambda_1^{10} + \\lambda_2^{10} \\) وهو الحد العاشر في متتالية لوكاس \\( L_{10} \\). بحساب المتتالية نجد أن \\( L_{10} = 123 \\)."
+      }
+    },
+    "correct_index": "123"
+  },
+  {
+    "id": "KAUST-090",
+    "track": "kaust",
+    "level": "High School (Gifted)",
+    "topic": "Discrete Mathematics",
+    "type": "MCQ",
+    "difficulty": "easy",
+    "content": {
+      "en": {
+        "question": "A sequence \\( a_n \\) is defined by \\( a_0 = 1 \\) and \\( a_n = \\sum_{k=0}^{n-1} a_k \\) for all \\( n \\ge 1 \\). What is \\( a_{20} \\)?",
+        "options": [
+          "2^{19}",
+          "2^{20}",
+          "2^{20} - 1",
+          "2^{21}",
+          "2^{18}"
+        ],
+        "hint": "Write out the first few terms to find a pattern for \\( n \\ge 1 \\).",
+        "explanation": "Evaluating the first few terms: \\( a_0 = 1 \\), \\( a_1 = 1 \\), \\( a_2 = 1+1 = 2 \\), \\( a_3 = 1+1+2 = 4 \\), \\( a_4 = 8 \\). By induction, \\( a_n = 2^{n-1} \\) for all \\( n \\ge 1 \\). Thus, \\( a_{20} = 2^{19} \\)."
+      },
+      "ar": {
+        "question": "متتالية \\( a_n \\) معرفة بـ \\( a_0 = 1 \\) و \\( a_n = \\sum_{k=0}^{n-1} a_k \\) لكل \\( n \\ge 1 \\). ما قيمة \\( a_{20} \\)؟",
+        "options": [
+          "2^{19}",
+          "2^{20}",
+          "2^{20} - 1",
+          "2^{21}",
+          "2^{18}"
+        ],
+        "hint": "احسب الحدود الأولى لتكتشف النمط عندما يكون \\( n \\ge 1 \\).",
+        "explanation": "بحساب الحدود الأولى: \\( a_0 = 1, a_1 = 1, a_2 = 2, a_3 = 4, a_4 = 8 \\). بالاستقراء، نجد أن \\( a_n = 2^{n-1} \\) لكل \\( n \\ge 1 \\). وبالتالي فإن \\( a_{20} = 2^{19} \\)."
+      }
+    },
+    "correct_index": "0"
+  },
+  {
+    "id": "KAUST-091",
+    "track": "kaust",
+    "level": "High School (Gifted)",
+    "topic": "Applied Mathematics",
+    "type": "FRQ",
+    "difficulty": "easy",
+    "content": {
+      "en": {
+        "question": "A substance undergoes exponential decay. If its half-life is 10 years, what fraction of the initial amount remains after 30 years?",
+        "options": [],
+        "hint": "Use the formula \\( M(t) = M_0 \\cdot (1/2)^{t/T} \\).",
+        "explanation": "After \\( t = 30 \\) years with a half-life \\( T = 10 \\) years, the number of half-lives elapsed is \\( 30 / 10 = 3 \\). The remaining fraction is \\( (1/2)^3 = 1/8 \\)."
+      },
+      "ar": {
+        "question": "تضمحل مادة مشعة بشكل أسي. إذا كان عمر النصف لها هو 10 سنوات، فما الكسر المتبقي من الكمية الأصلية بعد 30 سنة؟",
+        "options": [],
+        "hint": "استخدم الصيغة \\( M(t) = M_0 \\cdot (1/2)^{t/T} \\).",
+        "explanation": "بعد مرور 30 سنة بعمر نصف قدره 10 سنوات، يكون قد مر 3 دورات عمر نصف. بالتالي فإن الكسر المتبقي هو \\( (1/2)^3 = 1/8 \\)."
+      }
+    },
+    "correct_index": "1/8"
+  },
+  {
+    "id": "KAUST-092",
+    "track": "kaust",
+    "level": "High School (Gifted)",
+    "topic": "Combinatorics",
+    "type": "MCQ",
+    "difficulty": "medium",
+    "content": {
+      "en": {
+        "question": "In how many ways can 5 distinct hats be returned to 5 people such that no person receives their original hat?",
+        "options": [
+          "24",
+          "44",
+          "60",
+          "89",
+          "119"
+        ],
+        "hint": "This is a question about derangements, denoted as \\( !n \\) or \\( D_n \\).",
+        "explanation": "The number of derangements of \\( n \\) items is given by \\( D_n = n! \\sum_{k=0}^n \\frac{(-1)^k}{k!} \\). For \\( n = 5 \\): \\( D_5 = 120 \\left( 1 - 1 + \\frac{1}{2} - \\frac{1}{6} + \\frac{1}{24} - \\frac{1}{120} \\right) = 60 - 20 + 5 - 1 = 44 \\)."
+      },
+      "ar": {
+        "question": "بكم طريقة يمكن إعادة 5 قبعات ممتازة إلى 5 أشخاص بحيث لا يحصل أي شخص على قبعته الأصلية؟",
+        "options": [
+          "24",
+          "44",
+          "60",
+          "89",
+          "119"
+        ],
+        "hint": "هذا السؤال يتطلب حساب عدد الاضطرابات (Derangements) ويرمز له بـ \\( D_n \\).",
+        "explanation": "عدد الاضطرابات لـ \\( n \\) عنصر يُعطى بالصيغة \\( D_n = n! \\sum_{k=0}^n \\frac{(-1)^k}{k!} \\). بالنسبة لـ \\( n = 5 \\)، تكون النتيجة \\( D_5 = 44 \\)."
+      }
+    },
+    "correct_index": "1"
+  },
+  {
+    "id": "KAUST-093",
+    "track": "kaust",
+    "level": "High School (Gifted)",
+    "topic": "Optimization",
+    "type": "FRQ",
+    "difficulty": "easy",
+    "content": {
+      "en": {
+        "question": "Find the minimum value of the multivariable function \\( f(x, y) = x^2 + 4y^2 - 4x + 8y + 10 \\) for real numbers \\( x, y \\).",
+        "options": [],
+        "hint": "Complete the square for both \\( x \\) and \\( y \\).",
+        "explanation": "Rewrite \\( f(x, y) \\) by completing the squares: \\( f(x, y) = (x^2 - 4x + 4) + 4(y^2 + 2y + 1) + 10 - 4 - 4 = (x - 2)^2 + 4(y + 1)^2 + 2 \\). Since square terms are non-negative, the absolute minimum is \\( 2 \\), occurring at \\( (x, y) = (2, -1) \\)."
+      },
+      "ar": {
+        "question": "أوجد القيمة الصغرى للدالة ذات المتغيرين \\( f(x, y) = x^2 + 4y^2 - 4x + 8y + 10 \\) للأعداد الحقيقية \\( x, y \\).",
+        "options": [],
+        "hint": "أكمل المربع بالنسبة لـ \\( x \\) و \\( y \\).",
+        "explanation": "بإكمال المربع نحصل على: \\( f(x, y) = (x - 2)^2 + 4(y + 1)^2 + 2 \\). بما أن الحدود المربعة لا يمكن أن تكون سالبة، فإن القيمة الصغرى هي 2 وتتحقق عند \\( (x, y) = (2, -1) \\)."
+      }
+    },
+    "correct_index": "2"
+  },
+  {
+    "id": "KAUST-094",
+    "track": "kaust",
+    "level": "High School (Gifted)",
+    "topic": "Number Theory",
+    "type": "MCQ",
+    "difficulty": "medium",
+    "content": {
+      "en": {
+        "question": "How many pairs of positive integers \\( (x, y) \\) satisfy the equation \\( \\frac{1}{x} + \\frac{1}{y} = \\frac{1}{6} \\)?",
+        "options": [
+          "5",
+          "7",
+          "9",
+          "12",
+          "15"
+        ],
+        "hint": "Rearrange the equation into the form \\( (x-6)(y-6) = 36 \\).",
+        "explanation": "Multiplying by \\( 6xy \\) gives \\( 6y + 6x = xy \\implies xy - 6x - 6y = 0 \\). Adding 36 to both sides yields \\( (x - 6)(y - 6) = 36 \\). Since \\( x, y > 0 \\), \\( x - 6 \\) must be a positive factor of 36. The number of positive divisors of \\( 36 = 2^2 \\times 3^2 \\) is \\( (2+1)(2+1) = 9 \\). Each factor gives a unique valid pair \\( (x, y) \\)."
+      },
+      "ar": {
+        "question": "كم عدد أزواج الأعداد الصحيحة الموجبة \\( (x, y) \\) التي تحقق المعادلة \\( \\frac{1}{x} + \\frac{1}{y} = \\frac{1}{6} \\)؟",
+        "options": [
+          "5",
+          "7",
+          "9",
+          "12",
+          "15"
+        ],
+        "hint": "أعد ترتيب المعادلة لتصبح على الصورة \\( (x-6)(y-6) = 36 \\).",
+        "explanation": "بضرب المعادلة في \\( 6xy \\) وإعادة الترتيب نحصل على \\( (x - 6)(y - 6) = 36 \\). بما أن \\( x, y > 0 \\)، يجب أن يكون \\( x - 6 \\) قاسمًا موجبًا للعدد 36. عدد قواسم 36 هو 9 قواسم، مما يعطي 9 أزواج ناتجة."
+      }
+    },
+    "correct_index": "2"
+  },
+  {
+    "id": "KAUST-095",
+    "track": "kaust",
+    "level": "High School (Gifted)",
+    "topic": "Probability",
+    "type": "FRQ",
+    "difficulty": "hard",
+    "content": {
+      "en": {
+        "question": "A particle moves among the vertices of triangle \\( ABC \\). At each step, it moves to one of the two other vertices with equal probability \\( 1/2 \\). If it starts at vertex \\( A \\), what is the probability that it is back at vertex \\( A \\) after 4 steps?",
+        "options": [],
+        "hint": "Set up a transition matrix or use a recurrence for \\( p_n \\), the probability of being at \\( A \\) at step \\( n \\).",
+        "explanation": "Let \\( p_n \\) be the probability of being at \\( A \\) at step \\( n \\). If the particle is at \\( A \\), it moves to \\( B \\) or \\( C \\). If it is not at \\( A \\), it moves to \\( A \\) with probability \\( 1/2 \\). Thus, \\( p_n = \\frac{1}{2}(1 - p_{n-1}) \\). Starting with \\( p_0 = 1 \\): \\( p_1 = 0 \\), \\( p_2 = 1/2 \\), \\( p_3 = 1/4 \\), \\( p_4 = 3/8 \\)."
+      },
+      "ar": {
+        "question": "ينتقل جسيم بين رؤوس المثلث \\( ABC \\). في كل خطوة، ينتقل إلى أحد الرأسين الآخرين باحتمال متساوٍ قدره \\( 1/2 \\). إذا بدأ الجسيم من الرأس \\( A \\)، فما احتمال أن يعود إلى الرأس \\( A \\) بعد 4 خطوات؟",
+        "options": [],
+        "hint": "استخدم علاقة تكرارية لـ \\( p_n \\)، وهو احتمال التواجد عند الرأس \\( A \\) في الخطوة \\( n \\).",
+        "explanation": "ليكن \\( p_n \\) احتمال التواجد عند \\( A \\) في الخطوة \\( n \\). المعادلة التكرارية هي \\( p_n = \\frac{1}{2}(1 - p_{n-1}) \\). بالبدء من \\( p_0 = 1 \\): نحصل على \\( p_1 = 0 \\)، \\( p_2 = 1/2 \\)، \\( p_3 = 1/4 \\)، و \\( p_4 = 3/8 \\)."
+      }
+    },
+    "correct_index": "3/8"
+  },
+  {
+    "id": "KAUST-096",
+    "track": "kaust",
+    "level": "High School (Gifted)",
+    "topic": "Graph Theory",
+    "type": "MCQ",
+    "difficulty": "medium",
+    "content": {
+      "en": {
+        "question": "Which of the following complete bipartite graphs \\( K_{m,n} \\) contains an Eulerian circuit?",
+        "options": [
+          "K_{3,3}",
+          "K_{2,4}",
+          "K_{3,4}",
+          "K_{5,5}",
+          "K_{1,6}"
+        ],
+        "hint": "A graph has an Eulerian circuit if and only if every vertex has an even degree.",
+        "explanation": "In \\( K_{m,n} \\), the \\( m \\) vertices in the first set have degree \\( n \\), and the \\( n \\) vertices in the second set have degree \\( m \\). An Eulerian circuit exists if and only if all vertices have even degrees, meaning both \\( m \\) and \\( n \\) must be even numbers. Among the options, \\( K_{2,4} \\) is the only graph where both 2 and 4 are even."
+      },
+      "ar": {
+        "question": "أي من الرسوم البيانية الثنائية التامة التالية \\( K_{m,n} \\) يحتوي على مسار أويلري مغلق (Eulerian circuit)؟",
+        "options": [
+          "K_{3,3}",
+          "K_{2,4}",
+          "K_{3,4}",
+          "K_{5,5}",
+          "K_{1,6}"
+        ],
+        "hint": "يحتوي الرسم البياني على مسار أويلري مغلق إذا وفقط إذا كانت درجة كل رأس زوجية.",
+        "explanation": "في الرسم البياني \\( K_{m,n} \\)، درجات الرؤوس تكون إما \\( m \\) أو \\( n \\). يمتلك الرسم مسار أويلري مغلقًا إذا وفقط إذا كانت جميع الدرجات زوجية، أي أن كلاً من \\( m \\) و \\( n \\) عددان زوجيان. الخيار الوحيد الذي يحقق هذا هو \\( K_{2,4} \\)."
+      }
+    },
+    "correct_index": "1"
+  },
+  {
+    "id": "KAUST-097",
+    "track": "kaust",
+    "level": "High School (Gifted)",
+    "topic": "Discrete Mathematics",
+    "type": "FRQ",
+    "difficulty": "medium",
+    "content": {
+      "en": {
+        "question": "In a school of 100 students, 50 play football, 45 play basketball, and 35 play volleyball. 15 play both football and basketball, 10 play basketball and volleyball, 11 play football and volleyball, and 5 play all three sports. How many students do not play any of these sports?",
+        "options": [],
+        "hint": "Apply the Principle of Inclusion-Exclusion.",
+        "explanation": "By Inclusion-Exclusion, the number of students playing at least one sport is \\( |F \\cup B \\cup V| = (50 + 45 + 35) - (15 + 10 + 11) + 5 = 130 - 36 + 5 = 99 \\). Thus, the number of students playing no sport is \\( 100 - 99 = 1 \\)."
+      },
+      "ar": {
+        "question": "في مدرسة تضم 100 طالب، يمارس 50 طالبًا كرة القدم، و45 كرة السلة، و35 الكرة الطائرة. يمارس 15 طالبًا كرة القدم والسلة، و10 كرة السلة والطائرة، و11 كرة القدم والطائرة، و5 طلاب يمارسون الرياضات الثلاث معًا. كم طالبًا لا يمارس أيًا من هذه الرياضات؟",
+        "options": [],
+        "hint": "استخدم مبدأ الإدراج والاستبعاد (Inclusion-Exclusion).",
+        "explanation": "بتطبيق مبدأ الإدراج والاستبعاد: عدد الطلاب الذين يمارسون رياضة واحدة على الأقل هو \\( (50 + 45 + 35) - (15 + 10 + 11) + 5 = 99 \\). بالتالي، عدد الطلاب الذين لا يمارسون أي رياضة هو \\( 100 - 99 = 1 \\)."
+      }
+    },
+    "correct_index": "1"
+  },
+  {
+    "id": "KAUST-098",
+    "track": "kaust",
+    "level": "High School (Gifted)",
+    "topic": "Linear Algebra",
+    "type": "MCQ",
+    "difficulty": "easy",
+    "content": {
+      "en": {
+        "question": "Let \\( M \\) be a \\( 3 \\times 3 \\) matrix with determinant \\( \\det(M) = 5 \\). What is the determinant of \\( 2 M^{-1} \\)?",
+        "options": [
+          "2/5",
+          "8/5",
+          "5/2",
+          "5/8",
+          "10"
+        ],
+        "hint": "Recall that \\( \\det(cA) = c^n \\det(A) \\) for an \\( n \\times n \\) matrix and \\( \\det(A^{-1}) = \\frac{1}{\\det(A)} \\).",
+        "explanation": "For an \\( n \\times n \\) matrix \\( M \\) with \\( n = 3 \\), \\( \\det(2 M^{-1}) = 2^3 \\det(M^{-1}) = 8 \\times \\frac{1}{\\det(M)} = \\frac{8}{5} \\)."
+      },
+      "ar": {
+        "question": "لتكن \\( M \\) مصفوفة بمقاس \\( 3 \\times 3 \\) محددها \\( \\det(M) = 5 \\). ما قيمة محدد المصفوفة \\( 2 M^{-1} \\)؟",
+        "options": [
+          "2/5",
+          "8/5",
+          "5/2",
+          "5/8",
+          "10"
+        ],
+        "hint": "تذكر أن \\( \\det(cA) = c^n \\det(A) \\) لمصفوفة من الرتبة \\( n \\) وأن \\( \\det(A^{-1}) = \\frac{1}{\\det(A)} \\).",
+        "explanation": "بما أن رتبة المصفوفة هي \\( n = 3 \\)، فإن \\( \\det(2 M^{-1}) = 2^3 \\det(M^{-1}) = 8 \\times \\frac{1}{5} = \\frac{8}{5} \\)."
+      }
+    },
+    "correct_index": "1"
+  },
+  {
+    "id": "KAUST-099",
+    "track": "kaust",
+    "level": "High School (Gifted)",
+    "topic": "Complex Numbers",
+    "type": "FRQ",
+    "difficulty": "medium",
+    "content": {
+      "en": {
+        "question": "Find the sum of the absolute values (magnitudes) of all roots of the equation \\( z^6 - 64 = 0 \\) in the complex plane.",
+        "options": [],
+        "hint": "Find the magnitude \\( |z| \\) for each root.",
+        "explanation": "The equation \\( z^6 = 64 \\) has 6 distinct complex roots. Taking the absolute value of both sides gives \\( |z|^6 = 64 \\implies |z| = 2 \\). Since all 6 roots have a magnitude of 2, the sum of their absolute values is \\( 6 \\times 2 = 12 \\)."
+      },
+      "ar": {
+        "question": "أوجد مجموع القيم المطلقة (المقياس) لجميع جذور المعادلة \\( z^6 - 64 = 0 \\) في المستوى المركب.",
+        "options": [],
+        "hint": "احسب القيمة المطلقة \\( |z| \\) لكل جذر.",
+        "explanation": "المعادلة \\( z^6 = 64 \\) لها 6 جذور مركبة. بأخذ القيمة المطلقة للطرفين نجد أن \\( |z| = 2 \\) لكل جذر. مجموع القيم المطلقة للجذور الستة هو \\( 6 \\times 2 = 12 \\)."
+      }
+    },
+    "correct_index": "12"
+  },
+  {
+    "id": "KAUST-100",
+    "track": "kaust",
+    "level": "High School (Gifted)",
+    "topic": "Calculus",
+    "type": "MCQ",
+    "difficulty": "medium",
+    "content": {
+      "en": {
+        "question": "Find the global minimum value of the function \\( f(x) = x \\ln(x) \\) defined for \\( x > 0 \\).",
+        "options": [
+          "-e",
+          "-1/e",
+          "0",
+          "1/e",
+          "e"
+        ],
+        "hint": "Take the derivative with respect to \\( x \\) and set it to zero.",
+        "explanation": "The derivative is \\( f'(x) = 1 \\cdot \\ln(x) + x \\cdot \\frac{1}{x} = \\ln(x) + 1 \\). Setting \\( f'(x) = 0 \\) gives \\( \\ln(x) = -1 \\implies x = e^{-1} = \\frac{1}{e} \\). Evaluating at this point gives \\( f(1/e) = \\frac{1}{e} \\ln(1/e) = -\\frac{1}{e} \\)."
+      },
+      "ar": {
+        "question": "أوجد القيمة الصغرى المطلقة للدالة \\( f(x) = x \\ln(x) \\) المعرفة لكل \\( x > 0 \\).",
+        "options": [
+          "-e",
+          "-1/e",
+          "0",
+          "1/e",
+          "e"
+        ],
+        "hint": "احسب المشتقة بالنسبة لـ \\( x \\) وساوِها بالصفر.",
+        "explanation": "المشتقة هي \\( f'(x) = \\ln(x) + 1 \\). بمسواتها بالصفر نجد أن \\( x = 1/e \\). بالتعويض في الدالة نحصل على القيمة الصغرى المطلقة \\( f(1/e) = -1/e \\)."
+      }
+    },
+    "correct_index": "1"
+  },
+  {
+    "id": "KAUST-101",
+    "track": "kaust",
+    "level": "High School (Gifted)",
+    "topic": "Game Theory",
+    "type": "FRQ",
+    "difficulty": "hard",
+    "content": {
+      "en": {
+        "question": "In a turn-based game, two players alternate removing either 1, 2, or 4 stones from a pile initially containing 20 stones. The player who takes the last stone wins. Assuming optimal play, how many stones should the first player remove on the first move to guarantee a win?",
+        "options": [],
+        "hint": "Identify the losing positions (P-positions) modulo 3.",
+        "explanation": "Analyzing the positions: 0 is a losing position (L). 1, 2, 4 allow moving to 0, so they are winning (W). 3 allows moving to 2 or 1 (both W), so 3 is L. In general, positions that are multiples of 3 are losing positions because any legal move (1, 2, 4) from a multiple of 3 leaves a non-multiple of 3. Starting at 20, which is \\( 20 \\equiv 2 \\pmod 3 \\), the first player must remove 2 stones to leave 18 (a multiple of 3) to the opponent."
+      },
+      "ar": {
+        "question": "في لعبة تناوبية، يتناوب لاعبان على سحب إما 1 أو 2 أو 4 أحجار من كومة تحتوي أولياً على 20 حجرًا. اللاعب الذي يسحب آخر حجر يفوز. بافتراض اللعب المثالي، كم حجرًا يجب أن يسحب اللاعب الأول في النقلة الأولى لضمان الفوز؟",
+        "options": [],
+        "hint": "حدد مواضع الخسارة (P-positions) بحسب باقي القسمة على 3.",
+        "explanation": "بتحليل مواضع اللعبة، نجد أن المواضع التي تقبل القسمة على 3 هي مواضع خاسرة، لأن أي حركة قانونية (سحب 1 أو 2 أو 4) تنقل الخصم إلى عدد لا يقبل القسمة على 3. بما أن 20 تعطي باقي 2 عند القسمة على 3، فإن الحركة المثالية هي سحب حجرين لترك 18 حجرًا (مضاعف للعدد 3) للخصم."
+      }
+    },
+    "correct_index": "2"
   }
 ]
