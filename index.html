@@ -237,6 +237,14 @@
         </div>
       </div>
 
+      <!-- Grade Filter -->
+      <div class="bg-white/60 p-4 rounded-xl border border-slate-200 mt-4 mb-6">
+        <div class="text-sm font-bold text-slate-700 mb-3" id="grade-filter-title">Filter by Your Grade / حدد صفك الدراسي</div>
+        <div class="flex flex-wrap gap-2" id="grade-filter-btns">
+          <!-- Populated by JS -->
+        </div>
+      </div>
+
       <!-- Tracks Grid -->
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6" id="tracks-cards-grid">
         <!-- Rendered via JS -->
@@ -492,7 +500,8 @@
           levels_ar: "الصفوف 1-12 (مقسمة كل صفين)",
           levels_en: "Grades 1-12 (Pair groupings)",
           format: "3, 4, 5 نقاط | بدون آلة حاسبة",
-          topics: ["المنطق والأحاجي", "الهندسة الفضائية", "التركيبات والأنماط"]
+          topics: ["المنطق والأحاجي", "الهندسة الفضائية", "التركيبات والأنماط"],
+          grades: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]
         },
         {
           id: "nafes",
@@ -502,7 +511,68 @@
           color: "border-blue-500",
           bg: "bg-blue-50",
           accent: "text-blue-600",
-         }
+          levels_ar: "الصفوف 3، 6، 9",
+          levels_en: "Grades 3, 6, 9",
+          format: "اختبار وطني | مقاييس الأداء",
+          topics: ["الجبر", "القياس", "الإحصاء والبيانات"],
+          grades: [3, 6, 9]
+        },
+        {
+          id: "nsmo",
+          name_ar: "أولمبياد نسمو (موهبة)",
+          name_en: "NSMO (Mawhiba)",
+          badge: "مسابقة وطنية",
+          color: "border-emerald-500",
+          bg: "bg-emerald-50",
+          accent: "text-emerald-600",
+          levels_ar: "الصفوف 7-10",
+          levels_en: "Grades 7-10",
+          format: "MCQs & مقالي | تنافسي",
+          topics: ["الرياضيات المتقدمة", "المنطق والتحليل"],
+          grades: [7, 8, 9, 10]
+        },
+        {
+          id: "kaust",
+          name_ar: "برنامج كاوست SRSI",
+          name_en: "KAUST SRSI",
+          badge: "برنامج بحثي",
+          color: "border-teal-500",
+          bg: "bg-teal-50",
+          accent: "text-teal-600",
+          levels_ar: "الصف 11 فقط",
+          levels_en: "Grade 11 only",
+          format: "امتحان قبول صارم",
+          topics: ["تفاضل وتكامل", "الجبر المتقدم"],
+          grades: [11]
+        },
+        {
+          id: "olympiad",
+          name_ar: "الأولمبياد الدولي IMO",
+          name_en: "Math Olympiad (IMO)",
+          badge: "براهين وإثباتات",
+          color: "border-amber-500",
+          bg: "bg-amber-50",
+          accent: "text-amber-600",
+          levels_ar: "الصفوف 7-12",
+          levels_en: "Grades 7-12",
+          format: "مقالي كامل | 3 أسئلة بـ 4.5 ساعات",
+          topics: ["الأعداد", "التركيبات", "الهندسة الإقليدية"],
+          grades: [7, 8, 9, 10, 11, 12]
+        },
+        {
+          id: "jee",
+          name_ar: "اختبار القبول JEE",
+          name_en: "JEE Main & Advanced",
+          badge: "MCQs & أرقام",
+          color: "border-purple-500",
+          bg: "bg-purple-50",
+          accent: "text-purple-600",
+          levels_ar: "الصف 12 (المرحلة الثانوية)",
+          levels_en: "Grade 12 (High School)",
+          format: "MCQ & إجابة عددية صحيحة",
+          topics: ["التفاضل والتكامل", "الأعداد المركبة", "القطوع المخروطية"],
+          grades: [12]
+        }
       ],
       questions: []
     };
@@ -514,6 +584,7 @@
     let selectedOptionIdx = null;
     let isAnswerSubmitted = false;
     let showHint = false;
+    let currentSelectedGrade = 'all';
 
     // --- 3. DICTIONARY FOR I18N ---
     const dict = {
@@ -530,6 +601,7 @@
         stat4Label: "تغطية اللغات",
         sec1Title: "بطاقات المسارات والصفوف المستهدفة",
         sec1Desc: "اختر المسار للاستكشاف ومعاينة معايير الاختبار، عدد الخيارات، والصعوبة المستهدفة",
+        lblFilterGrade: "اختر صفك الدراسي (1-12) لتصفية الأسئلة:",
         sec2Title: "تحليلات المناهج والأبعاد المعرفية",
         sec2Desc: "مقارنة بين توزيع المواضيع وطبيعة الأسئلة في كل مسار",
         chart1Title: "📊 توزيع المواضيع الرياضية حسب المسار",
@@ -574,6 +646,7 @@
         stat4Label: "Language Support",
         sec1Title: "Exam Tracks & Targeted Grade Levels",
         sec1Desc: "Select a track to inspect target formats, option counts, and core topics.",
+        lblFilterGrade: "Select your Grade (1-12) to filter questions:",
         sec2Title: "Curriculum Analytics & Cognitive Domains",
         sec2Desc: "Comparative analysis of topic distribution and question formats across tracks.",
         chart1Title: "📊 Topic Weight Distribution by Track",
@@ -606,6 +679,50 @@
         txtIncorrect: "❌ Incorrect. Check the mathematical breakdown above."
       }
     };
+
+    function renderGradeFilters() {
+      const container = document.getElementById('grade-filter-btns');
+      container.innerHTML = '';
+      
+      const allBtn = document.createElement('button');
+      const isSelectedAll = currentSelectedGrade === 'all';
+      allBtn.className = `px-3 py-1.5 rounded-lg text-sm font-bold transition-all ${isSelectedAll ? 'bg-amber-500 text-slate-900 shadow-md' : 'bg-slate-200 text-slate-600 hover:bg-slate-300'}`;
+      allBtn.innerText = currentLang === 'ar' ? 'الكل' : 'All';
+      allBtn.onclick = () => setGradeFilter('all');
+      container.appendChild(allBtn);
+
+      for (let i = 1; i <= 12; i++) {
+        const btn = document.createElement('button');
+        const isSelected = currentSelectedGrade === i;
+        btn.className = `px-3 py-1.5 rounded-lg text-sm font-bold transition-all ${isSelected ? 'bg-amber-500 text-slate-900 shadow-md' : 'bg-slate-200 text-slate-600 hover:bg-slate-300'}`;
+        btn.innerText = (currentLang === 'ar' ? 'صف ' : 'G') + i;
+        btn.onclick = () => setGradeFilter(i);
+        container.appendChild(btn);
+      }
+    }
+
+    function setGradeFilter(grade) {
+      currentSelectedGrade = grade;
+      renderGradeFilters();
+      renderTracksGrid();
+      filterQuestions();
+    }
+
+    function extractGradesFromLevelString(levelStr) {
+      if (!levelStr) return [];
+      const match = levelStr.match(/Grade(?:s)?\s+(\d+)(?:-(\d+))?/i);
+      if (match) {
+        const start = parseInt(match[1]);
+        if (match[2]) {
+          const end = parseInt(match[2]);
+          let arr = [];
+          for (let i = start; i <= end; i++) arr.push(i);
+          return arr;
+        }
+        return [start];
+      }
+      return [];
+    }
 
     // --- 4. CHART INSTANCES & RENDER logic ---
     let topicRadarChartInstance = null;
@@ -750,6 +867,7 @@
 
       document.getElementById('sec1-title').innerText = t.sec1Title;
       document.getElementById('sec1-desc').innerText = t.sec1Desc;
+      document.getElementById('grade-filter-title').innerText = t.lblFilterGrade;
       document.getElementById('sec2-title').innerText = t.sec2Title;
       document.getElementById('sec2-desc').innerText = t.sec2Desc;
 
@@ -781,10 +899,8 @@
       document.getElementById('lbl-lang-nodes').innerText = t.lblLangNodes;
       document.getElementById('footer-text').innerText = t.footerText;
 
-      // Render Tracks Cards
+      renderGradeFilters();
       renderTracksGrid();
-
-      // Render Active Question
       renderQuestionCard();
     }
 
@@ -793,6 +909,11 @@
       grid.innerHTML = '';
 
       appData.tracks.forEach((tr) => {
+        // Filter out if it doesn't match selected grade
+        if (currentSelectedGrade !== 'all' && !tr.grades.includes(currentSelectedGrade)) {
+          return;
+        }
+
         const name = currentLang === 'ar' ? tr.name_ar : tr.name_en;
         const levels = currentLang === 'ar' ? tr.levels_ar : tr.levels_en;
 
@@ -843,27 +964,27 @@
       const t = dict[currentLang];
 
       qTrackerText.innerText = `${currentLang === 'ar' ? 'سؤال' : 'Question'} ${currentQuestionIdx + 1} ${currentLang === 'ar' ? 'من' : 'of'} ${currentFilteredQuestions.length}`;
-      document.getElementById('btn-prev-q').disabled = currentQuestionIdx === 0;
-      document.getElementById('btn-next-q').disabled = currentQuestionIdx === currentFilteredQuestions.length - 1;
+      document.getElementById('btn-prev-q').disabled = (currentQuestionIdx === 0);
+      document.getElementById('btn-next-q').disabled = (currentQuestionIdx === currentFilteredQuestions.length - 1);
 
-      // Question Options UI (MCQ vs FRQ)
       let optionsMarkup = '';
-
-      if (q.type === 'MCQ' && qContent.options && qContent.options.length > 0) {
+      if (q.type === 'MCQ' && qContent.options) {
         optionsMarkup = `
-          <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 mt-6">
+          <div class="space-y-3 mt-6">
             ${qContent.options.map((opt, idx) => {
-              let btnStyle = "bg-slate-800 hover:bg-slate-750 border-slate-700 text-slate-200";
-              if (selectedOptionIdx === idx) {
-                btnStyle = "bg-amber-500/20 border-amber-500 text-amber-300 font-bold";
-              }
+              let btnStyle = "bg-slate-800/80 hover:bg-slate-700 text-slate-300 border-slate-700";
+              
               if (isAnswerSubmitted) {
                 const correctIdx = parseInt(q.correct_index, 10);
                 if (idx === correctIdx) {
-                  btnStyle = "bg-emerald-500/20 border-emerald-500 text-emerald-300 font-bold";
-                } else if (selectedOptionIdx === idx && idx !== correctIdx) {
-                  btnStyle = "bg-rose-500/20 border-rose-500 text-rose-300";
+                  btnStyle = "bg-emerald-500/20 border-emerald-500 text-emerald-400";
+                } else if (idx === selectedOptionIdx) {
+                  btnStyle = "bg-rose-500/20 border-rose-500 text-rose-400";
+                } else {
+                  btnStyle = "bg-slate-900/40 border-slate-800 text-slate-500 opacity-50";
                 }
+              } else if (idx === selectedOptionIdx) {
+                btnStyle = "bg-amber-500/20 border-amber-500 text-amber-400";
               }
 
               return `
@@ -878,13 +999,19 @@
           </div>
         `;
       } else {
-        // FRQ Input Box Simulation
         optionsMarkup = `
-          <div class="mt-6 p-4 bg-slate-800/80 rounded-xl border border-slate-700 space-y-3">
-            <label class="text-xs font-bold text-slate-300 block">
+          <div class="mt-6 space-y-4">
+            <p class="text-sm text-slate-400 font-bold mb-2">
               ${currentLang === 'ar' ? 'اكتب إجابتك العدديّة / النهائية:' : 'Enter your Numerical / Final Answer:'}
-            </label>
-            <input type="text" id="frq-input" value="${selectedOptionIdx !== null ? selectedOptionIdx : ''}" oninput="selectedOptionIdx = this.value" ${isAnswerSubmitted ? 'disabled' : ''} placeholder="e.g. 336" class="w-full bg-slate-900 border border-slate-700 rounded-lg p-3 text-white font-mono focus:ring-2 focus:ring-amber-500 outline-none">
+            </p>
+            <input type="text" id="frq-answer-input" ${isAnswerSubmitted ? 'disabled' : ''} 
+                   class="w-full bg-slate-900/80 border border-slate-700 rounded-xl p-4 text-white font-mono focus:ring-2 focus:ring-amber-500 outline-none" 
+                   placeholder="e.g. 42, 3\pi, x=5">
+            ${isAnswerSubmitted ? `
+              <div class="mt-4 p-4 rounded-xl border border-emerald-500/30 bg-emerald-500/10 text-emerald-400 text-sm">
+                <strong>${currentLang === 'ar' ? 'الإجابة النموذجية المعتمدة:' : 'Official Correct Answer:'}</strong> <span class="font-mono ml-2">${q.correct_answer || qContent.correct_answer}</span>
+              </div>
+            ` : ''}
           </div>
         `;
       }
@@ -924,7 +1051,6 @@
       container.innerHTML = `
         <div class="bg-slate-800/60 p-4 sm:p-6 md:p-8 rounded-2xl border border-slate-700 space-y-4 sm:space-y-6">
           
-          <!-- Badges Bar -->
           <div class="flex flex-wrap items-center justify-between gap-3 text-[10px] sm:text-xs">
             <div class="flex flex-wrap items-center gap-2">
               <span class="px-3 py-1 rounded-full bg-amber-500 text-slate-900 font-extrabold uppercase">
@@ -940,36 +1066,34 @@
             <span class="font-mono text-slate-400">ID: ${q.id}</span>
           </div>
 
-          <!-- Question Body -->
           <div class="text-base sm:text-lg md:text-xl font-bold text-white leading-relaxed font-sans">
             ${qContent.question}
           </div>
 
-          <!-- Diagram (if matched) -->
           ${diagramMarkup}
-
-          <!-- Options or FRQ -->
           ${optionsMarkup}
 
-          <!-- Actions Bar: Hint Button & Submit Button -->
-          <div class="flex flex-wrap items-center justify-between gap-4 pt-4 border-t border-slate-700/80">
-            <button onclick="toggleHint()" class="text-xs font-bold text-amber-400 hover:text-amber-300 underline underline-offset-4">
+          <!-- Action Bar -->
+          <div class="pt-6 border-t border-slate-700 flex flex-wrap gap-4 items-center justify-between">
+            <button onclick="toggleHint()" class="text-slate-400 hover:text-amber-400 text-sm font-bold transition-colors">
               ${t.btnHint}
             </button>
-
-            <button onclick="submitAnswer()" ${selectedOptionIdx === null ? 'disabled' : ''} class="px-6 py-2.5 bg-amber-500 hover:bg-amber-600 text-slate-900 font-extrabold text-xs sm:text-sm rounded-xl transition-all disabled:opacity-40">
-              ${t.btnSubmit}
-            </button>
+            
+            ${!isAnswerSubmitted ? `
+              <button onclick="submitAnswer()" class="bg-amber-500 hover:bg-amber-600 text-slate-900 font-bold px-6 py-2.5 rounded-xl transition-all shadow-lg shadow-amber-500/20">
+                ${t.btnSubmit}
+              </button>
+            ` : ''}
           </div>
 
-          <!-- Hint Drawer -->
+          <!-- Hint Area -->
           ${showHint ? `
-            <div class="p-4 rounded-xl bg-amber-500/10 border border-amber-500/30 text-amber-200 text-xs sm:text-sm animate-fade-in">
+            <div class="mt-4 p-4 rounded-xl bg-amber-500/10 border border-amber-500/30 text-amber-200/90 text-sm leading-relaxed">
               💡 <strong>${currentLang === 'ar' ? 'التلميح:' : 'Hint:'}</strong> ${qContent.hint}
             </div>
           ` : ''}
 
-          <!-- Detailed Solution Breakdown -->
+          <!-- Solution Area (Shown after submit) -->
           ${isAnswerSubmitted ? `
             <div class="p-5 rounded-xl ${checkIsCorrect() ? 'bg-emerald-500/10 border border-emerald-500/40 text-emerald-200' : 'bg-rose-500/10 border border-rose-500/40 text-rose-200'} space-y-3 animate-fade-in">
               <div class="font-bold text-sm sm:text-base">
