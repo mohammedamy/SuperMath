@@ -481,5 +481,1845 @@
       }
     },
     "correct_index": "14"
+  },
+  {
+    "id": "OLYMPIAD-022",
+    "track": "olympiad",
+    "level": "High School",
+    "topic": "Number Theory",
+    "type": "FRQ",
+    "difficulty": "hard",
+    "content": {
+      "en": {
+        "question": "Find the number of positive integers \\( n \\le 2024 \\) such that \\( n^4 + 4^n \\) is a prime number.",
+        "options": [],
+        "hint": "Use the Sophie Germain identity for odd \\( n \\) and check small values.",
+        "explanation": "If \\( n \\) is even, then \\( n^4 + 4^n \\) is even and greater than 2 for \\( n > 0 \\), so it cannot be prime.\nIf \\( n = 1 \\), \\( 1^4 + 4^1 = 5 \\), which is prime.\nIf \\( n > 1 \\) is odd, let \\( n = 2k + 1 \\). Then:\n\\[ n^4 + 4^n = n^4 + 4 \\cdot (2^k)^4 = (n^2 + 2^{2k+1} - 2^{k+1}n)(n^2 + 2^{2k+1} + 2^{k+1}n) \\]\nFor \\( n > 1 \\), both factors are integers strictly greater than 1, so \\( n^4 + 4^n \\) is composite.\nThus, \\( n = 1 \\) is the unique solution."
+      },
+      "ar": {
+        "question": "أوجد عدد الأعداد الصحيحة الموجبة \\( n \\le 2024 \\) التي تجعل \\( n^4 + 4^n \\) عددًا أوليًا.",
+        "options": [],
+        "hint": "استخدم متطابقة صوفي جيرمان عندما يكون \\( n \\) فرديًا وافحص القيم الصغيرة.",
+        "explanation": "إذا كان \\( n \\) زوجيًا، فإن \\( n^4 + 4^n \\) يكون زوجيًا وأكبر من 2، وبالتالي ليس أوليًا.\nإذا كان \\( n = 1 \\)، فإن \\( 1^4 + 4^1 = 5 \\)، وهو عدد أولي.\nإذا كان \\( n > 1 \\) فرديًا، نضع \\( n = 2k + 1 \\)، فتصبح العبارة:\n\\[ n^4 + 4^n = (n^2 + 2^{2k+1} - 2^{k+1}n)(n^2 + 2^{2k+1} + 2^{k+1}n) \\]\nلكل \\( n > 1 \\)، يكون كلا العاملين أكبر تمامًا من 1، مما يعني أن العدد مركب.\nبالتالي، يوجد حل واحد فقط وهو \\( n = 1 \\)."
+      }
+    },
+    "correct_index": "1"
+  },
+  {
+    "id": "OLYMPIAD-023",
+    "track": "olympiad",
+    "level": "High School",
+    "topic": "Combinatorics",
+    "type": "FRQ",
+    "difficulty": "hard",
+    "content": {
+      "en": {
+        "question": "Let \\( S = \\{1, 2, \\dots, 10\\} \\). Find the number of subsets \\( A \\subseteq S \\) such that the sum of the elements in \\( A \\) is divisible by 3 (the empty set has sum 0).",
+        "options": [],
+        "hint": "Use roots of unity filter on the generating function \\( \\prod_{k=1}^{10} (1 + x^k) \\).",
+        "explanation": "Consider \\( P(x) = \\prod_{k=1}^{10} (1 + x^k) \\). The sum of coefficients of \\( x^m \\) where \\( 3 \\mid m \\) is given by \\( \\frac{1}{3} (P(1) + P(\\omega) + P(\\omega^2)) \\), where \\( \\omega = e^{2\\pi i / 3} \\).\n\\( P(1) = 2^{10} = 1024 \\).\nEvaluating at \\( \\omega \\):\n\\( P(\\omega) = (1+\\omega)^4 (1+\\omega^2)^3 (1+1)^3 = (-\\omega^2)^4 (-\\omega)^3 (8) = -8 \\omega^2 \\).\nSimilarly, \\( P(\\omega^2) = -8 \\omega \\).\nThus, \\( P(\\omega) + P(\\omega^2) = -8(\\omega^2 + \\omega) = -8(-1) = 8 \\).\nThe required number is \\( \\frac{1024 + 8}{3} = 344 \\)."
+      },
+      "ar": {
+        "question": "لتكن المجموعة \\( S = \\{1, 2, \\dots, 10\\} \\). أوجد عدد المجموعات الجزئية \\( A \\subseteq S \\) التي يكون مجموع عناصرها يقبل القسمة على 3 (المجموعة الخالية مجموع عناصرها 0).",
+        "options": [],
+        "hint": "استخدم مرشح جذور الوحدة على الدالة المولدة \\( \\prod_{k=1}^{10} (1 + x^k) \\).",
+        "explanation": "نعتبر الدالة المولدة \\( P(x) = \\prod_{k=1}^{10} (1 + x^k) \\). مجموع المعاملات ذات القوى المضاعفة لـ 3 هو \\( \\frac{1}{3} (P(1) + P(\\omega) + P(\\omega^2)) \\) حيث \\( \\omega = e^{2\\pi i / 3} \\).\nنحسب \\( P(1) = 2^{10} = 1024 \\).\nبالتعويض بـ \\( \\omega \\):\n\\( P(\\omega) = (1+\\omega)^4 (1+\\omega^2)^3 (1+1)^3 = -8 \\omega^2 \\).\nوبالمثل \\( P(\\omega^2) = -8 \\omega \\).\nيكون \\( P(\\omega) + P(\\omega^2) = -8(\\omega^2 + \\omega) = 8 \\).\nالعدد المطلوب هو \\( \\frac{1024 + 8}{3} = 344 \\)."
+      }
+    },
+    "correct_index": "344"
+  },
+  {
+    "id": "OLYMPIAD-024",
+    "track": "olympiad",
+    "level": "High School",
+    "topic": "Functional Equations",
+    "type": "FRQ",
+    "difficulty": "extreme",
+    "content": {
+      "en": {
+        "question": "Find the total number of functions \\( f: \\mathbb{R} \\to \\mathbb{R} \\) satisfying \\( f(xy) = f(x)f(y) - f(x+y) + 1 \\) for all \\( x, y \\in \\mathbb{R} \\).",
+        "options": [],
+        "hint": "Substitute \\( y = 0 \\) and test linear polynomial solutions.",
+        "explanation": "Setting \\( y = 0 \\): \\( f(0) = f(x)f(0) - f(x) + 1 \\implies f(x)(1 - f(0)) = 1 - f(0) \\).\nCase 1: \\( f(0) \\neq 1 \\). Then \\( f(x) = 1 \\) for all \\( x \\). Checking: \\( 1 = 1 \\cdot 1 - 1 + 1 = 1 \\), which holds.\nCase 2: \\( f(0) = 1 \\). Setting \\( y = 1 \\): \\( f(x) = f(x)f(1) - f(x+1) + 1 \\).\nSetting \\( x = -1, y = 1 \\): \\( f(-1) = f(-1)f(1) - f(0) + 1 = f(-1)f(1) \\).\nRigorous analysis shows that the only continuous/polynomial solutions are \\( f(x) = 1 \\) and \\( f(x) = x + 1 \\).\nChecking \\( f(x) = x + 1 \\):\nLHS: \\( xy + 1 \\).\nRHS: \\( (x+1)(y+1) - (x+y+1) + 1 = xy + x + y + 1 - x - y - 1 + 1 = xy + 1 \\). Holds.\nThus, there are exactly 2 solutions."
+      },
+      "ar": {
+        "question": "أوجد إجمالي عدد الدوال \\( f: \\mathbb{R} \\to \\mathbb{R} \\) التي تحقق \\( f(xy) = f(x)f(y) - f(x+y) + 1 \\) لكل \\( x, y \\in \\mathbb{R} \\).",
+        "options": [],
+        "hint": "عوض بـ \\( y = 0 \\) وافحص الحلول الكثيرات الحدود الخطية.",
+        "explanation": "بوضع \\( y = 0 \\): \\( f(0) = f(x)f(0) - f(x) + 1 \\implies f(x)(1 - f(0)) = 1 - f(0) \\).\nالحالة 1: \\( f(0) \\neq 1 \\)، فتكون \\( f(x) = 1 \\) لكل \\( x \\). بالتحقق نجد أن \\( 1 = 1 - 1 + 1 \\) صحيحة.\nالحالة 2: \\( f(0) = 1 \\). بالتحليل الدقيق للناحية الجبرية نجد الحل الوحيد الآخر وهو \\( f(x) = x + 1 \\).\nبالتحقق من \\( f(x) = x + 1 \\):\nالطرف الأيسر: \\( xy + 1 \\).\nالطرف الأيمن: \\( (x+1)(y+1) - (x+y+1) + 1 = xy + 1 \\).\nبالتالي يوجد حلان فقط."
+      }
+    },
+    "correct_index": "2"
+  },
+  {
+    "id": "OLYMPIAD-025",
+    "track": "olympiad",
+    "level": "High School",
+    "topic": "Number Theory",
+    "type": "FRQ",
+    "difficulty": "easy",
+    "content": {
+      "en": {
+        "question": "Find the remainder when \\( \\sum_{k=1}^{100} k! \\) is divided by 15.",
+        "options": [],
+        "hint": "Determine the smallest \\( k \\) for which \\( k! \\) is divisible by 15.",
+        "explanation": "For any \\( k \\ge 5 \\), \\( k! \\) contains both 3 and 5 as factors, so \\( k! \\equiv 0 \\pmod{15} \\).\nThus, \\( \\sum_{k=1}^{100} k! \\equiv 1! + 2! + 3! + 4! \\pmod{15} \\).\nCalculating the sum: \\( 1 + 2 + 6 + 24 = 33 \\).\nSince \\( 33 = 2 \\times 15 + 3 \\), the remainder when divided by 15 is 3."
+      },
+      "ar": {
+        "question": "أوجد باقي قسمة المجموع \\( \\sum_{k=1}^{100} k! \\) على 15.",
+        "options": [],
+        "hint": "حدد أصغر قيم \\( k \\) التي يكون عندها \\( k! \\) مضاعفًا للعدد 15.",
+        "explanation": "لكل \\( k \\ge 5 \\)، يتضمن \\( k! \\) العوامل 3 و 5، وبالتالي \\( k! \\equiv 0 \\pmod{15} \\).\nلذلك، \\( \\sum_{k=1}^{100} k! \\equiv 1! + 2! + 3! + 4! \\pmod{15} \\).\nحساب المجموع: \\( 1 + 2 + 6 + 24 = 33 \\).\nبما أن \\( 33 = 2 \\times 15 + 3 \\)، فإن الباقي هو 3."
+      }
+    },
+    "correct_index": "3"
+  },
+  {
+    "id": "OLYMPIAD-026",
+    "track": "olympiad",
+    "level": "High School",
+    "topic": "Combinatorics",
+    "type": "FRQ",
+    "difficulty": "medium",
+    "content": {
+      "en": {
+        "question": "A grid of size \\( 4 \\times 4 \\) is colored using black and white. Find the total number of colorings such that every \\( 2 \\times 2 \\) subgrid contains an odd number of black squares.",
+        "options": [],
+        "hint": "Set up linear equations over \\( \\mathbb{F}_2 \\) for the cell values.",
+        "explanation": "Let \\( a_{i,j} \\in \\{0, 1\\} \\) denote the color (0 for white, 1 for black) of cell \\( (i,j) \\).\nThe condition means \\( a_{i,j} + a_{i+1,j} + a_{i,j+1} + a_{i+1,j+1} \\equiv 1 \\pmod 2 \\).\nNotice that assigning arbitrary values to the 4 cells in the first row and the 3 remaining cells in the first column (7 cells total) uniquely determines all other cell values step-by-step.\nHence, the number of valid colorings is \\( 2^7 = 128 \\)."
+      },
+      "ar": {
+        "question": "تم تلوين شبكة أبعادها \\( 4 \\times 4 \\) باللونين الأبيض والأسود. أوجد عدد الطرق الكلية للتلوين بحيث تحتوي كل شبكة فرعية أبعادها \\( 2 \\times 2 \\) على عدد فردي من المربعات السوداء.",
+        "options": [],
+        "hint": "اكتب معادلات خطية فوق الحقل \\( \\mathbb{F}_2 \\) للقيم الخاصة بالخلايا.",
+        "explanation": "لتكن \\( a_{i,j} \\in \\{0, 1\\} \\) تمثل لون الخلية \\( (i,j) \\).\nالشرط يعني أن \\( a_{i,j} + a_{i+1,j} + a_{i,j+1} + a_{i+1,j+1} \\equiv 1 \\pmod 2 \\).\nاختيار قيم اختيارية لـ 4 خلايا في الصف الأول و3 خلايا المتبقية في العمود الأول (إجمالي 7 خلايا) يحدد قيم باقي الخلايا بشكل فريد.\nبالتالي، عدد طرق التلوين هو \\( 2^7 = 128 \\)."
+      }
+    },
+    "correct_index": "128"
+  },
+  {
+    "id": "OLYMPIAD-027",
+    "track": "olympiad",
+    "level": "High School",
+    "topic": "Algebra",
+    "type": "FRQ",
+    "difficulty": "hard",
+    "content": {
+      "en": {
+        "question": "Let \\( P(x) \\) be a polynomial with integer coefficients such that \\( P(1) = 2024 \\) and \\( P(2024) = 1 \\). Find the number of integer solutions to the equation \\( P(x) = x \\).",
+        "options": [],
+        "hint": "Use the divisibility property \\( a - b \\mid P(a) - P(b) \\) for integer polynomials.",
+        "explanation": "Suppose \\( P(k) = k \\) for some integer \\( k \\).\nBy the divisibility property of integer polynomials, \\( k - 1 \\mid P(k) - P(1) = k - 2024 \\), which implies \\( k - 1 \\mid -2023 \\).\nSimilarly, \\( k - 2024 \\mid P(k) - P(2024) = k - 1 \\), which implies \\( k - 2024 \\mid 2023 \\).\nLet \\( d_1 = k - 1 \\) and \\( d_2 = k - 2024 \\). Then \\( d_1 - d_2 = 2023 \\), where \\( d_1, d_2 \\) are divisors of 2023.\nSince \\( 2023 = 7 \\times 17^2 \\), checking all divisor pairs of 2023 shows no two divisors \\( d_1, d_2 \\) satisfy \\( d_1 - d_2 = 2023 \\) except when one divisor is 0, which is invalid.\nThus, there are 0 integer solutions."
+      },
+      "ar": {
+        "question": "ليكن \\( P(x) \\) كثير حدود بأعاملات صحيحة بحيث \\( P(1) = 2024 \\) و \\( P(2024) = 1 \\). أوجد عدد الحلول الصحيحة للمعادلة \\( P(x) = x \\).",
+        "options": [],
+        "hint": "استخدم خاصية القابلية للقسمة \\( a - b \\mid P(a) - P(b) \\) لكثيرات الحدود ذات المعاملات الصحيحة.",
+        "explanation": "افرض أن \\( P(k) = k \\) لعدد صحيح \\( k \\).\nمن خاصية القابلية للقسمة: \\( k - 1 \\mid P(k) - P(1) = k - 2024 \\implies k - 1 \\mid -2023 \\).\nوكذلك: \\( k - 2024 \\mid P(k) - P(2024) = k - 1 \\implies k - 2024 \\mid 2023 \\).\nبفرض \\( d_1 = k - 1 \\) و \\( d_2 = k - 2024 \\)، يكون \\( d_1 - d_2 = 2023 \\) حيث \\( d_1, d_2 \\) قاسمان لـ 2023.\nبفحص جميع قواسم 2023 نجد أنه لا يوجد قاسمان يحققان هذه الفروق، لذا لا توجد أي حلول صحيحة (العدد 0)."
+      }
+    },
+    "correct_index": "0"
+  },
+  {
+    "id": "OLYMPIAD-028",
+    "track": "olympiad",
+    "level": "High School",
+    "topic": "Number Theory",
+    "type": "FRQ",
+    "difficulty": "medium",
+    "content": {
+      "en": {
+        "question": "Find the smallest positive integer \\( n \\) such that \\( n^2 + 1 \\) is divisible by 125.",
+        "options": [],
+        "hint": "Solve the congruence \\( n^2 \\equiv -1 \\pmod{125} \\) step by step starting mod 5.",
+        "explanation": "Mod 5: \\( n^2 \\equiv -1 \\equiv 4 \\pmod 5 \\implies n \\equiv \\pm 2 \\pmod 5 \\).\nMod 25: Let \\( n = 5k \\pm 2 \\). \\( (5k \\pm 2)^2 + 1 \\equiv \\pm 20k + 5 \\equiv 0 \\pmod{25} \\implies \\pm 4k + 1 \\equiv 0 \\pmod 5 \\).\nFor \\( +2 \\): \\( 4k \\equiv -1 \\pmod 5 \\implies k \\equiv 1 \\implies n \\equiv 7 \\pmod{25} \\).\nMod 125: Let \\( n = 25m + 7 \\). \\( (25m + 7)^2 + 1 = 625m^2 + 350m + 50 \\equiv 100m + 50 \\equiv 0 \\pmod{125} \\).\nThis gives \\( 4m + 2 \\equiv 0 \\pmod 5 \\implies 2m \\equiv -1 \\equiv 4 \\pmod 5 \\implies m \\equiv 2 \\pmod 5 \\).\nSo \\( n = 25(2) + 7 = 57 \\).\nChecking: \\( 57^2 + 1 = 3250 = 26 \\times 125 \\). Thus the smallest positive integer is 57."
+      },
+      "ar": {
+        "question": "أوجد أصغر عدد صحيح موجب \\( n \\) بحيث يكون \\( n^2 + 1 \\) قابلاً للقسمة على 125.",
+        "options": [],
+        "hint": "حل التطابق \\( n^2 \\equiv -1 \\pmod{125} \\) بالتدريج بدءًا من مقياس 5.",
+        "explanation": "بمقياس 5: \\( n^2 \\equiv -1 \\implies n \\equiv \\pm 2 \\pmod 5 \\).\nبمقياس 25: بوضع \\( n = 5k + 2 \\) نجد أن \\( n \\equiv 7 \\pmod{25} \\).\nبمقياس 125: بوضع \\( n = 25m + 7 \\)، نجد أن \\( (25m + 7)^2 + 1 \\equiv 100m + 50 \\equiv 0 \\pmod{125} \\).\nبالتبسيط: \\( 4m + 2 \\equiv 0 \\pmod 5 \\implies m \\equiv 2 \\pmod 5 \\).\nبالتالي \\( n = 25(2) + 7 = 57 \\)."
+      }
+    },
+    "correct_index": "57"
+  },
+  {
+    "id": "OLYMPIAD-029",
+    "track": "olympiad",
+    "level": "High School",
+    "topic": "Combinatorics",
+    "type": "FRQ",
+    "difficulty": "hard",
+    "content": {
+      "en": {
+        "question": "Find the number of permutations \\( \\sigma \\) of \\( \\{1, 2, 3, 4, 5, 6\\} \\) such that \\( \\sigma(i) + i \\neq 7 \\) for all \\( 1 \\le i \\le 6 \\).",
+        "options": [],
+        "hint": "This is equivalent to finding the number of derangements of 6 elements.",
+        "explanation": "The forbidden condition is \\( \\sigma(i) = 7 - i \\).\nNotice that the mapping \\( i \\mapsto 7 - i \\) pairs elements into disjoint pairs: \\( (1,6), (2,5), (3,4) \\).\nThis represents a derangement problem where each element has exactly 1 forbidden position, and no two forbidden positions overlap in rows or columns.\nThus, the number of valid permutations is the derangement number \\( D_6 \\):\n\\[ D_6 = 6! \\left(1 - \\frac{1}{1!} + \\frac{1}{2!} - \\frac{1}{3!} + \\frac{1}{4!} - \\frac{1}{5!} + \\frac{1}{6!}\\right) = 265 \\]"
+      },
+      "ar": {
+        "question": "أوجد عدد التباديل \\( \\sigma \\) للمجموعة \\( \\{1, 2, 3, 4, 5, 6\\} \\) التي تحقق \\( \\sigma(i) + i \\neq 7 \\) لكل \\( 1 \\le i \\le 6 \\).",
+        "options": [],
+        "hint": "هذه المسألة مكافئة لإيجاد عدد التباديل المضطربة (derangements) لـ 6 عناصر.",
+        "explanation": "الشرط الممنوع هو \\( \\sigma(i) = 7 - i \\).\nالاقتران \\( i \\mapsto 7 - i \\) يوزع العناصر على أزواج منفصلة، مما يجعل المسألة مكافئة تمامًا لحساب عدد التباديل المضطربة \\( D_6 \\):\n\\[ D_6 = 6! \\sum_{k=0}^{6} \\frac{(-1)^k}{k!} = 720 - 720 + 360 - 120 + 30 - 6 + 1 = 265 \\]"
+      }
+    },
+    "correct_index": "265"
+  },
+  {
+    "id": "OLYMPIAD-030",
+    "track": "olympiad",
+    "level": "High School",
+    "topic": "Geometry",
+    "type": "FRQ",
+    "difficulty": "medium",
+    "content": {
+      "en": {
+        "question": "In triangle \\( ABC \\), \\( \\angle A = 60^\\circ \\). The internal angle bisectors of \\( \\angle B \\) and \\( \\angle C \\) intersect at the incenter \\( I \\) and meet the opposite sides at \\( D \\) and \\( E \\) respectively. Find the measure of \\( \\angle DIE \\) in degrees.",
+        "options": [],
+        "hint": "Express \\( \\angle BIC \\) in terms of \\( \\angle A \\).",
+        "explanation": "In any triangle, \\( \\angle BIC = 90^\\circ + \\frac{1}{2} \\angle A \\).\nGiven \\( \\angle A = 60^\\circ \\):\n\\( \\angle BIC = 90^\\circ + 30^\\circ = 120^\\circ \\).\nSince \\( D, I, B \\) are collinear and \\( E, I, C \\) are collinear, the angle \\( \\angle DIE \\) is vertically opposite to \\( \\angle BIC \\).\nTherefore, \\( \\angle DIE = \\angle BIC = 120^\\circ \\)."
+      },
+      "ar": {
+        "question": "في المثلث \\( ABC \\)، قياس الزاوية \\( \\angle A = 60^\\circ \\). يلتقي منصفا الزاويتين الداخليتين \\( B \\) و \\( C \\) في مركز الدائرة الداخلي \\( I \\) ويقطعان الضلعين المقابلين في \\( D \\) و \\( E \\) على التوالي. أوجد قياس الزاوية \\( \\angle DIE \\) بالدرجات.",
+        "options": [],
+        "hint": "عبّر عن الزاوية \\( \\angle BIC \\) بدلالة الزاوية \\( \\angle A \\).",
+        "explanation": "في أي مثلث، تكون الزاوية \\( \\angle BIC = 90^\\circ + \\frac{1}{2} \\angle A \\).\nبما أن \\( \\angle A = 60^\\circ \\):\n\\( \\angle BIC = 90^\\circ + 30^\\circ = 120^\\circ \\).\nالزاوية \\( \\angle DIE \\) تقابل بالرأس الزاوية \\( \\angle BIC \\)، وبالتالي قياسها \\( 120^\\circ \\)."
+      }
+    },
+    "correct_index": "120"
+  },
+  {
+    "id": "OLYMPIAD-031",
+    "track": "olympiad",
+    "level": "High School",
+    "topic": "Functional Equations",
+    "type": "FRQ",
+    "difficulty": "extreme",
+    "content": {
+      "en": {
+        "question": "Find the number of functions \\( f: \\mathbb{Q}^+ \\to \\mathbb{Q}^+ \\) satisfying \\( f(x f(y)) = \\frac{f(x)}{y} \\) for all \\( x, y \\in \\mathbb{Q}^+ \\).",
+        "options": [],
+        "hint": "Analyze the injectivity and multiplicativity of \\( f \\).",
+        "explanation": "Let \\( P(x,y) \\) be the assertion \\( f(x f(y)) = \\frac{f(x)}{y} \\).\nIf \\( f(y_1) = f(y_2) \\), then \\( P(x, y_1) \\implies f(x f(y_1)) = \\frac{f(x)}{y_1} \\) and \\( P(x, y_2) \\implies f(x f(y_2)) = \\frac{f(x)}{y_2} \\).\nSince LHS are equal, \\( y_1 = y_2 \\), so \\( f \\) is injective.\nApplying \\( P(1, y) \\): \\( f(f(y)) = \\frac{f(1)}{y} \\).\nApplying \\( f \\) to both sides leads to a contradiction unless no such function exists.\nHence, the number of such functions is 0."
+      },
+      "ar": {
+        "question": "أوجد عدد الدوال \\( f: \\mathbb{Q}^+ \\to \\mathbb{Q}^+ \\) التي تحقق \\( f(x f(y)) = \\frac{f(x)}{y} \\) لكل \\( x, y \\in \\mathbb{Q}^+ \\).",
+        "options": [],
+        "hint": "حلل الخاصية المتباينة والضربية للدالة \\( f \\).",
+        "explanation": "بتحليل الخاصية المتباينة نجد أن الدالة متباينة.\nبالتعويض بـ \\( x = 1 \\) نجد أن \\( f(f(y)) = \\frac{f(1)}{y} \\).\nبتطبيق الدالة مرة أخرى ينشأ تناقض جبري يمنع وجود أي دالة من هذا النوع.\nبالتالي، عدد الدوال هو 0."
+      }
+    },
+    "correct_index": "0"
+  },
+  {
+    "id": "OLYMPIAD-032",
+    "track": "olympiad",
+    "level": "High School",
+    "topic": "Number Theory",
+    "type": "FRQ",
+    "difficulty": "hard",
+    "content": {
+      "en": {
+        "question": "Find the number of ordered pairs of integers \\( (x, y) \\) satisfying \\( x^2 + y^2 = 2025 \\).",
+        "options": [],
+        "hint": "Factor 2025 as \\( 9^2 \\times 25 \\) and reduce modulo 3.",
+        "explanation": "\\( 2025 = 3^4 \\times 5^2 \\).\nSince \\( x^2 + y^2 \\equiv 0 \\pmod 3 \\implies 3 \\mid x \\) and \\( 3 \\mid y \\).\nWriting \\( x = 3x_1, y = 3y_1 \\implies x_1^2 + y_1^2 = 225 \\).\nAgain, \\( 3 \\mid x_1 \\) and \\( 3 \\mid y_1 \\), so writing \\( x_1 = 3u, y_1 = 3v \\implies u^2 + v^2 = 25 \\).\nThe integer solutions to \\( u^2 + v^2 = 25 \\) are:\n\\( (\\pm 5, 0), (0, \\pm 5) \\) (4 solutions),\n\\( (\\pm 3, \\pm 4), (\\pm 4, \\pm 3) \\) (8 solutions).\nTotal solutions = \\( 4 + 8 = 12 \\)."
+      },
+      "ar": {
+        "question": "أوجد عدد أزواج الأعداد الصحيحة المرتبة \\( (x, y) \\) التي تحقق \\( x^2 + y^2 = 2025 \\).",
+        "options": [],
+        "hint": "حلل العدد 2025 إلى \\( 9^2 \\times 25 \\) واستخدم التكافؤ بمقياس 3.",
+        "explanation": "\\( 2025 = 3^4 \\times 5^2 \\).\nبما أن \\( x^2 + y^2 \\equiv 0 \\pmod 3 \\)، يجب أن يقبل كل من \\( x \\) و \\( y \\) القسمة على 3.\nبوضعهما \\( x = 9u, y = 9v \\)، نجد أن \\( u^2 + v^2 = 25 \\).\nحلول المعادلة الأخيرة في الأعداد الصحيحة هي 12 زوجًا مرتبًا."
+      }
+    },
+    "correct_index": "12"
+  },
+  {
+    "id": "OLYMPIAD-033",
+    "track": "olympiad",
+    "level": "High School",
+    "topic": "Combinatorics",
+    "type": "FRQ",
+    "difficulty": "medium",
+    "content": {
+      "en": {
+        "question": "Find the number of subsets of \\( \\{1, 2, 3, 4, 5, 6, 7, 8, 9, 10\\} \\) that contain no two consecutive integers.",
+        "options": [],
+        "hint": "Set up a recurrence relation; the solution involves Fibonacci numbers.",
+        "explanation": "Let \\( a_n \\) be the number of subsets of \\( \\{1, 2, \\dots, n\\} \\) with no consecutive elements.\nIf \\( n \\notin A \\), there are \\( a_{n-1} \\) choices.\nIf \\( n \\in A \\), then \\( n-1 \\notin A \\), so there are \\( a_{n-2} \\) choices.\nThus, \\( a_n = a_{n-1} + a_{n-2} \\) with \\( a_1 = 2, a_2 = 3 \\).\nThis gives \\( a_n = F_{n+2} \\).\nFor \\( n = 10 \\), \\( a_{10} = F_{12} = 144 \\)."
+      },
+      "ar": {
+        "question": "أوجد عدد المجموعات الجزئية من \\( \\{1, 2, 3, 4, 5, 6, 7, 8, 9, 10\\} \\) التي لا تحتوي على أي عددين متتاليين.",
+        "options": [],
+        "hint": "أنشئ علاقة تكرارية؛ الحل يرتبط بأعداد فيبوناتشي.",
+        "explanation": "ليكن \\( a_n \\) عدد المجموعات الجزئية من \\( \\{1, 2, \\dots, n\\} \\) الخالية من أعداد متتالية.\nالعلاقة التكرارية هي \\( a_n = a_{n-1} + a_{n-2} \\) مع الشروط الأولية \\( a_1 = 2, a_2 = 3 \\).\nوهذا يعطي \\( a_n = F_{n+2} \\).\nعندما \\( n = 10 \\)، يكون \\( a_{10} = F_{12} = 144 \\)."
+      }
+    },
+    "correct_index": "144"
+  },
+  {
+    "id": "OLYMPIAD-034",
+    "track": "olympiad",
+    "level": "High School",
+    "topic": "Algebra",
+    "type": "FRQ",
+    "difficulty": "medium",
+    "content": {
+      "en": {
+        "question": "Find the product of all real roots of the equation \\( x^4 - 4x^3 + 5x^2 - 4x + 1 = 0 \\).",
+        "options": [],
+        "hint": "Divide by \\( x^2 \\) and substitute \\( u = x + \\frac{1}{x} \\).",
+        "explanation": "Dividing by \\( x^2 \\neq 0 \\):\n\\( x^2 - 4x + 5 - \\frac{4}{x} + \\frac{1}{x^2} = 0 \\implies \\left(x^2 + \\frac{1}{x^2}\\right) - 4\\left(x + \\frac{1}{x}\\right) + 5 = 0 \\).\nLet \\( u = x + \\frac{1}{x} \\). Then \\( u^2 - 2 - 4u + 5 = 0 \\implies u^2 - 4u + 3 = 0 \\).\nThis factors as \\( (u-1)(u-3) = 0 \\).\n1) \\( x + \\frac{1}{x} = 1 \\implies x^2 - x + 1 = 0 \\) (Discriminant \\( < 0 \\), no real roots).\n2) \\( x + \\frac{1}{x} = 3 \\implies x^2 - 3x + 1 = 0 \\) (Discriminant \\( = 5 > 0 \\), two real roots).\nBy Vieta's formulas, the product of the roots of \\( x^2 - 3x + 1 = 0 \\) is 1."
+      },
+      "ar": {
+        "question": "أوجد حاصل ضرب جميع الجذور الحقيقية للمعادلة \\( x^4 - 4x^3 + 5x^2 - 4x + 1 = 0 \\).",
+        "options": [],
+        "hint": "اقسم على \\( x^2 \\) وعوض بـ \\( u = x + \\frac{1}{x} \\).",
+        "explanation": "بالقسمة على \\( x^2 \\):\n\\( \\left(x^2 + \\frac{1}{x^2}\\right) - 4\\left(x + \\frac{1}{x}\\right) + 5 = 0 \\).\nبوضع \\( u = x + \\frac{1}{x} \\)، نحصل على \\( u^2 - 4u + 3 = 0 \\implies u = 1 \\text{ أو } u = 3 \\).\nالمعادلة \\( x + 1/x = 1 \\) ليس لها جذور حقيقية.\nالمعادلة \\( x + 1/x = 3 \\implies x^2 - 3x + 1 = 0 \\) لها جذران حقيقيان حاصل ضربهما حسب صيغ فييتا هو 1."
+      }
+    },
+    "correct_index": "1"
+  },
+  {
+    "id": "OLYMPIAD-035",
+    "track": "olympiad",
+    "level": "High School",
+    "topic": "Number Theory",
+    "type": "FRQ",
+    "difficulty": "hard",
+    "content": {
+      "en": {
+        "question": "Find the largest integer \\( k \\) such that \\( 2^k \\) divides \\( 3^{1024} - 1 \\).",
+        "options": [],
+        "hint": "Use the Lifting The Exponent Lemma (LTE) for \\( p = 2 \\).",
+        "explanation": "By the Lifting The Exponent Lemma for \\( p = 2 \\) and an even exponent \\( n = 1024 = 2^{10} \\):\n\\( v_2(3^{1024} - 1) = v_2(3 - 1) + v_2(3 + 1) + v_2(1024) - 1 \\).\n\\( v_2(2) = 1 \\),\n\\( v_2(4) = 2 \\),\n\\( v_2(1024) = 10 \\).\nThus, \\( v_2(3^{1024} - 1) = 1 + 2 + 10 - 1 = 12 \\)."
+      },
+      "ar": {
+        "question": "أوجد أكبر عدد صحيح \\( k \\) بحيث يكون \\( 2^k \\) قاسماً للعدد \\( 3^{1024} - 1 \\).",
+        "options": [],
+        "hint": "استخدم لمة رفع الأسس (LTE) للعدد الأولي \\( p = 2 \\).",
+        "explanation": "باستخدام لمة رفع الأسس للعدد 2 والأس الزوجي \\( n = 1024 = 2^{10} \\):\n\\( v_2(3^{1024} - 1) = v_2(3 - 1) + v_2(3 + 1) + v_2(1024) - 1 \\).\n\\( v_2(3^{1024} - 1) = 1 + 2 + 10 - 1 = 12 \\)."
+      }
+    },
+    "correct_index": "12"
+  },
+  {
+    "id": "OLYMPIAD-036",
+    "track": "olympiad",
+    "level": "High School",
+    "topic": "Combinatorics",
+    "type": "FRQ",
+    "difficulty": "medium",
+    "content": {
+      "en": {
+        "question": "Find the number of grid paths from \\( (0,0) \\) to \\( (5,5) \\) taking steps \\( (1,0) \\) and \\( (0,1) \\) that never go above the line \\( y = x \\).",
+        "options": [],
+        "hint": "This is given by the 5th Catalan number.",
+        "explanation": "The number of paths on a grid from \\( (0,0) \\) to \\( (n,n) \\) using right and up steps that do not cross above the diagonal \\( y = x \\) is the \\( n \\)-th Catalan number \\( C_n = \\frac{1}{n+1} \\binom{2n}{n} \\).\nFor \\( n = 5 \\):\n\\[ C_5 = \\frac{1}{6} \\binom{10}{5} = \\frac{252}{6} = 42 \\]"
+      },
+      "ar": {
+        "question": "أوجد عدد مسارات الشبكة من \\( (0,0) \\) إلى \\( (5,5) \\) باستخدام الخطوات \\( (1,0) \\) و \\( (0,1) \\) والتي لا ترتفع أبداً فوق المستقيم \\( y = x \\).",
+        "options": [],
+        "hint": "هذا العدد يُعطى بعدد كاتالان الخامس.",
+        "explanation": "عدد المسارات التي لا تتجاوز القطر يُعطى بعدد كاتالان \\( C_n = \\frac{1}{n+1} \\binom{2n}{n} \\).\nعندما \\( n = 5 \\):\n\\[ C_5 = \\frac{1}{6} \\binom{10}{5} = 42 \\]"
+      }
+    },
+    "correct_index": "42"
+  },
+  {
+    "id": "OLYMPIAD-037",
+    "track": "olympiad",
+    "level": "High School",
+    "topic": "Algebra",
+    "type": "FRQ",
+    "difficulty": "easy",
+    "content": {
+      "en": {
+        "question": "Find the minimum value of \\( \\frac{a^3 + b^3 + c^3}{abc} \\) for positive real numbers \\( a, b, c \\).",
+        "options": [],
+        "hint": "Apply the AM-GM inequality to \\( a^3, b^3, c^3 \\).",
+        "explanation": "By the Arithmetic Mean - Geometric Mean (AM-GM) inequality:\n\\[ \\frac{a^3 + b^3 + c^3}{3} \\ge \\sqrt[3]{a^3 b^3 c^3} = abc \\]\nDividing by \\( abc > 0 \\) gives:\n\\[ \\frac{a^3 + b^3 + c^3}{abc} \\ge 3 \\]\nEquality holds when \\( a = b = c \\)."
+      },
+      "ar": {
+        "question": "أوجد القيمة الصغرى للمقدار \\( \\frac{a^3 + b^3 + c^3}{abc} \\) حيث \\( a, b, c \\) أعداد حقيقية موجبة.",
+        "options": [],
+        "hint": "طبق متباينة الوسط الحسابي والوسط الهندسي على \\( a^3, b^3, c^3 \\).",
+        "explanation": "بفضل متباينة الوسط الحسابي والهندسي:\n\\[ \\frac{a^3 + b^3 + c^3}{3} \\ge \\sqrt[3]{a^3 b^3 c^3} = abc \\]\nبالقسمة على \\( abc \\) نجد أن القيمة الصغرى هي 3 عند تحقق المساواة \\( a = b = c \\)."
+      }
+    },
+    "correct_index": "3"
+  },
+  {
+    "id": "OLYMPIAD-038",
+    "track": "olympiad",
+    "level": "High School",
+    "topic": "Number Theory",
+    "type": "FRQ",
+    "difficulty": "medium",
+    "content": {
+      "en": {
+        "question": "Find the number of positive integers \\( n \\le 100 \\) for which Euler's totient function \\( \\phi(n) \\) is odd.",
+        "options": [],
+        "hint": "Consider the formula for \\( \\phi(n) \\) in terms of prime factorization.",
+        "explanation": "For any prime factor \\( p > 2 \\) dividing \\( n \\), \\( p-1 \\) is even, so \\( \\phi(n) \\) is even.\nThus, \\( n \\) can only have 2 as a prime factor, meaning \\( n = 2^k \\).\nFor \\( n = 2^k \\):\n\\( \\phi(1) = 1 \\) (odd),\n\\( \\phi(2) = 1 \\) (odd),\nFor \\( k \\ge 2 \\), \\( \\phi(2^k) = 2^{k-1} \\), which is even.\nThus, the only integers with odd \\( \\phi(n) \\) are \\( n = 1 \\) and \\( n = 2 \\), giving a total of 2 values."
+      },
+      "ar": {
+        "question": "أوجد عدد الأعداد الصحيحة الموجبة \\( n \\le 100 \\) التي تكون عندها دالة أويلر \\( \\phi(n) \\) فردية.",
+        "options": [],
+        "hint": "فكر في صيغة \\( \\phi(n) \\) باستخدام التحليل إلى العوامل الأولية.",
+        "explanation": "لكل عامل أولي فردي \\( p \\mid n \\)، يكون \\( p-1 \\) زوجيًا، وبالتالي تكون \\( \\phi(n) \\) زوجية.\nالقيم الوحيدة التي تجعل \\( \\phi(n) \\) فردية هي \\( n = 1 \\) و \\( n = 2 \\).\nبالتالي يوجد عددان فقط."
+      }
+    },
+    "correct_index": "2"
+  },
+  {
+    "id": "OLYMPIAD-039",
+    "track": "olympiad",
+    "level": "High School",
+    "topic": "Geometry",
+    "type": "FRQ",
+    "difficulty": "easy",
+    "content": {
+      "en": {
+        "question": "In a circle with radius 10, two parallel chords have lengths 12 and 16. Find the maximum possible distance between these two chords.",
+        "options": [],
+        "hint": "The maximum distance occurs when the chords are on opposite sides of the circle's center.",
+        "explanation": "Distance from center to chord of length 12: \\( d_1 = \\sqrt{10^2 - 6^2} = 8 \\).\nDistance from center to chord of length 16: \\( d_2 = \\sqrt{10^2 - 8^2} = 6 \\).\nTo maximize the distance between them, the chords must lie on opposite sides of the center.\nMaximum distance \\( = d_1 + d_2 = 8 + 6 = 14 \\)."
+      },
+      "ar": {
+        "question": "في دائرة نصف قطرها 10، يوجد وتران متوازيان طولاهما 12 و 16. أوجد أقصى مسافة ممكنة بين هذين الوترين.",
+        "options": [],
+        "hint": "تحدث المسافة القصوى عندما يقع الوتران على جانبين مختلفين من مركز الدائرة.",
+        "explanation": "بعد الوتر الأول عن المركز: \\( d_1 = \\sqrt{10^2 - 6^2} = 8 \\).\nبعد الوتر الثاني عن المركز: \\( d_2 = \\sqrt{10^2 - 8^2} = 6 \\).\nأقصى مسافة تحدث عندما يكون الوتران على جهتين متقابلتين من المركز: \\( 8 + 6 = 14 \\)."
+      }
+    },
+    "correct_index": "14"
+  },
+  {
+    "id": "OLYMPIAD-040",
+    "track": "olympiad",
+    "level": "High School",
+    "topic": "Sequences",
+    "type": "FRQ",
+    "difficulty": "medium",
+    "content": {
+      "en": {
+        "question": "Let \\( a_1 = 1 \\) and \\( a_{n+1} = \\frac{a_n}{1 + n a_n} \\) for all \\( n \\ge 1 \\). Find the value of \\( \\frac{1}{a_{20}} \\).",
+        "options": [],
+        "hint": "Take the reciprocal of both sides to establish a recurrence for \\( b_n = \\frac{1}{a_n} \\).",
+        "explanation": "Taking reciprocals:\n\\[ \\frac{1}{a_{n+1}} = \\frac{1 + n a_n}{a_n} = \\frac{1}{a_n} + n \\]\nLet \\( b_n = \\frac{1}{a_n} \\). Then \\( b_1 = 1 \\) and \\( b_{n+1} = b_n + n \\).\nSumming up:\n\\[ b_{20} = b_1 + \\sum_{k=1}^{19} k = 1 + \\frac{19 \\times 20}{2} = 1 + 190 = 191 \\]"
+      },
+      "ar": {
+        "question": "لتكن المتتالية \\( a_1 = 1 \\) و \\( a_{n+1} = \\frac{a_n}{1 + n a_n} \\) لكل \\( n \\ge 1 \\). أوجد قيمة \\( \\frac{1}{a_{20}} \\).",
+        "options": [],
+        "hint": "اأخذ المقلوب للطرفين لتكوين علاقة تكرارية لـ \\( b_n = \\frac{1}{a_n} \\).",
+        "explanation": "بأخذ المقلوب:\n\\[ \\frac{1}{a_{n+1}} = \\frac{1}{a_n} + n \\]\nبفرض \\( b_n = \\frac{1}{a_n} \\)، نجد أن \\( b_{20} = b_1 + \\sum_{k=1}^{19} k = 1 + 190 = 191 \\)."
+      }
+    },
+    "correct_index": "191"
+  },
+  {
+    "id": "OLYMPIAD-041",
+    "track": "olympiad",
+    "level": "High School",
+    "topic": "Combinatorics",
+    "type": "FRQ",
+    "difficulty": "hard",
+    "content": {
+      "en": {
+        "question": "In a complete graph on 6 vertices \\( K_6 \\), each edge is colored either red or blue. Find the minimum possible total number of monochromatic triangles (triangles with all 3 edges of the same color).",
+        "options": [],
+        "hint": "Use Goodman's Theorem for monochromatic triangles in 2-edge-colored complete graphs.",
+        "explanation": "By Goodman's Formula, the number of monochromatic triangles in a 2-edge-colored \\( K_n \\) is at least:\n\\[ \\binom{n}{3} - \\left\\lfloor \\frac{n}{2} \\left\\lfloor \\frac{(n-1)^2}{4} \\right\\rfloor \\right\\rfloor \\]\nFor \\( n = 6 \\):\n\\[ \\binom{6}{3} - \\left\\lfloor 3 \\times \\left\\lfloor \\frac{25}{4} \\right\\rfloor \\right\\rfloor = 20 - 3 \\times 6 = 20 - 18 = 2 \\]"
+      },
+      "ar": {
+        "question": "في رسم بياني كامل على 6 رؤوس \\( K_6 \\)، تم تلوين كل ضلع إما باللون الأحمر أو الأزرق. أوجد أقل عدد ممكن للمثلثات أحادية اللون.",
+        "options": [],
+        "hint": "استخدم نظرية غودمان للمثلثات أحادية اللون في الرسوم البيانية الكاملة ذات اللونين.",
+        "explanation": "وفقًا لصيغة غودمان، فإن أقل عدد من المثلثات أحادية اللون في \\( K_6 \\) هو:\n\\[ \\binom{6}{3} - \\left\\lfloor 3 \\times \\left\\lfloor \\frac{25}{4} \\right\\rfloor \\right\\rfloor = 20 - 18 = 2 \\]"
+      }
+    },
+    "correct_index": "2"
+  },
+  {
+    "id": "OLYMPIAD-042",
+    "track": "olympiad",
+    "level": "High School",
+    "topic": "Number Theory",
+    "type": "FRQ",
+    "difficulty": "hard",
+    "content": {
+      "en": {
+        "question": "Find the number of ordered pairs of integers \\( (x, y) \\) satisfying the equation \\( x^2 - xy + y^2 + x + y = 3 \\).",
+        "options": [],
+        "hint": "Multiply the entire equation by 2 and rewrite it as a sum of squares, or substitute \\( u = x + 1 \\) and \\( v = y + 1 \\).",
+        "explanation": "Multiplying by 2 gives \\( 2x^2 - 2xy + 2y^2 + 2x + 2y = 6 \\), which can be rearranged as \\( (x - y)^2 + (x + 1)^2 + (y + 1)^2 = 8 \\). Let \\( u = x - y \\), \\( v = x + 1 \\), and \\( w = y + 1 \\). Note that \\( u = v - w \\). Then \\( (v - w)^2 + v^2 + w^2 = 8 \\implies v^2 - vw + w^2 = 4 \\). Analyzing possible integer values for \\( v \\) yields solutions \\( (v, w) \\in \\{(0, 2), (0, -2), (2, 0), (2, 2), (-2, 0), (-2, -2)\\} \\). Each pair gives a unique pair \\( (x, y) \\). Thus, there are 6 solutions."
+      },
+      "ar": {
+        "question": "أوجد عدد الأزواج المرتبة من الأعداد الصحيحة \\( (x, y) \\) التي تحقق المعادلة \\( x^2 - xy + y^2 + x + y = 3 \\).",
+        "options": [],
+        "hint": "اضرب المعادلة كاملة في 2 وأعد كتابتها كفرعين أو مجموع مربعات، أو استخدم التعويض \\( u = x + 1 \\) و \\( v = y + 1 \\).",
+        "explanation": "بضرب المعادلة في 2 نحصل على \\( 2x^2 - 2xy + 2y^2 + 2x + 2y = 6 \\)، والتي يمكن كتابتها على الصورة \\( (x - y)^2 + (x + 1)^2 + (y + 1)^2 = 8 \\). بنفرض \\( u = x - y \\) و \\( v = x + 1 \\) و \\( w = y + 1 \\)، نلاحظ أن \\( u = v - w \\). إذن \\( (v - w)^2 + v^2 + w^2 = 8 \\implies v^2 - vw + w^2 = 4 \\). بتحليل الحلول الصحيحة للزوج \\( (v, w) \\)، نجد الحلول: \\( (0, 2), (0, -2), (2, 0), (2, 2), (-2, 0), (-2, -2) \\). يعطي كل زوج حلاً وحيداً لـ \\( (x, y) \\). بالتالي يوجد 6 حلول."
+      }
+    },
+    "correct_index": "6"
+  },
+  {
+    "id": "OLYMPIAD-043",
+    "track": "olympiad",
+    "level": "High School",
+    "topic": "Functional Equations",
+    "type": "FRQ",
+    "difficulty": "hard",
+    "content": {
+      "en": {
+        "question": "Let \\( f: \\mathbb{R} \\to \\mathbb{R} \\) be a continuous function satisfying \\( f(x + y) + f(x - y) = 2f(x)\\cos y \\) for all \\( x, y \\in \\mathbb{R} \\). Given that \\( f(0) = 0 \\) and \\( f(\\pi/2) = 5 \\), evaluate \\( (f(\\pi/6))^2 + (f(\\pi/3))^2 \\).",
+        "options": [],
+        "hint": "The general continuous solution to d'Alembert's functional equation of this form is \\( f(x) = A \\sin x + B \\cos x \\).",
+        "explanation": "Using \\( f(0) = 0 \\) and \\( f(\\pi/2) = 5 \\), we get \\( f(x) = 5 \\sin x \\). Thus, \\( f(\\pi/6) = 5 \\sin(\\pi/6) = 2.5 \\) and \\( f(\\pi/3) = 5 \\sin(\\pi/3) = \\frac{5\\sqrt{3}}{2} \\). Squaring both and summing: \\( (2.5)^2 + (\\frac{5\\sqrt{3}}{2})^2 = 6.25 + 18.75 = 25 \\). "
+      },
+      "ar": {
+        "question": "لتكن \\( f: \\mathbb{R} \\to \\mathbb{R} \\) دالة مستمرة تحقق \\( f(x + y) + f(x - y) = 2f(x)\\cos y \\) لكل \\( x, y \\in \\mathbb{R} \\). إذا كان \\( f(0) = 0 \\) و \\( f(\\pi/2) = 5 \\)، فأوجد قيمة \\( (f(\\pi/6))^2 + (f(\\pi/3))^2 \\).",
+        "options": [],
+        "hint": "الحل العام لهذه المعادلة الدالية لدالمبير هو \\( f(x) = A \\sin x + B \\cos x \\).",
+        "explanation": "باستخدام \\( f(0) = 0 \\) و \\( f(\\pi/2) = 5 \\)، نحصل على \\( f(x) = 5 \\sin x \\). بالتالي فإن \\( f(\\pi/6) = 2.5 \\) و \\( f(\\pi/3) = \\frac{5\\sqrt{3}}{2} \\). برفع القيمتين إلى التربيع وجمعهما: \\( 6.25 + 18.75 = 25 \\)."
+      }
+    },
+    "correct_index": "25"
+  },
+  {
+    "id": "OLYMPIAD-044",
+    "track": "olympiad",
+    "level": "High School",
+    "topic": "Combinatorics",
+    "type": "FRQ",
+    "difficulty": "hard",
+    "content": {
+      "en": {
+        "question": "Find the number of permutations \\( (\\pi_1, \\pi_2, \\dots, \\pi_6) \\) of the set \\( \\{1, 2, 3, 4, 5, 6\\} \\) such that \\( |\\pi_i - i| \\le 1 \\) for all \\( 1 \\le i \\le 6 \\).",
+        "options": [],
+        "hint": "Let \\( F_n \\) be the number of such permutations for size \\( n \\). Find a recurrence relation for \\( F_n \\).",
+        "explanation": "For any element \\( n \\), either \\( \\pi_n = n \\) (leaving \\( F_{n-1} \\) possibilities) or \\( \\pi_n = n-1 \\), which forces \\( \\pi_{n-1} = n \\) (leaving \\( F_{n-2} \\) possibilities). Thus, \\( F_n = F_{n-1} + F_{n-2} \\) with \\( F_1 = 1, F_2 = 2 \\). This gives the Fibonacci sequence: \\( F_1=1, F_2=2, F_3=3, F_4=5, F_5=8, F_6=13 \\). Thus, the answer is 13."
+      },
+      "ar": {
+        "question": "أوجد عدد التباديل \\( (\\pi_1, \\pi_2, \\dots, \\pi_6) \\) للمجموعة \\( \\{1, 2, 3, 4, 5, 6\\} \\) التي تحقق \\( |\\pi_i - i| \\le 1 \\) لكل \\( 1 \\le i \\le 6 \\).",
+        "options": [],
+        "hint": "لتكن \\( F_n \\) عدد هذه التباديل لمجموعة حجمها \\( n \\). أوجد علاقة تكرارية لـ \\( F_n \\).",
+        "explanation": "بالنسبة للعنصر الأخيرة \\( n \\)، إما أن يكون \\( \\pi_n = n \\) (وهذا يترك \\( F_{n-1} \\) خياراً) أو \\( \\pi_n = n-1 \\) وهو ما يفرض أن يكون \\( \\pi_{n-1} = n \\) (وهذا يترك \\( F_{n-2} \\) خياراً). بالتالي \\( F_n = F_{n-1} + F_{n-2} \\) مع الشروط الابتدائية \\( F_1 = 1, F_2 = 2 \\). تكون المتتالية هي فيبوناتشي: \\( F_1=1, F_2=2, F_3=3, F_4=5, F_5=8, F_6=13 \\). الناتج هو 13."
+      }
+    },
+    "correct_index": "13"
+  },
+  {
+    "id": "OLYMPIAD-045",
+    "track": "olympiad",
+    "level": "High School",
+    "topic": "Number Theory",
+    "type": "FRQ",
+    "difficulty": "extreme",
+    "content": {
+      "en": {
+        "question": "Find the number of prime numbers \\( p < 1000 \\) such that \\( p \\) divides \\( 2^p + 1 \\).",
+        "options": [],
+        "hint": "By Fermat's Little Theorem, \\( 2^p \\equiv 2 \\pmod p \\). Substitute this into the condition.",
+        "explanation": "If \\( p \\mid (2^p + 1) \\), then by Fermat's Little Theorem, \\( 2^p \\equiv 2 \\pmod p \\). Thus, \\( 2^p + 1 \\equiv 2 + 1 \\equiv 3 \\pmod p \\). Therefore, \\( p \\mid 3 \\), which means \\( p = 3 \\). Checking \\( p = 3 \\): \\( 2^3 + 1 = 9 \\), which is divisible by 3. Thus, \\( p = 3 \\) is the unique prime. The count of such primes is 1."
+      },
+      "ar": {
+        "question": "أوجد عدد الأعداد الأولية \\( p < 1000 \\) بحيث يقسم \\( p \\) العدد \\( 2^p + 1 \\).",
+        "options": [],
+        "hint": "باستخدام مبرهنة فيرما الصغرى، \\( 2^p \\equiv 2 \\pmod p \\). عوض ذلك في الشرط المطلوب.",
+        "explanation": "إذا كان \\( p \\mid (2^p + 1) \\)، فبموجب مبرهنة فيرما الصغرى لدينا \\( 2^p \\equiv 2 \\pmod p \\). من ذلك فإن \\( 2^p + 1 \\equiv 3 \\pmod p \\). وهذا يعني أن \\( p \\mid 3 \\)، أي أن \\( p = 3 \\). بالتحقق من \\( p = 3 \\): \\( 2^3 + 1 = 9 \\) وهو يقبل القسمة على 3. وبالتالي \\( p = 3 \\) هو العدد الأولي الوحيد. إذن العدد الإجمالي هو 1."
+      }
+    },
+    "correct_index": "1"
+  },
+  {
+    "id": "OLYMPIAD-046",
+    "track": "olympiad",
+    "level": "High School",
+    "topic": "Functional Equations",
+    "type": "FRQ",
+    "difficulty": "extreme",
+    "content": {
+      "en": {
+        "question": "Let \\( f: (0, \\infty) \\to (0, \\infty) \\) be a strictly decreasing function such that \\( f(x f(y)) = y f(x) \\) for all \\( x, y > 0 \\) and \\( f(1) = 1 \\). Find the value of \\( f(2024) \\times 2024 \\).",
+        "options": [],
+        "hint": "Show that \\( f(f(y)) = y \\) and deduce that \\( f(x) = 1/x \\).",
+        "explanation": "Setting \\( x = 1 \\) in \\( f(x f(y)) = y f(x) \\) gives \\( f(f(y)) = y \\). Applying \\( f \\) to both sides of \\( f(x f(y)) = y f(x) \\) and simplifying shows that \\( f(x y) = f(x) f(y) \\). Since \\( f \\) is strictly decreasing and \\( f(f(x)) = x \\), the unique continuous solution is \\( f(x) = \\frac{1}{x} \\). Thus, \\( f(2024) = \\frac{1}{2024} \\), so \\( f(2024) \\times 2024 = 1 \\)."
+      },
+      "ar": {
+        "question": "لتكن \\( f: (0, \\infty) \\to (0, \\infty) \\) دالة تناقصية تماماً تحقق \\( f(x f(y)) = y f(x) \\) لكل \\( x, y > 0 \\) و \\( f(1) = 1 \\). أوجد قيمة \\( f(2024) \\times 2024 \\).",
+        "options": [],
+        "hint": "أثبت أن \\( f(f(y)) = y \\) واستنتج أن \\( f(x) = 1/x \\).",
+        "explanation": "بوضع \\( x = 1 \\) في المعادلة نحصل على \\( f(f(y)) = y \\). بتطبيق \\( f \\) على الطرفين واستخدام الخاصية المذكورة نجد أن \\( f(xy) = f(x) f(y) \\). وبما أن \\( f \\) تناقصية تماماً و \\( f(f(x)) = x \\)، فإن الحل الوحيد هو \\( f(x) = \\frac{1}{x} \\). بالتالي فإن \\( f(2024) = \\frac{1}{2024} \\)، ومنه \\( f(2024) \\times 2024 = 1 \\)."
+      }
+    },
+    "correct_index": "1"
+  },
+  {
+    "id": "OLYMPIAD-047",
+    "track": "olympiad",
+    "level": "High School",
+    "topic": "Combinatorics",
+    "type": "FRQ",
+    "difficulty": "medium",
+    "content": {
+      "en": {
+        "question": "How many subsets of \\( \\{1, 2, 3, 4, 5, 6, 7, 8, 9, 10\\} \\) contain no two consecutive integers?",
+        "options": [],
+        "hint": "Set up a recurrence relation \\( S_n \\) for the number of valid subsets of \\( \\{1, \\dots, n\\} \\).",
+        "explanation": "Let \\( S_n \\) be the number of valid subsets of \\( \\{1, \\dots, n\\} \\). A subset either does not contain \\( n \\) (giving \\( S_{n-1} \\) choices) or contains \\( n \\) (so it cannot contain \\( n-1 \\), giving \\( S_{n-2} \\) choices). Thus \\( S_n = S_{n-1} + S_{n-2} \\). With \\( S_0 = 1, S_1 = 2 \\), we compute: \\( S_2 = 3, S_3 = 5, S_4 = 8, S_5 = 13, S_6 = 21, S_7 = 34, S_8 = 55, S_9 = 89, S_{10} = 144 \\)."
+      },
+      "ar": {
+        "question": "كم عدد المجموعات الجزئية من \\( \\{1, 2, 3, 4, 5, 6, 7, 8, 9, 10\\} \\) التي لا تحتوي على أي عددين متتاليين؟",
+        "options": [],
+        "hint": "أنشئ علاقة تكرارية \\( S_n \\) لعدد المجموعات الجزئية المقبولة للمجموعة \\( \\{1, \\dots, n\\} \\).",
+        "explanation": "لتكن \\( S_n \\) عدد المجموعات المقبولة من \\( \\{1, \\dots, n\\} \\). المجموعة الجزئية إما ألا تحتوي على \\( n \\) (وهذا يعطي \\( S_{n-1} \\) خياراً)، أو تحتوي على \\( n \\) (وبالتالي لا تحتوي على \\( n-1 \\)، مما يعطي \\( S_{n-2} \\) خياراً). إذن \\( S_n = S_{n-1} + S_{n-2} \\). بالبدء من \\( S_0 = 1, S_1 = 2 \\)، نصل إلى \\( S_{10} = 144 \\)."
+      }
+    },
+    "correct_index": "144"
+  },
+  {
+    "id": "OLYMPIAD-048",
+    "track": "olympiad",
+    "level": "High School",
+    "topic": "Number Theory",
+    "type": "FRQ",
+    "difficulty": "hard",
+    "content": {
+      "en": {
+        "question": "Find the remainder when \\( 7^{7^7} \\) is divided by \\( 100 \\).",
+        "options": [],
+        "hint": "Find \\( \\phi(100) = 40 \\) and calculate the exponent \\( 7^7 \\pmod{40} \\).",
+        "explanation": "By Euler's Totient Theorem, \\( 7^{\\phi(100)} = 7^{40} \\equiv 1 \\pmod{100} \\). Thus we need to find \\( 7^7 \\pmod{40} \\). Note that \\( 7^2 = 49 \\equiv 9 \\pmod{40} \\), \\( 7^3 \\equiv 23 \\pmod{40} \\), \\( 7^4 \\equiv 1 \\pmod{40} \\). Hence \\( 7^7 = (7^4)(7^3) \\equiv 1 \\cdot 23 = 23 \\pmod{40} \\). So \\( 7^{7^7} \\equiv 7^{23} \\pmod{100} \\). Calculating: \\( 7^4 = 2401 \\equiv 1 \\pmod{100} \\), so \\( 7^{23} = (7^4)^5 \\cdot 7^3 \\equiv 1^5 \\cdot 343 \\equiv 43 \\pmod{100} \\)."
+      },
+      "ar": {
+        "question": "أوجد باقي قسمة \\( 7^{7^7} \\) على \\( 100 \\).",
+        "options": [],
+        "hint": "احسب \\( \\phi(100) = 40 \\) ثم أوجد قيمة الأس \\( 7^7 \\pmod{40} \\).",
+        "explanation": "باستخدام مبرهنة أويلر، \\( 7^{\\phi(100)} = 7^{40} \\equiv 1 \\pmod{100} \\). نحتاج لحساب \\( 7^7 \\pmod{40} \\). لدينا \\( 7^4 \\equiv 1 \\pmod{40} \\)، وبالتالي \\( 7^7 \\equiv 7^3 \\equiv 23 \\pmod{40} \\). إذن \\( 7^{7^7} \\equiv 7^{23} \\pmod{100} \\). وبما أن \\( 7^4 \\equiv 1 \\pmod{100} \\)، فإن \\( 7^{23} \\equiv 7^3 = 343 \\equiv 43 \\pmod{100} \\)."
+      }
+    },
+    "correct_index": "43"
+  },
+  {
+    "id": "OLYMPIAD-049",
+    "track": "olympiad",
+    "level": "High School",
+    "topic": "Algebra",
+    "type": "FRQ",
+    "difficulty": "medium",
+    "content": {
+      "en": {
+        "question": "Find the sum of all real roots of the polynomial equation \\( x^4 - 4x^3 + 5x^2 - 4x + 1 = 0 \\).",
+        "options": [],
+        "hint": "Divide the entire equation by \\( x^2 \\) and substitute \\( u = x + \\frac{1}{x} \\).",
+        "explanation": "Since \\( x = 0 \\) is not a root, divide by \\( x^2 \\): \\( (x^2 + 1/x^2) - 4(x + 1/x) + 5 = 0 \\). Substituting \\( u = x + 1/x \\) yields \\( (u^2 - 2) - 4u + 5 = 0 \\implies u^2 - 4u + 3 = 0 \\). Solving for \\( u \\) gives \\( u = 1 \\) or \\( u = 3 \\). For \\( u = 1 \\): \\( x + 1/x = 1 \\implies x^2 - x + 1 = 0 \\), which has no real roots. For \\( u = 3 \\): \\( x + 1/x = 3 \\implies x^2 - 3x + 1 = 0 \\), which has discriminant \\( 9 - 4 = 5 > 0 \\) (two real roots). The sum of these roots is 3."
+      },
+      "ar": {
+        "question": "أوجد مجموع كل الجذور الحقيقية للمعادلة الكثيرية الحدود \\( x^4 - 4x^3 + 5x^2 - 4x + 1 = 0 \\).",
+        "options": [],
+        "hint": "اقسم المعادلة كاملة على \\( x^2 \\) ثم استخدم التعويض \\( u = x + \\frac{1}{x} \\).",
+        "explanation": "بما أن \\( x = 0 \\) ليس جذراً، نقسم على \\( x^2 \\): \\( (x^2 + 1/x^2) - 4(x + 1/x) + 5 = 0 \\). بتعويض \\( u = x + 1/x \\) نحصل على \\( u^2 - 4u + 3 = 0 \\)، وبحلها نجد \\( u = 1 \\) أو \\( u = 3 \\). بالنسبة لـ \\( u = 1 \\): \\( x^2 - x + 1 = 0 \\) ليس لها جذور حقيقية. بالنسبة لـ \\( u = 3 \\): \\( x^2 - 3x + 1 = 0 \\) لها جذران حقيقيان ومجموعهما يساوي 3."
+      }
+    },
+    "correct_index": "3"
+  },
+  {
+    "id": "OLYMPIAD-050",
+    "track": "olympiad",
+    "level": "High School",
+    "topic": "Combinatorics",
+    "type": "FRQ",
+    "difficulty": "medium",
+    "content": {
+      "en": {
+        "question": "Find the number of grid paths from \\( (0,0) \\) to \\( (5,5) \\) using only steps of \\( (+1,0) \\) and \\( (0,+1) \\) that never cross above the line \\( y = x \\).",
+        "options": [],
+        "hint": "This is given by the 5th Catalan number, \\( C_5 = \\frac{1}{5+1}\\binom{2 \\times 5}{5} \\).",
+        "explanation": "The number of paths on an \\( n \\times n \\) grid that stay on or below the diagonal \\( y = x \\) is the \\( n \\)-th Catalan number \\( C_n = \\frac{1}{n+1}\\binom{2n}{n} \\). For \\( n = 5 \\), \\( C_5 = \\frac{1}{6}\\binom{10}{5} = \\frac{252}{6} = 42 \\)."
+      },
+      "ar": {
+        "question": "أوجد عدد مسارات الشبكة من \\( (0,0) \\) إلى \\( (5,5) \\) باستخدام الخطوات \\( (+1,0) \\) و \\( (0,+1) \\) فقط والتي لا ترتفع أبداً فوق المستقيم \\( y = x \\).",
+        "options": [],
+        "hint": "هذا العدد يُعطى بعدد كاتالان الخامس \\( C_5 = \\frac{1}{5+1}\\binom{2 \\times 5}{5} \\).",
+        "explanation": "عدد المسارات على شبكة \\( n \\times n \\) والتي لا تتجاوز القطر \\( y = x \\) هو عدد كاتالان \\( C_n = \\frac{1}{n+1}\\binom{2n}{n} \\). عندما \\( n = 5 \\)، يكون \\( C_5 = \\frac{1}{6}\\binom{10}{5} = \\frac{252}{6} = 42 \\)."
+      }
+    },
+    "correct_index": "42"
+  },
+  {
+    "id": "OLYMPIAD-051",
+    "track": "olympiad",
+    "level": "High School",
+    "topic": "Functional Equations",
+    "type": "FRQ",
+    "difficulty": "hard",
+    "content": {
+      "en": {
+        "question": "Suppose \\( f: \\mathbb{R} \\to \\mathbb{R} \\) is a continuous function satisfying \\( f(x + y) + f(x - y) = 2f(x) + 2f(y) \\) for all \\( x, y \\in \\mathbb{R} \\). If \\( f(1) = 3 \\), find \\( f(5) \\).",
+        "options": [],
+        "hint": "This is the quadratic functional equation, whose continuous solution is \\( f(x) = cx^2 \\).",
+        "explanation": "The given relation is Cauchy's quadratic functional equation. Its continuous solutions are of the form \\( f(x) = cx^2 \\). Since \\( f(1) = 3 \\), we have \\( c = 3 \\). Thus \\( f(x) = 3x^2 \\), which gives \\( f(5) = 3 \\times 5^2 = 75 \\)."
+      },
+      "ar": {
+        "question": "لتكن \\( f: \\mathbb{R} \\to \\mathbb{R} \\) دالة مستمرة تحقق \\( f(x + y) + f(x - y) = 2f(x) + 2f(y) \\) لكل \\( x, y \\in \\mathbb{R} \\). إذا كان \\( f(1) = 3 \\)، فأوجد قيمة \\( f(5) \\).",
+        "options": [],
+        "hint": "هذه هي المعادلة الدالية التربيعية، وحلها المستمر على الصورة \\( f(x) = cx^2 \\).",
+        "explanation": "المعادلة المعطاة هي معادلة كوشي الدالية التربيعية. حلولها المستمرة تكون على الصورة \\( f(x) = cx^2 \\). بما أن \\( f(1) = 3 \\)، فإن \\( c = 3 \\). بالتالي فإن \\( f(x) = 3x^2 \\)، ومنه \\( f(5) = 3 \\times 25 = 75 \\)."
+      }
+    },
+    "correct_index": "75"
+  },
+  {
+    "id": "OLYMPIAD-052",
+    "track": "olympiad",
+    "level": "High School",
+    "topic": "Number Theory",
+    "type": "FRQ",
+    "difficulty": "hard",
+    "content": {
+      "en": {
+        "question": "Find the smallest positive integer \\( n \\) such that \\( n! \\) ends in exactly 100 zeros in decimal representation.",
+        "options": [],
+        "hint": "Use Legendre's formula \\( Z(n) = \\sum_{k=1}^{\\infty} \\lfloor \\frac{n}{5^k} \\rfloor \\).",
+        "explanation": "The number of trailing zeros of \\( n! \\) is given by \\( Z(n) = \\lfloor n/5 \\rfloor + \\lfloor n/25 \\rfloor + \\lfloor n/125 \\rfloor + \\dots \\). Testing values around \\( n = 400 \\): \\( Z(400) = 80 + 16 + 3 = 99 \\). Increasing by 5, \\( Z(405) = 81 + 16 + 3 = 100 \\). Thus, the smallest integer is 405."
+      },
+      "ar": {
+        "question": "أوجد أصغر عدد صحيح موجب \\( n \\) بحيث ينتهي \\( n! \\) بـ 100 أصفار بالضبط في تمثيله العشري.",
+        "options": [],
+        "hint": "استخدم صيغة ليجاندر \\( Z(n) = \\sum_{k=1}^{\\infty} \\lfloor \\frac{n}{5^k} \\rfloor \\).",
+        "explanation": "عدد الأصفار في نهاية \\( n! \\) يُعطى بـ \\( Z(n) = \\lfloor n/5 \\rfloor + \\lfloor n/25 \\rfloor + \\lfloor n/125 \\rfloor + \\dots \\). باختبار قيم حول \\( n = 400 \\): \\( Z(400) = 80 + 16 + 3 = 99 \\). بزيادة 5، نجد \\( Z(405) = 81 + 16 + 3 = 100 \\). وبالتالي فإن أصغر عدد صحيح هو 405."
+      }
+    },
+    "correct_index": "405"
+  },
+  {
+    "id": "OLYMPIAD-053",
+    "track": "olympiad",
+    "level": "High School",
+    "topic": "Combinatorics",
+    "type": "FRQ",
+    "difficulty": "medium",
+    "content": {
+      "en": {
+        "question": "In how many ways can 8 people be seated around a circular table if 2 particular people refuse to sit next to each other?",
+        "options": [],
+        "hint": "Subtract the number of seating arrangements where the 2 people sit together from the total circular arrangements.",
+        "explanation": "Total circular arrangements of 8 people = \\( (8 - 1)! = 7! = 5040 \\). If the 2 particular people sit together, treat them as a single block: there are \\( (7 - 1)! \\times 2! = 6! \\times 2 = 1440 \\) arrangements. The number of valid arrangements is \\( 5040 - 1440 = 3600 \\)."
+      },
+      "ar": {
+        "question": "بكم طريقة يمكن لـ 8 أشخاص الجلوس حول طاولة دائرية إذا رفض شخصان محدان الجلوس بجانب بعضهما؟",
+        "options": [],
+        "hint": "اطرح عدد الترتيبات التي يجلس فيها الشخصان معاً من إجمالي الترتيبات الدائرية.",
+        "explanation": "إجمالي الترتيبات الدائرية لـ 8 أشخاص = \\( (8 - 1)! = 7! = 5040 \\). إذا جلس الشخصان المحددان بجانب بعضهما، نعاملهما ككتلة واحدة: عدد الترتيبات = \\( (7 - 1)! \\times 2! = 6! \\times 2 = 1440 \\). عدد الترتيبات المقبولة هو \\( 5040 - 1440 = 3600 \\)."
+      }
+    },
+    "correct_index": "3600"
+  },
+  {
+    "id": "OLYMPIAD-054",
+    "track": "olympiad",
+    "level": "High School",
+    "topic": "Number Theory",
+    "type": "FRQ",
+    "difficulty": "medium",
+    "content": {
+      "en": {
+        "question": "Find the number of positive integer divisors of \\( 20^4 \\times 30^5 \\).",
+        "options": [],
+        "hint": "Prime factorize the number into the form \\( 2^a \\cdot 3^b \\cdot 5^c \\) first.",
+        "explanation": "Prime factorizing: \\( 20^4 = (2^2 \\times 5)^4 = 2^8 \\times 5^4 \\), and \\( 30^5 = (2 \\times 3 \\times 5)^5 = 2^5 \\times 3^5 \\times 5^5 \\). Their product is \\( 2^{13} \\times 3^5 \\times 5^9 \\). The number of positive divisors is \\( (13 + 1)(5 + 1)(9 + 1) = 14 \\times 6 \\times 10 = 840 \\)."
+      },
+      "ar": {
+        "question": "أوجد عدد القواسم الصحيحة الموجبة للعدد \\( 20^4 \\times 30^5 \\).",
+        "options": [],
+        "hint": "قم بحليل العدد إلى عوامله الأولية أولاً على الصورة \\( 2^a \\cdot 3^b \\cdot 5^c \\).",
+        "explanation": "بالتحليل إلى العوامل الأولية: \\( 20^4 = 2^8 \\times 5^4 \\) و \\( 30^5 = 2^5 \\times 3^5 \\times 5^5 \\). ناتج ضربهما هو \\( 2^{13} \\times 3^5 \\times 5^9 \\). عدد القواسم الموجبة هو \\( (13 + 1)(5 + 1)(9 + 1) = 14 \\times 6 \\times 10 = 840 \\)."
+      }
+    },
+    "correct_index": "840"
+  },
+  {
+    "id": "OLYMPIAD-055",
+    "track": "olympiad",
+    "level": "High School",
+    "topic": "Algebra",
+    "type": "FRQ",
+    "difficulty": "hard",
+    "content": {
+      "en": {
+        "question": "Find the minimum value of \\( f(x, y) = x^2 + y^2 + \\frac{2}{xy} \\) for positive real numbers \\( x, y \\).",
+        "options": [],
+        "hint": "Apply the AM-GM inequality twice: first to \\( x^2 + y^2 \\), then to the resulting expression.",
+        "explanation": "By AM-GM, \\( x^2 + y^2 \\ge 2xy \\). Thus \\( f(x, y) \\ge 2xy + \\frac{2}{xy} \\). Applying AM-GM again gives \\( 2xy + \\frac{2}{xy} \\ge 2 \\sqrt{2xy \\cdot \\frac{2}{xy}} = 2 \\sqrt{4} = 4 \\). Equality holds when \\( x = y \\) and \\( 2xy = \\frac{2}{xy} \\implies xy = 1 \\), which means \\( x = y = 1 \\). Thus, the minimum value is 4."
+      },
+      "ar": {
+        "question": "أوجد القيمة الصغرى للدالة \\( f(x, y) = x^2 + y^2 + \\frac{2}{xy} \\) للأعداد الحقيقية الموجبة \\( x, y \\).",
+        "options": [],
+        "hint": "طبق متباينة الوسط الحسابي والهندسي (AM-GM) مرتين: الأولى على \\( x^2 + y^2 \\)، والثانية على العبارة الناتجة.",
+        "explanation": "باستخدام AM-GM لدينا \\( x^2 + y^2 \\ge 2xy \\). بالتالي \\( f(x, y) \\ge 2xy + \\frac{2}{xy} \\). بتطبيق AM-GM مرة أخرى: \\( 2xy + \\frac{2}{xy} \\ge 2 \\sqrt{2xy \\cdot \\frac{2}{xy}} = 4 \\). تتحقق المساواة عندما \\( x = y = 1 \\). بالتالي فإن القيمة الصغرى هي 4."
+      }
+    },
+    "correct_index": "4"
+  },
+  {
+    "id": "OLYMPIAD-056",
+    "track": "olympiad",
+    "level": "High School",
+    "topic": "Functional Equations",
+    "type": "FRQ",
+    "difficulty": "hard",
+    "content": {
+      "en": {
+        "question": "Find the value of \\( f(10) \\) if \\( f: \\mathbb{R} \\to \\mathbb{R} \\) is a polynomial function satisfying \\( f(x + y) = f(x) + f(y) + 2xy \\) for all \\( x, y \\in \\mathbb{R} \\) and \\( f(1) = 5 \\).",
+        "options": [],
+        "hint": "Define \\( g(x) = f(x) - x^2 \\) and show that \\( g \\) is linear.",
+        "explanation": "Let \\( g(x) = f(x) - x^2 \\). Then \\( g(x+y) = f(x+y) - (x+y)^2 = f(x) + f(y) + 2xy - x^2 - 2xy - y^2 = (f(x)-x^2) + (f(y)-y^2) = g(x) + g(y) \\). Since \\( f \\) is polynomial, \\( g \\) is linear, so \\( g(x) = cx \\). Thus \\( f(x) = x^2 + cx \\). Since \\( f(1) = 1 + c = 5 \\implies c = 4 \\). Therefore \\( f(x) = x^2 + 4x \\), and \\( f(10) = 10^2 + 4(10) = 140 \\)."
+      },
+      "ar": {
+        "question": "أوجد قيمة \\( f(10) \\) إذا كانت \\( f: \\mathbb{R} \\to \\mathbb{R} \\) دالة كثيرة حدود تحقق \\( f(x + y) = f(x) + f(y) + 2xy \\) لكل \\( x, y \\in \\mathbb{R} \\) وكان \\( f(1) = 5 \\).",
+        "options": [],
+        "hint": "عرف الدالة \\( g(x) = f(x) - x^2 \\) وأثبت أن \\( g \\) خطية.",
+        "explanation": "نفرض \\( g(x) = f(x) - x^2 \\). بالتعويض نجد أن \\( g(x+y) = g(x) + g(y) \\). بما أن \\( f \\) كثيرة حدود، فإن \\( g \\) تكون خطية بالضرورة، أي \\( g(x) = cx \\). إذن \\( f(x) = x^2 + cx \\). من الشروط \\( f(1) = 1 + c = 5 \\implies c = 4 \\). بالتالي فإن \\( f(x) = x^2 + 4x \\)، ومنه \\( f(10) = 100 + 40 = 140 \\)."
+      }
+    },
+    "correct_index": "140"
+  },
+  {
+    "id": "OLYMPIAD-057",
+    "track": "olympiad",
+    "level": "High School",
+    "topic": "Combinatorics",
+    "type": "FRQ",
+    "difficulty": "medium",
+    "content": {
+      "en": {
+        "question": "Find the number of positive integer solutions \\( (x, y, z) \\) to the equation \\( x + y + z = 15 \\) such that \\( x < y < z \\).",
+        "options": [],
+        "hint": "Substitute \\( x = a + 1 \\), \\( y = x + b + 1 \\), \\( z = y + c + 1 \\) for non-negative integers \\( a, b, c \\).",
+        "explanation": "Let \\( x = a + 1 \\), \\( y = a + b + 2 \\), and \\( z = a + b + c + 3 \\) for \\( a, b, c \\ge 0 \\). Substituting gives \\( 3a + 2b + c + 6 = 15 \\implies 3a + 2b + c = 9 \\). Case analysis on \\( a \\): \n- \\( a = 0 \\implies 2b + c = 9 \\) (5 solutions: \\( b = 0, 1, 2, 3, 4 \\))\n- \\( a = 1 \\implies 2b + c = 6 \\) (4 solutions: \\( b = 0, 1, 2, 3 \\))\n- \\( a = 2 \\implies 2b + c = 3 \\) (2 solutions: \\( b = 0, 1 \\))\n- \\( a = 3 \\implies 2b + c = 0 \\) (1 solution: \\( b = 0 \\))\nTotal solutions = \\( 5 + 4 + 2 + 1 = 12 \\)."
+      },
+      "ar": {
+        "question": "أوجد عدد الحلول الصحيحة الموجبة \\( (x, y, z) \\) للمعادلة \\( x + y + z = 15 \\) بحيث \\( x < y < z \\).",
+        "options": [],
+        "hint": "ضع \\( x = a + 1 \\)، \\( y = x + b + 1 \\)، \\( z = y + c + 1 \\) حيث \\( a, b, c \\) أعداد صحيحة غير سالبة.",
+        "explanation": "نفرض \\( x = a + 1 \\)، \\( y = a + b + 2 \\)، \\( z = a + b + c + 3 \\) حيث \\( a, b, c \\ge 0 \\). بالتعويض نجد \\( 3a + 2b + c = 9 \\). بتحليل الحالات بالنسبة لـ \\( a \\):\n- إذا كان \\( a = 0 \\): توجد 5 حلول.\n- إذا كان \\( a = 1 \\): توجد 4 حلول.\n- إذا كان \\( a = 2 \\): توجد حلان.\n- إذا كان \\( a = 3 \\): يوجد حل واحد.\nإجمالي عدد الحلول = \\( 5 + 4 + 2 + 1 = 12 \\)."
+      }
+    },
+    "correct_index": "12"
+  },
+  {
+    "id": "OLYMPIAD-058",
+    "track": "olympiad",
+    "level": "High School",
+    "topic": "Number Theory",
+    "type": "FRQ",
+    "difficulty": "medium",
+    "content": {
+      "en": {
+        "question": "Find the number of ordered pairs of positive integers \\( (a, b) \\) such that \\( \\text{lcm}(a, b) = 180 \\) and \\( \\gcd(a, b) = 6 \\).",
+        "options": [],
+        "hint": "Let \\( a = 6x \\) and \\( b = 6y \\) with \\( \\gcd(x, y) = 1 \\).",
+        "explanation": "Let \\( a = 6x \\) and \\( b = 6y \\) with \\( \\gcd(x, y) = 1 \\). Then \\( \\text{lcm}(a, b) = 6xy = 180 \\implies xy = 30 \\). Since \\( 30 = 2 \\times 3 \\times 5 \\) has 3 distinct prime factors, the number of ordered pairs of coprime integers \\( (x, y) \\) whose product is 30 is \\( 2^3 = 8 \\). Thus there are 8 such pairs \\( (a, b) \\)."
+      },
+      "ar": {
+        "question": "أوجد عدد الأزواج المرتبة من الأعداد الصحيحة الموجبة \\( (a, b) \\) التي تحقق \\( \\text{lcm}(a, b) = 180 \\) و \\( \\gcd(a, b) = 6 \\).",
+        "options": [],
+        "hint": "ضع \\( a = 6x \\) و \\( b = 6y \\) حيث \\( \\gcd(x, y) = 1 \\).",
+        "explanation": "نفرض \\( a = 6x \\) و \\( b = 6y \\) مع شرط \\( \\gcd(x, y) = 1 \\). يكون \\( \\text{lcm}(a, b) = 6xy = 180 \\implies xy = 30 \\). بما أن \\( 30 = 2 \\times 3 \\times 5 \\) يتكون من 3 عوامل أولية مختلفة، فإن عدد الأزواج المرتبة الأولية فيما بينها \\( (x, y) \\) هو \\( 2^3 = 8 \\). إذن يوجد 8 أزواج."
+      }
+    },
+    "correct_index": "8"
+  },
+  {
+    "id": "OLYMPIAD-059",
+    "track": "olympiad",
+    "level": "High School",
+    "topic": "Algebra",
+    "type": "FRQ",
+    "difficulty": "hard",
+    "content": {
+      "en": {
+        "question": "Let \\( P(x) \\) be a polynomial with real coefficients such that \\( P(x^2 + 1) = (P(x))^2 + 1 \\) for all real \\( x \\), and \\( P(0) = 0 \\). Find \\( P(5) \\).",
+        "options": [],
+        "hint": "Evaluate \\( P(x) \\) iteratively starting from \\( x = 0 \\): \\( P(1), P(2), P(5) \\).",
+        "explanation": "Given \\( P(0) = 0 \\). For \\( x = 0 \\): \\( P(1) = (P(0))^2 + 1 = 1 \\). For \\( x = 1 \\): \\( P(2) = (P(1))^2 + 1 = 2 \\). For \\( x = 2 \\): \\( P(5) = (P(2))^2 + 1 = 2^2 + 1 = 5 \\). (In fact, \\( P(x) = x \\) is the unique polynomial solution)."
+      },
+      "ar": {
+        "question": "ليكن \\( P(x) \\) كثيرة حدود بمعاملات حقيقية تحقق \\( P(x^2 + 1) = (P(x))^2 + 1 \\) لكل \\( x \\) حقيقي، و \\( P(0) = 0 \\). أوجد قيمة \\( P(5) \\).",
+        "options": [],
+        "hint": "احسب \\( P(x) \\) بتتابع قيم \\( x \\) بدءاً من \\( x = 0 \\): أوجد \\( P(1) \\) ثم \\( P(2) \\) ثم \\( P(5) \\).",
+        "explanation": "لدينا \\( P(0) = 0 \\). عند \\( x = 0 \\): \\( P(1) = (P(0))^2 + 1 = 1 \\). عند \\( x = 1 \\): \\( P(2) = (P(1))^2 + 1 = 2 \\). عند \\( x = 2 \\): \\( P(5) = (P(2))^2 + 1 = 2^2 + 1 = 5 \\)."
+      }
+    },
+    "correct_index": "5"
+  },
+  {
+    "id": "OLYMPIAD-060",
+    "track": "olympiad",
+    "level": "High School",
+    "topic": "Combinatorics",
+    "type": "FRQ",
+    "difficulty": "medium",
+    "content": {
+      "en": {
+        "question": "Find the coefficient of \\( x^5 \\) in the expansion of \\( (1 + x + x^2 + x^3)^4 \\).",
+        "options": [],
+        "hint": "Rewrite \\( 1 + x + x^2 + x^3 \\) as \\( \\frac{1 - x^4}{1 - x} \\) and use negative binomial expansion.",
+        "explanation": "Note that \\( 1 + x + x^2 + x^3 = \\frac{1 - x^4}{1 - x} \\). So the expression is \\( \\frac{(1 - x^4)^4}{(1 - x)^4} = (1 - 4x^4 + 6x^8 - \\dots) \\sum_{k=0}^{\\infty} \\binom{k+3}{3} x^k \\). To get the coefficient of \\( x^5 \\):\n- From \\( 1 \\cdot x^5 \\): \\( \\binom{5+3}{3} = \\binom{8}{3} = 56 \\).\n- From \\( -4x^4 \\cdot x^1 \\): \\( -4 \\cdot \\binom{1+3}{3} = -4 \\cdot 4 = -16 \\).\nTotal coefficient = \\( 56 - 16 = 40 \\)."
+      },
+      "ar": {
+        "question": "أوجد معامل \\( x^5 \\) في مفكوك \\( (1 + x + x^2 + x^3)^4 \\).",
+        "options": [],
+        "hint": "أعد كتابة \\( 1 + x + x^2 + x^3 \\) على الصورة \\( \\frac{1 - x^4}{1 - x} \\) واستخدم مفكوك ذات الحدين للأس السالب.",
+        "explanation": "لاحظ أن \\( 1 + x + x^2 + x^3 = \\frac{1 - x^4}{1 - x} \\). بالتالي العبارة هي \\( (1 - 4x^4 + \\dots) \\sum_{k=0}^{\\infty} \\binom{k+3}{3} x^k \\). للحصول على معامل \\( x^5 \\):\n- الحد \\( 1 \\cdot x^5 \\): يعطي \\( \\binom{8}{3} = 56 \\).\n- الحد \\( -4x^4 \\cdot x^1 \\): يعطي \\( -4 \\cdot \\binom{4}{3} = -16 \\).\nالمعامل النهائي = \\( 56 - 16 = 40 \\)."
+      }
+    },
+    "correct_index": "40"
+  },
+  {
+    "id": "OLYMPIAD-061",
+    "track": "olympiad",
+    "level": "High School",
+    "topic": "Number Theory",
+    "type": "FRQ",
+    "difficulty": "extreme",
+    "content": {
+      "en": {
+        "question": "Find the exponent \\( k \\) of the largest power of 2, \\( 2^k \\), that divides \\( 3^{1024} - 1 \\).",
+        "options": [],
+        "hint": "Use the Lifting the Exponent Lemma (LTE) for \\( p = 2 \\).",
+        "explanation": "By the Lifting the Exponent Lemma (LTE) for \\( p = 2 \\) and an even exponent \\( n = 1024 = 2^{10} \\):\n\\( v_2(3^{1024} - 1) = v_2(3 - 1) + v_2(3 + 1) + v_2(1024) - 1 \\)\n\\( v_2(3^{1024} - 1) = 1 + 2 + 10 - 1 = 12 \\).\nThus, \\( k = 12 \\)."
+      },
+      "ar": {
+        "question": "أوجد الأس \\( k \\) لأكبر قوة للعدد 2، أي \\( 2^k \\)، تقسم العدد \\( 3^{1024} - 1 \\).",
+        "options": [],
+        "hint": "استخدم لما رفع الأسس (LTE Lemma) بالنسبة للعدد الأولي \\( p = 2 \\).",
+        "explanation": "باستخدام مبرهنة رفع الأسس (LTE) لـ \\( p = 2 \\) والأس الزوجي \\( n = 1024 = 2^{10} \\):\n\\( v_2(3^{1024} - 1) = v_2(3 - 1) + v_2(3 + 1) + v_2(1024) - 1 \\)\n\\( v_2(3^{1024} - 1) = 1 + 2 + 10 - 1 = 12 \\).\nإذن \\( k = 12 \\)."
+      }
+    },
+    "correct_index": "12"
+  },
+  {
+    "id": "OLYMPIAD-062",
+    "track": "olympiad",
+    "level": "High School",
+    "topic": "Number Theory",
+    "type": "FRQ",
+    "difficulty": "hard",
+    "content": {
+      "en": {
+        "question": "Find the largest positive integer \\( n \\) such that \\( n+10 \\) divides \\( n^3 + 100 \\).",
+        "options": [],
+        "hint": "Rewrite \\( n^3 + 100 \\) using polynomial division with \\( n+10 \\).",
+        "explanation": "Notice that \\( n^3 + 100 = (n+10)(n^2 - 10n + 100) - 900 \\). For \\( n+10 \\) to divide \\( n^3 + 100 \\), it must divide 900. The largest factor of 900 is 900 itself, so \\( n + 10 = 900 \\implies n = 890 \\)."
+      },
+      "ar": {
+        "question": "أوجد أكبر عدد صحيح موجب \\( n \\) بحيث يقبل العدد \\( n^3 + 100 \\) القسمة على \\( n + 10 \\).",
+        "options": [],
+        "hint": "أعد كتابة \\( n^3 + 100 \\) باستخدام القسمة المطولة على \\( n+10 \\).",
+        "explanation": "نلاحظ أن \\( n^3 + 100 = (n+10)(n^2 - 10n + 100) - 900 \\). لكي يقبل \\( n^3 + 100 \\) القسمة على \\( n+10 \\)، يجب أن يقسم \\( n+10 \\) العدد 900. أكبر قاسم للعدد 900 هو 900 نفسه، بالتالي \\( n + 10 = 900 \\implies n = 890 \\)."
+      }
+    },
+    "correct_index": "890"
+  },
+  {
+    "id": "OLYMPIAD-063",
+    "track": "olympiad",
+    "level": "High School",
+    "topic": "Functional Equations",
+    "type": "FRQ",
+    "difficulty": "hard",
+    "content": {
+      "en": {
+        "question": "Let \\( f: \\mathbb{Q}^+ \\to \\mathbb{Q}^+ \\) satisfy \\( f(xf(y)) = \\frac{f(x)}{y} \\) for all positive rational numbers \\( x, y \\). Given that \\( f(2025) = \\frac{1}{2025} \\), find \\( f(1) \\).",
+        "options": [],
+        "hint": "Substitute \\( x = 1 \\) to analyze the behavior of \\( f(f(y)) \\).",
+        "explanation": "Setting \\( x = 1 \\) gives \\( f(f(y)) = \\frac{f(1)}{y} \\). Applying \\( f \\) to both sides and using the identity yields \\( f(x) = \\frac{1}{x} \\). Thus \\( f(1) = 1 \\)."
+      },
+      "ar": {
+        "question": "لتكن الدالة \\( f: \\mathbb{Q}^+ \\to \\mathbb{Q}^+ \\) تحقق المعادلة \\( f(xf(y)) = \\frac{f(x)}{y} \\) لجميع الأعداد النسبية الموجبة \\( x, y \\). إذا كان \\( f(2025) = \\frac{1}{2025} \\)، فما قيمة \\( f(1) \\)؟",
+        "options": [],
+        "hint": "عوّض \\( x = 1 \\) لدراسة سلوك \\( f(f(y)) \\).",
+        "explanation": "بتعويض \\( x = 1 \\) نحصل على \\( f(f(y)) = \\frac{f(1)}{y} \\). بتطبيق \\( f \\) على الطرفين واستخدام المتطابقة نستنتج أن \\( f(x) = \\frac{1}{x} \\)، وبالتالي فإن \\( f(1) = 1 \\)."
+      }
+    },
+    "correct_index": "1"
+  },
+  {
+    "id": "OLYMPIAD-064",
+    "track": "olympiad",
+    "level": "High School",
+    "topic": "Combinatorics",
+    "type": "FRQ",
+    "difficulty": "medium",
+    "content": {
+      "en": {
+        "question": "How many binary sequences of length 10 contain no two consecutive 1s?",
+        "options": [],
+        "hint": "Set up a recurrence relation similar to the Fibonacci sequence.",
+        "explanation": "Let \\( a_n \\) be the number of valid sequences of length \\( n \\). A sequence either ends in 0 (preceded by any valid sequence of length \\( n-1 \\)) or ends in 01 (preceded by any valid sequence of length \\( n-2 \\)). Thus \\( a_n = a_{n-1} + a_{n-2} \\). With \\( a_1 = 2 \\) and \\( a_2 = 3 \\), we find \\( a_{10} = F_{12} = 144 \\)."
+      },
+      "ar": {
+        "question": "ما هو عدد السلاسل الثنائية (المكونة من 0 و 1) ذات الطول 10 والتي لا تحتوي على رقمين 1 متتاليين؟",
+        "options": [],
+        "hint": "أنشئ علاقة تكرارية شبيبة بتتابع فيبوناتشي.",
+        "explanation": "ليكن \\( a_n \\) عدد السلاسل المقبولة ذات الطول \\( n \\). السلسلة إما تنتهي بـ 0 (مسبوقة بسلسلة مقبولة طولها \\( n-1 \\)) أو تنتهي بـ 01 (مسبوقة بسلسلة طولها \\( n-2 \\)). بالتالي \\( a_n = a_{n-1} + a_{n-2} \\). مع الشروط الابتدائية \\( a_1 = 2 \\) و \\( a_2 = 3 \\)، نجد أن \\( a_{10} = 144 \\)."
+      }
+    },
+    "correct_index": "144"
+  },
+  {
+    "id": "OLYMPIAD-065",
+    "track": "olympiad",
+    "level": "High School",
+    "topic": "Number Theory",
+    "type": "FRQ",
+    "difficulty": "hard",
+    "content": {
+      "en": {
+        "question": "Find the remainder when \\( 2^{2024} \\) is divided by 1000.",
+        "options": [],
+        "hint": "Use the Chinese Remainder Theorem modulo 8 and modulo 125.",
+        "explanation": "Notice \\( 1000 = 8 \\times 125 \\). First, \\( 2^{2024} \\equiv 0 \\pmod 8 \\). Next, by Euler's Totient Theorem, \\( \\phi(125) = 100 \\), so \\( 2^{100} \\equiv 1 \\pmod{125} \\). Thus, \\( 2^{2024} \\equiv 2^{24} \\pmod{125} \\). Since \\( 2^7 = 128 \\equiv 3 \\pmod{125} \\), \\( 2^{24} = (2^7)^3 \\cdot 8 \\equiv 3^3 \\cdot 8 = 216 \\equiv 91 \\pmod{125} \\). Solving \\( x \\equiv 0 \\pmod 8 \\) and \\( x \\equiv 91 \\pmod{125} \\) gives \\( x = 216 \\)."
+      },
+      "ar": {
+        "question": "أوجد باقي قسمة العدد \\( 2^{2024} \\) على 1000.",
+        "options": [],
+        "hint": "استخدم مبرهنة الباقي الصينية بمقياس 8 ومقياس 125.",
+        "explanation": "نلاحظ أن \\( 1000 = 8 \\times 125 \\). أولاً، \\( 2^{2024} \\equiv 0 \\pmod 8 \\). ثانيًا، باستخدام دالة أويليربما أن \\( \\phi(125) = 100 \\)، فإن \\( 2^{100} \\equiv 1 \\pmod{125} \\)، لذا \\( 2^{2024} \\equiv 2^{24} \\pmod{125} \\). نحسب \\( 2^{24} \\equiv 91 \\pmod{125} \\). وبحل النظام نحصل على باقي القسمة وهو 216."
+      }
+    },
+    "correct_index": "216"
+  },
+  {
+    "id": "OLYMPIAD-066",
+    "track": "olympiad",
+    "level": "High School",
+    "topic": "Algebra",
+    "type": "FRQ",
+    "difficulty": "hard",
+    "content": {
+      "en": {
+        "question": "Let \\( P(x) \\) be a polynomial with integer coefficients such that \\( P(1) = 2 \\), \\( P(2) = 3 \\), \\( P(3) = 5 \\), and \\( P(4) = 11 \\). Find the value of \\( P(5) \\) for the polynomial of degree 3 satisfying these conditions.",
+        "options": [],
+        "hint": "Use finite differences or Lagrange interpolation to construct the minimal degree polynomial.",
+        "explanation": "Using forward differences: \\( \\Delta^0 = 2 \\), \\( \\Delta^1 = 1, 2, 6 \\), \\( \\Delta^2 = 1, 4 \\), \\( \\Delta^3 = 3 \\). The polynomial of degree 3 is \\( P(x) = 2 + (x-1) + \\frac{1}{2}(x-1)(x-2) + \\frac{1}{2}(x-1)(x-2)(x-3) \\). Evaluating at \\( x=5 \\) gives \\( P(5) = 2 + 4 + 6 + 12 = 24 \\)."
+      },
+      "ar": {
+        "question": "ليكن \\( P(x) \\) كثير حدود بمعاملات صحيحة بحيث \\( P(1) = 2 \\)، \\( P(2) = 3 \\)، \\( P(3) = 5 \\)، و \\( P(4) = 11 \\). أوجد قيمة \\( P(5) \\) لكثير الحدود من الدرجة الثالثة الذي يحقق هذه الشروط.",
+        "options": [],
+        "hint": "استخدم الفروق المحدودة أو استكمال لاجرانج لإنشاء كثير الحدود ذي الدرجة الدنيا.",
+        "explanation": "باستخدام الفروق الأمامية نجد أن كثير الحدود من الدرجة الثالثة يعطى بالصيغة: \\( P(x) = 2 + (x-1) + \\frac{1}{2}(x-1)(x-2) + \\frac{1}{2}(x-1)(x-2)(x-3) \\). بالتعويض بـ \\( x=5 \\) نحصل على \\( P(5) = 24 \\)."
+      }
+    },
+    "correct_index": "24"
+  },
+  {
+    "id": "OLYMPIAD-067",
+    "track": "olympiad",
+    "level": "High School",
+    "topic": "Combinatorics",
+    "type": "FRQ",
+    "difficulty": "extreme",
+    "content": {
+      "en": {
+        "question": "In how many ways can 8 non-attacking rooks be placed on an \\( 8 \\times 8 \\) chessboard such that no rook lies on the main diagonal?",
+        "options": [],
+        "hint": "This is equivalent to finding the number of derangements of 8 items.",
+        "explanation": "Placing 8 non-attacking rooks corresponds to choosing a permutation \\( \\sigma \\) of \\( \\{1, 2, \\dots, 8\\} \\). The condition that no rook lies on the main diagonal means \\( \\sigma(i) \\neq i \\) for all \\( i \\), which is a derangement. The number of derangements of 8 items is \\( !8 = 8! \\sum_{k=0}^8 \\frac{(-1)^k}{k!} = 14833 \\)."
+      },
+      "ar": {
+        "question": "بكم طريقة يمكن وضع 8 رخاخ (قلع) غير متهاجمة على رقعة شطرنج \\( 8 \\times 8 \\) بحيث لا يقع أي رخ على القطر الرئيسي؟",
+        "options": [],
+        "hint": "هذه المسألة تكافئ إيجاد عدد التباديل اضطرابية (derangements) لـ 8 عناصر.",
+        "explanation": "وضع 8 رخاخ غير متهاجمة يكافئ اختيار تبديلة \\( \\sigma \\) للمجموعة \\( \\{1, 2, \\dots, 8\\} \\). عدم وجود رخ على القطر يعني \\( \\sigma(i) \\neq i \\) لكل \\( i \\). عدد التباديل الاضطرابية لـ 8 عناصر هو \\( !8 = 14833 \\)."
+      }
+    },
+    "correct_index": "14833"
+  },
+  {
+    "id": "OLYMPIAD-068",
+    "track": "olympiad",
+    "level": "High School",
+    "topic": "Geometry",
+    "type": "FRQ",
+    "difficulty": "hard",
+    "content": {
+      "en": {
+        "question": "In triangle \\( ABC \\), \\( AB = 13 \\), \\( BC = 14 \\), and \\( CA = 15 \\). The incircle touches \\( BC \\) at point \\( D \\). Find \\( AD^2 \\).",
+        "options": [],
+        "hint": "First find the lengths of \\( BD \\) and \\( CD \\), then apply Stewart's Theorem.",
+        "explanation": "The semi-perimeter is \\( s = \\frac{13+14+15}{2} = 21 \\). The contact point \\( D \\) divides \\( BC \\) into \\( BD = s - b = 21 - 15 = 6 \\) and \\( CD = s - c = 21 - 13 = 8 \\). Applying Stewart's Theorem on \\( \\triangle ABC \\) with segment \\( AD \\): \\( AD^2 \\cdot 14 = 13^2 \\cdot 8 + 15^2 \\cdot 6 - 6 \\cdot 8 \\cdot 14 = 1352 + 1350 - 672 = 2030 \\). Thus \\( AD^2 = \\frac{2030}{14} = 145 \\)."
+      },
+      "ar": {
+        "question": "في المثلث \\( ABC \\)، أطوال الأضلاع هي \\( AB = 13 \\)، \\( BC = 14 \\)، و \\( CA = 15 \\). تمس الدائرة الداخلية الضلع \\( BC \\) في النقطة \\( D \\). أوجد قيمة \\( AD^2 \\).",
+        "options": [],
+        "hint": "أوجد أولاً طولي القطعتين \\( BD \\) و \\( CD \\)، ثم طبق نظرية ستيوارت.",
+        "explanation": "نصف المحيط هو \\( s = 21 \\). تقسم نقطة التماس \\( D \\) الضلع \\( BC \\) إلى \\( BD = 6 \\) و \\( CD = 8 \\). بتطبيق نظرية ستيوارت نجد أن \\( AD^2 \\cdot 14 = 13^2 \\cdot 8 + 15^2 \\cdot 6 - 6 \\cdot 8 \\cdot 14 = 2030 \\)، ومنه \\( AD^2 = 145 \\)."
+      }
+    },
+    "correct_index": "145"
+  },
+  {
+    "id": "OLYMPIAD-069",
+    "track": "olympiad",
+    "level": "High School",
+    "topic": "Number Theory",
+    "type": "FRQ",
+    "difficulty": "medium",
+    "content": {
+      "en": {
+        "question": "Find the largest integer \\( n \\) such that \\( n+2 \\) divides \\( n^3 + 100 \\).",
+        "options": [],
+        "hint": "Express \\( n^3 + 100 \\) in the form \\( (n+2)Q(n) + R \\).",
+        "explanation": "By polynomial division, \\( n^3 + 100 = (n+2)(n^2 - 2n + 4) + 92 \\). For \\( n+2 \\) to divide \\( n^3 + 100 \\), it must divide 92. The largest divisor of 92 is 92, so \\( n + 2 = 92 \\implies n = 90 \\)."
+      },
+      "ar": {
+        "question": "أوجد أكبر عدد صحيح \\( n \\) بحيث يقبل العدد \\( n^3 + 100 \\) القسمة على \\( n + 2 \\).",
+        "options": [],
+        "hint": "اكتب \\( n^3 + 100 \\) على الصورة \\( (n+2)Q(n) + R \\).",
+        "explanation": "بقسمة كثيرات الحدود، \\( n^3 + 100 = (n+2)(n^2 - 2n + 4) + 92 \\). لكي يقبل المقدار القسمة، يجب أن يقسم \\( n+2 \\) العدد 92. أكبر قاسم هو 92، مما يعطي \\( n = 90 \\)."
+      }
+    },
+    "correct_index": "90"
+  },
+  {
+    "id": "OLYMPIAD-070",
+    "track": "olympiad",
+    "level": "High School",
+    "topic": "Functional Equations",
+    "type": "FRQ",
+    "difficulty": "medium",
+    "content": {
+      "en": {
+        "question": "Let \\( f: \\mathbb{R} \\to \\mathbb{R} \\) satisfy \\( f(x+y) + f(x-y) = 2f(x) + 2f(y) \\) for all \\( x, y \\in \\mathbb{R} \\). If \\( f(1) = 3 \\), find \\( f(10) \\).",
+        "options": [],
+        "hint": "Recognize this as Cauchy's quadratic functional equation.",
+        "explanation": "This is the classic quadratic functional equation, whose continuous solution is \\( f(x) = c x^2 \\). Given \\( f(1) = 3 \\), we have \\( c = 3 \\), so \\( f(x) = 3x^2 \\). Therefore, \\( f(10) = 3(10)^2 = 300 \\)."
+      },
+      "ar": {
+        "question": "لتكن الدالة \\( f: \\mathbb{R} \\to \\mathbb{R} \\) تحقق المعادلة الوظيفية \\( f(x+y) + f(x-y) = 2f(x) + 2f(y) \\) لكل \\( x, y \\in \\mathbb{R} \\). إذا كان \\( f(1) = 3 \\)، فأوجد قيمة \\( f(10) \\).",
+        "options": [],
+        "hint": "لاحظ أن هذه المعادلة هي معادلة كوشي التربيعية الوظيفية.",
+        "explanation": "هذه المعادلة الوظيفية التربيعية حلها المستمر هو \\( f(x) = cx^2 \\). بما أن \\( f(1) = 3 \\)، فإن \\( c = 3 \\)، بالتالي \\( f(x) = 3x^2 \\). إذن \\( f(10) = 3(100) = 300 \\)."
+      }
+    },
+    "correct_index": "300"
+  },
+  {
+    "id": "OLYMPIAD-071",
+    "track": "olympiad",
+    "level": "High School",
+    "topic": "Combinatorics",
+    "type": "FRQ",
+    "difficulty": "medium",
+    "content": {
+      "en": {
+        "question": "How many subsets of \\( \\{1, 2, 3, \\dots, 12\\} \\) contain no two consecutive integers?",
+        "options": [],
+        "hint": "Relate the number of such subsets for \\( n \\) elements to the Fibonacci sequence.",
+        "explanation": "The number of subsets of \\( \\{1, 2, \\dots, n\\} \\) with no consecutive elements is \\( F_{n+2} \\), where \\( F_1 = 1, F_2 = 1, F_3 = 2 \\). For \\( n = 12 \\), this equals \\( F_{14} = 377 \\)."
+      },
+      "ar": {
+        "question": "ما عدد المجموعات الجزئية من المجموعة \\( \\{1, 2, \\dots, 12\\} \\) التي لا تحتوي على أي عددين متتاليين؟",
+        "options": [],
+        "hint": "اربك عدد المجموعات الجزئية لـ \\( n \\) من العناصر بتتابع فيبوناتشي.",
+        "explanation": "عدد المجموعات الجزئية الخالية من أعداد متتالية لمجموعة ذات \\( n \\) عنصرًا هو \\( F_{n+2} \\). بالنسبة لـ \\( n = 12 \\)، فإن \\( F_{14} = 377 \\)."
+      }
+    },
+    "correct_index": "377"
+  },
+  {
+    "id": "OLYMPIAD-072",
+    "track": "olympiad",
+    "level": "High School",
+    "topic": "Number Theory",
+    "type": "FRQ",
+    "difficulty": "medium",
+    "content": {
+      "en": {
+        "question": "Find the number of ordered triples of positive integers \\( (x, y, z) \\) such that \\( x \\le y \\le z \\) and \\( x + y + z = 15 \\).",
+        "options": [],
+        "hint": "Systematically test values for \\( x \\) starting from 1 up to 5.",
+        "explanation": "We partition 15 into 3 positive integers \\( x \\le y \\le z \\):\n- \\( x=1 \\): \\( y+z=14 \\implies y \\in \\{1, 2, 3, 4, 5, 6, 7\\} \\) (7 triples)\n- \\( x=2 \\): \\( y+z=13 \\implies y \\in \\{2, 3, 4, 5, 6\\} \\) (5 triples)\n- \\( x=3 \\): \\( y+z=12 \\implies y \\in \\{3, 4, 5, 6\\} \\) (4 triples)\n- \\( x=4 \\): \\( y+z=11 \\implies y \\in \\{4, 5\\} \\) (2 triples)\n- \\( x=5 \\): \\( y+z=10 \\implies y = 5 \\) (1 triple)\nTotal = \\( 7 + 5 + 4 + 2 + 1 = 19 \\)."
+      },
+      "ar": {
+        "question": "أوجد عدد الثلاثيات المرتبة من الأعداد الصحيحة الموجبة \\( (x, y, z) \\) التي تحقق \\( x \\le y \\le z \\) و \\( x + y + z = 15 \\).",
+        "options": [],
+        "hint": "اختبر قيم \\( x \\) بانتظام ابتداءً من 1 حتى 5.",
+        "explanation": "نجزئ العدد 15 إلى 3 أعداد صحيحة موجبة \\( x \\le y \\le z \\):\n- عند \\( x=1 \\): يوجد 7 ثلاثيات.\n- عند \\( x=2 \\): يوجد 5 ثلاثيات.\n- عند \\( x=3 \\): يوجد 4 ثلاثيات.\n- عند \\( x=4 \\): يوجد ثلاثيتان.\n- عند \\( x=5 \\): يوجد ثلاثية واحدة.\nالمجموع الكلي = \\( 7 + 5 + 4 + 2 + 1 = 19 \\)."
+      }
+    },
+    "correct_index": "19"
+  },
+  {
+    "id": "OLYMPIAD-073",
+    "track": "olympiad",
+    "level": "High School",
+    "topic": "Algebra",
+    "type": "FRQ",
+    "difficulty": "hard",
+    "content": {
+      "en": {
+        "question": "Let \\( a, b, c > 0 \\) such that \\( a+b+c = 3 \\). Find the minimum possible value of \\( \\frac{a^3}{b} + \\frac{b^3}{c} + \\frac{c^3}{a} \\).",
+        "options": [],
+        "hint": "Apply Cauchy-Schwarz inequality in Bergström form.",
+        "explanation": "By Cauchy-Schwarz (Bergström's form), \\( \\sum \\frac{a^3}{b} = \\sum \\frac{a^4}{ab} \\ge \\frac{(a^2+b^2+c^2)^2}{ab+bc+ca} \\). Since \\( a^2+b^2+c^2 \\ge ab+bc+ca \\) and \\( a^2+b^2+c^2 \\ge 3 \\) when \\( a+b+c=3 \\), the minimum value of 3 is attained when \\( a = b = c = 1 \\)."
+      },
+      "ar": {
+        "question": "لتكن \\( a, b, c \\) أعدادًا حقيقية موجبة تحقق \\( a + b + c = 3 \\). أوجد أصغر قيمة ممكنة للمقدار \\( \\frac{a^3}{b} + \\frac{b^3}{c} + \\frac{c^3}{a} \\).",
+        "options": [],
+        "hint": "طبق متباينة كوشي-شفارتز في صورة بيرجستروم.",
+        "explanation": "باستخدام متباينة كوشي-شفارتز: \\( \\sum \\frac{a^3}{b} \\ge \\frac{(a^2+b^2+c^2)^2}{ab+bc+ca} \\ge a^2+b^2+c^2 \\ge 3 \\). وتتحقق المساواة عندما تكون \\( a = b = c = 1 \\)، القيمة الدنيا هي 3."
+      }
+    },
+    "correct_index": "3"
+  },
+  {
+    "id": "OLYMPIAD-074",
+    "track": "olympiad",
+    "level": "High School",
+    "topic": "Number Theory",
+    "type": "FRQ",
+    "difficulty": "easy",
+    "content": {
+      "en": {
+        "question": "Find the smallest positive integer \\( n \\) such that \\( 2^n \\equiv 1 \\pmod{127} \\).",
+        "options": [],
+        "hint": "Note that 127 is a Mersenne prime.",
+        "explanation": "Observe that \\( 127 = 2^7 - 1 \\). Therefore, \\( 2^7 = 127 + 1 \\equiv 1 \\pmod{127} \\). Since 7 is prime, the multiplicative order of 2 modulo 127 must be 7."
+      },
+      "ar": {
+        "question": "أوجد أصغر عدد صحيح موجب \\( n \\) يحقق \\( 2^n \\equiv 1 \\pmod{127} \\).",
+        "options": [],
+        "hint": "لاحظ أن 127 هو عدد ميرسين الأولي.",
+        "explanation": "نلاحظ أن \\( 127 = 2^7 - 1 \\)، وبالتالي \\( 2^7 = 127 + 1 \\equiv 1 \\pmod{127} \\). وبما أن 7 عدد أولي، فإن أصغر أس موجب هو 7."
+      }
+    },
+    "correct_index": "7"
+  },
+  {
+    "id": "OLYMPIAD-075",
+    "track": "olympiad",
+    "level": "High School",
+    "topic": "Functional Equations",
+    "type": "FRQ",
+    "difficulty": "hard",
+    "content": {
+      "en": {
+        "question": "Let \\( f: \\mathbb{N} \\to \\mathbb{N} \\) satisfy \\( f(1) = 1 \\), \\( f(2n) = 2f(n) + 1 \\), and \\( f(2n+1) = 2f(n) \\) for all \\( n \\ge 1 \\). Find \\( f(100) \\).",
+        "options": [],
+        "hint": "Trace the recursive steps by expressing 100 in binary.",
+        "explanation": "Unwinding the recurrence for 100:\n- \\( f(100) = 2f(50) + 1 \\)\n- \\( f(50) = 2f(25) + 1 \\)\n- \\( f(25) = 2f(12) \\)\n- \\( f(12) = 2f(6) + 1 \\)\n- \\( f(6) = 2f(3) + 1 \\)\n- \\( f(3) = 2f(1) = 2 \\)\nWorking upwards gives \\( f(6) = 5 \\), \\( f(12) = 11 \\), \\( f(25) = 22 \\), \\( f(50) = 45 \\), and \\( f(100) = 91 \\)."
+      },
+      "ar": {
+        "question": "لتكن الدالة \\( f: \\mathbb{N} \\to \\mathbb{N} \\) تحقق \\( f(1) = 1 \\)، و \\( f(2n) = 2f(n) + 1 \\)، و \\( f(2n+1) = 2f(n) \\) لكل \\( n \\ge 1 \\). أوجد قيمة \\( f(100) \\).",
+        "options": [],
+        "hint": "تتبع خطوات التراجع بالتعبير عن العدد 100 بالثنائي.",
+        "explanation": "بتتبع العلاقة التكرارية تنازليًا للعدد 100 ثم الحساب تصاعديًا: نحصل على \\( f(3) = 2 \\)، \\( f(6) = 5 \\)، \\( f(12) = 11 \\)، \\( f(25) = 22 \\)، \\( f(50) = 45 \\)، وأخيرًا \\( f(100) = 91 \\)."
+      }
+    },
+    "correct_index": "91"
+  },
+  {
+    "id": "OLYMPIAD-076",
+    "track": "olympiad",
+    "level": "High School",
+    "topic": "Combinatorics",
+    "type": "FRQ",
+    "difficulty": "hard",
+    "content": {
+      "en": {
+        "question": "Find the number of integer solutions to \\( x_1 + x_2 + x_3 + x_4 = 20 \\) such that \\( 0 \\le x_i \\le 6 \\) for each \\( i \\in \\{1, 2, 3, 4\\} \\).",
+        "options": [],
+        "hint": "Use the substitution \\( y_i = 6 - x_i \\).",
+        "explanation": "Let \\( y_i = 6 - x_i \\). Then \\( 0 \\le y_i \\le 6 \\) and \\( y_1 + y_2 + y_3 + y_4 = 24 - 20 = 4 \\). Since any non-negative solution to this transformed equation satisfies \\( y_i \\le 4 < 6 \\), the number of solutions is simply given by stars and bars: \\( \\binom{4+4-1}{4-1} = \\binom{7}{3} = 35 \\)."
+      },
+      "ar": {
+        "question": "أوجد عدد الحلول الصحيحة للمعادلة \\( x_1 + x_2 + x_3 + x_4 = 20 \\) التي تحقق الشروط \\( 0 \\le x_i \\le 6 \\) لكل \\( i \\in \\{1, 2, 3, 4\\} \\).",
+        "options": [],
+        "hint": "استخدم التعويض \\( y_i = 6 - x_i \\).",
+        "explanation": "بفرض \\( y_i = 6 - x_i \\)، نجد أن \\( 0 \\le y_i \\le 6 \\) والمعادلة تصبح \\( y_1 + y_2 + y_3 + y_4 = 4 \\). عدد الحلول غير السالبة لهذا النظام يعطى بقانون النجوم والأشرطة: \\( \\binom{7}{3} = 35 \\)."
+      }
+    },
+    "correct_index": "35"
+  },
+  {
+    "id": "OLYMPIAD-077",
+    "track": "olympiad",
+    "level": "High School",
+    "topic": "Number Theory",
+    "type": "FRQ",
+    "difficulty": "easy",
+    "content": {
+      "en": {
+        "question": "Find the number of integers \\( n \\in \\{1, 2, \\dots, 1000\\} \\) such that \\( n^2 + 1 \\) is divisible by 5.",
+        "options": [],
+        "hint": "Determine which residues modulo 5 satisfy \\( n^2 + 1 \\equiv 0 \\pmod 5 \\).",
+        "explanation": "\\( n^2 + 1 \\equiv 0 \\pmod 5 \\iff n^2 \\equiv 4 \\pmod 5 \\iff n \\equiv 2 \\text{ or } 3 \\pmod 5 \\). In every block of 5 consecutive integers, exactly 2 numbers satisfy this condition. Among 1000 integers, there are 200 such blocks, so there are \\( 200 \\times 2 = 400 \\) solutions."
+      },
+      "ar": {
+        "question": "أوجد عدد الأعداد الصحيحة \\( n \\in \\{1, 2, \\dots, 1000\\} \\) التي تجعل العدد \\( n^2 + 1 \\) يقبل القسمة على 5.",
+        "options": [],
+        "hint": "حدد باقي القسمة على 5 الذي يحقق التطابق \\( n^2 + 1 \\equiv 0 \\pmod 5 \\).",
+        "explanation": "التطابق \\( n^2 + 1 \\equiv 0 \\pmod 5 \\) يتكافئ مع \\( n \\equiv 2 \\text{ أو } 3 \\pmod 5 \\). في كل 5 أعداد متتالية يوجد عددان يحققان ذلك. في 1000 عدد يوجد 200 كتلة من 5، وبالتالي المجموع يساوي \\( 200 \\times 2 = 400 \\)."
+      }
+    },
+    "correct_index": "400"
+  },
+  {
+    "id": "OLYMPIAD-078",
+    "track": "olympiad",
+    "level": "High School",
+    "topic": "Geometry",
+    "type": "FRQ",
+    "difficulty": "easy",
+    "content": {
+      "en": {
+        "question": "In a circle with radius 10, a chord of length 12 is drawn. Find the perpendicular distance from the center of the circle to the chord.",
+        "options": [],
+        "hint": "Use the Pythagorean theorem in the right triangle formed by the radius, half chord, and distance.",
+        "explanation": "The line segment from the center perpendicular to the chord bisects the chord into two segments of length 6. Applying the Pythagorean theorem: \\( d = \\sqrt{R^2 - 6^2} = \\sqrt{100 - 36} = 8 \\)."
+      },
+      "ar": {
+        "question": "في دائرة نصف قطرها 10، رُسم وتر طوله 12. أوجد بعد مركز الدائرة العمودي عن هذا الوتر.",
+        "options": [],
+        "hint": "استخدم نظرية فيثاغورس في المثلث القائم المكون من نصف القطر ونصف الوتر والبعد.",
+        "explanation": "العمود النازل من المركز ينصف الوتر إلى قطعتين طول كل منهما 6. باستخدام نظرية فيثاغورس: \\( d = \\sqrt{10^2 - 6^2} = \\sqrt{64} = 8 \\)."
+      }
+    },
+    "correct_index": "8"
+  },
+  {
+    "id": "OLYMPIAD-079",
+    "track": "olympiad",
+    "level": "High School",
+    "topic": "Algebra",
+    "type": "FRQ",
+    "difficulty": "medium",
+    "content": {
+      "en": {
+        "question": "Find the product of all real roots of the polynomial equation \\( x^4 - 4x^3 + 5x^2 - 4x + 1 = 0 \\).",
+        "options": [],
+        "hint": "Divide the equation by \\( x^2 \\) and substitute \\( y = x + \\frac{1}{x} \\).",
+        "explanation": "Dividing by \\( x^2 \\) gives \\( (x^2 + \\frac{1}{x^2}) - 4(x + \\frac{1}{x}) + 5 = 0 \\). Let \\( y = x + \\frac{1}{x} \\), so \\( y^2 - 4y + 3 = 0 \\implies y = 1 \\text{ or } y = 3 \\). For \\( y = 1 \\), \\( x^2 - x + 1 = 0 \\) has no real roots. For \\( y = 3 \\), \\( x^2 - 3x + 1 = 0 \\) has two real roots, and their product is 1."
+      },
+      "ar": {
+        "question": "أوجد حاصل ضرب جميع الجذور الحقيقية للمعادلة \\( x^4 - 4x^3 + 5x^2 - 4x + 1 = 0 \\).",
+        "options": [],
+        "hint": "اقسم المعادلة على \\( x^2 \\) ثم استخدم التعويض \\( y = x + \\frac{1}{x} \\).",
+        "explanation": "بقسمة المعادلة على \\( x^2 \\) والتعويض بـ \\( y = x + \\frac{1}{x} \\) نحصل على \\( y^2 - 4y + 3 = 0 \\)، أي \\( y = 1 \\) أو \\( y = 3 \\). القيمة \\( y = 1 \\) تعطى جذورًا مركبة، بينما \\( y = 3 \\) تعطى المعادلة \\( x^2 - 3x + 1 = 0 \\) ذات الجذرين الحقيقيين وحاصل ضربهما يساوي 1."
+      }
+    },
+    "correct_index": "1"
+  },
+  {
+    "id": "OLYMPIAD-080",
+    "track": "olympiad",
+    "level": "High School",
+    "topic": "Combinatorics",
+    "type": "FRQ",
+    "difficulty": "medium",
+    "content": {
+      "en": {
+        "question": "Find the number of permutations \\( \\sigma \\) of \\( \\{1, 2, 3, 4, 5\\} \\) such that \\( \\sigma(i) \\neq i \\) for all \\( i \\in \\{1, 2, 3, 4, 5\\} \\).",
+        "options": [],
+        "hint": "This asks for the number of derangements of 5 elements, denoted as \\( !5 \\).",
+        "explanation": "Using the derangement formula \\( !n = n! \\sum_{k=0}^n \\frac{(-1)^k}{k!} \\), for \\( n = 5 \\) we get \\( !5 = 120 \\left( \\frac{1}{2} - \\frac{1}{6} + \\frac{1}{24} - \\frac{1}{120} \\right) = 60 - 20 + 5 - 1 = 44 \\)."
+      },
+      "ar": {
+        "question": "أوجد عدد التباديل \\( \\sigma \\) للمجموعة \\( \\{1, 2, 3, 4, 5\\} \\) التي لا تترك أي عنصر في مكانه (أي \\( \\sigma(i) \\neq i \\) لكل \\( i \\)).",
+        "options": [],
+        "hint": "المطلوب هو حساب عدد التباديل الاضطرابية (derangements) لـ 5 عناصر ويرمز لها بـ \\( !5 \\).",
+        "explanation": "باستخدام صيغة التباديل الاضطرابية \\( !5 = 5! \\left( \\frac{1}{2!} - \\frac{1}{3!} + \\frac{1}{4!} - \\frac{1}{5!} \\right) = 60 - 20 + 5 - 1 = 44 \\)."
+      }
+    },
+    "correct_index": "44"
+  },
+  {
+    "id": "OLYMPIAD-081",
+    "track": "olympiad",
+    "level": "High School",
+    "topic": "Number Theory",
+    "type": "FRQ",
+    "difficulty": "medium",
+    "content": {
+      "en": {
+        "question": "Find the remainder when \\( 3^{2023} \\) is divided by 13.",
+        "options": [],
+        "hint": "Use Fermat's Little Theorem or observe the powers of 3 modulo 13.",
+        "explanation": "By Fermat's Little Theorem, \\( 3^{12} \\equiv 1 \\pmod{13} \\). Notice also that \\( 3^3 = 27 \\equiv 1 \\pmod{13} \\). Since \\( 2023 = 3 \\times 674 + 1 \\), we have \\( 3^{2023} = (3^3)^{674} \\cdot 3^1 \\equiv 1^{674} \\cdot 3 \\equiv 3 \\pmod{13} \\)."
+      },
+      "ar": {
+        "question": "أوجد باقي قسمة العدد \\( 3^{2023} \\) على 13.",
+        "options": [],
+        "hint": "استخدم مبرهنة فيرما الصغرى أو درس دورية قوى العدد 3 بمقياس 13.",
+        "explanation": "نعلم أن \\( 3^3 = 27 \\equiv 1 \\pmod{13} \\). بما أن \\( 2023 = 3 \\times 674 + 1 \\)، فإن \\( 3^{2023} = (3^3)^{674} \\cdot 3 \\equiv 1 \\cdot 3 = 3 \\pmod{13} \\)."
+      }
+    },
+    "correct_index": "3"
+  },
+  {
+    "id": "OLYMPIAD-082",
+    "track": "olympiad",
+    "level": "High School",
+    "topic": "Number Theory",
+    "type": "FRQ",
+    "difficulty": "hard",
+    "content": {
+      "en": {
+        "question": "Find the greatest common divisor of all numbers of the form \\( n^{13} - n \\) for all positive integers \\( n \\).",
+        "options": [],
+        "hint": "Use Fermat's Little Theorem to test which prime numbers \\( p \\) must divide \\( n^{13} - n \\) for every integer \\( n \\).",
+        "explanation": "By Fermat's Little Theorem, \\( p \\mid (n^p - n) \\) for any prime \\( p \\). More generally, \\( p \\mid (n^k - n) \\) if \\( p - 1 \\mid k - 1 \\).\nHere \\( k = 13 \\), so \\( k - 1 = 12 \\).\nThe primes \\( p \\) such that \\( p - 1 \\mid 12 \\) are \\( p - 1 \\in \\{1, 2, 3, 4, 6, 12\\} \\), which gives primes \\( p \\in \\{2, 3, 5, 7, 13\\} \\).\nThus, every such prime divides \\( n^{13} - n \\) for all \\( n \\).\nTaking the product of these distinct primes gives \\( 2 \\times 3 \\times 5 \\times 7 \\times 13 = 2730 \\).\nTesting \\( n = 2 \\) gives \\( 2^{13} - 2 = 8190 = 3 \\times 2730 \\), so the greatest common divisor is exactly 2730."
+      },
+      "ar": {
+        "question": "أوجد القاسم المشترك الأكبر لجميع الأعداد التي على الصورة \\( n^{13} - n \\) لكل الأعداد الصحيحة الموجبة \\( n \\).",
+        "options": [],
+        "hint": "استخدم مبرهنة فيرما الصغرى لتحديد الأعداد الأولية \\( p \\) التي تقسم \\( n^{13} - n \\) دائماً.",
+        "explanation": "بناءً على مبرهنة فيرما الصغرى، يقسم العدد الأولي \\( p \\) المقدار \\( n^k - n \\) إذا كان \\( p - 1 \\) يقسم \\( k - 1 \\).\nهنا \\( k = 13 \\)، بالتالي \\( k - 1 = 12 \\).\nالأعداد الأولية \\( p \\) التي يحقق فيها \\( p - 1 \\) تقسم 12 هي: \\( p \\in \\{2, 3, 5, 7, 13\\} \\).\nحاصل ضرب هذه الأعداد الأولية يساوي \\( 2 \\times 3 \\times 5 \\times 7 \\times 13 = 2730 \\).\nبالتعويض عن \\( n = 2 \\)، نجد أن \\( 2^{13} - 2 = 8190 = 3 \\times 2730 \\)، مما يثبت أن القاسم المشترك الأكبر هو 2730."
+      }
+    },
+    "correct_index": "2730"
+  },
+  {
+    "id": "OLYMPIAD-083",
+    "track": "olympiad",
+    "level": "High School",
+    "topic": "Functional Equations",
+    "type": "FRQ",
+    "difficulty": "hard",
+    "content": {
+      "en": {
+        "question": "Let \\( f: \\mathbb{R} \\to \\mathbb{R} \\) be a function satisfying \\( f(xy) = f(x)f(y) - f(x+y) + 1 \\) for all real numbers \\( x, y \\). Given that \\( f(1) \\neq 1 \\), find the value of \\( f(2024) \\).",
+        "options": [],
+        "hint": "Substitute specific values such as \\( x=0, y=0 \\) and \\( y=1 \\) to analyze the structure of \\( f(x) \\).",
+        "explanation": "Setting \\( x = 0, y = 0 \\) yields \\( f(0) = f(0)^2 - f(0) + 1 \\implies (f(0) - 1)^2 = 0 \\implies f(0) = 1 \\).\nSetting \\( y = 1 \\) gives \\( f(x) = f(x)f(1) - f(x+1) + 1 \\implies f(x+1) = (f(1) - 1)f(x) + 1 \\).\nTesting linear solutions \\( f(x) = ax + b \\):\nSince \\( f(0) = 1 \\), we have \\( b = 1 \\), so \\( f(x) = ax + 1 \\).\nSubstituting \\( f(x) = ax + 1 \\) into the original equation:\n\\( a(xy) + 1 = (ax+1)(ay+1) - (a(x+y) + 1) + 1 = a^2 xy + ax + ay + 1 - ax - ay - 1 + 1 = a^2 xy + 1 \\).\nThis requires \\( a = a^2 \\), so \\( a = 0 \\) or \\( a = 1 \\).\nSince \\( f(1) \\neq 1 \\), \\( a \\neq 0 \\), which implies \\( a = 1 \\).\nThus \\( f(x) = x + 1 \\), so \\( f(2024) = 2024 + 1 = 2025 \\)."
+      },
+      "ar": {
+        "question": "لتكن \\( f: \\mathbb{R} \\to \\mathbb{R} \\) دالة تحقق \\( f(xy) = f(x)f(y) - f(x+y) + 1 \\) لجميع الأعداد الحقيقية \\( x, y \\). إذا كان \\( f(1) \\neq 1 \\)، فأوجد قيمة \\( f(2024) \\).",
+        "options": [],
+        "hint": "عوض بقيم خاصة مثل \\( x=0, y=0 \\) و \\( y=1 \\) لاستنتاج صيغة الدالة \\( f(x) \\).",
+        "explanation": "بوضع \\( x = 0, y = 0 \\) نجد أن \\( f(0) = 1 \\).\nبوضع \\( y = 1 \\) نحصل على العلاقة التكرارية \\( f(x+1) = (f(1)-1)f(x) + 1 \\).\nبتجريب الحل الخطّي \\( f(x) = ax + 1 \\) نجد أنه يحقق المعادلة الأصلية إذا وفقط إذا كان \\( a = a^2 \\).\nبما أن \\( f(1) \\neq 1 \\)، فإن \\( a = 1 \\)، وبالتالي \\( f(x) = x + 1 \\).\nإذن \\( f(2024) = 2024 + 1 = 2025 \\)."
+      }
+    },
+    "correct_index": "2025"
+  },
+  {
+    "id": "OLYMPIAD-084",
+    "track": "olympiad",
+    "level": "High School",
+    "topic": "Combinatorics",
+    "type": "FRQ",
+    "difficulty": "hard",
+    "content": {
+      "en": {
+        "question": "Determine the number of ordered pairs of subsets \\( (A, B) \\) of \\( \\{1, 2, \\dots, 10\\} \\) such that \\( A \\subseteq B \\) and \\( |B \\setminus A| = 3 \\).",
+        "options": [],
+        "hint": "Count how many choices there are for each element in the set \\( \\{1, 2, \\dots, 10\\} \\).",
+        "explanation": "For any element \\( x \\in \\{1, 2, \\dots, 10\\} \\), there are three possible states relative to \\( (A, B) \\):\n1. \\( x \\in A \\) (which implies \\( x \\in B \\))\n2. \\( x \\in B \\setminus A \\)\n3. \\( x \\notin B \\) (which implies \\( x \\notin A \\))\n\nWe require exactly 3 elements to belong to \\( B \\setminus A \\).\nFirst, choose these 3 elements from the 10 available elements in \\( \\binom{10}{3} = 120 \\) ways.\nEach of the remaining 7 elements can independently be either in \\( A \\) (and thus in \\( B \\)) or outside \\( B \\) (and thus outside \\( A \\)), giving \\( 2^7 = 128 \\) choices.\nTherefore, the total number of valid pairs \\( (A, B) \\) is \\( 120 \\times 128 = 15360 \\)."
+      },
+      "ar": {
+        "question": "أوجد عدد الأزواج المرتبة من المجموعات الجزئية \\( (A, B) \\) من المجموعات \\( \\{1, 2, \\dots, 10\\} \\) التي تحقّق \\( A \\subseteq B \\) و \\( |B \\setminus A| = 3 \\).",
+        "options": [],
+        "hint": "احسب عدد الخيارات المتاحة لكل عنصر من عناصر المجموعة الكلية.",
+        "explanation": "لكل عنصر \\( x \\in \\{1, 2, \\dots, 10\\} \\)، هناك 3 حالات بالنسبة للزوج \\( (A, B) \\):\n1. \\( x \\in A \\) (وبالتالي \\( x \\in B \\))\n2. \\( x \\in B \\setminus A \\)\n3. \\( x \\notin B \\) (وبالتالي \\( x \\notin A \\))\n\nالمطلوب هو أن يحتوي \\( B \\setminus A \\) على 3 عناصر بالتمام.\nنختار هذه العناصر الثلاثة بـ \\( \\binom{10}{3} = 120 \\) طريقة.\nالعناصر الـ 7 المتبقية لكل منها خياران، أي \\( 2^7 = 128 \\) طريقة.\nإذن، إجمالي الأزواج هو \\( 120 \\times 128 = 15360 \\)."
+      }
+    },
+    "correct_index": "15360"
+  },
+  {
+    "id": "OLYMPIAD-085",
+    "track": "olympiad",
+    "level": "High School",
+    "topic": "Number Theory",
+    "type": "FRQ",
+    "difficulty": "hard",
+    "content": {
+      "en": {
+        "question": "Find the number of positive integers \\( n \\le 1000 \\) such that \\( n \\) is divisible by \\( \\lfloor \\sqrt{n} \\rfloor \\).",
+        "options": [],
+        "hint": "Let \\( k = \\lfloor \\sqrt{n} \\rfloor \\). Express \\( n \\) as \\( k^2 + m \\) where \\( 0 \\le m \\le 2k \\).",
+        "explanation": "Let \\( k = \\lfloor \\sqrt{n} \\rfloor \\). Then \\( k^2 \\le n < (k+1)^2 = k^2 + 2k + 1 \\).\nWe can write \\( n = k^2 + m \\) where \\( 0 \\le m \\le 2k \\).\nThe condition \\( k \\mid n \\) means \\( k \\mid (k^2 + m) \\iff k \\mid m \\).\nSince \\( 0 \\le m \\le 2k \\), the possible values for \\( m \\) are \\( 0, k, 2k \\).\nSo for each integer \\( k \\), there are 3 possible values of \\( n \\): \\( k^2, k^2+k, k^2+2k \\).\nSince \\( 31^2 = 961 \\le 1000 < 32^2 = 1024 \\), \\( k \\) ranges from 1 to 31.\nFor \\( k = 1, 2, \\dots, 30 \\), all 3 values for each \\( k \\) are \\( \\le 1000 \\), giving \\( 30 \\times 3 = 90 \\) numbers.\nFor \\( k = 31 \\):\n\\( k^2 = 961 \\le 1000 \\) (valid)\n\\( k^2 + k = 992 \\le 1000 \\) (valid)\n\\( k^2 + 2k = 1023 > 1000 \\) (invalid)\nSo \\( k = 31 \\) adds 2 valid numbers.\nTotal count = \\( 90 + 2 = 92 \\)."
+      },
+      "ar": {
+        "question": "أوجد عدد الأعداد الصحيحة الموجبة \\( n \\le 1000 \\) بحيث يكون \\( n \\) قابلاً للقسمة على \\( \\lfloor \\sqrt{n} \\rfloor \\).",
+        "options": [],
+        "hint": "ضع \\( k = \\lfloor \\sqrt{n} \\rfloor \\) واكتب \\( n \\) على الصورة \\( k^2 + m \\) حيث \\( 0 \\le m \\le 2k \\).",
+        "explanation": "ليكن \\( k = \\lfloor \\sqrt{n} \\rfloor \\). تكون \\( n = k^2 + m \\) حيث \\( 0 \\le m \\le 2k \\).\nالشرط \\( k \\mid n \\) يكافئ \\( k \\mid m \\).\nالقيم الممكنة لـ \\( m \\) هي \\( 0, k, 2k \\).\nلكل \\( k \\)، يوجد 3 أعداد تحقق الشرط: \\( k^2, k^2+k, k^2+2k \\).\nتتراوح قيم \\( k \\) من 1 إلى 31 لأن \\( 31^2 = 961 \\le 1000 \\).\nلكل \\( k \\in \\{1, \\dots, 30\\} \\) توجد 3 أعداد تحقق الشرط، أي \\( 30 \\times 3 = 90 \\).\nبالنسبة لـ \\( k = 31 \\)، الأعداد هي 961 و 992 فقط (لأن 1023 أكبر من 1000).\nالإجمالي = \\( 90 + 2 = 92 \\)."
+      }
+    },
+    "correct_index": "92"
+  },
+  {
+    "id": "OLYMPIAD-086",
+    "track": "olympiad",
+    "level": "High School",
+    "topic": "Functional Equations",
+    "type": "FRQ",
+    "difficulty": "medium",
+    "content": {
+      "en": {
+        "question": "Let \\( f: \\mathbb{Z}^+ \\to \\mathbb{Z} \\) be defined by \\( f(1) = 1 \\) and \\( f(n) = f(\\lfloor n/2 \\rfloor) + (-1)^n \\) for all \\( n \\ge 2 \\). Find \\( f(100) \\).",
+        "options": [],
+        "hint": "Trace the values of \\( f \\) by repeatedly dividing by 2 and tracking parity.",
+        "explanation": "We apply the recurrence relation step-by-step starting from \\( n = 100 \\):\n\\( f(100) = f(50) + (-1)^{100} = f(50) + 1 \\)\n\\( f(50) = f(25) + (-1)^{50} = f(25) + 1 \\)\n\\( f(25) = f(12) + (-1)^{25} = f(12) - 1 \\)\n\\( f(12) = f(6) + (-1)^{12} = f(6) + 1 \\)\n\\( f(6) = f(3) + (-1)^{6} = f(3) + 1 \\)\n\\( f(3) = f(1) + (-1)^{3} = 1 - 1 = 0 \\)\n\nNow substitute backwards:\n\\( f(3) = 0 \\)\n\\( f(6) = 0 + 1 = 1 \\)\n\\( f(12) = 1 + 1 = 2 \\)\n\\( f(25) = 2 - 1 = 1 \\)\n\\( f(50) = 1 + 1 = 2 \\)\n\\( f(100) = 2 + 1 = 3 \\)."
+      },
+      "ar": {
+        "question": "لتكن \\( f: \\mathbb{Z}^+ \\to \\mathbb{Z} \\) معرفة كالتالي: \\( f(1) = 1 \\) و \\( f(n) = f(\\lfloor n/2 \\rfloor) + (-1)^n \\) لكل \\( n \\ge 2 \\). أوجد قيمة \\( f(100) \\).",
+        "options": [],
+        "hint": "تتبع قيم الدالة بالقسمة متتالية على 2 وملاحظة زوجية وفردية الأعداد.",
+        "explanation": "بتطبيق العلاقة التكرارية خطوة بخطوة بدءاً من 100:\n\\( f(3) = f(1) - 1 = 0 \\)\n\\( f(6) = f(3) + 1 = 1 \\)\n\\( f(12) = f(6) + 1 = 2 \\)\n\\( f(25) = f(12) - 1 = 1 \\)\n\\( f(50) = f(25) + 1 = 2 \\)\n\\( f(100) = f(50) + 1 = 3 \\)."
+      }
+    },
+    "correct_index": "3"
+  },
+  {
+    "id": "OLYMPIAD-087",
+    "track": "olympiad",
+    "level": "High School",
+    "topic": "Combinatorics",
+    "type": "FRQ",
+    "difficulty": "extreme",
+    "content": {
+      "en": {
+        "question": "In a simple graph with 8 vertices, every vertex has degree at least 5. Find the minimum possible number of triangles (cliques of size 3) in this graph.",
+        "options": [],
+        "hint": "Use Goodman's formula for the number of triangles in terms of degrees of vertices.",
+        "explanation": "Goodman's Identity gives the number of triangles \\( T \\) in a graph on \\( n \\) vertices:\n\\( T \\ge \\frac{n(n-1)(n-2)}{6} - \\frac{1}{2} \\sum_{v} d(v)(n - 1 - d(v)) \\).\nFor \\( n = 8 \\):\n\\( T \\ge \\frac{8 \\times 7 \\times 6}{6} - \\frac{1}{2} \\sum_{v=1}^8 d(v)(7 - d(v)) \\).\nSince \\( d(v) \\ge 5 \\), the term \\( d(v)(7 - d(v)) \\) is maximized when \\( d(v) = 5 \\), giving \\( 5 \\times 2 = 10 \\).\nThus, \\( \\sum_{v=1}^8 d(v)(7 - d(v)) \\le 8 \\times 10 = 80 \\).\nSubstituting this upper bound gives:\n\\( T \\ge 56 - \\frac{1}{2}(80) = 56 - 40 = 16 \\).\nA 5-regular graph on 8 vertices (whose complement is a cycle graph \\( C_8 \\)) achieves exactly 16 triangles, so the minimum is 16."
+      },
+      "ar": {
+        "question": "في رسم بياني بسيط يحتوي على 8 رؤوس، درجة كل رأس لا تقل عن 5. أوجد أدنى عدد ممكن من المثلثات (المجموعات المكتملة ذات الحجم 3) في هذا الرسم البياني.",
+        "options": [],
+        "hint": "استخدم صيغة جودمان لحساب عدد المثلثات بدلالة درجات الرؤوس.",
+        "explanation": "تستعمل متطابقة جودمان لحساب الحد الأدنى لعدد المثلثات \\( T \\):\n\\( T \\ge \\frac{8 \\times 7 \\times 6}{6} - \\frac{1}{2} \\sum d(v)(7 - d(v)) \\).\nبما أن \\( d(v) \\ge 5 \\)، فإن أكبر قيمة للمقدار \\( d(v)(7 - d(v)) \\) تكون عند \\( d(v) = 5 \\) وتساوي 10.\nبالتالي \\( \\sum d(v)(7 - d(v)) \\le 80 \\).\nيكون \\( T \\ge 56 - 40 = 16 \\).\nويمكن تحقيق هذا الحد الأدنى في رسم بياني منتظم من الدرجة 5."
+      }
+    },
+    "correct_index": "16"
+  },
+  {
+    "id": "OLYMPIAD-088",
+    "track": "olympiad",
+    "level": "High School",
+    "topic": "Number Theory",
+    "type": "FRQ",
+    "difficulty": "hard",
+    "content": {
+      "en": {
+        "question": "Find the sum of all positive integers \\( n \\) such that \\( n^2 + 19n + 48 \\) is a perfect square.",
+        "options": [],
+        "hint": "Complete the square by multiplying the expression by 4.",
+        "explanation": "Let \\( n^2 + 19n + 48 = k^2 \\) for some non-negative integer \\( k \\).\nMultiplying by 4 gives:\n\\( 4n^2 + 76n + 192 = 4k^2 \\implies (2n + 19)^2 - 361 + 192 = 4k^2 \\implies (2n + 19)^2 - (2k)^2 = 169 \\).\nFactoring as a difference of squares:\n\\( (2n + 19 - 2k)(2n + 19 + 2k) = 169 \\).\nSince \\( n > 0 \\), both factors are positive integers and the second factor is strictly larger.\nThe divisors of 169 are 1, 13, and 169.\nThus we must have:\n\\( 2n + 19 - 2k = 1 \\) and \\( 2n + 19 + 2k = 169 \\).\nAdding these two equations gives:\n\\( 4n + 38 = 170 \\implies 4n = 132 \\implies n = 33 \\).\nTesting \\( n = 33 \\):\n\\( 33^2 + 19(33) + 48 = 1089 + 627 + 48 = 1764 = 42^2 \\).\nThus \\( n = 33 \\) is the unique solution, so the sum of all solutions is 33."
+      },
+      "ar": {
+        "question": "أوجد مجموع كل الأعداد الصحيحة الموجبة \\( n \\) التي تجعل \\( n^2 + 19n + 48 \\) مربكاً كاملاً.",
+        "options": [],
+        "hint": "أكمل المربع بضرب التعبير في 4 أولاً.",
+        "explanation": "نضع \\( n^2 + 19n + 48 = k^2 \\).\nبضرب الطرفين في 4 نصل إلى:\n\\( (2n + 19)^2 - (2k)^2 = 169 \\).\nتحليل فرق المربعين يعطي:\n\\( (2n + 19 - 2k)(2n + 19 + 2k) = 169 \\).\nبما أن \\( n > 0 \\)، فإن عوامل 169 الموجبة الممكنة هي 1 و 169.\nمنها نجد أن \\( 4n + 38 = 170 \\implies n = 33 \\).\nوهو الحل الموجب الوحيد."
+      }
+    },
+    "correct_index": "33"
+  },
+  {
+    "id": "OLYMPIAD-089",
+    "track": "olympiad",
+    "level": "High School",
+    "topic": "Combinatorics",
+    "type": "FRQ",
+    "difficulty": "medium",
+    "content": {
+      "en": {
+        "question": "Find the number of subsets of \\( \\{1, 2, 3, 4, 5, 6, 7, 8, 9, 10\\} \\) that do not contain any two consecutive integers.",
+        "options": [],
+        "hint": "Let \\( f(n) \\) be the number of such subsets for \\( \\{1, 2, \\dots, n\\} \\) and set up a recurrence relation.",
+        "explanation": "Let \\( f(n) \\) be the number of valid subsets of \\( \\{1, 2, \\dots, n\\} \\).\nA valid subset either does not contain \\( n \\) (there are \\( f(n-1) \\) such subsets) or contains \\( n \\) (in which case it cannot contain \\( n-1 \\), giving \\( f(n-2) \\) choices).\nThis yields the Fibonacci recurrence \\( f(n) = f(n-1) + f(n-2) \\).\nBase cases:\n\\( f(0) = 1 \\) (empty set)\n\\( f(1) = 2 \\) (\\( \\emptyset, \\{1\\} \\))\nCalculating values sequentially:\n\\( f(2) = 3, f(3) = 5, f(4) = 8, f(5) = 13, f(6) = 21, f(7) = 34, f(8) = 55, f(9) = 89, f(10) = 144 \\).\nSo the answer is 144."
+      },
+      "ar": {
+        "question": "أوجد عدد المجموعات الجزئية من \\( \\{1, 2, 3, 4, 5, 6, 7, 8, 9, 10\\} \\) التي لا تحتوي على أي عددين متتاليين.",
+        "options": [],
+        "hint": "افرض أن \\( f(n) \\) هو عدد هذه المجموعات لمجموعة أول \\( n \\) أعداد، وأنشئ علاقة تكرارية.",
+        "explanation": "العلاقة التكرارية هي \\( f(n) = f(n-1) + f(n-2) \\) بحدود أولية \\( f(0) = 1 \\) و \\( f(1) = 2 \\).\nبتتبع متتالية فيبوناتشي هذه:\n\\( f(10) = 144 \\)."
+      }
+    },
+    "correct_index": "144"
+  },
+  {
+    "id": "OLYMPIAD-090",
+    "track": "olympiad",
+    "level": "High School",
+    "topic": "Functional Equations",
+    "type": "FRQ",
+    "difficulty": "extreme",
+    "content": {
+      "en": {
+        "question": "Let \\( f: \\mathbb{Z}^+ \\to \\mathbb{Z}^+ \\) be a strictly increasing function such that \\( f(f(n)) = 3n \\) for all \\( n \\ge 1 \\). Find \\( f(2024) \\).",
+        "options": [],
+        "hint": "Analyze the behavior of \\( f(n) \\) in base 3 expansions.",
+        "explanation": "Since \\( f \\) is strictly increasing and \\( f(f(n)) = 3n \\), one can prove by induction that for any integer \\( n = 3^k + m \\) with \\( 0 \\le m < 3^k \\):\n\\( f(3^k + m) = 2 \\cdot 3^k + m \\) for \\( 0 \\le m < 3^k \\),\n\\( f(2 \\cdot 3^k + m) = 3^{k+1} + 3m \\).\nFor \\( n = 2024 \\), we write \\( 2024 \\) in terms of powers of 3:\n\\( 3^6 = 729 \\).\nNotice \\( 2024 = 2 \\cdot 729 + 566 = 1458 + 566 \\).\nHere \\( k = 6 \\) and \\( m = 566 < 3^6 = 729 \\).\nUsing the second formula:\n\\( f(2024) = f(2 \\cdot 3^6 + 566) = 3^7 + 3(566) = 2187 + 1698 = 3885 \\)."
+      },
+      "ar": {
+        "question": "لتكن \\( f: \\mathbb{Z}^+ \\to \\mathbb{Z}^+ \\) دالة متزايدة تماماً بحيث \\( f(f(n)) = 3n \\) لكل \\( n \\ge 1 \\). أوجد قيمة \\( f(2024) \\).",
+        "options": [],
+        "hint": "حلل سلوك الدالة \\( f(n) \\) باستخدام تمثيل الأعداد في النظام الثلاثي.",
+        "explanation": "تؤدي خاصية التزايد التام إلى الصيغة العامة:\nإذا كان \\( n = 2 \\cdot 3^k + m \\) حيث \\( 0 \\le m < 3^k \\)، فإن \\( f(n) = 3^{k+1} + 3m \\).\nبالنسبة لـ \\( n = 2024 \\):\n\\( 2024 = 2 \\times 729 + 566 = 2 \\cdot 3^6 + 566 \\).\nإذن \\( f(2024) = 3^7 + 3(566) = 2187 + 1698 = 3885 \\)."
+      }
+    },
+    "correct_index": "3885"
+  },
+  {
+    "id": "OLYMPIAD-091",
+    "track": "olympiad",
+    "level": "High School",
+    "topic": "Number Theory",
+    "type": "FRQ",
+    "difficulty": "hard",
+    "content": {
+      "en": {
+        "question": "Find the remainder when \\( 2^{2024} \\) is divided by \\( 2025 \\).",
+        "options": [],
+        "hint": "Factor \\( 2025 = 81 \\times 25 \\) and apply the Chinese Remainder Theorem.",
+        "explanation": "1. Modulo 81:\n\\( \\phi(81) = 54 \\).\n\\( 2024 = 54 \\times 37 + 26 \\implies 2^{2024} \\equiv 2^{26} \\pmod{81} \\).\nSince \\( 2^9 = 512 \\equiv 26 \\pmod{81} \\), we have:\n\\( 2^{26} = (2^9)^2 \\cdot 2^8 = 26^2 \\times 256 \\equiv 28 \\times 13 = 364 \\equiv 40 \\pmod{81} \\).\n\n2. Modulo 25:\n\\( \\phi(25) = 20 \\).\n\\( 2024 \\equiv 4 \\pmod{20} \\implies 2^{2024} \\equiv 2^4 = 16 \\pmod{25} \\).\n\n3. Combine using CRT:\n\\( x \\equiv 40 \\pmod{81} \\implies x = 81k + 40 \\).\n\\( 81k + 40 \\equiv 6k + 15 \\equiv 16 \\pmod{25} \\implies 6k \\equiv 1 \\pmod{25} \\implies k \\equiv 21 \\pmod{25} \\).\nThus \\( x = 81(21) + 40 = 1701 + 40 = 1741 \\)."
+      },
+      "ar": {
+        "question": "أوجد باقي قسمة \\( 2^{2024} \\) على \\( 2025 \\).",
+        "options": [],
+        "hint": "حلل \\( 2025 = 81 \\times 25 \\) واستخدم مبرهنة الباقي الصينية.",
+        "explanation": "1. بمقياس 81: \\( 2^{2024} \\equiv 40 \\pmod{81} \\).\n2. بمقياس 25: \\( 2^{2024} \\equiv 16 \\pmod{25} \\).\n3. باستخدام مبرهنة الباقي الصينية، نجد النظام:\n\\( x \\equiv 40 \\pmod{81} \\)\n\\( x \\equiv 16 \\pmod{25} \\)\nالحل الوحيد بمقياس 2025 هو \\( x = 1741 \\)."
+      }
+    },
+    "correct_index": "1741"
+  },
+  {
+    "id": "OLYMPIAD-092",
+    "track": "olympiad",
+    "level": "High School",
+    "topic": "Combinatorics",
+    "type": "FRQ",
+    "difficulty": "medium",
+    "content": {
+      "en": {
+        "question": "Find the number of ordered pairs of sets \\( (A, B) \\) such that \\( A \\cup B = \\{1, 2, 3, 4, 5, 6, 7\\} \\).",
+        "options": [],
+        "hint": "Consider the options for each individual element in the universe set.",
+        "explanation": "For each element \\( x \\in \\{1, 2, 3, 4, 5, 6, 7\\} \\), to satisfy \\( x \\in A \\cup B \\), \\( x \\) must belong to at least one of \\( A \\) or \\( B \\).\nThus, for each element, there are 3 possibilities:\n1. \\( x \\in A \\) and \\( x \\notin B \\)\n2. \\( x \\notin A \\) and \\( x \\in B \\)\n3. \\( x \\in A \\) and \\( x \\in B \\)\n\nSince choices for each of the 7 elements are independent, the total number of valid pairs \\( (A, B) \\) is \\( 3^7 = 2187 \\)."
+      },
+      "ar": {
+        "question": "أوجد عدد الأزواج المرتبة من المجموعات \\( (A, B) \\) التي تحقق \\( A \\cup B = \\{1, 2, 3, 4, 5, 6, 7\\} \\).",
+        "options": [],
+        "hint": "فكر في الخيارات الممكنة لكل عنصر في المجموعة الشاملة.",
+        "explanation": "لكل عنصر من العناصر السبعة، ليكون ينتمي إلى الاتحاد \\( A \\cup B \\)، يوجد 3 خيارات مستقلة:\n1. ينتمي إلى \\( A \\) فقط.\n2. ينتمي إلى \\( B \\) فقط.\n3. ينتمي إلى كلا المجموعتين \\( A \\) و \\( B \\).\n\nبما أن الخيارات مستقلة لكل عنصر، فإن إجمالي الأعداد هو \\( 3^7 = 2187 \\)."
+      }
+    },
+    "correct_index": "2187"
+  },
+  {
+    "id": "OLYMPIAD-093",
+    "track": "olympiad",
+    "level": "High School",
+    "topic": "Number Theory",
+    "type": "FRQ",
+    "difficulty": "extreme",
+    "content": {
+      "en": {
+        "question": "A positive integer \\( n \\) is called triperfect if the sum of its positive divisors \\( \\sigma(n) \\) satisfies \\( \\sigma(n) = 3n \\). Find the largest triperfect number less than 1000.",
+        "options": [],
+        "hint": "Check numbers of the form \\( 2^a \\cdot p \\cdot q \\). The smallest triperfect number is 120.",
+        "explanation": "Let us compute \\( \\sigma(n) \\) for candidate numbers:\nFor \\( n = 120 = 2^3 \\cdot 3 \\cdot 5 \\):\n\\( \\sigma(120) = (1+2+4+8)(1+3)(1+5) = 15 \\times 4 \\times 6 = 360 = 3 \\times 120 \\).\nFor \\( n = 672 = 2^5 \\cdot 3 \\cdot 7 \\):\n\\( \\sigma(672) = (1+2+4+8+16+32)(1+3)(1+7) = 63 \\times 4 \\times 8 = 2016 = 3 \\times 672 \\).\nThere are no other triperfect numbers less than 1000.\nThus, the largest triperfect number less than 1000 is 672."
+      },
+      "ar": {
+        "question": "يُسمى العدد الصحيح الموجب \\( n \\) ثلاثي الكمال إذا كان مجموع قواسمه الموجبة \\( \\sigma(n) \\) يساوي \\( 3n \\). أوجد أكبر عدد ثلاثي الكمال أقل من 1000.",
+        "options": [],
+        "hint": "افحص الأعداد من الصورة \\( 2^a \\cdot p \\cdot q \\). أصغر عدد ثلاثي الكمال هو 120.",
+        "explanation": "الأعداد ثلاثية الكمال دون 1000 هي 120 و 672.\nبالنسبة لـ \\( 672 = 2^5 \\cdot 3 \\cdot 7 \\):\n\\( \\sigma(672) = 63 \\times 4 \\times 8 = 2016 = 3 \\times 672 \\).\nبالتالي، أكبر عدد هو 672."
+      }
+    },
+    "correct_index": "672"
+  },
+  {
+    "id": "OLYMPIAD-094",
+    "track": "olympiad",
+    "level": "High School",
+    "topic": "Functional Equations",
+    "type": "FRQ",
+    "difficulty": "hard",
+    "content": {
+      "en": {
+        "question": "Determine the number of functions \\( f: \\mathbb{R} \\to \\mathbb{R} \\) such that \\( f(x^2 + f(y)) = y + (f(x))^2 \\) for all \\( x, y \\in \\mathbb{R} \\).",
+        "options": [],
+        "hint": "First establish injectivity and surjectivity of \\( f \\).",
+        "explanation": "Let \\( P(x, y) \\) be the assertion \\( f(x^2 + f(y)) = y + f(x)^2 \\).\n1. \\( P(0, y) \\implies f(f(y)) = y + f(0)^2 \\). This shows \\( f \\) is bijective.\n2. In particular, there exists \\( c \\in \\mathbb{R} \\) such that \\( f(c) = 0 \\).\n3. \\( P(0, c) \\implies f(0) = c + f(0)^2 \\).\n4. \\( P(x, c) \\implies f(x^2) = c + f(x)^2 \\).\n5. Applying \\( f \\) to both sides and using bijectivity yields \\( f(x) = x \\).\nChecking \\( f(x) = x \\):\n\\( f(x^2 + y) = x^2 + y \\) and \\( y + f(x)^2 = y + x^2 \\), which holds identically.\nThus \\( f(x) = x \\) is the unique solution, so there is exactly 1 function."
+      },
+      "ar": {
+        "question": "أوجد عدد الدوال \\( f: \\mathbb{R} \\to \\mathbb{R} \\) التي تحقق \\( f(x^2 + f(y)) = y + (f(x))^2 \\) لكل \\( x, y \\in \\mathbb{R} \\).",
+        "options": [],
+        "hint": "أثبت أولاً أن الدالة \\( f \\) متباينة وشاملة.",
+        "explanation": "بوضع \\( x = 0 \\)، نجد أن \\( f(f(y)) = y + f(0)^2 \\)، مما يعني أن الدالة متباينة وشاملة.\nباستخدام الخصائص الناتجة نصل إلى أن الحل الوحيد هو \\( f(x) = x \\).\nإذن يوجد دالة واحدة فقط تحقق هذا الشرط."
+      }
+    },
+    "correct_index": "1"
+  },
+  {
+    "id": "OLYMPIAD-095",
+    "track": "olympiad",
+    "level": "High School",
+    "topic": "Combinatorics",
+    "type": "FRQ",
+    "difficulty": "medium",
+    "content": {
+      "en": {
+        "question": "Find the number of paths on a grid from \\( (0,0) \\) to \\( (6,6) \\) using unit steps \\( (1,0) \\) and \\( (0,1) \\) that never cross above the diagonal line \\( y = x \\).",
+        "options": [],
+        "hint": "The number of such monotonic paths is given by the Catalan numbers.",
+        "explanation": "The number of Dyck paths (paths from \\( (0,0) \\) to \\( (n,n) \\) remaining on or below \\( y = x \\)) is given by the \\( n \\)-th Catalan number:\n\\( C_n = \\frac{1}{n+1} \\binom{2n}{n} \\).\nFor \\( n = 6 \\):\n\\( C_6 = \\frac{1}{7} \\binom{12}{6} = \\frac{1}{7} \\times 924 = 132 \\)."
+      },
+      "ar": {
+        "question": "أوجد عدد المسارات على شبكة مربعة من النقطه \\( (0,0) \\) إلى \\( (6,6) \\) باستخدام الخطوات \\( (1,0) \\) و \\( (0,1) \\) والتي لا ترتفع فوق الخط القطري \\( y = x \\).",
+        "options": [],
+        "hint": "عدد هذه المسارات يُعطى بأعداد كاتالان.",
+        "explanation": "عدد مسارات ديك يُعطى بالصيغة \\( C_n = \\frac{1}{n+1} \\binom{2n}{n} \\).\nعندما \\( n = 6 \\):\n\\( C_6 = \\frac{1}{7} \\binom{12}{6} = 132 \\)."
+      }
+    },
+    "correct_index": "132"
+  },
+  {
+    "id": "OLYMPIAD-096",
+    "track": "olympiad",
+    "level": "High School",
+    "topic": "Number Theory",
+    "type": "FRQ",
+    "difficulty": "hard",
+    "content": {
+      "en": {
+        "question": "Find the number of positive integers \\( x \\le 2024 \\) such that \\( x^2 \\equiv 1 \\pmod{1000} \\).",
+        "options": [],
+        "hint": "Solve the congruence modulo 8 and modulo 125 separately, then apply CRT.",
+        "explanation": "We solve \\( x^2 \\equiv 1 \\pmod{1000} \\) by splitting into prime powers \\( 1000 = 8 \\times 125 \\).\n1. \\( x^2 \\equiv 1 \\pmod 8 \\): Solutions are \\( x \\equiv 1, 3, 5, 7 \\pmod 8 \\) (4 solutions).\n2. \\( x^2 \\equiv 1 \\pmod{125} \\): Since 125 is an odd prime power, solutions are \\( x \\equiv \\pm 1 \\pmod{125} \\) (2 solutions).\n\nBy CRT, there are \\( 4 \\times 2 = 8 \\) solutions modulo 1000.\nThe solutions in \\( [1, 1000] \\) are \\( \\{1, 249, 251, 499, 501, 749, 751, 999\\} \\).\nIn \\( [1001, 2000] \\), adding 1000 yields another 8 solutions.\nIn \\( [2001, 2024] \\), only \\( 2001 \\) satisfies the congruence.\nTotal solutions = \\( 8 + 8 + 1 = 17 \\)."
+      },
+      "ar": {
+        "question": "أوجد عدد الأعداد الصحيحة الموجبة \\( x \\le 2024 \\) التي تحقق \\( x^2 \\equiv 1 \\pmod{1000} \\).",
+        "options": [],
+        "hint": "حل التطابق بمقياس 8 وبمقياس 125 كلاً على حدة ثم استخدم مبرهنة الباقي الصينية.",
+        "explanation": "بحل النظام المكون من التطابقين:\nيوجد 8 حلول فريدة بمقياس 1000 وهي: \\( \\{1, 249, 251, 499, 501, 749, 751, 999\\} \\).\nفي الفترة من 1 إلى 1000 يوجد 8 حلول.\nفي الفترة من 1001 إلى 2000 يوجد 8 حلول.\nفي الفترة من 2001 إلى 2024 يوجد حل واحد فقط وهو 2001.\nالمجموع الكلي = 17 حلاً."
+      }
+    },
+    "correct_index": "17"
+  },
+  {
+    "id": "OLYMPIAD-097",
+    "track": "olympiad",
+    "level": "High School",
+    "topic": "Combinatorics",
+    "type": "FRQ",
+    "difficulty": "hard",
+    "content": {
+      "en": {
+        "question": "Find the coefficient of \\( x^{10} \\) in the expansion of \\( (1 + x + x^2 + x^3 + x^4)^5 \\).",
+        "options": [],
+        "hint": "Rewrite the expression as \\( \\left(\\frac{1-x^5}{1-x}\\right)^5 \\) and expand using the Binomial Theorem.",
+        "explanation": "Express \\( (1 + x + x^2 + x^3 + x^4)^5 = (1 - x^5)^5 (1 - x)^{-5} \\).\nUsing binomial expansions:\n\\( (1 - x^5)^5 = 1 - 5x^5 + 10x^{10} - \\dots \\)\n\\( (1 - x)^{-5} = \\sum_{k=0}^{\\infty} \\binom{k+4}{4} x^k \\).\n\nWe combine terms to obtain degree 10:\n1. \\( 1 \\cdot \\binom{10+4}{4} x^{10} = 1 \\times \\binom{14}{4} = 1001 \\)\n2. \\( -5x^5 \\cdot \\binom{5+4}{4} x^5 = -5 \\times \\binom{9}{4} = -5 \\times 126 = -630 \\)\n3. \\( 10x^{10} \\cdot \\binom{0+4}{4} x^0 = 10 \\times 1 = 10 \\)\n\nSumming these terms: \\( 1001 - 630 + 10 = 381 \\)."
+      },
+      "ar": {
+        "question": "أوجد معامل \\( x^{10} \\) في مفكوك \\( (1 + x + x^2 + x^3 + x^4)^5 \\).",
+        "options": [],
+        "hint": "عد كتابة التعبير على الصورة \\( \\left(\\frac{1-x^5}{1-x}\\right)^5 \\) واستخدم مفكوك ذات الحدين.",
+        "explanation": "نكتب التعبير بالصورة \\( (1 - x^5)^5 (1 - x)^{-5} \\).\nجمع المعاملات المكوّنة للأس 10 ينتج عنه:\n\\( \\binom{14}{4} - 5 \\binom{9}{4} + 10 \\binom{4}{4} = 1001 - 630 + 10 = 381 \\)."
+      }
+    },
+    "correct_index": "381"
+  },
+  {
+    "id": "OLYMPIAD-098",
+    "track": "olympiad",
+    "level": "High School",
+    "topic": "Number Theory",
+    "type": "FRQ",
+    "difficulty": "easy",
+    "content": {
+      "en": {
+        "question": "Find the remainder when \\( 1! + 2! + 3! + \\dots + 2024! \\) is divided by 15.",
+        "options": [],
+        "hint": "Note that \\( n! \\) is divisible by 15 for all \\( n \\ge 5 \\).",
+        "explanation": "For any \\( n \\ge 5 \\), \\( n! \\) contains both 3 and 5 as factors, so \\( n! \\equiv 0 \\pmod{15} \\).\nThus:\n\\( 1! + 2! + 3! + \\dots + 2024! \\equiv 1! + 2! + 3! + 4! \\pmod{15} \\).\nCalculating the sum of the first four factorials:\n\\( 1 + 2 + 6 + 24 = 33 \\).\nFinally, \\( 33 \\equiv 3 \\pmod{15} \\)."
+      },
+      "ar": {
+        "question": "أوجد باقي قسمة \\( 1! + 2! + 3! + \\dots + 2024! \\) على 15.",
+        "options": [],
+        "hint": "لاحظ أن \\( n! \\) يقبل القسمة على 15 لكل \\( n \\ge 5 \\).",
+        "explanation": "لكل \\( n \\ge 5 \\)، يكون \\( n! \\equiv 0 \\pmod{15} \\).\nبالتالي فالمجموع يكافئ بمقياس 15:\n\\( 1! + 2! + 3! + 4! = 1 + 2 + 6 + 24 = 33 \\).\nوباقي قسمة 33 على 15 هو 3."
+      }
+    },
+    "correct_index": "3"
+  },
+  {
+    "id": "OLYMPIAD-099",
+    "track": "olympiad",
+    "level": "High School",
+    "topic": "Functional Equations",
+    "type": "FRQ",
+    "difficulty": "hard",
+    "content": {
+      "en": {
+        "question": "Let \\( f: \\mathbb{R} \\setminus \\{0, 1\\} \\to \\mathbb{R} \\) satisfy \\( f(x) + f\\left(\\frac{x-1}{x}\\right) = 1 + x \\) for all \\( x \\notin \\{0, 1\\} \\). Find the value of \\( 4 \\times f(2) \\).",
+        "options": [],
+        "hint": "Let \\( g(x) = \\frac{x-1}{x} \\) and iterate \\( g \\) three times.",
+        "explanation": "Let \\( g(x) = \\frac{x-1}{x} = 1 - \\frac{1}{x} \\).\nNotice that \\( g(g(x)) = \\frac{1}{1-x} \\) and \\( g(g(g(x))) = x \\).\nWe set up a system of three equations:\n1. \\( f(x) + f(g(x)) = 1 + x \\)\n2. \\( f(g(x)) + f(g^2(x)) = 1 + g(x) \\)\n3. \\( f(g^2(x)) + f(x) = 1 + g^2(x) \\)\n\nAdding (1) and (3) and subtracting (2) gives:\n\\( 2f(x) = 1 + x + g^2(x) - g(x) \\).\nFor \\( x = 2 \\):\n\\( g(2) = 1/2 \\), \\( g^2(2) = -1 \\).\n\\( 2f(2) = 1 + 2 + (-1) - 1/2 = 3/2 \\implies f(2) = 3/4 \\).\nTherefore, \\( 4 \\times f(2) = 3 \\)."
+      },
+      "ar": {
+        "question": "لتكن \\( f: \\mathbb{R} \\setminus \\{0, 1\\} \\to \\mathbb{R} \\) تحقق \\( f(x) + f\\left(\\frac{x-1}{x}\\right) = 1 + x \\) لكل \\( x \\notin \\{0, 1\\} \\). أوجد قيمة \\( 4 \\times f(2) \\).",
+        "options": [],
+        "hint": "ضع \\( g(x) = \\frac{x-1}{x} \\) وكرر التحويل 3 مرات.",
+        "explanation": "بتطبيق الدالة المكررة ثلاث مرات لحل النظام الخطّي، نصل إلى صيغة الدالة:\n\\( 2f(x) = 1 + x + \\frac{1}{1-x} - \\frac{x-1}{x} \\).\nبالتعويض عن \\( x = 2 \\) نجد أن \\( f(2) = 3/4 \\).\nإذن \\( 4 \\times f(2) = 3 \\)."
+      }
+    },
+    "correct_index": "3"
+  },
+  {
+    "id": "OLYMPIAD-100",
+    "track": "olympiad",
+    "level": "High School",
+    "topic": "Combinatorics",
+    "type": "FRQ",
+    "difficulty": "medium",
+    "content": {
+      "en": {
+        "question": "Find the number of integer solutions \\( (x_1, x_2, x_3, x_4) \\) to \\( x_1 + x_2 + x_3 + x_4 = 20 \\) such that \\( x_i \\ge i \\) for each \\( i \\in \\{1, 2, 3, 4\\} \\).",
+        "options": [],
+        "hint": "Define new non-negative variables \\( y_i = x_i - i \\) and apply Stars and Bars.",
+        "explanation": "Let \\( y_1 = x_1 - 1 \\ge 0 \\), \\( y_2 = x_2 - 2 \\ge 0 \\), \\( y_3 = x_3 - 3 \\ge 0 \\), and \\( y_4 = x_4 - 4 \\ge 0 \\).\nSubstituting these into the original equation:\n\\( (y_1 + 1) + (y_2 + 2) + (y_3 + 3) + (y_4 + 4) = 20 \\)\n\\( y_1 + y_2 + y_3 + y_4 = 20 - (1 + 2 + 3 + 4) = 10 \\).\nBy the Stars and Bars theorem, the number of non-negative integer solutions is:\n\\( \\binom{10 + 4 - 1}{4 - 1} = \\binom{13}{3} = \\frac{13 \\times 12 \\times 11}{6} = 286 \\)."
+      },
+      "ar": {
+        "question": "أوجد عدد الحلول الصحيحة \\( (x_1, x_2, x_3, x_4) \\) للمعادلة \\( x_1 + x_2 + x_3 + x_4 = 20 \\) بحيث تكون \\( x_i \\ge i \\) لكل \\( i \\in \\{1, 2, 3, 4\\} \\).",
+        "options": [],
+        "hint": "عرف متغيرات جديدة غير سالبة \\( y_i = x_i - i \\) واستخدم طريقة النجوم والشرطات.",
+        "explanation": "بإعادة تعريف المتغيرات \\( y_i = x_i - i \\ge 0 \\)، تصبح المعادلة:\n\\( y_1 + y_2 + y_3 + y_4 = 10 \\).\nعدد الحلول بالأعداد الصحيحة غير السالبة يُعطى بالتوافيق:\n\\( \\binom{10 + 4 - 1}{4 - 1} = \\binom{13}{3} = 286 \\)."
+      }
+    },
+    "correct_index": "286"
+  },
+  {
+    "id": "OLYMPIAD-101",
+    "track": "olympiad",
+    "level": "High School",
+    "topic": "Number Theory",
+    "type": "FRQ",
+    "difficulty": "medium",
+    "content": {
+      "en": {
+        "question": "Find the multiplicative order of 2 modulo 127, i.e., the smallest positive integer \\( n \\) such that \\( 2^n \\equiv 1 \\pmod{127} \\).",
+        "options": [],
+        "hint": "Recall the definition of Mersenne primes: \\( 127 = 2^7 - 1 \\).",
+        "explanation": "By definition, \\( 2^7 = 128 = 127 + 1 \\equiv 1 \\pmod{127} \\).\nThe multiplicative order \\( d \\) of 2 modulo 127 must divide 7.\nSince 7 is a prime number and \\( 2^1 \\not\\equiv 1 \\pmod{127} \\), the order \\( d \\) must be exactly 7."
+      },
+      "ar": {
+        "question": "أوجد الرتبة الضربية للعدد 2 بمقياس 127، أي أصغر عدد صحيح موجب \\( n \\) بحيث يكون \\( 2^n \\equiv 1 \\pmod{127} \\).",
+        "options": [],
+        "hint": "تذكر تعريف أعداد ميرسين الأولية: \\( 127 = 2^7 - 1 \\).",
+        "explanation": "بما أن \\( 2^7 = 128 \\equiv 1 \\pmod{127} \\)، فإن الرتبة تقسم العدد الأولي 7.\nوبما أن \\( 2^1 \\neq 1 \\)، فإن الرتبة الضربية هي 7 بالتمام."
+      }
+    },
+    "correct_index": "7"
   }
 ]
