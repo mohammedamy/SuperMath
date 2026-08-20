@@ -1,0 +1,25 @@
+[
+  {
+    "id": "NAF-G9-001",
+    "track": "nafes",
+    "level": "Intermediate 3 (Grade 9)",
+    "topic": "Basic Algebra",
+    "type": "MCQ",
+    "difficulty": "medium",
+    "content": {
+      "en": {
+        "question": "Solve the inequality for x: \\(-2x + 5 > 13\\)",
+        "options": ["x > -4", "x < -4", "x > 4", "x < 4"],
+        "hint": "Remember to flip the inequality sign when dividing by a negative number.",
+        "explanation": "Subtract 5 from both sides: \\(-2x > 8\\). Divide by -2 and flip the inequality direction: \\(x < -4\\)."
+      },
+      "ar": {
+        "question": "حل المتباينة التالية بالنسبة لـ \\(x\\): \\(-2x + 5 > 13\\)",
+        "options": ["x > -4", "x < -4", "x > 4", "x < 4"],
+        "hint": "تذكر عكس إشارة المتباينة عند القسمة على عدد سالب.",
+        "explanation": "اطرح 5 من الطرفين: \\(-2x > 8\\). اقسم على -2 واعكس اتجاه المتباينة: \\(x < -4\\)."
+      }
+    },
+    "correct_index": 1
+  }
+]

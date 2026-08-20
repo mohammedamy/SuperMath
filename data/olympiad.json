@@ -1,0 +1,25 @@
+[
+  {
+    "id": "OLY-HS-001",
+    "track": "olympiad",
+    "level": "High School (AMC 12 / IMO)",
+    "topic": "Number Theory",
+    "type": "FRQ",
+    "difficulty": "extreme",
+    "content": {
+      "en": {
+        "question": "Find all prime numbers \\(p\\) such that \\(p^2 + 2\\) is also a prime number.",
+        "options": [],
+        "hint": "Test small prime numbers first, then consider modulo 3 arithmetic.",
+        "explanation": "If \\(p = 3\\), then \\(3^2 + 2 = 11\\) (prime). If \\(p > 3\\), \\(p\\) is not divisible by 3, so \\(p \\equiv 1\\) or \\(2 \\pmod{3}\\). Thus \\(p^2 \\equiv 1 \\pmod{3}\\), which implies \\(p^2 + 2 \\equiv 0 \\pmod{3}\\). Hence \\(p^2 + 2\\) would be a multiple of 3 greater than 3 (composite). Therefore, \\(p = 3\\) is the unique solution."
+      },
+      "ar": {
+        "question": "أوجد جميع الأعداد الأولية \\(p\\) بحيث يكون \\(p^2 + 2\\) عدداً أولياً أيضاً.",
+        "options": [],
+        "hint": "اختبر الأعداد الأولية الصغيرة، ثم استخدم باقي القسمة على 3 (موديلو 3).",
+        "explanation": "نختبر \\(p = 3\\): فيكون \\(3^2 + 2 = 11\\) (عدد أولي). إذا كان \\(p > 3\\)، فإن \\(p\\) لا يقبل القسمة على 3، بالتالي \\(p \\equiv 1\\) أو \\(2 \\pmod{3}\\)، مما يعني أن \\(p^2 \\equiv 1 \\pmod{3}\\). إذن \\(p^2 + 2 \\equiv 3 \\equiv 0 \\pmod{3}\\). أي أن الرقم يقبل القسمة على 3 وبالتالي غير أولي. إذن الحل الوحيد هو \\(p = 3\\)."
+      }
+    },
+    "correct_index": "3"
+  }
+]

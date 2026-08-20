@@ -1,0 +1,35 @@
+[
+  {
+    "id": "JEE-ADV-001",
+    "track": "jee",
+    "level": "JEE Advanced (Grade 12)",
+    "topic": "Complex Numbers",
+    "type": "MCQ",
+    "difficulty": "hard",
+    "content": {
+      "en": {
+        "question": "Let \\(z_1\\) and \\(z_2\\) be two distinct complex numbers such that \\(|z_1| = |z_2| = 1\\). Which statement is ALWAYS true?",
+        "options": [
+          "\\(\\text{Re}(z_1 \\overline{z}_2) < 1\\)",
+          "The distance between \\(z_1\\) and \\(z_2\\) is \\(|z_1 - z_2|\\)",
+          "\\(\\text{arg}(z_1 / z_2) = \\text{arg}(z_1) - \\text{arg}(z_2)\\)",
+          "\\(z_1 + z_2\\) always lies on the unit circle"
+        ],
+        "hint": "Consider the geometric modulus definition on the unit circle.",
+        "explanation": "Option B is definitionally true as distance between two complex numbers is given by the modulus of their difference."
+      },
+      "ar": {
+        "question": "ليكن \\(z_1\\) و \\(z_2\\) عددين مركبين مختلفين بحيث \\(|z_1| = |z_2| = 1\\). أي عبارة مما يلي صحيحة دائمًا؟",
+        "options": [
+          "الجزء الحقيقي \\(\\text{Re}(z_1 \\overline{z}_2) < 1\\)",
+          "المسافة بين \\(z_1\\) و \\(z_2\\) هي \\(|z_1 - z_2|\\)",
+          "سعة \\(\\text{arg}(z_1 / z_2) = \\text{arg}(z_1) - \\text{arg}(z_2)\\)",
+          "الجمع \\(z_1 + z_2\\) يقع دائماً على دائرة الوحدة"
+        ],
+        "hint": "فكر في التعريف الهندسي للمقياس على دائرة الوحدة.",
+        "explanation": "الخيار الثاني صحيح بالتعريف الهندسي؛ حيث المسافة بين أي أعداد مركبة هي مقياس الفرق بينهما."
+      }
+    },
+    "correct_index": 1
+  }
+]

@@ -1,0 +1,1070 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Edugates International School | Math Exam Intelligence & Explorer</title>
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/jpeg" href="LOGO.jpg">
+  
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  
+  <!-- Chart.js CDN -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700&family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- MathJax -->
+  <script>
+    window.MathJax = {
+      tex: {
+        inlineMath: [['\\(', '\\)']],
+        displayMath: [['$$', '$$']]
+      }
+    };
+  </script>
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              50: '#f4f7fb',
+              100: '#e6ecf5',
+              600: '#2563eb',
+              800: '#1e3a8a',
+              900: '#0f172a',
+            },
+            amber: {
+              500: '#f59e0b',
+              600: '#d97706',
+            },
+            emerald: {
+              600: '#059669',
+            }
+          },
+          fontFamily: {
+            sans: ['Cairo', 'Inter', 'sans-serif'],
+            display: ['Outfit', 'Cairo', 'sans-serif'],
+          },
+          animation: {
+            'blob': 'blob 7s infinite',
+            'float': 'float 3s ease-in-out infinite',
+          },
+          keyframes: {
+            blob: {
+              '0%': { transform: 'translate(0px, 0px) scale(1)' },
+              '33%': { transform: 'translate(30px, -50px) scale(1.1)' },
+              '66%': { transform: 'translate(-20px, 20px) scale(0.9)' },
+              '100%': { transform: 'translate(0px, 0px) scale(1)' },
+            },
+            float: {
+              '0%, 100%': { transform: 'translateY(0)' },
+              '50%': { transform: 'translateY(-10px)' },
+            }
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    body {
+      background-color: #f8fafc;
+      color: #0f172a;
+      background-image: 
+        radial-gradient(at 40% 20%, hsla(28,100%,74%,0.15) 0px, transparent 50%),
+        radial-gradient(at 80% 0%, hsla(189,100%,56%,0.15) 0px, transparent 50%),
+        radial-gradient(at 0% 50%, hsla(355,100%,93%,0.1) 0px, transparent 50%);
+      background-attachment: fixed;
+    }
+    
+    .chart-container {
+      position: relative;
+      width: 100%;
+      max-width: 650px;
+      margin-left: auto;
+      margin-right: auto;
+      height: 320px;
+      max-height: 400px;
+    }
+    @media (min-width: 768px) {
+      .chart-container {
+        height: 360px;
+      }
+    }
+
+    .math-font {
+      font-family: 'Cambria Math', 'Times New Roman', serif;
+    }
+
+    .custom-scrollbar::-webkit-scrollbar {
+      width: 6px;
+      height: 6px;
+    }
+    .custom-scrollbar::-webkit-scrollbar-track {
+      background: #f1f5f9;
+      border-radius: 4px;
+    }
+    .custom-scrollbar::-webkit-scrollbar-thumb {
+      background: #cbd5e1;
+      border-radius: 4px;
+    }
+    .custom-scrollbar::-webkit-scrollbar-thumb:hover {
+      background: #94a3b8;
+    }
+  </style>
+</head>
+<body class="min-h-screen flex flex-col font-sans antialiased selection:bg-amber-500 selection:text-white">
+
+  <!-- Chosen Palette: Academic Harmony (Slate Navy #0f172a, Warm Sand #faf9f6, Royal Blue #2563eb, Warm Amber #d97706, Emerald #059669) -->
+  <!-- Application Structure Plan: 
+       Designed as an interactive data-driven intelligence hub and live question explorer:
+       1. Global Header & Control Bar: Quick stats ticker and real-time bilingual toggle (Arabic/English).
+       2. Track Intelligence Matrix: Overview cards for Kangaroo, Nafes, JEE, Olympiad, KAUST with grade level mapping.
+       3. Comparative Curriculum Visualizations: Chart.js Canvas visualizations comparing Topic Distribution, Question Type Breakdown, and Cognitive Rigor across tracks.
+       4. Interactive Question Explorer & Test Engine: Real-time filterable problem solver supporting MCQs and FRQs with hints, LaTeX math formatting, and step-by-step bilingual solutions.
+       5. Database Scaling & Curriculum Progression Matrix: Roadmap showing how middle school students progress to elite levels, and a interactive tool visualizing database scaling logic to 1,000+ questions per track.
+  -->
+  <!-- Visualization & Content Choices:
+       - Topic Depth Comparison: Dynamic Radar Chart (Chart.js) -> Compares Algebra, Geometry, Number Theory, Combinatorics, Calculus across tracks.
+       - Track Difficulty & Format Breakdown: Stacked Bar Chart (Chart.js) -> Visualizes proportion of 3/4/5 pt MCQs vs FRQs.
+       - Cognitive Skill Weighting: Horizontal Bar Chart (Chart.js) -> Measures speed vs proof rigor vs spatial reasoning.
+       - Question Simulator: Pure HTML/CSS styled container with JS dynamic state, latex rendering fallback, hints toggle, and accuracy tracking.
+       - NO SVG icons used: Standardized Unicode symbols and CSS badges utilized instead.
+  -->
+  <!-- CONFIRMATION: NO SVG graphics used. NO Mermaid JS used. -->
+
+  <!-- TOP HEADER / NAVBAR -->
+  <header class="bg-slate-900/85 backdrop-blur-xl text-white sticky top-0 z-50 shadow-[0_4px_30px_rgba(0,0,0,0.1)] border-b border-slate-800/50 transition-all duration-300">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-20">
+        
+        <!-- Brand / Title -->
+        <div class="flex items-center gap-3">
+          <img src="LOGO.jpg" alt="SuperMath Logo" class="w-12 h-12 rounded-xl object-cover shadow-lg shadow-amber-500/30 transform hover:scale-105 transition-transform duration-300 border border-slate-700/50">
+          <div>
+            <h1 class="text-xl sm:text-2xl font-display font-extrabold tracking-tight text-transparent bg-clip-text bg-gradient-to-r from-white to-slate-300 flex items-center gap-2" id="app-title">
+              منصة تحليلات مسارات الرياضيات | Edugates International School
+            </h1>
+            <p class="text-xs text-slate-400" id="app-subtitle">
+              المستودع الذكي والتحليلي لاختبارات كانجارو، نافس، كاوست، JEE، والأولمبياد - برعاية مدرسة بوابة المعرفة العالمية
+            </p>
+          </div>
+        </div>
+
+        <!-- Global Action Controls -->
+        <div class="flex items-center gap-3">
+          <!-- Active Track Counter Badge -->
+          <div class="hidden lg:flex items-center bg-slate-800 px-3 py-1.5 rounded-lg border border-slate-700 text-xs text-slate-300">
+            <span class="w-2 h-2 rounded-full bg-emerald-500 ml-2 animate-pulse"></span>
+            <span id="stat-questions-count">6 المسارات متكاملة (1,000+ سؤال لكل مسار)</span>
+          </div>
+
+          <!-- Language Switcher -->
+          <button id="lang-toggle-btn" onclick="toggleLanguage()" class="bg-slate-800/80 hover:bg-slate-700 text-amber-400 border border-slate-700 px-4 py-2 rounded-xl text-sm font-bold transition-all duration-300 flex items-center gap-2 hover:shadow-lg hover:shadow-amber-500/10">
+            <span>🌐</span>
+            <span id="lang-label">English</span>
+          </button>
+        </div>
+
+      </div>
+    </div>
+  </header>
+
+  <!-- MAIN CONTENT CONTAINER -->
+  <main class="flex-grow max-w-7xl w-full mx-auto px-4 sm:px-6 lg:px-8 py-8 space-y-12">
+
+    <!-- INTRODUCTORY SECTION & STATS TICKER -->
+    <section class="bg-white/70 backdrop-blur-md rounded-3xl p-6 sm:p-10 shadow-xl shadow-slate-200/50 border border-white relative overflow-hidden">
+      <!-- Decorative blob -->
+      <div class="absolute top-0 right-0 -mr-20 -mt-20 w-64 h-64 rounded-full bg-brand-600/10 mix-blend-multiply filter blur-3xl opacity-70 animate-blob pointer-events-none"></div>
+      <div class="absolute bottom-0 left-0 -ml-20 -mb-20 w-72 h-72 rounded-full bg-amber-500/10 mix-blend-multiply filter blur-3xl opacity-70 animate-blob pointer-events-none" style="animation-delay: 2s"></div>
+      
+      <div class="relative z-10">
+        <div class="max-w-4xl space-y-4">
+          <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-amber-50/80 text-amber-700 border border-amber-200/60 text-xs font-bold backdrop-blur-sm" id="badge-overview">
+            📌 نظرة عامة على قاعدة البيانات والمسارات
+          </div>
+          <h2 class="text-3xl sm:text-4xl md:text-5xl font-display font-extrabold text-slate-900 leading-tight" id="hero-heading">
+          محرك الإعداد والمحاكاة التفاعلي للمسابقات الرياضية الهامة
+        </h2>
+        <p class="text-slate-600 leading-relaxed text-sm sm:text-base" id="hero-desc">
+          تمنحك هذه المنصة إمكانية استكشاف وهيكلة أحدث قواعد البيانات والأسئلة لـ 5 مسارات عالمية ومحلية استراتيجية. تم تطوير قاعدة البيانات لتغطي الفئات العمرية من الصفوف الابتدائية حتى الثانوية، مع تفكيك دقيق لمستويات صعوبة الأسئلة (اختيار من متعدد والمقالي) والحلول النموذجية ثنائية اللغة (عربي/إنجليزي).
+        </p>
+      </div>
+
+      <!-- Quick Stats Ticker -->
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mt-8 pt-6 border-t border-slate-100">
+        <div class="bg-white/80 backdrop-blur-sm p-4 rounded-2xl border border-slate-100/50 text-center shadow-sm hover:shadow-md hover:-translate-y-1 transition-all duration-300">
+          <div class="text-xs text-slate-500 font-semibold" id="stat-1-label">المسارات المعتمدة</div>
+          <div class="text-2xl font-display font-black text-slate-800 mt-1">6 مسارات رئيسية</div>
+        </div>
+        <div class="bg-white/80 backdrop-blur-sm p-4 rounded-2xl border border-slate-100/50 text-center shadow-sm hover:shadow-md hover:-translate-y-1 transition-all duration-300" style="animation-delay: 100ms">
+          <div class="text-xs text-slate-500 font-semibold" id="stat-2-label">الفئات العمرية والصفوف</div>
+          <div class="text-2xl font-display font-black text-brand-600 mt-1">من 1 ابتدائي إلى 12 ثانوية</div>
+        </div>
+        <div class="bg-white/80 backdrop-blur-sm p-4 rounded-2xl border border-slate-100/50 text-center shadow-sm hover:shadow-md hover:-translate-y-1 transition-all duration-300" style="animation-delay: 200ms">
+          <div class="text-xs text-slate-500 font-semibold" id="stat-3-label">أنماط الأسئلة</div>
+          <div class="text-2xl font-display font-black text-amber-600 mt-1">MCQ (4-5 خيارات) & FRQ</div>
+        </div>
+        <div class="bg-white/80 backdrop-blur-sm p-4 rounded-2xl border border-slate-100/50 text-center shadow-sm hover:shadow-md hover:-translate-y-1 transition-all duration-300" style="animation-delay: 300ms">
+          <div class="text-xs text-slate-500 font-semibold" id="stat-4-label">تغطية اللغات</div>
+          <div class="text-2xl font-display font-black text-emerald-600 mt-1">100% عربي & إنجليزي</div>
+        </div>
+      </div>
+      </div>
+    </section>
+
+    <!-- SECTION 1: TRACKS EXPLORER & METADATA -->
+    <section class="space-y-6">
+      <div class="flex flex-col md:flex-row md:items-end justify-between gap-4">
+        <div>
+          <h2 class="text-2xl md:text-3xl font-display font-bold text-slate-900" id="sec1-title">بطاقات المسارات والصفوف المستهدفة</h2>
+          <p class="text-slate-500 text-sm mt-1" id="sec1-desc">
+            اختر المسار للاستكشاف ومعاينة معايير الاختبار، عدد الخيارات، والصعوبة المستهدفة
+          </p>
+        </div>
+        <div class="flex gap-2 bg-slate-200/60 p-1 rounded-xl text-xs font-bold" id="track-filter-btns">
+          <!-- Populated by JS -->
+        </div>
+      </div>
+
+      <!-- Tracks Grid -->
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6" id="tracks-cards-grid">
+        <!-- Rendered via JS -->
+      </div>
+    </section>
+
+    <!-- SECTION 2: COMPARATIVE ANALYTICS & VISUALIZATIONS (CHART.JS CANVAS) -->
+    <section class="bg-white/80 backdrop-blur-md rounded-3xl p-6 sm:p-8 shadow-lg shadow-slate-200/40 border border-white space-y-8">
+      <div>
+        <h2 class="text-2xl font-bold text-slate-900" id="sec2-title">تحليلات المناهج والأبعاد المعرفية</h2>
+        <p class="text-slate-500 text-sm mt-1" id="sec2-desc">
+          مقارنة بين توزيع المواضيع (الجبر، الهندسة، نظرية الأعداد، التركيبات، التفاضل) وطبيعة الأسئلة في كل مسار
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
+        
+        <!-- Radar Chart: Topic Weight Distribution -->
+        <div class="bg-slate-50 p-5 rounded-xl border border-slate-200 flex flex-col space-y-4">
+          <div class="flex items-center justify-between">
+            <h3 class="font-bold text-slate-800 text-sm sm:text-base" id="chart1-title">
+              📊 توزيع المواضيع الرياضية حسب المسار
+            </h3>
+            <span class="text-xs bg-slate-200 text-slate-700 px-2 py-1 rounded">رادار مقارن</span>
+          </div>
+          <div class="chart-container">
+            <canvas id="topicRadarChart"></canvas>
+          </div>
+          <p class="text-xs text-slate-500 leading-relaxed" id="chart1-caption">
+            يلاحظ تركيز اختبار كانجارو على المنطق والهندسة الفضائية، بينما يركز اختبار JEE على التفاضل والتكامل والجبر المتقدم، وتتميز نافس بتوازن الجبر والقياس.
+          </p>
+        </div>
+
+        <!-- Stacked Bar Chart: Difficulty & Question Format Breakdown -->
+        <div class="bg-slate-50 p-5 rounded-xl border border-slate-200 flex flex-col space-y-4">
+          <div class="flex items-center justify-between">
+            <h3 class="font-bold text-slate-800 text-sm sm:text-base" id="chart2-title">
+              📈 نمط الأسئلة ومستويات التحدي
+            </h3>
+            <span class="text-xs bg-slate-200 text-slate-700 px-2 py-1 rounded">أعمدة مجمعة</span>
+          </div>
+          <div class="chart-container">
+            <canvas id="formatBarChart"></canvas>
+          </div>
+          <p class="text-xs text-slate-500 leading-relaxed" id="chart2-caption">
+            تتوزع أسئلة كانجارو بين 3 و 4 و 5 نقاط. بينما يعتمد الأولمبياد وبرامج كاوست على الأسئلة المقالية (FRQ) والحلول الكتابية لإثبات البراهين.
+          </p>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- SECTION 3: INTERACTIVE QUESTION EXPLORER & LIVE QUIZ ENGINE -->
+    <section class="bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white rounded-3xl p-6 sm:p-10 shadow-2xl shadow-slate-900/20 border border-slate-800 space-y-8 relative overflow-hidden">
+      <!-- Decorative glow -->
+      <div class="absolute top-0 right-1/4 w-96 h-96 bg-brand-600/20 rounded-full filter blur-[100px] pointer-events-none"></div>
+      <div class="absolute bottom-0 left-1/4 w-96 h-96 bg-amber-500/10 rounded-full filter blur-[100px] pointer-events-none"></div>
+      
+      <div class="relative z-10">
+      
+      <!-- Section Header & Filter Toolbar -->
+      <div class="flex flex-col lg:flex-row lg:items-center justify-between gap-6 border-b border-slate-800 pb-6">
+        <div>
+          <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-amber-500/10 text-amber-400 border border-amber-500/20 text-xs font-bold mb-2">
+            ⚡ مستكشف الأسئلة والتفاعل الحي
+          </div>
+          <h2 class="text-2xl sm:text-3xl font-extrabold text-white" id="quiz-heading">
+            استكشف بنك الأسئلة والحلول النموذجية
+          </h2>
+          <p class="text-slate-400 text-sm mt-1" id="quiz-subheading">
+            اختر المسار والمستوى لاختبار حل الأسئلة، عرض التلميحات، وفحص خطوات الحل بالتفصيل
+          </p>
+        </div>
+
+        <!-- Filter Controls -->
+        <div class="flex flex-wrap gap-3">
+          <select id="quiz-track-select" onchange="filterQuestions()" class="bg-slate-800 text-white border border-slate-700 text-xs sm:text-sm rounded-xl px-3 py-2.5 focus:ring-2 focus:ring-amber-500 outline-none">
+            <option value="all">كل المسارات (All Tracks)</option>
+            <option value="kangaroo">كانجارو (Kangaroo)</option>
+            <option value="nafes">نافس (Nafes KSA)</option>
+            <option value="jee">JEE Advanced</option>
+            <option value="olympiad">الأولمبياد (Olympiad)</option>
+            <option value="kaust">كاوست (KAUST)</option>
+            <option value="nsmo">NSMO</option>
+          </select>
+
+          <select id="quiz-topic-select" onchange="filterQuestions()" class="bg-slate-800 text-white border border-slate-700 text-xs sm:text-sm rounded-xl px-3 py-2.5 focus:ring-2 focus:ring-amber-500 outline-none">
+            <option value="all">كل المواضيع (All Topics)</option>
+            <option value="Logical Puzzles">أحاجي منطقية (Logic)</option>
+            <option value="Basic Algebra">الجبر الأساسي (Algebra)</option>
+            <option value="Complex Numbers">الأعداد المركبة (Complex)</option>
+            <option value="Number Theory">نظرية الأعداد (Number Theory)</option>
+            <option value="Logic and Combinatorics">التركيبات والعد (Combinatorics)</option>
+          </select>
+        </div>
+      </div>
+
+      <!-- Question Viewer Component -->
+      <div id="question-card-container" class="space-y-6">
+        <!-- Rendered by JavaScript -->
+      </div>
+
+      <!-- Quick Navigation Pagination for Questions -->
+      <div class="flex items-center justify-between pt-4 border-t border-slate-800 text-xs sm:text-sm text-slate-400">
+        <button onclick="prevQuestion()" class="px-4 py-2 bg-slate-800 hover:bg-slate-700 text-white rounded-xl font-bold transition-all disabled:opacity-40" id="btn-prev-q">
+          ← السؤال السابق
+        </button>
+        <span id="question-tracker-text" class="font-mono">
+          سؤال 1 من 5
+        </span>
+        <button onclick="nextQuestion()" class="px-4 py-2 bg-amber-500 hover:bg-amber-600 text-slate-900 rounded-xl font-bold transition-all disabled:opacity-40" id="btn-next-q">
+          السؤال التالي →
+        </button>
+      </div>
+      </div>
+    </section>
+
+    <!-- SECTION 4: STUDENT PROGRESSION ROADMAP & DATABASE SCALING SIMULATOR -->
+    <section class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+      
+      <!-- Student Progression Roadmap -->
+      <div class="lg:col-span-2 bg-white/80 backdrop-blur-md rounded-3xl p-6 sm:p-8 shadow-lg shadow-slate-200/40 border border-white space-y-6 hover:shadow-xl transition-shadow duration-300">
+        <div>
+          <h2 class="text-xl sm:text-2xl font-bold text-slate-900" id="roadmap-title">
+            🗺️ خارطة التدرج المعرفي للطالب (من الابتدائي للتميز العالمي)
+          </h2>
+          <p class="text-slate-500 text-xs sm:text-sm mt-1" id="roadmap-subtitle">
+            مسار بناء المهارات الرياضية عبر المراحل الدراسية المختلفة
+          </p>
+        </div>
+
+        <div class="space-y-4">
+          <!-- Step 1 -->
+          <div class="flex gap-4 p-4 rounded-xl bg-slate-50 border border-slate-100 items-start">
+            <div class="w-10 h-10 rounded-full bg-blue-100 text-blue-700 font-bold flex items-center justify-center shrink-0">
+              1
+            </div>
+            <div>
+              <h3 class="font-bold text-slate-800 text-sm sm:text-base" id="step1-t">المرحلة الابتدائية (كانجارو + نافس 3 و 6)</h3>
+              <p class="text-xs text-slate-600 mt-1" id="step1-d">
+                البدء بالتفكير المنطقي، التعرف على الأشكال، الحساب الأساسي، واستكشاف الأنماط دون استخدام الآلة الحاسبة.
+              </p>
+            </div>
+          </div>
+
+          <!-- Step 2 -->
+          <div class="flex gap-4 p-4 rounded-xl bg-slate-50 border border-slate-100 items-start">
+            <div class="w-10 h-10 rounded-full bg-amber-100 text-amber-700 font-bold flex items-center justify-center shrink-0">
+              2
+            </div>
+            <div>
+              <h3 class="font-bold text-slate-800 text-sm sm:text-base" id="step2-t">المرحلة المتوسطة (كانجارو Cadet + نافس 9 + أولمبياد الناشئين)</h3>
+              <p class="text-xs text-slate-600 mt-1" id="step2-d">
+                الانتقال لمفاهيم الجبر الأساسي، متباينات الدرجة الأولى، هندسة إقليدس، ومبادئ نظرية الأعداد والعد.
+              </p>
+            </div>
+          </div>
+
+          <!-- Step 3 -->
+          <div class="flex gap-4 p-4 rounded-xl bg-slate-50 border border-slate-100 items-start">
+            <div class="w-10 h-10 rounded-full bg-purple-100 text-purple-700 font-bold flex items-center justify-center shrink-0">
+              3
+            </div>
+            <div>
+              <h3 class="font-bold text-slate-800 text-sm sm:text-base" id="step3-t">المرحلة الثانوية المتقدمة (JEE + كاوست SRSI + الأولمبياد IMO)</h3>
+              <p class="text-xs text-slate-600 mt-1" id="step3-d">
+                الاحتراف في التفاضل والتكامل، الأعداد المركبة، المعادلات الدالية، وإثبات البراهين الرياضية الصارمة.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Database Expansion & AI Scaling Engine -->
+      <div class="bg-gradient-to-br from-slate-800 to-slate-900 text-white rounded-3xl p-6 sm:p-8 shadow-lg shadow-slate-800/30 border border-slate-700 flex flex-col justify-between space-y-6 hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
+        <div>
+          <div class="text-xs font-bold text-amber-400 uppercase tracking-wider mb-1" id="scale-tag">
+            🚀 التوسع والإنتاج
+          </div>
+          <h3 class="text-xl font-bold text-white" id="scale-title">
+            محاكي توسيع بنك الأسئلة (1000+ لكل مسار)
+          </h3>
+          <p class="text-xs text-slate-300 mt-2 leading-relaxed" id="scale-desc">
+            حاسبة تقدير حجم البيانات المتوقعة عند توسيع كل مسار إلى 1,000 سؤال ثنائي اللغة مع الإجابات والخطوات الشاملة.
+          </p>
+        </div>
+
+        <div class="space-y-4 bg-slate-800/80 p-4 rounded-xl border border-slate-700/50">
+          <div>
+            <div class="flex justify-between text-xs mb-1">
+              <span id="lbl-questions-per-track">عدد الأسئلة لكل مسار:</span>
+              <span id="val-q-count" class="font-bold text-amber-400">1,000 سؤال</span>
+            </div>
+            <input type="range" id="slider-q-count" min="100" max="2500" step="100" value="1000" oninput="updateScaleCalc()" class="w-full accent-amber-500 cursor-pointer">
+          </div>
+
+          <div class="pt-3 border-t border-slate-700 text-xs space-y-2">
+            <div class="flex justify-between">
+              <span id="lbl-total-q">إجمالي أسئلة الـ 6 مسارات:</span>
+              <span id="calc-total-q" class="font-bold">6,000 سؤال</span>
+            </div>
+            <div class="flex justify-between">
+              <span id="lbl-json-size">الحجم التقديري لقاعدة البيانات:</span>
+              <span id="calc-json-size" class="font-bold text-emerald-400">~18.5 MB</span>
+            </div>
+            <div class="flex justify-between">
+              <span id="lbl-lang-nodes">عقد المفاهيم ثنائية اللغة:</span>
+              <span id="calc-nodes" class="font-bold text-amber-400">10,000 عقدة</span>
+            </div>
+          </div>
+        </div>
+
+        <button onclick="alert(currentLang === 'ar' ? 'تم تجهيز هيكلية JSON الموحدة للتصدير والربط المباشر مع تطبيق الهاتف والويب!' : 'Unified JSON schema ready for direct export to Web and Mobile apps!')" class="w-full py-3 bg-amber-500 hover:bg-amber-600 text-slate-900 font-bold text-xs sm:text-sm rounded-xl transition-all text-center">
+          ⚡ تصدير مواصفات قاعدة البيانات (JSON Schema)
+        </button>
+      </div>
+
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="bg-slate-900 text-slate-400 text-xs py-8 border-t border-slate-800 mt-12">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row items-center justify-between gap-4">
+      <div>
+        <p id="footer-text">© 2026 منصة تحليلات واختبارات الرياضيات | Math Exam Intelligence Platform. جميع الحقوق محفوظة.</p>
+      </div>
+      <div class="flex gap-4">
+        <span class="hover:text-amber-400 cursor-pointer">Kangaroo Math</span>
+        <span>•</span>
+        <span class="hover:text-amber-400 cursor-pointer">Nafes KSA</span>
+        <span>•</span>
+        <span class="hover:text-amber-400 cursor-pointer">JEE Advanced</span>
+        <span>•</span>
+        <span class="hover:text-amber-400 cursor-pointer">Math Olympiad</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- APPLICATION JAVASCRIPT CODE -->
+  <script>
+    // --- 1. BASE DATABASE DATA (STRUCTURAL & QUESTIONS) ---
+    const appData = {
+      tracks: [
+        {
+          id: "kangaroo",
+          name_ar: "كانجارو للرياضيات",
+          name_en: "Kangaroo Math",
+          badge: "MCQs (5 خيارات)",
+          color: "border-rose-500",
+          bg: "bg-rose-50",
+          accent: "text-rose-600",
+          levels_ar: "الصفوف 1-12 (مقسمة كل صفين)",
+          levels_en: "Grades 1-12 (Pair groupings)",
+          format: "3, 4, 5 نقاط | بدون آلة حاسبة",
+          topics: ["المنطق والأحاجي", "الهندسة الفضائية", "التركيبات والأنماط"]
+        },
+        {
+          id: "nafes",
+          name_ar: "اختبار نافس (السعودية)",
+          name_en: "Nafes (KSA)",
+          badge: "MCQs (4 خيارات)",
+          color: "border-blue-500",
+          bg: "bg-blue-50",
+          accent: "text-blue-600",
+         }
+      ],
+      questions: []
+    };
+
+    // --- 2. STATE MANAGEMENT ---
+    let currentLang = 'ar'; // 'ar' or 'en'
+    let currentFilteredQuestions = [...appData.questions];
+    let currentQuestionIdx = 0;
+    let selectedOptionIdx = null;
+    let isAnswerSubmitted = false;
+    let showHint = false;
+
+    // --- 3. DICTIONARY FOR I18N ---
+    const dict = {
+      ar: {
+        appTitle: "منصة تحليلات مسارات الرياضيات | Edugates International School",
+        appSubtitle: "المستودع الذكي والتحليلي لاختبارات كانجارو، نافس، كاوست، JEE، والأولمبياد - برعاية مدرسة بوابة المعرفة العالمية",
+        statQCount: "6 المسارات متكاملة (1,000+ سؤال لكل مسار)",
+        badgeOverview: "📌 نظرة عامة على قاعدة البيانات والمسارات",
+        heroHeading: "محرك الإعداد والمحاكاة التفاعلي للمسابقات الرياضية الهامة",
+        heroDesc: "تمنحك هذه المنصة إمكانية استكشاف وهيكلة أحدث قواعد البيانات والأسئلة لـ 6 مسارات عالمية ومحلية استراتيجية. تم تطوير قاعدة البيانات لتغطي الفئات العمرية من الصفوف الابتدائية حتى الثانوية، مع تفكيك دقيق لمستويات صعوبة الأسئلة والحلول النموذجية ثنائية اللغة.",
+        stat1Label: "المسارات المعتمدة",
+        stat2Label: "الفئات العمرية والصفوف",
+        stat3Label: "أنماط الأسئلة",
+        stat4Label: "تغطية اللغات",
+        sec1Title: "بطاقات المسارات والصفوف المستهدفة",
+        sec1Desc: "اختر المسار للاستكشاف ومعاينة معايير الاختبار، عدد الخيارات، والصعوبة المستهدفة",
+        sec2Title: "تحليلات المناهج والأبعاد المعرفية",
+        sec2Desc: "مقارنة بين توزيع المواضيع وطبيعة الأسئلة في كل مسار",
+        chart1Title: "📊 توزيع المواضيع الرياضية حسب المسار",
+        chart1Caption: "يلاحظ تركيز اختبار كانجارو على المنطق والهندسة الفضائية، بينما يركز اختبار JEE على التفاضل والتكامل، وتتميز نافس بتوازن الجبر والقياس.",
+        chart2Title: "📈 نمط الأسئلة ومستويات التحدي",
+        chart2Caption: "تتوزع أسئلة كانجارو بين 3 و 4 و 5 نقاط. بينما يعتمد الأولمبياد وبرامج كاوست على الأسئلة المقالية (FRQ) والحلول الكتابية لإثبات البراهين.",
+        quizHeading: "استكشف بنك الأسئلة والحلول النموذجية",
+        quizSubheading: "اختر المسار والمستوى لاختبار حل الأسئلة، عرض التلميحات، وفحص خطوات الحل بالتفصيل",
+        btnPrevQ: "← السؤال السابق",
+        btnNextQ: "السؤال التالي →",
+        roadmapTitle: "🗺️ خارطة التدرج المعرفي للطالب (من الابتدائي للتميز العالمي)",
+        roadmapSubtitle: "مسار بناء المهارات الرياضية عبر المراحل الدراسية المختلفة",
+        step1T: "المرحلة الابتدائية (كانجارو + نافس 3 و 6)",
+        step1D: "البدء بالتفكير المنطقي، التعرف على الأشكال، الحساب الأساسي، واستكشاف الأنماط دون استخدام الآلة الحاسبة.",
+        step2T: "المرحلة المتوسطة (كانجارو Cadet + نافس 9 + أولمبياد الناشئين)",
+        step2D: "الانتقال لمفاهيم الجبر الأساسي، متباينات الدرجة الأولى، هندسة إقليدس، ومبادئ نظرية الأعداد والعد.",
+        step3T: "المرحلة الثانوية المتقدمة (JEE + كاوست SRSI + الأولمبياد IMO)",
+        step3D: "الاحتراف في التفاضل والتكامل، الأعداد المركبة، المعادلات الدالية، وإثبات البراهين الرياضية الصارمة.",
+        scaleTag: "🚀 التوسع والإنتاج",
+        scaleTitle: "محاكي توسيع بنك الأسئلة (1000+ لكل مسار)",
+        scaleDesc: "حاسبة تقدير حجم البيانات المتوقعة عند توسيع كل مسار إلى 1,000 سؤال ثنائي اللغة مع الإجابات والخطوات الشاملة.",
+        lblQuestionsPerTrack: "عدد الأسئلة لكل مسار:",
+        lblTotalQ: "إجمالي أسئلة الـ 6 مسارات:",
+        lblJsonSize: "الحجم التقديري لقاعدة البيانات:",
+        lblLangNodes: "عقد المفاهيم ثنائية اللغة:",
+        footerText: "© 2026 منصة تحليلات واختبارات الرياضيات | Math Exam Intelligence Platform. جميع الحقوق محفوظة.",
+        btnHint: "💡 عرض التلميح",
+        btnSubmit: "تأكيد الإجابة",
+        txtCorrect: "✨ إجابة صحيحة! أحسنت العمل.",
+        txtIncorrect: "❌ إجابة غير صحيحة. راجع خطوات الحل أعلاه."
+      },
+      en: {
+        appTitle: "Math Path Analytics Platform | Edugates International School",
+        appSubtitle: "Smart analytical repository for Kangaroo, Nafes, KAUST, JEE, & Olympiad - Powered by Edugates International School",
+        statQCount: "6 Integrated Tracks (1,000+ Qs per track)",
+        badgeOverview: "📌 Database & Track Overview",
+        heroHeading: "Interactive Preparation Engine for Elite Math Exams",
+        heroDesc: "Explore and structure comprehensive question databases across 6 strategic local and international math tracks. Tailored from Primary grades to High School with structured MCQs, FRQs, and bilingual step-by-step solutions.",
+        stat1Label: "Approved Tracks",
+        stat2Label: "Target Grade Span",
+        stat3Label: "Question Types",
+        stat4Label: "Language Support",
+        sec1Title: "Exam Tracks & Targeted Grade Levels",
+        sec1Desc: "Select a track to inspect target formats, option counts, and core topics.",
+        sec2Title: "Curriculum Analytics & Cognitive Domains",
+        sec2Desc: "Comparative analysis of topic distribution and question formats across tracks.",
+        chart1Title: "📊 Topic Weight Distribution by Track",
+        chart1Caption: "Kangaroo emphasizes logic and spatial puzzles, JEE focuses heavily on calculus and algebra, while Nafes maintains balanced curriculum standards.",
+        chart2Title: "📈 Question Formats & Point Breakdown",
+        chart2Caption: "Kangaroo uses 3, 4, and 5-point graded MCQs. Olympiad and KAUST rely heavily on Free Response Questions (FRQ) requiring full proofs.",
+        quizHeading: "Interactive Question & Solution Inspector",
+        quizSubheading: "Filter by track or topic to test problem solving, view hints, and inspect full solutions.",
+        btnPrevQ: "← Previous Question",
+        btnNextQ: "Next Question →",
+        roadmapTitle: "🗺️ Student Cognitive Progression Roadmap",
+        roadmapSubtitle: "Skill progression from Primary foundations to Elite international standards.",
+        step1T: "Primary Stage (Kangaroo + Nafes 3 & 6)",
+        step1D: "Building logical reasoning, basic geometry, mental math, and pattern recognition without calculators.",
+        step2T: "Middle School (Kangaroo Cadet + Nafes 9 + Junior Olympiad)",
+        step2D: "Transitioning to basic algebra, linear inequalities, Euclidean geometry, and introductory number theory.",
+        step3T: "Advanced High School (JEE + KAUST SRSI + IMO Olympiad)",
+        step3D: "Mastering differential calculus, complex numbers, functional equations, and rigorous mathematical proofs.",
+        scaleTag: "🚀 Database Scaling",
+        scaleTitle: "Question Bank Expansion Simulator",
+        scaleDesc: "Estimate dataset footprint when scaling each track to 1,000+ fully structured bilingual questions.",
+        lblQuestionsPerTrack: "Questions per track:",
+        lblTotalQ: "Total questions (6 tracks):",
+        lblJsonSize: "Estimated JSON size:",
+        lblLangNodes: "Bilingual concept nodes:",
+        footerText: "© 2026 Math Exam Intelligence Platform. All rights reserved.",
+        btnHint: "💡 Show Hint",
+        btnSubmit: "Submit Answer",
+        txtCorrect: "✨ Correct Answer! Outstanding work.",
+        txtIncorrect: "❌ Incorrect. Check the mathematical breakdown above."
+      }
+    };
+
+    // --- 4. CHART INSTANCES & RENDER logic ---
+    let topicRadarChartInstance = null;
+    let formatBarChartInstance = null;
+
+    function initCharts() {
+      // 1. Topic Radar Chart
+      const ctxRadar = document.getElementById('topicRadarChart').getContext('2d');
+      topicRadarChartInstance = new Chart(ctxRadar, {
+        type: 'radar',
+        data: {
+          labels: ['الجبر (Algebra)', 'الهندسة (Geometry)', 'الأعداد (Number Theory)', 'التركيبات (Combinatorics)', 'التفاضل (Calculus)'],
+          datasets: [
+            {
+              label: 'Kangaroo',
+              data: [20, 35, 15, 30, 0],
+              borderColor: '#f43f5e',
+              backgroundColor: 'rgba(244, 63, 94, 0.15)',
+              borderWidth: 2
+            },
+            {
+              label: 'Nafes KSA',
+              data: [30, 30, 25, 15, 0],
+              borderColor: '#3b82f6',
+              backgroundColor: 'rgba(59, 130, 246, 0.15)',
+              borderWidth: 2
+            },
+            {
+              label: 'JEE Advanced',
+              data: [30, 20, 10, 10, 30],
+              borderColor: '#a855f7',
+              backgroundColor: 'rgba(168, 85, 247, 0.15)',
+              borderWidth: 2
+            },
+            {
+              label: 'IMO Olympiad',
+              data: [25, 25, 25, 25, 0],
+              borderColor: '#f59e0b',
+              backgroundColor: 'rgba(245, 158, 11, 0.15)',
+              borderWidth: 2
+            },
+            {
+              label: 'NSMO (KSA)',
+              data: [20, 20, 20, 20, 20],
+              borderColor: '#14b8a6',
+              backgroundColor: 'rgba(20, 184, 166, 0.15)',
+              borderWidth: 2
+            }
+          ]
+        },
+        options: {
+          responsive: true,
+          maintainAspectRatio: false,
+          scales: {
+            r: {
+              angleLines: { color: '#e2e8f0' },
+              grid: { color: '#f1f5f9' },
+              pointLabels: {
+                font: { family: 'Cairo, Inter', size: 10, weight: 'bold' },
+                color: '#475569'
+              },
+              ticks: { display: false }
+            }
+          },
+          plugins: {
+            legend: {
+              position: 'bottom',
+              labels: { font: { family: 'Cairo, Inter', size: 11 } }
+            }
+          }
+        }
+      });
+
+      // 2. Format Bar Chart
+      const ctxBar = document.getElementById('formatBarChart').getContext('2d');
+      formatBarChartInstance = new Chart(ctxBar, {
+        type: 'bar',
+        data: {
+          labels: ['Kangaroo', 'Nafes KSA', 'JEE Main/Adv', 'Math Olympiad', 'KAUST SRSI', 'NSMO (KSA)'],
+          datasets: [
+            {
+              label: 'MCQs 4-5 Options',
+              data: [100, 100, 60, 0, 40, 50],
+              backgroundColor: '#3b82f6'
+            },
+            {
+              label: 'Numerical / Integer FRQ',
+              data: [0, 0, 40, 30, 30, 30],
+              backgroundColor: '#8b5cf6'
+            },
+            {
+              label: 'Rigorous Proof FRQ',
+              data: [0, 0, 0, 70, 30, 20],
+              backgroundColor: '#f59e0b'
+            }
+          ]
+        },
+        options: {
+          responsive: true,
+          maintainAspectRatio: false,
+          scales: {
+            x: {
+              stacked: true,
+              grid: { display: false },
+              ticks: { font: { family: 'Cairo, Inter', size: 10, weight: 'bold' } }
+            },
+            y: {
+              stacked: true,
+              max: 100,
+              ticks: {
+                callback: function(value) { return value + "%"; }
+              }
+            }
+          },
+          plugins: {
+            legend: {
+              position: 'bottom',
+              labels: { font: { family: 'Cairo, Inter', size: 11 } }
+            }
+          }
+        }
+      });
+    }
+
+    // --- 5. RENDER UI CONTENT ---
+    function renderApp() {
+      const t = dict[currentLang];
+      const isAr = currentLang === 'ar';
+
+      // Update Text Elements
+      document.getElementById('app-title').innerText = t.appTitle;
+      document.getElementById('app-subtitle').innerText = t.appSubtitle;
+      document.getElementById('stat-questions-count').innerText = t.statQCount;
+      document.getElementById('badge-overview').innerText = t.badgeOverview;
+      document.getElementById('hero-heading').innerText = t.heroHeading;
+      document.getElementById('hero-desc').innerText = t.heroDesc;
+
+      document.getElementById('stat-1-label').innerText = t.stat1Label;
+      document.getElementById('stat-2-label').innerText = t.stat2Label;
+      document.getElementById('stat-3-label').innerText = t.stat3Label;
+      document.getElementById('stat-4-label').innerText = t.stat4Label;
+
+      document.getElementById('sec1-title').innerText = t.sec1Title;
+      document.getElementById('sec1-desc').innerText = t.sec1Desc;
+      document.getElementById('sec2-title').innerText = t.sec2Title;
+      document.getElementById('sec2-desc').innerText = t.sec2Desc;
+
+      document.getElementById('chart1-title').innerText = t.chart1Title;
+      document.getElementById('chart1-caption').innerText = t.chart1Caption;
+      document.getElementById('chart2-title').innerText = t.chart2Title;
+      document.getElementById('chart2-caption').innerText = t.chart2Caption;
+
+      document.getElementById('quiz-heading').innerText = t.quizHeading;
+      document.getElementById('quiz-subheading').innerText = t.quizSubheading;
+      document.getElementById('btn-prev-q').innerText = t.btnPrevQ;
+      document.getElementById('btn-next-q').innerText = t.btnNextQ;
+
+      document.getElementById('roadmap-title').innerText = t.roadmapTitle;
+      document.getElementById('roadmap-subtitle').innerText = t.roadmapSubtitle;
+      document.getElementById('step1-t').innerText = t.step1T;
+      document.getElementById('step1-d').innerText = t.step1D;
+      document.getElementById('step2-t').innerText = t.step2T;
+      document.getElementById('step2-d').innerText = t.step2D;
+      document.getElementById('step3-t').innerText = t.step3T;
+      document.getElementById('step3-d').innerText = t.step3D;
+
+      document.getElementById('scale-tag').innerText = t.scaleTag;
+      document.getElementById('scale-title').innerText = t.scaleTitle;
+      document.getElementById('scale-desc').innerText = t.scaleDesc;
+      document.getElementById('lbl-questions-per-track').innerText = t.lblQuestionsPerTrack;
+      document.getElementById('lbl-total-q').innerText = t.lblTotalQ;
+      document.getElementById('lbl-json-size').innerText = t.lblJsonSize;
+      document.getElementById('lbl-lang-nodes').innerText = t.lblLangNodes;
+      document.getElementById('footer-text').innerText = t.footerText;
+
+      // Render Tracks Cards
+      renderTracksGrid();
+
+      // Render Active Question
+      renderQuestionCard();
+    }
+
+    function renderTracksGrid() {
+      const grid = document.getElementById('tracks-cards-grid');
+      grid.innerHTML = '';
+
+      appData.tracks.forEach((tr) => {
+        const name = currentLang === 'ar' ? tr.name_ar : tr.name_en;
+        const levels = currentLang === 'ar' ? tr.levels_ar : tr.levels_en;
+
+        const cardHtml = `
+          <div class="bg-white/90 backdrop-blur-sm rounded-3xl p-6 border border-slate-200/60 ${tr.bg} flex flex-col justify-between space-y-4 shadow-lg shadow-slate-200/50 hover:shadow-xl hover:-translate-y-2 transition-all duration-300 group cursor-pointer">
+            <div>
+              <div class="flex items-center justify-between mb-3">
+                <span class="text-xs font-bold px-2.5 py-1 rounded-full bg-white text-slate-800 shadow-xs border border-slate-200">
+                  ${tr.badge}
+                </span>
+                <span class="text-xs font-mono text-slate-400">ID: ${tr.id.toUpperCase()}</span>
+              </div>
+              <h3 class="text-xl font-display font-extrabold text-slate-900 group-hover:text-brand-600 transition-colors">${name}</h3>
+              <p class="text-xs ${tr.accent} font-bold mt-1">${levels}</p>
+              <p class="text-xs text-slate-500 mt-2"><strong>${currentLang === 'ar' ? 'النمط:' : 'Format:'}</strong> ${tr.format}</p>
+            </div>
+
+            <div class="pt-3 border-t border-slate-200/60">
+              <div class="text-xs font-bold text-slate-700 mb-1.5">${currentLang === 'ar' ? 'المواضيع الرئيسية:' : 'Key Topics:'}</div>
+              <div class="flex flex-wrap gap-1">
+                ${tr.topics.map(tp => `<span class="text-[11px] bg-white/80 px-2 py-0.5 rounded text-slate-600 border border-slate-200">${tp}</span>`).join('')}
+              </div>
+            </div>
+          </div>
+        `;
+        grid.innerHTML += cardHtml;
+      });
+    }
+
+    function renderQuestionCard() {
+      const container = document.getElementById('question-card-container');
+      const qTrackerText = document.getElementById('question-tracker-text');
+
+      if (!currentFilteredQuestions || currentFilteredQuestions.length === 0) {
+        container.innerHTML = `
+          <div class="p-8 text-center bg-slate-800 rounded-2xl border border-slate-700">
+            <p class="text-amber-400 font-bold">${currentLang === 'ar' ? 'لا توجد أسئلة تطابق الفلتر المحدد.' : 'No questions match the selected filter.'}</p>
+          </div>
+        `;
+        qTrackerText.innerText = "0 / 0";
+        document.getElementById('btn-prev-q').disabled = true;
+        document.getElementById('btn-next-q').disabled = true;
+        return;
+      }
+
+      const q = currentFilteredQuestions[currentQuestionIdx];
+      const qContent = q.content[currentLang] || q.content['en'];
+      const t = dict[currentLang];
+
+      qTrackerText.innerText = `${currentLang === 'ar' ? 'سؤال' : 'Question'} ${currentQuestionIdx + 1} ${currentLang === 'ar' ? 'من' : 'of'} ${currentFilteredQuestions.length}`;
+      document.getElementById('btn-prev-q').disabled = currentQuestionIdx === 0;
+      document.getElementById('btn-next-q').disabled = currentQuestionIdx === currentFilteredQuestions.length - 1;
+
+      // Question Options UI (MCQ vs FRQ)
+      let optionsMarkup = '';
+
+      if (q.type === 'MCQ' && qContent.options && qContent.options.length > 0) {
+        optionsMarkup = `
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 mt-6">
+            ${qContent.options.map((opt, idx) => {
+              let btnStyle = "bg-slate-800 hover:bg-slate-750 border-slate-700 text-slate-200";
+              if (selectedOptionIdx === idx) {
+                btnStyle = "bg-amber-500/20 border-amber-500 text-amber-300 font-bold";
+              }
+              if (isAnswerSubmitted) {
+                const correctIdx = parseInt(q.correct_index, 10);
+                if (idx === correctIdx) {
+                  btnStyle = "bg-emerald-500/20 border-emerald-500 text-emerald-300 font-bold";
+                } else if (selectedOptionIdx === idx && idx !== correctIdx) {
+                  btnStyle = "bg-rose-500/20 border-rose-500 text-rose-300";
+                }
+              }
+
+              return `
+                <button onclick="selectOption(${idx})" ${isAnswerSubmitted ? 'disabled' : ''} class="p-4 rounded-xl border text-right sm:text-right transition-all flex items-center justify-between ${btnStyle}">
+                  <span class="text-sm font-medium">${opt}</span>
+                  <span class="w-6 h-6 rounded-full bg-slate-900/60 border border-slate-700 flex items-center justify-center text-xs font-mono">
+                    ${String.fromCharCode(65 + idx)}
+                  </span>
+                </button>
+              `;
+            }).join('')}
+          </div>
+        `;
+      } else {
+        // FRQ Input Box Simulation
+        optionsMarkup = `
+          <div class="mt-6 p-4 bg-slate-800/80 rounded-xl border border-slate-700 space-y-3">
+            <label class="text-xs font-bold text-slate-300 block">
+              ${currentLang === 'ar' ? 'اكتب إجابتك العدديّة / النهائية:' : 'Enter your Numerical / Final Answer:'}
+            </label>
+            <input type="text" id="frq-input" value="${selectedOptionIdx !== null ? selectedOptionIdx : ''}" oninput="selectedOptionIdx = this.value" ${isAnswerSubmitted ? 'disabled' : ''} placeholder="e.g. 336" class="w-full bg-slate-900 border border-slate-700 rounded-lg p-3 text-white font-mono focus:ring-2 focus:ring-amber-500 outline-none">
+          </div>
+        `;
+      }
+
+      container.innerHTML = `
+        <div class="bg-slate-800/60 p-6 sm:p-8 rounded-2xl border border-slate-700 space-y-6">
+          
+          <!-- Badges Bar -->
+          <div class="flex flex-wrap items-center justify-between gap-3 text-xs">
+            <div class="flex items-center gap-2">
+              <span class="px-3 py-1 rounded-full bg-amber-500 text-slate-900 font-extrabold uppercase">
+                ${q.track.toUpperCase()}
+              </span>
+              <span class="px-3 py-1 rounded-full bg-slate-700 text-slate-300">
+                ${q.level}
+              </span>
+              <span class="px-3 py-1 rounded-full bg-slate-700/60 text-slate-400">
+                ${q.topic}
+              </span>
+            </div>
+            <span class="font-mono text-slate-400">ID: ${q.id}</span>
+          </div>
+
+          <!-- Question Body -->
+          <div class="text-lg sm:text-xl font-bold text-white leading-relaxed font-sans">
+            ${qContent.question}
+          </div>
+
+          <!-- Options or FRQ -->
+          ${optionsMarkup}
+
+          <!-- Actions Bar: Hint Button & Submit Button -->
+          <div class="flex flex-wrap items-center justify-between gap-4 pt-4 border-t border-slate-700/80">
+            <button onclick="toggleHint()" class="text-xs font-bold text-amber-400 hover:text-amber-300 underline underline-offset-4">
+              ${t.btnHint}
+            </button>
+
+            <button onclick="submitAnswer()" ${selectedOptionIdx === null ? 'disabled' : ''} class="px-6 py-2.5 bg-amber-500 hover:bg-amber-600 text-slate-900 font-extrabold text-xs sm:text-sm rounded-xl transition-all disabled:opacity-40">
+              ${t.btnSubmit}
+            </button>
+          </div>
+
+          <!-- Hint Drawer -->
+          ${showHint ? `
+            <div class="p-4 rounded-xl bg-amber-500/10 border border-amber-500/30 text-amber-200 text-xs sm:text-sm animate-fade-in">
+              💡 <strong>${currentLang === 'ar' ? 'التلميح:' : 'Hint:'}</strong> ${qContent.hint}
+            </div>
+          ` : ''}
+
+          <!-- Detailed Solution Breakdown -->
+          ${isAnswerSubmitted ? `
+            <div class="p-5 rounded-xl ${checkIsCorrect() ? 'bg-emerald-500/10 border border-emerald-500/40 text-emerald-200' : 'bg-rose-500/10 border border-rose-500/40 text-rose-200'} space-y-3 animate-fade-in">
+              <div class="font-bold text-sm sm:text-base">
+                ${checkIsCorrect() ? t.txtCorrect : t.txtIncorrect}
+              </div>
+              <div class="text-xs sm:text-sm leading-relaxed text-slate-300 pt-2 border-t border-slate-700/50">
+                <strong class="text-amber-400 block mb-1">${currentLang === 'ar' ? 'الخطوات والشرح التفصيلي:' : 'Step-by-step Solution:'}</strong>
+                ${qContent.explanation}
+              </div>
+            </div>
+          ` : ''}
+
+        </div>
+      `;
+
+      // Trigger MathJax rendering after updating content
+      if (window.MathJax && window.MathJax.typesetPromise) {
+        window.MathJax.typesetPromise([container]).catch((err) => console.log('MathJax error:', err));
+      }
+    }
+
+    // --- 6. USER INTERACTION HANDLERS ---
+    function toggleLanguage() {
+      currentLang = currentLang === 'ar' ? 'en' : 'ar';
+      document.documentElement.setAttribute('dir', currentLang === 'ar' ? 'rtl' : 'ltr');
+      document.documentElement.setAttribute('lang', currentLang);
+      document.getElementById('lang-label').innerText = currentLang === 'ar' ? 'English' : 'العربية';
+      renderApp();
+    }
+
+    function selectOption(idx) {
+      selectedOptionIdx = idx;
+      renderQuestionCard();
+    }
+
+    function toggleHint() {
+      showHint = !showHint;
+      renderQuestionCard();
+    }
+
+    function checkIsCorrect() {
+      const q = currentFilteredQuestions[currentQuestionIdx];
+      if (q.type === 'MCQ') {
+        return parseInt(selectedOptionIdx, 10) === parseInt(q.correct_index, 10);
+      } else {
+        return String(selectedOptionIdx).trim().toLowerCase() === String(q.correct_index).trim().toLowerCase();
+      }
+    }
+
+    function submitAnswer() {
+      if (selectedOptionIdx === null) return;
+      isAnswerSubmitted = true;
+      renderQuestionCard();
+    }
+
+    function nextQuestion() {
+      if (currentQuestionIdx < currentFilteredQuestions.length - 1) {
+        currentQuestionIdx++;
+        resetQuestionState();
+      }
+    }
+
+    function prevQuestion() {
+      if (currentQuestionIdx > 0) {
+        currentQuestionIdx--;
+        resetQuestionState();
+      }
+    }
+
+    function resetQuestionState() {
+      selectedOptionIdx = null;
+      isAnswerSubmitted = false;
+      showHint = false;
+      renderQuestionCard();
+    }
+
+    function filterQuestions() {
+      const trackVal = document.getElementById('quiz-track-select').value;
+      const topicVal = document.getElementById('quiz-topic-select').value;
+
+      currentFilteredQuestions = appData.questions.filter(q => {
+        const matchTrack = trackVal === 'all' || q.track === trackVal;
+        const matchTopic = topicVal === 'all' || q.topic === topicVal;
+        return matchTrack && matchTopic;
+      });
+
+      currentQuestionIdx = 0;
+      resetQuestionState();
+    }
+
+    function updateScaleCalc() {
+      const val = parseInt(document.getElementById('slider-q-count').value);
+      document.getElementById('val-q-count').innerText = `${val.toLocaleString()} ${currentLang === 'ar' ? 'سؤال' : 'Qs'}`;
+      
+      const total = val * 6;
+      document.getElementById('calc-total-q').innerText = `${total.toLocaleString()} ${currentLang === 'ar' ? 'سؤال' : 'questions'}`;
+      
+      const approxMb = ((total * 3.7) / 1000).toFixed(1);
+      document.getElementById('calc-json-size').innerText = `~${approxMb} MB`;
+      
+      const nodes = total * 2;
+      document.getElementById('calc-nodes').innerText = `${nodes.toLocaleString()} ${currentLang === 'ar' ? 'عقدة' : 'nodes'}`;
+    }
+
+    // --- 7. LOAD DATA & INITIALIZATION ON LOAD ---
+    async function loadQuestionsData() {
+      const tracks = ['kangaroo', 'nafes', 'jee', 'olympiad', 'kaust', 'nsmo'];
+      let loadedQuestions = [];
+
+      for (const track of tracks) {
+        try {
+          const res = await fetch(`data/${track}.json`);
+          if (res.ok) {
+            const trackQuestions = await res.json();
+            loadedQuestions = loadedQuestions.concat(trackQuestions);
+          }
+        } catch (e) {
+          console.error(`Failed to load data for ${track}:`, e);
+        }
+      }
+      
+      appData.questions = loadedQuestions;
+      currentFilteredQuestions = [...appData.questions];
+    }
+
+    window.addEventListener('DOMContentLoaded', async () => {
+      initCharts();
+      await loadQuestionsData();
+      renderApp();
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,25 @@
+[
+  {
+    "id": "KAU-HS-001",
+    "track": "kaust",
+    "level": "High School (KAUST SRSI)",
+    "topic": "Logic and Combinatorics",
+    "type": "FRQ",
+    "difficulty": "hard",
+    "content": {
+      "en": {
+        "question": "How many 4-digit passcodes using digits 0-9 contain exactly two '7's, with the other two digits distinct and non-zero?",
+        "options": [],
+        "hint": "Select positions for the '7's first, then calculate arrangements for remaining slots.",
+        "explanation": "1. Choose 2 positions out of 4 for '7's: \\(C(4,2) = 6\\) ways.<br>2. Choose 2 distinct non-zero digits other than 7 from \\(\\{1,2,3,4,5,6,8,9\\}\\) (8 options): \\(8 \\times 7 = 56\\) ways.<br>3. Total valid passcodes = \\(6 \\times 56 = 336\\)."
+      },
+      "ar": {
+        "question": "كم عدد رموز المرور المكونة من 4 أرقام (باستخدام الأرقام 0-9) التي تحتوي على الرقم '7' مرتين بالضبط، على أن يكون الرقمان الآخران مختلفين ولا يساويان الصفر؟",
+        "options": [],
+        "hint": "اختر أماكن الرقم '7' أولاً، ثم احسب التوافيق المتبقية.",
+        "explanation": "1. اختيار موضعين للرقم '7' من أصل 4: \\(C(4,2) = 6\\) طرق.<br>2. اختيار رقمين غير الصفر وغير 7 من المجموعة \\(\\{1,2,3,4,5,6,8,9\\}\\) (8 أرقام): \\(8 \\times 7 = 56\\) طريقة.<br>3. الإجمالي = \\(6 \\times 56 = 336\\) رمز مرور صحيح."
+      }
+    },
+    "correct_index": "336"
+  }
+]
