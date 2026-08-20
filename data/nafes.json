@@ -9,17 +9,3327 @@
     "content": {
       "en": {
         "question": "Solve the inequality for x: \\(-2x + 5 > 13\\)",
-        "options": ["x > -4", "x < -4", "x > 4", "x < 4"],
+        "options": [
+          "x > -4",
+          "x < -4",
+          "x > 4",
+          "x < 4"
+        ],
         "hint": "Remember to flip the inequality sign when dividing by a negative number.",
         "explanation": "Subtract 5 from both sides: \\(-2x > 8\\). Divide by -2 and flip the inequality direction: \\(x < -4\\)."
       },
       "ar": {
         "question": "حل المتباينة التالية بالنسبة لـ \\(x\\): \\(-2x + 5 > 13\\)",
-        "options": ["x > -4", "x < -4", "x > 4", "x < 4"],
+        "options": [
+          "x > -4",
+          "x < -4",
+          "x > 4",
+          "x < 4"
+        ],
         "hint": "تذكر عكس إشارة المتباينة عند القسمة على عدد سالب.",
         "explanation": "اطرح 5 من الطرفين: \\(-2x > 8\\). اقسم على -2 واعكس اتجاه المتباينة: \\(x < -4\\)."
       }
     },
     "correct_index": 1
+  },
+  {
+    "id": "NAFES-001",
+    "track": "nafes",
+    "level": "Grade 3",
+    "topic": "Place Value & Number Sense",
+    "type": "MCQ",
+    "difficulty": "medium",
+    "content": {
+      "en": {
+        "question": "Amal wants to form a 4-digit number using the digits 2, 5, 8, and 0 without repeating any digit. What is the difference between the largest possible 4-digit number and the smallest possible 4-digit number she can form?",
+        "options": [
+          "6264",
+          "6462",
+          "6516",
+          "6741"
+        ],
+        "hint": "The smallest 4-digit number cannot start with 0.",
+        "explanation": "The largest number formed is 8520. The smallest 4-digit number formed is 2058 (since 0 cannot be the first digit). The difference is \\( 8520 - 2058 = 6462 \\)."
+      },
+      "ar": {
+        "question": "تريد أمل كتابة عدد من 4 أرقام باستخدام الأرقام 2، 5، 8، 0 دون تكرار أي رقم. ما الفرق بين أكبر عدد وأصغر عدد مكون من 4 أرقام يمكنها تكوينه؟",
+        "options": [
+          "6264",
+          "6462",
+          "6516",
+          "6741"
+        ],
+        "hint": "أصغر عدد من 4 أرقام لا يمكن أن يبدأ بالصفر.",
+        "explanation": "أكبر عدد يمكن تكوينه هو 8520. أصغر عدد مكون من 4 أرقام هو 2058 (لأن الصفر لا يمكن أن يكون المنزلة الأولى). الفرق هو \\( 8520 - 2058 = 6462 \\)."
+      }
+    },
+    "correct_index": "1"
+  },
+  {
+    "id": "NAFES-002",
+    "track": "nafes",
+    "level": "Grade 3",
+    "topic": "Multi-step Word Problems",
+    "type": "MCQ",
+    "difficulty": "medium",
+    "content": {
+      "en": {
+        "question": "Khalid has 5 boxes of pencils, each containing 12 pencils. He gives 15 pencils to his friends and divides the remaining pencils equally among 3 bags. How many pencils are in each bag?",
+        "options": [
+          "12",
+          "15",
+          "18",
+          "20"
+        ],
+        "hint": "Calculate the total number of pencils first, subtract the given ones, then divide.",
+        "explanation": "Total pencils = \\( 5 \\times 12 = 60 \\). Remaining pencils = \\( 60 - 15 = 45 \\). Pencils per bag = \\( 45 \\div 3 = 15 \\)."
+      },
+      "ar": {
+        "question": "يمتلك خالد 5 علب أقلام، تحتوي كل علبة على 12 قلمًا. أعطى 15 قلمًا لأصدقائه وقسّم الأقلام المتبقية بالتساوي على 3 أكياس. كم قلمًا في كل كيس؟",
+        "options": [
+          "12",
+          "15",
+          "18",
+          "20"
+        ],
+        "hint": "احسب عدد الأقلام الكلي أولاً، ثم اطرح الأقلام الموزعة وقسّم المتبقي.",
+        "explanation": "عدد الأقلام الكلي = \\( 5 \\times 12 = 60 \\). الأقلام المتبقية = \\( 60 - 15 = 45 \\). عدد الأقلام في كل كيس = \\( 45 \\div 3 = 15 \\)."
+      }
+    },
+    "correct_index": "1"
+  },
+  {
+    "id": "NAFES-003",
+    "track": "nafes",
+    "level": "Grade 3",
+    "topic": "Geometry & Measurement",
+    "type": "MCQ",
+    "difficulty": "medium",
+    "content": {
+      "en": {
+        "question": "A rectangular garden has a length of 14 meters and a width of 8 meters. If Omar wants to put a fence around the garden leaving a 2-meter gap for a gate, what is the total length of the fence needed?",
+        "options": [
+          "42 meters",
+          "44 meters",
+          "40 meters",
+          "22 meters"
+        ],
+        "hint": "Find the perimeter of the rectangle first, then subtract the gate's length.",
+        "explanation": "Perimeter = \\( 2 \\times (14 + 8) = 2 \\times 22 = 44 \\) meters. Fence needed = \\( 44 - 2 = 42 \\) meters."
+      },
+      "ar": {
+        "question": "حديقة مستطيلة الشكل طولها 14 مترًا وعرضها 8 أمتار. إذا أراد عمر وضع سياج حول الحديقة مع ترك باب بعرض مترين، فما طول السياج المطلوب؟",
+        "options": [
+          "42 مترًا",
+          "44 مترًا",
+          "40 مترًا",
+          "22 مترًا"
+        ],
+        "hint": "احسب محيط المستطيل أولاً ثم اطرح عرض الباب.",
+        "explanation": "المحيط = \\( 2 \\times (14 + 8) = 2 \\times 22 = 44 \\) مترًا. طول السياج المطلوب = \\( 44 - 2 = 42 \\) مترًا."
+      }
+    },
+    "correct_index": "0"
+  },
+  {
+    "id": "NAFES-004",
+    "track": "nafes",
+    "level": "Grade 3",
+    "topic": "Division and Remainders",
+    "type": "MCQ",
+    "difficulty": "easy",
+    "content": {
+      "en": {
+        "question": "A teacher wants to distribute 38 science activity kits equally among 6 groups of students. How many kits will be left over?",
+        "options": [
+          "1",
+          "2",
+          "4",
+          "6"
+        ],
+        "hint": "Find the remainder when 38 is divided by 6.",
+        "explanation": "\\( 38 \\div 6 = 6 \\) with a remainder of 2. So 2 kits will be left over."
+      },
+      "ar": {
+        "question": "يريد معلم توزيع 38 حقيبة نشاط علمي بالتساوي على 6 مجموعات من الطلاب. كم حقيبة ستبقى دون توزيع؟",
+        "options": [
+          "1",
+          "2",
+          "4",
+          "6"
+        ],
+        "hint": "أوجد باقي قسمة 38 على 6.",
+        "explanation": "\\( 38 \\div 6 = 6 \\) والباقي 2. إذن ستبقى حقيبتان دون توزيع."
+      }
+    },
+    "correct_index": "1"
+  },
+  {
+    "id": "NAFES-005",
+    "track": "nafes",
+    "level": "Grade 3",
+    "topic": "Data Analysis",
+    "type": "MCQ",
+    "difficulty": "medium",
+    "content": {
+      "en": {
+        "question": "In a survey of favorite pets, 16 students chose cats, 12 chose dogs, 8 chose birds, and 4 chose fish. What fraction of the total number of students chose cats?",
+        "options": [
+          "\\( \\frac{1}{4} \\)",
+          "\\( \\frac{2}{5} \\)",
+          "\\( \\frac{1}{2} \\)",
+          "\\( \\frac{3}{5} \\)"
+        ],
+        "hint": "Calculate the total sum of all students first.",
+        "explanation": "Total students = \\( 16 + 12 + 8 + 4 = 40 \\). Fraction choosing cats = \\( \\frac{16}{40} = \\frac{2}{5} \\)."
+      },
+      "ar": {
+        "question": "في استطلاع للرأي حول الحيوانات الأليفة المفضلة، اختار 16 طالبًا القطط، و12 الكلاب، و8 الطيور، و4 الأسماك. ما الكسر الذي يمثل عدد الطلاب الذين اختاروا القطط من إجمالي عدد الطلاب؟",
+        "options": [
+          "\\( \\frac{1}{4} \\)",
+          "\\( \\frac{2}{5} \\)",
+          "\\( \\frac{1}{2} \\)",
+          "\\( \\frac{3}{5} \\)"
+        ],
+        "hint": "احسب المجموع الكلي للطلاب أولاً.",
+        "explanation": "مجموع الطلاب = \\( 16 + 12 + 8 + 4 = 40 \\). الكسر الذي يمثل اختيار القطط = \\( \\frac{16}{40} = \\frac{2}{5} \\)."
+      }
+    },
+    "correct_index": "1"
+  },
+  {
+    "id": "NAFES-006",
+    "track": "nafes",
+    "level": "Grade 3",
+    "topic": "Fractions",
+    "type": "MCQ",
+    "difficulty": "easy",
+    "content": {
+      "en": {
+        "question": "Sarah ate \\( \\frac{2}{8} \\) of a pizza, and her brother ate \\( \\frac{3}{8} \\) of the same pizza. What fraction of the pizza is remaining?",
+        "options": [
+          "\\( \\frac{3}{8} \\)",
+          "\\( \\frac{5}{8} \\)",
+          "\\( \\frac{1}{2} \\)",
+          "\\( \\frac{1}{8} \\)"
+        ],
+        "hint": "Add the eaten parts together and subtract from 1 whole.",
+        "explanation": "Total eaten = \\( \\frac{2}{8} + \\frac{3}{8} = \\frac{5}{8} \\). Remaining fraction = \\( 1 - \\frac{5}{8} = \\frac{3}{8} \\)."
+      },
+      "ar": {
+        "question": "أكلت سارة \\( \\frac{2}{8} \\) من الفطيرة، وأكل أخوها \\( \\frac{3}{8} \\) من الفطيرة نفسها. ما الكسر الذي يمثل الجزء المتبقي من الفطيرة؟",
+        "options": [
+          "\\( \\frac{3}{8} \\)",
+          "\\( \\frac{5}{8} \\)",
+          "\\( \\frac{1}{2} \\)",
+          "\\( \\frac{1}{8} \\)"
+        ],
+        "hint": "اجمع الأجزاء المأكولة ثم اطرحها من الواحد الصحيح.",
+        "explanation": "مجموع ما أُكل = \\( \\frac{2}{8} + \\frac{3}{8} = \\frac{5}{8} \\). الجزء المتبقي = \\( 1 - \\frac{5}{8} = \\frac{3}{8} \\)."
+      }
+    },
+    "correct_index": "0"
+  },
+  {
+    "id": "NAFES-007",
+    "track": "nafes",
+    "level": "Grade 6",
+    "topic": "Fractions, Decimals, and Percentages",
+    "type": "MCQ",
+    "difficulty": "medium",
+    "content": {
+      "en": {
+        "question": "Which of the following numbers has the greatest value?",
+        "options": [
+          "\\( 0.65 \\)",
+          "\\( \\frac{2}{3} \\)",
+          "\\( 62\\% \\)",
+          "\\( \\frac{5}{8} \\)"
+        ],
+        "hint": "Convert all values into decimals to compare them easily.",
+        "explanation": "Converting all to decimals: \\( 0.65 = 0.650 \\), \\( \\frac{2}{3} \\approx 0.667 \\), \\( 62\\% = 0.620 \\), \\( \\frac{5}{8} = 0.625 \\). The greatest value is \\( \\frac{2}{3} \\)."
+      },
+      "ar": {
+        "question": "أي من الأعداد التالية هو الأكبر قيمةً؟",
+        "options": [
+          "\\( 0.65 \\)",
+          "\\( \\frac{2}{3} \\)",
+          "\\( 62\\% \\)",
+          "\\( \\frac{5}{8} \\)"
+        ],
+        "hint": "حول جميع القيم إلى أعداد عشرية للمقارنة بينها بسهولة.",
+        "explanation": "بتحويل القيم إلى أعداد عشرية: \\( 0.65 = 0.650 \\)، \\( \\frac{2}{3} \\approx 0.667 \\)، \\( 62\\% = 0.620 \\)، \\( \\frac{5}{8} = 0.625 \\). القيمة الأكبر هي \\( \\frac{2}{3} \\)."
+      }
+    },
+    "correct_index": "1"
+  },
+  {
+    "id": "NAFES-008",
+    "track": "nafes",
+    "level": "Grade 6",
+    "topic": "Percentages",
+    "type": "MCQ",
+    "difficulty": "hard",
+    "content": {
+      "en": {
+        "question": "A coat's original price is 250 SAR. It is on sale with a discount of 20%. A customer also uses a coupon for an additional 10% off the discounted price. What is the final price of the coat?",
+        "options": [
+          "175 SAR",
+          "180 SAR",
+          "185 SAR",
+          "190 SAR"
+        ],
+        "hint": "Apply the discounts sequentially, not by adding percentages.",
+        "explanation": "Price after 20% discount = \\( 250 \\times (1 - 0.20) = 250 \\times 0.80 = 200 \\) SAR. Price after additional 10% discount = \\( 200 \\times (1 - 0.10) = 200 \\times 0.90 = 180 \\) SAR."
+      },
+      "ar": {
+        "question": "معطف سعره الأصلي 250 ريالاً. خُفض سعره بنسبة \\( 20\\% \\)، ثم حصل المشتري على خصم إضافي بنسبة \\( 10\\% \\) على السعر المخفض. ما السعر النهائي للملابس؟",
+        "options": [
+          "175 ريالاً",
+          "180 ريالاً",
+          "185 ريالاً",
+          "190 ريالاً"
+        ],
+        "hint": "طبق الخصمين بشكل متتالٍ وليس بجمع النسبة المئوية.",
+        "explanation": "السعر بعد خصم 20% = \\( 250 \\times 0.80 = 200 \\) ريال. السعر بعد الخصم الإضافي 10% = \\( 200 \\times 0.90 = 180 \\) ريال."
+      }
+    },
+    "correct_index": "1"
+  },
+  {
+    "id": "NAFES-009",
+    "track": "nafes",
+    "level": "Grade 6",
+    "topic": "Area of Composite Shapes",
+    "type": "MCQ",
+    "difficulty": "medium",
+    "content": {
+      "en": {
+        "question": "A playground consists of a rectangle of length 10 meters and width 6 meters, attached to a right-angled triangle with a height of 4 meters along one of its 6-meter sides. What is the total area of the playground?",
+        "options": [
+          "66 square meters",
+          "72 square meters",
+          "84 square meters",
+          "96 square meters"
+        ],
+        "hint": "Calculate the area of the rectangle and triangle separately, then add them.",
+        "explanation": "Area of rectangle = \\( 10 \\times 6 = 60 \\) square meters. Area of triangle = \\( \\frac{1}{2} \\times 6 \\times 4 = 12 \\) square meters. Total area = \\( 60 + 12 = 72 \\) square meters."
+      },
+      "ar": {
+        "question": "ملعب يتكون من مستطيل طوله 10 أمتار وعرضه 6 أمتار، ملتصق به مثلث قائم الزاوية ارتفاعه 4 أمتار وقاعدته تنطبق على أحد أضلاعه البالغ طوله 6 أمتار. ما المساحة الإجمالية للملعب؟",
+        "options": [
+          "66 مترًا مربعًا",
+          "72 مترًا مربعًا",
+          "84 مترًا مربعًا",
+          "96 مترًا مربعًا"
+        ],
+        "hint": "احسب مساحة المستطيل ومساحة المثلث كل على حدة ثم اجمعهما.",
+        "explanation": "مساحة المستطيل = \\( 10 \\times 6 = 60 \\) مترًا مربعًا. مساحة المثلث = \\( \\frac{1}{2} \\times 6 \\times 4 = 12 \\) مترًا مربعًا. المساحة الكلية = \\( 60 + 12 = 72 \\) مترًا مربعًا."
+      }
+    },
+    "correct_index": "1"
+  },
+  {
+    "id": "NAFES-010",
+    "track": "nafes",
+    "level": "Grade 6",
+    "topic": "Algebraic Equations",
+    "type": "MCQ",
+    "difficulty": "easy",
+    "content": {
+      "en": {
+        "question": "Solve the linear equation: \\( 4x + 7 = 31 \\). What is the value of \\( x \\)?",
+        "options": [
+          "5",
+          "6",
+          "7",
+          "8"
+        ],
+        "hint": "Subtract 7 from both sides, then divide by 4.",
+        "explanation": "\\( 4x + 7 = 31 \\implies 4x = 31 - 7 \\implies 4x = 24 \\implies x = 6 \\)."
+      },
+      "ar": {
+        "question": "حل المعادلة الخطية: \\( 4x + 7 = 31 \\). ما قيمة \\( x \\)؟",
+        "options": [
+          "5",
+          "6",
+          "7",
+          "8"
+        ],
+        "hint": "اطرح 7 من الطرفين ثم اقسم على 4.",
+        "explanation": "\\( 4x + 7 = 31 \\implies 4x = 31 - 7 \\implies 4x = 24 \\implies x = 6 \\)."
+      }
+    },
+    "correct_index": "1"
+  },
+  {
+    "id": "NAFES-011",
+    "track": "nafes",
+    "level": "Grade 6",
+    "topic": "Statistics - Mean",
+    "type": "MCQ",
+    "difficulty": "hard",
+    "content": {
+      "en": {
+        "question": "The test scores of 4 students are 82, 88, 90, and 76. What score must a 5th student get so that the mean score of all 5 students becomes 85?",
+        "options": [
+          "85",
+          "87",
+          "89",
+          "91"
+        ],
+        "hint": "Find the required sum of 5 scores by multiplying 85 by 5.",
+        "explanation": "Total sum needed = \\( 85 \\times 5 = 425 \\). Sum of current 4 scores = \\( 82 + 88 + 90 + 76 = 336 \\). Score needed = \\( 425 - 336 = 89 \\)."
+      },
+      "ar": {
+        "question": "درجات 4 طلاب في اختبار هي 82، 88، 90، 76. ما الدرجة التي يجب أن يحصل عليها طالب خامس ليكون المتوسط الحسابي لدرجات الطلاب الخمسة مساويًا لـ 85؟",
+        "options": [
+          "85",
+          "87",
+          "89",
+          "91"
+        ],
+        "hint": "أوجد المجموع الكلي المطلوب للدرجات الخمس بضرب 85 في 5.",
+        "explanation": "المجموع الكلي المطلوب = \\( 85 \\times 5 = 425 \\). مجموع درجات الطلاب الأربعة = \\( 82 + 88 + 90 + 76 = 336 \\). درجة الطالب الخامس = \\( 425 - 336 = 89 \\)."
+      }
+    },
+    "correct_index": "2"
+  },
+  {
+    "id": "NAFES-012",
+    "track": "nafes",
+    "level": "Grade 6",
+    "topic": "Ratios and Proportions",
+    "type": "MCQ",
+    "difficulty": "medium",
+    "content": {
+      "en": {
+        "question": "A car travels 210 kilometers using 15 liters of fuel. How many liters of fuel will it need to travel a distance of 350 kilometers at the same rate of fuel consumption?",
+        "options": [
+          "20 liters",
+          "22 liters",
+          "25 liters",
+          "30 liters"
+        ],
+        "hint": "Find the unit rate (kilometers per liter) first.",
+        "explanation": "Unit rate = \\( 210 \\div 15 = 14 \\) km/liter. Fuel needed = \\( 350 \\div 14 = 25 \\) liters."
+      },
+      "ar": {
+        "question": "تقطع سيارة مسافة 210 كيلومترات باستخدام 15 ليترًا من الوقود. كم ليترًا من الوقود تحتاجه السيارة لقطع مسافة 350 كيلومترًا بمعدل الاستهلاك نفسه؟",
+        "options": [
+          "20 ليترًا",
+          "22 ليترًا",
+          "25 ليترًا",
+          "30 ليترًا"
+        ],
+        "hint": "أوجد معدل الوحدة (عدد الكيلومترات لكل ليتر) أولاً.",
+        "explanation": "معدل الوحدة = \\( 210 \\div 15 = 14 \\) كم/ليتر. كمية الوقود المطلوبة = \\( 350 \\div 14 = 25 \\) ليترًا."
+      }
+    },
+    "correct_index": "2"
+  },
+  {
+    "id": "NAFES-013",
+    "track": "nafes",
+    "level": "Grade 6",
+    "topic": "Volume of Prisms",
+    "type": "MCQ",
+    "difficulty": "easy",
+    "content": {
+      "en": {
+        "question": "A rectangular prism container has a length of \\( 4.5 \\text{ cm} \\), a width of \\( 2 \\text{ cm} \\), and a height of \\( 3 \\text{ cm} \\). What is the volume of the container?",
+        "options": [
+          "18 cm³",
+          "24 cm³",
+          "27 cm³",
+          "36 cm³"
+        ],
+        "hint": "Volume = length × width × height.",
+        "explanation": "Volume = \\( 4.5 \\times 2 \\times 3 = 9 \\times 3 = 27 \\text{ cm}^3 \\)."
+      },
+      "ar": {
+        "question": "وعاء على شكل منشور مستطيلي (متوازي مستطيلات) طوله \\( 4.5 \\text{ سم} \\)، وعرضه \\( 2 \\text{ سم} \\)، وارتفاعه \\( 3 \\text{ سم} \\). ما حجم الوعاء؟",
+        "options": [
+          "18 سم³",
+          "24 سم³",
+          "27 سم³",
+          "36 سم³"
+        ],
+        "hint": "الحجم = الطول × العرض × الارتفاع.",
+        "explanation": "الحجم = \\( 4.5 \\times 2 \\times 3 = 9 \\times 3 = 27 \\text{ سم}^3 \\)."
+      }
+    },
+    "correct_index": "2"
+  },
+  {
+    "id": "NAFES-014",
+    "track": "nafes",
+    "level": "Grade 9",
+    "topic": "Systems of Linear Equations",
+    "type": "MCQ",
+    "difficulty": "hard",
+    "content": {
+      "en": {
+        "question": "A school sold 120 tickets for a concert. Adult tickets cost 30 SAR each and student tickets cost 15 SAR each. If the total collected revenue was 2,700 SAR, how many adult tickets were sold?",
+        "options": [
+          "40",
+          "50",
+          "60",
+          "70"
+        ],
+        "hint": "Set up a system of two equations with two variables: x (adults) and y (students).",
+        "explanation": "Let \\( x \\) be adult tickets and \\( y \\) be student tickets. Equations: \\( x + y = 120 \\) and \\( 30x + 15y = 2700 \\). Substituting \\( y = 120 - x \\): \\( 30x + 15(120 - x) = 2700 \\implies 15x + 1800 = 2700 \\implies 15x = 900 \\implies x = 60 \\)."
+      },
+      "ar": {
+        "question": "باعت مدرسة 120 تذكرة لحفل موسيقي. سعر تذكرة الكبار 30 ريالاً وسعر تذكرة الطلاب 15 ريالاً. إذا كان إجمالي المبلغ المجمع 2700 ريال، فكم عدد تذاكر الكبار المباعة؟",
+        "options": [
+          "40",
+          "50",
+          "60",
+          "70"
+        ],
+        "hint": "أنشئ نظام معادلتين بمتغيرين: x لعدد الكبار و y لعدد الطلاب.",
+        "explanation": "نفرض \\( x \\) عدد الكبار و \\( y \\) عدد الطلاب. المعادلتان: \\( x + y = 120 \\) و \\( 30x + 15y = 2700 \\). بالتعويض: \\( 30x + 15(120 - x) = 2700 \\implies 15x + 1800 = 2700 \\implies 15x = 900 \\implies x = 60 \\)."
+      }
+    },
+    "correct_index": "2"
+  },
+  {
+    "id": "NAFES-015",
+    "track": "nafes",
+    "level": "Grade 9",
+    "topic": "Exponents and Algebraic Expressions",
+    "type": "MCQ",
+    "difficulty": "medium",
+    "content": {
+      "en": {
+        "question": "Simplify the algebraic expression: $$ \\frac{(2x^3 y^2)^3}{4x^5 y^4} $$",
+        "options": [
+          "\\( 2x^4 y^2 \\)",
+          "\\( 4x^4 y^2 \\)",
+          "\\( 2x^2 y^2 \\)",
+          "\\( 6x^4 y^2 \\)"
+        ],
+        "hint": "Apply exponent laws: power of a product first, then division.",
+        "explanation": "Numerator: \\( (2x^3 y^2)^3 = 8x^9 y^6 \\). Divide by denominator: \\( \\frac{8x^9 y^6}{4x^5 y^4} = 2x^{9-5} y^{6-4} = 2x^4 y^2 \\)."
+      },
+      "ar": {
+        "question": "بّسط المقدار الجبري التالي: $$ \\frac{(2x^3 y^2)^3}{4x^5 y^4} $$",
+        "options": [
+          "\\( 2x^4 y^2 \\)",
+          "\\( 4x^4 y^2 \\)",
+          "\\( 2x^2 y^2 \\)",
+          "\\( 6x^4 y^2 \\)"
+        ],
+        "hint": "طبق قوانين الأسس: قوة ناتج الضرب أولاً، ثم قسمة القوى.",
+        "explanation": "البسط: \\( (2x^3 y^2)^3 = 8x^9 y^6 \\). بالقسمة على المقام: \\( \\frac{8x^9 y^6}{4x^5 y^4} = 2x^{9-5} y^{6-4} = 2x^4 y^2 \\)."
+      }
+    },
+    "correct_index": "0"
+  },
+  {
+    "id": "NAFES-016",
+    "track": "nafes",
+    "level": "Grade 9",
+    "topic": "Quadratic Equations",
+    "type": "MCQ",
+    "difficulty": "medium",
+    "content": {
+      "en": {
+        "question": "What are the roots of the quadratic equation \\( x^2 - 5x - 24 = 0 \\)?",
+        "options": [
+          "\\( x = -8, x = 3 \\)",
+          "\\( x = 8, x = -3 \\)",
+          "\\( x = 6, x = -4 \\)",
+          "\\( x = -6, x = 4 \\)"
+        ],
+        "hint": "Factor the quadratic expression into two linear factors.",
+        "explanation": "\\( x^2 - 5x - 24 = (x - 8)(x + 3) = 0 \\). Therefore, \\( x = 8 \\) or \\( x = -3 \\)."
+      },
+      "ar": {
+        "question": "ما جذرا المعادلة التربيعية \\( x^2 - 5x - 24 = 0 \\)؟",
+        "options": [
+          "\\( x = -8, x = 3 \\)",
+          "\\( x = 8, x = -3 \\)",
+          "\\( x = 6, x = -4 \\)",
+          "\\( x = -6, x = 4 \\)"
+        ],
+        "hint": "حلل المقدار الثلاثي التربيعي إلى حاصل ضرب عاملين خطيين.",
+        "explanation": "\\( x^2 - 5x - 24 = (x - 8)(x + 3) = 0 \\). إذن \\( x = 8 \\) أو \\( x = -3 \\)."
+      }
+    },
+    "correct_index": "1"
+  },
+  {
+    "id": "NAFES-017",
+    "track": "nafes",
+    "level": "Grade 9",
+    "topic": "Pythagorean Theorem",
+    "type": "MCQ",
+    "difficulty": "easy",
+    "content": {
+      "en": {
+        "question": "A 13-meter ladder leans against a vertical wall. If the base of the ladder is 5 meters away from the base of the wall, how high up the wall does the ladder reach?",
+        "options": [
+          "10 meters",
+          "11 meters",
+          "12 meters",
+          "12.5 meters"
+        ],
+        "hint": "Use the Pythagorean theorem: \\( a^2 + b^2 = c^2 \\).",
+        "explanation": "\\( h^2 + 5^2 = 13^2 \\implies h^2 + 25 = 169 \\implies h^2 = 144 \\implies h = 12 \\) meters."
+      },
+      "ar": {
+        "question": "سلم طوله 13 مترًا يستند على حائط رأسي. إذا كانت قاعدة السلم تبعد 5 أمتار عن قاعدة الحائط، فما ارتفاع النقطة التي يلمس عندها السلم الحائط؟",
+        "options": [
+          "10 أمتار",
+          "11 مترًا",
+          "12 مترًا",
+          "12.5 مترًا"
+        ],
+        "hint": "استخدم نظرية فيثاغورس: \\( a^2 + b^2 = c^2 \\).",
+        "explanation": "\\( h^2 + 5^2 = 13^2 \\implies h^2 + 25 = 169 \\implies h^2 = 144 \\implies h = 12 \\) مترًا."
+      }
+    },
+    "correct_index": "2"
+  },
+  {
+    "id": "NAFES-018",
+    "track": "nafes",
+    "level": "Grade 9",
+    "topic": "Geometric Similarity",
+    "type": "MCQ",
+    "difficulty": "hard",
+    "content": {
+      "en": {
+        "question": "Triangle \\( ABC \\) is similar to triangle \\( DEF \\). The side lengths of triangle \\( ABC \\) are 6 cm, 8 cm, and 10 cm. If the perimeter of triangle \\( DEF \\) is 60 cm, what is the length of the longest side of triangle \\( DEF \\)?",
+        "options": [
+          "20 cm",
+          "22 cm",
+          "25 cm",
+          "30 cm"
+        ],
+        "hint": "Find the ratio of the perimeters to determine the scale factor.",
+        "explanation": "Perimeter of \\( ABC = 6 + 8 + 10 = 24 \\) cm. Scale factor = \\( \\frac{60}{24} = 2.5 \\). Longest side of \\( DEF = 10 \\times 2.5 = 25 \\) cm."
+      },
+      "ar": {
+        "question": "المثلث \\( ABC \\) يشابه المثلث \\( DEF \\). أطوال أضلاع المثلث \\( ABC \\) هي 6 سم، 8 سم، 10 سم. إذا كان محيط المثلث \\( DEF \\) يساوي 60 سم، فما طول الضلع الأطول في المثلث \\( DEF \\)؟",
+        "options": [
+          "20 سم",
+          "22 سم",
+          "25 سم",
+          "30 سم"
+        ],
+        "hint": "أوجد نسبة المحيطين لتحديد معامل المقياس.",
+        "explanation": "محيط المثلث \\( ABC = 6 + 8 + 10 = 24 \\) سم. معامل التكبير = \\( \\frac{60}{24} = 2.5 \\). الضلع الأطول في المثلث \\( DEF = 10 \\times 2.5 = 25 \\) سم."
+      }
+    },
+    "correct_index": "2"
+  },
+  {
+    "id": "NAFES-019",
+    "track": "nafes",
+    "level": "Grade 9",
+    "topic": "Probability",
+    "type": "MCQ",
+    "difficulty": "hard",
+    "content": {
+      "en": {
+        "question": "A bag contains 5 red marbles, 4 blue marbles, and 3 green marbles. Two marbles are drawn at random one after another without replacement. What is the probability that both drawn marbles are red?",
+        "options": [
+          "\\( \\frac{5}{33} \\)",
+          "\\( \\frac{25}{144} \\)",
+          "\\( \\frac{5}{12} \\)",
+          "\\( \\frac{1}{6} \\)"
+        ],
+        "hint": "Remember that without replacement, the total number of marbles decreases on the second draw.",
+        "explanation": "Total marbles = 12. Probability of 1st red = \\( \\frac{5}{12} \\). Probability of 2nd red = \\( \\frac{4}{11} \\). Combined probability = \\( \\frac{5}{12} \\times \\frac{4}{11} = \\frac{20}{132} = \\frac{5}{33} \\)."
+      },
+      "ar": {
+        "question": "يحتوي كيس على 5 كرات حمراء، و4 كرات زرقاء، و3 كرات خضراء. سُحبت كرتان عشوائيًا واحدة تلو الأخرى دون إعادة. ما احتمال أن تكون الكرتان المسحوبتان حمراوين؟",
+        "options": [
+          "\\( \\frac{5}{33} \\)",
+          "\\( \\frac{25}{144} \\)",
+          "\\( \\frac{5}{12} \\)",
+          "\\( \\frac{1}{6} \\)"
+        ],
+        "hint": "تذكر أن السحب دون إعادة ينقص العدد الكلي للكرات في السحبة الثانية.",
+        "explanation": "عدد الكرات الكلي = 12. احتمال الأولى حمراء = \\( \\frac{5}{12} \\). احتمال الثانية حمراء = \\( \\frac{4}{11} \\). الاحتمال المركب = \\( \\frac{5}{12} \\times \\frac{4}{11} = \\frac{20}{132} = \\frac{5}{33} \\)."
+      }
+    },
+    "correct_index": "0"
+  },
+  {
+    "id": "NAFES-020",
+    "track": "nafes",
+    "level": "Grade 9",
+    "topic": "Coordinate Geometry - Lines",
+    "type": "MCQ",
+    "difficulty": "hard",
+    "content": {
+      "en": {
+        "question": "What is the equation of the line that passes through the point \\( (2, -3) \\) and is perpendicular to the line \\( y = 2x + 5 \\)?",
+        "options": [
+          "\\( y = -\\frac{1}{2}x - 2 \\)",
+          "\\( y = -\\frac{1}{2}x + 2 \\)",
+          "\\( y = 2x - 7 \\)",
+          "\\( y = -2x + 1 \\)"
+        ],
+        "hint": "The product of the slopes of two perpendicular lines is -1.",
+        "explanation": "Given line slope = 2. Perpendicular line slope \\( m = -\\frac{1}{2} \\). Using point-slope form: \\( y - (-3) = -\\frac{1}{2}(x - 2) \\implies y + 3 = -\\frac{1}{2}x + 1 \\implies y = -\\frac{1}{2}x - 2 \\)."
+      },
+      "ar": {
+        "question": "ما معادلة المستقيم الذي يمر بالنقطة \\( (2, -3) \\) ويُعامد المستقيم \\( y = 2x + 5 \\)؟",
+        "options": [
+          "\\( y = -\\frac{1}{2}x - 2 \\)",
+          "\\( y = -\\frac{1}{2}x + 2 \\)",
+          "\\( y = 2x - 7 \\)",
+          "\\( y = -2x + 1 \\)"
+        ],
+        "hint": "حاصل ضرب ميلي المستقبمين المتعامدين يساوي -1.",
+        "explanation": "ميل المستقيم المعطى = 2. ميل المستقيم العمودي \\( m = -\\frac{1}{2} \\). باستخدام صيغة ميل ونقطة: \\( y - (-3) = -\\frac{1}{2}(x - 2) \\implies y + 3 = -\\frac{1}{2}x + 1 \\implies y = -\\frac{1}{2}x - 2 \\)."
+      }
+    },
+    "correct_index": "0"
+  },
+  {
+    "id": "NAFES-022",
+    "track": "nafes",
+    "level": "Grade 3",
+    "topic": "Number Sense & Operations",
+    "type": "MCQ",
+    "difficulty": "medium",
+    "content": {
+      "en": {
+        "question": "Ahmad bought 4 boxes of pencils. Each box contains 8 pencils. He then gave 10 pencils to his brother. How many pencils does Ahmad have left?",
+        "options": [
+          "22",
+          "24",
+          "32",
+          "42"
+        ],
+        "hint": "First find the total number of pencils by multiplying, then subtract the pencils given away.",
+        "explanation": "Total pencils bought = \\( 4 \\times 8 = 32 \\). Pencils left = \\( 32 - 10 = 22 \\)."
+      },
+      "ar": {
+        "question": "اشترى أحمد 4 علب من الأقلام. تحتوي كل علبة على 8 أقلام. ثم أعطى لأخيه 10 أقلام. كم قلماً بقي مع أحمد؟",
+        "options": [
+          "22",
+          "24",
+          "32",
+          "42"
+        ],
+        "hint": "أوجد أولاً عدد الأقلام الكلي بالضرب، ثم اطرح الأقلام التي أعطاها لأخيه.",
+        "explanation": "إجمالي الأقلام = \\( 4 \\times 8 = 32 \\). عدد الأقلام المتبقية = \\( 32 - 10 = 22 \\)."
+      }
+    },
+    "correct_index": "0"
+  },
+  {
+    "id": "NAFES-023",
+    "track": "nafes",
+    "level": "Grade 3",
+    "topic": "Geometry",
+    "type": "MCQ",
+    "difficulty": "easy",
+    "content": {
+      "en": {
+        "question": "A rectangular garden has a length of \\( 9\\text{ m} \\) and a width of \\( 5\\text{ m} \\). What is the perimeter of the garden?",
+        "options": [
+          "\\( 14\\text{ m} \\)",
+          "\\( 28\\text{ m} \\)",
+          "\\( 45\\text{ m} \\)",
+          "\\( 56\\text{ m} \\)"
+        ],
+        "hint": "Perimeter of a rectangle is calculated using \\( 2 \\times (\\text{length} + \\text{width}) \\).",
+        "explanation": "Perimeter = \\( 2 \\times (9 + 5) = 2 \\times 14 = 28\\text{ m} \\)."
+      },
+      "ar": {
+        "question": "حديقة مستطيلة الشكل طولها \\( 9\\text{ م} \\) وعرضها \\( 5\\text{ م} \\). ما محيط الحديقة؟",
+        "options": [
+          "\\( 14\\text{ م} \\)",
+          "\\( 28\\text{ م} \\)",
+          "\\( 45\\text{ م} \\)",
+          "\\( 56\\text{ م} \\)"
+        ],
+        "hint": "محيط المستطيل يحسب بالقانون \\( 2 \\times (\\text{الطول} + \\text{العرض}) \\).",
+        "explanation": "المحيط = \\( 2 \\times (9 + 5) = 2 \\times 14 = 28\\text{ م} \\)."
+      }
+    },
+    "correct_index": "1"
+  },
+  {
+    "id": "NAFES-024",
+    "track": "nafes",
+    "level": "Grade 3",
+    "topic": "Fractions",
+    "type": "MCQ",
+    "difficulty": "medium",
+    "content": {
+      "en": {
+        "question": "A circle is divided into 8 equal parts. If 3 parts are shaded, which fraction represents the shaded region?",
+        "options": [
+          "\\( \\frac{1}{8} \\)",
+          "\\( \\frac{3}{8} \\)",
+          "\\( \\frac{5}{8} \\)",
+          "\\( \\frac{8}{3} \\)"
+        ],
+        "hint": "The numerator represents the shaded parts and the denominator represents the total parts.",
+        "explanation": "The shaded part is 3 out of 8 equal parts, so the fraction is \\( \\frac{3}{8} \\)."
+      },
+      "ar": {
+        "question": "قُسّمت دائرة إلى 8 أجزاء متطابقة. إذا تَمَّ تظليل 3 أجزاء منها، فما الكسر الذي يمثل الجزء المظلل؟",
+        "options": [
+          "\\( \\frac{1}{8} \\)",
+          "\\( \\frac{3}{8} \\)",
+          "\\( \\frac{5}{8} \\)",
+          "\\( \\frac{8}{3} \\)"
+        ],
+        "hint": "البسط يمثل عدد الأجزاء المظللة والمقام يمثل عدد الأجزاء الكلية.",
+        "explanation": "الجزء المظلل يمثل 3 أجزاء من أصل 8، وبالتالي الكسر هو \\( \\frac{3}{8} \\)."
+      }
+    },
+    "correct_index": "1"
+  },
+  {
+    "id": "NAFES-025",
+    "track": "nafes",
+    "level": "Grade 3",
+    "topic": "Data Analysis",
+    "type": "MCQ",
+    "difficulty": "easy",
+    "content": {
+      "en": {
+        "question": "Sara surveyed her classmates about their favorite fruit. 12 students chose apples, 8 chose bananas, and 6 chose oranges. How many students participated in the survey in total?",
+        "options": [
+          "20",
+          "24",
+          "26",
+          "30"
+        ],
+        "hint": "Add the number of students who chose each fruit.",
+        "explanation": "Total students = \\( 12 + 8 + 6 = 26 \\)."
+      },
+      "ar": {
+        "question": "أجرت سارة مسحاً لزميلاتها عن الفاكهة المفضلة. اختارت 12 طالبة التفاح، و8 اخترن الموز، و6 اخترن البرتقال. كم إجمالي عدد الطالبات اللاتي شاركن في المسح؟",
+        "options": [
+          "20",
+          "24",
+          "26",
+          "30"
+        ],
+        "hint": "اجمع عدد الطالبات اللاتي اخترن كل نوع من الفاكهة.",
+        "explanation": "إجمالي الطالبات = \\( 12 + 8 + 6 = 26 \\)."
+      }
+    },
+    "correct_index": "2"
+  },
+  {
+    "id": "NAFES-026",
+    "track": "nafes",
+    "level": "Grade 3",
+    "topic": "Measurement",
+    "type": "MCQ",
+    "difficulty": "medium",
+    "content": {
+      "en": {
+        "question": "Khalid started studying at 4:15 PM and finished at 5:45 PM. What is the total duration of Khalid's study session?",
+        "options": [
+          "1 hour",
+          "1 hour and 15 minutes",
+          "1 hour and 30 minutes",
+          "2 hours"
+        ],
+        "hint": "Calculate the difference between the end time and the start time.",
+        "explanation": "From 4:15 to 5:15 is 1 hour. From 5:15 to 5:45 is 30 minutes. Total time = 1 hour and 30 minutes."
+      },
+      "ar": {
+        "question": "بدأ خالد المذاكرة الساعة \\( 4:15 \\) عصراً وانتهى الساعة \\( 5:45 \\) عصراً. كم الزمن الذي استغرقه خالد في المذاكرة؟",
+        "options": [
+          "ساعة واحدة",
+          "ساعة و15 دقيقة",
+          "ساعة و30 دقيقة",
+          "ساعتان"
+        ],
+        "hint": "احسب الفرق بين وقت الانتهاء ووقت البدء.",
+        "explanation": "من \\( 4:15 \\) إلى \\( 5:15 \\) ساعة واحدة، ومن \\( 5:15 \\) إلى \\( 5:45 \\) 30 دقيقة. إذاً الزمن الكلي هو ساعة و30 دقيقة."
+      }
+    },
+    "correct_index": "2"
+  },
+  {
+    "id": "NAFES-027",
+    "track": "nafes",
+    "level": "Grade 6",
+    "topic": "Ratios & Proportions",
+    "type": "MCQ",
+    "difficulty": "medium",
+    "content": {
+      "en": {
+        "question": "A car travels \\( 240\\text{ km} \\) in \\( 3\\text{ hours} \\) at a constant speed. How far will it travel in \\( 5\\text{ hours} \\) at the same speed?",
+        "options": [
+          "\\( 320\\text{ km} \\)",
+          "\\( 360\\text{ km} \\)",
+          "\\( 400\\text{ km} \\)",
+          "\\( 480\\text{ km} \\)"
+        ],
+        "hint": "Find the speed in km/h first by dividing distance by time.",
+        "explanation": "Speed = \\( \\frac{240}{3} = 80\\text{ km/h} \\). Distance in 5 hours = \\( 80 \\times 5 = 400\\text{ km} \\)."
+      },
+      "ar": {
+        "question": "تقطع سيارة مسافة \\( 240\\text{ كم} \\) في \\( 3\\text{ ساعات} \\) بسرعة ثابتة. ما المسافة التي تقطعها في \\( 5\\text{ ساعات} \\) بنفس السرعة؟",
+        "options": [
+          "\\( 320\\text{ كم} \\)",
+          "\\( 360\\text{ كم} \\)",
+          "\\( 400\\text{ كم} \\)",
+          "\\( 480\\text{ كم} \\)"
+        ],
+        "hint": "احسب السرعة بالكيلومتر/ساعة أولاً بقسمة المسافة على الزمن.",
+        "explanation": "السرعة = \\( \\frac{240}{3} = 80\\text{ كم/ساعة} \\). المسافة في 5 ساعات = \\( 80 \\times 5 = 400\\text{ كم} \\)."
+      }
+    },
+    "correct_index": "2"
+  },
+  {
+    "id": "NAFES-028",
+    "track": "nafes",
+    "level": "Grade 6",
+    "topic": "Percentages",
+    "type": "MCQ",
+    "difficulty": "medium",
+    "content": {
+      "en": {
+        "question": "The original price of a jacket is 250 SAR. It is on sale with a \\( 20\\% \\) discount. What is the sale price of the jacket?",
+        "options": [
+          "200 SAR",
+          "210 SAR",
+          "220 SAR",
+          "230 SAR"
+        ],
+        "hint": "Calculate \\( 20\\% \\) of 250, then subtract it from the original price.",
+        "explanation": "Discount = \\( 0.20 \\times 250 = 50\\text{ SAR} \\). Sale price = \\( 250 - 50 = 200\\text{ SAR} \\)."
+      },
+      "ar": {
+        "question": "سترة سعرها الأصلي 250 ريالاً. عليها خصم بنسبة \\( 20\\% \\). ما سعر السترة بعد الخصم؟",
+        "options": [
+          "200 ريال",
+          "210 ريالات",
+          "220 ريالاً",
+          "230 ريالاً"
+        ],
+        "hint": "احسب \\( 20\\% \\) من 250، ثم اطرح الناتج من السعر الأصلي.",
+        "explanation": "مقدار الخصم = \\( 0.20 \\times 250 = 50\\text{ ريالاً} \\). السعر بعد الخصم = \\( 250 - 50 = 200\\text{ ريالاً} \\)."
+      }
+    },
+    "correct_index": "0"
+  },
+  {
+    "id": "NAFES-029",
+    "track": "nafes",
+    "level": "Grade 6",
+    "topic": "Geometry",
+    "type": "MCQ",
+    "difficulty": "easy",
+    "content": {
+      "en": {
+        "question": "What is the area of a triangle with a base length of \\( 12\\text{ cm} \\) and a height of \\( 7\\text{ cm} \\)?",
+        "options": [
+          "\\( 84\\text{ cm}^2 \\)",
+          "\\( 42\\text{ cm}^2 \\)",
+          "\\( 38\\text{ cm}^2 \\)",
+          "\\( 19\\text{ cm}^2 \\)"
+        ],
+        "hint": "The formula for the area of a triangle is \\( \\frac{1}{2} \\times \\text{base} \\times \\text{height} \\).",
+        "explanation": "Area = \\( \\frac{1}{2} \\times 12 \\times 7 = 6 \\times 7 = 42\\text{ cm}^2 \\)."
+      },
+      "ar": {
+        "question": "ما مساحة مثلث طول قاعدته \\( 12\\text{ سم} \\) وارتفاعه \\( 7\\text{ سم} \\)؟",
+        "options": [
+          "\\( 84\\text{ سم}^2 \\)",
+          "\\( 42\\text{ سم}^2 \\)",
+          "\\( 38\\text{ سم}^2 \\)",
+          "\\( 19\\text{ سم}^2 \\)"
+        ],
+        "hint": "قانون مساحة المثلث هو \\( \\frac{1}{2} \\times \\text{القاعدة} \\times \\text{الارتفاع} \\).",
+        "explanation": "المساحة = \\( \\frac{1}{2} \\times 12 \\times 7 = 6 \\times 7 = 42\\text{ سم}^2 \\)."
+      }
+    },
+    "correct_index": "1"
+  },
+  {
+    "id": "NAFES-030",
+    "track": "nafes",
+    "level": "Grade 6",
+    "topic": "Statistics",
+    "type": "MCQ",
+    "difficulty": "easy",
+    "content": {
+      "en": {
+        "question": "Find the arithmetic mean (average) of the dataset: \\( 14, 18, 22, 16, 30 \\).",
+        "options": [
+          "18",
+          "20",
+          "22",
+          "25"
+        ],
+        "hint": "The mean is the sum of all values divided by the total count of values.",
+        "explanation": "Sum = \\( 14 + 18 + 22 + 16 + 30 = 100 \\). Count = 5. Mean = \\( \\frac{100}{5} = 20 \\)."
+      },
+      "ar": {
+        "question": "أوجد المتوسط الحسابي لمجموعة البيانات التالية: \\( 14, 18, 22, 16, 30 \\).",
+        "options": [
+          "18",
+          "20",
+          "22",
+          "25"
+        ],
+        "hint": "المتوسط الحسابي يساوي مجموع القيم مقسوماً على عددها.",
+        "explanation": "المجموع = \\( 14 + 18 + 22 + 16 + 30 = 100 \\). عدد القيم = 5. المتوسط الحسابي = \\( \\frac{100}{5} = 20 \\)."
+      }
+    },
+    "correct_index": "1"
+  },
+  {
+    "id": "NAFES-031",
+    "track": "nafes",
+    "level": "Grade 6",
+    "topic": "Algebra",
+    "type": "MCQ",
+    "difficulty": "medium",
+    "content": {
+      "en": {
+        "question": "Solve the algebraic equation for \\( x \\): \\( 3x + 7 = 31 \\).",
+        "options": [
+          "6",
+          "7",
+          "8",
+          "9"
+        ],
+        "hint": "Subtract 7 from both sides, then divide by 3.",
+        "explanation": "\\( 3x = 31 - 7 \\Rightarrow 3x = 24 \\Rightarrow x = \\frac{24}{3} = 8 \\)."
+      },
+      "ar": {
+        "question": "حل المعادلة الجبرية التالية لإيجاد قيمة \\( x \\): \\( 3x + 7 = 31 \\).",
+        "options": [
+          "6",
+          "7",
+          "8",
+          "9"
+        ],
+        "hint": "اطرح 7 من الطرفين، ثم اقسم الناتج على 3.",
+        "explanation": "\\( 3x = 31 - 7 \\Rightarrow 3x = 24 \\Rightarrow x = \\frac{24}{3} = 8 \\)."
+      }
+    },
+    "correct_index": "2"
+  },
+  {
+    "id": "NAFES-032",
+    "track": "nafes",
+    "level": "Grade 6",
+    "topic": "3D Geometry",
+    "type": "MCQ",
+    "difficulty": "medium",
+    "content": {
+      "en": {
+        "question": "A rectangular prism has a length of \\( 8\\text{ cm} \\), a width of \\( 5\\text{ cm} \\), and a height of \\( 10\\text{ cm} \\). What is its volume?",
+        "options": [
+          "\\( 200\\text{ cm}^3 \\)",
+          "\\( 300\\text{ cm}^3 \\)",
+          "\\( 400\\text{ cm}^3 \\)",
+          "\\( 800\\text{ cm}^3 \\)"
+        ],
+        "hint": "The volume of a rectangular prism is \\( V = \\text{length} \\times \\text{width} \\times \\text{height} \\).",
+        "explanation": "Volume = \\( 8 \\times 5 \\times 10 = 400\\text{ cm}^3 \\)."
+      },
+      "ar": {
+        "question": "منشور مستطيلي (متوازي مستطيلات) أبعاده: الطول \\( 8\\text{ سم} \\)، والعرض \\( 5\\text{ سم} \\)، والارتفاع \\( 10\\text{ سم} \\). ما حجمه؟",
+        "options": [
+          "\\( 200\\text{ سم}^3 \\)",
+          "\\( 300\\text{ سم}^3 \\)",
+          "\\( 400\\text{ سم}^3 \\)",
+          "\\( 800\\text{ سم}^3 \\)"
+        ],
+        "hint": "حجم متوازي المستطيلات = \\( \\text{الطول} \\times \\text{العرض} \\times \\text{الارتفاع} \\).",
+        "explanation": "الحجم = \\( 8 \\times 5 \\times 10 = 400\\text{ سم}^3 \\)."
+      }
+    },
+    "correct_index": "2"
+  },
+  {
+    "id": "NAFES-033",
+    "track": "nafes",
+    "level": "Grade 9",
+    "topic": "Systems of Equations",
+    "type": "MCQ",
+    "difficulty": "hard",
+    "content": {
+      "en": {
+        "question": "What is the solution pair \\( (x, y) \\) to the system of linear equations: \\( 2x + y = 11 \\) and \\( x - y = 1 \\)?",
+        "options": [
+          "\\( (3, 4) \\)",
+          "\\( (4, 3) \\)",
+          "\\( (5, 1) \\)",
+          "\\( (2, 7) \\)"
+        ],
+        "hint": "Add the two equations together to eliminate \\( y \\).",
+        "explanation": "Adding both equations: \\( (2x + y) + (x - y) = 11 + 1 \\Rightarrow 3x = 12 \\Rightarrow x = 4 \\). Substitute \\( x = 4 \\) into \\( x - y = 1 \\): \\( 4 - y = 1 \\Rightarrow y = 3 \\). The solution is \\( (4, 3) \\)."
+      },
+      "ar": {
+        "question": "ما حل نظام المعادلتين الخطيتين التالي: \\( 2x + y = 11 \\) و \\( x - y = 1 \\)؟",
+        "options": [
+          "\\( (3, 4) \\)",
+          "\\( (4, 3) \\)",
+          "\\( (5, 1) \\)",
+          "\\( (2, 7) \\)"
+        ],
+        "hint": "اجمع المعادلتين معاً للتخلص من المتغير \\( y \\).",
+        "explanation": "بجمع المعادلتين: \\( 3x = 12 \\Rightarrow x = 4 \\). بالتعويض في المعادلة الثانية: \\( 4 - y = 1 \\Rightarrow y = 3 \\). إذاً الحل هو الزوج المرتب \\( (4, 3) \\)."
+      }
+    },
+    "correct_index": "1"
+  },
+  {
+    "id": "NAFES-034",
+    "track": "nafes",
+    "level": "Grade 9",
+    "topic": "Quadratic Equations",
+    "type": "MCQ",
+    "difficulty": "hard",
+    "content": {
+      "en": {
+        "question": "What are the real roots of the quadratic equation \\( x^2 - 7x + 12 = 0 \\)?",
+        "options": [
+          "\\( x = -3, -4 \\)",
+          "\\( x = 3, 4 \\)",
+          "\\( x = 2, 6 \\)",
+          "\\( x = -2, -6 \\)"
+        ],
+        "hint": "Factor the quadratic expression into \\( (x - a)(x - b) = 0 \\).",
+        "explanation": "Factoring gives \\( (x - 3)(x - 4) = 0 \\). Thus, the roots are \\( x = 3 \\) and \\( x = 4 \\)."
+      },
+      "ar": {
+        "question": "ما هما جذرا المعادلة التربيعية \\( x^2 - 7x + 12 = 0 \\)؟",
+        "options": [
+          "\\( x = -3, -4 \\)",
+          "\\( x = 3, 4 \\)",
+          "\\( x = 2, 6 \\)",
+          "\\( x = -2, -6 \\)"
+        ],
+        "hint": "حلل العبارة التربيعية إلى أقواس من الشكل \\( (x - a)(x - b) = 0 \\).",
+        "explanation": "التحليل يعطي: \\( (x - 3)(x - 4) = 0 \\). وبالتالي فإن الجذرين هما \\( x = 3 \\) و \\( x = 4 \\)."
+      }
+    },
+    "correct_index": "1"
+  },
+  {
+    "id": "NAFES-035",
+    "track": "nafes",
+    "level": "Grade 9",
+    "topic": "Pythagorean Theorem",
+    "type": "MCQ",
+    "difficulty": "medium",
+    "content": {
+      "en": {
+        "question": "A right triangle has a leg length of \\( 9\\text{ cm} \\) and a hypotenuse length of \\( 15\\text{ cm} \\). What is the length of the other leg?",
+        "options": [
+          "\\( 10\\text{ cm} \\)",
+          "\\( 12\\text{ cm} \\)",
+          "\\( 13\\text{ cm} \\)",
+          "\\( 14\\text{ cm} \\)"
+        ],
+        "hint": "Apply \\( a^2 + b^2 = c^2 \\), where \\( c \\) is the hypotenuse.",
+        "explanation": "\\( b = \\sqrt{c^2 - a^2} = \\sqrt{15^2 - 9^2} = \\sqrt{225 - 81} = \\sqrt{144} = 12\\text{ cm} \\)."
+      },
+      "ar": {
+        "question": "مثلث قائم الزاوية طول أحد ضلعي القائمة \\( 9\\text{ سم} \\) وطول الوتر \\( 15\\text{ سم} \\). ما طول ضلع القائمة الآخر؟",
+        "options": [
+          "\\( 10\\text{ سم} \\)",
+          "\\( 12\\text{ سم} \\)",
+          "\\( 13\\text{ سم} \\)",
+          "\\( 14\\text{ سم} \\)"
+        ],
+        "hint": "طبق نظرية فيثاغورس \\( a^2 + b^2 = c^2 \\) حيث \\( c \\) هو الوتر.",
+        "explanation": "\\( b = \\sqrt{15^2 - 9^2} = \\sqrt{225 - 81} = \\sqrt{144} = 12\\text{ سم} \\)."
+      }
+    },
+    "correct_index": "1"
+  },
+  {
+    "id": "NAFES-036",
+    "track": "nafes",
+    "level": "Grade 9",
+    "topic": "Coordinate Geometry",
+    "type": "MCQ",
+    "difficulty": "medium",
+    "content": {
+      "en": {
+        "question": "What is the slope of the straight line passing through the points \\( (2, 5) \\) and \\( (6, 13) \\)?",
+        "options": [
+          "\\( \\frac{1}{2} \\)",
+          "2",
+          "3",
+          "4"
+        ],
+        "hint": "Use the slope formula \\( m = \\frac{y_2 - y_1}{x_2 - x_1} \\).",
+        "explanation": "Slope \\( m = \\frac{13 - 5}{6 - 2} = \\frac{8}{4} = 2 \\)."
+      },
+      "ar": {
+        "question": "ما ميل المستقيم الذي يمر بالنقطتين \\( (2, 5) \\) و \\( (6, 13) \\)؟",
+        "options": [
+          "\\( \\frac{1}{2} \\)",
+          "2",
+          "3",
+          "4"
+        ],
+        "hint": "استخدم قانون الميل \\( m = \\frac{y_2 - y_1}{x_2 - x_1} \\).",
+        "explanation": "الميل \\( m = \\frac{13 - 5}{6 - 2} = \\frac{8}{4} = 2 \\)."
+      }
+    },
+    "correct_index": "1"
+  },
+  {
+    "id": "NAFES-037",
+    "track": "nafes",
+    "level": "Grade 9",
+    "topic": "Probability",
+    "type": "MCQ",
+    "difficulty": "medium",
+    "content": {
+      "en": {
+        "question": "A bag contains 5 red balls, 3 blue balls, and 2 green balls. If one ball is chosen at random, what is the probability that it is NOT red?",
+        "options": [
+          "\\( \\frac{1}{5} \\)",
+          "\\( \\frac{3}{10} \\)",
+          "\\( \\frac{1}{2} \\)",
+          "\\( \\frac{3}{5} \\)"
+        ],
+        "hint": "Find the total number of non-red balls and divide by the overall total number of balls.",
+        "explanation": "Total balls = \\( 5 + 3 + 2 = 10 \\). Non-red balls = \\( 3 + 2 = 5 \\). Probability = \\( \\frac{5}{10} = \\frac{1}{2} \\)."
+      },
+      "ar": {
+        "question": "كيس يحتوي على 5 كرات حمراء، و3 كرات زرقاء، وكرتين خضراوين. إذا سُحبت كرة واحدة عشوائياً، فما احتمال ألا تكون الكرة المكسوبة حمراء؟",
+        "options": [
+          "\\( \\frac{1}{5} \\)",
+          "\\( \\frac{3}{10} \\)",
+          "\\( \\frac{1}{2} \\)",
+          "\\( \\frac{3}{5} \\)"
+        ],
+        "hint": "احسب عدد الكرات غير الحمراء واقسمه على المجموع الكلي للكرات.",
+        "explanation": "إجمالي الكرات = \\( 5 + 3 + 2 = 10 \\). عدد الكرات غير الحمراء = \\( 3 + 2 = 5 \\). الاحتمال = \\( \\frac{5}{10} = \\frac{1}{2} \\)."
+      }
+    },
+    "correct_index": "2"
+  },
+  {
+    "id": "NAFES-038",
+    "track": "nafes",
+    "level": "Grade 9",
+    "topic": "Exponents & Polynomials",
+    "type": "MCQ",
+    "difficulty": "hard",
+    "content": {
+      "en": {
+        "question": "Simplify the algebraic expression: \\( \\frac{(2x^3)^2 \\cdot x^4}{4x^5} \\).",
+        "options": [
+          "\\( x^4 \\)",
+          "\\( x^5 \\)",
+          "\\( 2x^5 \\)",
+          "\\( 4x^5 \\)"
+        ],
+        "hint": "Apply exponent laws: \\( (ab)^n = a^n b^n \\), \\( x^a \\cdot x^b = x^{a+b} \\), and \\( \\frac{x^a}{x^b} = x^{a-b} \\).",
+        "explanation": "Numerator = \\( (4x^6) \\cdot x^4 = 4x^{10} \\). Expression = \\( \\frac{4x^{10}}{4x^5} = x^{10-5} = x^5 \\)."
+      },
+      "ar": {
+        "question": "بسّط العبارة الجبرية التالية: \\( \\frac{(2x^3)^2 \\cdot x^4}{4x^5} \\).",
+        "options": [
+          "\\( x^4 \\)",
+          "\\( x^5 \\)",
+          "\\( 2x^5 \\)",
+          "\\( 4x^5 \\)"
+        ],
+        "hint": "استخدم قوانين الأسس: \\( (ab)^n = a^n b^n \\)، و \\( x^a \\cdot x^b = x^{a+b} \\)، و \\( \\frac{x^a}{x^b} = x^{a-b} \\).",
+        "explanation": "البسط = \\( (4x^6) \\cdot x^4 = 4x^{10} \\). الكسر = \\( \\frac{4x^{10}}{4x^5} = x^{10-5} = x^5 \\)."
+      }
+    },
+    "correct_index": "1"
+  },
+  {
+    "id": "NAFES-039",
+    "track": "nafes",
+    "level": "Grade 9",
+    "topic": "Circle Geometry",
+    "type": "MCQ",
+    "difficulty": "hard",
+    "content": {
+      "en": {
+        "question": "In a circle, an inscribed angle \\( \\angle ABC \\) intercepts an arc measuring \\( 110^\\circ \\). What is the measure of angle \\( \\angle ABC \\)?",
+        "options": [
+          "\\( 55^\\circ \\)",
+          "\\( 110^\\circ \\)",
+          "\\( 220^\\circ \\)",
+          "\\( 70^\\circ \\)"
+        ],
+        "hint": "The measure of an inscribed angle is half the measure of its intercepted arc.",
+        "explanation": "Inscribed angle = \\( \\frac{1}{2} \\times \\text{intercepted arc} = \\frac{110^\\circ}{2} = 55^\\circ \\)."
+      },
+      "ar": {
+        "question": "في دائرة، تقابل الزاوية المحيطية \\( \\angle ABC \\) قوساً قياسه \\( 110^\\circ \\). ما قياس الزاوية \\( \\angle ABC \\)؟",
+        "options": [
+          "\\( 55^\\circ \\)",
+          "\\( 110^\\circ \\)",
+          "\\( 220^\\circ \\)",
+          "\\( 70^\\circ \\)"
+        ],
+        "hint": "قياس الزاوية المحيطية يساوي نصف قياس القوس المقابل لها.",
+        "explanation": "قياس الزاوية المحيطية = \\( \\frac{110^\\circ}{2} = 55^\\circ \\)."
+      }
+    },
+    "correct_index": "0"
+  },
+  {
+    "id": "NAFES-040",
+    "track": "nafes",
+    "level": "Grade 9",
+    "topic": "Inequalities",
+    "type": "MCQ",
+    "difficulty": "hard",
+    "content": {
+      "en": {
+        "question": "Solve the linear inequality: \\( -2x + 5 \\le 13 \\). Which inequality represents the solution set?",
+        "options": [
+          "\\( x \\ge -4 \\)",
+          "\\( x \\le -4 \\)",
+          "\\( x \\ge 4 \\)",
+          "\\( x \\le 4 \\)"
+        ],
+        "hint": "Remember to flip the inequality sign when dividing or multiplying by a negative number.",
+        "explanation": "Subtract 5: \\( -2x \\le 8 \\). Divide by \\( -2 \\) and reverse inequality: \\( x \\ge -4 \\)."
+      },
+      "ar": {
+        "question": "حل المتباينة الخطية التالية: \\( -2x + 5 \\le 13 \\). أي متباينة تمثل مجموعة الحل؟",
+        "options": [
+          "\\( x \\ge -4 \\)",
+          "\\( x \\le -4 \\)",
+          "\\( x \\ge 4 \\)",
+          "\\( x \\le 4 \\)"
+        ],
+        "hint": "تذكر أن اتجاه إشارة المتباينة ينعكس عند القسمة على عدد سالب.",
+        "explanation": "اطرح 5 من الطرفين: \\( -2x \\le 8 \\). اقسم على \\( -2 \\) واعكس الإشارة: \\( x \\ge -4 \\)."
+      }
+    },
+    "correct_index": "0"
+  },
+  {
+    "id": "NAFES-041",
+    "track": "nafes",
+    "level": "Grade 9",
+    "topic": "Functions",
+    "type": "MCQ",
+    "difficulty": "extreme",
+    "content": {
+      "en": {
+        "question": "What is the domain of the real function \\( f(x) = \\frac{3}{\\sqrt{x - 4}} \\)?",
+        "options": [
+          "\\( x \\ge 4 \\)",
+          "\\( x > 4 \\)",
+          "\\( x \\neq 4 \\)",
+          "\\( x < 4 \\)"
+        ],
+        "hint": "The expression inside the square root in the denominator must be strictly positive.",
+        "explanation": "For the square root in denominator to be real and non-zero: \\( x - 4 > 0 \\Rightarrow x > 4 \\)."
+      },
+      "ar": {
+        "question": "ما مجال الدالة الحقيقية \\( f(x) = \\frac{3}{\\sqrt{x - 4}} \\)؟",
+        "options": [
+          "\\( x \\ge 4 \\)",
+          "\\( x > 4 \\)",
+          "\\( x \\neq 4 \\)",
+          "\\( x < 4 \\)"
+        ],
+        "hint": "يجب أن يكون المقدار تحت الجذر في المقام موجباً تماماً (أكبر تماماً من الصفر).",
+        "explanation": "كي يكون جذر المقام معرفاً ولا يساوي الصفر: \\( x - 4 > 0 \\Rightarrow x > 4 \\)."
+      }
+    },
+    "correct_index": "1"
+  },
+  {
+    "id": "NAFES-042",
+    "track": "nafes",
+    "level": "Grade 3",
+    "topic": "Numbers & Operations",
+    "type": "MCQ",
+    "difficulty": "medium",
+    "content": {
+      "en": {
+        "question": "Sami has 4 boxes of crayons. Each box contains 8 crayons. He gave 5 crayons to his friend. How many crayons does Sami have left?",
+        "options": [
+          "27",
+          "28",
+          "32",
+          "37"
+        ],
+        "hint": "First find the total number of crayons by multiplying the number of boxes by crayons per box, then subtract the crayons given away.",
+        "explanation": "Total crayons Sami started with: \\( 4 \\times 8 = 32 \\). After giving away 5 crayons, he has \\( 32 - 5 = 27 \\) crayons left."
+      },
+      "ar": {
+        "question": "لدى سامي 4 علب من ألوان التلوين. تحتوي كل علبة على 8 ألوان. أعطى 5 ألوان لصديقه. كم لوناً بقي مع سامي؟",
+        "options": [
+          "27",
+          "28",
+          "32",
+          "37"
+        ],
+        "hint": "احسب أولاً العدد الكلي للألوان بضرب عدد العلب في عدد الألوان بكل علبة، ثم اطرح الألوان التي أعطاها لصديقه.",
+        "explanation": "العدد الكلي للألوان مع سامي: \\( 4 \\times 8 = 32 \\). بعد أن أعطى 5 ألوان لصديقه، يتبقى معه: \\( 32 - 5 = 27 \\) لوناً."
+      }
+    },
+    "correct_index": "0"
+  },
+  {
+    "id": "NAFES-043",
+    "track": "nafes",
+    "level": "Grade 3",
+    "topic": "Geometry & Measurement",
+    "type": "MCQ",
+    "difficulty": "medium",
+    "content": {
+      "en": {
+        "question": "A rectangular garden has a length of \\( 9\\text{ m} \\) and a perimeter of \\( 28\\text{ m} \\). What is the width of the garden?",
+        "options": [
+          "5 m",
+          "10 m",
+          "14 m",
+          "19 m"
+        ],
+        "hint": "The formula for the perimeter of a rectangle is \\( P = 2 \\times (\\text{length} + \\text{width}) \\).",
+        "explanation": "Perimeter \\( P = 2 \\times (\\text{length} + \\text{width}) = 28 \\). Dividing by 2 gives \\( \\text{length} + \\text{width} = 14 \\). Subtracting the length: \\( 14 - 9 = 5\\text{ m} \\)."
+      },
+      "ar": {
+        "question": "حديقة مستطيلة الشكل طولها \\( 9\\text{ م} \\) ومحيطها \\( 28\\text{ م} \\). ما عرض الحديقة؟",
+        "options": [
+          "5 م",
+          "10 م",
+          "14 م",
+          "19 م"
+        ],
+        "hint": "قانون محيط المستطيل هو \\( \\text{المحيط} = 2 \\times (\\text{الطول} + \\text{العرض}) \\).",
+        "explanation": "المحيط = \\( 2 \\times (\\text{الطول} + \\text{العرض}) = 28 \\). بالقسمة على 2 نجد أن \\( \\text{الطول} + \\text{العرض} = 14 \\). وبطرح الطول: \\( 14 - 9 = 5\\text{ م} \\)."
+      }
+    },
+    "correct_index": "0"
+  },
+  {
+    "id": "NAFES-044",
+    "track": "nafes",
+    "level": "Grade 3",
+    "topic": "Fractions",
+    "type": "MCQ",
+    "difficulty": "hard",
+    "content": {
+      "en": {
+        "question": "Which of the following fractions is greater than \\( \\frac{1}{2} \\)?",
+        "options": [
+          "\\( \\frac{2}{5} \\)",
+          "\\( \\frac{3}{8} \\)",
+          "\\( \\frac{4}{7} \\)",
+          "\\( \\frac{3}{10} \\)"
+        ],
+        "hint": "Compare each fraction to half of its denominator.",
+        "explanation": "For \\( \\frac{4}{7} \\), half of 7 is 3.5. Since 4 is greater than 3.5, \\( \\frac{4}{7} > \\frac{1}{2} \\)."
+      },
+      "ar": {
+        "question": "أي من الكسور التالية أكبر من \\( \\frac{1}{2} \\)؟",
+        "options": [
+          "\\( \\frac{2}{5} \\)",
+          "\\( \\frac{3}{8} \\)",
+          "\\( \\frac{4}{7} \\)",
+          "\\( \\frac{3}{10} \\)"
+        ],
+        "hint": "قارن البسط بنصف المقام لكل كسر.",
+        "explanation": "في الكسر \\( \\frac{4}{7} \\)، نصف المقام 7 هو 3.5. وبما أن البسط 4 أكبر من 3.5، فإن \\( \\frac{4}{7} > \\frac{1}{2} \\)."
+      }
+    },
+    "correct_index": "2"
+  },
+  {
+    "id": "NAFES-045",
+    "track": "nafes",
+    "level": "Grade 3",
+    "topic": "Measurement & Time",
+    "type": "MCQ",
+    "difficulty": "medium",
+    "content": {
+      "en": {
+        "question": "A movie started at \\( 4:15\\text{ PM} \\) and ended at \\( 6:05\\text{ PM} \\). How long did the movie last?",
+        "options": [
+          "1 hour 40 minutes",
+          "1 hour 50 minutes",
+          "2 hours 10 minutes",
+          "2 hours 50 minutes"
+        ],
+        "hint": "Count the time from 4:15 PM to 5:15 PM first, then count the remaining minutes to 6:05 PM.",
+        "explanation": "From 4:15 PM to 5:15 PM is 1 hour. From 5:15 PM to 6:05 PM is 50 minutes. Total time is 1 hour 50 minutes."
+      },
+      "ar": {
+        "question": "بدأ عرض فيلم عند الساعة \\( 4:15 \\) عصراً وانتهى عند الساعة \\( 6:05 \\) مساءً. ما مدة عرض الفيلم؟",
+        "options": [
+          "ساعة و40 دقيقة",
+          "ساعة و50 دقيقة",
+          "ساعتان و10 دقائق",
+          "ساعتان و50 دقيقة"
+        ],
+        "hint": "احسب الوقت من 4:15 إلى 5:15 أولاً، ثم اضف الدقائق المتبقية حتى 6:05.",
+        "explanation": "من 4:15 إلى 5:15 عبارة عن ساعة واحدة. ومن 5:15 إلى 6:05 عبارة عن 50 دقيقة. إذن المدة الكلية هي ساعة و50 دقيقة."
+      }
+    },
+    "correct_index": "1"
+  },
+  {
+    "id": "NAFES-046",
+    "track": "nafes",
+    "level": "Grade 3",
+    "topic": "Patterns & Algebra",
+    "type": "MCQ",
+    "difficulty": "medium",
+    "content": {
+      "en": {
+        "question": "Consider the pattern: \\( 4, 9, 14, 19, 24, \\dots \\). What is the 8th term in this pattern?",
+        "options": [
+          "29",
+          "34",
+          "39",
+          "44"
+        ],
+        "hint": "Find the rule of the pattern by determining how much is added each time.",
+        "explanation": "The rule is to add 5 to each term. The terms are: 1st=4, 2nd=9, 3rd=14, 4th=19, 5th=24, 6th=29, 7th=34, 8th=39."
+      },
+      "ar": {
+        "question": "تأمل النمط التالي: \\( 4, 9, 14, 19, 24, \\dots \\). ما هو الحد الثامن في هذا النمط؟",
+        "options": [
+          "29",
+          "34",
+          "39",
+          "44"
+        ],
+        "hint": "اكتشف قاعدة النمط بمعرفة القيمة المضافة في كل مرة.",
+        "explanation": "قاعدة النمط هي إضافة 5 في كل مرة. الحدود هي: الأول=4، الثاني=9، الثالث=14، الرابع=19، الخامس=24، السادس=29، السابع=34، الثامن=39."
+      }
+    },
+    "correct_index": "2"
+  },
+  {
+    "id": "NAFES-047",
+    "track": "nafes",
+    "level": "Grade 3",
+    "topic": "Data Analysis",
+    "type": "MCQ",
+    "difficulty": "hard",
+    "content": {
+      "en": {
+        "question": "A bar graph shows that 12 students like apples, 8 like bananas, and 16 like oranges. How many more students prefer oranges than bananas?",
+        "options": [
+          "4",
+          "8",
+          "12",
+          "24"
+        ],
+        "hint": "Subtract the number of students who like bananas from the number of students who like oranges.",
+        "explanation": "Students preferring oranges = 16. Students preferring bananas = 8. Difference = \\( 16 - 8 = 8 \\)."
+      },
+      "ar": {
+        "question": "يظهر تمثيل بالأعمدة أن 12 طالباً يفضلون التفاح، و8 يفضلون الموز، و16 يفضلون البرتقال. كم يزيد عدد الطلاب الذين يفضلون البرتقال على الذين يفضلون الموز؟",
+        "options": [
+          "4",
+          "8",
+          "12",
+          "24"
+        ],
+        "hint": "اطرح عدد الطلاب الذين يفضلون الموز من عدد الطلاب الذين يفضلون البرتقال.",
+        "explanation": "عدد مفضلي البرتقال = 16، وعدد مفضلي الموز = 8. الزيادة = \\( 16 - 8 = 8 \\) طلاب."
+      }
+    },
+    "correct_index": "1"
+  },
+  {
+    "id": "NAFES-048",
+    "track": "nafes",
+    "level": "Grade 6",
+    "topic": "Numbers & Operations",
+    "type": "MCQ",
+    "difficulty": "medium",
+    "content": {
+      "en": {
+        "question": "What is the value of \\( \\frac{3}{4} \\div \\frac{2}{5} \\)?",
+        "options": [
+          "\\( \\frac{3}{10} \\)",
+          "\\( \\frac{8}{15} \\)",
+          "\\( \\frac{15}{8} \\)",
+          "\\( \\frac{6}{20} \\)"
+        ],
+        "hint": "To divide by a fraction, multiply by its reciprocal.",
+        "explanation": "\\( \\frac{3}{4} \\div \\frac{2}{5} = \\frac{3}{4} \\times \\frac{5}{2} = \\frac{15}{8} \\)."
+      },
+      "ar": {
+        "question": "ما قيمة \\( \\frac{3}{4} \\div \\frac{2}{5} \\)؟",
+        "options": [
+          "\\( \\frac{3}{10} \\)",
+          "\\( \\frac{8}{15} \\)",
+          "\\( \\frac{15}{8} \\)",
+          "\\( \\frac{6}{20} \\)"
+        ],
+        "hint": "لقسمة كسر على كسر، اضرب في النظير الضربي للكسر الثاني.",
+        "explanation": "\\( \\frac{3}{4} \\div \\frac{2}{5} = \\frac{3}{4} \\times \\frac{5}{2} = \\frac{15}{8} \\)."
+      }
+    },
+    "correct_index": "2"
+  },
+  {
+    "id": "NAFES-049",
+    "track": "nafes",
+    "level": "Grade 6",
+    "topic": "Ratios and Percentages",
+    "type": "MCQ",
+    "difficulty": "hard",
+    "content": {
+      "en": {
+        "question": "A store offers a \\( 20\\% \\) discount on a jacket originally priced at \\( 250\\text{ SAR} \\). If a \\( 15\\% \\) tax is applied after the discount, what is the final price of the jacket?",
+        "options": [
+          "200 SAR",
+          "230 SAR",
+          "237.5 SAR",
+          "245 SAR"
+        ],
+        "hint": "Calculate the price after discount first, then add the 15% tax to the discounted price.",
+        "explanation": "Discount amount = \\( 250 \\times 0.20 = 50\\text{ SAR} \\). Discounted price = \\( 250 - 50 = 200\\text{ SAR} \\). Tax = \\( 200 \\times 0.15 = 30\\text{ SAR} \\). Final price = \\( 200 + 30 = 230\\text{ SAR} \\)."
+      },
+      "ar": {
+        "question": "يقدم متجر خصماً بنسبة \\( 20\\% \\) على معطف سعره الأصلي \\( 250 \\) ريالاً. إذا أضيفت ضريبة بنسبة \\( 15\\% \\) بعد الخصم، فما السعر النهائي للمعطف؟",
+        "options": [
+          "200 ريال",
+          "230 ريال",
+          "237.5 ريال",
+          "245 ريال"
+        ],
+        "hint": "احسب السعر بعد الخصم أولاً، ثم أضف عليه ضريبة 15%.",
+        "explanation": "قيمة الخصم = \\( 250 \\times 0.20 = 50 \\) ريال. السعر بعد الخصم = \\( 250 - 50 = 200 \\) ريال. الضريبة = \\( 200 \\times 0.15 = 30 \\) ريال. السعر النهائي = \\( 200 + 30 = 230 \\) ريالاً."
+      }
+    },
+    "correct_index": "1"
+  },
+  {
+    "id": "NAFES-050",
+    "track": "nafes",
+    "level": "Grade 6",
+    "topic": "Geometry",
+    "type": "MCQ",
+    "difficulty": "medium",
+    "content": {
+      "en": {
+        "question": "What is the area of a triangle with a base of \\( 14\\text{ cm} \\) and a height of \\( 9\\text{ cm} \\)?",
+        "options": [
+          "63 cm²",
+          "126 cm²",
+          "46 cm²",
+          "23 cm²"
+        ],
+        "hint": "Use the formula \\( \\text{Area} = \\frac{1}{2} \\times \\text{base} \\times \\text{height} \\).",
+        "explanation": "Area = \\( \\frac{1}{2} \\times 14 \\times 9 = 7 \\times 9 = 63\\text{ cm}^2 \\)."
+      },
+      "ar": {
+        "question": "ما مساحة مثلث طول قاعدته \\( 14\\text{ سم} \\) وارتفاعه \\( 9\\text{ سم} \\)؟",
+        "options": [
+          "63 سم²",
+          "126 سم²",
+          "46 سم²",
+          "23 سم²"
+        ],
+        "hint": "استخدم القانون: \\( \\text{المساحة} = \\frac{1}{2} \\times \\text{القاعدة} \\times \\text{الارتفاع} \\).",
+        "explanation": "المساحة = \\( \\frac{1}{2} \\times 14 \\times 9 = 7 \\times 9 = 63\\text{ سم}^2 \\)."
+      }
+    },
+    "correct_index": "0"
+  },
+  {
+    "id": "NAFES-051",
+    "track": "nafes",
+    "level": "Grade 6",
+    "topic": "Data Analysis & Statistics",
+    "type": "MCQ",
+    "difficulty": "medium",
+    "content": {
+      "en": {
+        "question": "The test scores of 5 students are \\( 78, 85, 92, 85, 90 \\). What is the median score?",
+        "options": [
+          "85",
+          "86",
+          "88",
+          "90"
+        ],
+        "hint": "Arrange the scores in ascending order and find the middle value.",
+        "explanation": "Arranging values from smallest to largest: \\( 78, 85, 85, 90, 92 \\). The middle (3rd) score is 85."
+      },
+      "ar": {
+        "question": "درجات 5 طلاب في اختبار هي \\( 78, 85, 92, 85, 90 \\). ما الوسيط لهذه الدرجات؟",
+        "options": [
+          "85",
+          "86",
+          "88",
+          "90"
+        ],
+        "hint": "رتب الدرجات تصاعدياً ثم حدد القيمة الواقعة في المنتصف.",
+        "explanation": "ترتيب الدرجات تصاعدياً: \\( 78, 85, 85, 90, 92 \\). القيمة الوسطى (الثالثة) هي 85."
+      }
+    },
+    "correct_index": "0"
+  },
+  {
+    "id": "NAFES-052",
+    "track": "nafes",
+    "level": "Grade 6",
+    "topic": "Algebraic Expressions",
+    "type": "MCQ",
+    "difficulty": "hard",
+    "content": {
+      "en": {
+        "question": "If \\( 3x - 7 = 20 \\), what is the value of \\( 5x + 2 \\)?",
+        "options": [
+          "37",
+          "47",
+          "52",
+          "27"
+        ],
+        "hint": "Solve for \\( x \\) first, then substitute it into \\( 5x + 2 \\).",
+        "explanation": "From \\( 3x - 7 = 20 \\), add 7: \\( 3x = 27 \\implies x = 9 \\). Substitute \\( x = 9 \\) into \\( 5x + 2 \\): \\( 5(9) + 2 = 45 + 2 = 47 \\)."
+      },
+      "ar": {
+        "question": "إذا كان \\( 3x - 7 = 20 \\)، فما قيمة \\( 5x + 2 \\)؟",
+        "options": [
+          "37",
+          "47",
+          "52",
+          "27"
+        ],
+        "hint": "أوجد قيمة \\( x \\) أولاً، ثم عوض بها في العبارة \\( 5x + 2 \\).",
+        "explanation": "من المعادلة \\( 3x - 7 = 20 \\)، بنقل 7 للطرف الآخر: \\( 3x = 27 \\implies x = 9 \\). بالتعويض عن \\( x = 9 \\) في العبارة: \\( 5(9) + 2 = 45 + 2 = 47 \\)."
+      }
+    },
+    "correct_index": "1"
+  },
+  {
+    "id": "NAFES-053",
+    "track": "nafes",
+    "level": "Grade 6",
+    "topic": "Measurement & Surface Area",
+    "type": "MCQ",
+    "difficulty": "medium",
+    "content": {
+      "en": {
+        "question": "A rectangular prism has a length of \\( 8\\text{ cm} \\), a width of \\( 5\\text{ cm} \\), and a height of \\( 6\\text{ cm} \\). What is its total surface area?",
+        "options": [
+          "240 cm²",
+          "236 cm²",
+          "118 cm²",
+          "158 cm²"
+        ],
+        "hint": "Use the total surface area formula: \\( SA = 2(lw + lh + wh) \\).",
+        "explanation": "\\( SA = 2 \\times (8 \\times 5 + 8 \\times 6 + 5 \\times 6) = 2 \\times (40 + 48 + 30) = 2 \\times 118 = 236\\text{ cm}^2 \\)."
+      },
+      "ar": {
+        "question": "منشور مستطيلي القواعد طوله \\( 8\\text{ سم} \\)، وعرضه \\( 5\\text{ سم} \\)، وارتفاعه \\( 6\\text{ سم} \\). ما مساحته السطحية الكلية؟",
+        "options": [
+          "240 سم²",
+          "236 سم²",
+          "118 سم²",
+          "158 سم²"
+        ],
+        "hint": "استخدم قانون المساحة السطحية الكلية: \\( SA = 2(lw + lh + wh) \\).",
+        "explanation": "المساحة السطحية = \\( 2 \\times (8 \\times 5 + 8 \\times 6 + 5 \\times 6) = 2 \\times (40 + 48 + 30) = 2 \\times 118 = 236\\text{ سم}^2 \\)."
+      }
+    },
+    "correct_index": "1"
+  },
+  {
+    "id": "NAFES-054",
+    "track": "nafes",
+    "level": "Grade 6",
+    "topic": "Ratios & Proportions",
+    "type": "MCQ",
+    "difficulty": "hard",
+    "content": {
+      "en": {
+        "question": "In a school, the ratio of boys to girls is \\( 4:5 \\). If there are \\( 360 \\) students in total, how many girls are there?",
+        "options": [
+          "160",
+          "180",
+          "200",
+          "225"
+        ],
+        "hint": "Find the total number of parts by adding the terms of the ratio.",
+        "explanation": "Total parts = \\( 4 + 5 = 9 \\). Value of 1 part = \\( 360 \\div 9 = 40 \\). Number of girls = \\( 5 \\times 40 = 200 \\)."
+      },
+      "ar": {
+        "question": "في إحدى المدارس، نسبة البنين إلى البنات هي \\( 4:5 \\). إذا كان إجمالي عدد الطلاب \\( 360 \\) طالباً وطالبة، فما عدد البنات؟",
+        "options": [
+          "160",
+          "180",
+          "200",
+          "225"
+        ],
+        "hint": "اجمع أجزاء النسبة للحصول على إجمالي الأجزاء.",
+        "explanation": "مجموع الأجزاء = \\( 4 + 5 = 9 \\). قيمة الجزء الواحد = \\( 360 \\div 9 = 40 \\). عدد البنات = \\( 5 \\times 40 = 200 \\)."
+      }
+    },
+    "correct_index": "2"
+  },
+  {
+    "id": "NAFES-055",
+    "track": "nafes",
+    "level": "Grade 9",
+    "topic": "Linear Equations & Systems",
+    "type": "MCQ",
+    "difficulty": "hard",
+    "content": {
+      "en": {
+        "question": "Solve the system of equations: \\( 2x + y = 11 \\) and \\( x - y = 1 \\). What is the value of \\( xy \\)?",
+        "options": [
+          "12",
+          "15",
+          "18",
+          "20"
+        ],
+        "hint": "Add the two equations together to eliminate \\( y \\).",
+        "explanation": "Adding the equations: \\( (2x + y) + (x - y) = 11 + 1 \\implies 3x = 12 \\implies x = 4 \\). Substitute \\( x = 4 \\) into \\( x - y = 1 \\implies 4 - y = 1 \\implies y = 3 \\). Thus, \\( xy = 4 \\times 3 = 12 \\)."
+      },
+      "ar": {
+        "question": "حل نظام المعادلتين: \\( 2x + y = 11 \\) و \\( x - y = 1 \\). ما قيمة \\( xy \\)؟",
+        "options": [
+          "12",
+          "15",
+          "18",
+          "20"
+        ],
+        "hint": "اجمع المعادلتين للتخلص من المتغير \\( y \\).",
+        "explanation": "بجمع المعادلتين: \\( 3x = 12 \\implies x = 4 \\). بالتعويض في المعادلة الثانية: \\( 4 - y = 1 \\implies y = 3 \\). إذن \\( xy = 4 \\times 3 = 12 \\)."
+      }
+    },
+    "correct_index": "0"
+  },
+  {
+    "id": "NAFES-056",
+    "track": "nafes",
+    "level": "Grade 9",
+    "topic": "Geometry & Pythagorean Theorem",
+    "type": "MCQ",
+    "difficulty": "hard",
+    "content": {
+      "en": {
+        "question": "A right triangle has a hypotenuse of length \\( 13\\text{ cm} \\) and one leg of length \\( 5\\text{ cm} \\). What is the area of the triangle?",
+        "options": [
+          "30 cm²",
+          "60 cm²",
+          "32.5 cm²",
+          "65 cm²"
+        ],
+        "hint": "Use the Pythagorean theorem to find the length of the second leg, then calculate the area.",
+        "explanation": "Second leg = \\( \\sqrt{13^2 - 5^2} = \\sqrt{169 - 25} = \\sqrt{144} = 12\\text{ cm} \\). Area = \\( \\frac{1}{2} \\times 5 \\times 12 = 30\\text{ cm}^2 \\)."
+      },
+      "ar": {
+        "question": "مثلث قائم الزاوية طول وتره \\( 13\\text{ سم} \\) وطول أحد ضلعيه القائمين \\( 5\\text{ سم} \\). ما مساحة هذا المثلث؟",
+        "options": [
+          "30 سم²",
+          "60 سم²",
+          "32.5 سم²",
+          "65 سم²"
+        ],
+        "hint": "استخدم نظرية فيثاغورس لإيجاد الضلع القائم الآخر، ثم احسب المساحة.",
+        "explanation": "الضلع القائم الآخر = \\( \\sqrt{13^2 - 5^2} = \\sqrt{144} = 12\\text{ سم} \\). المساحة = \\( \\frac{1}{2} \\times 5 \\times 12 = 30\\text{ سم}^2 \\)."
+      }
+    },
+    "correct_index": "0"
+  },
+  {
+    "id": "NAFES-057",
+    "track": "nafes",
+    "level": "Grade 9",
+    "topic": "Linear Functions",
+    "type": "MCQ",
+    "difficulty": "medium",
+    "content": {
+      "en": {
+        "question": "What is the slope of the line passing through the points \\( (2, -3) \\) and \\( (-4, 9) \\)?",
+        "options": [
+          "-2",
+          "2",
+          "\\( -\\frac{1}{2} \\)",
+          "\\( \\frac{1}{2} \\)"
+        ],
+        "hint": "Use the slope formula \\( m = \\frac{y_2 - y_1}{x_2 - x_1} \\).",
+        "explanation": "\\( m = \\frac{9 - (-3)}{-4 - 2} = \\frac{12}{-6} = -2 \\)."
+      },
+      "ar": {
+        "question": "ما ميل المستقيم الذي يمر بالنقطتين \\( (2, -3) \\) و \\( (-4, 9) \\)؟",
+        "options": [
+          "-2",
+          "2",
+          "\\( -\\frac{1}{2} \\)",
+          "\\( \\frac{1}{2} \\)"
+        ],
+        "hint": "استخدم قانون الميل \\( m = \\frac{y_2 - y_1}{x_2 - x_1} \\).",
+        "explanation": "\\( m = \\frac{9 - (-3)}{-4 - 2} = \\frac{12}{-6} = -2 \\)."
+      }
+    },
+    "correct_index": "0"
+  },
+  {
+    "id": "NAFES-058",
+    "track": "nafes",
+    "level": "Grade 9",
+    "topic": "Exponents & Radicals",
+    "type": "MCQ",
+    "difficulty": "hard",
+    "content": {
+      "en": {
+        "question": "Simplify the expression: \\( \\frac{\\sqrt{72}}{\\sqrt{2}} + (2^3)^2 \\div 16 \\).",
+        "options": [
+          "8",
+          "10",
+          "12",
+          "14"
+        ],
+        "hint": "Simplify \\( \\frac{\\sqrt{72}}{\\sqrt{2}} \\) as \\( \\sqrt{\\frac{72}{2}} \\), and evaluate \\( (2^3)^2 \\) using exponent rules.",
+        "explanation": "\\( \\frac{\\sqrt{72}}{\\sqrt{2}} = \\sqrt{36} = 6 \\). For the second part: \\( (2^3)^2 = 2^6 = 64 \\), and \\( 64 \\div 16 = 4 \\). Sum = \\( 6 + 4 = 10 \\)."
+      },
+      "ar": {
+        "question": "بسط المقدار: \\( \\frac{\\sqrt{72}}{\\sqrt{2}} + (2^3)^2 \\div 16 \\).",
+        "options": [
+          "8",
+          "10",
+          "12",
+          "14"
+        ],
+        "hint": "بسط الجزء الأول إلى \\( \\sqrt{\\frac{72}{2}} \\)، واحسب قيمة \\( (2^3)^2 \\) باستخدام قوانين الأسس.",
+        "explanation": "\\( \\frac{\\sqrt{72}}{\\sqrt{2}} = \\sqrt{36} = 6 \\). الجزء الثاني: \\( (2^3)^2 = 2^6 = 64 \\)، و \\( 64 \\div 16 = 4 \\). النتيجة = \\( 6 + 4 = 10 \\)."
+      }
+    },
+    "correct_index": "1"
+  },
+  {
+    "id": "NAFES-059",
+    "track": "nafes",
+    "level": "Grade 9",
+    "topic": "Quadratic Equations",
+    "type": "MCQ",
+    "difficulty": "hard",
+    "content": {
+      "en": {
+        "question": "What are the roots of the quadratic equation \\( x^2 - 7x + 12 = 0 \\)?",
+        "options": [
+          "\\( x = 3, 4 \\)",
+          "\\( x = -3, -4 \\)",
+          "\\( x = 2, 6 \\)",
+          "\\( x = -2, -6 \\)"
+        ],
+        "hint": "Factor the quadratic equation into two binomials \\( (x - a)(x - b) = 0 \\).",
+        "explanation": "Factoring: \\( (x - 3)(x - 4) = 0 \\). Setting each factor to 0 gives \\( x = 3 \\) or \\( x = 4 \\)."
+      },
+      "ar": {
+        "question": "ما جُذور المعادلة التربيعية \\( x^2 - 7x + 12 = 0 \\)؟",
+        "options": [
+          "\\( x = 3, 4 \\)",
+          "\\( x = -3, -4 \\)",
+          "\\( x = 2, 6 \\)",
+          "\\( x = -2, -6 \\)"
+        ],
+        "hint": "حلل العبارة التربيعية إلى حاصل ضرب قوسين \\( (x - a)(x - b) = 0 \\).",
+        "explanation": "بالتحليل: \\( (x - 3)(x - 4) = 0 \\). إذن جذور المعادلة هي \\( x = 3 \\) و \\( x = 4 \\)."
+      }
+    },
+    "correct_index": "0"
+  },
+  {
+    "id": "NAFES-060",
+    "track": "nafes",
+    "level": "Grade 9",
+    "topic": "Probability",
+    "type": "MCQ",
+    "difficulty": "hard",
+    "content": {
+      "en": {
+        "question": "A bag contains 5 red marbles, 3 blue marbles, and 2 green marbles. If two marbles are drawn at random without replacement, what is the probability that both are red?",
+        "options": [
+          "\\( \\frac{2}{9} \\)",
+          "\\( \\frac{1}{4} \\)",
+          "\\( \\frac{5}{18} \\)",
+          "\\( \\frac{1}{2} \\)"
+        ],
+        "hint": "Multiply the probability of drawing the first red marble by the probability of drawing a second red marble.",
+        "explanation": "Total marbles = 10. Probability of 1st red = \\( \\frac{5}{10} = \\frac{1}{2} \\). Remaining red = 4, remaining total = 9. Probability of 2nd red = \\( \\frac{4}{9} \\). Combined probability = \\( \\frac{1}{2} \\times \\frac{4}{9} = \\frac{2}{9} \\)."
+      },
+      "ar": {
+        "question": "كيس يحتوي على 5 كرات حمراء، و3 كرات زرقاء، وكرتين خضراوين. إذا سُحبت كرتان عشوائياً دون إعادة، فما احتمال أن تكون الكرتان حمراوين؟",
+        "options": [
+          "\\( \\frac{2}{9} \\)",
+          "\\( \\frac{1}{4} \\)",
+          "\\( \\frac{5}{18} \\)",
+          "\\( \\frac{1}{2} \\)"
+        ],
+        "hint": "اضرب احتمال سحب الكرة الحمراء الأولى في احتمال سحب الكرة الحمراء الثانية.",
+        "explanation": "إجمالي الكرات = 10. احتمال الأولى حمراء = \\( \\frac{5}{10} = \\frac{1}{2} \\). احتمال الثانية حمراء = \\( \\frac{4}{9} \\). الاحتمال الكلي = \\( \\frac{1}{2} \\times \\frac{4}{9} = \\frac{2}{9} \\)."
+      }
+    },
+    "correct_index": "0"
+  },
+  {
+    "id": "NAFES-061",
+    "track": "nafes",
+    "level": "Grade 9",
+    "topic": "Geometry & Volumes",
+    "type": "MCQ",
+    "difficulty": "extreme",
+    "content": {
+      "en": {
+        "question": "A cone and a cylinder have the same radius \\( r \\) and the same height \\( h \\). If the volume of the cylinder is \\( 108\\pi\\text{ cm}^3 \\), what is the volume of the cone?",
+        "options": [
+          "\\( 36\\pi\\text{ cm}^3 \\)",
+          "\\( 54\\pi\\text{ cm}^3 \\)",
+          "\\( 72\\pi\\text{ cm}^3 \\)",
+          "\\( 324\\pi\\text{ cm}^3 \\)"
+        ],
+        "hint": "Recall the relationship between the volume of a cylinder and a cone with equal bases and heights.",
+        "explanation": "The volume of a cone is one-third the volume of a cylinder with the same base and height: \\( V_{\\text{cone}} = \\frac{1}{3} V_{\\text{cylinder}} = \\frac{1}{3} \\times 108\\pi = 36\\pi\\text{ cm}^3 \\)."
+      },
+      "ar": {
+        "question": "مخروط وأسطوانة لهما نفس نصف القطر \\( r \\) ونفس الارتفاع \\( h \\). إذا كان حجم الأسطوانة \\( 108\\pi\\text{ سم}^3 \\)، فما حجم المخروط؟",
+        "options": [
+          "\\( 36\\pi\\text{ سم}^3 \\)",
+          "\\( 54\\pi\\text{ سم}^3 \\)",
+          "\\( 72\\pi\\text{ سم}^3 \\)",
+          "\\( 324\\pi\\text{ سم}^3 \\)"
+        ],
+        "hint": "تذكر العلاقة بين حجم الأسطوانة وحجم المخروط إذا تساويا في القاعدة والارتفاع.",
+        "explanation": "حجم المخروط يساوي ثلث حجم الأسطوانة المشتركة معه في القاعدة والارتفاع: \\( V_{\\text{المخروط}} = \\frac{1}{3} \\times 108\\pi = 36\\pi\\text{ سم}^3 \\)."
+      }
+    },
+    "correct_index": "0"
+  },
+  {
+    "id": "NAFES-062",
+    "track": "nafes",
+    "level": "Grade 3",
+    "topic": "Number Operations",
+    "type": "MCQ",
+    "difficulty": "medium",
+    "content": {
+      "en": {
+        "question": "Amal bought \\( 3 \\) boxes of crayons. Each box contains \\( 8 \\) crayons. She gave \\( 5 \\) crayons to her brother. How many crayons does Amal have left?",
+        "options": [
+          "\\( 19 \\)",
+          "\\( 21 \\)",
+          "\\( 14 \\)",
+          "\\( 29 \\)"
+        ],
+        "hint": "First find the total number of crayons Amal bought, then subtract the number she gave away.",
+        "explanation": "Total crayons bought = \\( 3 \\times 8 = 24 \\). After giving away \\( 5 \\) crayons, Amal has \\( 24 - 5 = 19 \\) crayons left."
+      },
+      "ar": {
+        "question": "اشترت أمل \\( 3 \\) علب من ألوان التلوين. تحتوي كل علبة على \\( 8 \\) ألوان. أعطت أخاها \\( 5 \\) ألوان. كم لوناً بقي مع أمل؟",
+        "options": [
+          "\\( 19 \\)",
+          "\\( 21 \\)",
+          "\\( 14 \\)",
+          "\\( 29 \\)"
+        ],
+        "hint": "أوجد أولاً إجمالي عدد الألوان التي اشترتها أمل، ثم اطرح عدد الألوان التي أعطتها لأخيها.",
+        "explanation": "إجمالي الألوان = \\( 3 \\times 8 = 24 \\). بعد إعطاء \\( 5 \\) ألوان لأخيها، يتبقى معها \\( 24 - 5 = 19 \\) لوناً."
+      }
+    },
+    "correct_index": "0"
+  },
+  {
+    "id": "NAFES-063",
+    "track": "nafes",
+    "level": "Grade 3",
+    "topic": "Geometry and Measurement",
+    "type": "MCQ",
+    "difficulty": "medium",
+    "content": {
+      "en": {
+        "question": "A rectangular garden has a length of \\( 9 \\text{ m} \\) and a width of \\( 4 \\text{ m} \\). What is the perimeter of the garden?",
+        "options": [
+          "\\( 13 \\text{ m} \\)",
+          "\\( 26 \\text{ m} \\)",
+          "\\( 36 \\text{ m} \\)",
+          "\\( 18 \\text{ m} \\)"
+        ],
+        "hint": "Perimeter of a rectangle is the sum of all its sides: \\( 2 \\times (\\text{length} + \\text{width}) \\).",
+        "explanation": "Perimeter = \\( 2 \\times (9 + 4) = 2 \\times 13 = 26 \\text{ m} \\)."
+      },
+      "ar": {
+        "question": "حديقة مستطيلة الشكل طولها \\( 9 \\text{ م} \\) وعرضها \\( 4 \\text{ م} \\). ما محيط الحديقة؟",
+        "options": [
+          "\\( 13 \\text{ م} \\)",
+          "\\( 26 \\text{ م} \\)",
+          "\\( 36 \\text{ م} \\)",
+          "\\( 18 \\text{ م} \\)"
+        ],
+        "hint": "محيط المستطيل يساوي مجموع أطوال أضلاعه: \\( 2 \\times (\\text{الطول} + \\text{العرض}) \\).",
+        "explanation": "المحيط = \\( 2 \\times (9 + 4) = 2 \\times 13 = 26 \\text{ م} \\)."
+      }
+    },
+    "correct_index": "1"
+  },
+  {
+    "id": "NAFES-064",
+    "track": "nafes",
+    "level": "Grade 3",
+    "topic": "Fractions",
+    "type": "MCQ",
+    "difficulty": "easy",
+    "content": {
+      "en": {
+        "question": "Which fraction represents the shaded part if a circle is divided into \\( 8 \\) equal sections and \\( 3 \\) sections are shaded?",
+        "options": [
+          "\\( \\frac{3}{8} \\)",
+          "\\( \\frac{5}{8} \\)",
+          "\\( \\frac{3}{5} \\)",
+          "\\( \\frac{8}{3} \\)"
+        ],
+        "hint": "The numerator represents the shaded parts and the denominator represents the total number of equal parts.",
+        "explanation": "There are \\( 3 \\) shaded parts out of \\( 8 \\) equal total parts, which is represented by the fraction \\( \\frac{3}{8} \\)."
+      },
+      "ar": {
+        "question": "ما الكسر الذي يمثل الجزء المظلل إذا قُسّمت دائرة إلى \\( 8 \\) أجزاء متساوية وتم تظليل \\( 3 \\) أجزاء منها؟",
+        "options": [
+          "\\( \\frac{3}{8} \\)",
+          "\\( \\frac{5}{8} \\)",
+          "\\( \\frac{3}{5} \\)",
+          "\\( \\frac{8}{3} \\)"
+        ],
+        "hint": "البسط يمثل عدد الأجزاء المظللة والمقام يمثل العدد الكلي للأجزاء المتساوية.",
+        "explanation": "يوجد \\( 3 \\) أجزاء مظللة من أصل \\( 8 \\) أجزاء متساوية، وهو ما يمثله الكسر \\( \\frac{3}{8} \\)."
+      }
+    },
+    "correct_index": "0"
+  },
+  {
+    "id": "NAFES-065",
+    "track": "nafes",
+    "level": "Grade 3",
+    "topic": "Patterns",
+    "type": "MCQ",
+    "difficulty": "easy",
+    "content": {
+      "en": {
+        "question": "Identify the missing number in the following arithmetic pattern: \\( 14, 18, 22, \\dots, 30 \\).",
+        "options": [
+          "\\( 24 \\)",
+          "\\( 25 \\)",
+          "\\( 26 \\)",
+          "\\( 28 \\)"
+        ],
+        "hint": "Find the constant rule/difference being added to each number in the sequence.",
+        "explanation": "The pattern rule is adding \\( 4 \\) to each number: \\( 14 + 4 = 18 \\), \\( 18 + 4 = 22 \\), \\( 22 + 4 = 26 \\), and \\( 26 + 4 = 30 \\)."
+      },
+      "ar": {
+        "question": "حدد العدد المفقود في النمط الحسابي التالي: \\( 14, 18, 22, \\dots, 30 \\).",
+        "options": [
+          "\\( 24 \\)",
+          "\\( 25 \\)",
+          "\\( 26 \\)",
+          "\\( 28 \\)"
+        ],
+        "hint": "اكتشف القاعدة أو المقدار الثابت المضاف في كل خطوة.",
+        "explanation": "قاعدة النمط هي إضافة \\( 4 \\) في كل مرة: \\( 14 + 4 = 18 \\)، \\( 18 + 4 = 22 \\)، \\( 22 + 4 = 26 \\)، و \\( 26 + 4 = 30 \\)."
+      }
+    },
+    "correct_index": "2"
+  },
+  {
+    "id": "NAFES-066",
+    "track": "nafes",
+    "level": "Grade 3",
+    "topic": "Measurement and Time",
+    "type": "MCQ",
+    "difficulty": "medium",
+    "content": {
+      "en": {
+        "question": "Khalid started studying at \\( 4:15 \\text{ PM} \\) and finished at \\( 5:00 \\text{ PM} \\). How many minutes did Khalid spend studying?",
+        "options": [
+          "\\( 30 \\text{ minutes} \\)",
+          "\\( 45 \\text{ minutes} \\)",
+          "\\( 50 \\text{ minutes} \\)",
+          "\\( 60 \\text{ minutes} \\)"
+        ],
+        "hint": "Calculate the elapsed time from 4:15 to 5:00.",
+        "explanation": "From \\( 4:15 \\) to \\( 5:00 \\) is \\( 45 \\) minutes."
+      },
+      "ar": {
+        "question": "بدأ خالد المذاكرة في الساعة \\( 4:15 \\) مساءً وانتهى في الساعة \\( 5:00 \\) مساءً. كم دقيقة قضاها خالد في المذاكرة؟",
+        "options": [
+          "\\( 30 \\text{ دقيقة} \\)",
+          "\\( 45 \\text{ دقيقة} \\)",
+          "\\( 50 \\text{ دقيقة} \\)",
+          "\\( 60 \\text{ دقيقة} \\)"
+        ],
+        "hint": "احسب الوقت المنقضي من الساعة 4:15 إلى الساعة 5:00.",
+        "explanation": "الوقت المنقضي من \\( 4:15 \\) إلى \\( 5:00 \\) هو \\( 45 \\) دقيقة."
+      }
+    },
+    "correct_index": "1"
+  },
+  {
+    "id": "NAFES-067",
+    "track": "nafes",
+    "level": "Grade 3",
+    "topic": "Data Analysis",
+    "type": "MCQ",
+    "difficulty": "medium",
+    "content": {
+      "en": {
+        "question": "In a pictograph representing read books, if each star symbol \\( \\bigstar \\) represents \\( 2 \\) books, how many star symbols are needed to represent Reem's total of \\( 6 \\) books?",
+        "options": [
+          "\\( 2 \\)",
+          "\\( 3 \\)",
+          "\\( 4 \\)",
+          "\\( 6 \\)"
+        ],
+        "hint": "Divide the total number of books by the value of one symbol.",
+        "explanation": "Number of symbols = \\( 6 \\div 2 = 3 \\) symbols."
+      },
+      "ar": {
+        "question": "في تمثيل بالرموز يوضح عدد الكتب المقروءة، إذا كان كل رمز نجمة \\( \\bigstar \\) يمثل \\( 2 \\) كتاب، فكم رمزا يلزم لتمثيل مجموع ما قرأته ريم وهو \\( 6 \\) كتب؟",
+        "options": [
+          "\\( 2 \\)",
+          "\\( 3 \\)",
+          "\\( 4 \\)",
+          "\\( 6 \\)"
+        ],
+        "hint": "اقسم العدد الكلي للكتب على القيمة التي يمثلها الرمز الواحد.",
+        "explanation": "عدد الرموز = \\( 6 \\div 2 = 3 \\) رموز."
+      }
+    },
+    "correct_index": "1"
+  },
+  {
+    "id": "NAFES-068",
+    "track": "nafes",
+    "level": "Grade 6",
+    "topic": "Decimals and Percentages",
+    "type": "MCQ",
+    "difficulty": "medium",
+    "content": {
+      "en": {
+        "question": "A store offers a \\( 20\\% \\) discount on a coat that originally costs \\( 150 \\text{ SAR} \\). What is the sale price of the coat?",
+        "options": [
+          "\\( 120 \\text{ SAR} \\)",
+          "\\( 130 \\text{ SAR} \\)",
+          "\\( 30 \\text{ SAR} \\)",
+          "\\( 100 \\text{ SAR} \\)"
+        ],
+        "hint": "First calculate the amount of discount: \\( 20\\% \\) of \\( 150 \\). Then subtract it from the original price.",
+        "explanation": "Discount amount = \\( 0.20 \\times 150 = 30 \\text{ SAR} \\). Sale price = \\( 150 - 30 = 120 \\text{ SAR} \\)."
+      },
+      "ar": {
+        "question": "يقدم متجر خصماً بنسبة \\( 20\\% \\) على معطف سعره الأصلي \\( 150 \\text{ ريال} \\). ما هو سعر المعطف بعد الخصم؟",
+        "options": [
+          "\\( 120 \\text{ ريال} \\)",
+          "\\( 130 \\text{ ريال} \\)",
+          "\\( 30 \\text{ ريال} \\)",
+          "\\( 100 \\text{ ريال} \\)"
+        ],
+        "hint": "احسب قيمة الخصم أولاً: \\( 20\\% \\) من \\( 150 \\)، ثم اطرحها من السعر الأصلي.",
+        "explanation": "قيمة الخصم = \\( 0.20 \\times 150 = 30 \\text{ ريال} \\). السعر بعد الخصم = \\( 150 - 30 = 120 \\text{ ريال} \\)."
+      }
+    },
+    "correct_index": "0"
+  },
+  {
+    "id": "NAFES-069",
+    "track": "nafes",
+    "level": "Grade 6",
+    "topic": "Algebra",
+    "type": "MCQ",
+    "difficulty": "medium",
+    "content": {
+      "en": {
+        "question": "Solve the linear equation: \\( 3x + 7 = 22 \\).",
+        "options": [
+          "\\( x = 3 \\)",
+          "\\( x = 5 \\)",
+          "\\( x = 6 \\)",
+          "\\( x = 15 \\)"
+        ],
+        "hint": "Subtract \\( 7 \\) from both sides, then divide by \\( 3 \\).",
+        "explanation": "\\( 3x = 22 - 7 \\implies 3x = 15 \\implies x = 5 \\)."
+      },
+      "ar": {
+        "question": "حل المعادلة الخطية: \\( 3x + 7 = 22 \\).",
+        "options": [
+          "\\( x = 3 \\)",
+          "\\( x = 5 \\)",
+          "\\( x = 6 \\)",
+          "\\( x = 15 \\)"
+        ],
+        "hint": "اطرح \\( 7 \\) من الطرفين، ثم اقسم على \\( 3 \\).",
+        "explanation": "\\( 3x = 22 - 7 \\implies 3x = 15 \\implies x = 5 \\)."
+      }
+    },
+    "correct_index": "1"
+  },
+  {
+    "id": "NAFES-070",
+    "track": "nafes",
+    "level": "Grade 6",
+    "topic": "Geometry",
+    "type": "MCQ",
+    "difficulty": "easy",
+    "content": {
+      "en": {
+        "question": "What is the area of a triangle with a base of \\( 12 \\text{ cm} \\) and a height of \\( 7 \\text{ cm} \\)?",
+        "options": [
+          "\\( 84 \\text{ cm}^2 \\)",
+          "\\( 42 \\text{ cm}^2 \\)",
+          "\\( 19 \\text{ cm}^2 \\)",
+          "\\( 28 \\text{ cm}^2 \\)"
+        ],
+        "hint": "The formula for the area of a triangle is \\( \\frac{1}{2} \\times \\text{base} \\times \\text{height} \\).",
+        "explanation": "Area = \\( \\frac{1}{2} \\times 12 \\times 7 = 6 \\times 7 = 42 \\text{ cm}^2 \\)."
+      },
+      "ar": {
+        "question": "ما مساحة مثلث طول قاعدته \\( 12 \\text{ سم} \\) وارتفاعه \\( 7 \\text{ سم} \\)؟",
+        "options": [
+          "\\( 84 \\text{ سم}^2 \\)",
+          "\\( 42 \\text{ سم}^2 \\)",
+          "\\( 19 \\text{ سم}^2 \\)",
+          "\\( 28 \\text{ سم}^2 \\)"
+        ],
+        "hint": "قانون مساحة المثلث هو \\( \\frac{1}{2} \\times \\text{القاعدة} \\times \\text{الارتفاع} \\).",
+        "explanation": "المساحة = \\( \\frac{1}{2} \\times 12 \\times 7 = 6 \\times 7 = 42 \\text{ سم}^2 \\)."
+      }
+    },
+    "correct_index": "1"
+  },
+  {
+    "id": "NAFES-071",
+    "track": "nafes",
+    "level": "Grade 6",
+    "topic": "Ratio and Proportions",
+    "type": "MCQ",
+    "difficulty": "medium",
+    "content": {
+      "en": {
+        "question": "A recipe requires \\( 3 \\) cups of flour for every \\( 2 \\) cups of sugar. If Omar uses \\( 9 \\) cups of flour, how many cups of sugar should he use?",
+        "options": [
+          "\\( 4 \\)",
+          "\\( 5 \\)",
+          "\\( 6 \\)",
+          "\\( 8 \\)"
+        ],
+        "hint": "Set up a proportion: \\( \\frac{3}{2} = \\frac{9}{x} \\).",
+        "explanation": "Since \\( 9 \\div 3 = 3 \\), multiply the sugar by \\( 3 \\): \\( 2 \\times 3 = 6 \\) cups."
+      },
+      "ar": {
+        "question": "تتطلب وصفة طعام \\( 3 \\) أكواب من الطحين لكل \\( 2 \\) كوب من السكر. إذا استخدم عمر \\( 9 \\) أكواب من الطحين، فكم كوباً من السكر يجب أن يستخدم؟",
+        "options": [
+          "\\( 4 \\)",
+          "\\( 5 \\)",
+          "\\( 6 \\)",
+          "\\( 8 \\)"
+        ],
+        "hint": "اكتب التناقض: \\( \\frac{3}{2} = \\frac{9}{x} \\).",
+        "explanation": "بما أن \\( 9 \\div 3 = 3 \\)، اضرب مقدار السكر في \\( 3 \\): \\( 2 \\times 3 = 6 \\) أكواب."
+      }
+    },
+    "correct_index": "2"
+  },
+  {
+    "id": "NAFES-072",
+    "track": "nafes",
+    "level": "Grade 6",
+    "topic": "Statistics",
+    "type": "MCQ",
+    "difficulty": "hard",
+    "content": {
+      "en": {
+        "question": "Find the median of the following dataset: \\( 8, 3, 12, 10, 5, 9, 15 \\).",
+        "options": [
+          "\\( 8 \\)",
+          "\\( 9 \\)",
+          "\\( 10 \\)",
+          "\\( 8.8 \\)"
+        ],
+        "hint": "Arrange the values in ascending order and pick the middle value.",
+        "explanation": "Ordering the dataset: \\( 3, 5, 8, 9, 10, 12, 15 \\). The middle (4th) number is \\( 9 \\)."
+      },
+      "ar": {
+        "question": "أوجد الوسيط لمجموعة البيانات التالية: \\( 8, 3, 12, 10, 5, 9, 15 \\).",
+        "options": [
+          "\\( 8 \\)",
+          "\\( 9 \\)",
+          "\\( 10 \\)",
+          "\\( 8.8 \\)"
+        ],
+        "hint": "رتب القيم تصاعدياً واختر القيمة الواقعة في المنتصف.",
+        "explanation": "ترتيب البيانات تصاعدياً: \\( 3, 5, 8, 9, 10, 12, 15 \\). القيمة الوسطى (الرابعة) هي \\( 9 \\)."
+      }
+    },
+    "correct_index": "1"
+  },
+  {
+    "id": "NAFES-073",
+    "track": "nafes",
+    "level": "Grade 6",
+    "topic": "Volume of Prisms",
+    "type": "MCQ",
+    "difficulty": "easy",
+    "content": {
+      "en": {
+        "question": "What is the volume of a rectangular prism with length \\( 6 \\text{ cm} \\), width \\( 4 \\text{ cm} \\), and height \\( 5 \\text{ cm} \\)?",
+        "options": [
+          "\\( 120 \\text{ cm}^3 \\)",
+          "\\( 60 \\text{ cm}^3 \\)",
+          "\\( 30 \\text{ cm}^3 \\)",
+          "\\( 150 \\text{ cm}^3 \\)"
+        ],
+        "hint": "Volume of a rectangular prism = \\( \\text{length} \\times \\text{width} \\times \\text{height} \\).",
+        "explanation": "Volume = \\( 6 \\times 4 \\times 5 = 120 \\text{ cm}^3 \\)."
+      },
+      "ar": {
+        "question": "ما حجم منشور مستطيلي (متوازي مستطيلات) طوله \\( 6 \\text{ سم} \\)، وعرضه \\( 4 \\text{ سم} \\)، وارتفاعه \\( 5 \\text{ سم} \\)؟",
+        "options": [
+          "\\( 120 \\text{ سم}^3 \\)",
+          "\\( 60 \\text{ سم}^3 \\)",
+          "\\( 30 \\text{ سم}^3 \\)",
+          "\\( 150 \\text{ سم}^3 \\)"
+        ],
+        "hint": "حجم متوازي المستطيلات = \\( \\text{الطول} \\times \\text{العرض} \\times \\text{الارتفاع} \\).",
+        "explanation": "الحجم = \\( 6 \\times 4 \\times 5 = 120 \\text{ سم}^3 \\)."
+      }
+    },
+    "correct_index": "0"
+  },
+  {
+    "id": "NAFES-074",
+    "track": "nafes",
+    "level": "Grade 6",
+    "topic": "Order of Operations",
+    "type": "MCQ",
+    "difficulty": "medium",
+    "content": {
+      "en": {
+        "question": "Evaluate the arithmetic expression: \\( 4^2 + (18 - 6) \\div 3 \\).",
+        "options": [
+          "\\( 20 \\)",
+          "\\( 28 \\)",
+          "\\( 18 \\)",
+          "\\( 24 \\)"
+        ],
+        "hint": "Follow PEMDAS: Parentheses first, then Exponents, then Division, then Addition.",
+        "explanation": "1) Parentheses: \\( 18 - 6 = 12 \\).\n2) Exponents: \\( 4^2 = 16 \\).\n3) Division: \\( 12 \\div 3 = 4 \\).\n4) Addition: \\( 16 + 4 = 20 \\)."
+      },
+      "ar": {
+        "question": "أحسب قيمة المقدار العددي: \\( 4^2 + (18 - 6) \\div 3 \\).",
+        "options": [
+          "\\( 20 \\)",
+          "\\( 28 \\)",
+          "\\( 18 \\)",
+          "\\( 24 \\)"
+        ],
+        "hint": "اتبع ترتيب العمليات: الأقواس أولاً، ثم الأسس، ثم القسمة، وأخيراً الجمع.",
+        "explanation": "1) الأقواس: \\( 18 - 6 = 12 \\).\n2) الأسس: \\( 4^2 = 16 \\).\n3) القسمة: \\( 12 \\div 3 = 4 \\).\n4) الجمع: \\( 16 + 4 = 20 \\)."
+      }
+    },
+    "correct_index": "0"
+  },
+  {
+    "id": "NAFES-075",
+    "track": "nafes",
+    "level": "Grade 9",
+    "topic": "Quadratic Equations",
+    "type": "MCQ",
+    "difficulty": "hard",
+    "content": {
+      "en": {
+        "question": "What are the roots of the quadratic equation \\( x^2 - 5x + 6 = 0 \\)?",
+        "options": [
+          "\\( x = 2, x = 3 \\)",
+          "\\( x = -2, x = -3 \\)",
+          "\\( x = 1, x = 6 \\)",
+          "\\( x = -1, x = -6 \\)"
+        ],
+        "hint": "Factor the quadratic equation into \\( (x - a)(x - b) = 0 \\).",
+        "explanation": "\\( x^2 - 5x + 6 = (x - 2)(x - 3) = 0 \\implies x = 2 \\text{ or } x = 3 \\)."
+      },
+      "ar": {
+        "question": "ما هما جذرا المعادلة التربيعية \\( x^2 - 5x + 6 = 0 \\)؟",
+        "options": [
+          "\\( x = 2, x = 3 \\)",
+          "\\( x = -2, x = -3 \\)",
+          "\\( x = 1, x = 6 \\)",
+          "\\( x = -1, x = -6 \\)"
+        ],
+        "hint": "حلل المعادلة التربيعية إلى أقواس: \\( (x - a)(x - b) = 0 \\).",
+        "explanation": "\\( x^2 - 5x + 6 = (x - 2)(x - 3) = 0 \\implies x = 2 \\text{ أو } x = 3 \\)."
+      }
+    },
+    "correct_index": "0"
+  },
+  {
+    "id": "NAFES-076",
+    "track": "nafes",
+    "level": "Grade 9",
+    "topic": "Systems of Equations",
+    "type": "MCQ",
+    "difficulty": "hard",
+    "content": {
+      "en": {
+        "question": "What is the solution \\( (x, y) \\) to the system of linear equations: \\( 2x + y = 10 \\) and \\( x - y = 2 \\)?",
+        "options": [
+          "\\( (4, 2) \\)",
+          "\\( (3, 4) \\)",
+          "\\( (2, 6) \\)",
+          "\\( (5, 0) \\)"
+        ],
+        "hint": "Add the two equations together to eliminate \\( y \\).",
+        "explanation": "Adding both equations gives \\( (2x + y) + (x - y) = 10 + 2 \\implies 3x = 12 \\implies x = 4 \\). Substituting into \\( x - y = 2 \\) gives \\( 4 - y = 2 \\implies y = 2 \\)."
+      },
+      "ar": {
+        "question": "ما هو حل النظام \\( (x, y) \\) من المعادلتين الخطيتين: \\( 2x + y = 10 \\) و \\( x - y = 2 \\)؟",
+        "options": [
+          "\\( (4, 2) \\)",
+          "\\( (3, 4) \\)",
+          "\\( (2, 6) \\)",
+          "\\( (5, 0) \\)"
+        ],
+        "hint": "اجمع المعادلتين معاً للتخلص من المجهول \\( y \\).",
+        "explanation": "بجمع المعادلتين: \\( (2x + y) + (x - y) = 10 + 2 \\implies 3x = 12 \\implies x = 4 \\). بالتعويض في \\( x - y = 2 \\) نجد أن \\( 4 - y = 2 \\implies y = 2 \\)."
+      }
+    },
+    "correct_index": "0"
+  },
+  {
+    "id": "NAFES-077",
+    "track": "nafes",
+    "level": "Grade 9",
+    "topic": "Pythagorean Theorem",
+    "type": "MCQ",
+    "difficulty": "medium",
+    "content": {
+      "en": {
+        "question": "A right triangle has a leg of length \\( 9 \\text{ cm} \\) and a hypotenuse of length \\( 15 \\text{ cm} \\). What is the length of the other leg?",
+        "options": [
+          "\\( 12 \\text{ cm} \\)",
+          "\\( 10 \\text{ cm} \\)",
+          "\\( 14 \\text{ cm} \\)",
+          "\\( 6 \\text{ cm} \\)"
+        ],
+        "hint": "Use the Pythagorean theorem: \\( a^2 + b^2 = c^2 \\).",
+        "explanation": "\\( b = \\sqrt{c^2 - a^2} = \\sqrt{15^2 - 9^2} = \\sqrt{225 - 81} = \\sqrt{144} = 12 \\text{ cm} \\)."
+      },
+      "ar": {
+        "question": "مثلث قائم الزاوية طول أحد ضلعيه القائمين \\( 9 \\text{ سم} \\) وطول وتره \\( 15 \\text{ سم} \\). ما طول الضلع القائم الآخر؟",
+        "options": [
+          "\\( 12 \\text{ سم} \\)",
+          "\\( 10 \\text{ سم} \\)",
+          "\\( 14 \\text{ سم} \\)",
+          "\\( 6 \\text{ سم} \\)"
+        ],
+        "hint": "استخدم نظرية فيثاغورس: \\( a^2 + b^2 = c^2 \\).",
+        "explanation": "\\( b = \\sqrt{c^2 - a^2} = \\sqrt{15^2 - 9^2} = \\sqrt{225 - 81} = \\sqrt{144} = 12 \\text{ سم} \\)."
+      }
+    },
+    "correct_index": "0"
+  },
+  {
+    "id": "NAFES-078",
+    "track": "nafes",
+    "level": "Grade 9",
+    "topic": "Coordinate Geometry",
+    "type": "MCQ",
+    "difficulty": "medium",
+    "content": {
+      "en": {
+        "question": "What is the slope of the straight line passing through the points \\( (2, 5) \\) and \\( (6, 13) \\)?",
+        "options": [
+          "\\( 2 \\)",
+          "\\( 3 \\)",
+          "\\( 4 \\)",
+          "\\( 0.5 \\)"
+        ],
+        "hint": "Use the slope formula: \\( m = \\frac{y_2 - y_1}{x_2 - x_1} \\).",
+        "explanation": "\\( m = \\frac{13 - 5}{6 - 2} = \\frac{8}{4} = 2 \\)."
+      },
+      "ar": {
+        "question": "ما ميل المستقيم الذي يمر بالنقطتين \\( (2, 5) \\) و \\( (6, 13) \\)؟",
+        "options": [
+          "\\( 2 \\)",
+          "\\( 3 \\)",
+          "\\( 4 \\)",
+          "\\( 0.5 \\)"
+        ],
+        "hint": "استخدم قانون الميل: \\( m = \\frac{y_2 - y_1}{x_2 - x_1} \\).",
+        "explanation": "\\( m = \\frac{13 - 5}{6 - 2} = \\frac{8}{4} = 2 \\)."
+      }
+    },
+    "correct_index": "0"
+  },
+  {
+    "id": "NAFES-079",
+    "track": "nafes",
+    "level": "Grade 9",
+    "topic": "Probability",
+    "type": "MCQ",
+    "difficulty": "hard",
+    "content": {
+      "en": {
+        "question": "A bag contains \\( 5 \\) red marbles, \\( 3 \\) blue marbles, and \\( 2 \\) green marbles. If a marble is chosen at random, replaced, and then a second marble is chosen, what is the probability that both marbles chosen are blue?",
+        "options": [
+          "\\( \\frac{9}{100} \\)",
+          "\\( \\frac{3}{10} \\)",
+          "\\( \\frac{1}{15} \\)",
+          "\\( \\frac{6}{25} \\)"
+        ],
+        "hint": "The events are independent because replacement occurred. Multiply \\( P(\\text{Blue}) \\times P(\\text{Blue}) \\).",
+        "explanation": "Total marbles = \\( 5 + 3 + 2 = 10 \\). \\( P(\\text{Blue}) = \\frac{3}{10} \\). Since replacement occurs, \\( P(\\text{Both Blue}) = \\frac{3}{10} \\times \\frac{3}{10} = \\frac{9}{100} \\)."
+      },
+      "ar": {
+        "question": "حقيبة تحتوي على \\( 5 \\) كرات حمراء، و \\( 3 \\) كرات زرقاء، وكيس به كرتان خضراوان. إذا سُحبت كرة عشوائياً ثم أُعيدت وسُحبت كرة ثانية، فما احتمال أن تكون الكرتان زرقاوين؟",
+        "options": [
+          "\\( \\frac{9}{100} \\)",
+          "\\( \\frac{3}{10} \\)",
+          "\\( \\frac{1}{15} \\)",
+          "\\( \\frac{6}{25} \\)"
+        ],
+        "hint": "الحدثان مستقلان بسبب الإعادة. اضرب \\( P(\\text{أزرق}) \\times P(\\text{أزرق}) \\).",
+        "explanation": "إجمالي الكرات = \\( 5 + 3 + 2 = 10 \\). احتمال الكرة الزرقاء = \\( \\frac{3}{10} \\). وبما أنه تم إرجاع الكرة، فإن احتمال أن تكون الكرتان زرقاوين = \\( \\frac{3}{10} \\times \\frac{3}{10} = \\frac{9}{100} \\)."
+      }
+    },
+    "correct_index": "0"
+  },
+  {
+    "id": "NAFES-080",
+    "track": "nafes",
+    "level": "Grade 9",
+    "topic": "Surface Area and Volume",
+    "type": "MCQ",
+    "difficulty": "hard",
+    "content": {
+      "en": {
+        "question": "What is the volume of a cylinder with a base radius of \\( 3 \\text{ cm} \\) and a height of \\( 10 \\text{ cm} \\)? (Use \\( \\pi \\approx 3.14 \\))",
+        "options": [
+          "\\( 282.6 \\text{ cm}^3 \\)",
+          "\\( 94.2 \\text{ cm}^3 \\)",
+          "\\( 188.4 \\text{ cm}^3 \\)",
+          "\\( 565.2 \\text{ cm}^3 \\)"
+        ],
+        "hint": "Formula for cylinder volume is \\( V = \\pi r^2 h \\).",
+        "explanation": "\\( V = 3.14 \\times 3^2 \\times 10 = 3.14 \\times 9 \\times 10 = 282.6 \\text{ cm}^3 \\)."
+      },
+      "ar": {
+        "question": "ما حجم أسطوانة نصف قطر قاعدتها \\( 3 \\text{ سم} \\) وارتفاعها \\( 10 \\text{ سم} \\)؟ (استخدم \\( \\pi \\approx 3.14 \\))",
+        "options": [
+          "\\( 282.6 \\text{ سم}^3 \\)",
+          "\\( 94.2 \\text{ سم}^3 \\)",
+          "\\( 188.4 \\text{ سم}^3 \\)",
+          "\\( 565.2 \\text{ سم}^3 \\)"
+        ],
+        "hint": "قانون حجم الأسطوانة هو \\( V = \\pi r^2 h \\).",
+        "explanation": "\\( V = 3.14 \\times 3^2 \\times 10 = 3.14 \\times 9 \\times 10 = 282.6 \\text{ سم}^3 \\)."
+      }
+    },
+    "correct_index": "0"
+  },
+  {
+    "id": "NAFES-081",
+    "track": "nafes",
+    "level": "Grade 9",
+    "topic": "Exponents and Algebraic Expressions",
+    "type": "MCQ",
+    "difficulty": "hard",
+    "content": {
+      "en": {
+        "question": "Simplify the algebraic expression: \\( \\frac{(2x^3)^3}{4x^4} \\) for \\( x \\neq 0 \\).",
+        "options": [
+          "\\( 2x^5 \\)",
+          "\\( 2x^2 \\)",
+          "\\( 4x^5 \\)",
+          "\\( 4x^2 \\)"
+        ],
+        "hint": "Apply exponent rules: \\( (ab)^n = a^n b^n \\) and \\( \\frac{x^a}{x^b} = x^{a-b} \\).",
+        "explanation": "Numerator: \\( (2x^3)^3 = 2^3 \\cdot (x^3)^3 = 8x^9 \\). Expression: \\( \\frac{8x^9}{4x^4} = 2x^{9-4} = 2x^5 \\)."
+      },
+      "ar": {
+        "question": "بسّط المقدار الجبري: \\( \\frac{(2x^3)^3}{4x^4} \\) حيث \\( x \\neq 0 \\).",
+        "options": [
+          "\\( 2x^5 \\)",
+          "\\( 2x^2 \\)",
+          "\\( 4x^5 \\)",
+          "\\( 4x^2 \\)"
+        ],
+        "hint": "استخدم قوانين الأسس: \\( (ab)^n = a^n b^n \\) و \\( \\frac{x^a}{x^b} = x^{a-b} \\).",
+        "explanation": "البسط: \\( (2x^3)^3 = 2^3 \\cdot (x^3)^3 = 8x^9 \\). المقدار = \\( \\frac{8x^9}{4x^4} = 2x^{9-4} = 2x^5 \\)."
+      }
+    },
+    "correct_index": "0"
+  },
+  {
+    "id": "NAFES-082",
+    "track": "nafes",
+    "level": "Grade 3",
+    "topic": "Number Sense & Place Value",
+    "type": "MCQ",
+    "difficulty": "medium",
+    "content": {
+      "en": {
+        "question": "What is the expanded form of the number \\( 4,058 \\)?",
+        "options": [
+          "\\( 4000 + 500 + 8 \\)",
+          "\\( 4000 + 50 + 8 \\)",
+          "\\( 400 + 50 + 8 \\)",
+          "\\( 4000 + 5 + 8 \\)"
+        ],
+        "hint": "Break down each digit according to its place value (thousands, hundreds, tens, ones).",
+        "explanation": "In \\( 4,058 \\), the digit 4 is in the thousands place (4000), 0 is in the hundreds place, 5 is in the tens place (50), and 8 is in the ones place (8). So, the expanded form is \\( 4000 + 50 + 8 \\)."
+      },
+      "ar": {
+        "question": "ما الصيغة التحليلية للعدد \\( 4,058 \\)؟",
+        "options": [
+          "\\( 4000 + 500 + 8 \\)",
+          "\\( 4000 + 50 + 8 \\)",
+          "\\( 400 + 50 + 8 \\)",
+          "\\( 4000 + 5 + 8 \\)"
+        ],
+        "hint": "قم بتحليل كل رقم حسب قيمته المنزلية (الألوف، المئات، العشرات، الآحاد).",
+        "explanation": "في العدد \\( 4,058 \\)، الرقم 4 في منزلة الألوف (4000)، والصفر في منزلة المئات، والرقم 5 في منزلة العشرات (50)، والرقم 8 في منزلة الآحاد (8). بالتالي، الصيغة التحليلية هي \\( 4000 + 50 + 8 \\)."
+      }
+    },
+    "correct_index": "1"
+  },
+  {
+    "id": "NAFES-083",
+    "track": "nafes",
+    "level": "Grade 3",
+    "topic": "Addition and Subtraction Problems",
+    "type": "MCQ",
+    "difficulty": "medium",
+    "content": {
+      "en": {
+        "question": "Ahmed saved \\( 345 \\) riyals in the first month and \\( 278 \\) riyals in the second month. How much more money does he need to buy a bicycle that costs \\( 800 \\) riyals?",
+        "options": [
+          "\\( 177 \\) riyals",
+          "\\( 223 \\) riyals",
+          "\\( 623 \\) riyals",
+          "\\( 187 \\) riyals"
+        ],
+        "hint": "First, calculate the total saved amount, then subtract it from the cost of the bicycle.",
+        "explanation": "Total saved = \\( 345 + 278 = 623 \\) riyals. Amount needed = \\( 800 - 623 = 177 \\) riyals."
+      },
+      "ar": {
+        "question": "ادخر أحمد \\( 345 \\) ريالاً في الشهر الأول و \\( 278 \\) ريالاً في الشهر الثاني. كم ريالاً يحتاج إضافياً لشراء دراجة سعرها \\( 800 \\) ريال؟",
+        "options": [
+          "\\( 177 \\) ريالاً",
+          "\\( 223 \\) ريالاً",
+          "\\( 623 \\) ريالاً",
+          "\\( 187 \\) ريالاً"
+        ],
+        "hint": "أولاً، احسب إجمالي المبلغ المدخر، ثم اطرحه من ثمن الدراجة.",
+        "explanation": "مجموع ما ادخره = \\( 345 + 278 = 623 \\) ريالاً. المبلغ المتبقي للشراء = \\( 800 - 623 = 177 \\) ريالاً."
+      }
+    },
+    "correct_index": "0"
+  },
+  {
+    "id": "NAFES-084",
+    "track": "nafes",
+    "level": "Grade 3",
+    "topic": "Multiplication & Patterns",
+    "type": "MCQ",
+    "difficulty": "hard",
+    "content": {
+      "en": {
+        "question": "Reem puts \\( 6 \\) stickers on each page of her album. If the album has \\( 8 \\) pages in total and she has already filled \\( 5 \\) pages, how many stickers does she need to complete the remaining pages?",
+        "options": [
+          "\\( 18 \\)",
+          "\\( 30 \\)",
+          "\\( 48 \\)",
+          "\\( 12 \\)"
+        ],
+        "hint": "Find the number of remaining empty pages first, then multiply by the number of stickers per page.",
+        "explanation": "Remaining pages = \\( 8 - 5 = 3 \\). Number of stickers needed = \\( 3 \\times 6 = 18 \\)."
+      },
+      "ar": {
+        "question": "تضع ريم \\( 6 \\) ملصقات في كل صفحة من ألبومها. إذا كان الألبوم يحتوي على \\( 8 \\) صفحات وقد ملأت منها \\( 5 \\) صفحات، فكم ملصقاً تحتاج لإكمال الصفحات المتبقية؟",
+        "options": [
+          "\\( 18 \\)",
+          "\\( 30 \\)",
+          "\\( 48 \\)",
+          "\\( 12 \\)"
+        ],
+        "hint": "احسب عدد الصفحات المتبقية أولاً، ثم اضرب الناتج في عدد الملصقات لكل صفحة.",
+        "explanation": "عدد الصفحات المتبقية = \\( 8 - 5 = 3 \\) صفحات. عدد الملصقات المطلوبة = \\( 3 \\times 6 = 18 \\) ملصقاً."
+      }
+    },
+    "correct_index": "0"
+  },
+  {
+    "id": "NAFES-085",
+    "track": "nafes",
+    "level": "Grade 3",
+    "topic": "Fractions",
+    "type": "MCQ",
+    "difficulty": "medium",
+    "content": {
+      "en": {
+        "question": "Which of the following fractions is equivalent to \\( \\frac{2}{4} \\)?",
+        "options": [
+          "\\( \\frac{1}{3} \\)",
+          "\\( \\frac{3}{6} \\)",
+          "\\( \\frac{2}{5} \\)",
+          "\\( \\frac{4}{6} \\)"
+        ],
+        "hint": "Simplify \\( \\frac{2}{4} \\) to its simplest form first.",
+        "explanation": "\\( \\frac{2}{4} \\) simplifies to \\( \\frac{1}{2} \\). Among the options, \\( \\frac{3}{6} \\) also simplifies to \\( \\frac{1}{2} \\)."
+      },
+      "ar": {
+        "question": "أيّ من الكسور التالية يكافئ الكسر \\( \\frac{2}{4} \\)؟",
+        "options": [
+          "\\( \\frac{1}{3} \\)",
+          "\\( \\frac{3}{6} \\)",
+          "\\( \\frac{2}{5} \\)",
+          "\\( \\frac{4}{6} \\)"
+        ],
+        "hint": "بَسّط الكسر \\( \\frac{2}{4} \\) إلى أبسط صورة أولاً.",
+        "explanation": "الكسر \\( \\frac{2}{4} \\) يساوي \\( \\frac{1}{2} \\) بعد التبسيط. ومن بين الخيارات، الكسر \\( \\frac{3}{6} \\) يبسط أيضاً إلى \\( \\frac{1}{2} \\)."
+      }
+    },
+    "correct_index": "1"
+  },
+  {
+    "id": "NAFES-086",
+    "track": "nafes",
+    "level": "Grade 3",
+    "topic": "Perimeter",
+    "type": "MCQ",
+    "difficulty": "medium",
+    "content": {
+      "en": {
+        "question": "A rectangular garden has a length of \\( 9 \\) meters and a width of \\( 5 \\) meters. What is the perimeter of the garden?",
+        "options": [
+          "\\( 14 \\) meters",
+          "\\( 28 \\) meters",
+          "\\( 45 \\) meters",
+          "\\( 36 \\) meters"
+        ],
+        "hint": "The perimeter of a rectangle is calculated as \\( 2 \\times (\\text{length} + \\text{width}) \\).",
+        "explanation": "Perimeter = \\( 2 \\times (9 + 5) = 2 \\times 14 = 28 \\) meters."
+      },
+      "ar": {
+        "question": "حديقة مستطيلة الشكل طولها \\( 9 \\) أمتار وعرضها \\( 5 \\) أمتار. ما محيط هذه الحديقة؟",
+        "options": [
+          "\\( 14 \\) متراً",
+          "\\( 28 \\) متراً",
+          "\\( 45 \\) متراً",
+          "\\( 36 \\) متراً"
+        ],
+        "hint": "محيط المستطيل يساوي \\( 2 \\times (\\text{الطول} + \\text{العرض}) \\).",
+        "explanation": "المحيط = \\( 2 \\times (9 + 5) = 2 \\times 14 = 28 \\) متراً."
+      }
+    },
+    "correct_index": "1"
+  },
+  {
+    "id": "NAFES-087",
+    "track": "nafes",
+    "level": "Grade 3",
+    "topic": "Data Analysis",
+    "type": "MCQ",
+    "difficulty": "easy",
+    "content": {
+      "en": {
+        "question": "A data table shows the number of books read by three students: Khalid read \\( 12 \\) books, Omar read \\( 8 \\) books, and Tariq read \\( 16 \\) books. How many books did they read in total?",
+        "options": [
+          "\\( 32 \\)",
+          "\\( 36 \\)",
+          "\\( 40 \\)",
+          "\\( 28 \\)"
+        ],
+        "hint": "Add all three numbers together.",
+        "explanation": "Total books read = \\( 12 + 8 + 16 = 36 \\) books."
+      },
+      "ar": {
+        "question": "يبين جدول البيانات عدد الكتب التي قرأها ثلاثة طلاب: خالد قرأ \\( 12 \\) كتاباً، وعمر قرأ \\( 8 \\) كتب، وطارق قرأ \\( 16 \\) كتاباً. ما مجموع الكتب التي قرأها الطلاب الثلاثة؟",
+        "options": [
+          "\\( 32 \\)",
+          "\\( 36 \\)",
+          "\\( 40 \\)",
+          "\\( 28 \\)"
+        ],
+        "hint": "اجمع الأعداد الثلاثة معاً.",
+        "explanation": "مجموع الكتب = \\( 12 + 8 + 16 = 36 \\) كتاباً."
+      }
+    },
+    "correct_index": "1"
+  },
+  {
+    "id": "NAFES-088",
+    "track": "nafes",
+    "level": "Grade 6",
+    "topic": "Decimals and Operations",
+    "type": "MCQ",
+    "difficulty": "medium",
+    "content": {
+      "en": {
+        "question": "A grocery store sells \\( 3.5 \\) kilograms of apples for \\( 24.5 \\) SAR. What is the price of \\( 1 \\) kilogram of apples?",
+        "options": [
+          "\\( 6 \\) SAR",
+          "\\( 7 \\) SAR",
+          "\\( 8 \\) SAR",
+          "\\( 7.5 \\) SAR"
+        ],
+        "hint": "Divide the total cost by the total weight in kilograms.",
+        "explanation": "Price per kg = \\( 24.5 \\div 3.5 = 245 \\div 35 = 7 \\) SAR."
+      },
+      "ar": {
+        "question": "يبيع محل تجاري \\( 3.5 \\) كيلوجرامات من التفاح بمبلغ \\( 24.5 \\) ريالاً. ما ثمن الكيلوجرام الواحد من التفاح؟",
+        "options": [
+          "\\( 6 \\) ريالات",
+          "\\( 7 \\) ريالات",
+          "\\( 8 \\) ريالات",
+          "\\( 7.5 \\) ريالات"
+        ],
+        "hint": "اقسم السعر الإجمالي على إجمالي الوزن بالكيلوجرامات.",
+        "explanation": "سعر الكيلوجرام الواحد = \\( 24.5 \\div 3.5 = 245 \\div 35 = 7 \\) ريالات."
+      }
+    },
+    "correct_index": "1"
+  },
+  {
+    "id": "NAFES-089",
+    "track": "nafes",
+    "level": "Grade 6",
+    "topic": "Fractions and Mixed Numbers",
+    "type": "MCQ",
+    "difficulty": "medium",
+    "content": {
+      "en": {
+        "question": "What is the product of \\( 2\\frac{1}{3} \\times 1\\frac{1}{2} \\)?",
+        "options": [
+          "\\( 3\\frac{1}{2} \\)",
+          "\\( 2\\frac{1}{6} \\)",
+          "\\( 3\\frac{1}{6} \\)",
+          "\\( 4\\frac{1}{2} \\)"
+        ],
+        "hint": "Convert mixed numbers into improper fractions before multiplying.",
+        "explanation": "\\( 2\\frac{1}{3} = \\frac{7}{3} \\) and \\( 1\\frac{1}{2} = \\frac{3}{2} \\). Multiply: \\( \\frac{7}{3} \\times \\frac{3}{2} = \\frac{21}{6} = \\frac{7}{2} = 3\\frac{1}{2} \\)."
+      },
+      "ar": {
+        "question": "ما ناتج ضرب \\( 2\\frac{1}{3} \\times 1\\frac{1}{2} \\)؟",
+        "options": [
+          "\\( 3\\frac{1}{2} \\)",
+          "\\( 2\\frac{1}{6} \\)",
+          "\\( 3\\frac{1}{6} \\)",
+          "\\( 4\\frac{1}{2} \\)"
+        ],
+        "hint": "حوّل الأعداد الكسرية إلى كسور غير فعلية قبلجراء عملية الضرب.",
+        "explanation": "\\( 2\\frac{1}{3} = \\frac{7}{3} \\) و \\( 1\\frac{1}{2} = \\frac{3}{2} \\). الضرب: \\( \\frac{7}{3} \\times \\frac{3}{2} = \\frac{21}{6} = \\frac{7}{2} = 3\\frac{1}{2} \\)."
+      }
+    },
+    "correct_index": "0"
+  },
+  {
+    "id": "NAFES-090",
+    "track": "nafes",
+    "level": "Grade 6",
+    "topic": "Percentages & Discounts",
+    "type": "MCQ",
+    "difficulty": "medium",
+    "content": {
+      "en": {
+        "question": "The original price of a shirt is \\( 120 \\) SAR. If it is sold at a discount of \\( 25\\% \\), what is the final sale price of the shirt?",
+        "options": [
+          "\\( 30 \\) SAR",
+          "\\( 80 \\) SAR",
+          "\\( 90 \\) SAR",
+          "\\( 95 \\) SAR"
+        ],
+        "hint": "Calculate \\( 25\\% \\) of \\( 120 \\) SAR first, then subtract it from the original price.",
+        "explanation": "Discount amount = \\( 0.25 \\times 120 = 30 \\) SAR. Sale price = \\( 120 - 30 = 90 \\) SAR."
+      },
+      "ar": {
+        "question": "السعر الأصلي لقميص هو \\( 120 \\) ريالاً. إذا بيع بخصم نسبته \\( 25\\% \\)، فما سعر البيع النهائي للقميص؟",
+        "options": [
+          "\\( 30 \\) ريالاً",
+          "\\( 80 \\) ريالاً",
+          "\\( 90 \\) ريالاً",
+          "\\( 95 \\) ريالاً"
+        ],
+        "hint": "احسب قيمة الخصم (\\( 25\\% \\) من \\( 120 \\)) أولاً، ثم اطرحها من السعر الأصلي.",
+        "explanation": "قيمة الخصم = \\( 0.25 \\times 120 = 30 \\) ريالاً. سعر البيع = \\( 120 - 30 = 90 \\) ريالاً."
+      }
+    },
+    "correct_index": "2"
+  },
+  {
+    "id": "NAFES-091",
+    "track": "nafes",
+    "level": "Grade 6",
+    "topic": "Algebraic Equations",
+    "type": "MCQ",
+    "difficulty": "medium",
+    "content": {
+      "en": {
+        "question": "What is the solution to the linear equation \\( 4x - 7 = 21 \\)?",
+        "options": [
+          "\\( x = 5 \\)",
+          "\\( x = 6 \\)",
+          "\\( x = 7 \\)",
+          "\\( x = 8 \\)"
+        ],
+        "hint": "Add 7 to both sides, then divide by 4.",
+        "explanation": "\\( 4x - 7 = 21 \\Rightarrow 4x = 28 \\Rightarrow x = \\frac{28}{4} = 7 \\)."
+      },
+      "ar": {
+        "question": "ما حل المعادلة الخطية \\( 4x - 7 = 21 \\)؟",
+        "options": [
+          "\\( x = 5 \\)",
+          "\\( x = 6 \\)",
+          "\\( x = 7 \\)",
+          "\\( x = 8 \\)"
+        ],
+        "hint": "أضف 7 إلى كلا الطرفين، ثم اقسم على 4.",
+        "explanation": "\\( 4x - 7 = 21 \\Rightarrow 4x = 28 \\Rightarrow x = \\frac{28}{4} = 7 \\)."
+      }
+    },
+    "correct_index": "2"
+  },
+  {
+    "id": "NAFES-092",
+    "track": "nafes",
+    "level": "Grade 6",
+    "topic": "Area of Triangles",
+    "type": "MCQ",
+    "difficulty": "easy",
+    "content": {
+      "en": {
+        "question": "A triangle has a base length of \\( 12\\text{ cm} \\) and a height of \\( 8\\text{ cm} \\). What is the area of the triangle?",
+        "options": [
+          "\\( 96\\text{ cm}^2 \\)",
+          "\\( 48\\text{ cm}^2 \\)",
+          "\\( 20\\text{ cm}^2 \\)",
+          "\\( 40\\text{ cm}^2 \\)"
+        ],
+        "hint": "The formula for the area of a triangle is \\( A = \\frac{1}{2} \\times \\text{base} \\times \\text{height} \\).",
+        "explanation": "Area = \\( \\frac{1}{2} \\times 12 \\times 8 = 6 \\times 8 = 48\\text{ cm}^2 \\)."
+      },
+      "ar": {
+        "question": "مثلث طول قاعدته \\( 12\\text{ سم} \\) وارتفاعه \\( 8\\text{ سم} \\). ما مساحة هذا المثلث؟",
+        "options": [
+          "\\( 96\\text{ سم}^2 \\)",
+          "\\( 48\\text{ سم}^2 \\)",
+          "\\( 20\\text{ سم}^2 \\)",
+          "\\( 40\\text{ سم}^2 \\)"
+        ],
+        "hint": "قانون مساحة المثلث هو \\( M = \\frac{1}{2} \\times \\text{القاعدة} \\times \\text{الارتفاع} \\).",
+        "explanation": "المساحة = \\( \\frac{1}{2} \\times 12 \\times 8 = 6 \\times 8 = 48\\text{ سم}^2 \\)."
+      }
+    },
+    "correct_index": "1"
+  },
+  {
+    "id": "NAFES-093",
+    "track": "nafes",
+    "level": "Grade 6",
+    "topic": "Statistics - Mean",
+    "type": "MCQ",
+    "difficulty": "easy",
+    "content": {
+      "en": {
+        "question": "The test scores of 5 students in mathematics are \\( 14, 18, 15, 17, \\text{and } 16 \\). What is the mean score?",
+        "options": [
+          "\\( 15 \\)",
+          "\\( 15.5 \\)",
+          "\\( 16 \\)",
+          "\\( 17 \\)"
+        ],
+        "hint": "The mean is calculated by dividing the sum of values by the total count of values.",
+        "explanation": "Sum = \\( 14 + 18 + 15 + 17 + 16 = 80 \\). Mean = \\( 80 \\div 5 = 16 \\)."
+      },
+      "ar": {
+        "question": "درجات 5 طلاب في اختبار الرياضيات هي \\( 14, 18, 15, 17, 16 \\). ما المتوسط الحسابي لهذه الدرجات؟",
+        "options": [
+          "\\( 15 \\)",
+          "\\( 15.5 \\)",
+          "\\( 16 \\)",
+          "\\( 17 \\)"
+        ],
+        "hint": "المتوسط الحسابي يحسب بجمع القيم وقسمة الناتج على عددها.",
+        "explanation": "المجموع = \\( 14 + 18 + 15 + 17 + 16 = 80 \\). المتوسط الحسابي = \\( 80 \\div 5 = 16 \\)."
+      }
+    },
+    "correct_index": "2"
+  },
+  {
+    "id": "NAFES-094",
+    "track": "nafes",
+    "level": "Grade 6",
+    "topic": "Probability",
+    "type": "MCQ",
+    "difficulty": "medium",
+    "content": {
+      "en": {
+        "question": "A bag contains \\( 4 \\) red marbles, \\( 6 \\) blue marbles, and \\( 5 \\) green marbles. If one marble is drawn at random, what is the probability of drawing a blue marble?",
+        "options": [
+          "\\( \\frac{2}{5} \\)",
+          "\\( \\frac{4}{15} \\)",
+          "\\( \\frac{1}{3} \\)",
+          "\\( \\frac{3}{5} \\)"
+        ],
+        "hint": "Probability = (Number of blue marbles) / (Total number of marbles).",
+        "explanation": "Total marbles = \\( 4 + 6 + 5 = 15 \\). Probability of blue = \\( \\frac{6}{15} = \\frac{2}{5} \\)."
+      },
+      "ar": {
+        "question": "كيس يحتوي على \\( 4 \\) كرات حمراء، و\\( 6 \\) كرات زرقاء، و\\( 5 \\) كرات خضراء. إذا سُحبت كرة واحدة عشوائياً، فما احتمال أن تكون الكرة المسحوبة زرقاء؟",
+        "options": [
+          "\\( \\frac{2}{5} \\)",
+          "\\( \\frac{4}{15} \\)",
+          "\\( \\frac{1}{3} \\)",
+          "\\( \\frac{3}{5} \\)"
+        ],
+        "hint": "الاحتمال = (عدد الكرات الزرقاء) ÷ (العدد الكلي للكرات).",
+        "explanation": "العدد الكلي للكرات = \\( 4 + 6 + 5 = 15 \\). احتمال الكرة الزرقاء = \\( \\frac{6}{15} = \\frac{2}{5} \\)."
+      }
+    },
+    "correct_index": "0"
+  },
+  {
+    "id": "NAFES-095",
+    "track": "nafes",
+    "level": "Grade 9",
+    "topic": "Inequalities",
+    "type": "MCQ",
+    "difficulty": "hard",
+    "content": {
+      "en": {
+        "question": "What is the solution set of the linear inequality \\( 3 - 2x \\le 11 \\)?",
+        "options": [
+          "\\( x \\ge -4 \\)",
+          "\\( x \\le -4 \\)",
+          "\\( x \\ge 4 \\)",
+          "\\( x \\le 4 \\)"
+        ],
+        "hint": "Subtract 3 from both sides, then divide by -2 (remember to reverse the inequality direction when dividing by a negative number).",
+        "explanation": "\\( 3 - 2x \\le 11 \\Rightarrow -2x \\le 8 \\Rightarrow x \\ge \\frac{8}{-2} \\Rightarrow x \\ge -4 \\)."
+      },
+      "ar": {
+        "question": "ما مجموعة حل المتباينة الخطية \\( 3 - 2x \\le 11 \\)؟",
+        "options": [
+          "\\( x \\ge -4 \\)",
+          "\\( x \\le -4 \\)",
+          "\\( x \\ge 4 \\)",
+          "\\( x \\le 4 \\)"
+        ],
+        "hint": "اطرح 3 من الطرفين، ثم اقسم على -2 (تذكر عكس إشارة المتباينة عند القسمة على عدد سالب).",
+        "explanation": "\\( 3 - 2x \\le 11 \\Rightarrow -2x \\le 8 \\Rightarrow x \\ge \\frac{8}{-2} \\Rightarrow x \\ge -4 \\)."
+      }
+    },
+    "correct_index": "0"
+  },
+  {
+    "id": "NAFES-096",
+    "track": "nafes",
+    "level": "Grade 9",
+    "topic": "Systems of Linear Equations",
+    "type": "MCQ",
+    "difficulty": "hard",
+    "content": {
+      "en": {
+        "question": "What is the value of \\( y \\) in the solution to the system of linear equations:\n\\( 2x + y = 11 \\)\n\\( x - y = 1 \\)?",
+        "options": [
+          "\\( 2 \\)",
+          "\\( 3 \\)",
+          "\\( 4 \\)",
+          "\\( 5 \\)"
+        ],
+        "hint": "Add the two equations together to eliminate \\( y \\) and solve for \\( x \\) first.",
+        "explanation": "Adding both equations: \\( (2x + y) + (x - y) = 11 + 1 \\Rightarrow 3x = 12 \\Rightarrow x = 4 \\). Substitute \\( x = 4 \\) into the second equation: \\( 4 - y = 1 \\Rightarrow y = 3 \\)."
+      },
+      "ar": {
+        "question": "ما قيمة \\( y \\) في حل نظام المعادلتين الخطيين التالي:\n\\( 2x + y = 11 \\)\n\\( x - y = 1 \\)؟",
+        "options": [
+          "\\( 2 \\)",
+          "\\( 3 \\)",
+          "\\( 4 \\)",
+          "\\( 5 \\)"
+        ],
+        "hint": "اجمع المعادلتين للتخلص من المتغير \\( y \\) وأوجد قيمة \\( x \\) أولاً.",
+        "explanation": "بجمع المعادلتين: \\( (2x + y) + (x - y) = 11 + 1 \\Rightarrow 3x = 12 \\Rightarrow x = 4 \\). بالتعويض عن \\( x = 4 \\) في المعادلة الثانية: \\( 4 - y = 1 \\Rightarrow y = 3 \\)."
+      }
+    },
+    "correct_index": "1"
+  },
+  {
+    "id": "NAFES-097",
+    "track": "nafes",
+    "level": "Grade 9",
+    "topic": "Linear Functions & Slope",
+    "type": "MCQ",
+    "difficulty": "medium",
+    "content": {
+      "en": {
+        "question": "What is the slope of the line passing through the points \\( (2, 5) \\) and \\( (6, 13) \\)?",
+        "options": [
+          "\\( 1 \\)",
+          "\\( 2 \\)",
+          "\\( 3 \\)",
+          "\\( 4 \\)"
+        ],
+        "hint": "Use the slope formula \\( m = \\frac{y_2 - y_1}{x_2 - x_1} \\).",
+        "explanation": "Slope \\( m = \\frac{13 - 5}{6 - 2} = \\frac{8}{4} = 2 \\)."
+      },
+      "ar": {
+        "question": "ما ميل المستقيم الذي يمر بالنقطتين \\( (2, 5) \\) و \\( (6, 13) \\)؟",
+        "options": [
+          "\\( 1 \\)",
+          "\\( 2 \\)",
+          "\\( 3 \\)",
+          "\\( 4 \\)"
+        ],
+        "hint": "استخدم قانون الميل \\( m = \\frac{y_2 - y_1}{x_2 - x_1} \\).",
+        "explanation": "الميل \\( m = \\frac{13 - 5}{6 - 2} = \\frac{8}{4} = 2 \\)."
+      }
+    },
+    "correct_index": "1"
+  },
+  {
+    "id": "NAFES-098",
+    "track": "nafes",
+    "level": "Grade 9",
+    "topic": "Pythagorean Theorem",
+    "type": "MCQ",
+    "difficulty": "medium",
+    "content": {
+      "en": {
+        "question": "A right-angled triangle has one leg of length \\( 9\\text{ cm} \\) and a hypotenuse of length \\( 15\\text{ cm} \\). What is the length of the other leg?",
+        "options": [
+          "\\( 10\\text{ cm} \\)",
+          "\\( 11\\text{ cm} \\)",
+          "\\( 12\\text{ cm} \\)",
+          "\\( 13\\text{ cm} \\)"
+        ],
+        "hint": "Use the Pythagorean theorem: \\( a^2 + b^2 = c^2 \\).",
+        "explanation": "\\( b = \\sqrt{c^2 - a^2} = \\sqrt{15^2 - 9^2} = \\sqrt{225 - 81} = \\sqrt{144} = 12\\text{ cm} \\)."
+      },
+      "ar": {
+        "question": "مثلث قائم الزاوية طول أحد ضلعي القائمة فيه \\( 9\\text{ سم} \\) وطول الوتر \\( 15\\text{ سم} \\). ما طول ضلع القائمة الآخر؟",
+        "options": [
+          "\\( 10\\text{ سم} \\)",
+          "\\( 11\\text{ سم} \\)",
+          "\\( 12\\text{ سم} \\)",
+          "\\( 13\\text{ سم} \\)"
+        ],
+        "hint": "استخدم نظرية فيثاغورس: \\( a^2 + b^2 = c^2 \\).",
+        "explanation": "\\( b = \\sqrt{c^2 - a^2} = \\sqrt{15^2 - 9^2} = \\sqrt{225 - 81} = \\sqrt{144} = 12\\text{ سم} \\)."
+      }
+    },
+    "correct_index": "2"
+  },
+  {
+    "id": "NAFES-099",
+    "track": "nafes",
+    "level": "Grade 9",
+    "topic": "Volume of Cylinders",
+    "type": "MCQ",
+    "difficulty": "medium",
+    "content": {
+      "en": {
+        "question": "A right circular cylinder has a base radius of \\( 3\\text{ cm} \\) and a height of \\( 10\\text{ cm} \\). What is the volume of the cylinder in terms of \\( \\pi \\)?",
+        "options": [
+          "\\( 30\\pi\\text{ cm}^3 \\)",
+          "\\( 60\\pi\\text{ cm}^3 \\)",
+          "\\( 90\\pi\\text{ cm}^3 \\)",
+          "\\( 120\\pi\\text{ cm}^3 \\)"
+        ],
+        "hint": "The formula for the volume of a cylinder is \\( V = \\pi r^2 h \\).",
+        "explanation": "Volume = \\( \\pi \\times 3^2 \\times 10 = \\pi \\times 9 \\times 10 = 90\\pi\\text{ cm}^3 \\)."
+      },
+      "ar": {
+        "question": "أسطوانة دائريّة قائمة طول نصف قطر قاعدتها \\( 3\\text{ سم} \\) وارتفاعها \\( 10\\text{ سم} \\). ما حجم الأسطوانة بدلالة \\( \\pi \\)؟",
+        "options": [
+          "\\( 30\\pi\\text{ سم}^3 \\)",
+          "\\( 60\\pi\\text{ سم}^3 \\)",
+          "\\( 90\\pi\\text{ سم}^3 \\)",
+          "\\( 120\\pi\\text{ سم}^3 \\)"
+        ],
+        "hint": "قانون حجم الأسطوانة هو \\( V = \\pi r^2 h \\).",
+        "explanation": "الحجم = \\( \\pi \\times 3^2 \\times 10 = \\pi \\times 9 \\times 10 = 90\\pi\\text{ سم}^3 \\)."
+      }
+    },
+    "correct_index": "2"
+  },
+  {
+    "id": "NAFES-100",
+    "track": "nafes",
+    "level": "Grade 9",
+    "topic": "Geometric Transformations",
+    "type": "MCQ",
+    "difficulty": "medium",
+    "content": {
+      "en": {
+        "question": "Point \\( A(3, -4) \\) is reflected across the \\( x \\)-axis. What are the coordinates of the image point \\( A' \\)?",
+        "options": [
+          "\\( (-3, -4) \\)",
+          "\\( (3, 4) \\)",
+          "\\( (-3, 4) \\)",
+          "\\( (-4, 3) \\)"
+        ],
+        "hint": "Reflection across the x-axis changes the sign of the y-coordinate while keeping the x-coordinate unchanged.",
+        "explanation": "Reflection rule across x-axis: \\( (x, y) \\rightarrow (x, -y) \\). Therefore, \\( A(3, -4) \\rightarrow A'(3, 4) \\)."
+      },
+      "ar": {
+        "question": "النقطة \\( A(3, -4) \\) عُكست حول محور السينات. ما إحداثيات النقطة الناتجة \\( A' \\)؟",
+        "options": [
+          "\\( (-3, -4) \\)",
+          "\\( (3, 4) \\)",
+          "\\( (-3, 4) \\)",
+          "\\( (-4, 3) \\)"
+        ],
+        "hint": "الانعكاس حول محور السينات يغير إشارة الإحداثي الصادي ويترك الإحداثي السيني كما هو.",
+        "explanation": "قاعدة الانعكاس حول محور السينات: \\( (x, y) \\rightarrow (x, -y) \\). بناءً عليه، \\( A(3, -4) \\rightarrow A'(3, 4) \\)."
+      }
+    },
+    "correct_index": "1"
+  },
+  {
+    "id": "NAFES-101",
+    "track": "nafes",
+    "level": "Grade 9",
+    "topic": "Compound Probability",
+    "type": "MCQ",
+    "difficulty": "hard",
+    "content": {
+      "en": {
+        "question": "A fair six-sided die is rolled twice. What is the probability of rolling an even number on the first roll AND a number greater than \\( 4 \\) on the second roll?",
+        "options": [
+          "\\( \\frac{1}{6} \\)",
+          "\\( \\frac{1}{4} \\)",
+          "\\( \\frac{1}{3} \\)",
+          "\\( \\frac{5}{12} \\)"
+        ],
+        "hint": "The events are independent. Multiply the probability of the first event by the probability of the second event.",
+        "explanation": "P(even on 1st roll) = \\( \\frac{3}{6} = \\frac{1}{2} \\) (outcomes: 2, 4, 6).\nP(greater than 4 on 2nd roll) = \\( \\frac{2}{6} = \\frac{1}{3} \\) (outcomes: 5, 6).\nCompound Probability = \\( \\frac{1}{2} \\times \\frac{1}{3} = \\frac{1}{6} \\)."
+      },
+      "ar": {
+        "question": "أُلقي مكعب أرقام منتظم (من 1 إلى 6) مرتين. ما احتمال ظهور عدد زوجي في الرمية الأولى وعدد أكبر من \\( 4 \\) في الرمية الثانية؟",
+        "options": [
+          "\\( \\frac{1}{6} \\)",
+          "\\( \\frac{1}{4} \\)",
+          "\\( \\frac{1}{3} \\)",
+          "\\( \\frac{5}{12} \\)"
+        ],
+        "hint": "الحدثان مستقلان. اضرب احتمال الحدث الأول في احتمال الحدث الثاني.",
+        "explanation": "احتمال عدد زوجي في الرمية الأولى = \\( \\frac{3}{6} = \\frac{1}{2} \\) (الأعداد: 2، 4، 6).\nاحتمال عدد أكبر من 4 في الرمية الثانية = \\( \\frac{2}{6} = \\frac{1}{3} \\) (الأعداد: 5، 6).\nالاحتمال المركب = \\( \\frac{1}{2} \\times \\frac{1}{3} = \\frac{1}{6} \\)."
+      }
+    },
+    "correct_index": "0"
   }
 ]
