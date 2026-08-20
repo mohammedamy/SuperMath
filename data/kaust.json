@@ -2314,33 +2314,33 @@
     "id": "KAUST-082",
     "track": "kaust",
     "level": "High School (Gifted)",
-    "topic": "Combinatorics",
+    "topic": "Algebra",
     "type": "MCQ",
     "difficulty": "hard",
     "content": {
       "en": {
-        "question": "How many binary strings of length 10 do not contain three consecutive 1s?",
+        "question": "How many ordered pairs of integers \\((x, y)\\) with \\(1 \\le x, y \\le 100\\) satisfy the equation \\(x^2 + y^2 = 2025 + 2xy\\)?",
         "options": [
-          "274",
-          "488",
-          "504",
-          "512",
-          "720"
+          "90",
+          "100",
+          "110",
+          "120",
+          "0"
         ],
-        "hint": "Define a recurrence relation \\( F_n = F_{n-1} + F_{n-2} + F_{n-3} \\) for the number of valid strings of length \\( n \\).",
-        "explanation": "Let \\( F_n \\) be the number of valid binary strings of length \\( n \\). A valid string of length \\( n \\) can end in 0 (preceded by any valid string of length \\( n-1 \\)), 01 (preceded by any valid string of length \\( n-2 \\)), or 011 (preceded by any valid string of length \\( n-3 \\)). Thus, \\( F_n = F_{n-1} + F_{n-2} + F_{n-3} \\). With initial conditions \\( F_0 = 1 \\), \\( F_1 = 2 \\), \\( F_2 = 4 \\), we compute \\( F_3=7, F_4=13, F_5=24, F_6=44, F_7=81, F_8=149, F_9=274, F_{10}=504 \\)."
+        "hint": "Rewrite the equation as \\((x - y)^2 = 2025\\).",
+        "explanation": "Rearranging gives \\(x^2 - 2xy + y^2 = 2025\\), which simplifies to \\((x - y)^2 = 45^2\\). Thus, \\(x - y = 45\\) or \\(x - y = -45\\).\nIf \\(x - y = 45\\), then \\(x = y + 45\\). Since \\(1 \\le x, y \\le 100\\), we must have \\(1 \\le y \\le 55\\), giving 55 pairs.\nIf \\(x - y = -45\\), then \\(y = x + 45\\). Similarly, \\(1 \\le x \\le 55\\), giving 55 pairs.\nTotal ordered pairs = \\(55 + 55 = 110\\)."
       },
       "ar": {
-        "question": "كم عدد السلاسل الثنائية بطول 10 التي لا تحتوي على ثلاثة آحاد متتالية؟",
+        "question": "كم عدد الأزواج المرتبة من الأعداد الصحيحة \\((x, y)\\) التي تحقق \\(1 \\le x, y \\le 100\\) والمعادلة \\(x^2 + y^2 = 2025 + 2xy\\)؟",
         "options": [
-          "274",
-          "488",
-          "504",
-          "512",
-          "720"
+          "90",
+          "100",
+          "110",
+          "120",
+          "0"
         ],
-        "hint": "عرف علاقة تكرارية \\( F_n = F_{n-1} + F_{n-2} + F_{n-3} \\) لعدد السلاسل الصالحة ذات الطول \\( n \\).",
-        "explanation": "لتكن \\( F_n \\) عدد السلاسل الثنائية الصالحة بطول \\( n \\). يمكن للسلسلة الصالحة أن تنتهي بـ 0، أو 01، أو 011. بالتالي تكون العلاقة التكرارية \\( F_n = F_{n-1} + F_{n-2} + F_{n-3} \\). بالبدء من الشروط الأولية \\( F_0 = 1, F_1 = 2, F_2 = 4 \\)، نصل إلى \\( F_{10} = 504 \\)."
+        "hint": "أعد كتابة المعادلة على الصورة \\((x - y)^2 = 2025\\).",
+        "explanation": "بإعادة الترتيب نحصل على \\(x^2 - 2xy + y^2 = 2025\\)، أي \\((x - y)^2 = 45^2\\). إذن \\(x - y = 45\\) أو \\(x - y = -45\\).\nإذا كان \\(x - y = 45\\)، فإن \\(x = y + 45\\). وبما أن \\(1 \\le x, y \\le 100\\)، فإن \\(1 \\le y \\le 55\\)، مما يعطي 55 زوجًا.\nإذا كان \\(x - y = -45\\)، فإن \\(y = x + 45\\)، وبالمثل فإن \\(1 \\le x \\le 55\\)، مما يعطي 55 زوجًا.\nإجمالي الأزواج المرتبة = \\(55 + 55 = 110\\)."
       }
     },
     "correct_index": "2"
@@ -2349,114 +2349,114 @@
     "id": "KAUST-083",
     "track": "kaust",
     "level": "High School (Gifted)",
-    "topic": "Number Theory",
+    "topic": "Algebra",
     "type": "FRQ",
-    "difficulty": "hard",
+    "difficulty": "medium",
     "content": {
       "en": {
-        "question": "Find the remainder when \\( 2^{2024} \\) is divided by \\( 1000 \\).",
+        "question": "Find the sum of all real roots of the polynomial \\(P(x) = x^4 - 4x^3 + 6x^2 - 4x - 15\\).",
         "options": [],
-        "hint": "Use the Chinese Remainder Theorem on modulo 8 and modulo 125.",
-        "explanation": "We need to find \\( 2^{2024} \\pmod{1000} \\). Since \\( 1000 = 8 \\times 125 \\), we have \\( 2^{2024} \\equiv 0 \\pmod 8 \\). By Euler's Totient Theorem, \\( \\phi(125) = 100 \\), so \\( 2^{100} \\equiv 1 \\pmod{125} \\). Thus, \\( 2^{2024} \\equiv 2^{24} \\pmod{125} \\). Since \\( 2^7 = 128 \\equiv 3 \\pmod{125} \\), \\( 2^{21} \\equiv 27 \\pmod{125} \\) and \\( 2^{24} \\equiv 27 \\times 8 = 216 \\equiv 91 \\pmod{125} \\). Solving \\( x \\equiv 0 \\pmod 8 \\) and \\( x \\equiv 91 \\pmod{125} \\) yields \\( x = 216 \\)."
+        "hint": "Recognize the binomial expansion of \\((x - 1)^4\\).",
+        "explanation": "Notice that \\((x - 1)^4 = x^4 - 4x^3 + 6x^2 - 4x + 1\\).\nTherefore, \\(P(x) = (x - 1)^4 - 16 = 0\\).\nSolving \\((x - 1)^4 = 16\\) gives \\((x - 1)^2 = 4\\), so \\(x - 1 = \\pm 2\\).\nThe real roots are \\(x = 3\\) and \\(x = -1\\).\nThe sum of the real roots is \\(3 + (-1) = 2\\)."
       },
       "ar": {
-        "question": "أوجد باقي قسمة \\( 2^{2024} \\) على \\( 1000 \\).",
+        "question": "أوجد مجموع كل الجذور الحقيقية لكثيرة الحدود \\(P(x) = x^4 - 4x^3 + 6x^2 - 4x - 15\\).",
         "options": [],
-        "hint": "استخدم مبرهنة الباقي الصينية على باقي القسمة على 8 وعلى 125.",
-        "explanation": "نعلم أن \\( 1000 = 8 \\times 125 \\). بالتالي \\( 2^{2024} \\equiv 0 \\pmod 8 \\). باستخدام مبرهنة أويلر، \\( \\phi(125) = 100 \\)، إذن \\( 2^{2024} \\equiv 2^{24} \\pmod{125} \\). بحساب \\( 2^{24} \\pmod{125} \\) نجد أنه يساوي \\( 91 \\). بحل نظام التطابقات \\( x \\equiv 0 \\pmod 8 \\) و \\( x \\equiv 91 \\pmod{125} \\) نحصل على \\( x = 216 \\)."
+        "hint": "لاحظ مفكوك ذات الحدين لـ \\((x - 1)^4\\).",
+        "explanation": "لاحظ أن \\((x - 1)^4 = x^4 - 4x^3 + 6x^2 - 4x + 1\\).\nبالتالي، \\(P(x) = (x - 1)^4 - 16 = 0\\).\nبحل المعادلة \\((x - 1)^4 = 16\\) نحصل على \\((x - 1)^2 = 4\\)، أي \\(x - 1 = \\pm 2\\).\nالجذور الحقيقية هي \\(x = 3\\) و \\(x = -1\\).\nمجموع الجذور الحقيقية يساوي \\(3 + (-1) = 2\\)."
       }
     },
-    "correct_index": "216"
+    "correct_index": "2"
   },
   {
     "id": "KAUST-084",
     "track": "kaust",
     "level": "High School (Gifted)",
-    "topic": "Game Theory",
+    "topic": "Number Theory",
     "type": "MCQ",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "content": {
       "en": {
-        "question": "In a Nim game with 3 piles of sizes 5, 11, and 14, how many opening moves guarantee a winning strategy for the first player?",
+        "question": "What is the remainder when \\(3^{2024}\\) is divided by \\(100\\)?",
         "options": [
-          "0",
           "1",
-          "2",
-          "3",
-          "5"
+          "21",
+          "41",
+          "81",
+          "91"
         ],
-        "hint": "Calculate the Nim-sum (bitwise XOR) of the pile sizes.",
-        "explanation": "The Nim-sum is \\( 5 \\oplus 11 \\oplus 14 \\). Converting to binary: \\( 5 = 0101_2 \\), \\( 11 = 1011_2 \\), \\( 14 = 1110_2 \\). Their XOR sum is \\( 0101_2 \\oplus 1011_2 \\oplus 1110_2 = 0000_2 = 0 \\). Since the Nim-sum is 0, the current state is a second-player winning position (P-position). Thus, the first player has 0 winning opening moves."
+        "hint": "Use Euler's Totient Theorem or analyze powers of 3 modulo 100.",
+        "explanation": "By Euler's totient function, \\(\\phi(100) = 100 \\times (1 - 1/2)(1 - 1/5) = 40\\).\nBy Euler's theorem, \\(3^{40} \\equiv 1 \\pmod{100}\\).\nSince \\(2024 = 40 \\times 50 + 24\\), we have \\(3^{2024} \\equiv 3^{24} \\pmod{100}\\).\nNotice \\(3^5 = 243 \\equiv 43 \\pmod{100}\\), so \\(3^{10} \\equiv 43^2 = 1849 \\equiv 49 \\pmod{100}\\).\nThen \\(3^{20} \\equiv 49^2 = 2401 \\equiv 1 \\pmod{100}\\).\nThus, \\(3^{24} \\equiv 3^4 = 81 \\pmod{100}\\)."
       },
       "ar": {
-        "question": "في لعبة نيم (Nim) تحتوي على 3 كوم من الأحجار بأحجام 5 و 11 و 14، كم عدد النقلات الافتتاحية التي تضمن استراتيجية فوز لللاعب الأول؟",
+        "question": "ما هو باقي قسمة \\(3^{2024}\\) على \\(100\\)؟",
         "options": [
-          "0",
           "1",
-          "2",
-          "3",
-          "5"
+          "21",
+          "41",
+          "81",
+          "91"
         ],
-        "hint": "احسب المجموع الثنائي (XOR) لأحجام الكوم.",
-        "explanation": "مجموع نيم الثنائي هو \\( 5 \\oplus 11 \\oplus 14 \\). بالتحويل للنظام الثنائي: \\( 5 = 0101_2 \\)، \\( 11 = 1011_2 \\)، \\( 14 = 1110_2 \\). حاصل XOR يساوي 0. بما أن المجموع يساوي صفرًا، فإن الوضع الحالي هو وضع فوز لللاعب الثاني، وبالتالي لا توجد أي نقلة رابحة لللاعب الأول (0)."
+        "hint": "استخدم دالة أيلر أو حلل قوى العدد 3 بمقاييس 100.",
+        "explanation": "باستخدام دالة أيلر، \\(\\phi(100) = 40\\).\nحسب مبرهنة أيلر، \\(3^{40} \\equiv 1 \\pmod{100}\\).\nبما أن \\(2024 = 40 \\times 50 + 24\\)، فإن \\(3^{2024} \\equiv 3^{24} \\pmod{100}\\).\nلاحظ أن \\(3^5 = 243 \\equiv 43 \\pmod{100}\\)، وبالتالي \\(3^{10} \\equiv 43^2 = 1849 \\equiv 49 \\pmod{100}\\).\nثم \\(3^{20} \\equiv 49^2 = 2401 \\equiv 1 \\pmod{100}\\).\nبالتالي \\(3^{24} \\equiv 3^4 = 81 \\pmod{100}\\)."
       }
     },
-    "correct_index": "0"
+    "correct_index": "3"
   },
   {
     "id": "KAUST-085",
     "track": "kaust",
     "level": "High School (Gifted)",
-    "topic": "Graph Theory",
+    "topic": "Applied Mathematics",
     "type": "FRQ",
-    "difficulty": "easy",
+    "difficulty": "hard",
     "content": {
       "en": {
-        "question": "A connected planar graph has 12 vertices, each of degree 3. Into how many regions (faces) does this graph divide the plane?",
+        "question": "A game is played on an \\(8 \\times 8\\) chessboard. A piece starts at square \\((1,1)\\) (top-left). Players take turns moving the piece any number of squares to the right, down, or diagonally down-right. The player who moves the piece to \\((8,8)\\) wins. If the first player plays optimally, what is the minimum number of moves needed for the first player to win?",
         "options": [],
-        "hint": "Use Euler's formula for planar graphs: \\( V - E + F = 2 \\).",
-        "explanation": "The sum of the degrees of all vertices is \\( 12 \\times 3 = 36 \\). By the Handshaking Lemma, \\( 2E = 36 \\implies E = 18 \\). Using Euler's planar formula \\( V - E + F = 2 \\), we substitute \\( V = 12 \\) and \\( E = 18 \\) to get \\( 12 - 18 + F = 2 \\implies F = 8 \\)."
+        "hint": "Can the first player reach \\((8,8)\\) in a single turn?",
+        "explanation": "Since diagonal moves of any length are allowed, the move from \\((1,1)\\) directly to \\((8,8)\\) along the main diagonal is a valid single move. Therefore, the first player can immediately move to \\((8,8)\\) and win in 1 move."
       },
       "ar": {
-        "question": "رسم بياني مستوٍ ومترابط يحتوي على 12 رأسًا، درجة كل رأس منها تساوي 3. إلى كم منطقة (وجه) يقسم هذا الرسم البياني المستوي؟",
+        "question": "تُلعب لعبة على رقعة شطرنج \\(8 \\times 8\\). تبدأ القطعة من المربع \\((1,1)\\) (أعلى اليسار). يتناوب اللاعبان تحريك القطعة أي عدد من المربعات إلى اليمين، أو لأسفل، أو قطريًا للأسفل واليمين. اللاعب الذي ينقل القطعة إلى \\((8,8)\\) يفوز. إذا لعب اللاعب الأول بشكل مثالي، فما هو أقل عدد من النقلات التي يحتاجها للفوز؟",
         "options": [],
-        "hint": "استخدم صيغة أويلر للرسوم البيانية المستوية: \\( V - E + F = 2 \\).",
-        "explanation": "مجموع درجات جميع رؤوس الرسم هو \\( 12 \\times 3 = 36 \\). بموجب مبرهنة المصافحة، فإن عدد الحواف \\( E = 18 \\). باستخدام صيغة أويلر \\( V - E + F = 2 \\)، نعوض \\( V = 12 \\) و \\( E = 18 \\) لنحصل على \\( F = 8 \\)."
+        "hint": "هل يستطيع اللاعب الأول الوصول إلى \\((8,8)\\) في حركة واحدة؟",
+        "explanation": "بما أن الحركة القطرية بأي عدد من المربعات مسموح بها، فإن التحرك من \\((1,1)\\) مباشرة إلى \\((8,8)\\) عبر القطر الرئيسي حركة صالحة. بالتالي، يستطيع اللاعب الأول الفوز في حركة واحدة فقط."
       }
     },
-    "correct_index": "8"
+    "correct_index": "1"
   },
   {
     "id": "KAUST-086",
     "track": "kaust",
     "level": "High School (Gifted)",
-    "topic": "Algebra",
+    "topic": "Probability",
     "type": "MCQ",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "content": {
       "en": {
-        "question": "Let \\( f: \\mathbb{R} \\setminus \\{0\\} \\to \\mathbb{R} \\) be a function satisfying \\( f(x) + 2f\\left(\\frac{1}{x}\\right) = 3x \\) for all \\( x \\neq 0 \\). Find the value of \\( f(2) \\).",
+        "question": "A fair 6-sided die is rolled repeatedly. What is the expected number of rolls until two consecutive 6s appear?",
         "options": [
-          "-2",
-          "-1",
-          "0",
-          "1",
-          "3"
+          "36",
+          "42",
+          "38",
+          "40",
+          "48"
         ],
-        "hint": "Replace \\( x \\) with \\( \\frac{1}{x} \\) to set up a system of linear equations.",
-        "explanation": "Given \\( f(x) + 2f(1/x) = 3x \\) (Eq 1). Substituting \\( x \\to 1/x \\) gives \\( f(1/x) + 2f(x) = 3/x \\) (Eq 2). Multiplying Eq 2 by 2 yields \\( 4f(x) + 2f(1/x) = 6/x \\). Subtracting Eq 1 from this gives \\( 3f(x) = \\frac{6}{x} - 3x \\implies f(x) = \\frac{2}{x} - x \\). Evaluating at \\( x = 2 \\): \\( f(2) = \\frac{2}{2} - 2 = -1 \\)."
+        "hint": "Set up a system of equations for the expected remaining rolls from each state.",
+        "explanation": "Let \\(E_0\\) be the expected rolls from the start, and \\(E_1\\) be the expected remaining rolls after rolling one '6'.\nFrom state 0: \\(E_0 = 1 + \\frac{1}{6}E_1 + \\frac{5}{6}E_0 \\implies \\frac{1}{6}E_0 = 1 + \\frac{1}{6}E_1 \\implies E_0 = 6 + E_1\\).\nFrom state 1: rolling a '6' finishes the process (0 remaining), rolling non-'6' resets to state 0.\nSo \\(E_1 = 1 + \\frac{1}{6}(0) + \\frac{5}{6}E_0 = 1 + \\frac{5}{6}E_0\\).\nSubstituting \\(E_1\\): \\(E_0 = 6 + 1 + \\frac{5}{6}E_0 \\implies \\frac{1}{6}E_0 = 7 \\implies E_0 = 42\\)."
       },
       "ar": {
-        "question": "لتكن \\( f: \\mathbb{R} \\setminus \\{0\\} \\to \\mathbb{R} \\) دالة تحقق \\( f(x) + 2f\\left(\\frac{1}{x}\\right) = 3x \\) لكل \\( x \\neq 0 \\). أوجد قيمة \\( f(2) \\).",
+        "question": "يتم رمي نرد عادل ذي 6 أوجه بشكل متكرر. ما هو عدد الرميات المتوقع حتى يظهر العددان 6 متتاليين؟",
         "options": [
-          "-2",
-          "-1",
-          "0",
-          "1",
-          "3"
+          "36",
+          "42",
+          "38",
+          "40",
+          "48"
         ],
-        "hint": "ستبدل \\( x \\) بـ \\( \\frac{1}{x} \\) لتكوين نظام من المعادلات الخطية.",
-        "explanation": "لدينا المعادلة الأولى \\( f(x) + 2f(1/x) = 3x \\). باستبدال \\( x \\) بـ \\( 1/x \\) نحصل على المعادلة الثانية \\( f(1/x) + 2f(x) = 3/x \\). بضرب المعادلة الثانية في 2 وطرح الأولى منها نجد أن \\( f(x) = \\frac{2}{x} - x \\). عند \\( x = 2 \\)، تكون القيمة \\( f(2) = 1 - 2 = -1 \\)."
+        "hint": "أنشئ نظام معادلات للقيمة المتوقعة للرميات المتبقية من كل حالة.",
+        "explanation": "لتكن \\(E_0\\) القيمة المتوقعة عند البداية، و \\(E_1\\) القيمة المتوقعة المتبقية بعد الحصول على الرقم '6' مرة واحدة.\nمن الحالة 0: \\(E_0 = 1 + \\frac{1}{6}E_1 + \\frac{5}{6}E_0 \\implies E_0 = 6 + E_1\\).\nمن الحالة 1: الحصول على '6' ينهي اللعبة (0 متبقي)، بينما عدم الحصول عليه يعيدنا للحالة 0.\nإذن \\(E_1 = 1 + \\frac{5}{6}E_0\\).\nبالتعويض: \\(E_0 = 7 + \\frac{5}{6}E_0 \\implies \\frac{1}{6}E_0 = 7 \\implies E_0 = 42\\)."
       }
     },
     "correct_index": "1"
@@ -2465,114 +2465,114 @@
     "id": "KAUST-087",
     "track": "kaust",
     "level": "High School (Gifted)",
-    "topic": "Probability",
+    "topic": "Geometry",
     "type": "FRQ",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "content": {
       "en": {
-        "question": "Two real numbers \\( x \\) and \\( y \\) are chosen independently and uniformly at random from the interval \\( [0, 1] \\). What is the probability that \\( |x - y| \\le \\frac{1}{3} \\)? Express your answer as a fraction.",
+        "question": "In triangle \\(ABC\\), \\(\\angle A = 60^\\circ\\), \\(b = 5\\), and \\(c = 8\\). Let \\(AD\\) be the angle bisector of \\(\\angle A\\) with \\(D\\) on \\(BC\\). Find the value of \\((13 \\times AD)^2\\).",
         "options": [],
-        "hint": "Geometrically represent the sample space as the unit square \\( [0,1]^2 \\) and calculate the valid region's area.",
-        "explanation": "The sample space is the square \\( [0,1]^2 \\) with total area 1. The condition \\( |x - y| > 1/3 \\) corresponds to two right triangles in the corners with legs of length \\( 2/3 \\). The combined area of these two excluded triangles is \\( 2 \\times \\frac{1}{2} \\times \\left(\\frac{2}{3}\\right)^2 = \\frac{4}{9} \\). Therefore, the desired probability is \\( 1 - \\frac{4}{9} = \\frac{5}{9} \\)."
+        "hint": "Use the formula for the length of an angle bisector: \\(d_a = \\frac{2bc \\cos(A/2)}{b+c}\\).",
+        "explanation": "The length of the angle bisector \\(AD\\) is given by:\n$$ AD = \\frac{2bc \\cos(A/2)}{b+c} $$\nHere \\(A/2 = 30^\\circ\\), so \\(\\cos(30^\\circ) = \\frac{\\sqrt{3}}{2}\\).\nThus, \\(AD = \\frac{2 \\times 5 \\times 8 \\times \\frac{\\sqrt{3}}{2}}{5 + 8} = \\frac{40\\sqrt{3}}{13}\\).\nTherefore, \\(13 \\times AD = 40\\sqrt{3}\\), and \\((13 \\times AD)^2 = (40\\sqrt{3})^2 = 4800\\)."
       },
       "ar": {
-        "question": "تم اختيار عددين حقيقيين \\( x \\) و \\( y \\) بشكل عشوائي ومستقل من الفترة \\( [0, 1] \\). ما احتمال أن يكون \\( |x - y| \\le \\frac{1}{3} \\)؟ اكتب الإجابة على شكل كسر.",
+        "question": "في المثلث \\(ABC\\)، إذا كان \\(\\angle A = 60^\\circ\\)، و \\(b = 5\\)، و \\(c = 8\\). وكان \\(AD\\) منصف الزاوية \\(\\angle A\\) حيث \\(D\\) تقع على \\(BC\\). أوجد قيمة \\((13 \\times AD)^2\\).",
         "options": [],
-        "hint": "مثل فضاء العينة هندسيًا كمربع وحدة \\( [0,1]^2 \\) واحسب مساحة المنطقة المطلوبة.",
-        "explanation": "فضاء العينة هو المربع \\( [0,1]^2 \\) ومساحته 1. الشرط المكمل \\( |x - y| > 1/3 \\) يمثل مثلثين قائمين في الزاويتين طول ضلع كل منهما \\( 2/3 \\). مجموع مساحتي المثلثين هو \\( 4/9 \\). بالتالي فإن الاحتمال المطلوب هو \\( 1 - 4/9 = 5/9 \\)."
+        "hint": "استخدم صيغة طول منصف الزاوية: \\(d_a = \\frac{2bc \\cos(A/2)}{b+c}\\).",
+        "explanation": "طول منصف الزاوية \\(AD\\) يُعطى بالقانون:\n$$ AD = \\frac{2bc \\cos(A/2)}{b+c} $$\nهنا \\(A/2 = 30^\\circ\\)، وبالتالي \\(\\cos(30^\\circ) = \\frac{\\sqrt{3}}{2}\\).\nإذن، \\(AD = \\frac{2 \\times 5 \\times 8 \\times \\frac{\\sqrt{3}}{2}}{5 + 8} = \\frac{40\\sqrt{3}}{13}\\).\nبالتالي، \\(13 \\times AD = 40\\sqrt{3}\\)، ويكون \\((13 \\times AD)^2 = (40\\sqrt{3})^2 = 4800\\)."
       }
     },
-    "correct_index": "5/9"
+    "correct_index": "4800"
   },
   {
     "id": "KAUST-088",
     "track": "kaust",
     "level": "High School (Gifted)",
-    "topic": "Logic",
+    "topic": "Algebra",
     "type": "MCQ",
-    "difficulty": "hard",
+    "difficulty": "medium",
     "content": {
       "en": {
-        "question": "Among five islanders (A, B, C, D, E), exactly one is a knight (who always tells the truth) and four are knaves (who always lie). They make the following statements:\nA says: 'B is a knight.'\nB says: 'D is a knight.'\nC says: 'A is a knave.'\nD says: 'E is a knight.'\nE says: 'C is a knave.'\nWho is the knight?",
+        "question": "For positive real numbers \\(a, b, c\\) satisfying \\(a + b + c = 3\\), what is the minimum value of \\(\\frac{1}{a} + \\frac{1}{b} + \\frac{1}{c}\\)?",
         "options": [
-          "A",
-          "B",
-          "C",
-          "D",
-          "E"
+          "1",
+          "3",
+          "9",
+          "6",
+          "1/3"
         ],
-        "hint": "Analyze the truthful implications assuming each person is the single knight.",
-        "explanation": "If A is knight, B is knight (contradiction: only 1 knight). If B is knight, D is knight (contradiction). If D is knight, E is knight (contradiction). If C is knight, then A is knave (true), B is knave (so 'D is knight' is false -> D is knave), D is knave (so 'E is knight' is false -> E is knave), E is knave (so 'C is knave' is false -> C is knight). All statements are completely consistent if and only if C is the knight."
+        "hint": "Apply the AM-HM inequality.",
+        "explanation": "By the AM-HM inequality:\n$$ \\frac{a+b+c}{3} \\ge \\frac{3}{\\frac{1}{a} + \\frac{1}{b} + \\frac{1}{c}} $$\nSince \\(a + b + c = 3\\), we have \\(1 \\ge \\frac{3}{\\frac{1}{a} + \\frac{1}{b} + \\frac{1}{c}}\\), which simplifies to \\(\\frac{1}{a} + \\frac{1}{b} + \\frac{1}{c} \\ge 3\\).\nEquality holds when \\(a = b = c = 1\\)."
       },
       "ar": {
-        "question": "من بين خمسة أفراد (A, B, C, D, E)، يوجد شخص واحد فقط صادق (يقول الحقيقة دائمًا) والأربعة الآخرون كاذبون (يكذبون دائمًا). قالوا ما يلي:\nقال A: 'B شخص صادق.'\nقال B: 'D شخص صادق.'\nقال C: 'A شخص كاذب.'\nقال D: 'E شخص صادق.'\nقال E: 'C شخص كاذب.'\nمن هو الشخص الصادق الوحيد؟",
+        "question": "لأي أعداد حقيقية موجبة \\(a, b, c\\) تحقق \\(a + b + c = 3\\)، ما هي القيمة الصغرى للمقدار \\(\\frac{1}{a} + \\frac{1}{b} + \\frac{1}{c}\\)؟",
         "options": [
-          "A",
-          "B",
-          "C",
-          "D",
-          "E"
+          "1",
+          "3",
+          "9",
+          "6",
+          "1/3"
         ],
-        "hint": "افترض أن كل شخص هو الصادق على حدة وافحص اتساق العبارات.",
-        "explanation": "إذا كان A صادقًا فسيتبعه B صادقًا (تناقض). إذا كان B صادقًا فسيتبعه D صادقًا (تناقض). إذا كان D صادقًا فسيتبعه E صادقًا (تناقض). أما إذا كان C هو الصادق: فإن عبارته 'A كاذب' صحيحة، وعبارات باقي الكاذبين ستكون كلها كاذبة بشكل متسق. إذن C هو الصادق الوحيد."
+        "hint": "طبق متراجحة الوسط الحسابي والوسط الهرموني (AM-HM).",
+        "explanation": "باستخدام متباينة الوسط الحسابي والوسط الهرموني:\n$$ \\frac{a+b+c}{3} \\ge \\frac{3}{\\frac{1}{a} + \\frac{1}{b} + \\frac{1}{c}} $$\nبما أن \\(a + b + c = 3\\)، فإن \\(1 \\ge \\frac{3}{\\frac{1}{a} + \\frac{1}{b} + \\frac{1}{c}}\\)، مما يعطي \\(\\frac{1}{a} + \\frac{1}{b} + \\frac{1}{c} \\ge 3\\).\nتتحقق المساواة عندما \\(a = b = c = 1\\)."
       }
     },
-    "correct_index": "2"
+    "correct_index": "1"
   },
   {
     "id": "KAUST-089",
     "track": "kaust",
     "level": "High School (Gifted)",
-    "topic": "Linear Algebra",
+    "topic": "Discrete Mathematics",
     "type": "FRQ",
     "difficulty": "hard",
     "content": {
       "en": {
-        "question": "Find the trace of the matrix \\( A^{10} \\), where \\( A = \\begin{pmatrix} 1 & 1 \\\\ 1 & 0 \\end{pmatrix} \\).",
+        "question": "A sequence is defined by \\(a_0 = 1\\), \\(a_1 = 3\\), and \\(a_{n+1} = 3a_n - 2a_{n-1}\\) for \\(n \\ge 1\\). Find the value of \\(a_{10}\\).",
         "options": [],
-        "hint": "Relate the trace of powers of \\( A \\) to the Fibonacci and Lucas numbers.",
-        "explanation": "The characteristic polynomial of \\( A \\) is \\( \\det(A - \\lambda I) = \\lambda^2 - \\lambda - 1 = 0 \\). Its eigenvalues are \\( \\lambda_1 = \\frac{1+\\sqrt{5}}{2} \\) and \\( \\lambda_2 = \\frac{1-\\sqrt{5}}{2} \\). The trace of \\( A^{10} \\) is \\( \\lambda_1^{10} + \\lambda_2^{10} \\), which is the 10th Lucas number \\( L_{10} \\). Computing the Lucas sequence: \\( L_0=2, L_1=1, L_2=3, L_3=4, L_4=7, L_5=11, L_6=18, L_7=29, L_8=47, L_9=76, L_{10}=123 \\)."
+        "hint": "Find the general explicit formula using the characteristic equation \\(r^2 - 3r + 2 = 0\\).",
+        "explanation": "The characteristic equation is \\(r^2 - 3r + 2 = 0\\), which factors as \\((r-1)(r-2) = 0\\), so roots are \\(r = 1, 2\\).\nThe general term is \\(a_n = C_1(1)^n + C_2(2)^n = C_1 + C_2 2^n\\).\nUsing initial conditions:\n\\(a_0 = C_1 + C_2 = 1\\)\n\\(a_1 = C_1 + 2C_2 = 3\\)\nSubtracting gives \\(C_2 = 2\\) and \\(C_1 = -1\\).\nThus, \\(a_n = 2^{n+1} - 1\\).\nFor \\(n = 10\\): \\(a_{10} = 2^{11} - 1 = 2048 - 1 = 2047\\)."
       },
       "ar": {
-        "question": "أوجد أثر (Trace) المصفوفة \\( A^{10} \\)، حيث \\( A = \\begin{pmatrix} 1 & 1 \\\\ 1 & 0 \\end{pmatrix} \\).",
+        "question": "متتالية معرّفة بـ \\(a_0 = 1\\)، و \\(a_1 = 3\\)، و \\(a_{n+1} = 3a_n - 2a_{n-1}\\) لكل \\(n \\ge 1\\). أوجد قيمة \\(a_{10}\\).",
         "options": [],
-        "hint": "اربط أثر القوى للمصفوفة \\( A \\) بأعداد لوكاس (Lucas numbers).",
-        "explanation": "المعامل المميز للمصفوفة \\( A \\) هو \\( \\lambda^2 - \\lambda - 1 = 0 \\). قيمها الذاتية هما \\( \\lambda_1, \\lambda_2 \\). أثر المصفوفة \\( A^{10} \\) يساوي \\( \\lambda_1^{10} + \\lambda_2^{10} \\) وهو الحد العاشر في متتالية لوكاس \\( L_{10} \\). بحساب المتتالية نجد أن \\( L_{10} = 123 \\)."
+        "hint": "أوجد الصيغة الصريحة العامة باستخدام المعادلة المميزة \\(r^2 - 3r + 2 = 0\\).",
+        "explanation": "المعادلة المميزة هي \\(r^2 - 3r + 2 = 0\\)، وتحليلها \\((r-1)(r-2) = 0\\)، فالجذور هي \\(r = 1, 2\\).\nالحد العام هو \\(a_n = C_1 + C_2 2^n\\).\nباستخدام الشروط الابتدائية:\n\\(a_0 = C_1 + C_2 = 1\\)\n\\(a_1 = C_1 + 2C_2 = 3\\)\nبالطرح نحصل على \\(C_2 = 2\\) و \\(C_1 = -1\\).\nبالتالي، \\(a_n = 2^{n+1} - 1\\).\nعند \\(n = 10\\): \\(a_{10} = 2^{11} - 1 = 2048 - 1 = 2047\\)."
       }
     },
-    "correct_index": "123"
+    "correct_index": "2047"
   },
   {
     "id": "KAUST-090",
     "track": "kaust",
     "level": "High School (Gifted)",
-    "topic": "Discrete Mathematics",
+    "topic": "Combinatorics",
     "type": "MCQ",
-    "difficulty": "easy",
+    "difficulty": "hard",
     "content": {
       "en": {
-        "question": "A sequence \\( a_n \\) is defined by \\( a_0 = 1 \\) and \\( a_n = \\sum_{k=0}^{n-1} a_k \\) for all \\( n \\ge 1 \\). What is \\( a_{20} \\)?",
+        "question": "How many grid paths from \\((0,0)\\) to \\((4,4)\\) using unit steps right \\((+1,0)\\) and up \\((0,+1)\\) stay weakly below the diagonal line \\(y = x\\)?",
         "options": [
-          "2^{19}",
-          "2^{20}",
-          "2^{20} - 1",
-          "2^{21}",
-          "2^{18}"
+          "14",
+          "28",
+          "42",
+          "70",
+          "132"
         ],
-        "hint": "Write out the first few terms to find a pattern for \\( n \\ge 1 \\).",
-        "explanation": "Evaluating the first few terms: \\( a_0 = 1 \\), \\( a_1 = 1 \\), \\( a_2 = 1+1 = 2 \\), \\( a_3 = 1+1+2 = 4 \\), \\( a_4 = 8 \\). By induction, \\( a_n = 2^{n-1} \\) for all \\( n \\ge 1 \\). Thus, \\( a_{20} = 2^{19} \\)."
+        "hint": "This is given by the 4th Catalan number \\(C_4\\).",
+        "explanation": "The number of Dyck paths of length \\(2n\\) (paths from \\((0,0)\\) to \\((n,n)\\) that do not cross above \\(y = x\\)) is given by the Catalan number \\(C_n = \\frac{1}{n+1}\\binom{2n}{n}\\).\nFor \\(n = 4\\):\n$$ C_4 = \\frac{1}{5}\\binom{8}{4} = \\frac{70}{5} = 14 $$"
       },
       "ar": {
-        "question": "متتالية \\( a_n \\) معرفة بـ \\( a_0 = 1 \\) و \\( a_n = \\sum_{k=0}^{n-1} a_k \\) لكل \\( n \\ge 1 \\). ما قيمة \\( a_{20} \\)؟",
+        "question": "كم عدد المسارات الشبكية من \\((0,0)\\) إلى \\((4,4)\\) باستخدام خطوات وحدة لليمين \\((+1,0)\\) وللأعلى \\((0,+1)\\) التي تبقى أسفل أو على القطر \\(y = x\\)؟",
         "options": [
-          "2^{19}",
-          "2^{20}",
-          "2^{20} - 1",
-          "2^{21}",
-          "2^{18}"
+          "14",
+          "28",
+          "42",
+          "70",
+          "132"
         ],
-        "hint": "احسب الحدود الأولى لتكتشف النمط عندما يكون \\( n \\ge 1 \\).",
-        "explanation": "بحساب الحدود الأولى: \\( a_0 = 1, a_1 = 1, a_2 = 2, a_3 = 4, a_4 = 8 \\). بالاستقراء، نجد أن \\( a_n = 2^{n-1} \\) لكل \\( n \\ge 1 \\). وبالتالي فإن \\( a_{20} = 2^{19} \\)."
+        "hint": "هذا العدد يُعطى بعدد كاتالان الرابع \\(C_4\\).",
+        "explanation": "عدد مسارات ديك ذات الطول \\(2n\\) التي لا تتجاوز القطر \\(y = x\\) يُعطى بعدد كاتالان \\(C_n = \\frac{1}{n+1}\\binom{2n}{n}\\).\nمن أجل \\(n = 4\\):\n$$ C_4 = \\frac{1}{5}\\binom{8}{4} = \\frac{70}{5} = 14 $$"
       }
     },
     "correct_index": "0"
@@ -2581,56 +2581,56 @@
     "id": "KAUST-091",
     "track": "kaust",
     "level": "High School (Gifted)",
-    "topic": "Applied Mathematics",
+    "topic": "Number Theory",
     "type": "FRQ",
-    "difficulty": "easy",
+    "difficulty": "medium",
     "content": {
       "en": {
-        "question": "A substance undergoes exponential decay. If its half-life is 10 years, what fraction of the initial amount remains after 30 years?",
+        "question": "Find the greatest common divisor of \\(2^{2024} - 1\\) and \\(2^{2016} - 1\\).",
         "options": [],
-        "hint": "Use the formula \\( M(t) = M_0 \\cdot (1/2)^{t/T} \\).",
-        "explanation": "After \\( t = 30 \\) years with a half-life \\( T = 10 \\) years, the number of half-lives elapsed is \\( 30 / 10 = 3 \\). The remaining fraction is \\( (1/2)^3 = 1/8 \\)."
+        "hint": "Use the property \\(\\gcd(2^a - 1, 2^b - 1) = 2^{\\gcd(a,b)} - 1\\).",
+        "explanation": "Using the identity \\(\\gcd(2^a - 1, 2^b - 1) = 2^{\\gcd(a, b)} - 1\\):\nWe compute \\(\\gcd(2024, 2016)\\).\n\\(2024 - 2016 = 8\\).\nSince 8 divides 2016 (\\(2016 = 8 \\times 252\\)), we have \\(\\gcd(2024, 2016) = 8\\).\nThus, \\(\\gcd(2^{2024} - 1, 2^{2016} - 1) = 2^8 - 1 = 255\\)."
       },
       "ar": {
-        "question": "تضمحل مادة مشعة بشكل أسي. إذا كان عمر النصف لها هو 10 سنوات، فما الكسر المتبقي من الكمية الأصلية بعد 30 سنة؟",
+        "question": "أوجد القاسم المشترك الأكبر للعددين \\(2^{2024} - 1\\) و \\(2^{2016} - 1\\).",
         "options": [],
-        "hint": "استخدم الصيغة \\( M(t) = M_0 \\cdot (1/2)^{t/T} \\).",
-        "explanation": "بعد مرور 30 سنة بعمر نصف قدره 10 سنوات، يكون قد مر 3 دورات عمر نصف. بالتالي فإن الكسر المتبقي هو \\( (1/2)^3 = 1/8 \\)."
+        "hint": "استخدم الخاصية \\(\\gcd(2^a - 1, 2^b - 1) = 2^{\\gcd(a,b)} - 1\\).",
+        "explanation": "باستخدام المتطابقة \\(\\gcd(2^a - 1, 2^b - 1) = 2^{\\gcd(a, b)} - 1\\):\nنحسب أولاً \\(\\gcd(2024, 2016)\\).\n\\(2024 - 2016 = 8\\).\nبما أن 8 تقسم 2016، فإن \\(\\gcd(2024, 2016) = 8\\).\nبالتالي، \\(\\gcd(2^{2024} - 1, 2^{2016} - 1) = 2^8 - 1 = 255\\)."
       }
     },
-    "correct_index": "1/8"
+    "correct_index": "255"
   },
   {
     "id": "KAUST-092",
     "track": "kaust",
     "level": "High School (Gifted)",
-    "topic": "Combinatorics",
+    "topic": "Calculus",
     "type": "MCQ",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "content": {
       "en": {
-        "question": "In how many ways can 5 distinct hats be returned to 5 people such that no person receives their original hat?",
+        "question": "Evaluate the limit: $$ \\lim_{n \\to \\infty} \\sum_{k=1}^n \\frac{n}{n^2 + k^2} $$",
         "options": [
-          "24",
-          "44",
-          "60",
-          "89",
-          "119"
+          "\\(\\frac{\\pi}{2}\\)",
+          "\\(\\frac{\\pi}{4}\\)",
+          "\\(\\frac{\\pi}{6}\\)",
+          "\\(1\\)",
+          "\\(\\ln(2)\\)"
         ],
-        "hint": "This is a question about derangements, denoted as \\( !n \\) or \\( D_n \\).",
-        "explanation": "The number of derangements of \\( n \\) items is given by \\( D_n = n! \\sum_{k=0}^n \\frac{(-1)^k}{k!} \\). For \\( n = 5 \\): \\( D_5 = 120 \\left( 1 - 1 + \\frac{1}{2} - \\frac{1}{6} + \\frac{1}{24} - \\frac{1}{120} \\right) = 60 - 20 + 5 - 1 = 44 \\)."
+        "hint": "Express the sum as a Riemann sum integral \\(\\int_0^1 f(x) dx\\).",
+        "explanation": "Rewrite the summation as:\n$$ \\sum_{k=1}^n \\frac{n}{n^2 + k^2} = \\sum_{k=1}^n \\frac{1}{1 + (k/n)^2} \\cdot \\frac{1}{n} $$\nThis is the Riemann sum definition of the integral:\n$$ \\int_0^1 \\frac{1}{1 + x^2} dx = \\Big[ \\arctan(x) \\Big]_0^1 = \\arctan(1) - \\arctan(0) = \\frac{\\pi}{4} $$"
       },
       "ar": {
-        "question": "بكم طريقة يمكن إعادة 5 قبعات ممتازة إلى 5 أشخاص بحيث لا يحصل أي شخص على قبعته الأصلية؟",
+        "question": "احسب النهاية التالية: $$ \\lim_{n \\to \\infty} \\sum_{k=1}^n \\frac{n}{n^2 + k^2} $$",
         "options": [
-          "24",
-          "44",
-          "60",
-          "89",
-          "119"
+          "\\(\\frac{\\pi}{2}\\)",
+          "\\(\\frac{\\pi}{4}\\)",
+          "\\(\\frac{\\pi}{6}\\)",
+          "\\(1\\)",
+          "\\(\\ln(2)\\)"
         ],
-        "hint": "هذا السؤال يتطلب حساب عدد الاضطرابات (Derangements) ويرمز له بـ \\( D_n \\).",
-        "explanation": "عدد الاضطرابات لـ \\( n \\) عنصر يُعطى بالصيغة \\( D_n = n! \\sum_{k=0}^n \\frac{(-1)^k}{k!} \\). بالنسبة لـ \\( n = 5 \\)، تكون النتيجة \\( D_5 = 44 \\)."
+        "hint": "عبر عن المجموع كمجموع ريمان على صورة تكامل \\(\\int_0^1 f(x) dx\\).",
+        "explanation": "أعد كتابة المجموع على الصورة:\n$$ \\sum_{k=1}^n \\frac{1}{1 + (k/n)^2} \\cdot \\frac{1}{n} $$\nهذا يمثل تعريف مجموع ريمان للتكامل المحدد:\n$$ \\int_0^1 \\frac{1}{1 + x^2} dx = \\Big[ \\arctan(x) \\Big]_0^1 = \\frac{\\pi}{4} $$"
       }
     },
     "correct_index": "1"
@@ -2639,56 +2639,56 @@
     "id": "KAUST-093",
     "track": "kaust",
     "level": "High School (Gifted)",
-    "topic": "Optimization",
+    "topic": "Applied Mathematics",
     "type": "FRQ",
-    "difficulty": "easy",
+    "difficulty": "medium",
     "content": {
       "en": {
-        "question": "Find the minimum value of the multivariable function \\( f(x, y) = x^2 + 4y^2 - 4x + 8y + 10 \\) for real numbers \\( x, y \\).",
+        "question": "A population model is given by the differential equation \\(\\frac{dP}{dt} = 0.05 P \\left(1 - \\frac{P}{1000}\\right)\\). What is the carrying capacity of the population in this model?",
         "options": [],
-        "hint": "Complete the square for both \\( x \\) and \\( y \\).",
-        "explanation": "Rewrite \\( f(x, y) \\) by completing the squares: \\( f(x, y) = (x^2 - 4x + 4) + 4(y^2 + 2y + 1) + 10 - 4 - 4 = (x - 2)^2 + 4(y + 1)^2 + 2 \\). Since square terms are non-negative, the absolute minimum is \\( 2 \\), occurring at \\( (x, y) = (2, -1) \\)."
+        "hint": "The carrying capacity is the stable equilibrium point \\(K\\) in the logistic equation \\(\\frac{dP}{dt} = rP(1 - P/K)\\).",
+        "explanation": "In the standard logistic differential equation \\(\\frac{dP}{dt} = r P \\left(1 - \\frac{P}{K}\\right)\\), the parameter \\(K\\) represents the carrying capacity of the environment. Comparing directly, \\(K = 1000\\)."
       },
       "ar": {
-        "question": "أوجد القيمة الصغرى للدالة ذات المتغيرين \\( f(x, y) = x^2 + 4y^2 - 4x + 8y + 10 \\) للأعداد الحقيقية \\( x, y \\).",
+        "question": "يُنمدج نمو جماعة أحيائية بالمعادلة التفاضلية \\(\\frac{dP}{dt} = 0.05 P \\left(1 - \\frac{P}{1000}\\right)\\). ما هي السعة الاستيعابية للبيئة في هذا النموذج؟",
         "options": [],
-        "hint": "أكمل المربع بالنسبة لـ \\( x \\) و \\( y \\).",
-        "explanation": "بإكمال المربع نحصل على: \\( f(x, y) = (x - 2)^2 + 4(y + 1)^2 + 2 \\). بما أن الحدود المربعة لا يمكن أن تكون سالبة، فإن القيمة الصغرى هي 2 وتتحقق عند \\( (x, y) = (2, -1) \\)."
+        "hint": "السعة الاستيعابية هي نقطة الاتزان المستقرة \\(K\\) في المعادلة اللوجستية \\(\\frac{dP}{dt} = rP(1 - P/K)\\).",
+        "explanation": "في المعادلة التفاضلية اللوجستية القياسية \\(\\frac{dP}{dt} = r P \\left(1 - \\frac{P}{K}\\right)\\)، يمثل المعامل \\(K\\) السعة الاستيعابية للبيئة. بالمقارنة المباشرة، \\(K = 1000\\)."
       }
     },
-    "correct_index": "2"
+    "correct_index": "1000"
   },
   {
     "id": "KAUST-094",
     "track": "kaust",
     "level": "High School (Gifted)",
-    "topic": "Number Theory",
+    "topic": "Linear Algebra",
     "type": "MCQ",
-    "difficulty": "medium",
+    "difficulty": "easy",
     "content": {
       "en": {
-        "question": "How many pairs of positive integers \\( (x, y) \\) satisfy the equation \\( \\frac{1}{x} + \\frac{1}{y} = \\frac{1}{6} \\)?",
+        "question": "What is the determinant of the matrix \\(A = \\begin{pmatrix} 1 & 2 & 3 \\\\ 0 & 4 & 5 \\\\ 0 & 0 & 6 \\end{pmatrix}\\)?",
         "options": [
-          "5",
-          "7",
-          "9",
+          "0",
           "12",
-          "15"
+          "24",
+          "60",
+          "120"
         ],
-        "hint": "Rearrange the equation into the form \\( (x-6)(y-6) = 36 \\).",
-        "explanation": "Multiplying by \\( 6xy \\) gives \\( 6y + 6x = xy \\implies xy - 6x - 6y = 0 \\). Adding 36 to both sides yields \\( (x - 6)(y - 6) = 36 \\). Since \\( x, y > 0 \\), \\( x - 6 \\) must be a positive factor of 36. The number of positive divisors of \\( 36 = 2^2 \\times 3^2 \\) is \\( (2+1)(2+1) = 9 \\). Each factor gives a unique valid pair \\( (x, y) \\)."
+        "hint": "The determinant of an upper triangular matrix is the product of its main diagonal elements.",
+        "explanation": "Matrix \\(A\\) is upper triangular. The determinant of a triangular matrix equals the product of the entries on its main diagonal:\n$$ \\det(A) = 1 \\times 4 \\times 6 = 24 $$"
       },
       "ar": {
-        "question": "كم عدد أزواج الأعداد الصحيحة الموجبة \\( (x, y) \\) التي تحقق المعادلة \\( \\frac{1}{x} + \\frac{1}{y} = \\frac{1}{6} \\)؟",
+        "question": "ما هو محدد المصفوفة \\(A = \\begin{pmatrix} 1 & 2 & 3 \\\\ 0 & 4 & 5 \\\\ 0 & 0 & 6 \\end{pmatrix}\\)؟",
         "options": [
-          "5",
-          "7",
-          "9",
+          "0",
           "12",
-          "15"
+          "24",
+          "60",
+          "120"
         ],
-        "hint": "أعد ترتيب المعادلة لتصبح على الصورة \\( (x-6)(y-6) = 36 \\).",
-        "explanation": "بضرب المعادلة في \\( 6xy \\) وإعادة الترتيب نحصل على \\( (x - 6)(y - 6) = 36 \\). بما أن \\( x, y > 0 \\)، يجب أن يكون \\( x - 6 \\) قاسمًا موجبًا للعدد 36. عدد قواسم 36 هو 9 قواسم، مما يعطي 9 أزواج ناتجة."
+        "hint": "محدد المصفوفة المثلثية العلوية يساوي حاصل ضرب عناصر القطر الرئيسي.",
+        "explanation": "المصفوفة \\(A\\) مصفوفة مثلثية علوية. محدد المصفوفة المثلثية يساوي حاصل ضرب عناصر قطرها الرئيسي:\n$$ \\det(A) = 1 \\times 4 \\times 6 = 24 $$"
       }
     },
     "correct_index": "2"
@@ -2697,195 +2697,195 @@
     "id": "KAUST-095",
     "track": "kaust",
     "level": "High School (Gifted)",
-    "topic": "Probability",
+    "topic": "Geometry",
     "type": "FRQ",
-    "difficulty": "hard",
+    "difficulty": "medium",
     "content": {
       "en": {
-        "question": "A particle moves among the vertices of triangle \\( ABC \\). At each step, it moves to one of the two other vertices with equal probability \\( 1/2 \\). If it starts at vertex \\( A \\), what is the probability that it is back at vertex \\( A \\) after 4 steps?",
+        "question": "In a circle with radius 10, two parallel chords are drawn on opposite sides of the center. If their lengths are 12 and 16, find the distance between the two chords.",
         "options": [],
-        "hint": "Set up a transition matrix or use a recurrence for \\( p_n \\), the probability of being at \\( A \\) at step \\( n \\).",
-        "explanation": "Let \\( p_n \\) be the probability of being at \\( A \\) at step \\( n \\). If the particle is at \\( A \\), it moves to \\( B \\) or \\( C \\). If it is not at \\( A \\), it moves to \\( A \\) with probability \\( 1/2 \\). Thus, \\( p_n = \\frac{1}{2}(1 - p_{n-1}) \\). Starting with \\( p_0 = 1 \\): \\( p_1 = 0 \\), \\( p_2 = 1/2 \\), \\( p_3 = 1/4 \\), \\( p_4 = 3/8 \\)."
+        "hint": "Use the Pythagorean theorem to find the distance from the center to each chord.",
+        "explanation": "For a chord of length \\(L\\) in a circle of radius \\(R\\), the distance from the center to the chord is \\(d = \\sqrt{R^2 - (L/2)^2}\\).\nFor the chord of length 12: \\(d_1 = \\sqrt{10^2 - 6^2} = \\sqrt{64} = 8\\).\nFor the chord of length 16: \\(d_2 = \\sqrt{10^2 - 8^2} = \\sqrt{36} = 6\\).\nSince the chords are on opposite sides of the center, the total distance between them is \\(d_1 + d_2 = 8 + 6 = 14\\)."
       },
       "ar": {
-        "question": "ينتقل جسيم بين رؤوس المثلث \\( ABC \\). في كل خطوة، ينتقل إلى أحد الرأسين الآخرين باحتمال متساوٍ قدره \\( 1/2 \\). إذا بدأ الجسيم من الرأس \\( A \\)، فما احتمال أن يعود إلى الرأس \\( A \\) بعد 4 خطوات؟",
+        "question": "في دائرة نصف قطرها 10، رسم وتران متوازيان على جانبين متقابلين من المركز. إذا كان طولاهما 12 و 16، فأوجد المسافة بين الوترين.",
         "options": [],
-        "hint": "استخدم علاقة تكرارية لـ \\( p_n \\)، وهو احتمال التواجد عند الرأس \\( A \\) في الخطوة \\( n \\).",
-        "explanation": "ليكن \\( p_n \\) احتمال التواجد عند \\( A \\) في الخطوة \\( n \\). المعادلة التكرارية هي \\( p_n = \\frac{1}{2}(1 - p_{n-1}) \\). بالبدء من \\( p_0 = 1 \\): نحصل على \\( p_1 = 0 \\)، \\( p_2 = 1/2 \\)، \\( p_3 = 1/4 \\)، و \\( p_4 = 3/8 \\)."
+        "hint": "استخدم نظرية فيثاغورس لإيجاد بعد كل وتر عن مركز الدائرة.",
+        "explanation": "لوتر طوله \\(L\\) في دائرة نصف قطرها \\(R\\)، فإن البعد من المركز للوتر هو \\(d = \\sqrt{R^2 - (L/2)^2}\\).\nللوتر الذي طوله 12: \\(d_1 = \\sqrt{10^2 - 6^2} = 8\\).\nللوتر الذي طوله 16: \\(d_2 = \\sqrt{10^2 - 8^2} = 6\\).\nبما أن الوترين على جانبين متقابلين من المركز، فإن المسافة بينهما تساوي \\(8 + 6 = 14\\)."
       }
     },
-    "correct_index": "3/8"
+    "correct_index": "14"
   },
   {
     "id": "KAUST-096",
     "track": "kaust",
     "level": "High School (Gifted)",
-    "topic": "Graph Theory",
+    "topic": "Probability",
     "type": "MCQ",
     "difficulty": "medium",
     "content": {
       "en": {
-        "question": "Which of the following complete bipartite graphs \\( K_{m,n} \\) contains an Eulerian circuit?",
+        "question": "Two points are chosen independently and uniformly at random on a line segment of length 1. What is the probability that the distance between them is less than 0.5?",
         "options": [
-          "K_{3,3}",
-          "K_{2,4}",
-          "K_{3,4}",
-          "K_{5,5}",
-          "K_{1,6}"
+          "1/4",
+          "1/2",
+          "3/4",
+          "2/3",
+          "5/8"
         ],
-        "hint": "A graph has an Eulerian circuit if and only if every vertex has an even degree.",
-        "explanation": "In \\( K_{m,n} \\), the \\( m \\) vertices in the first set have degree \\( n \\), and the \\( n \\) vertices in the second set have degree \\( m \\). An Eulerian circuit exists if and only if all vertices have even degrees, meaning both \\( m \\) and \\( n \\) must be even numbers. Among the options, \\( K_{2,4} \\) is the only graph where both 2 and 4 are even."
+        "hint": "Model the choice as a point \\((x,y)\\) in the unit square \\([0,1] \\times [0,1]\\).",
+        "explanation": "Let \\(x, y \\in [0,1]\\) be the positions of the two points. The sample space is the unit square with area 1.\nWe require \\(|x - y| < 0.5\\), which is the region bounded by \\(y < x + 0.5\\) and \\(y > x - 0.5\\).\nThe area outside this region consists of two right triangles with legs of length 0.5 at the top-left and bottom-right corners.\nArea outside = \\(2 \\times \\left(\\frac{1}{2} \\times 0.5 \\times 0.5\\right) = 0.25 = \\frac{1}{4}\\).\nTherefore, the probability is \\(1 - \\frac{1}{4} = \\frac{3}{4}\\)."
       },
       "ar": {
-        "question": "أي من الرسوم البيانية الثنائية التامة التالية \\( K_{m,n} \\) يحتوي على مسار أويلري مغلق (Eulerian circuit)؟",
+        "question": "نُقِطتان تُختاران بشكل عشوائي ومستقل وبإمكانية متساوية على قطعة مستقيمة طولها 1. ما احتمال أن تكون المسافة بينهما أقل من 0.5؟",
         "options": [
-          "K_{3,3}",
-          "K_{2,4}",
-          "K_{3,4}",
-          "K_{5,5}",
-          "K_{1,6}"
+          "1/4",
+          "1/2",
+          "3/4",
+          "2/3",
+          "5/8"
         ],
-        "hint": "يحتوي الرسم البياني على مسار أويلري مغلق إذا وفقط إذا كانت درجة كل رأس زوجية.",
-        "explanation": "في الرسم البياني \\( K_{m,n} \\)، درجات الرؤوس تكون إما \\( m \\) أو \\( n \\). يمتلك الرسم مسار أويلري مغلقًا إذا وفقط إذا كانت جميع الدرجات زوجية، أي أن كلاً من \\( m \\) و \\( n \\) عددان زوجيان. الخيار الوحيد الذي يحقق هذا هو \\( K_{2,4} \\)."
+        "hint": "مثل الاختيار كنقطة \\((x,y)\\) في المربع الوحدة \\([0,1] \\times [0,1]\\).",
+        "explanation": "لتكن \\(x, y \\in [0,1]\\) موضعي النقطتين. فضاء العينة هو مربع الوحدة ومساحته 1.\nالشرط هو \\(|x - y| < 0.5\\)، وهي المنطقة المحصورة بين \\(y < x + 0.5\\) و \\(y > x - 0.5\\).\nالمساحة المتبقية خارج هذه المنطقة تتكون من مثلثين قائمين طول ضلع كل منهما 0.5.\nالمساحة الخارجية = \\(2 \\times \\left(\\frac{1}{2} \\times 0.5 \\times 0.5\\right) = \\frac{1}{4}\\).\nإذن الاحتمال المطلوب هو \\(1 - \\frac{1}{4} = \\frac{3}{4}\\)."
       }
     },
-    "correct_index": "1"
+    "correct_index": "2"
   },
   {
     "id": "KAUST-097",
     "track": "kaust",
     "level": "High School (Gifted)",
-    "topic": "Discrete Mathematics",
+    "topic": "Number Theory",
     "type": "FRQ",
     "difficulty": "medium",
     "content": {
       "en": {
-        "question": "In a school of 100 students, 50 play football, 45 play basketball, and 35 play volleyball. 15 play both football and basketball, 10 play basketball and volleyball, 11 play football and volleyball, and 5 play all three sports. How many students do not play any of these sports?",
+        "question": "How many positive integers \\(n \\le 100\\) have the property that \\(n^2 + 1\\) is divisible by 5?",
         "options": [],
-        "hint": "Apply the Principle of Inclusion-Exclusion.",
-        "explanation": "By Inclusion-Exclusion, the number of students playing at least one sport is \\( |F \\cup B \\cup V| = (50 + 45 + 35) - (15 + 10 + 11) + 5 = 130 - 36 + 5 = 99 \\). Thus, the number of students playing no sport is \\( 100 - 99 = 1 \\)."
+        "hint": "Check the quadratic residues modulo 5.",
+        "explanation": "We require \\(n^2 + 1 \\equiv 0 \\pmod 5\\), which means \\(n^2 \\equiv 4 \\pmod 5\\).\nTesting residues modulo 5:\n\\(0^2 \\equiv 0\\), \\(1^2 \\equiv 1\\), \\(2^2 \\equiv 4\\), \\(3^2 \\equiv 4\\), \\(4^2 \\equiv 1\\).\nSo \\(n \\equiv 2\\) or \\(n \\equiv 3 \\pmod 5\\).\nIn every set of 5 consecutive integers, exactly 2 satisfy this condition.\nFor \\(1 \\le n \\le 100\\), there are 20 complete blocks of 5 integers.\nTotal count = \\(20 \\times 2 = 40\\)."
       },
       "ar": {
-        "question": "في مدرسة تضم 100 طالب، يمارس 50 طالبًا كرة القدم، و45 كرة السلة، و35 الكرة الطائرة. يمارس 15 طالبًا كرة القدم والسلة، و10 كرة السلة والطائرة، و11 كرة القدم والطائرة، و5 طلاب يمارسون الرياضات الثلاث معًا. كم طالبًا لا يمارس أيًا من هذه الرياضات؟",
+        "question": "كم عدد الأعداد الصحيحة الموجبة \\(n \\le 100\\) التي تحقق الخاصية أن \\(n^2 + 1\\) يقبل القسمة على 5؟",
         "options": [],
-        "hint": "استخدم مبدأ الإدراج والاستبعاد (Inclusion-Exclusion).",
-        "explanation": "بتطبيق مبدأ الإدراج والاستبعاد: عدد الطلاب الذين يمارسون رياضة واحدة على الأقل هو \\( (50 + 45 + 35) - (15 + 10 + 11) + 5 = 99 \\). بالتالي، عدد الطلاب الذين لا يمارسون أي رياضة هو \\( 100 - 99 = 1 \\)."
+        "hint": "افحص البواقي التربيعية بمقياس 5.",
+        "explanation": "نريد \\(n^2 + 1 \\equiv 0 \\pmod 5\\)، أي \\(n^2 \\equiv 4 \\pmod 5\\).\nبالفحص بمقياس 5:\n\\(0^2 \\equiv 0\\)، \\(1^2 \\equiv 1\\)، \\(2^2 \\equiv 4\\)، \\(3^2 \\equiv 4\\)، \\(4^2 \\equiv 1\\).\nإذن \\(n \\equiv 2\\) أو \\(n \\equiv 3 \\pmod 5\\).\nفي كل 5 أعداد متتالية، يوجد عددان يحققان هذا الشرط.\nبالنسبة لـ \\(1 \\le n \\le 100\\)، هناك 20 مجموعة كاملة من 5 أعداد.\nالعدد الإجمالي = \\(20 \\times 2 = 40\\)."
       }
     },
-    "correct_index": "1"
+    "correct_index": "40"
   },
   {
     "id": "KAUST-098",
     "track": "kaust",
     "level": "High School (Gifted)",
-    "topic": "Linear Algebra",
+    "topic": "Combinatorics",
     "type": "MCQ",
-    "difficulty": "easy",
+    "difficulty": "hard",
     "content": {
       "en": {
-        "question": "Let \\( M \\) be a \\( 3 \\times 3 \\) matrix with determinant \\( \\det(M) = 5 \\). What is the determinant of \\( 2 M^{-1} \\)?",
+        "question": "How many non-empty subsets of the set \\(\\{1, 2, 3, 4, 5, 6, 7, 8\\}\\) have an element sum that is divisible by 3?",
         "options": [
-          "2/5",
-          "8/5",
-          "5/2",
-          "5/8",
-          "10"
+          "85",
+          "86",
+          "87",
+          "88",
+          "90"
         ],
-        "hint": "Recall that \\( \\det(cA) = c^n \\det(A) \\) for an \\( n \\times n \\) matrix and \\( \\det(A^{-1}) = \\frac{1}{\\det(A)} \\).",
-        "explanation": "For an \\( n \\times n \\) matrix \\( M \\) with \\( n = 3 \\), \\( \\det(2 M^{-1}) = 2^3 \\det(M^{-1}) = 8 \\times \\frac{1}{\\det(M)} = \\frac{8}{5} \\)."
+        "hint": "Use roots of unity filter or generate subsets class by class.",
+        "explanation": "Partition the set into congruence classes modulo 3:\nMod 0: \\(\\{3, 6\\}\\) (2 elements)\nMod 1: \\(\\{1, 4, 7\\}\\) (3 elements)\nMod 2: \\(\\{2, 5, 8\\}\\) (3 elements)\nUsing the roots of unity filter with \\(\\omega = e^{2\\pi i / 3}\\):\n$$ N_0 = \\frac{1}{3} \\left( 2^8 + (1+\\omega)^2 (1+\\omega)^3 (1+\\omega^2)^3 + (1+\\omega^2)^2 (1+\\omega^2)^3 (1+\\omega)^3 \\right) $$\nSince \\(1+\\omega = -\\omega^2\\) and \\(1+\\omega^2 = -\\omega\\), we have \\((1+\\omega)^3 = -1\\) and \\((1+\\omega^2)^3 = -1\\).\nThus, \\(N_0 = \\frac{1}{3} (256 + 4 + 4) = \\frac{264}{3} = 88\\).\nSubtracting the empty set (whose sum is 0, which is divisible by 3) gives \\(88 - 1 = 87\\)."
       },
       "ar": {
-        "question": "لتكن \\( M \\) مصفوفة بمقاس \\( 3 \\times 3 \\) محددها \\( \\det(M) = 5 \\). ما قيمة محدد المصفوفة \\( 2 M^{-1} \\)؟",
+        "question": "كم عدد المجموعات الجزئية غير الخالية من المجموعية \\(\\{1, 2, 3, 4, 5, 6, 7, 8\\}\\) التي يكون مجموع عناصرها يقبل القسمة على 3؟",
         "options": [
-          "2/5",
-          "8/5",
-          "5/2",
-          "5/8",
-          "10"
+          "85",
+          "86",
+          "87",
+          "88",
+          "90"
         ],
-        "hint": "تذكر أن \\( \\det(cA) = c^n \\det(A) \\) لمصفوفة من الرتبة \\( n \\) وأن \\( \\det(A^{-1}) = \\frac{1}{\\det(A)} \\).",
-        "explanation": "بما أن رتبة المصفوفة هي \\( n = 3 \\)، فإن \\( \\det(2 M^{-1}) = 2^3 \\det(M^{-1}) = 8 \\times \\frac{1}{5} = \\frac{8}{5} \\)."
+        "hint": "استخدم تصفية جذور الوحدة أو دراسة فئات التكافؤ بمقياس 3.",
+        "explanation": "نقسم عناصر المجموعة حسب باقي قسمتها على 3:\nباقي 0: \\(\\{3, 6\\}\\) (عنصران)\nباقي 1: \\(\\{1, 4, 7\\}\\) (3 عناصر)\nباقي 2: \\(\\{2, 5, 8\\}\\) (3 عناصر)\nباستخدام طريقة جذور الوحدة المركبة \\(\\omega = e^{2\\pi i / 3}\\):\n$$ N_0 = \\frac{1}{3} \\left( 2^8 + 4 + 4 \\right) = \\frac{264}{3} = 88 $$\nنطرح المجموعة الخالية (التي مجموعها 0 وهو يقبل القسمة على 3)، فيكون الناتج \\(88 - 1 = 87\\)."
       }
     },
-    "correct_index": "1"
+    "correct_index": "2"
   },
   {
     "id": "KAUST-099",
     "track": "kaust",
     "level": "High School (Gifted)",
-    "topic": "Complex Numbers",
+    "topic": "Algebra",
     "type": "FRQ",
-    "difficulty": "medium",
+    "difficulty": "hard",
     "content": {
       "en": {
-        "question": "Find the sum of the absolute values (magnitudes) of all roots of the equation \\( z^6 - 64 = 0 \\) in the complex plane.",
+        "question": "Let \\(z\\) be a complex number such that \\(z + \\frac{1}{z} = 1\\). Find the exact value of \\(z^{2024} + \\frac{1}{z^{2024}}\\).",
         "options": [],
-        "hint": "Find the magnitude \\( |z| \\) for each root.",
-        "explanation": "The equation \\( z^6 = 64 \\) has 6 distinct complex roots. Taking the absolute value of both sides gives \\( |z|^6 = 64 \\implies |z| = 2 \\). Since all 6 roots have a magnitude of 2, the sum of their absolute values is \\( 6 \\times 2 = 12 \\)."
+        "hint": "Express \\(z\\) in polar form as \\(e^{i\\theta}\\).",
+        "explanation": "From \\(z + \\frac{1}{z} = 1\\), we get \\(z^2 - z + 1 = 0\\), so \\(z = e^{\\pm i \\pi/3}\\).\nThis implies \\(z^3 = -1\\) and \\(z^6 = 1\\).\nSince \\(2024 = 6 \\times 337 + 2\\), we have \\(z^{2024} = (z^6)^{337} \\cdot z^2 = z^2\\).\nNow calculate \\(z^2 + \\frac{1}{z^2} = \\left(z + \\frac{1}{z}\\right)^2 - 2 = 1^2 - 2 = -1\\)."
       },
       "ar": {
-        "question": "أوجد مجموع القيم المطلقة (المقياس) لجميع جذور المعادلة \\( z^6 - 64 = 0 \\) في المستوى المركب.",
+        "question": "ليكن \\(z\\) عددًا مركبًا بحيث \\(z + \\frac{1}{z} = 1\\). أوجد القيمة الدقيقة للمقدار \\(z^{2024} + \\frac{1}{z^{2024}}\\).",
         "options": [],
-        "hint": "احسب القيمة المطلقة \\( |z| \\) لكل جذر.",
-        "explanation": "المعادلة \\( z^6 = 64 \\) لها 6 جذور مركبة. بأخذ القيمة المطلقة للطرفين نجد أن \\( |z| = 2 \\) لكل جذر. مجموع القيم المطلقة للجذور الستة هو \\( 6 \\times 2 = 12 \\)."
+        "hint": "عبر عن \\(z\\) بالصورة القطبية على الشكل \\(e^{i\\theta}\\).",
+        "explanation": "من \\(z + \\frac{1}{z} = 1\\)، نحصل على \\(z^2 - z + 1 = 0\\)، إذن \\(z = e^{\\pm i \\pi/3}\\).\nهذا يعني أن \\(z^3 = -1\\) و \\(z^6 = 1\\).\nبما أن \\(2024 = 6 \\times 337 + 2\\)، فإن \\(z^{2024} = z^2\\).\nالآن نحسب \\(z^2 + \\frac{1}{z^2} = \\left(z + \\frac{1}{z}\\right)^2 - 2 = 1^2 - 2 = -1\\)."
       }
     },
-    "correct_index": "12"
+    "correct_index": "-1"
   },
   {
     "id": "KAUST-100",
     "track": "kaust",
     "level": "High School (Gifted)",
-    "topic": "Calculus",
+    "topic": "Discrete Mathematics",
     "type": "MCQ",
-    "difficulty": "medium",
+    "difficulty": "easy",
     "content": {
       "en": {
-        "question": "Find the global minimum value of the function \\( f(x) = x \\ln(x) \\) defined for \\( x > 0 \\).",
+        "question": "What is the maximum number of edges in a simple bipartite graph with 12 vertices?",
         "options": [
-          "-e",
-          "-1/e",
-          "0",
-          "1/e",
-          "e"
+          "24",
+          "30",
+          "36",
+          "42",
+          "66"
         ],
-        "hint": "Take the derivative with respect to \\( x \\) and set it to zero.",
-        "explanation": "The derivative is \\( f'(x) = 1 \\cdot \\ln(x) + x \\cdot \\frac{1}{x} = \\ln(x) + 1 \\). Setting \\( f'(x) = 0 \\) gives \\( \\ln(x) = -1 \\implies x = e^{-1} = \\frac{1}{e} \\). Evaluating at this point gives \\( f(1/e) = \\frac{1}{e} \\ln(1/e) = -\\frac{1}{e} \\)."
+        "hint": "By Turán's Theorem or simple calculus, divide the vertices as equally as possible.",
+        "explanation": "A simple bipartite graph with vertex partition sizes \\(n_1\\) and \\(n_2\\) (where \\(n_1 + n_2 = 12\\)) has at most \\(n_1 \\cdot n_2\\) edges.\nTo maximize \\(n_1 \\cdot n_2\\), choose \\(n_1 = 6\\) and \\(n_2 = 6\\).\nMaximum edges = \\(6 \\times 6 = 36\\)."
       },
       "ar": {
-        "question": "أوجد القيمة الصغرى المطلقة للدالة \\( f(x) = x \\ln(x) \\) المعرفة لكل \\( x > 0 \\).",
+        "question": "ما هو أقصى عدد من الحواف في رسم بياني ثنائي التجزئة بسيط يحتوي على 12 رأسًا؟",
         "options": [
-          "-e",
-          "-1/e",
-          "0",
-          "1/e",
-          "e"
+          "24",
+          "30",
+          "36",
+          "42",
+          "66"
         ],
-        "hint": "احسب المشتقة بالنسبة لـ \\( x \\) وساوِها بالصفر.",
-        "explanation": "المشتقة هي \\( f'(x) = \\ln(x) + 1 \\). بمسواتها بالصفر نجد أن \\( x = 1/e \\). بالتعويض في الدالة نحصل على القيمة الصغرى المطلقة \\( f(1/e) = -1/e \\)."
+        "hint": "حسب نظرية توران، قسم الرؤوس إلى مجموعتين متساويتين قدر الإمكان.",
+        "explanation": "في رسم بياني ثنائي التجزئة ذي أجزاء أعداد رؤوسها \\(n_1\\) و \\(n_2\\) (حيث \\(n_1 + n_2 = 12\\))، أقصى عدد حواف هو \\(n_1 \\cdot n_2\\).\nلجعل الناتح أكبر ما يمكن، نختار \\(n_1 = 6\\) و \\(n_2 = 6\\).\nأقصى عدد من الحواف = \\(6 \\times 6 = 36\\)."
       }
     },
-    "correct_index": "1"
+    "correct_index": "2"
   },
   {
     "id": "KAUST-101",
     "track": "kaust",
     "level": "High School (Gifted)",
-    "topic": "Game Theory",
+    "topic": "Optimization",
     "type": "FRQ",
-    "difficulty": "hard",
+    "difficulty": "medium",
     "content": {
       "en": {
-        "question": "In a turn-based game, two players alternate removing either 1, 2, or 4 stones from a pile initially containing 20 stones. The player who takes the last stone wins. Assuming optimal play, how many stones should the first player remove on the first move to guarantee a win?",
+        "question": "Find the minimum value of the function \\(f(x, y) = x^2 + 4y^2 - 4x + 8y + 10\\) for real numbers \\(x\\) and \\(y\\).",
         "options": [],
-        "hint": "Identify the losing positions (P-positions) modulo 3.",
-        "explanation": "Analyzing the positions: 0 is a losing position (L). 1, 2, 4 allow moving to 0, so they are winning (W). 3 allows moving to 2 or 1 (both W), so 3 is L. In general, positions that are multiples of 3 are losing positions because any legal move (1, 2, 4) from a multiple of 3 leaves a non-multiple of 3. Starting at 20, which is \\( 20 \\equiv 2 \\pmod 3 \\), the first player must remove 2 stones to leave 18 (a multiple of 3) to the opponent."
+        "hint": "Complete the square for both \\(x\\) and \\(y\\).",
+        "explanation": "Rewrite \\(f(x, y)\\) by completing the squares:\n$$ f(x, y) = (x^2 - 4x + 4) + 4(y^2 + 2y + 1) + 10 - 4 - 4 $$\n$$ f(x, y) = (x - 2)^2 + 4(y + 1)^2 + 2 $$\nSince \\((x - 2)^2 \\ge 0\\) and \\(4(y + 1)^2 \\ge 0\\) for all real \\(x, y\\), the minimum value is \\(2\\), achieved at \\(x = 2\\) and \\(y = -1\\)."
       },
       "ar": {
-        "question": "في لعبة تناوبية، يتناوب لاعبان على سحب إما 1 أو 2 أو 4 أحجار من كومة تحتوي أولياً على 20 حجرًا. اللاعب الذي يسحب آخر حجر يفوز. بافتراض اللعب المثالي، كم حجرًا يجب أن يسحب اللاعب الأول في النقلة الأولى لضمان الفوز؟",
+        "question": "أوجد القيمة الصغرى للدالة \\(f(x, y) = x^2 + 4y^2 - 4x + 8y + 10\\) لكل الأعداد الحقيقية \\(x\\) و \\(y\\).",
         "options": [],
-        "hint": "حدد مواضع الخسارة (P-positions) بحسب باقي القسمة على 3.",
-        "explanation": "بتحليل مواضع اللعبة، نجد أن المواضع التي تقبل القسمة على 3 هي مواضع خاسرة، لأن أي حركة قانونية (سحب 1 أو 2 أو 4) تنقل الخصم إلى عدد لا يقبل القسمة على 3. بما أن 20 تعطي باقي 2 عند القسمة على 3، فإن الحركة المثالية هي سحب حجرين لترك 18 حجرًا (مضاعف للعدد 3) للخصم."
+        "hint": "أكمل المربع بالنسبة لـ \\(x\\) و \\(y\\).",
+        "explanation": "بإكمال المربع للدالة \\(f(x, y)\\):\n$$ f(x, y) = (x^2 - 4x + 4) + 4(y^2 + 2y + 1) + 10 - 4 - 4 $$\n$$ f(x, y) = (x - 2)^2 + 4(y + 1)^2 + 2 $$\nبما أن \\((x - 2)^2 \\ge 0\\) و \\(4(y + 1)^2 \\ge 0\\)، فإن القيمة الصغرى هي \\(2\\) وتتحقق عند \\(x = 2\\) و \\(y = -1\\)."
       }
     },
     "correct_index": "2"
