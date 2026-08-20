@@ -32,6 +32,7 @@
 
   <script>
     tailwind.config = {
+      darkMode: 'class',
       theme: {
         extend: {
           colors: {
@@ -77,13 +78,19 @@
 
   <style>
     body {
-      background-color: #f8fafc;
-      color: #0f172a;
+      background-attachment: fixed;
+    }
+    body.dark {
+      background-image: 
+        radial-gradient(at 40% 20%, hsla(28,100%,74%,0.05) 0px, transparent 50%),
+        radial-gradient(at 80% 0%, hsla(189,100%,56%,0.05) 0px, transparent 50%),
+        radial-gradient(at 0% 50%, hsla(355,100%,93%,0.02) 0px, transparent 50%);
+    }
+    body:not(.dark) {
       background-image: 
         radial-gradient(at 40% 20%, hsla(28,100%,74%,0.15) 0px, transparent 50%),
         radial-gradient(at 80% 0%, hsla(189,100%,56%,0.15) 0px, transparent 50%),
         radial-gradient(at 0% 50%, hsla(355,100%,93%,0.1) 0px, transparent 50%);
-      background-attachment: fixed;
     }
     
     .chart-container {
@@ -122,7 +129,14 @@
     }
   </style>
 </head>
-<body class="min-h-screen flex flex-col font-sans antialiased selection:bg-amber-500 selection:text-white">
+<body class="min-h-screen flex flex-col font-sans antialiased selection:bg-amber-500 selection:text-white bg-slate-50 text-slate-900 dark:bg-slate-900 dark:text-slate-100 transition-colors duration-300">
+  <script>
+    // Initialize Dark Mode early to prevent flash
+    if (localStorage.getItem('theme') === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+      document.documentElement.classList.add('dark');
+      document.body.classList.add('dark');
+    }
+  </script>
 
   <!-- Chosen Palette: Academic Harmony (Slate Navy #0f172a, Warm Sand #faf9f6, Royal Blue #2563eb, Warm Amber #d97706, Emerald #059669) -->
   <!-- Application Structure Plan: 
@@ -168,6 +182,11 @@
             <span id="stat-questions-count">6 المسارات متكاملة (1,000+ سؤال لكل مسار)</span>
           </div>
 
+          <!-- Theme Switcher -->
+          <button id="theme-toggle-btn" onclick="toggleTheme()" class="bg-slate-800/80 hover:bg-slate-700 text-amber-400 border border-slate-700 px-4 py-2 rounded-xl text-sm font-bold transition-all duration-300 flex items-center gap-2 hover:shadow-lg hover:shadow-amber-500/10">
+            <span id="theme-icon">🌙</span>
+          </button>
+          
           <!-- Language Switcher -->
           <button id="lang-toggle-btn" onclick="toggleLanguage()" class="bg-slate-800/80 hover:bg-slate-700 text-amber-400 border border-slate-700 px-4 py-2 rounded-xl text-sm font-bold transition-all duration-300 flex items-center gap-2 hover:shadow-lg hover:shadow-amber-500/10">
             <span>🌐</span>
@@ -183,41 +202,41 @@
   <main class="flex-grow max-w-7xl w-full mx-auto px-4 sm:px-6 lg:px-8 py-8 space-y-12">
 
     <!-- INTRODUCTORY SECTION & STATS TICKER -->
-    <section class="bg-white/70 backdrop-blur-md rounded-3xl p-6 sm:p-10 shadow-xl shadow-slate-200/50 border border-white relative overflow-hidden">
+    <section class="bg-white/70 dark:bg-slate-800/70 backdrop-blur-md rounded-3xl p-6 sm:p-10 shadow-xl shadow-slate-200/50 dark:shadow-slate-900/50 border border-white dark:border-slate-700 relative overflow-hidden">
       <!-- Decorative blob -->
       <div class="absolute top-0 right-0 -mr-20 -mt-20 w-64 h-64 rounded-full bg-brand-600/10 mix-blend-multiply filter blur-3xl opacity-70 animate-blob pointer-events-none"></div>
       <div class="absolute bottom-0 left-0 -ml-20 -mb-20 w-72 h-72 rounded-full bg-amber-500/10 mix-blend-multiply filter blur-3xl opacity-70 animate-blob pointer-events-none" style="animation-delay: 2s"></div>
       
       <div class="relative z-10">
         <div class="max-w-4xl space-y-4">
-          <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-amber-50/80 text-amber-700 border border-amber-200/60 text-xs font-bold backdrop-blur-sm" id="badge-overview">
+          <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-amber-50/80 dark:bg-amber-900/30 text-amber-700 dark:text-amber-400 border border-amber-200/60 dark:border-amber-700/50 text-xs font-bold backdrop-blur-sm" id="badge-overview">
             📌 نظرة عامة على قاعدة البيانات والمسارات
           </div>
-          <h2 class="text-3xl sm:text-4xl md:text-5xl font-display font-extrabold text-slate-900 leading-tight" id="hero-heading">
+          <h2 class="text-3xl sm:text-4xl md:text-5xl font-display font-extrabold text-slate-900 dark:text-white leading-tight" id="hero-heading">
           محرك الإعداد والمحاكاة التفاعلي للمسابقات الرياضية الهامة
         </h2>
-        <p class="text-slate-600 leading-relaxed text-sm sm:text-base" id="hero-desc">
+        <p class="text-slate-600 dark:text-slate-300 leading-relaxed text-sm sm:text-base" id="hero-desc">
           تمنحك هذه المنصة إمكانية استكشاف وهيكلة أحدث قواعد البيانات والأسئلة لـ 5 مسارات عالمية ومحلية استراتيجية. تم تطوير قاعدة البيانات لتغطي الفئات العمرية من الصفوف الابتدائية حتى الثانوية، مع تفكيك دقيق لمستويات صعوبة الأسئلة (اختيار من متعدد والمقالي) والحلول النموذجية ثنائية اللغة (عربي/إنجليزي).
         </p>
       </div>
 
       <!-- Quick Stats Ticker -->
-      <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mt-8 pt-6 border-t border-slate-100">
-        <div class="bg-white/80 backdrop-blur-sm p-4 rounded-2xl border border-slate-100/50 text-center shadow-sm hover:shadow-md hover:-translate-y-1 transition-all duration-300">
-          <div class="text-xs text-slate-500 font-semibold" id="stat-1-label">المسارات المعتمدة</div>
-          <div class="text-2xl font-display font-black text-slate-800 mt-1" id="stat-1-val">6 مسارات رئيسية</div>
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mt-8 pt-6 border-t border-slate-100 dark:border-slate-700">
+        <div class="bg-white/80 dark:bg-slate-800/80 backdrop-blur-sm p-4 rounded-2xl border border-slate-100/50 dark:border-slate-700/50 text-center shadow-sm hover:shadow-md hover:-translate-y-1 transition-all duration-300">
+          <div class="text-xs text-slate-500 dark:text-slate-400 font-semibold" id="stat-1-label">المسارات المعتمدة</div>
+          <div class="text-2xl font-display font-black text-slate-800 dark:text-slate-100 mt-1" id="stat-1-val">6 مسارات رئيسية</div>
         </div>
-        <div class="bg-white/80 backdrop-blur-sm p-4 rounded-2xl border border-slate-100/50 text-center shadow-sm hover:shadow-md hover:-translate-y-1 transition-all duration-300" style="animation-delay: 100ms">
-          <div class="text-xs text-slate-500 font-semibold" id="stat-2-label">الفئات العمرية والصفوف</div>
-          <div class="text-2xl font-display font-black text-brand-600 mt-1" id="stat-2-val">من 1 ابتدائي إلى 12 ثانوية</div>
+        <div class="bg-white/80 dark:bg-slate-800/80 backdrop-blur-sm p-4 rounded-2xl border border-slate-100/50 dark:border-slate-700/50 text-center shadow-sm hover:shadow-md hover:-translate-y-1 transition-all duration-300" style="animation-delay: 100ms">
+          <div class="text-xs text-slate-500 dark:text-slate-400 font-semibold" id="stat-2-label">الفئات العمرية والصفوف</div>
+          <div class="text-2xl font-display font-black text-brand-600 dark:text-brand-400 mt-1" id="stat-2-val">من 1 ابتدائي إلى 12 ثانوية</div>
         </div>
-        <div class="bg-white/80 backdrop-blur-sm p-4 rounded-2xl border border-slate-100/50 text-center shadow-sm hover:shadow-md hover:-translate-y-1 transition-all duration-300" style="animation-delay: 200ms">
-          <div class="text-xs text-slate-500 font-semibold" id="stat-3-label">أنماط الأسئلة</div>
-          <div class="text-2xl font-display font-black text-amber-600 mt-1" id="stat-3-val">MCQ (4-5 خيارات) & FRQ</div>
+        <div class="bg-white/80 dark:bg-slate-800/80 backdrop-blur-sm p-4 rounded-2xl border border-slate-100/50 dark:border-slate-700/50 text-center shadow-sm hover:shadow-md hover:-translate-y-1 transition-all duration-300" style="animation-delay: 200ms">
+          <div class="text-xs text-slate-500 dark:text-slate-400 font-semibold" id="stat-3-label">أنماط الأسئلة</div>
+          <div class="text-2xl font-display font-black text-amber-600 dark:text-amber-400 mt-1" id="stat-3-val">MCQ (4-5 خيارات) & FRQ</div>
         </div>
-        <div class="bg-white/80 backdrop-blur-sm p-4 rounded-2xl border border-slate-100/50 text-center shadow-sm hover:shadow-md hover:-translate-y-1 transition-all duration-300" style="animation-delay: 300ms">
-          <div class="text-xs text-slate-500 font-semibold" id="stat-4-label">تغطية اللغات</div>
-          <div class="text-2xl font-display font-black text-emerald-600 mt-1" id="stat-4-val">100% عربي & إنجليزي</div>
+        <div class="bg-white/80 dark:bg-slate-800/80 backdrop-blur-sm p-4 rounded-2xl border border-slate-100/50 dark:border-slate-700/50 text-center shadow-sm hover:shadow-md hover:-translate-y-1 transition-all duration-300" style="animation-delay: 300ms">
+          <div class="text-xs text-slate-500 dark:text-slate-400 font-semibold" id="stat-4-label">تغطية اللغات</div>
+          <div class="text-2xl font-display font-black text-emerald-600 dark:text-emerald-400 mt-1" id="stat-4-val">100% عربي & إنجليزي</div>
         </div>
       </div>
       </div>
@@ -227,19 +246,19 @@
     <section class="space-y-6">
       <div class="flex flex-col md:flex-row md:items-end justify-between gap-4">
         <div>
-          <h2 class="text-2xl md:text-3xl font-display font-bold text-slate-900" id="sec1-title">بطاقات المسارات والصفوف المستهدفة</h2>
-          <p class="text-slate-500 text-sm mt-1" id="sec1-desc">
+          <h2 class="text-2xl md:text-3xl font-display font-bold text-slate-900 dark:text-white" id="sec1-title">بطاقات المسارات والصفوف المستهدفة</h2>
+          <p class="text-slate-500 dark:text-slate-400 text-sm mt-1" id="sec1-desc">
             اختر المسار للاستكشاف ومعاينة معايير الاختبار، عدد الخيارات، والصعوبة المستهدفة
           </p>
         </div>
-        <div class="flex gap-2 bg-slate-200/60 p-1 rounded-xl text-xs font-bold" id="track-filter-btns">
+        <div class="flex gap-2 bg-slate-200/60 dark:bg-slate-700/60 p-1 rounded-xl text-xs font-bold" id="track-filter-btns">
           <!-- Populated by JS -->
         </div>
       </div>
 
       <!-- Grade Filter -->
-      <div class="bg-white/60 p-4 rounded-xl border border-slate-200 mt-4 mb-6">
-        <div class="text-sm font-bold text-slate-700 mb-3" id="grade-filter-title">Filter by Your Grade / حدد صفك الدراسي</div>
+      <div class="bg-white/60 dark:bg-slate-800/60 p-4 rounded-xl border border-slate-200 dark:border-slate-700 mt-4 mb-6">
+        <div class="text-sm font-bold text-slate-700 dark:text-slate-300 mb-3" id="grade-filter-title">Filter by Your Grade / حدد صفك الدراسي</div>
         <div class="flex flex-wrap gap-2" id="grade-filter-btns">
           <!-- Populated by JS -->
         </div>
@@ -252,10 +271,10 @@
     </section>
 
     <!-- SECTION 2: COMPARATIVE ANALYTICS & VISUALIZATIONS (CHART.JS CANVAS) -->
-    <section class="bg-white/80 backdrop-blur-md rounded-3xl p-6 sm:p-8 shadow-lg shadow-slate-200/40 border border-white space-y-8">
+    <section class="bg-white/80 dark:bg-slate-800/80 backdrop-blur-md rounded-3xl p-6 sm:p-8 shadow-lg shadow-slate-200/40 dark:shadow-slate-900/40 border border-white dark:border-slate-700 space-y-8">
       <div>
-        <h2 class="text-2xl font-bold text-slate-900" id="sec2-title">تحليلات المناهج والأبعاد المعرفية</h2>
-        <p class="text-slate-500 text-sm mt-1" id="sec2-desc">
+        <h2 class="text-2xl font-bold text-slate-900 dark:text-white" id="sec2-title">تحليلات المناهج والأبعاد المعرفية</h2>
+        <p class="text-slate-500 dark:text-slate-400 text-sm mt-1" id="sec2-desc">
           مقارنة بين توزيع المواضيع (الجبر، الهندسة، نظرية الأعداد، التركيبات، التفاضل) وطبيعة الأسئلة في كل مسار
         </p>
       </div>
@@ -263,33 +282,33 @@
       <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
         
         <!-- Radar Chart: Topic Weight Distribution -->
-        <div class="bg-slate-50 p-5 rounded-xl border border-slate-200 flex flex-col space-y-4">
+        <div class="bg-slate-50 dark:bg-slate-900/50 p-5 rounded-xl border border-slate-200 dark:border-slate-700 flex flex-col space-y-4">
           <div class="flex items-center justify-between">
-            <h3 class="font-bold text-slate-800 text-sm sm:text-base" id="chart1-title">
+            <h3 class="font-bold text-slate-800 dark:text-slate-100 text-sm sm:text-base" id="chart1-title">
               📊 توزيع المواضيع الرياضية حسب المسار
             </h3>
-            <span class="text-xs bg-slate-200 text-slate-700 px-2 py-1 rounded">رادار مقارن</span>
+            <span class="text-xs bg-slate-200 dark:bg-slate-700 text-slate-700 dark:text-slate-300 px-2 py-1 rounded">رادار مقارن</span>
           </div>
           <div class="chart-container">
             <canvas id="topicRadarChart"></canvas>
           </div>
-          <p class="text-xs text-slate-500 leading-relaxed" id="chart1-caption">
+          <p class="text-xs text-slate-500 dark:text-slate-400 leading-relaxed" id="chart1-caption">
             يلاحظ تركيز اختبار كانجارو على المنطق والهندسة الفضائية، بينما يركز اختبار JEE على التفاضل والتكامل والجبر المتقدم، وتتميز نافس بتوازن الجبر والقياس.
           </p>
         </div>
 
         <!-- Stacked Bar Chart: Difficulty & Question Format Breakdown -->
-        <div class="bg-slate-50 p-5 rounded-xl border border-slate-200 flex flex-col space-y-4">
+        <div class="bg-slate-50 dark:bg-slate-900/50 p-5 rounded-xl border border-slate-200 dark:border-slate-700 flex flex-col space-y-4">
           <div class="flex items-center justify-between">
-            <h3 class="font-bold text-slate-800 text-sm sm:text-base" id="chart2-title">
+            <h3 class="font-bold text-slate-800 dark:text-slate-100 text-sm sm:text-base" id="chart2-title">
               📈 نمط الأسئلة ومستويات التحدي
             </h3>
-            <span class="text-xs bg-slate-200 text-slate-700 px-2 py-1 rounded">أعمدة مجمعة</span>
+            <span class="text-xs bg-slate-200 dark:bg-slate-700 text-slate-700 dark:text-slate-300 px-2 py-1 rounded">أعمدة مجمعة</span>
           </div>
           <div class="chart-container">
             <canvas id="formatBarChart"></canvas>
           </div>
-          <p class="text-xs text-slate-500 leading-relaxed" id="chart2-caption">
+          <p class="text-xs text-slate-500 dark:text-slate-400 leading-relaxed" id="chart2-caption">
             تتوزع أسئلة كانجارو بين 3 و 4 و 5 نقاط. بينما يعتمد الأولمبياد وبرامج كاوست على الأسئلة المقالية (FRQ) والحلول الكتابية لإثبات البراهين.
           </p>
         </div>
@@ -366,51 +385,51 @@
     <section class="grid grid-cols-1 lg:grid-cols-3 gap-8">
       
       <!-- Student Progression Roadmap -->
-      <div class="lg:col-span-2 bg-white/80 backdrop-blur-md rounded-3xl p-6 sm:p-8 shadow-lg shadow-slate-200/40 border border-white space-y-6 hover:shadow-xl transition-shadow duration-300">
+      <div class="lg:col-span-2 bg-white/80 dark:bg-slate-800/80 backdrop-blur-md rounded-3xl p-6 sm:p-8 shadow-lg shadow-slate-200/40 dark:shadow-slate-900/40 border border-white dark:border-slate-700 space-y-6 hover:shadow-xl transition-shadow duration-300">
         <div>
-          <h2 class="text-xl sm:text-2xl font-bold text-slate-900" id="roadmap-title">
+          <h2 class="text-xl sm:text-2xl font-bold text-slate-900 dark:text-white" id="roadmap-title">
             🗺️ خارطة التدرج المعرفي للطالب (من الابتدائي للتميز العالمي)
           </h2>
-          <p class="text-slate-500 text-xs sm:text-sm mt-1" id="roadmap-subtitle">
+          <p class="text-slate-500 dark:text-slate-400 text-xs sm:text-sm mt-1" id="roadmap-subtitle">
             مسار بناء المهارات الرياضية عبر المراحل الدراسية المختلفة
           </p>
         </div>
 
         <div class="space-y-4">
           <!-- Step 1 -->
-          <div class="flex gap-4 p-4 rounded-xl bg-slate-50 border border-slate-100 items-start">
-            <div class="w-10 h-10 rounded-full bg-blue-100 text-blue-700 font-bold flex items-center justify-center shrink-0">
+          <div class="flex gap-4 p-4 rounded-xl bg-slate-50 dark:bg-slate-700/50 border border-slate-100 dark:border-slate-600 items-start">
+            <div class="w-10 h-10 rounded-full bg-blue-100 dark:bg-blue-900/50 text-blue-700 dark:text-blue-400 font-bold flex items-center justify-center shrink-0">
               1
             </div>
             <div>
-              <h3 class="font-bold text-slate-800 text-sm sm:text-base" id="step1-t">المرحلة الابتدائية (كانجارو + نافس 3 و 6)</h3>
-              <p class="text-xs text-slate-600 mt-1" id="step1-d">
+              <h3 class="font-bold text-slate-800 dark:text-slate-100 text-sm sm:text-base" id="step1-t">المرحلة الابتدائية (كانجارو + نافس 3 و 6)</h3>
+              <p class="text-xs text-slate-600 dark:text-slate-300 mt-1" id="step1-d">
                 البدء بالتفكير المنطقي، التعرف على الأشكال، الحساب الأساسي، واستكشاف الأنماط دون استخدام الآلة الحاسبة.
               </p>
             </div>
           </div>
 
           <!-- Step 2 -->
-          <div class="flex gap-4 p-4 rounded-xl bg-slate-50 border border-slate-100 items-start">
-            <div class="w-10 h-10 rounded-full bg-amber-100 text-amber-700 font-bold flex items-center justify-center shrink-0">
+          <div class="flex gap-4 p-4 rounded-xl bg-slate-50 dark:bg-slate-700/50 border border-slate-100 dark:border-slate-600 items-start">
+            <div class="w-10 h-10 rounded-full bg-amber-100 dark:bg-amber-900/50 text-amber-700 dark:text-amber-400 font-bold flex items-center justify-center shrink-0">
               2
             </div>
             <div>
-              <h3 class="font-bold text-slate-800 text-sm sm:text-base" id="step2-t">المرحلة المتوسطة (كانجارو Cadet + نافس 9 + أولمبياد الناشئين)</h3>
-              <p class="text-xs text-slate-600 mt-1" id="step2-d">
+              <h3 class="font-bold text-slate-800 dark:text-slate-100 text-sm sm:text-base" id="step2-t">المرحلة المتوسطة (كانجارو Cadet + نافس 9 + أولمبياد الناشئين)</h3>
+              <p class="text-xs text-slate-600 dark:text-slate-300 mt-1" id="step2-d">
                 الانتقال لمفاهيم الجبر الأساسي، متباينات الدرجة الأولى، هندسة إقليدس، ومبادئ نظرية الأعداد والعد.
               </p>
             </div>
           </div>
 
           <!-- Step 3 -->
-          <div class="flex gap-4 p-4 rounded-xl bg-slate-50 border border-slate-100 items-start">
-            <div class="w-10 h-10 rounded-full bg-purple-100 text-purple-700 font-bold flex items-center justify-center shrink-0">
+          <div class="flex gap-4 p-4 rounded-xl bg-slate-50 dark:bg-slate-700/50 border border-slate-100 dark:border-slate-600 items-start">
+            <div class="w-10 h-10 rounded-full bg-purple-100 dark:bg-purple-900/50 text-purple-700 dark:text-purple-400 font-bold flex items-center justify-center shrink-0">
               3
             </div>
             <div>
-              <h3 class="font-bold text-slate-800 text-sm sm:text-base" id="step3-t">المرحلة الثانوية المتقدمة (JEE + كاوست SRSI + الأولمبياد IMO)</h3>
-              <p class="text-xs text-slate-600 mt-1" id="step3-d">
+              <h3 class="font-bold text-slate-800 dark:text-slate-100 text-sm sm:text-base" id="step3-t">المرحلة الثانوية المتقدمة (JEE + كاوست SRSI + الأولمبياد IMO)</h3>
+              <p class="text-xs text-slate-600 dark:text-slate-300 mt-1" id="step3-d">
                 الاحتراف في التفاضل والتكامل، الأعداد المركبة، المعادلات الدالية، وإثبات البراهين الرياضية الصارمة.
               </p>
             </div>
@@ -496,7 +515,7 @@
           badge_ar: "MCQs (5 خيارات)",
           badge_en: "MCQs (5 Options)",
           color: "border-rose-500",
-          bg: "bg-rose-50",
+          bg: "bg-rose-50 dark:bg-rose-900/20",
           accent: "text-rose-600",
           levels_ar: "الصفوف 1-12 (مقسمة كل صفين)",
           levels_en: "Grades 1-12 (Pair groupings)",
@@ -513,7 +532,7 @@
           badge_ar: "MCQs (4 خيارات)",
           badge_en: "MCQs (4 Options)",
           color: "border-blue-500",
-          bg: "bg-blue-50",
+          bg: "bg-blue-50 dark:bg-blue-900/20",
           accent: "text-blue-600",
           levels_ar: "الصفوف 3، 6، 9",
           levels_en: "Grades 3, 6, 9",
@@ -530,7 +549,7 @@
           badge_ar: "مسابقة وطنية",
           badge_en: "National Competition",
           color: "border-emerald-500",
-          bg: "bg-emerald-50",
+          bg: "bg-emerald-50 dark:bg-emerald-900/20",
           accent: "text-emerald-600",
           levels_ar: "الصفوف 7-10",
           levels_en: "Grades 7-10",
@@ -547,7 +566,7 @@
           badge_ar: "برنامج بحثي",
           badge_en: "Research Program",
           color: "border-teal-500",
-          bg: "bg-teal-50",
+          bg: "bg-teal-50 dark:bg-teal-900/20",
           accent: "text-teal-600",
           levels_ar: "الصف 11 فقط",
           levels_en: "Grade 11 only",
@@ -564,7 +583,7 @@
           badge_ar: "براهين وإثباتات",
           badge_en: "Proofs & Theorems",
           color: "border-amber-500",
-          bg: "bg-amber-50",
+          bg: "bg-amber-50 dark:bg-amber-900/20",
           accent: "text-amber-600",
           levels_ar: "الصفوف 7-12",
           levels_en: "Grades 7-12",
@@ -581,7 +600,7 @@
           badge_ar: "MCQs & أرقام",
           badge_en: "MCQs & Numerical",
           color: "border-purple-500",
-          bg: "bg-purple-50",
+          bg: "bg-purple-50 dark:bg-purple-900/20",
           accent: "text-purple-600",
           levels_ar: "الصف 12 (المرحلة الثانوية)",
           levels_en: "Grade 12 (High School)",
@@ -952,27 +971,27 @@
         const idLabel = currentLang === 'ar' ? 'المعرف:' : 'ID:';
         
         const opStyle = isApplicable ? '' : 'opacity-40 grayscale pointer-events-none filter';
-        const naBadge = isApplicable ? '' : `<div class="absolute inset-0 bg-slate-100/50 flex items-center justify-center rounded-3xl z-10 font-bold text-slate-700 text-lg backdrop-blur-[1px] shadow-inner">${currentLang === 'ar' ? 'غير متاح لهذا الصف' : 'N/A for this Grade'}</div>`;
+        const naBadge = isApplicable ? '' : `<div class="absolute inset-0 bg-slate-100/50 dark:bg-slate-900/50 flex items-center justify-center rounded-3xl z-10 font-bold text-slate-700 dark:text-slate-200 text-lg backdrop-blur-[1px] shadow-inner">${currentLang === 'ar' ? 'غير متاح لهذا الصف' : 'N/A for this Grade'}</div>`;
 
         const cardHtml = `
-          <div class="relative bg-white/90 backdrop-blur-sm rounded-3xl p-6 border border-slate-200/60 ${tr.bg} flex flex-col justify-between space-y-4 shadow-lg shadow-slate-200/50 hover:shadow-xl hover:-translate-y-2 transition-all duration-300 group cursor-pointer ${opStyle}">
+          <div class="relative bg-white/90 dark:bg-slate-800/90 backdrop-blur-sm rounded-3xl p-6 border border-slate-200/60 dark:border-slate-700/60 ${tr.bg} flex flex-col justify-between space-y-4 shadow-lg shadow-slate-200/50 dark:shadow-slate-900/50 hover:shadow-xl hover:-translate-y-2 transition-all duration-300 group cursor-pointer ${opStyle}">
             ${naBadge}
             <div>
               <div class="flex items-center justify-between mb-3">
-                <span class="text-xs font-bold px-2.5 py-1 rounded-full bg-white text-slate-800 shadow-xs border border-slate-200">
+                <span class="text-xs font-bold px-2.5 py-1 rounded-full bg-white dark:bg-slate-700 text-slate-800 dark:text-slate-100 shadow-xs border border-slate-200 dark:border-slate-600">
                   ${badge}
                 </span>
-                <span class="text-xs font-mono text-slate-400">${idLabel} ${tr.id.toUpperCase()}</span>
+                <span class="text-xs font-mono text-slate-400 dark:text-slate-500">${idLabel} ${tr.id.toUpperCase()}</span>
               </div>
-              <h3 class="text-xl font-display font-extrabold text-slate-900 group-hover:text-brand-600 transition-colors">${name}</h3>
+              <h3 class="text-xl font-display font-extrabold text-slate-900 dark:text-white group-hover:text-brand-600 dark:group-hover:text-brand-400 transition-colors">${name}</h3>
               <p class="text-xs ${tr.accent} font-bold mt-1">${levels}</p>
-              <p class="text-xs text-slate-500 mt-2"><strong>${currentLang === 'ar' ? 'النمط:' : 'Format:'}</strong> ${format}</p>
+              <p class="text-xs text-slate-500 dark:text-slate-400 mt-2"><strong>${currentLang === 'ar' ? 'النمط:' : 'Format:'}</strong> ${format}</p>
             </div>
 
-            <div class="pt-3 border-t border-slate-200/60">
-              <div class="text-xs font-bold text-slate-700 mb-1.5">${currentLang === 'ar' ? 'المواضيع الرئيسية:' : 'Key Topics:'}</div>
+            <div class="pt-3 border-t border-slate-200/60 dark:border-slate-700/60">
+              <div class="text-xs font-bold text-slate-700 dark:text-slate-300 mb-1.5">${currentLang === 'ar' ? 'المواضيع الرئيسية:' : 'Key Topics:'}</div>
               <div class="flex flex-wrap gap-1">
-                ${topics.map(tp => `<span class="text-[11px] bg-white/80 px-2 py-0.5 rounded text-slate-600 border border-slate-200">${tp}</span>`).join('')}
+                ${topics.map(tp => `<span class="text-[11px] bg-white/80 dark:bg-slate-700/80 px-2 py-0.5 rounded text-slate-600 dark:text-slate-300 border border-slate-200 dark:border-slate-600">${tp}</span>`).join('')}
               </div>
             </div>
           </div>
@@ -1081,7 +1100,7 @@
       if (matchedImg) {
         diagramMarkup = `
           <div class="mt-4 mb-4 flex justify-center w-full">
-            <img src="assets/diagrams/${matchedImg}" alt="Mathematical Diagram" class="max-w-full h-auto max-h-48 sm:max-h-64 object-contain rounded-xl bg-white p-2 border border-slate-700 shadow-md">
+            <img src="assets/diagrams/${matchedImg}" alt="Mathematical Diagram" class="max-w-full h-auto max-h-48 sm:max-h-64 object-contain rounded-xl bg-white dark:bg-slate-200 p-2 border border-slate-700 shadow-md">
           </div>
         `;
       }
@@ -1270,10 +1289,37 @@
       currentFilteredQuestions = [...appData.questions];
     }
 
+    // Toggle Theme (Global scope for inline onclick)
+    window.toggleTheme = function() {
+      const isDark = document.documentElement.classList.contains('dark');
+      if (isDark) {
+        document.documentElement.classList.remove('dark');
+        document.body.classList.remove('dark');
+        localStorage.setItem('theme', 'light');
+        document.getElementById('theme-icon').innerText = '🌙';
+      } else {
+        document.documentElement.classList.add('dark');
+        document.body.classList.add('dark');
+        localStorage.setItem('theme', 'dark');
+        document.getElementById('theme-icon').innerText = '☀️';
+      }
+      // Re-render charts to update colors
+      renderCharts();
+    };
+
     window.addEventListener('DOMContentLoaded', async () => {
       initCharts();
       await loadQuestionsData();
+
+      // Set initial theme icon
+      if (document.documentElement.classList.contains('dark')) {
+        document.getElementById('theme-icon').innerText = '☀️';
+      }
+
+      // Initial render
       renderApp();
+      renderCharts();
+      populateTracksGrid();
     });
   </script>
 </body>

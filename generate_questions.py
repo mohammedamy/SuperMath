@@ -30,7 +30,7 @@ TRACKS = {
 }
 
 QUESTIONS_PER_BATCH = 20
-TOTAL_WANTED = 100
+TOTAL_WANTED = 250
 
 def get_schema():
     return {
@@ -89,10 +89,16 @@ def generate_batch(track_id, existing_count):
     
     Requirements:
     1. Provide the content in both English and Arabic.
-    2. Ensure accurate mathematical notation. Wrap all math variables and equations in LaTeX delimiters: \\( x^2 \\) for inline, and $$ \\sum x $$ for block.
+    2. ABSOLUTELY STRICT LATEX RULE: Every single number, variable, formula, and equation MUST be wrapped in LaTeX delimiters. Use \\( x^2 \\) for inline math, and $$ \\sum x $$ for block math. Do NOT write "2x + 3" as plain text. It MUST be "\\( 2x + 3 \\)". Even isolated numbers like "5" must be "\\( 5 \\)".
     3. The Arabic translation must be grammatically correct and use standard Arabic mathematical terminology.
     4. For MCQs, provide 4 to 5 options. For FRQs, leave the options array empty and put the final answer in `correct_index`.
     5. The 'id' should follow the format {track_id.upper()}-{(existing_count+1):03d} onwards.
+    
+    CRITICAL VISUAL REQUIREMENT:
+    To match the real papers flavor, AT LEAST 8 questions in this batch MUST include high-quality visual elements within the `question` text (both English and Arabic). 
+    - Use HTML `<table>` for data tables (add Tailwind classes like `w-full text-center border-collapse border border-slate-700`).
+    - Use inline `<svg>` for geometry diagrams, charts, and graphs. Ensure SVGs are responsive (e.g. `viewBox="0 0 200 200" class="w-full max-w-xs mx-auto bg-white rounded-lg p-2"`), use standard stroke/fill colors, and are completely valid XML without markdown code blocks.
+    Do NOT just provide text. You must actively generate tables and SVG shapes representing triangles, circles, coordinate planes, or bar charts directly inside the JSON string where appropriate.
     
     CRITICAL REQUIREMENT:
     All generated questions MUST closely mimic the ACTUAL PAST PAPERS of the {track_id} competition.
