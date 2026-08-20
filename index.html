@@ -205,19 +205,19 @@
       <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mt-8 pt-6 border-t border-slate-100">
         <div class="bg-white/80 backdrop-blur-sm p-4 rounded-2xl border border-slate-100/50 text-center shadow-sm hover:shadow-md hover:-translate-y-1 transition-all duration-300">
           <div class="text-xs text-slate-500 font-semibold" id="stat-1-label">المسارات المعتمدة</div>
-          <div class="text-2xl font-display font-black text-slate-800 mt-1">6 مسارات رئيسية</div>
+          <div class="text-2xl font-display font-black text-slate-800 mt-1" id="stat-1-val">6 مسارات رئيسية</div>
         </div>
         <div class="bg-white/80 backdrop-blur-sm p-4 rounded-2xl border border-slate-100/50 text-center shadow-sm hover:shadow-md hover:-translate-y-1 transition-all duration-300" style="animation-delay: 100ms">
           <div class="text-xs text-slate-500 font-semibold" id="stat-2-label">الفئات العمرية والصفوف</div>
-          <div class="text-2xl font-display font-black text-brand-600 mt-1">من 1 ابتدائي إلى 12 ثانوية</div>
+          <div class="text-2xl font-display font-black text-brand-600 mt-1" id="stat-2-val">من 1 ابتدائي إلى 12 ثانوية</div>
         </div>
         <div class="bg-white/80 backdrop-blur-sm p-4 rounded-2xl border border-slate-100/50 text-center shadow-sm hover:shadow-md hover:-translate-y-1 transition-all duration-300" style="animation-delay: 200ms">
           <div class="text-xs text-slate-500 font-semibold" id="stat-3-label">أنماط الأسئلة</div>
-          <div class="text-2xl font-display font-black text-amber-600 mt-1">MCQ (4-5 خيارات) & FRQ</div>
+          <div class="text-2xl font-display font-black text-amber-600 mt-1" id="stat-3-val">MCQ (4-5 خيارات) & FRQ</div>
         </div>
         <div class="bg-white/80 backdrop-blur-sm p-4 rounded-2xl border border-slate-100/50 text-center shadow-sm hover:shadow-md hover:-translate-y-1 transition-all duration-300" style="animation-delay: 300ms">
           <div class="text-xs text-slate-500 font-semibold" id="stat-4-label">تغطية اللغات</div>
-          <div class="text-2xl font-display font-black text-emerald-600 mt-1">100% عربي & إنجليزي</div>
+          <div class="text-2xl font-display font-black text-emerald-600 mt-1" id="stat-4-val">100% عربي & إنجليزي</div>
         </div>
       </div>
       </div>
@@ -614,9 +614,13 @@
         heroHeading: "محرك الإعداد والمحاكاة التفاعلي للمسابقات الرياضية الهامة",
         heroDesc: "تمنحك هذه المنصة إمكانية استكشاف وهيكلة أحدث قواعد البيانات والأسئلة لـ 6 مسارات عالمية ومحلية استراتيجية. تم تطوير قاعدة البيانات لتغطي الفئات العمرية من الصفوف الابتدائية حتى الثانوية، مع تفكيك دقيق لمستويات صعوبة الأسئلة والحلول النموذجية ثنائية اللغة.",
         stat1Label: "المسارات المعتمدة",
+        stat1Value: "6 مسارات رئيسية",
         stat2Label: "الفئات العمرية والصفوف",
+        stat2Value: "من 1 ابتدائي إلى 12 ثانوية",
         stat3Label: "أنماط الأسئلة",
+        stat3Value: "MCQ (4-5 خيارات) & FRQ",
         stat4Label: "تغطية اللغات",
+        stat4Value: "100% عربي & إنجليزي",
         sec1Title: "بطاقات المسارات والصفوف المستهدفة",
         sec1Desc: "اختر المسار للاستكشاف ومعاينة معايير الاختبار، عدد الخيارات، والصعوبة المستهدفة",
         lblFilterGrade: "اختر صفك الدراسي (1-12) لتصفية الأسئلة:",
@@ -659,9 +663,13 @@
         heroHeading: "Interactive Preparation Engine for Elite Math Exams",
         heroDesc: "Explore and structure comprehensive question databases across 6 strategic local and international math tracks. Tailored from Primary grades to High School with structured MCQs, FRQs, and bilingual step-by-step solutions.",
         stat1Label: "Approved Tracks",
+        stat1Value: "6 Core Tracks",
         stat2Label: "Target Grade Span",
+        stat2Value: "Grades 1 to 12",
         stat3Label: "Question Types",
+        stat3Value: "MCQ (4-5 Options) & FRQ",
         stat4Label: "Language Support",
+        stat4Value: "100% Arabic & English",
         sec1Title: "Exam Tracks & Targeted Grade Levels",
         sec1Desc: "Select a track to inspect target formats, option counts, and core topics.",
         lblFilterGrade: "Select your Grade (1-12) to filter questions:",
@@ -879,9 +887,13 @@
       document.getElementById('hero-desc').innerText = t.heroDesc;
 
       document.getElementById('stat-1-label').innerText = t.stat1Label;
+      document.getElementById('stat-1-val').innerText = t.stat1Value;
       document.getElementById('stat-2-label').innerText = t.stat2Label;
+      document.getElementById('stat-2-val').innerText = t.stat2Value;
       document.getElementById('stat-3-label').innerText = t.stat3Label;
+      document.getElementById('stat-3-val').innerText = t.stat3Value;
       document.getElementById('stat-4-label').innerText = t.stat4Label;
+      document.getElementById('stat-4-val').innerText = t.stat4Value;
 
       document.getElementById('sec1-title').innerText = t.sec1Title;
       document.getElementById('sec1-desc').innerText = t.sec1Desc;
