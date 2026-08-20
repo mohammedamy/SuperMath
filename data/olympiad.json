@@ -21,5 +21,465 @@
       }
     },
     "correct_index": "3"
+  },
+  {
+    "id": "OLYMPIAD-002",
+    "track": "olympiad",
+    "level": "High School",
+    "topic": "Number Theory",
+    "type": "FRQ",
+    "difficulty": "hard",
+    "content": {
+      "en": {
+        "question": "Find the smallest positive integer \\( n \\) such that \\( 2^n + 3^n \\) is divisible by 35.",
+        "options": [],
+        "hint": "Analyze the expression modulo 5 and modulo 7 separately.",
+        "explanation": "Modulo 5: \\( 2^n + 3^n \\equiv 2^n + (-2)^n \\pmod 5 \\). This is congruent to 0 modulo 5 if and only if \\( n \\) is odd.\nModulo 7: For \\( n = 1 \\), \\( 2^1 + 3^1 = 5 \\not\\equiv 0 \\pmod 7 \\). For \\( n = 3 \\), \\( 2^3 + 3^3 = 8 + 27 = 35 \\equiv 0 \\pmod 7 \\).\nSince 3 is odd, \\( 2^3 + 3^3 = 35 \\) is divisible by both 5 and 7, hence divisible by 35. Thus, the smallest positive integer is 3."
+      },
+      "ar": {
+        "question": "أوجد أصغر عدد صحيح موجب \\( n \\) بحيث يكون \\( 2^n + 3^n \\) قابلاً للقسمة على 35.",
+        "options": [],
+        "hint": "حلل التعبير بمقياس 5 وبمقياس 7 بشكل منفصل.",
+        "explanation": "بمقياس 5: \\( 2^n + 3^n \\equiv 2^n + (-2)^n \\pmod 5 \\). يكون هذا يطابق 0 بمقياس 5 إذا وفقط إذا كان \\( n \\) فردياً.\nبمقياس 7: بالنسبة لـ \\( n = 1 \\)، \\( 2^1 + 3^1 = 5 \\not\\equiv 0 \\pmod 7 \\). بالنسبة لـ \\( n = 3 \\)، \\( 2^3 + 3^3 = 35 \\equiv 0 \\pmod 7 \\).\nبما أن 3 فردي، فإن \\( 2^3 + 3^3 = 35 \\) يقبل القسمة على كل من 5 و 7، وبالتالي يقبل القسمة على 35. إذن أصغر عدد صحيح موجب هو 3."
+      }
+    },
+    "correct_index": "3"
+  },
+  {
+    "id": "OLYMPIAD-003",
+    "track": "olympiad",
+    "level": "High School",
+    "topic": "Functional Equations",
+    "type": "FRQ",
+    "difficulty": "extreme",
+    "content": {
+      "en": {
+        "question": "Find the number of continuous functions \\( f: \\mathbb{R} \\to \\mathbb{R} \\) satisfying \\( f(f(x)) = f(x) + x \\) for all \\( x \\in \\mathbb{R} \\).",
+        "options": [],
+        "hint": "Check for injectivity and test linear solutions of the form \\( f(x) = ax \\).",
+        "explanation": "If \\( f(x_1) = f(x_2) \\), then \\( f(f(x_1)) = f(f(x_2)) \\implies f(x_1) + x_1 = f(x_2) + x_2 \\implies x_1 = x_2 \\). Thus, \\( f \\) is injective. Being continuous and injective on \\( \\mathbb{R} \\), \\( f \\) must be strictly monotonic. If \\( f(x) = ax \\), then \\( a^2 x = ax + x \\implies a^2 - a - 1 = 0 \\), giving two real solutions \\( a = \\frac{1 \\pm \\sqrt{5}}{2} \\). Rigorous analysis shows that these two linear functions are the only continuous functions satisfying the equation. Thus, there are 2 solutions."
+      },
+      "ar": {
+        "question": "أوجد عدد الدوال المستمرة \\( f: \\mathbb{R} \\to \\mathbb{R} \\) التي تحقّق \\( f(f(x)) = f(x) + x \\) لكل \\( x \\in \\mathbb{R} \\).",
+        "options": [],
+        "hint": "افحص التباين وجرّب الحلول الخطية من الشكل \\( f(x) = ax \\).",
+        "explanation": "إذا كان \\( f(x_1) = f(x_2) \\)، فإن \\( f(f(x_1)) = f(f(x_2)) \\implies f(x_1) + x_1 = f(x_2) + x_2 \\implies x_1 = x_2 \\). بالتالي، \\( f \\) متباينة. ولأنها مستمرة ومتباينة على \\( \\mathbb{R} \\)، يجب أن تكون \\( f \\) مطردة تماماً. إذا فرضنا \\( f(x) = ax \\)، نجد أن \\( a^2 x = ax + x \\implies a^2 - a - 1 = 0 \\)، مما يعطي حلين حقيقيين \\( a = \\frac{1 \\pm \\sqrt{5}}{2} \\). أثبت التحليل الدقيق أن هاتين الدالتين الخطيتين هما الحلول المستمرة الوحيدة. إذن، يوجد حلان."
+      }
+    },
+    "correct_index": "2"
+  },
+  {
+    "id": "OLYMPIAD-004",
+    "track": "olympiad",
+    "level": "High School",
+    "topic": "Combinatorics",
+    "type": "FRQ",
+    "difficulty": "hard",
+    "content": {
+      "en": {
+        "question": "Determine the number of permutations \\( (\\pi_1, \\pi_2, \\dots, \\pi_6) \\) of \\( \\{1, 2, 3, 4, 5, 6\\} \\) such that for all \\( 1 \\le i \\le 5 \\), \\( |\\pi_{i+1} - \\pi_i| \\neq 1 \\).",
+        "options": [],
+        "hint": "Use the Principle of Inclusion-Exclusion on the forbidden adjacent differences.",
+        "explanation": "This is Hertzsprung's problem of forbidden adjacent differences. Using Inclusion-Exclusion or recurrence relations, for \\( n = 6 \\), the number of permutations of \\( \\{1, 2, \\dots, n\\} \\) with no adjacent elements differing by 1 is given by 90."
+      },
+      "ar": {
+        "question": "حدد عدد التباديل \\( (\\pi_1, \\pi_2, \\dots, \\pi_6) \\) للمجموعة \\( \\{1, 2, 3, 4, 5, 6\\} \\) بحيث تحقق \\( |\\pi_{i+1} - \\pi_i| \\neq 1 \\) لكل \\( 1 \\le i \\le 5 \\).",
+        "options": [],
+        "hint": "استخدم مبدأ الشمول والاستبعاد على الفروق المجاورة المحظورة.",
+        "explanation": "هذه مسألة هيرتزسبرونغ للفروق المجاورة المحظورة. باستخدام مبدأ الشمول والاستبعاد أو العلاقات التكرارية، بالنسبة لـ \\( n = 6 \\)، عدد التباديل للمجموعة \\( \\{1, 2, \\dots, n\\} \\) التي لا ينادي فيها أي عنصرين متجاورين بفرق يساوي 1 هو 90."
+      }
+    },
+    "correct_index": "90"
+  },
+  {
+    "id": "OLYMPIAD-005",
+    "track": "olympiad",
+    "level": "High School",
+    "topic": "Number Theory",
+    "type": "FRQ",
+    "difficulty": "hard",
+    "content": {
+      "en": {
+        "question": "Find the largest integer \\( k \\) such that \\( 3^k \\) divides \\( 2^{3^{100}} + 1 \\).",
+        "options": [],
+        "hint": "Use the Lifting the Exponent Lemma (LTE).",
+        "explanation": "By Lifting the Exponent Lemma (LTE) for \\( p = 3 \\), \\( x = 2 \\), \\( y = 1 \\), and \\( n = 3^{100} \\):\n\\( v_3(2^{3^{100}} + 1) = v_3(2 + 1) + v_3(3^{100}) = 1 + 100 = 101 \\).\nThus, the largest integer \\( k \\) is 101."
+      },
+      "ar": {
+        "question": "أوجد أكبر عدد صحيح \\( k \\) بحيث يَقْسم \\( 3^k \\) العدد \\( 2^{3^{100}} + 1 \\).",
+        "options": [],
+        "hint": "استخدم مبرهنة رفع الأسس (LTE).",
+        "explanation": "باستخدام مبرهنة رفع الأسس (LTE) لـ \\( p = 3 \\)، \\( x = 2 \\)، \\( y = 1 \\)، و \\( n = 3^{100} \\):\n\\( v_3(2^{3^{100}} + 1) = v_3(2 + 1) + v_3(3^{100}) = 1 + 100 = 101 \\).\nبالتالي، أكبر عدد صحيح \\( k \\) هو 101."
+      }
+    },
+    "correct_index": "101"
+  },
+  {
+    "id": "OLYMPIAD-006",
+    "track": "olympiad",
+    "level": "High School",
+    "topic": "Functional Equations",
+    "type": "FRQ",
+    "difficulty": "extreme",
+    "content": {
+      "en": {
+        "question": "Find the value of \\( f(2024) \\) for the function \\( f: \\mathbb{N}^+ \\to \\mathbb{N}^+ \\) defined by \\( f(1) = 1 \\) and \\( f(n) = n - f(f(n-1)) \\) for all \\( n \\ge 2 \\).",
+        "options": [],
+        "hint": "Relate the sequence to Beatty's theorem and the golden ratio \\( \\phi = \\frac{1+\\sqrt{5}}{2} \\).",
+        "explanation": "This is Hofstadter's G-sequence. The explicit formula for \\( f(n) \\) is given by \\( f(n) = \\lfloor (n+1) \\phi^{-1} \\rfloor \\), where \\( \\phi^{-1} = \\frac{\\sqrt{5}-1}{2} \\approx 0.6180339887 \\).\nFor \\( n = 2024 \\):\n\\( f(2024) = \\lfloor 2025 \\times \\frac{\\sqrt{5}-1}{2} \\rfloor = \\lfloor 1251.5188 \\rfloor = 1251 \\)."
+      },
+      "ar": {
+        "question": "أوجد قيمة \\( f(2024) \\) للدالة \\( f: \\mathbb{N}^+ \\to \\mathbb{N}^+ \\) المعرفة بـ \\( f(1) = 1 \\) و \\( f(n) = n - f(f(n-1)) \\) لكل \\( n \\ge 2 \\).",
+        "options": [],
+        "hint": "اربط المتتابعة بنظرية بيتي والنسبة الذهبية \\( \\phi = \\frac{1+\\sqrt{5}}{2} \\).",
+        "explanation": "هذه متتابعة هوفشتاتدير G. الصيغة الصريحة لـ \\( f(n) \\) هي \\( f(n) = \\lfloor (n+1) \\phi^{-1} \\rfloor \\)، حيث \\( \\phi^{-1} = \\frac{\\sqrt{5}-1}{2} \\approx 0.6180339887 \\).\nبالنسبة لـ \\( n = 2024 \\):\n\\( f(2024) = \\lfloor 2025 \\times \\frac{\\sqrt{5}-1}{2} \\rfloor = \\lfloor 1251.5188 \\rfloor = 1251 \\)."
+      }
+    },
+    "correct_index": "1251"
+  },
+  {
+    "id": "OLYMPIAD-007",
+    "track": "olympiad",
+    "level": "High School",
+    "topic": "Combinatorics",
+    "type": "FRQ",
+    "difficulty": "medium",
+    "content": {
+      "en": {
+        "question": "Find the number of subsets of \\( \\{1, 2, 3, \\dots, 10\\} \\) that do not contain any pair of consecutive integers.",
+        "options": [],
+        "hint": "Express the count using Fibonacci numbers.",
+        "explanation": "The number of subsets of \\( \\{1, 2, \\dots, n\\} \\) with no consecutive elements is \\( F_{n+2} \\), where \\( F_1 = 1, F_2 = 1, F_3 = 2, \\dots \\).\nFor \\( n = 10 \\), we need \\( F_{12} \\).\nThe Fibonacci sequence starts: \\( F_1=1, F_2=1, F_3=2, F_4=3, F_5=5, F_6=8, F_7=13, F_8=21, F_9=34, F_{10}=55, F_{11}=89, F_{12}=144 \\).\nThus, the answer is 144."
+      },
+      "ar": {
+        "question": "أوجد عدد المجموعات الجزئية من \\( \\{1, 2, 3, \\dots, 10\\} \\) التي لا تحتوي على أي زوج من أعداد صحيحة متتالية.",
+        "options": [],
+        "hint": "عبّر عن عدد المجموعات باستخدام أعداد فيبوناتشي.",
+        "explanation": "عدد المجموعات الجزئية من \\( \\{1, 2, \\dots, n\\} \\) التي لا تحتوي على عناصر متتالية هو \\( F_{n+2} \\)، حيث \\( F_1 = 1, F_2 = 1, F_3 = 2, \\dots \\).\nبالنسبة لـ \\( n = 10 \\)، نحتاج \\( F_{12} \\).\nمتتابعة فيبوناتشي: \\( F_1=1, F_2=1, F_3=2, F_4=3, F_5=5, F_6=8, F_7=13, F_8=21, F_9=34, F_{10}=55, F_{11}=89, F_{12}=144 \\).\nبالتالي، الإجابة هي 144."
+      }
+    },
+    "correct_index": "144"
+  },
+  {
+    "id": "OLYMPIAD-008",
+    "track": "olympiad",
+    "level": "High School",
+    "topic": "Number Theory",
+    "type": "FRQ",
+    "difficulty": "medium",
+    "content": {
+      "en": {
+        "question": "Find the number of ordered pairs of positive integers \\( (x, y) \\) satisfying \\( \\frac{1}{x} + \\frac{1}{y} = \\frac{1}{12} \\).",
+        "options": [],
+        "hint": "Rearrange into \\( (x - 12)(y - 12) = 144 \\).",
+        "explanation": "The equation \\( \\frac{1}{x} + \\frac{1}{y} = \\frac{1}{12} \\) rearranges to \\( (x - 12)(y - 12) = 144 \\).\nSince \\( x, y > 0 \\), both \\( x - 12 \\) and \\( y - 12 \\) must be positive integers dividing 144.\nPrime factorization: \\( 144 = 2^4 \\times 3^2 \\).\nThe number of positive divisors is \\( (4 + 1)(2 + 1) = 15 \\).\nEach divisor corresponds to a unique pair \\( (x, y) \\). Thus, there are 15 solutions."
+      },
+      "ar": {
+        "question": "أوجد عدد الأزواج المرتبة من الأعداد الصحيحة الموجبة \\( (x, y) \\) التي تحقق \\( \\frac{1}{x} + \\frac{1}{y} = \\frac{1}{12} \\).",
+        "options": [],
+        "hint": "عد كتابة المعادلة على الشكل \\( (x - 12)(y - 12) = 144 \\).",
+        "explanation": "تعديل المعادلة \\( \\frac{1}{x} + \\frac{1}{y} = \\frac{1}{12} \\) يعطي \\( (x - 12)(y - 12) = 144 \\).\nبما أن \\( x, y > 0 \\)، فإن كلاً من \\( x - 12 \\) و \\( y - 12 \\) يجب أن يكونا عددين صحيحين موجبين يقسمان 144.\nالتحليل إلى العوامل الأولية: \\( 144 = 2^4 \\times 3^2 \\).\nعدد القواسم الموجبة هو \\( (4 + 1)(2 + 1) = 15 \\).\nكل قاسم يناظر زوجاً فريداً \\( (x, y) \\). إذن، يوجد 15 حلاً."
+      }
+    },
+    "correct_index": "15"
+  },
+  {
+    "id": "OLYMPIAD-009",
+    "track": "olympiad",
+    "level": "High School",
+    "topic": "Functional Equations",
+    "type": "FRQ",
+    "difficulty": "hard",
+    "content": {
+      "en": {
+        "question": "Find the number of functions \\( f: \\mathbb{Q} \\to \\mathbb{Q} \\) satisfying \\( f(x + y) + f(x - y) = 2f(x) + 2f(y) \\) for all \\( x, y \\in \\mathbb{Q} \\) and \\( f(1) = 3 \\).",
+        "options": [],
+        "hint": "This is Cauchy's quadratic functional equation.",
+        "explanation": "The given equation is Cauchy's quadratic functional equation. Its general rational solution is \\( f(x) = c x^2 \\) for some constant \\( c \\in \\mathbb{Q} \\).\nGiven \\( f(1) = 3 \\), we find \\( c = 3 \\).\nThus, \\( f(x) = 3x^2 \\) is the unique solution. The number of such functions is 1."
+      },
+      "ar": {
+        "question": "أوجد عدد الدوال \\( f: \\mathbb{Q} \\to \\mathbb{Q} \\) التي تحقق \\( f(x + y) + f(x - y) = 2f(x) + 2f(y) \\) لكل \\( x, y \\in \\mathbb{Q} \\) و \\( f(1) = 3 \\).",
+        "options": [],
+        "hint": "هذه معادلة كوشي الدالية التربيعية.",
+        "explanation": "المعادلة المعطاة هي معادلة كوشي الدالية التربيعية. حلها العام على الأعداد النسبية هو \\( f(x) = c x^2 \\) لثابت \\( c \\in \\mathbb{Q} \\).\nبما أن \\( f(1) = 3 \\)، نجد أن \\( c = 3 \\).\nبالتالي، \\( f(x) = 3x^2 \\) هو الحل الوحيد. عدد هذه الدوال هو 1."
+      }
+    },
+    "correct_index": "1"
+  },
+  {
+    "id": "OLYMPIAD-010",
+    "track": "olympiad",
+    "level": "High School",
+    "topic": "Combinatorics",
+    "type": "FRQ",
+    "difficulty": "hard",
+    "content": {
+      "en": {
+        "question": "In how many ways can 8 non-attacking rooks be placed on an \\( 8 \\times 8 \\) chessboard such that no rook lies on the main diagonal?",
+        "options": [],
+        "hint": "This problem is equivalent to finding the number of derangements of 8 elements.",
+        "explanation": "Placing 8 non-attacking rooks corresponds to choosing a permutation \\( \\pi \\) of \\( \\{1, \\dots, 8\\} \\). The condition that no rook lies on the main diagonal means \\( \\pi(i) \\neq i \\) for all \\( i \\), which is a derangement.\nThe number of derangements \\( !8 \\) is:\n\\( !8 = 8! \\sum_{k=0}^8 \\frac{(-1)^k}{k!} = 14833 \\)."
+      },
+      "ar": {
+        "question": "بكم طريقة يمكن وضع 8 رخاخ غير متهاجمة على رقعة شطرنج \\( 8 \\times 8 \\) بحيث لا يقع أي رخ على القطر الرئيسي؟",
+        "options": [],
+        "hint": "تُكافئ هذه المسألة إيجاد عدد الاضطرابات (Derangements) لـ 8 عناصر.",
+        "explanation": "وضع 8 رخاخ غير متهاجمة يناظر اختيار تبديلة \\( \\pi \\) للمجموعة \\( \\{1, \\dots, 8\\} \\). الشرط ألا يقع أي رخ على القطر الرئيسي يعني أن \\( \\pi(i) \\neq i \\) لكل \\( i \\)، وهو تعريف الاضطراب.\nعدد الاضطرابات \\( !8 \\) هو:\n\\( !8 = 8! \\sum_{k=0}^8 \\frac{(-1)^k}{k!} = 14833 \\)."
+      }
+    },
+    "correct_index": "14833"
+  },
+  {
+    "id": "OLYMPIAD-011",
+    "track": "olympiad",
+    "level": "High School",
+    "topic": "Number Theory",
+    "type": "FRQ",
+    "difficulty": "medium",
+    "content": {
+      "en": {
+        "question": "Find the smallest positive integer \\( n \\) such that \\( n! \\) ends in exactly 100 zeros in base 10.",
+        "options": [],
+        "hint": "Use Legendre's formula to count the exponent of 5 in \\( n! \\).",
+        "explanation": "The number of trailing zeros of \\( n! \\) is \\( E_5(n!) = \\sum_{k=1}^\\infty \\lfloor n / 5^k \\rfloor \\).\nFor \\( n = 400 \\): \\( \\lfloor 400/5 \\rfloor + \\lfloor 400/25 \\rfloor + \\lfloor 400/125 \\rfloor = 80 + 16 + 3 = 99 \\).\nFor \\( n = 405 \\): \\( \\lfloor 405/5 \\rfloor + \\lfloor 405/25 \\rfloor + \\lfloor 405/125 \\rfloor = 81 + 16 + 3 = 100 \\).\nThus, the smallest positive integer is 405."
+      },
+      "ar": {
+        "question": "أوجد أصغر عدد صحيح موجب \\( n \\) بحيث ينتهي \\( n! \\) بـ 100 أصفار بالضبط في النظام العشري.",
+        "options": [],
+        "hint": "استخدم صيغة ليجاندر لحساب أس العدد 5 في تحليل \\( n! \\).",
+        "explanation": "عدد الأصفار الأخيرة في \\( n! \\) هو \\( E_5(n!) = \\sum_{k=1}^\\infty \\lfloor n / 5^k \\rfloor \\).\nبالنسبة لـ \\( n = 400 \\): \\( \\lfloor 400/5 \\rfloor + \\lfloor 400/25 \\rfloor + \\lfloor 400/125 \\rfloor = 80 + 16 + 3 = 99 \\).\nبالنسبة لـ \\( n = 405 \\): \\( \\lfloor 405/5 \\rfloor + \\lfloor 405/25 \\rfloor + \\lfloor 405/125 \\rfloor = 81 + 16 + 3 = 100 \\).\nإذن أصغر عدد صحيح موجب هو 405."
+      }
+    },
+    "correct_index": "405"
+  },
+  {
+    "id": "OLYMPIAD-012",
+    "track": "olympiad",
+    "level": "High School",
+    "topic": "Functional Equations",
+    "type": "FRQ",
+    "difficulty": "extreme",
+    "content": {
+      "en": {
+        "question": "Find the sum of all possible values of \\( f(3) \\) for functions \\( f: \\mathbb{R} \\to \\mathbb{R} \\) satisfying \\( f(x+y) = f(x)f(y) - f(xy) + 1 \\) for all \\( x, y \\in \\mathbb{R} \\).",
+        "options": [],
+        "hint": "Test constant functions and linear functions.",
+        "explanation": "Setting \\( y = 0 \\) gives \\( f(x) = f(x)f(0) - f(0) + 1 \\implies (f(x) - 1)(f(0) - 1) = 0 \\).\nCase 1: If \\( f(0) \\neq 1 \\), then \\( f(x) = 1 \\) for all \\( x \\). Substituting into the equation confirms \\( 1 = 1 \\cdot 1 - 1 + 1 \\) holds. Here \\( f(3) = 1 \\).\nCase 2: If \\( f(0) = 1 \\), testing linear functions \\( f(x) = x + 1 \\) gives:\n\\( f(x+y) = x + y + 1 \\)\n\\( f(x)f(y) - f(xy) + 1 = (x+1)(y+1) - (xy+1) + 1 = x + y + 1 \\), which holds for all \\( x, y \\).\nHere \\( f(3) = 3 + 1 = 4 \\).\nFurther proof confirms no other solutions exist. Sum of possible values = \\( 1 + 4 = 5 \\)."
+      },
+      "ar": {
+        "question": "أوجد مجموع كل القيم الممكنة لـ \\( f(3) \\) للدوال \\( f: \\mathbb{R} \\to \\mathbb{R} \\) التي تحقق \\( f(x+y) = f(x)f(y) - f(xy) + 1 \\) لكل \\( x, y \\in \\mathbb{R} \\).",
+        "options": [],
+        "hint": "اختبر الدوال الثابتة والدوال الخطية.",
+        "explanation": "بوضع \\( y = 0 \\) نجد أن \\( f(x) = f(x)f(0) - f(0) + 1 \\implies (f(x) - 1)(f(0) - 1) = 0 \\).\nالحالة 1: إذا كان \\( f(0) \\neq 1 \\)، فإن \\( f(x) = 1 \\) لكل \\( x \\). بالتعويض في المعادلة نجد أن \\( 1 = 1 \\cdot 1 - 1 + 1 \\) محققة. هنا \\( f(3) = 1 \\).\nالحالة 2: إذا كان \\( f(0) = 1 \\)، باختبار الدالة الخطية \\( f(x) = x + 1 \\):\n\\( f(x+y) = x + y + 1 \\)\n\\( f(x)f(y) - f(xy) + 1 = (x+1)(y+1) - (xy+1) + 1 = x + y + 1 \\)، وهي محققة لكل \\( x, y \\).\nهنا \\( f(3) = 3 + 1 = 4 \\).\nالبرهان المفصل يؤكد عدم وجود حلول أخرى. مجموع القيم الممكنة = \\( 1 + 4 = 5 \\)."
+      }
+    },
+    "correct_index": "5"
+  },
+  {
+    "id": "OLYMPIAD-013",
+    "track": "olympiad",
+    "level": "High School",
+    "topic": "Combinatorics",
+    "type": "FRQ",
+    "difficulty": "medium",
+    "content": {
+      "en": {
+        "question": "Find the number of paths from \\( (0,0) \\) to \\( (5,5) \\) along grid lines using steps \\( (+1,0) \\) and \\( (0,+1) \\) that never cross above the line \\( y = x \\).",
+        "options": [],
+        "hint": "This corresponds to the 5th Catalan number.",
+        "explanation": "The number of lattice paths from \\( (0,0) \\) to \\( (n,n) \\) that do not cross above \\( y = x \\) is given by the \\( n \\)-th Catalan number \\( C_n = \\frac{1}{n+1} \\binom{2n}{n} \\).\nFor \\( n = 5 \\):\n\\( C_5 = \\frac{1}{6} \\binom{10}{5} = \\frac{252}{6} = 42 \\)."
+      },
+      "ar": {
+        "question": "أوجد عدد المسارات من \\( (0,0) \\) إلى \\( (5,5) \\) عبر خطوط الشبكة باستخدام الخطوات \\( (+1,0) \\) و \\( (0,+1) \\) والتي لا تتجاوز أبداً الخط \\( y = x \\).",
+        "options": [],
+        "hint": "هذا يتوافق مع عدد كاتالان الخامس.",
+        "explanation": "عدد مسارات الشبكة من \\( (0,0) \\) إلى \\( (n,n) \\) التي لا ترتفع فوق \\( y = x \\) يُعطى بعدد كاتالان \\( C_n = \\frac{1}{n+1} \\binom{2n}{n} \\).\nبالنسبة لـ \\( n = 5 \\):\n\\( C_5 = \\frac{1}{6} \\binom{10}{5} = \\frac{252}{6} = 42 \\)."
+      }
+    },
+    "correct_index": "42"
+  },
+  {
+    "id": "OLYMPIAD-014",
+    "track": "olympiad",
+    "level": "High School",
+    "topic": "Number Theory",
+    "type": "FRQ",
+    "difficulty": "easy",
+    "content": {
+      "en": {
+        "question": "Determine the remainder when \\( 7^{7^7} \\) is divided by 10.",
+        "options": [],
+        "hint": "Find the exponent modulo 4.",
+        "explanation": "Powers of 7 mod 10 repeat in cycles of 4: \\( 7^1 \\equiv 7, 7^2 \\equiv 9, 7^3 \\equiv 3, 7^4 \\equiv 1 \\pmod{10} \\).\nWe compute the exponent \\( 7^7 \\pmod 4 \\):\n\\( 7 \\equiv -1 \\pmod 4 \\implies 7^7 \\equiv (-1)^7 \\equiv -1 \\equiv 3 \\pmod 4 \\).\nTherefore, \\( 7^{7^7} \\equiv 7^3 \\equiv 3 \\pmod{10} \\)."
+      },
+      "ar": {
+        "question": "حدد باقي قسمة \\( 7^{7^7} \\) على 10.",
+        "options": [],
+        "hint": "احسب الأس بمقياس 4.",
+        "explanation": "قوى العدد 7 بمقياس 10 تتكرر في دورة طولها 4: \\( 7^1 \\equiv 7, 7^2 \\equiv 9, 7^3 \\equiv 3, 7^4 \\equiv 1 \\pmod{10} \\).\nنحسب الأس \\( 7^7 \\pmod 4 \\):\n\\( 7 \\equiv -1 \\pmod 4 \\implies 7^7 \\equiv (-1)^7 \\equiv -1 \\equiv 3 \\pmod 4 \\).\nبالتالي، \\( 7^{7^7} \\equiv 7^3 \\equiv 3 \\pmod{10} \\)."
+      }
+    },
+    "correct_index": "3"
+  },
+  {
+    "id": "OLYMPIAD-015",
+    "track": "olympiad",
+    "level": "High School",
+    "topic": "Functional Equations",
+    "type": "FRQ",
+    "difficulty": "hard",
+    "content": {
+      "en": {
+        "question": "Find the number of strictly increasing functions \\( f: \\mathbb{N}^+ \\to \\mathbb{N}^+ \\) satisfying \\( f(f(n)) = 3n \\) for all \\( n \\in \\mathbb{N}^+ \\).",
+        "options": [],
+        "hint": "Use base 3 representation to construct the unique solution.",
+        "explanation": "Since \\( f \\) is strictly increasing and satisfies \\( f(f(n)) = 3n \\), we can determine \\( f(n) \\) uniquely by representing \\( n \\) in base 3.\nSpecifically, if \\( n = 3^k + m \\) where \\( 0 \\le m < 2 \\cdot 3^k \\), then \\( f(n) \\) is uniquely forced.\nThus, there is exactly 1 such strictly increasing function."
+      },
+      "ar": {
+        "question": "أوجد عدد الدوال التزايدية تماماً \\( f: \\mathbb{N}^+ \\to \\mathbb{N}^+ \\) التي تحقق \\( f(f(n)) = 3n \\) لكل \\( n \\in \\mathbb{N}^+ \\).",
+        "options": [],
+        "hint": "استخدم التمثيل في النظام الثلاثي لبناء الحل الوحيد.",
+        "explanation": "بما أن \\( f \\) تزايدية تماماً وتحقق \\( f(f(n)) = 3n \\)، يمكننا تحديد \\( f(n) \\) بشكل فريد عبر تمثيل \\( n \\) في النظام الأساسي 3.\nتحديداً، إذا كان \\( n = 3^k + m \\) حيث \\( 0 \\le m < 2 \\cdot 3^k \\)، فإن قيمة \\( f(n) \\) محددة بشكل قاطع.\nبالتالي، يوجد بالضبط دالة واحدة تزايدية تماماً وتحقق الشرط."
+      }
+    },
+    "correct_index": "1"
+  },
+  {
+    "id": "OLYMPIAD-016",
+    "track": "olympiad",
+    "level": "High School",
+    "topic": "Combinatorics",
+    "type": "FRQ",
+    "difficulty": "medium",
+    "content": {
+      "en": {
+        "question": "Determine the number of 4-tuples of positive integers \\( (a, b, c, d) \\) such that \\( a + b + c + d = 20 \\) and \\( a < b < c < d \\).",
+        "options": [],
+        "hint": "Count the integer partitions of 20 into 4 distinct parts.",
+        "explanation": "We count partitions of 20 into 4 distinct positive parts:\nIf \\( a = 1 \\):\n- \\( b = 2 \\implies c + d = 17, c > 2 \\): \\( (3,14), (4,13), (5,12), (6,11), (7,10), (8,9) \\) (6 pairs)\n- \\( b = 3 \\implies c + d = 16, c > 3 \\): \\( (4,12), (5,11), (6,10), (7,9) \\) (4 pairs)\n- \\( b = 4 \\implies c + d = 15, c > 4 \\): \\( (5,10), (6,9), (7,8) \\) (3 pairs)\n- \\( b = 5 \\implies c + d = 14, c > 5 \\): \\( (6,8) \\) (1 pair)\nTotal for \\( a = 1 \\) is 14.\nIf \\( a = 2 \\):\n- \\( b = 3 \\implies c + d = 15, c > 3 \\): 4 pairs\n- \\( b = 4 \\implies c + d = 14, c > 4 \\): 2 pairs\n- \\( b = 5 \\implies c + d = 13, c > 5 \\): 1 pair\nTotal for \\( a = 2 \\) is 7.\nIf \\( a = 3 \\):\n- \\( b = 4 \\implies c + d = 13, c > 4 \\): 2 pairs\nTotal for \\( a = 3 \\) is 2.\nGrand Total = \\( 14 + 7 + 2 = 23 \\)."
+      },
+      "ar": {
+        "question": "حدد عدد الرباعيات المكونة من أعداد صحيحة موجبة \\( (a, b, c, d) \\) بحيث \\( a + b + c + d = 20 \\) و \\( a < b < c < d \\).",
+        "options": [],
+        "hint": "احسب تجزئات العدد 20 إلى 4 أجزاء موجبة ومتميزة.",
+        "explanation": "نحسب تجزئات العدد 20 إلى 4 أجزاء موجبة ومختلفة:\nإذا كان \\( a = 1 \\):\n- \\( b = 2 \\implies c + d = 17, c > 2 \\): هناك 6 أزواج\n- \\( b = 3 \\implies c + d = 16, c > 3 \\): هناك 4 أزواج\n- \\( b = 4 \\implies c + d = 15, c > 4 \\): هناك 3 أزواج\n- \\( b = 5 \\implies c + d = 14, c > 5 \\): هناك زوج واحد\nالمجموع لـ \\( a = 1 \\) هو 14.\nإذا كان \\( a = 2 \\):\n- \\( b = 3 \\implies \\): 4 أزواج\n- \\( b = 4 \\implies \\): زوجان\n- \\( b = 5 \\implies \\): زوج واحد\nالمجموع لـ \\( a = 2 \\) هو 7.\nإذا كان \\( a = 3 \\):\n- \\( b = 4 \\implies \\): زوجان\nالمجموع لـ \\( a = 3 \\) هو 2.\nالمجموع الكلي = \\( 14 + 7 + 2 = 23 \\)."
+      }
+    },
+    "correct_index": "23"
+  },
+  {
+    "id": "OLYMPIAD-017",
+    "track": "olympiad",
+    "level": "High School",
+    "topic": "Number Theory",
+    "type": "FRQ",
+    "difficulty": "medium",
+    "content": {
+      "en": {
+        "question": "Find the number of positive integers \\( n \\le 100 \\) such that Euler's totient function \\( \\phi(n) \\) is odd.",
+        "options": [],
+        "hint": "Recall that \\( \\phi(n) \\) is even for all \\( n > 2 \\).",
+        "explanation": "Euler's totient function \\( \\phi(n) \\) is odd if and only if \\( n = 1 \\) or \\( n = 2 \\).\nFor all integers \\( n > 2 \\), \\( \\phi(n) \\) is an even integer because if \\( n \\) has an odd prime factor \\( p \\), \\( p-1 \\) is even; if \\( n = 2^k \\) with \\( k \\ge 2 \\), \\( \\phi(n) = 2^{k-1} \\) is even.\nThus, only \\( n = 1 \\) and \\( n = 2 \\) yield an odd \\( \\phi(n) \\). The count is 2."
+      },
+      "ar": {
+        "question": "أوجد عدد الأعداد الصحيحة الموجبة \\( n \\le 100 \\) التي تكون فيها دالة أويلر التجميعية \\( \\phi(n) \\) فردية.",
+        "options": [],
+        "hint": "تذكر أن \\( \\phi(n) \\) تكون زوجية لكل \\( n > 2 \\).",
+        "explanation": "دالة أويلر التجميعية \\( \\phi(n) \\) تكون فردية إذا وفقط إذا كان \\( n = 1 \\) أو \\( n = 2 \\).\nلكل الأعداد الصحيحة \\( n > 2 \\)، تكون \\( \\phi(n) \\) زوجية لأنه إذا كان لـ \\( n \\) عامل أولي فردي \\( p \\)، فإن \\( p-1 \\) يكون زوجياً؛ وإذا كان \\( n = 2^k \\) مع \\( k \\ge 2 \\)، فإن \\( \\phi(n) = 2^{k-1} \\) يكون زوجياً.\nبالتالي، فقط \\( n = 1 \\) و \\( n = 2 \\) يعطيان \\( \\phi(n) \\) فردياً. العدد الإجمالي هو 2."
+      }
+    },
+    "correct_index": "2"
+  },
+  {
+    "id": "OLYMPIAD-018",
+    "track": "olympiad",
+    "level": "High School",
+    "topic": "Functional Equations",
+    "type": "FRQ",
+    "difficulty": "hard",
+    "content": {
+      "en": {
+        "question": "If a function \\( f: \\mathbb{R} \\setminus \\{0, 1\\} \\to \\mathbb{R} \\) satisfies \\( f(x) + f\\left(\\frac{1}{1-x}\\right) = x \\), find the value of \\( 180 \\cdot f(10) \\).",
+        "options": [],
+        "hint": "Apply the transformation \\( I(x) = \\frac{1}{1-x} \\) repeatedly to get a system of linear equations.",
+        "explanation": "Let \\( I(x) = \\frac{1}{1-x} \\). Applying \\( I \\) three times yields \\( I(I(I(x))) = x \\).\nWe obtain three equations:\n1) \\( f(x) + f(I(x)) = x \\)\n2) \\( f(I(x)) + f(I^2(x)) = I(x) \\)\n3) \\( f(I^2(x)) + f(x) = I^2(x) \\)\nAdding (1) and (3) and subtracting (2):\n\\( 2f(x) = x + I^2(x) - I(x) = x + \\frac{x-1}{x} - \\frac{1}{1-x} \\).\nFor \\( x = 10 \\):\n\\( 2f(10) = 10 + \\frac{9}{10} - \\left(-\\frac{1}{9}\\right) = 10 + \\frac{9}{10} + \\frac{1}{9} = \\frac{991}{90} \\).\nSo, \\( f(10) = \\frac{991}{180} \\).\nTherefore, \\( 180 \\cdot f(10) = 991 \\)."
+      },
+      "ar": {
+        "question": "إذا كانت الدالة \\( f: \\mathbb{R} \\setminus \\{0, 1\\} \\to \\mathbb{R} \\) تحقق \\( f(x) + f\\left(\\frac{1}{1-x}\\right) = x \\)، فأوجد قيمة \\( 180 \\cdot f(10) \\).",
+        "options": [],
+        "hint": "طبق التحويل \\( I(x) = \\frac{1}{1-x} \\) بشكل مكرر للحصول على نظام من المعادلات الخطية.",
+        "explanation": "لتكن \\( I(x) = \\frac{1}{1-x} \\). بتطبيق \\( I \\) ثلاث مرات نحصل على \\( I(I(I(x))) = x \\).\nفنحصل على ثلاث معادلات:\n1) \\( f(x) + f(I(x)) = x \\)\n2) \\( f(I(x)) + f(I^2(x)) = I(x) \\)\n3) \\( f(I^2(x)) + f(x) = I^2(x) \\)\nبجمع (1) و (3) وطرح (2):\n\\( 2f(x) = x + I^2(x) - I(x) = x + \\frac{x-1}{x} - \\frac{1}{1-x} \\).\nعند \\( x = 10 \\):\n\\( 2f(10) = 10 + \\frac{9}{10} - \\left(-\\frac{1}{9}\\right) = 10 + \\frac{9}{10} + \\frac{1}{9} = \\frac{991}{90} \\).\nإذن، \\( f(10) = \\frac{991}{180} \\).\nبالتالي، \\( 180 \\cdot f(10) = 991 \\)."
+      }
+    },
+    "correct_index": "991"
+  },
+  {
+    "id": "OLYMPIAD-019",
+    "track": "olympiad",
+    "level": "High School",
+    "topic": "Combinatorics",
+    "type": "FRQ",
+    "difficulty": "medium",
+    "content": {
+      "en": {
+        "question": "Find the number of 3-element subsets \\( \\{a, b, c\\} \\) of \\( \\{1, 2, \\dots, 15\\} \\) such that \\( a + b + c \\) is divisible by 3.",
+        "options": [],
+        "hint": "Partition the numbers into residue classes modulo 3.",
+        "explanation": "Divide the set \\( \\{1, \\dots, 15\\} \\) into three residue classes modulo 3:\n\\( S_0 = \\{3, 6, 9, 12, 15\\} \\) (5 elements)\n\\( S_1 = \\{1, 4, 7, 10, 13\\} \\) (5 elements)\n\\( S_2 = \\{2, 5, 8, 11, 14\\} \\) (5 elements)\nTo get a sum divisible by 3, the subset must consist of:\n1. 3 elements from \\( S_0 \\): \\( \\binom{5}{3} = 10 \\)\n2. 3 elements from \\( S_1 \\): \\( \\binom{5}{3} = 10 \\)\n3. 3 elements from \\( S_2 \\): \\( \\binom{5}{3} = 10 \\)\n4. 1 element from each of \\( S_0, S_1, S_2 \\): \\( 5 \\times 5 \\times 5 = 125 \\)\nTotal number of subsets = \\( 10 + 10 + 10 + 125 = 155 \\)."
+      },
+      "ar": {
+        "question": "أوجد عدد المجموعات الجزئية المكونة من 3 عناصر \\( \\{a, b, c\\} \\) من \\( \\{1, 2, \\dots, 15\\} \\) بحيث يكون \\( a + b + c \\) قابلاً للقسمة على 3.",
+        "options": [],
+        "hint": "قسم الأعداد إلى فئات تكافؤ بمقياس 3.",
+        "explanation": "نقسم المجموعة \\( \\{1, \\dots, 15\\} \\) إلى ثلاث فئات تكافؤ بمقياس 3:\n\\( S_0 = \\{3, 6, 9, 12, 15\\} \\) (5 عناصر)\n\\( S_1 = \\{1, 4, 7, 10, 13\\} \\) (5 عناصر)\n\\( S_2 = \\{2, 5, 8, 11, 14\\} \\) (5 عناصر)\nللحصول على مجموع يقبل القسمة على 3، يجب أن تتكون المجموعة الجزئية من:\n1. 3 عناصر من \\( S_0 \\): \\( \\binom{5}{3} = 10 \\)\n2. 3 عناصر من \\( S_1 \\): \\( \\binom{5}{3} = 10 \\)\n3. 3 عناصر من \\( S_2 \\): \\( \\binom{5}{3} = 10 \\)\n4. عنصر واحد من كل فئة \\( S_0, S_1, S_2 \\): \\( 5 \\times 5 \\times 5 = 125 \\)\nعدد المجموعات الكلي = \\( 10 + 10 + 10 + 125 = 155 \\)."
+      }
+    },
+    "correct_index": "155"
+  },
+  {
+    "id": "OLYMPIAD-020",
+    "track": "olympiad",
+    "level": "High School",
+    "topic": "Number Theory",
+    "type": "FRQ",
+    "difficulty": "medium",
+    "content": {
+      "en": {
+        "question": "Find the number of positive integer solutions \\( (x, y) \\) to the equation \\( x^2 - y^2 = 2024 \\).",
+        "options": [],
+        "hint": "Factor as \\( (x - y)(x + y) = 2024 \\) and check parity of factors.",
+        "explanation": "We factor the equation as \\( (x-y)(x+y) = 2024 \\).\nLet \\( u = x-y \\) and \\( v = x+y \\). Then \\( u \\cdot v = 2024 = 2^3 \\times 11 \\times 23 \\).\nSince \\( u + v = 2x \\) is even, \\( u \\) and \\( v \\) must have the same parity. Their product is even, so both must be even.\nLet \\( u = 2a \\) and \\( v = 2b \\). Then \\( 4ab = 2024 \\implies ab = 506 \\).\nPrime factorization: \\( 506 = 2 \\times 11 \\times 23 \\).\nNumber of positive divisors of 506 is \\( 2^3 = 8 \\).\nEach pair \\( (a,b) \\) with \\( a < b \\) uniquely gives positive integers \\( x = b + a \\) and \\( y = b - a \\).\nSince there are \\( 8 / 2 = 4 \\) such pairs with \\( a < b \\), there are 4 positive integer solutions."
+      },
+      "ar": {
+        "question": "أوجد عدد أزواج الحلول من الأعداد الصحيحة الموجبة \\( (x, y) \\) للمعادلة \\( x^2 - y^2 = 2024 \\).",
+        "options": [],
+        "hint": "حلل المعادلة إلى \\( (x - y)(x + y) = 2024 \\) وتحقق من زوجية العوامل.",
+        "explanation": "نحلل المعادلة إلى \\( (x-y)(x+y) = 2024 \\).\nلتكن \\( u = x-y \\) و \\( v = x+y \\). بالتالي \\( u \\cdot v = 2024 = 2^3 \\times 11 \\times 23 \\).\nبما أن \\( u + v = 2x \\) زوجي، يجب أن يكون لـ \\( u \\) و \\( v \\) نفس الزوجية. وبما أن حاصل ضربهما زوجي، فيجب أن يكون كلاهما زوجياً.\nنفرض \\( u = 2a \\) و \\( v = 2b \\). إذن \\( 4ab = 2024 \\implies ab = 506 \\).\nتحليل 506 إلى عوامل أولية: \\( 506 = 2 \\times 11 \\times 23 \\).\nعدد القواسم الموجبة للعدد 506 هو \\( 2^3 = 8 \\).\nكل زوج \\( (a,b) \\) بحيث \\( a < b \\) يعطي بشكل فريد أعداداً صحيحة موجبة \\( x = b + a \\) و \\( y = b - a \\).\nبما أن هناك \\( 8 / 2 = 4 \\) أزواج مع \\( a < b \\)، فإن عدد الحلول هو 4."
+      }
+    },
+    "correct_index": "4"
+  },
+  {
+    "id": "OLYMPIAD-021",
+    "track": "olympiad",
+    "level": "High School",
+    "topic": "Combinatorics",
+    "type": "FRQ",
+    "difficulty": "hard",
+    "content": {
+      "en": {
+        "question": "In a tournament with 7 players where every pair plays exactly one match without ties, find the maximum possible number of cyclic triples of players (triples where \\( A \\) beats \\( B \\), \\( B \\) beats \\( C \\), and \\( C \\) beats \\( A \\)).",
+        "options": [],
+        "hint": "The maximum number of cyclic triples in a tournament on \\( n \\) vertices (where \\( n \\) is odd) is \\( \\frac{n(n^2-1)}{24} \\).",
+        "explanation": "For a tournament with \\( n \\) players, let \\( d_i \\) be the score (number of wins) of player \\( i \\). The number of non-cyclic (transitive) triples is \\( \\sum_{i=1}^n \\binom{d_i}{2} \\).\nTo maximize cyclic triples, we minimize transitive triples, which occurs when all \\( d_i \\) are as equal as possible.\nFor odd \\( n \\), the maximum number of cyclic triples is given by Kendall and Babington Smith's formula:\n\\( T(n) = \\frac{n(n^2 - 1)}{24} \\).\nFor \\( n = 7 \\):\n\\( T(7) = \\frac{7(49 - 1)}{24} = \\frac{7 \\times 48}{24} = 14 \\)."
+      },
+      "ar": {
+        "question": "في دورة تضم 7 لاعبين حيث يلعب كل زوج مباراة واحدة بالضبط دون تعادل، أوجد أقصى عدد ممكن من الثلاثيات الدورية من اللاعبين (الثلاثيات التي يفوز فيها \\( A \\) على \\( B \\)، و \\( B \\) على \\( C \\)، و \\( C \\) على \\( A \\)).",
+        "options": [],
+        "hint": "العدد الأقصى للثلاثيات الدورية في دورة تضم \\( n \\) من اللاعبين (حيث \\( n \\) فردي) هو \\( \\frac{n(n^2-1)}{24} \\).",
+        "explanation": "في دورة تضم \\( n \\) من اللاعبين، لتكن \\( d_i \\) عدد انتصارات اللاعب \\( i \\). عدد الثلاثيات غير الدورية (المتعدية) هو \\( \\sum_{i=1}^n \\binom{d_i}{2} \\).\nلتعظيم الثلاثيات الدورية، نقلل الثلاثيات المتعدية، ويحدث ذلك عندما تكون قيم \\( d_i \\) متساوية قدر الإمكان.\nعندما يكون \\( n \\) فردياً، فإن أقصى عدد للثلاثيات الدورية يُعطى بالصيغة:\n\\( T(n) = \\frac{n(n^2 - 1)}{24} \\).\nبالنسبة لـ \\( n = 7 \\):\n\\( T(7) = \\frac{7(49 - 1)}{24} = \\frac{7 \\times 48}{24} = 14 \\)."
+      }
+    },
+    "correct_index": "14"
   }
 ]

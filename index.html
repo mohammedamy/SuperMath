@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ar" dir="rtl">
+<html lang="en" dir="ltr">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -171,7 +171,7 @@
           <!-- Language Switcher -->
           <button id="lang-toggle-btn" onclick="toggleLanguage()" class="bg-slate-800/80 hover:bg-slate-700 text-amber-400 border border-slate-700 px-4 py-2 rounded-xl text-sm font-bold transition-all duration-300 flex items-center gap-2 hover:shadow-lg hover:shadow-amber-500/10">
             <span>🌐</span>
-            <span id="lang-label">English</span>
+            <span id="lang-label">العربية</span>
           </button>
         </div>
 
@@ -508,7 +508,7 @@
     };
 
     // --- 2. STATE MANAGEMENT ---
-    let currentLang = 'ar'; // 'ar' or 'en'
+    let currentLang = 'en'; // 'ar' or 'en'
     let currentFilteredQuestions = [...appData.questions];
     let currentQuestionIdx = 0;
     let selectedOptionIdx = null;
@@ -555,7 +555,7 @@
         lblTotalQ: "إجمالي أسئلة الـ 6 مسارات:",
         lblJsonSize: "الحجم التقديري لقاعدة البيانات:",
         lblLangNodes: "عقد المفاهيم ثنائية اللغة:",
-        footerText: "© 2026 منصة تحليلات واختبارات الرياضيات | Math Exam Intelligence Platform. جميع الحقوق محفوظة.",
+        footerText: "© 2026 منصة تحليلات واختبارات الرياضيات | Math Exam Intelligence Platform. جميع الحقوق محفوظة. | Made By: Mr Mohamed Abdallah",
         btnHint: "💡 عرض التلميح",
         btnSubmit: "تأكيد الإجابة",
         txtCorrect: "✨ إجابة صحيحة! أحسنت العمل.",
@@ -599,7 +599,7 @@
         lblTotalQ: "Total questions (6 tracks):",
         lblJsonSize: "Estimated JSON size:",
         lblLangNodes: "Bilingual concept nodes:",
-        footerText: "© 2026 Math Exam Intelligence Platform. All rights reserved.",
+        footerText: "© 2026 Math Exam Intelligence Platform. All rights reserved. | Made By: Mr Mohamed Abdallah",
         btnHint: "💡 Show Hint",
         btnSubmit: "Submit Answer",
         txtCorrect: "✨ Correct Answer! Outstanding work.",
