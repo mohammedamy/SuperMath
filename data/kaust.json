@@ -41,19 +41,19 @@
     "difficulty": "hard",
     "content": {
       "en": {
-        "question": "Find the number of shortest grid paths from \\( (0,0) \\) to \\( (4,4) \\) along the grid lines that do NOT pass through the point \\( (2,2) \\).<br/><svg viewBox='0 0 160 160' class='w-full max-w-xs mx-auto bg-slate-50 rounded-lg p-2 border border-slate-300'><path d='M 20 20 L 140 20 M 20 50 L 140 50 M 20 80 L 140 80 M 20 110 L 140 110 M 20 140 L 140 140 M 20 20 L 20 140 M 50 20 L 50 140 M 80 20 L 80 140 M 110 20 L 110 140 M 140 20 L 140 140' stroke='#cbd5e1' stroke-width='2'/><circle cx='80' cy='80' r='6' fill='#ef4444'/><circle cx='20' cy='140' r='5' fill='#22c55e'/><circle cx='140' cy='20' r='5' fill='#22c55e'/><text x='15' y='155' font-size='10' fill='#1e293b'>(0,0)</text><text x='125' y='15' font-size='10' fill='#1e293b'>(4,4)</text><text x='85' y='75' font-size='10' fill='#ef4444'>(2,2)</text></svg>",
+        "question": "Find the number of shortest grid paths from \\( (0,0) \\) to \\( (4,4) \\) along the grid lines that do NOT pass through the point \\( (2,2) \\).",
         "options": [],
         "hint": "Subtract the number of paths passing through \\( (2,2) \\) from the total number of paths.",
         "explanation": "Total shortest paths from \\( (0,0) \\) to \\( (4,4) \\) without restriction is \\( \\binom{4+4}{4} = \\binom{8}{4} = 70 \\). The number of paths from \\( (0,0) \\) to \\( (2,2) \\) is \\( \\binom{4}{2} = 6 \\). The number of paths from \\( (2,2) \\) to \\( (4,4) \\) is \\( \\binom{4}{2} = 6 \\). Thus, paths through \\( (2,2) \\) equal \\( 6 \\times 6 = 36 \\). Subtracting these gives \\( 70 - 36 = 34 \\)."
       },
       "ar": {
-        "question": "أوجد عدد أقصر الطرق على الشبكة من النقطة \\( (0,0) \\) إلى النقطة \\( (4,4) \\) عبر خطوط الشبكة والتي لا تمر بالنقطة \\( (2,2) \\).<br/><svg viewBox='0 0 160 160' class='w-full max-w-xs mx-auto bg-slate-50 rounded-lg p-2 border border-slate-300'><path d='M 20 20 L 140 20 M 20 50 L 140 50 M 20 80 L 140 80 M 20 110 L 140 110 M 20 140 L 140 140 M 20 20 L 20 140 M 50 20 L 50 140 M 80 20 L 80 140 M 110 20 L 110 140 M 140 20 L 140 140' stroke='#cbd5e1' stroke-width='2'/><circle cx='80' cy='80' r='6' fill='#ef4444'/><circle cx='20' cy='140' r='5' fill='#22c55e'/><circle cx='140' cy='20' r='5' fill='#22c55e'/><text x='15' y='155' font-size='10' fill='#1e293b'>(0,0)</text><text x='125' y='15' font-size='10' fill='#1e293b'>(4,4)</text><text x='85' y='75' font-size='10' fill='#ef4444'>(2,2)</text></svg>",
+        "question": "أوجد عدد أقصر الطرق على الشبكة من النقطة \\( (0,0) \\) إلى النقطة \\( (4,4) \\) عبر خطوط الشبكة والتي لا تمر بالنقطة \\( (2,2) \\).",
         "options": [],
         "hint": "اطرح عدد الطرق التي تمر بالنقطة \\( (2,2) \\) من الإجمالي الكلي للطرق.",
         "explanation": "إجمالي عدد الطرق الأقصر من \\( (0,0) \\) إلى \\( (4,4) \\) بدون شروط هو \\( \\binom{4+4}{4} = \\binom{8}{4} = 70 \\). عدد الطرق من \\( (0,0) \\) إلى \\( (2,2) \\) هو \\( \\binom{4}{2} = 6 \\). وعدد الطرق من \\( (2,2) \\) إلى \\( (4,4) \\) هو \\( \\binom{4}{2} = 6 \\). بالتالي عدد الطرق المارة بالنقطة \\( (2,2) \\) يساوي \\( 6 \\times 6 = 36 \\). وبطرحها من الإجمالي نحصل على \\( 70 - 36 = 34 \\)."
       }
     },
-    "correct_index": "34"
+    "correct_index": "0"
   },
   {
     "id": "KAUST-003",
@@ -176,7 +176,7 @@
     "difficulty": "hard",
     "content": {
       "en": {
-        "question": "In a game of Nim, there are three piles with \\( 2 \\), \\( 5 \\), and \\( 6 \\) coins respectively, as shown. Two players take turns removing any positive number of coins from a single pile. How many coins should the first player remove from the pile of \\( 5 \\) coins to leave a winning position (Nim-sum equal to \\( 0 \\))?<br/><svg viewBox='0 0 200 120' class='w-full max-w-xs mx-auto bg-slate-50 rounded-lg p-2 border border-slate-300'><g transform='translate(30,20)'><rect x='0' y='60' width='30' height='10' rx='2' fill='#f59e0b'/><rect x='0' y='45' width='30' height='10' rx='2' fill='#f59e0b'/><text x='15' y='85' text-anchor='middle' font-size='10'>2</text></g><g transform='translate(80,20)'><rect x='0' y='60' width='30' height='10' rx='2' fill='#f59e0b'/><rect x='0' y='45' width='30' height='10' rx='2' fill='#f59e0b'/><rect x='0' y='30' width='30' height='10' rx='2' fill='#f59e0b'/><rect x='0' y='15' width='30' height='10' rx='2' fill='#f59e0b'/><rect x='0' y='0' width='30' height='10' rx='2' fill='#f59e0b'/><text x='15' y='85' text-anchor='middle' font-size='10'>5</text></g><g transform='translate(130,20)'><rect x='0' y='60' width='30' height='10' rx='2' fill='#f59e0b'/><rect x='0' y='45' width='30' height='10' rx='2' fill='#f59e0b'/><rect x='0' y='30' width='30' height='10' rx='2' fill='#f59e0b'/><rect x='0' y='15' width='30' height='10' rx='2' fill='#f59e0b'/><rect x='0' y='0' width='30' height='10' rx='2' fill='#f59e0b'/><rect x='0' y='-15' width='30' height='10' rx='2' fill='#f59e0b'/><text x='15' y='85' text-anchor='middle' font-size='10'>6</text></g></svg>",
+        "question": "In a game of Nim, there are three piles with \\( 2 \\), \\( 5 \\), and \\( 6 \\) coins respectively, as shown. Two players take turns removing any positive number of coins from a single pile. How many coins should the first player remove from the pile of \\( 5 \\) coins to leave a winning position (Nim-sum equal to \\( 0 \\))?",
         "options": [
           "\\( 1 \\)",
           "\\( 2 \\)",
@@ -187,7 +187,7 @@
         "explanation": "The current Nim-sum is \\( 2 \\oplus 5 \\oplus 6 = 010_2 \\oplus 101_2 \\oplus 110_2 = 001_2 = 1 \\). To reduce the Nim-sum to \\( 0 \\), the middle pile of \\( 5 \\) must be changed to \\( 2 \\oplus 6 = 010_2 \\oplus 110_2 = 100_2 = 4 \\). Thus, the player must remove \\( 5 - 4 = 1 \\) coin from the pile of \\( 5 \\)."
       },
       "ar": {
-        "question": "في لعبة نيم (Nim)، يوجد ثلاث كومة تحتوي على \\( 2 \\) و \\( 5 \\) و \\( 6 \\) قطع نقدية على التوالي. يتبادل لاعبان الأدوار لإزالة أي عدد موجب من القطع النقدية من كومة واحدة. كم قطعة نقدية يجب أن يزيل اللاعب الأول من الكومة التي تحتوي على \\( 5 \\) قطع لترك الموقف الفائز (مجموع نيم يساوي \\( 0 \\))؟<br/><svg viewBox='0 0 200 120' class='w-full max-w-xs mx-auto bg-slate-50 rounded-lg p-2 border border-slate-300'><g transform='translate(30,20)'><rect x='0' y='60' width='30' height='10' rx='2' fill='#f59e0b'/><rect x='0' y='45' width='30' height='10' rx='2' fill='#f59e0b'/><text x='15' y='85' text-anchor='middle' font-size='10'>2</text></g><g transform='translate(80,20)'><rect x='0' y='60' width='30' height='10' rx='2' fill='#f59e0b'/><rect x='0' y='45' width='30' height='10' rx='2' fill='#f59e0b'/><rect x='0' y='30' width='30' height='10' rx='2' fill='#f59e0b'/><rect x='0' y='15' width='30' height='10' rx='2' fill='#f59e0b'/><rect x='0' y='0' width='30' height='10' rx='2' fill='#f59e0b'/><text x='15' y='85' text-anchor='middle' font-size='10'>5</text></g><g transform='translate(130,20)'><rect x='0' y='60' width='30' height='10' rx='2' fill='#f59e0b'/><rect x='0' y='45' width='30' height='10' rx='2' fill='#f59e0b'/><rect x='0' y='30' width='30' height='10' rx='2' fill='#f59e0b'/><rect x='0' y='15' width='30' height='10' rx='2' fill='#f59e0b'/><rect x='0' y='0' width='30' height='10' rx='2' fill='#f59e0b'/><rect x='0' y='-15' width='30' height='10' rx='2' fill='#f59e0b'/><text x='15' y='85' text-anchor='middle' font-size='10'>6</text></g></svg>",
+        "question": "في لعبة نيم (Nim)، يوجد ثلاث كومة تحتوي على \\( 2 \\) و \\( 5 \\) و \\( 6 \\) قطع نقدية على التوالي. يتبادل لاعبان الأدوار لإزالة أي عدد موجب من القطع النقدية من كومة واحدة. كم قطعة نقدية يجب أن يزيل اللاعب الأول من الكومة التي تحتوي على \\( 5 \\) قطع لترك الموقف الفائز (مجموع نيم يساوي \\( 0 \\))؟",
         "options": [
           "\\( 1 \\)",
           "\\( 2 \\)",
@@ -209,19 +209,19 @@
     "difficulty": "easy",
     "content": {
       "en": {
-        "question": "The bar chart below shows the scores of \\( 20 \\) students in a quiz. What is the median score?<br/><svg viewBox='0 0 200 120' class='w-full max-w-xs mx-auto bg-slate-50 rounded-lg p-2 border border-slate-300'><line x1='30' y1='100' x2='180' y2='100' stroke='#334155' stroke-width='2'/><line x1='30' y1='20' x2='30' y2='100' stroke='#334155' stroke-width='2'/><rect x='40' y='70' width='20' height='30' fill='#3b82f6'/><text x='50' y='112' font-size='8' text-anchor='middle'>5</text><text x='50' y='65' font-size='8' text-anchor='middle'>3</text><rect x='70' y='50' width='20' height='50' fill='#3b82f6'/><text x='80' y='112' font-size='8' text-anchor='middle'>6</text><text x='80' y='45' font-size='8' text-anchor='middle'>5</text><rect x='100' y='20' width='20' height='80' fill='#3b82f6'/><text x='110' y='112' font-size='8' text-anchor='middle'>7</text><text x='110' y='15' font-size='8' text-anchor='middle'>8</text><rect x='130' y='60' width='20' height='40' fill='#3b82f6'/><text x='140' y='112' font-size='8' text-anchor='middle'>8</text><text x='140' y='55' font-size='8' text-anchor='middle'>4</text><text x='20' y='15' font-size='8'>Freq</text><text x='180' y='112' font-size='8'>Score</text></svg>",
+        "question": "The bar chart below shows the scores of \\( 20 \\) students in a quiz. What is the median score?",
         "options": [],
         "hint": "Find the average of the \\( 10 \\)th and \\( 11 \\)th ordered score values.",
         "explanation": "Total number of students is \\( 3 + 5 + 8 + 4 = 20 \\). Cumulative frequencies: score \\( 5 \\) (counts \\( 1-3 \\)), score \\( 6 \\) (counts \\( 4-8 \\)), score \\( 7 \\) (counts \\( 9-16 \\)). Both the \\( 10 \\)th and \\( 11 \\)th student scores fall into score \\( 7 \\). Hence, the median score is \\( 7 \\)."
       },
       "ar": {
-        "question": "يوضح التمثيل البياني بالأعمدة أدناه درجات \\( 20 \\) طالبًا في اختبار قصير. ما هي الدرجة الوسيطة (الوسيط)؟<br/><svg viewBox='0 0 200 120' class='w-full max-w-xs mx-auto bg-slate-50 rounded-lg p-2 border border-slate-300'><line x1='30' y1='100' x2='180' y2='100' stroke='#334155' stroke-width='2'/><line x1='30' y1='20' x2='30' y2='100' stroke='#334155' stroke-width='2'/><rect x='40' y='70' width='20' height='30' fill='#3b82f6'/><text x='50' y='112' font-size='8' text-anchor='middle'>5</text><text x='50' y='65' font-size='8' text-anchor='middle'>3</text><rect x='70' y='50' width='20' height='50' fill='#3b82f6'/><text x='80' y='112' font-size='8' text-anchor='middle'>6</text><text x='80' y='45' font-size='8' text-anchor='middle'>5</text><rect x='100' y='20' width='20' height='80' fill='#3b82f6'/><text x='110' y='112' font-size='8' text-anchor='middle'>7</text><text x='110' y='15' font-size='8' text-anchor='middle'>8</text><rect x='130' y='60' width='20' height='40' fill='#3b82f6'/><text x='140' y='112' font-size='8' text-anchor='middle'>8</text><text x='140' y='55' font-size='8' text-anchor='middle'>4</text><text x='20' y='15' font-size='8'>الفيئة</text><text x='180' y='112' font-size='8'>الدرجة</text></svg>",
+        "question": "يوضح التمثيل البياني بالأعمدة أدناه درجات \\( 20 \\) طالبًا في اختبار قصير. ما هي الدرجة الوسيطة (الوسيط)؟",
         "options": [],
         "hint": "أوجد متوسط القيمة العاشرة والحادية عشرة في الدرجات المرتّبة.",
         "explanation": "إجمالي الطلاب يساوي \\( 3 + 5 + 8 + 4 = 20 \\). التكرارات التراكمية: الدرجة \\( 5 \\) (من \\( 1 \\) إلى \\( 3 \\))، الدرجة \\( 6 \\) (من \\( 4 \\) إلى \\( 8 \\))، والدرجة \\( 7 \\) (من \\( 9 \\) إلى \\( 16 \\)). القيمة العاشرة والحادية عشرة تقعان عند الدرجة \\( 7 \\)، بالتالي فإن الوسيط يساوي \\( 7 \\)."
       }
     },
-    "correct_index": "7"
+    "correct_index": "0"
   },
   {
     "id": "KAUST-009",
@@ -277,7 +277,7 @@
         "explanation": "نفرض \\( g(x) = f(x) - x^2 \\). تصبح المعادلة \\( g(x+y) = g(x) + g(y) \\). وبما أن \\( f \\) متصلة، فإن \\( g(x) = cx \\) لبعض الثوابت \\( c \\). بالتالي \\( f(x) = x^2 + cx \\). من المعطى \\( f(1) = 1 + c = 4 \\implies c = 3 \\). إذن \\( f(x) = x^2 + 3x \\)، ومنه \\( f(5) = 5^2 + 3(5) = 40 \\)."
       }
     },
-    "correct_index": "40"
+    "correct_index": "0"
   },
   {
     "id": "KAUST-011",
@@ -333,7 +333,7 @@
         "explanation": "المسار الأول: \\( A \\to C \\to D \\) يستغرق \\( 3 + 4 + 6 = 13 \\) يوماً. المسار الثاني: \\( B \\to D \\) يستغرق \\( 5 + 6 = 11 \\) يوماً. الحد الأدنى لإنجاز المشروع يُحدد بأطول مسار وهو \\( 13 \\) يوماً."
       }
     },
-    "correct_index": "13"
+    "correct_index": "0"
   },
   {
     "id": "KAUST-013",
@@ -389,7 +389,7 @@
         "explanation": "بحساب الحدود متتالياً: \\( a_2 = 4(3) - 4(1) = 8 \\). \\( a_3 = 4(8) - 4(3) = 20 \\). \\( a_4 = 4(20) - 4(8) = 48 \\). \\( a_5 = 4(48) - 4(20) = 112 \\)."
       }
     },
-    "correct_index": "112"
+    "correct_index": "0"
   },
   {
     "id": "KAUST-015",
@@ -445,7 +445,7 @@
         "explanation": "بالضرب في \\( 6xy \\) نحصل على \\( xy - 6x - 6y = 0 \\)، وبإضافة \\( 36 \\) للطرفين تصبح \\( (x-6)(y-6) = 36 \\). بما أن \\( x, y \\) أعداد صحيحة موجبة، يجب أن يكون \\( x-6 \\) قاسماً موجباً للعدد \\( 36 \\). عدد قواسم \\( 36 = 2^2 \\times 3^2 \\) هو \\( (2+1)(2+1) = 9 \\). كل قاسم يعطي زوجاً مرتباً صحيحاً وموجباً \\( (x, y) \\)، لذا يوجد \\( 9 \\) أزواج."
       }
     },
-    "correct_index": "9"
+    "correct_index": "0"
   },
   {
     "id": "KAUST-017",
@@ -456,7 +456,7 @@
     "difficulty": "hard",
     "content": {
       "en": {
-        "question": "Consider the flow network shown below, where numbers on edges denote capacities. What is the maximum flow from source \\( S \\) to sink \\( T \\)?<br/><svg viewBox='0 0 220 120' class='w-full max-w-xs mx-auto bg-slate-50 rounded-lg p-2 border border-slate-300'><line x1='30' y1='54' x2='70' y2='31' stroke='#475569' stroke-width='1.5'/><text x='45' y='38' font-size='8'>10</text><line x1='30' y1='66' x2='70' y2='89' stroke='#475569' stroke-width='1.5'/><text x='45' y='88' font-size='8'>8</text><line x1='90' y1='25' x2='130' y2='25' stroke='#475569' stroke-width='1.5'/><text x='110' y='20' font-size='8'>7</text><line x1='90' y1='95' x2='130' y2='95' stroke='#475569' stroke-width='1.5'/><text x='110' y='107' font-size='8'>5</text><line x1='80' y1='35' x2='80' y2='85' stroke='#475569' stroke-width='1.5'/><text x='73' y='60' font-size='8'>4</text><line x1='150' y1='31' x2='190' y2='54' stroke='#475569' stroke-width='1.5'/><text x='175' y='38' font-size='8'>8</text><line x1='150' y1='89' x2='190' y2='66' stroke='#475569' stroke-width='1.5'/><text x='175' y='88' font-size='8'>6</text><circle cx='20' cy='60' r='10' fill='#3b82f6'/><text x='20' y='64' fill='white' font-size='10' text-anchor='middle'>S</text><circle cx='80' cy='25' r='10' fill='#3b82f6'/><text x='80' y='29' fill='white' font-size='10' text-anchor='middle'>A</text><circle cx='80' cy='95' r='10' fill='#3b82f6'/><text x='80' y='99' fill='white' font-size='10' text-anchor='middle'>B</text><circle cx='140' cy='25' r='10' fill='#3b82f6'/><text x='140' y='29' fill='white' font-size='10' text-anchor='middle'>C</text><circle cx='140' cy='95' r='10' fill='#3b82f6'/><text x='140' y='99' fill='white' font-size='10' text-anchor='middle'>D</text><circle cx='200' cy='60' r='10' fill='#3b82f6'/><text x='200' y='64' fill='white' font-size='10' text-anchor='middle'>T</text></svg>",
+        "question": "Consider the flow network shown below, where numbers on edges denote capacities. What is the maximum flow from source \\( S \\) to sink \\( T \\)?",
         "options": [
           "\\( 10 \\)",
           "\\( 12 \\)",
@@ -467,7 +467,7 @@
         "explanation": "Consider the cut separating \\( \\{S, A, B\\} \\) from \\( \\{C, D, T\\} \\). The edges crossing this cut are \\( (A, C) \\) with capacity \\( 7 \\) and \\( (B, D) \\) with capacity \\( 5 \\). The total cut capacity is \\( 7 + 5 = 12 \\). By the Max-Flow Min-Cut Theorem, the maximum flow cannot exceed \\( 12 \\). A flow of \\( 12 \\) can be achieved by sending \\( 7 \\) units along \\( S \\to A \\to C \\to T \\) and \\( 5 \\) units along \\( S \\to B \\to D \\to T \\). Thus, max flow = \\( 12 \\)."
       },
       "ar": {
-        "question": "تأمل شبكة التدفق الموضحة أدناه، حيث تمثل الأعداد على الحواف السعات. ما هو أقصى تدفق من المصدر \\( S \\) إلى المصب \\( T \\)؟<br/><svg viewBox='0 0 220 120' class='w-full max-w-xs mx-auto bg-slate-50 rounded-lg p-2 border border-slate-300'><line x1='30' y1='54' x2='70' y2='31' stroke='#475569' stroke-width='1.5'/><text x='45' y='38' font-size='8'>10</text><line x1='30' y1='66' x2='70' y2='89' stroke='#475569' stroke-width='1.5'/><text x='45' y='88' font-size='8'>8</text><line x1='90' y1='25' x2='130' y2='25' stroke='#475569' stroke-width='1.5'/><text x='110' y='20' font-size='8'>7</text><line x1='90' y1='95' x2='130' y2='95' stroke='#475569' stroke-width='1.5'/><text x='110' y='107' font-size='8'>5</text><line x1='80' y1='35' x2='80' y2='85' stroke='#475569' stroke-width='1.5'/><text x='73' y='60' font-size='8'>4</text><line x1='150' y1='31' x2='190' y2='54' stroke='#475569' stroke-width='1.5'/><text x='175' y='38' font-size='8'>8</text><line x1='150' y1='89' x2='190' y2='66' stroke='#475569' stroke-width='1.5'/><text x='175' y='88' font-size='8'>6</text><circle cx='20' cy='60' r='10' fill='#3b82f6'/><text x='20' y='64' fill='white' font-size='10' text-anchor='middle'>S</text><circle cx='80' cy='25' r='10' fill='#3b82f6'/><text x='80' y='29' fill='white' font-size='10' text-anchor='middle'>A</text><circle cx='80' cy='95' r='10' fill='#3b82f6'/><text x='80' y='99' fill='white' font-size='10' text-anchor='middle'>B</text><circle cx='140' cy='25' r='10' fill='#3b82f6'/><text x='140' y='29' fill='white' font-size='10' text-anchor='middle'>C</text><circle cx='140' cy='95' r='10' fill='#3b82f6'/><text x='140' y='99' fill='white' font-size='10' text-anchor='middle'>D</text><circle cx='200' cy='60' r='10' fill='#3b82f6'/><text x='200' y='64' fill='white' font-size='10' text-anchor='middle'>T</text></svg>",
+        "question": "تأمل شبكة التدفق الموضحة أدناه، حيث تمثل الأعداد على الحواف السعات. ما هو أقصى تدفق من المصدر \\( S \\) إلى المصب \\( T \\)؟",
         "options": [
           "\\( 10 \\)",
           "\\( 12 \\)",
@@ -501,7 +501,7 @@
         "explanation": "يمكن تقسيم الأعداد إلى \\( 10 \\) أزواج منفصلة مجموع كل منها \\( 21 \\): \\( \\{1, 20\\}, \\{2, 19\\}, \\dots, \\{10, 11\\} \\). بحسب مبدأ برج الحمام (Pigeonhole Principle)، فإن اختيار \\( 10 \\) أعداد قد تجعلنا نأخذ عدداً واحداً من كل زوج. بينما اختيار \\( 11 \\) عدداً يضمن اختيار زوج مكتمل بالكامل مجموع عنصريه \\( 21 \\). بالتالي، العدد الأدنى هو \\( 11 \\)."
       }
     },
-    "correct_index": "11"
+    "correct_index": "0"
   },
   {
     "id": "KAUST-019",
@@ -755,7 +755,7 @@
         "explanation": "لتكن \\( p_1 \\) و \\( p_2 \\) احتمالات الحالة المستقرة بالتواجد في \\( S_1 \\) و \\( S_2 \\) على التوالي.\nمعادلات الانتقال هي:\n\\( p_1 = 0.8 p_1 + 0.3 p_2 \\)\nو \\( p_1 + p_2 = 1 \\).\nمن المعادلة الأولى:\n\\( 0.2 p_1 = 0.3 p_2 \\implies 2 p_1 = 3 p_2 \\implies p_2 = \\frac{2}{3} p_1 \\).\nبالتعويض في \\( p_1 + p_2 = 1 \\):\n\\( p_1 + \\frac{2}{3} p_1 = 1 \\implies \\frac{5}{3} p_1 = 1 \\implies p_1 = \\frac{3}{5} = 0.6 \\).\nبالتالي، \\( 10 \\cdot p_1 = 10 \\cdot 0.6 = 6 \\)."
       }
     },
-    "correct_index": "6"
+    "correct_index": "0"
   },
   {
     "id": "KAUST-028",
@@ -844,7 +844,7 @@
         "explanation": "بدءاً من \\( X = 7 \\):\n1. \\( 7 \\to 22 \\)\n2. \\( 22 \\to 11 \\)\n3. \\( 11 \\to 34 \\)\n4. \\( 34 \\to 17 \\)\n5. \\( 17 \\to 52 \\)\n6. \\( 52 \\to 26 \\)\n7. \\( 26 \\to 13 \\)\n8. \\( 13 \\to 40 \\)\n9. \\( 40 \\to 20 \\)\n10. \\( 20 \\to 10 \\)\n11. \\( 10 \\to 5 \\)\n12. \\( 5 \\to 16 \\)\n13. \\( 16 \\to 8 \\)\n14. \\( 8 \\to 4 \\)\n15. \\( 4 \\to 2 \\)\n16. \\( 2 \\to 1 \\)\nإجمالي عدد الخطوات = \\( 16 \\)."
       }
     },
-    "correct_index": "16"
+    "correct_index": "0"
   },
   {
     "id": "KAUST-031",
@@ -888,7 +888,7 @@
     "difficulty": "easy",
     "content": {
       "en": {
-        "question": "In a cohort of \\( 100 \\) high school students, \\( 65 \\) study Mathematics, \\( 45 \\) study Physics, and \\( 20 \\) study neither subject, as represented in the Venn diagram below. How many students study BOTH Mathematics and Physics? <svg viewBox=\"0 0 200 120\" class=\"w-full max-w-xs mx-auto bg-white rounded-lg p-2\"><circle cx=\"75\" cy=\"60\" r=\"45\" fill=\"#93c5fd\" fill-opacity=\"0.5\" stroke=\"#1d4ed8\" stroke-width=\"2\"/><circle cx=\"125\" cy=\"60\" r=\"45\" fill=\"#fca5a5\" fill-opacity=\"0.5\" stroke=\"#dc2626\" stroke-width=\"2\"/><text x=\"50\" y=\"65\" font-size=\"12\" font-weight=\"bold\">M</text><text x=\"145\" y=\"65\" font-size=\"12\" font-weight=\"bold\">P</text><text x=\"95\" y=\"65\" font-size=\"10\">?</text></svg>",
+        "question": "In a cohort of \\( 100 \\) high school students, \\( 65 \\) study Mathematics, \\( 45 \\) study Physics, and \\( 20 \\) study neither subject, as represented in the Venn diagram below. How many students study BOTH Mathematics and Physics? ",
         "options": [
           "\\( 20 \\)",
           "\\( 25 \\)",
@@ -899,7 +899,7 @@
         "explanation": "The total number of students studying at least one subject is:\n\\( |M \\cup P| = 100 - 20 = 80 \\).\nBy the Principle of Inclusion-Exclusion:\n\\( |M \\cup P| = |M| + |P| - |M \\cap P| \\)\n\\( 80 = 65 + 45 - |M \\cap P| \\)\n\\( 80 = 110 - |M \\cap P| \\implies |M \\cap P| = 110 - 80 = 30 \\).\nSo, \\( 30 \\) students study both subjects."
       },
       "ar": {
-        "question": "في مجموعة تضم \\( 100 \\) طالب في المرحلة الثانوية، يدرس \\( 65 \\) طالباً الرياضيات، و \\( 45 \\) يدرسون الفيزياء، و \\( 20 \\) لا يدرسون أيًا من المادتين، كما هو موضح في شكل فين أدناه. كم عدد الطلاب الذين يدرسون كلا المادتين: الرياضيات والفيزياء؟ <svg viewBox=\"0 0 200 120\" class=\"w-full max-w-xs mx-auto bg-white rounded-lg p-2\"><circle cx=\"75\" cy=\"60\" r=\"45\" fill=\"#93c5fd\" fill-opacity=\"0.5\" stroke=\"#1d4ed8\" stroke-width=\"2\"/><circle cx=\"125\" cy=\"60\" r=\"45\" fill=\"#fca5a5\" fill-opacity=\"0.5\" stroke=\"#dc2626\" stroke-width=\"2\"/><text x=\"50\" y=\"65\" font-size=\"12\" font-weight=\"bold\">M</text><text x=\"145\" y=\"65\" font-size=\"12\" font-weight=\"bold\">P</text><text x=\"95\" y=\"65\" font-size=\"10\">?</text></svg>",
+        "question": "في مجموعة تضم \\( 100 \\) طالب في المرحلة الثانوية، يدرس \\( 65 \\) طالباً الرياضيات، و \\( 45 \\) يدرسون الفيزياء، و \\( 20 \\) لا يدرسون أيًا من المادتين، كما هو موضح في شكل فين أدناه. كم عدد الطلاب الذين يدرسون كلا المادتين: الرياضيات والفيزياء؟ ",
         "options": [
           "\\( 20 \\)",
           "\\( 25 \\)",
@@ -933,7 +933,7 @@
         "explanation": "لتكن \\( E_0 \\) التوقع من الحالة الابتدائية، و \\( E_H \\) التوقع المتبقي بعد رمي وجه \\( H \\).\nمن الحالة الابتدائية:\n\\( E_0 = 1 + \\frac{1}{2} E_H + \\frac{1}{2} E_0 \\implies E_0 = 2 + E_H \\).\nمن الحالة \\( H \\):\nإذا ظهرت كتابة \\( T \\) (باحتمال \\( 1/2 \\)) نتوقف (تكلفة \\( 1 \\)).\nإذا ظهر وجه \\( H \\) (باحتمال \\( 1/2 \\)) نكون لا نزال في حالة \\( H \\) (تكلفة \\( 1 + E_H \\)).\n\\( E_H = 1 + \\frac{1}{2}(0) + \\frac{1}{2} E_H \\implies E_H = 2 \\).\nبالتعويض في المعادلة الأولى:\n\\( E_0 = 2 + 2 = 4 \\).\nإذاً، العدد المتوقع لمرات الرمي هو \\( 4 \\)."
       }
     },
-    "correct_index": "4"
+    "correct_index": "0"
   },
   {
     "id": "KAUST-034",
@@ -989,7 +989,7 @@
         "explanation": "بواسطة صيغة أويلر لمتعدد الوجوه المحدب:\n$$ V - E + F = 2 $$\nمعطى \\( V = 12 \\) رأساً و \\( E = 30 \\) حافة:\n$$ 12 - 30 + F = 2 $$\n$$ -18 + F = 2 \\implies F = 20 $$\nهذا مجسم عشروني الوجوه منتظم، ولديه \\( 20 \\) و دهاً مثلثاً."
       }
     },
-    "correct_index": "20"
+    "correct_index": "0"
   },
   {
     "id": "KAUST-036",
@@ -1045,7 +1045,7 @@
         "explanation": "إجمالي عدد الخطوات المطلوبة هو \\( 4 + 3 = 7 \\) خطوات.\nمن بين هذه الخطوات السبع، يجب أن نختار \\( 3 \\) خطوات للتحرك لأعلى.\nعدد المسارات المتميزة هو:\n$$ \\binom{7}{3} = \\frac{7 \\times 6 \\times 5}{3 \\times 2 \\times 1} = 35 $$\nبالتالي، يوجد \\( 35 \\) مساراً أقصر."
       }
     },
-    "correct_index": "35"
+    "correct_index": "0"
   },
   {
     "id": "KAUST-038",
@@ -1101,7 +1101,7 @@
         "explanation": "بما أن معامل كثير الحدود حقيقية و \\( 2 + i \\) جذر، فإن المذفق المركب \\( 2 - i \\) يجب أن يكون جذراً أيضاً.\nجذور \\( P(x) \\) هي \\( r_1 = 2 + i \\)، \\( r_2 = 2 - i \\)، \\( r_3 = 3 \\)، و \\( r_4 = 3 \\).\nبواسطة صيغ فييتا، الحد الثابت \\( d = P(0) \\) يساوي حاصل ضرب جميع الجذور:\n$$ P(0) = (2 + i)(2 - i) \\cdot 3 \\cdot 3 $$\n$$ (2 + i)(2 - i) = 4 - (-1) = 5 $$\n$$ P(0) = 5 \\times 9 = 45 $$\nبالتالي، \\( P(0) = 45 \\)."
       }
     },
-    "correct_index": "45"
+    "correct_index": "0"
   },
   {
     "id": "KAUST-040",
@@ -1279,7 +1279,7 @@
         "explanation": "بما أن \\( 109 \\) عدد أولي، فإن مبرهنة فيرما الصغرى تنص على أن \\( 2^{108} \\equiv 1 \\pmod{109} \\).<br/>رتبة العدد \\( d \\) بمقياس \\( 109 \\) يجب أن تقسم \\( 108 = 2^2 \\times 3^3 \\).<br/>نحسب القوى:<br/>\\( 2^9 = 512 = 4 \\times 109 + 76 \\equiv -33 \\pmod{109} \\).<br/>\\( 2^{18} \\equiv (-33)^2 = 1089 = 10 \\times 109 - 1 \\equiv -1 \\pmod{109} \\).<br/>بما أن \\( 2^{18} \\equiv -1 \\pmod{109} \\)، فإن \\( 2^{36} \\equiv 1 \\pmod{109} \\).<br/>بفحص القواسم الأصغر لـ \\( 36 \\)، نجد أن لا توجد قوة أصغر تعطي \\( 1 \\). بالتالي، \\( n = 36 \\)."
       }
     },
-    "correct_index": "36"
+    "correct_index": "0"
   },
   {
     "id": "KAUST-046",
@@ -1323,7 +1323,7 @@
     "difficulty": "hard",
     "content": {
       "en": {
-        "question": "A grid robot moves from \\( (0,0) \\) to \\( (4,4) \\) taking only Right (\\( +x \\)) and Up (\\( +y \\)) steps.<br/><svg viewBox=\"0 0 200 200\" class=\"w-full max-w-xs mx-auto bg-slate-900 rounded-lg p-2 my-2\"><defs><pattern id=\"grid\" width=\"40\" height=\"40\" patternUnits=\"userSpaceOnUse\"><path d=\"M 40 0 L 0 0 0 40\" fill=\"none\" stroke=\"#334155\" stroke-width=\"1\"/></pattern></defs><rect width=\"160\" height=\"160\" x=\"20\" y=\"20\" fill=\"url(#grid)\" stroke=\"#475569\" stroke-width=\"2\"/><circle cx=\"20\" cy=\"180\" r=\"5\" fill=\"#10b981\"/><text x=\"10\" y=\"198\" fill=\"#10b981\" font-size=\"10\">(0,0)</text><circle cx=\"180\" cy=\"20\" r=\"5\" fill=\"#3b82f6\"/><text x=\"165\" y=\"15\" fill=\"#3b82f6\" font-size=\"10\">(4,4)</text><line x1=\"93\" y1=\"133\" x2=\"107\" y2=\"147\" stroke=\"#ef4444\" stroke-width=\"3\"/><line x1=\"107\" y1=\"133\" x2=\"93\" y2=\"147\" stroke=\"#ef4444\" stroke-width=\"3\"/><text x=\"112\" y=\"145\" fill=\"#ef4444\" font-size=\"10\">(2,1)</text><line x1=\"93\" y1=\"53\" x2=\"107\" y2=\"67\" stroke=\"#ef4444\" stroke-width=\"3\"/><line x1=\"107\" y1=\"53\" x2=\"93\" y2=\"67\" stroke=\"#ef4444\" stroke-width=\"3\"/><text x=\"112\" y=\"65\" fill=\"#ef4444\" font-size=\"10\">(2,3)</text></svg><br/>If the lattice points \\( (2,1) \\) and \\( (2,3) \\) are blocked, how many valid paths exist from \\( (0,0) \\) to \\( (4,4) \\)?",
+        "question": "A grid robot moves from \\( (0,0) \\) to \\( (4,4) \\) taking only Right (\\( +x \\)) and Up (\\( +y \\)) steps.<br/>If the lattice points \\( (2,1) \\) and \\( (2,3) \\) are blocked, how many valid paths exist from \\( (0,0) \\) to \\( (4,4) \\)?",
         "options": [
           "\\( 17 \\)",
           "\\( 19 \\)",
@@ -1334,7 +1334,7 @@
         "explanation": "Total unrestricted paths from \\( (0,0) \\) to \\( (4,4) \\): \\( \\binom{8}{4} = 70 \\).<br/>Paths passing through \\( A(2,1) \\): \\( \\binom{3}{1} \\times \\binom{5}{3} = 3 \\times 10 = 30 \\).<br/>Paths passing through \\( B(2,3) \\): \\( \\binom{5}{2} \\times \\binom{3}{1} = 10 \\times 3 = 30 \\).<br/>Paths passing through BOTH \\( A \\) and \\( B \\): \\( \\binom{3}{1} \\times \\binom{2}{0} \\times \\binom{3}{1} = 3 \\times 1 \\times 3 = 9 \\).<br/>By Inclusion-Exclusion, total blocked paths = \\( 30 + 30 - 9 = 51 \\).<br/>Valid paths = \\( 70 - 51 = 19 \\)."
       },
       "ar": {
-        "question": "يتنقل روبوت على شبكة من \\( (0,0) \\) إلى \\( (4,4) \\) متخذاً فقط خطوات لليمين (\\( +x \\)) وأعلاها (\\( +y \\)).<br/><svg viewBox=\"0 0 200 200\" class=\"w-full max-w-xs mx-auto bg-slate-900 rounded-lg p-2 my-2\"><defs><pattern id=\"grid2\" width=\"40\" height=\"40\" patternUnits=\"userSpaceOnUse\"><path d=\"M 40 0 L 0 0 0 40\" fill=\"none\" stroke=\"#334155\" stroke-width=\"1\"/></pattern></defs><rect width=\"160\" height=\"160\" x=\"20\" y=\"20\" fill=\"url(#grid2)\" stroke=\"#475569\" stroke-width=\"2\"/><circle cx=\"20\" cy=\"180\" r=\"5\" fill=\"#10b981\"/><text x=\"10\" y=\"198\" fill=\"#10b981\" font-size=\"10\">(0,0)</text><circle cx=\"180\" cy=\"20\" r=\"5\" fill=\"#3b82f6\"/><text x=\"165\" y=\"15\" fill=\"#3b82f6\" font-size=\"10\">(4,4)</text><line x1=\"93\" y1=\"133\" x2=\"107\" y2=\"147\" stroke=\"#ef4444\" stroke-width=\"3\"/><line x1=\"107\" y1=\"133\" x2=\"93\" y2=\"147\" stroke=\"#ef4444\" stroke-width=\"3\"/><text x=\"112\" y=\"145\" fill=\"#ef4444\" font-size=\"10\">(2,1)</text><line x1=\"93\" y1=\"53\" x2=\"107\" y2=\"67\" stroke=\"#ef4444\" stroke-width=\"3\"/><line x1=\"107\" y1=\"53\" x2=\"93\" y2=\"67\" stroke=\"#ef4444\" stroke-width=\"3\"/><text x=\"112\" y=\"65\" fill=\"#ef4444\" font-size=\"10\">(2,3)</text></svg><br/>إذا كانت النقطتان الشبكيتان \\( (2,1) \\) و \\( (2,3) \\) محظورتين، فكم مساراً صالحاً يوجد من \\( (0,0) \\) إلى \\( (4,4) \\)؟",
+        "question": "يتنقل روبوت على شبكة من \\( (0,0) \\) إلى \\( (4,4) \\) متخذاً فقط خطوات لليمين (\\( +x \\)) وأعلاها (\\( +y \\)).<br/>إذا كانت النقطتان الشبكيتان \\( (2,1) \\) و \\( (2,3) \\) محظورتين، فكم مساراً صالحاً يوجد من \\( (0,0) \\) إلى \\( (4,4) \\)؟",
         "options": [
           "\\( 17 \\)",
           "\\( 19 \\)",
@@ -1356,7 +1356,7 @@
     "difficulty": "hard",
     "content": {
       "en": {
-        "question": "A digital system takes binary inputs \\( A, B, C \\in \\{0, 1\\} \\) and computes output \\( Z = (A \\oplus B) + (B \\cdot C) \\), where \\( \\oplus \\) is XOR, \\( \\cdot \\) is AND, and \\( + \\) is OR.<br/><svg viewBox=\"0 0 300 120\" class=\"w-full max-w-sm mx-auto bg-slate-900 rounded-lg p-2 my-2\"><text x=\"20\" y=\"35\" fill=\"white\" font-size=\"12\">A</text><text x=\"20\" y=\"65\" fill=\"white\" font-size=\"12\">B</text><text x=\"20\" y=\"95\" fill=\"white\" font-size=\"12\">C</text><rect x=\"70\" y=\"20\" width=\"50\" height=\"30\" rx=\"5\" fill=\"#8b5cf6\"/><text x=\"82\" y=\"40\" fill=\"white\" font-size=\"10\">XOR</text><rect x=\"70\" y=\"70\" width=\"50\" height=\"30\" rx=\"5\" fill=\"#06b6d4\"/><text x=\"82\" y=\"90\" fill=\"white\" font-size=\"10\">AND</text><rect x=\"180\" y=\"45\" width=\"50\" height=\"30\" rx=\"5\" fill=\"#10b981\"/><text x=\"195\" y=\"65\" fill=\"white\" font-size=\"10\">OR</text><path d=\"M 35 30 L 70 30 M 35 60 L 50 60 L 50 40 L 70 40 M 50 60 L 50 80 L 70 80 M 35 90 L 70 90 M 120 35 L 150 35 L 150 52 L 180 52 M 120 85 L 150 85 L 150 68 L 180 68 M 230 60 L 270 60\" stroke=\"#94a3b8\" stroke-width=\"2\" fill=\"none\"/><text x=\"275\" y=\"64\" fill=\"#10b981\" font-weight=\"bold\" font-size=\"12\">Z</text></svg><br/>For how many of the \\( 8 \\) possible binary input combinations \\( (A, B, C) \\) is the output \\( Z = 1 \\)?",
+        "question": "A digital system takes binary inputs \\( A, B, C \\in \\{0, 1\\} \\) and computes output \\( Z = (A \\oplus B) + (B \\cdot C) \\), where \\( \\oplus \\) is XOR, \\( \\cdot \\) is AND, and \\( + \\) is OR.<br/>For how many of the \\( 8 \\) possible binary input combinations \\( (A, B, C) \\) is the output \\( Z = 1 \\)?",
         "options": [
           "\\( 4 \\)",
           "\\( 5 \\)",
@@ -1367,7 +1367,7 @@
         "explanation": "Output \\( Z = 0 \\) if and only if both \\( A \\oplus B = 0 \\) and \\( B \\cdot C = 0 \\).<br/>1. \\( A \\oplus B = 0 \\implies A = B \\).<br/>2. If \\( A = B = 0 \\), then \\( B \\cdot C = 0 \\) for both \\( C = 0 \\) and \\( C = 1 \\). This gives \\( 2 \\) cases: \\( (0,0,0) \\) and \\( (0,0,1) \\).<br/>3. If \\( A = B = 1 \\), then \\( B \\cdot C = C \\), so we need \\( C = 0 \\) for \\( Z = 0 \\). This gives \\( 1 \\) case: \\( (1,1,0) \\).<br/>Therefore, \\( Z = 0 \\) in exactly \\( 2 + 1 = 3 \\) cases.<br/>The number of cases where \\( Z = 1 \\) is \\( 8 - 3 = 5 \\)."
       },
       "ar": {
-        "question": "نظام رقمي يأخذ مدخلات ثنائية \\( A, B, C \\in \\{0, 1\\} \\) ويحسب المخرج \\( Z = (A \\oplus B) + (B \\cdot C) \\)، حيث \\( \\oplus \\) تمثل XOR، و \\( \\cdot \\) تمثل AND، و \\( + \\) تمثل OR.<br/><svg viewBox=\"0 0 300 120\" class=\"w-full max-w-sm mx-auto bg-slate-900 rounded-lg p-2 my-2\"><text x=\"20\" y=\"35\" fill=\"white\" font-size=\"12\">A</text><text x=\"20\" y=\"65\" fill=\"white\" font-size=\"12\">B</text><text x=\"20\" y=\"95\" fill=\"white\" font-size=\"12\">C</text><rect x=\"70\" y=\"20\" width=\"50\" height=\"30\" rx=\"5\" fill=\"#8b5cf6\"/><text x=\"82\" y=\"40\" fill=\"white\" font-size=\"10\">XOR</text><rect x=\"70\" y=\"70\" width=\"50\" height=\"30\" rx=\"5\" fill=\"#06b6d4\"/><text x=\"82\" y=\"90\" fill=\"white\" font-size=\"10\">AND</text><rect x=\"180\" y=\"45\" width=\"50\" height=\"30\" rx=\"5\" fill=\"#10b981\"/><text x=\"195\" y=\"65\" fill=\"white\" font-size=\"10\">OR</text><path d=\"M 35 30 L 70 30 M 35 60 L 50 60 L 50 40 L 70 40 M 50 60 L 50 80 L 70 80 M 35 90 L 70 90 M 120 35 L 150 35 L 150 52 L 180 52 M 120 85 L 150 85 L 150 68 L 180 68 M 230 60 L 270 60\" stroke=\"#94a3b8\" stroke-width=\"2\" fill=\"none\"/><text x=\"275\" y=\"64\" fill=\"#10b981\" font-weight=\"bold\" font-size=\"12\">Z</text></svg><br/>لكَم دمجاً من الإدراجات الثنائية \\( 8 \\) الممكنة \\( (A, B, C) \\) يكون الناتج \\( Z = 1 \\)؟",
+        "question": "نظام رقمي يأخذ مدخلات ثنائية \\( A, B, C \\in \\{0, 1\\} \\) ويحسب المخرج \\( Z = (A \\oplus B) + (B \\cdot C) \\)، حيث \\( \\oplus \\) تمثل XOR، و \\( \\cdot \\) تمثل AND، و \\( + \\) تمثل OR.<br/>لكَم دمجاً من الإدراجات الثنائية \\( 8 \\) الممكنة \\( (A, B, C) \\) يكون الناتج \\( Z = 1 \\)؟",
         "options": [
           "\\( 4 \\)",
           "\\( 5 \\)",
@@ -1401,7 +1401,7 @@
         "explanation": "نتحقق من مجموعات العناصر الصالحة التي يقل وزنها الإجمالي عن أو يساوي \\( 9 \\text{ kg} \\):<br/>- \\( I_1 + I_5 \\): الوزن \\( 2 + 7 = 9 \\text{ kg} \\)، القيمة \\( 3 + 14 = 17 \\).<br/>- \\( I_3 + I_4 \\): الوزن \\( 4 + 5 = 9 \\text{ kg} \\)، القيمة \\( 8 + 9 = 17 \\).<br/>- \\( I_1 + I_2 + I_3 \\): الوزن \\( 2 + 3 + 4 = 9 \\text{ kg} \\)، القيمة \\( 3 + 5 + 8 = 16 \\).<br/>- \\( I_2 + I_5 \\): الوزن \\( 3 + 7 = 10 \\text{ kg} \\) (يتجاوز السعة).<br/>أقصى قيمة يمكن تحقيقها هي \\( 17 \\)."
       }
     },
-    "correct_index": "17"
+    "correct_index": "0"
   },
   {
     "id": "KAUST-050",
@@ -1424,7 +1424,7 @@
         "explanation": "المعادلة المميزة هي \\( r^2 - 4r + 4 = 0 \\implies (r-2)^2 = 0 \\)، مما يعطي جذراً مكرراً \\( r = 2 \\).<br/>الحل العام هو \\( a_n = (C_1 + C_2 n) 2^n \\).<br/>باستخدام الشروط الابتدائية:<br/>- \\( n = 0 \\implies C_1 = 1 \\).<br/>- \\( n = 1 \\implies (1 + C_2) \\cdot 2 = 3 \\implies C_2 = \\frac{1}{2} \\).<br/>إذن \\( a_n = \\left(1 + \\frac{n}{2}\\right) 2^n = (n + 2) 2^{n-1} \\).<br/>من أجل \\( n = 10 \\): \\( a_{10} = (10 + 2) 2^9 = 12 \\times 512 = 6144 \\)."
       }
     },
-    "correct_index": "6144"
+    "correct_index": "0"
   },
   {
     "id": "KAUST-051",
@@ -1546,7 +1546,7 @@
         "explanation": "بمبدأ الاحتواء والاستبعاد:<br/>\\( |M \\cup P \\cup C| = |M| + |P| + |C| - (|M \\cap P| + |P \\cap C| + |M \\cap C|) + |M \\cap P \\cap C| \\)<br/>\\( |M \\cup P \\cup C| = 55 + 48 + 35 - (20 + 18 + 15) + 8 = 138 - 53 = 85 \\).<br/>عدد الطلاب الذين لا يدرسون أياً من المواد الثلاث هو \\( 100 - 85 = 15 \\)."
       }
     },
-    "correct_index": "15"
+    "correct_index": "0"
   },
   {
     "id": "KAUST-055",
@@ -1658,7 +1658,7 @@
         "explanation": "بالضرب في \\( 12xy \\) نحصل على:<br/>\\( 12y + 12x = xy \\implies xy - 12x - 12y = 0 \\).<br/>بإضافة \\( 144 \\) للطرفين:<br/>\\( (x - 12)(y - 12) = 144 \\).<br/>بما أن \\( x, y > 0 \\) و \\( \\frac{1}{x} < \\frac{1}{12} \\)، فيجب أن يكون \\( x > 12 \\) و \\( y > 12 \\).<br/>بالتالي، \\( u = x - 12 \\) و \\( v = y - 12 \\) هما عاملان صحيحان موجبان للعدد \\( 144 \\).<br/>التحليل الأولي للعدد \\( 144 = 2^4 \\times 3^2 \\).<br/>عدد القواسم الموجبة للعدد \\( 144 \\) هو \\( (4 + 1)(2 + 1) = 5 \\times 3 = 15 \\).<br/>كل قاسم يحدد زوجاً فريداً \\( (x,y) \\)، لذا يوجد \\( 15 \\) حلاً."
       }
     },
-    "correct_index": "15"
+    "correct_index": "0"
   },
   {
     "id": "KAUST-059",
@@ -1714,7 +1714,7 @@
         "explanation": "معطى \\( V = 12 \\) رأساً، درجة كل منها \\( 3 \\).<br/>بتمهيدية المصافحة:<br/>\\( 2E = \\sum \\deg(v) = 12 \\times 3 = 36 \\implies E = 18 \\).<br/>بصيغة أويلر للبيانات المستوية:<br/>\\( V - E + F = 2 \\)<br/>\\( 12 - 18 + F = 2 \\implies -6 + F = 2 \\implies F = 8 \\).<br/>يقسم البيان المستوى إلى \\( 8 \\) وجوه."
       }
     },
-    "correct_index": "8"
+    "correct_index": "0"
   },
   {
     "id": "KAUST-061",
@@ -1737,7 +1737,7 @@
         "explanation": "أنشئ مصفوفة لابلاس \\( L = D - A \\) للرسم البياني. بحذف الصف والأعمود الأولين نحصل على مصفوفة \\( 4 \\times 4 \\). حساب محدّدتها يعطي \\( 21 \\)، وهو ما يمثل العدد الإجمالي للأشجار الممتدة."
       }
     },
-    "correct_index": "21"
+    "correct_index": "0"
   },
   {
     "id": "KAUST-062",
@@ -1882,7 +1882,7 @@
         "explanation": "عند \\( n=0 \\): \\( y[0] = x[0] = 1 \\). عند \\( n=1 \\): \\( y[1] = 5(1) + 2 = 7 \\). عند \\( n=2 \\): \\( y[2] = 5(7) - 6(1) + 4 = 33 \\). عند \\( n=3 \\): \\( y[3] = 5(33) - 6(7) + 8 = 165 - 42 + 8 = 131 \\)."
       }
     },
-    "correct_index": "131"
+    "correct_index": "0"
   },
   {
     "id": "KAUST-067",
@@ -1893,7 +1893,7 @@
     "difficulty": "hard",
     "content": {
       "en": {
-        "question": "The region bounded by the parabola \\( y = x^2 - 4x + 7 \\) and the line \\( y = 2x + 2 \\) is shown below. <svg viewBox=\"0 0 200 200\" class=\"w-full max-w-xs mx-auto bg-white rounded-lg p-2\"><path d=\"M 40,160 Q 100,60 160,160\" fill=\"none\" stroke=\"#3b82f6\" stroke-width=\"2\"/><line x1=\"30\" y1=\"150\" x2=\"170\" y2=\"50\" stroke=\"#ef4444\" stroke-width=\"2\"/><line x1=\"20\" y1=\"180\" x2=\"180\" y2=\"180\" stroke=\"#000\" stroke-width=\"1.5\"/><line x1=\"30\" y1=\"10\" x2=\"30\" y2=\"190\" stroke=\"#000\" stroke-width=\"1.5\"/><text x=\"185\" y=\"185\" font-size=\"10\">x</text><text x=\"25\" y=\"15\" font-size=\"10\">y</text></svg> Find the volume of the solid generated when this region is rotated \\( 360^\\circ \\) about the x-axis.",
+        "question": "The region bounded by the parabola \\( y = x^2 - 4x + 7 \\) and the line \\( y = 2x + 2 \\) is shown below.  Find the volume of the solid generated when this region is rotated \\( 360^\\circ \\) about the x-axis.",
         "options": [
           "\\( \\frac{1024\\pi}{15} \\)",
           "\\( \\frac{2048\\pi}{15} \\)",
@@ -1904,7 +1904,7 @@
         "explanation": "The curves intersect at \\( x = 1 \\) and \\( x = 5 \\). Using the washer method, \\( V = \\pi \\int_1^5 \\left( (2x+2)^2 - (x^2-4x+7)^2 \\right) dx \\). Substituting \\( u = x - 3 \\) simplifies the integral to \\( 2\\pi \\int_0^2 (-u^4 - 8u^2 + 48) du = \\frac{2048\\pi}{15} \\)."
       },
       "ar": {
-        "question": "المنطقة المحصورة بين القطع المكافئ \\( y = x^2 - 4x + 7 \\) والمستقيم \\( y = 2x + 2 \\) موضحة أدناه. <svg viewBox=\"0 0 200 200\" class=\"w-full max-w-xs mx-auto bg-white rounded-lg p-2\"><path d=\"M 40,160 Q 100,60 160,160\" fill=\"none\" stroke=\"#3b82f6\" stroke-width=\"2\"/><line x1=\"30\" y1=\"150\" x2=\"170\" y2=\"50\" stroke=\"#ef4444\" stroke-width=\"2\"/><line x1=\"20\" y1=\"180\" x2=\"180\" y2=\"180\" stroke=\"#000\" stroke-width=\"1.5\"/><line x1=\"30\" y1=\"10\" x2=\"30\" y2=\"190\" stroke=\"#000\" stroke-width=\"1.5\"/><text x=\"185\" y=\"185\" font-size=\"10\">x</text><text x=\"25\" y=\"15\" font-size=\"10\">y</text></svg> أوجد حجم المجسم الناتج عن دوران هذه المنطقة \\( 360^\\circ \\) حول محور \\( x \\).",
+        "question": "المنطقة المحصورة بين القطع المكافئ \\( y = x^2 - 4x + 7 \\) والمستقيم \\( y = 2x + 2 \\) موضحة أدناه.  أوجد حجم المجسم الناتج عن دوران هذه المنطقة \\( 360^\\circ \\) حول محور \\( x \\).",
         "options": [
           "\\( \\frac{1024\\pi}{15} \\)",
           "\\( \\frac{2048\\pi}{15} \\)",
@@ -1949,7 +1949,7 @@
     "difficulty": "medium",
     "content": {
       "en": {
-        "question": "Consider the logic circuit shown below with inputs \\( A \\), \\( B \\), and \\( C \\). <svg viewBox=\"0 0 240 120\" class=\"w-full max-w-xs mx-auto bg-white rounded-lg p-2\"><text x=\"10\" y=\"30\" font-size=\"10\">A</text><text x=\"10\" y=\"60\" font-size=\"10\">B</text><text x=\"10\" y=\"90\" font-size=\"10\">C</text><rect x=\"50\" y=\"20\" width=\"30\" height=\"25\" fill=\"#e2e8f0\" stroke=\"#1e293b\"/><text x=\"55\" y=\"36\" font-size=\"9\">XOR</text><rect x=\"50\" y=\"70\" width=\"30\" height=\"25\" fill=\"#e2e8f0\" stroke=\"#1e293b\"/><text x=\"55\" y=\"86\" font-size=\"9\">AND</text><rect x=\"130\" y=\"45\" width=\"30\" height=\"25\" fill=\"#e2e8f0\" stroke=\"#1e293b\"/><text x=\"135\" y=\"61\" font-size=\"9\">OR</text><line x1=\"20\" y1=\"27\" x2=\"50\" y2=\"27\" stroke=\"#000\"/><line x1=\"20\" y1=\"38\" x2=\"40\" y2=\"38\" stroke=\"#000\"/><line x1=\"40\" y1=\"38\" x2=\"40\" y2=\"57\" stroke=\"#000\"/><line x1=\"20\" y1=\"57\" x2=\"40\" y2=\"57\" stroke=\"#000\"/><line x1=\"40\" y1=\"57\" x2=\"40\" y2=\"77\" stroke=\"#000\"/><line x1=\"40\" y1=\"77\" x2=\"50\" y2=\"77\" stroke=\"#000\"/><line x1=\"20\" y1=\"87\" x2=\"50\" y2=\"87\" stroke=\"#000\"/><line x1=\"80\" y1=\"32\" x2=\"105\" y2=\"32\" stroke=\"#000\"/><line x1=\"105\" y1=\"32\" x2=\"105\" y2=\"52\" stroke=\"#000\"/><line x1=\"105\" y1=\"52\" x2=\"130\" y2=\"52\" stroke=\"#000\"/><line x1=\"80\" y1=\"82\" x2=\"105\" y2=\"82\" stroke=\"#000\"/><line x1=\"105\" y1=\"82\" x2=\"105\" y2=\"62\" stroke=\"#000\"/><line x1=\"105\" y1=\"62\" x2=\"130\" y2=\"62\" stroke=\"#000\"/><line x1=\"160\" y1=\"57\" x2=\"190\" y2=\"57\" stroke=\"#000\"/><text x=\"195\" y=\"60\" font-size=\"10\">Y</text></svg> The boolean expression is \\( Y = (A \\oplus B) + (B \\cdot C) \\). Out of the \\( 8 \\) possible input combinations \\( (A, B, C) \\in \\{0, 1\\}^3 \\), how many result in \\( Y = 1 \\)?",
+        "question": "Consider the logic circuit shown below with inputs \\( A \\), \\( B \\), and \\( C \\).  The boolean expression is \\( Y = (A \\oplus B) + (B \\cdot C) \\). Out of the \\( 8 \\) possible input combinations \\( (A, B, C) \\in \\{0, 1\\}^3 \\), how many result in \\( Y = 1 \\)?",
         "options": [
           "\\( 3 \\)",
           "\\( 4 \\)",
@@ -1960,7 +1960,7 @@
         "explanation": "Evaluating all \\( 8 \\) combinations: \\( (0,1,0) \\), \\( (0,1,1) \\), \\( (1,0,0) \\), \\( (1,0,1) \\), and \\( (1,1,1) \\) give \\( Y = 1 \\). Thus, there are \\( 5 \\) input combinations yielding \\( 1 \\)."
       },
       "ar": {
-        "question": "تأمل الدارة المنطقية الموضحة أدناه ذات المدخلات \\( A \\)، \\( B \\)، و \\( C \\). <svg viewBox=\"0 0 240 120\" class=\"w-full max-w-xs mx-auto bg-white rounded-lg p-2\"><text x=\"10\" y=\"30\" font-size=\"10\">A</text><text x=\"10\" y=\"60\" font-size=\"10\">B</text><text x=\"10\" y=\"90\" font-size=\"10\">C</text><rect x=\"50\" y=\"20\" width=\"30\" height=\"25\" fill=\"#e2e8f0\" stroke=\"#1e293b\"/><text x=\"55\" y=\"36\" font-size=\"9\">XOR</text><rect x=\"50\" y=\"70\" width=\"30\" height=\"25\" fill=\"#e2e8f0\" stroke=\"#1e293b\"/><text x=\"55\" y=\"86\" font-size=\"9\">AND</text><rect x=\"130\" y=\"45\" width=\"30\" height=\"25\" fill=\"#e2e8f0\" stroke=\"#1e293b\"/><text x=\"135\" y=\"61\" font-size=\"9\">OR</text><line x1=\"20\" y1=\"27\" x2=\"50\" y2=\"27\" stroke=\"#000\"/><line x1=\"20\" y1=\"38\" x2=\"40\" y2=\"38\" stroke=\"#000\"/><line x1=\"40\" y1=\"38\" x2=\"40\" y2=\"57\" stroke=\"#000\"/><line x1=\"20\" y1=\"57\" x2=\"40\" y2=\"57\" stroke=\"#000\"/><line x1=\"40\" y1=\"57\" x2=\"40\" y2=\"77\" stroke=\"#000\"/><line x1=\"40\" y1=\"77\" x2=\"50\" y2=\"77\" stroke=\"#000\"/><line x1=\"20\" y1=\"87\" x2=\"50\" y2=\"87\" stroke=\"#000\"/><line x1=\"80\" y1=\"32\" x2=\"105\" y2=\"32\" stroke=\"#000\"/><line x1=\"105\" y1=\"32\" x2=\"105\" y2=\"52\" stroke=\"#000\"/><line x1=\"105\" y1=\"52\" x2=\"130\" y2=\"52\" stroke=\"#000\"/><line x1=\"80\" y1=\"82\" x2=\"105\" y2=\"82\" stroke=\"#000\"/><line x1=\"105\" y1=\"82\" x2=\"105\" y2=\"62\" stroke=\"#000\"/><line x1=\"105\" y1=\"62\" x2=\"130\" y2=\"62\" stroke=\"#000\"/><line x1=\"160\" y1=\"57\" x2=\"190\" y2=\"57\" stroke=\"#000\"/><text x=\"195\" y=\"60\" font-size=\"10\">Y</text></svg> التعبير المنطقي هو \\( Y = (A \\oplus B) + (B \\cdot C) \\). من بين التركيبات الـ \\( 8 \\) الممكنة للمدخلات \\( (A, B, C) \\in \\{0, 1\\}^3 \\)، كم عدد التركيبات التي تجعل \\( Y = 1 \\)؟",
+        "question": "تأمل الدارة المنطقية الموضحة أدناه ذات المدخلات \\( A \\)، \\( B \\)، و \\( C \\).  التعبير المنطقي هو \\( Y = (A \\oplus B) + (B \\cdot C) \\). من بين التركيبات الـ \\( 8 \\) الممكنة للمدخلات \\( (A, B, C) \\in \\{0, 1\\}^3 \\)، كم عدد التركيبات التي تجعل \\( Y = 1 \\)؟",
         "options": [
           "\\( 3 \\)",
           "\\( 4 \\)",
@@ -2071,7 +2071,7 @@
     "difficulty": "easy",
     "content": {
       "en": {
-        "question": "The score distribution of \\( 40 \\) students is represented in the frequency bar chart below: <svg viewBox=\"0 0 220 140\" class=\"w-full max-w-xs mx-auto bg-white rounded-lg p-2\"><line x1=\"30\" y1=\"110\" x2=\"200\" y2=\"110\" stroke=\"#000\" stroke-width=\"1.5\"/><line x1=\"30\" y1=\"20\" x2=\"30\" y2=\"110\" stroke=\"#000\" stroke-width=\"1.5\"/><rect x=\"40\" y=\"80\" width=\"25\" height=\"30\" fill=\"#3b82f6\"/><rect x=\"75\" y=\"50\" width=\"25\" height=\"60\" fill=\"#3b82f6\"/><rect x=\"110\" y=\"30\" width=\"25\" height=\"80\" fill=\"#3b82f6\"/><rect x=\"145\" y=\"65\" width=\"25\" height=\"45\" fill=\"#3b82f6\"/><rect x=\"180\" y=\"95\" width=\"15\" height=\"15\" fill=\"#3b82f6\"/><text x=\"52\" y=\"122\" font-size=\"8\" text-anchor=\"middle\">60</text><text x=\"87\" y=\"122\" font-size=\"8\" text-anchor=\"middle\">70</text><text x=\"122\" y=\"122\" font-size=\"8\" text-anchor=\"middle\">80</text><text x=\"157\" y=\"122\" font-size=\"8\" text-anchor=\"middle\">90</text><text x=\"187\" y=\"122\" font-size=\"8\" text-anchor=\"middle\">100</text><text x=\"52\" y=\"75\" font-size=\"8\" text-anchor=\"middle\">5</text><text x=\"87\" y=\"45\" font-size=\"8\" text-anchor=\"middle\">10</text><text x=\"122\" y=\"25\" font-size=\"8\" text-anchor=\"middle\">15</text><text x=\"157\" y=\"60\" font-size=\"8\" text-anchor=\"middle\">8</text><text x=\"187\" y=\"90\" font-size=\"8\" text-anchor=\"middle\">2</text></svg> What is the mean score of the distribution?",
+        "question": "The score distribution of \\( 40 \\) students is represented in the frequency bar chart below:  What is the mean score of the distribution?",
         "options": [
           "\\( 76.5 \\)",
           "\\( 78.0 \\)",
@@ -2082,7 +2082,7 @@
         "explanation": "Mean score \\( = \\frac{5(60) + 10(70) + 15(80) + 8(90) + 2(100)}{40} = \\frac{300 + 700 + 1200 + 720 + 200}{40} = \\frac{3120}{40} = 78.0 \\)."
       },
       "ar": {
-        "question": "يُمثل توزيع درجات \\( 40 \\) طالبًا في الرسم البياني التكراري أدناه: <svg viewBox=\"0 0 220 140\" class=\"w-full max-w-xs mx-auto bg-white rounded-lg p-2\"><line x1=\"30\" y1=\"110\" x2=\"200\" y2=\"110\" stroke=\"#000\" stroke-width=\"1.5\"/><line x1=\"30\" y1=\"20\" x2=\"30\" y2=\"110\" stroke=\"#000\" stroke-width=\"1.5\"/><rect x=\"40\" y=\"80\" width=\"25\" height=\"30\" fill=\"#3b82f6\"/><rect x=\"75\" y=\"50\" width=\"25\" height=\"60\" fill=\"#3b82f6\"/><rect x=\"110\" y=\"30\" width=\"25\" height=\"80\" fill=\"#3b82f6\"/><rect x=\"145\" y=\"65\" width=\"25\" height=\"45\" fill=\"#3b82f6\"/><rect x=\"180\" y=\"95\" width=\"15\" height=\"15\" fill=\"#3b82f6\"/><text x=\"52\" y=\"122\" font-size=\"8\" text-anchor=\"middle\">60</text><text x=\"87\" y=\"122\" font-size=\"8\" text-anchor=\"middle\">70</text><text x=\"122\" y=\"122\" font-size=\"8\" text-anchor=\"middle\">80</text><text x=\"157\" y=\"122\" font-size=\"8\" text-anchor=\"middle\">90</text><text x=\"187\" y=\"122\" font-size=\"8\" text-anchor=\"middle\">100</text><text x=\"52\" y=\"75\" font-size=\"8\" text-anchor=\"middle\">5</text><text x=\"87\" y=\"45\" font-size=\"8\" text-anchor=\"middle\">10</text><text x=\"122\" y=\"25\" font-size=\"8\" text-anchor=\"middle\">15</text><text x=\"157\" y=\"60\" font-size=\"8\" text-anchor=\"middle\">8</text><text x=\"187\" y=\"90\" font-size=\"8\" text-anchor=\"middle\">2</text></svg> ما هو متوسط درجات هذا التوزيع؟",
+        "question": "يُمثل توزيع درجات \\( 40 \\) طالبًا في الرسم البياني التكراري أدناه:  ما هو متوسط درجات هذا التوزيع؟",
         "options": [
           "\\( 76.5 \\)",
           "\\( 78.0 \\)",
@@ -2116,7 +2116,7 @@
         "explanation": "معامل الاستخدام \\( \\rho = \\frac{12}{15} = 0.8 \\). متوسط عدد العملاء في النظام هو \\( L = \\frac{\\rho}{1 - \\rho} = \\frac{0.8}{0.2} = 4 \\)."
       }
     },
-    "correct_index": "4"
+    "correct_index": "0"
   },
   {
     "id": "KAUST-075",
@@ -2139,7 +2139,7 @@
         "explanation": "بإعادة الترتيب نحصل على \\( (x - 12)(y - 12) = 144 \\). بما أن \\( x, y > 0 \\)، يجب أن يكون \\( x - 12 \\) قاسماً موجبًا للعدد \\( 144 = 2^4 \\times 3^2 \\). عدد القواسم هو \\( (4+1)(2+1) = 15 \\). بالتالي يوجد \\( 15 \\) زَوْجاً تحقيقاً للمعادلة."
       }
     },
-    "correct_index": "15"
+    "correct_index": "0"
   },
   {
     "id": "KAUST-076",
@@ -2150,7 +2150,7 @@
     "difficulty": "medium",
     "content": {
       "en": {
-        "question": "A particle moves on the grid shown below from \\( (0,0) \\) to \\( (5,5) \\) using only unit steps right or up. <svg viewBox=\"0 0 160 160\" class=\"w-full max-w-xs mx-auto bg-white rounded-lg p-2\"><g stroke=\"#cbd5e1\" stroke-width=\"1\"><line x1=\"20\" y1=\"20\" x2=\"140\" y2=\"20\"/><line x1=\"20\" y1=\"44\" x2=\"140\" y2=\"44\"/><line x1=\"20\" y1=\"68\" x2=\"140\" y2=\"68\"/><line x1=\"20\" y1=\"92\" x2=\"140\" y2=\"92\"/><line x1=\"20\" y1=\"116\" x2=\"140\" y2=\"116\"/><line x1=\"20\" y1=\"140\" x2=\"140\" y2=\"140\"/><line x1=\"20\" y1=\"20\" x2=\"20\" y2=\"140\"/><line x1=\"44\" y1=\"20\" x2=\"44\" y2=\"140\"/><line x1=\"68\" y1=\"20\" x2=\"68\" y2=\"140\"/><line x1=\"92\" y1=\"20\" x2=\"92\" y2=\"140\"/><line x1=\"116\" y1=\"20\" x2=\"116\" y2=\"140\"/><line x1=\"140\" y1=\"20\" x2=\"140\" y2=\"140\"/></g><circle cx=\"68\" cy=\"68\" r=\"5\" fill=\"#ef4444\"/><text x=\"15\" y=\"150\" font-size=\"8\">(0,0)</text><text x=\"135\" y=\"15\" font-size=\"8\">(5,5)</text><text x=\"72\" y=\"65\" font-size=\"8\" fill=\"#ef4444\">(2,3)</text></svg> How many paths avoid passing through the point \\( (2,3) \\)?",
+        "question": "A particle moves on the grid shown below from \\( (0,0) \\) to \\( (5,5) \\) using only unit steps right or up.  How many paths avoid passing through the point \\( (2,3) \\)?",
         "options": [
           "\\( 132 \\)",
           "\\( 152 \\)",
@@ -2161,7 +2161,7 @@
         "explanation": "Total paths without restrictions: \\( \\binom{10}{5} = 252 \\). Paths passing through \\( (2,3) \\): \\( \\binom{2+3}{2} \\times \\binom{3+2}{2} = 10 \\times 10 = 100 \\). Valid paths avoiding \\( (2,3) \\): \\( 252 - 100 = 152 \\)."
       },
       "ar": {
-        "question": "يتتحرك جسيم على الشبكة الموضحة أدناه من النقطة \\( (0,0) \\) إلى النقطة \\( (5,5) \\) متحركًا فقط بخطوات وحدة لليمين أو للأعلى. <svg viewBox=\"0 0 160 160\" class=\"w-full max-w-xs mx-auto bg-white rounded-lg p-2\"><g stroke=\"#cbd5e1\" stroke-width=\"1\"><line x1=\"20\" y1=\"20\" x2=\"140\" y2=\"20\"/><line x1=\"20\" y1=\"44\" x2=\"140\" y2=\"44\"/><line x1=\"20\" y1=\"68\" x2=\"140\" y2=\"68\"/><line x1=\"20\" y1=\"92\" x2=\"140\" y2=\"92\"/><line x1=\"20\" y1=\"116\" x2=\"140\" y2=\"116\"/><line x1=\"20\" y1=\"140\" x2=\"140\" y2=\"140\"/><line x1=\"20\" y1=\"20\" x2=\"20\" y2=\"140\"/><line x1=\"44\" y1=\"20\" x2=\"44\" y2=\"140\"/><line x1=\"68\" y1=\"20\" x2=\"68\" y2=\"140\"/><line x1=\"92\" y1=\"20\" x2=\"92\" y2=\"140\"/><line x1=\"116\" y1=\"20\" x2=\"116\" y2=\"140\"/><line x1=\"140\" y1=\"20\" x2=\"140\" y2=\"140\"/></g><circle cx=\"68\" cy=\"68\" r=\"5\" fill=\"#ef4444\"/><text x=\"15\" y=\"150\" font-size=\"8\">(0,0)</text><text x=\"135\" y=\"15\" font-size=\"8\">(5,5)</text><text x=\"72\" y=\"65\" font-size=\"8\" fill=\"#ef4444\">(2,3)</text></svg> كم عدد المسارات التي تتجنب المرور بالنقطة \\( (2,3) \\)؟",
+        "question": "يتتحرك جسيم على الشبكة الموضحة أدناه من النقطة \\( (0,0) \\) إلى النقطة \\( (5,5) \\) متحركًا فقط بخطوات وحدة لليمين أو للأعلى.  كم عدد المسارات التي تتجنب المرور بالنقطة \\( (2,3) \\)؟",
         "options": [
           "\\( 132 \\)",
           "\\( 152 \\)",
@@ -2183,7 +2183,7 @@
     "difficulty": "easy",
     "content": {
       "en": {
-        "question": "Consider the resistor circuit network below, where all four resistors have resistance \\( R = 10\\ \\Omega \\). <svg viewBox=\"0 0 200 120\" class=\"w-full max-w-xs mx-auto bg-white rounded-lg p-2\"><circle cx=\"20\" cy=\"60\" r=\"3\" fill=\"#000\"/><text x=\"10\" y=\"63\" font-size=\"10\">A</text><circle cx=\"180\" cy=\"60\" r=\"3\" fill=\"#000\"/><text x=\"185\" y=\"63\" font-size=\"10\">B</text><line x1=\"20\" y1=\"60\" x2=\"50\" y2=\"60\" stroke=\"#000\" stroke-width=\"1.5\"/><line x1=\"50\" y1=\"60\" x2=\"50\" y2=\"20\" stroke=\"#000\" stroke-width=\"1.5\"/><line x1=\"50\" y1=\"60\" x2=\"50\" y2=\"100\" stroke=\"#000\" stroke-width=\"1.5\"/><rect x=\"70\" y=\"10\" width=\"30\" height=\"20\" fill=\"none\" stroke=\"#000\" stroke-width=\"1.5\"/><rect x=\"70\" y=\"50\" width=\"30\" height=\"20\" fill=\"none\" stroke=\"#000\" stroke-width=\"1.5\"/><rect x=\"70\" y=\"90\" width=\"30\" height=\"20\" fill=\"none\" stroke=\"#000\" stroke-width=\"1.5\"/><line x1=\"50\" y1=\"20\" x2=\"70\" y2=\"20\" stroke=\"#000\" stroke-width=\"1.5\"/><line x1=\"50\" y1=\"60\" x2=\"70\" y2=\"60\" stroke=\"#000\" stroke-width=\"1.5\"/><line x1=\"50\" y1=\"100\" x2=\"70\" y2=\"100\" stroke=\"#000\" stroke-width=\"1.5\"/><line x1=\"100\" y1=\"20\" x2=\"120\" y2=\"20\" stroke=\"#000\" stroke-width=\"1.5\"/><line x1=\"100\" y1=\"60\" x2=\"120\" y2=\"60\" stroke=\"#000\" stroke-width=\"1.5\"/><line x1=\"100\" y1=\"100\" x2=\"120\" y2=\"100\" stroke=\"#000\" stroke-width=\"1.5\"/><line x1=\"120\" y1=\"20\" x2=\"120\" y2=\"100\" stroke=\"#000\" stroke-width=\"1.5\"/><rect x=\"130\" y=\"50\" width=\"30\" height=\"20\" fill=\"none\" stroke=\"#000\" stroke-width=\"1.5\"/><line x1=\"120\" y1=\"60\" x2=\"130\" y2=\"60\" stroke=\"#000\" stroke-width=\"1.5\"/><line x1=\"160\" y1=\"60\" x2=\"180\" y2=\"60\" stroke=\"#000\" stroke-width=\"1.5\"/></svg> Three resistors are connected in parallel, and this parallel combination is connected in series with the fourth resistor. Calculate the equivalent resistance \\( R_{eq} \\) between terminals \\( A \\) and \\( B \\).",
+        "question": "Consider the resistor circuit network below, where all four resistors have resistance \\( R = 10\\ \\Omega \\).  Three resistors are connected in parallel, and this parallel combination is connected in series with the fourth resistor. Calculate the equivalent resistance \\( R_{eq} \\) between terminals \\( A \\) and \\( B \\).",
         "options": [
           "\\( \\frac{20}{3}\\ \\Omega \\)",
           "\\( 10\\ \\Omega \\)",
@@ -2194,7 +2194,7 @@
         "explanation": "The three parallel resistors yield \\( R_p = \\frac{10}{3}\\ \\Omega \\). Adding the fourth resistor in series gives \\( R_{eq} = 10 + \\frac{10}{3} = \\frac{40}{3}\\ \\Omega \\)."
       },
       "ar": {
-        "question": "تأمل شبكة المقاومات الكهربائية أدناه، حيث تمتلك جميع المقاومات الأربع نفس المقاومة \\( R = 10\\ \\Omega \\). <svg viewBox=\"0 0 200 120\" class=\"w-full max-w-xs mx-auto bg-white rounded-lg p-2\"><circle cx=\"20\" cy=\"60\" r=\"3\" fill=\"#000\"/><text x=\"10\" y=\"63\" font-size=\"10\">A</text><circle cx=\"180\" cy=\"60\" r=\"3\" fill=\"#000\"/><text x=\"185\" y=\"63\" font-size=\"10\">B</text><line x1=\"20\" y1=\"60\" x2=\"50\" y2=\"60\" stroke=\"#000\" stroke-width=\"1.5\"/><line x1=\"50\" y1=\"60\" x2=\"50\" y2=\"20\" stroke=\"#000\" stroke-width=\"1.5\"/><line x1=\"50\" y1=\"60\" x2=\"50\" y2=\"100\" stroke=\"#000\" stroke-width=\"1.5\"/><rect x=\"70\" y=\"10\" width=\"30\" height=\"20\" fill=\"none\" stroke=\"#000\" stroke-width=\"1.5\"/><rect x=\"70\" y=\"50\" width=\"30\" height=\"20\" fill=\"none\" stroke=\"#000\" stroke-width=\"1.5\"/><rect x=\"70\" y=\"90\" width=\"30\" height=\"20\" fill=\"none\" stroke=\"#000\" stroke-width=\"1.5\"/><line x1=\"50\" y1=\"20\" x2=\"70\" y2=\"20\" stroke=\"#000\" stroke-width=\"1.5\"/><line x1=\"50\" y1=\"60\" x2=\"70\" y2=\"60\" stroke=\"#000\" stroke-width=\"1.5\"/><line x1=\"50\" y1=\"100\" x2=\"70\" y2=\"100\" stroke=\"#000\" stroke-width=\"1.5\"/><line x1=\"100\" y1=\"20\" x2=\"120\" y2=\"20\" stroke=\"#000\" stroke-width=\"1.5\"/><line x1=\"100\" y1=\"60\" x2=\"120\" y2=\"60\" stroke=\"#000\" stroke-width=\"1.5\"/><line x1=\"100\" y1=\"100\" x2=\"120\" y2=\"100\" stroke=\"#000\" stroke-width=\"1.5\"/><line x1=\"120\" y1=\"20\" x2=\"120\" y2=\"100\" stroke=\"#000\" stroke-width=\"1.5\"/><rect x=\"130\" y=\"50\" width=\"30\" height=\"20\" fill=\"none\" stroke=\"#000\" stroke-width=\"1.5\"/><line x1=\"120\" y1=\"60\" x2=\"130\" y2=\"60\" stroke=\"#000\" stroke-width=\"1.5\"/><line x1=\"160\" y1=\"60\" x2=\"180\" y2=\"60\" stroke=\"#000\" stroke-width=\"1.5\"/></svg> ثلاث مقاومات موصولة على التوازي، وتتصل هذه المجموعة على التوالي مع المقاومة الرابعة. احسب المقاومة المكافئة \\( R_{eq} \\) بين الطرفين \\( A \\) و \\( B \\).",
+        "question": "تأمل شبكة المقاومات الكهربائية أدناه، حيث تمتلك جميع المقاومات الأربع نفس المقاومة \\( R = 10\\ \\Omega \\).  ثلاث مقاومات موصولة على التوازي، وتتصل هذه المجموعة على التوالي مع المقاومة الرابعة. احسب المقاومة المكافئة \\( R_{eq} \\) بين الطرفين \\( A \\) و \\( B \\).",
         "options": [
           "\\( \\frac{20}{3}\\ \\Omega \\)",
           "\\( 10\\ \\Omega \\)",
@@ -2228,7 +2228,7 @@
         "explanation": "المتغير \\( X \\sim \\text{Geometric}(p = \\frac{1}{6}) \\). لدينا \\( E[X] = \\frac{1}{p} = 6 \\) والتجانس (التباين) \\( \\text{Var}(X) = \\frac{1-p}{p^2} = 30 \\). بالتالي، \\( E[X^2] = \\text{Var}(X) + (E[X])^2 = 30 + 36 = 66 \\)."
       }
     },
-    "correct_index": "66"
+    "correct_index": "0"
   },
   {
     "id": "KAUST-079",
@@ -2284,7 +2284,7 @@
         "explanation": "باستخدام الصيغة مع \\( z = 2x \\) و \\( k = 3 \\)، فإن معامل \\( (2x)^5 \\) هو \\( \\binom{5+3-1}{3-1} = \\binom{7}{2} = 21 \\). بالضرب في \\( 2^5 = 32 \\) نحصل على \\( 21 \\times 32 = 672 \\)."
       }
     },
-    "correct_index": "672"
+    "correct_index": "0"
   },
   {
     "id": "KAUST-081",
@@ -2340,7 +2340,7 @@
         "explanation": "من \\( n \\equiv 2 \\pmod{3} \\) و \\( n \\equiv 2 \\pmod{7} \\)، وبما أن \\( 3 \\) و \\( 7 \\) أعداد أوليّة فيما بينها، فإن \\( n \\equiv 2 \\pmod{21} \\). بالتالي، \\( n = 21k + 2 \\) لعدد صحيح \\( k \\ge 0 \\). بالتعويض في \\( n \\equiv 3 \\pmod{5} \\): \\( 21k + 2 \\equiv 3 \\pmod{5} \\implies k + 2 \\equiv 3 \\pmod{5} \\implies k \\equiv 1 \\pmod{5} \\). أصغر قيمة لـ \\( k \\) هي \\( 1 \\)، ومنه \\( n = 21(1) + 2 = 23 \\)."
       }
     },
-    "correct_index": "23"
+    "correct_index": "0"
   },
   {
     "id": "KAUST-083",
@@ -2429,7 +2429,7 @@
         "explanation": "بتطبيق مبرهنة النجوم والقضبان مع \\( n = 12 \\) عناصر موزعة على \\( k = 4 \\) متغيرات: \\( \\binom{12 + 4 - 1}{4 - 1} = \\binom{15}{3} = \\frac{15 \\times 14 \\times 13}{3 \\times 2 \\times 1} = 455 \\)."
       }
     },
-    "correct_index": "455"
+    "correct_index": "0"
   },
   {
     "id": "KAUST-086",
@@ -2485,7 +2485,7 @@
         "explanation": "بتقييم المواضع الفائزة والخاسرة: \\( 0 \\) (خاسر)، \\( 1 \\) (فائز)، \\( 2 \\) (خاسر)، \\( 3 \\) (فائز)، \\( 4 \\) (فائز)، \\( 5 \\) (فائز)، \\( 6 \\) (فائز)، \\( 7 \\) (خاسر). يتكرر نمط مواضع الخسارة بمقياس \\( 7 \\) للمواضع \\( n \\equiv 0, 2 \\pmod{7} \\). بالنسبة لـ \\( n = 20 \\)، لدينا \\( 20 \\equiv 6 \\pmod{7} \\). يجب على اللاعب الأول إبقاء الخصم في موضع خاسر (مثل \\( 16 \\)، حيث \\( 16 \\equiv 2 \\pmod{7} \\)). إزالة \\( 20 - 16 = 4 \\) أحجار تترك \\( 16 \\) حجرًا، مما يضمن الفوز."
       }
     },
-    "correct_index": "4"
+    "correct_index": "0"
   },
   {
     "id": "KAUST-088",
@@ -2529,7 +2529,7 @@
     "difficulty": "hard",
     "content": {
       "en": {
-        "question": "Consider the linear programming problem of maximizing \\( Z = 3x + 4y \\) subject to \\( x + 2y \\le 8 \\), \\( 3x + y \\le 9 \\), \\( x \\ge 0 \\), and \\( y \\ge 0 \\). The feasible region is bounded as shown in the plot below.<div class=\"my-4\"><svg viewBox=\"0 0 200 200\" class=\"w-full max-w-xs mx-auto bg-slate-50 rounded-lg p-2 border border-slate-300\"><line x1=\"20\" y1=\"180\" x2=\"180\" y2=\"180\" stroke=\"#64748b\" stroke-width=\"2\"/><line x1=\"20\" y1=\"180\" x2=\"20\" y2=\"20\" stroke=\"#64748b\" stroke-width=\"2\"/><polygon points=\"20,180 80,180 60,110 20,80\" fill=\"#93c5fd\" opacity=\"0.6\" stroke=\"#2563eb\" stroke-width=\"2\"/><circle cx=\"20\" cy=\"180\" r=\"3\" fill=\"#1e3a8a\"/><circle cx=\"80\" cy=\"180\" r=\"3\" fill=\"#1e3a8a\"/><circle cx=\"60\" cy=\"110\" r=\"3\" fill=\"#1e3a8a\"/><circle cx=\"20\" cy=\"80\" r=\"3\" fill=\"#1e3a8a\"/><text x=\"10\" y=\"195\" font-size=\"10\">(0,0)</text><text x=\"75\" y=\"195\" font-size=\"10\">(3,0)</text><text x=\"65\" y=\"110\" font-size=\"10\">(2,3)</text><text x=\"5\" y=\"75\" font-size=\"10\">(0,4)</text></svg></div>What is the maximum value of \\( Z \\)?",
+        "question": "Consider the linear programming problem of maximizing \\( Z = 3x + 4y \\) subject to \\( x + 2y \\le 8 \\), \\( 3x + y \\le 9 \\), \\( x \\ge 0 \\), and \\( y \\ge 0 \\). The feasible region is bounded as shown in the plot below.<div class=\"my-4\"></div>What is the maximum value of \\( Z \\)?",
         "options": [
           "\\( 16 \\)",
           "\\( 17 \\)",
@@ -2540,7 +2540,7 @@
         "explanation": "The vertices of the feasible region are \\( (0,0) \\), \\( (3,0) \\), \\( (2,3) \\), and \\( (0,4) \\). Evaluating \\( Z \\) at each vertex: \\( Z(0,0) = 0 \\), \\( Z(3,0) = 3(3) + 4(0) = 9 \\), \\( Z(0,4) = 3(0) + 4(4) = 16 \\), \\( Z(2,3) = 3(2) + 4(3) = 6 + 12 = 18 \\). Thus, the maximum value is \\( 18 \\)."
       },
       "ar": {
-        "question": "تأمل مسألة البرمجة الخطية لتعظيم \\( Z = 3x + 4y \\) تحت القيود \\( x + 2y \\le 8 \\)، \\( 3x + y \\le 9 \\)، \\( x \\ge 0 \\)، و \\( y \\ge 0 \\). المنطقة الممكنة محصورة كما هو موضح في الرسم أدناه.<div class=\"my-4\"><svg viewBox=\"0 0 200 200\" class=\"w-full max-w-xs mx-auto bg-slate-50 rounded-lg p-2 border border-slate-300\"><line x1=\"20\" y1=\"180\" x2=\"180\" y2=\"180\" stroke=\"#64748b\" stroke-width=\"2\"/><line x1=\"20\" y1=\"180\" x2=\"20\" y2=\"20\" stroke=\"#64748b\" stroke-width=\"2\"/><polygon points=\"20,180 80,180 60,110 20,80\" fill=\"#93c5fd\" opacity=\"0.6\" stroke=\"#2563eb\" stroke-width=\"2\"/><circle cx=\"20\" cy=\"180\" r=\"3\" fill=\"#1e3a8a\"/><circle cx=\"80\" cy=\"180\" r=\"3\" fill=\"#1e3a8a\"/><circle cx=\"60\" cy=\"110\" r=\"3\" fill=\"#1e3a8a\"/><circle cx=\"20\" cy=\"80\" r=\"3\" fill=\"#1e3a8a\"/><text x=\"10\" y=\"195\" font-size=\"10\">(0,0)</text><text x=\"75\" y=\"195\" font-size=\"10\">(3,0)</text><text x=\"65\" y=\"110\" font-size=\"10\">(2,3)</text><text x=\"5\" y=\"75\" font-size=\"10\">(0,4)</text></svg></div>ما هي القيمة العظمى لـ \\( Z \\)؟",
+        "question": "تأمل مسألة البرمجة الخطية لتعظيم \\( Z = 3x + 4y \\) تحت القيود \\( x + 2y \\le 8 \\)، \\( 3x + y \\le 9 \\)، \\( x \\ge 0 \\)، و \\( y \\ge 0 \\). المنطقة الممكنة محصورة كما هو موضح في الرسم أدناه.<div class=\"my-4\"></div>ما هي القيمة العظمى لـ \\( Z \\)؟",
         "options": [
           "\\( 16 \\)",
           "\\( 17 \\)",
@@ -2574,7 +2574,7 @@
         "explanation": "المعادلة المميزة هي \\( r^2 - 3r + 2 = 0 \\implies (r-1)(r-2) = 0 \\)، فالجذور هي \\( r_1 = 1 \\) و \\( r_2 = 2 \\). بالتالي، \\( a_n = A(1)^n + B(2)^n \\). بالتعويض بالشروط الابتدائية: \\( a_0 = A + B = 1 \\) و \\( a_1 = A + 2B = 3 \\). بطرح المعادلتين نجد \\( B = 2 \\)، وبالتالي \\( A = -1 \\). إذاً \\( a_n = 2^{n+1} - 1 \\). بالنسبة لـ \\( n = 10 \\): \\( a_{10} = 2^{11} - 1 = 2048 - 1 = 2047 \\)."
       }
     },
-    "correct_index": "2047"
+    "correct_index": "0"
   },
   {
     "id": "KAUST-091",
@@ -2618,7 +2618,7 @@
     "difficulty": "hard",
     "content": {
       "en": {
-        "question": "A system transitions between State \\( A \\) and State \\( B \\) according to the Markov chain transition graph shown below.<div class=\"my-4\"><svg viewBox=\"0 0 250 120\" class=\"w-full max-w-xs mx-auto bg-slate-50 rounded-lg p-2 border border-slate-300\"><circle cx=\"50\" cy=\"60\" r=\"20\" fill=\"#bfdbfe\" stroke=\"#1d4ed8\" stroke-width=\"2\"/><circle cx=\"200\" cy=\"60\" r=\"20\" fill=\"#fef08a\" stroke=\"#ca8a04\" stroke-width=\"2\"/><text x=\"45\" y=\"65\" font-size=\"14\" font-weight=\"bold\">A</text><text x=\"195\" y=\"65\" font-size=\"14\" font-weight=\"bold\">B</text><path d=\"M 65 45 Q 125 20 185 45\" fill=\"none\" stroke=\"#0f172a\" stroke-width=\"1.5\"/><polygon points=\"185,45 175,40 177,48\" fill=\"#0f172a\"/><text x=\"120\" y=\"25\" font-size=\"10\">0.2</text><path d=\"M 185 75 Q 125 100 65 75\" fill=\"none\" stroke=\"#0f172a\" stroke-width=\"1.5\"/><polygon points=\"65,75 75,80 73,72\" fill=\"#0f172a\"/><text x=\"120\" y=\"105\" font-size=\"10\">0.4</text></svg></div>What is the steady-state probability \\( \\pi_A \\) of being in State \\( A \\)?",
+        "question": "A system transitions between State \\( A \\) and State \\( B \\) according to the Markov chain transition graph shown below.<div class=\"my-4\"></div>What is the steady-state probability \\( \\pi_A \\) of being in State \\( A \\)?",
         "options": [
           "\\( \\frac{1}{3} \\)",
           "\\( \\frac{1}{2} \\)",
@@ -2629,7 +2629,7 @@
         "explanation": "From the transition graph, \\( P(A \\to B) = 0.2 \\) and \\( P(B \\to A) = 0.4 \\). In steady state, probability flux leaving \\( A \\) equals probability flux entering \\( A \\): \\( \\pi_A (0.2) = \\pi_B (0.4) \\implies \\pi_A = 2 \\pi_B \\). Since \\( \\pi_A + \\pi_B = 1 \\), substituting gives \\( 2 \\pi_B + \\pi_B = 1 \\implies 3 \\pi_B = 1 \\implies \\pi_B = \\frac{1}{3} \\). Thus, \\( \\pi_A = \\frac{2}{3} \\)."
       },
       "ar": {
-        "question": "ينتقل نظام بين الحالة \\( A \\) والحالة \\( B \\) وفقًا لرسم سلسلة ماركوف الموضح أدناه.<div class=\"my-4\"><svg viewBox=\"0 0 250 120\" class=\"w-full max-w-xs mx-auto bg-slate-50 rounded-lg p-2 border border-slate-300\"><circle cx=\"50\" cy=\"60\" r=\"20\" fill=\"#bfdbfe\" stroke=\"#1d4ed8\" stroke-width=\"2\"/><circle cx=\"200\" cy=\"60\" r=\"20\" fill=\"#fef08a\" stroke=\"#ca8a04\" stroke-width=\"2\"/><text x=\"45\" y=\"65\" font-size=\"14\" font-weight=\"bold\">A</text><text x=\"195\" y=\"65\" font-size=\"14\" font-weight=\"bold\">B</text><path d=\"M 65 45 Q 125 20 185 45\" fill=\"none\" stroke=\"#0f172a\" stroke-width=\"1.5\"/><polygon points=\"185,45 175,40 177,48\" fill=\"#0f172a\"/><text x=\"120\" y=\"25\" font-size=\"10\">0.2</text><path d=\"M 185 75 Q 125 100 65 75\" fill=\"none\" stroke=\"#0f172a\" stroke-width=\"1.5\"/><polygon points=\"65,75 75,80 73,72\" fill=\"#0f172a\"/><text x=\"120\" y=\"105\" font-size=\"10\">0.4</text></svg></div>ما هو احتمال الحالة المستقرة \\( \\pi_A \\) للتواجد في الحالة \\( A \\)؟",
+        "question": "ينتقل نظام بين الحالة \\( A \\) والحالة \\( B \\) وفقًا لرسم سلسلة ماركوف الموضح أدناه.<div class=\"my-4\"></div>ما هو احتمال الحالة المستقرة \\( \\pi_A \\) للتواجد في الحالة \\( A \\)؟",
         "options": [
           "\\( \\frac{1}{3} \\)",
           "\\( \\frac{1}{2} \\)",
@@ -2663,7 +2663,7 @@
         "explanation": "بالضرب في \\( 12xy \\) نجد \\( 12y + 12x = xy \\implies xy - 12x - 12y = 0 \\). بإضافة \\( 144 \\) للطرفين وتحليل العوامل: \\( (x - 12)(y - 12) = 144 \\). بما أن \\( x, y > 0 \\)، يجب أن يكون العاملان \\( (x - 12) \\) و \\( (y - 12) \\) أعدادًا صحيحة موجبة حاصل ضربها \\( 144 \\). عدد الحلول الموجبة يساوي عدد القواسم الموجبة للعدد \\( 144 = 2^4 \\times 3^2 \\). عدد القواسم هو \\( (4 + 1)(2 + 1) = 5 \\times 3 = 15 \\)."
       }
     },
-    "correct_index": "15"
+    "correct_index": "0"
   },
   {
     "id": "KAUST-094",
@@ -2674,7 +2674,7 @@
     "difficulty": "medium",
     "content": {
       "en": {
-        "question": "In the directed network shown below with edge weights representing travel costs, what is the minimum cost path from source \\( S \\) to sink \\( T \\)?<div class=\"my-4\"><svg viewBox=\"0 0 250 150\" class=\"w-full max-w-xs mx-auto bg-slate-50 rounded-lg p-2 border border-slate-300\"><circle cx=\"30\" cy=\"75\" r=\"16\" fill=\"#cbd5e1\" stroke=\"#0f172a\" stroke-width=\"2\"/><circle cx=\"110\" cy=\"30\" r=\"16\" fill=\"#cbd5e1\" stroke=\"#0f172a\" stroke-width=\"2\"/><circle cx=\"110\" cy=\"120\" r=\"16\" fill=\"#cbd5e1\" stroke=\"#0f172a\" stroke-width=\"2\"/><circle cx=\"210\" cy=\"75\" r=\"16\" fill=\"#cbd5e1\" stroke=\"#0f172a\" stroke-width=\"2\"/><text x=\"26\" y=\"80\" font-size=\"12\" font-weight=\"bold\">S</text><text x=\"106\" y=\"35\" font-size=\"12\" font-weight=\"bold\">A</text><text x=\"106\" y=\"125\" font-size=\"12\" font-weight=\"bold\">B</text><text x=\"206\" y=\"80\" font-size=\"12\" font-weight=\"bold\">T</text><line x1=\"45\" y1=\"65\" x2=\"95\" y2=\"38\" stroke=\"#0f172a\" stroke-width=\"1.5\"/><text x=\"65\" y=\"45\" font-size=\"11\" fill=\"#ef4444\">3</text><line x1=\"45\" y1=\"85\" x2=\"95\" y2=\"112\" stroke=\"#0f172a\" stroke-width=\"1.5\"/><text x=\"65\" y=\"110\" font-size=\"11\" fill=\"#ef4444\">7</text><line x1=\"110\" y1=\"46\" x2=\"110\" y2=\"104\" stroke=\"#0f172a\" stroke-width=\"1.5\"/><text x=\"115\" y=\"78\" font-size=\"11\" fill=\"#ef4444\">2</text><line x1=\"125\" y1=\"38\" x2=\"195\" y2=\"65\" stroke=\"#0f172a\" stroke-width=\"1.5\"/><text x=\"160\" y=\"45\" font-size=\"11\" fill=\"#ef4444\">8</text><line x1=\"125\" y1=\"112\" x2=\"195\" y2=\"85\" stroke=\"#0f172a\" stroke-width=\"1.5\"/><text x=\"160\" y=\"110\" font-size=\"11\" fill=\"#ef4444\">2</text></svg></div>",
+        "question": "In the directed network shown below with edge weights representing travel costs, what is the minimum cost path from source \\( S \\) to sink \\( T \\)?<div class=\"my-4\"></div>",
         "options": [
           "\\( 7 \\)",
           "\\( 8 \\)",
@@ -2685,7 +2685,7 @@
         "explanation": "Let us check all directed paths from \\( S \\) to \\( T \\): Path 1: \\( S \\to A \\to T \\) with cost \\( 3 + 8 = 11 \\). Path 2: \\( S \\to B \\to T \\) with cost \\( 7 + 2 = 9 \\). Path 3: \\( S \\to A \\to B \\to T \\) with cost \\( 3 + 2 + 2 = 7 \\). The minimum cost path is \\( 7 \\)."
       },
       "ar": {
-        "question": "في الشبكة الموجهة الموضحة أدناه حيث تمثل أوزان الحواف تكاليف الانتقال، ما هي تكلفة المسار الأقصر من المصدر \\( S \\) إلى المصب \\( T \\)؟<div class=\"my-4\"><svg viewBox=\"0 0 250 150\" class=\"w-full max-w-xs mx-auto bg-slate-50 rounded-lg p-2 border border-slate-300\"><circle cx=\"30\" cy=\"75\" r=\"16\" fill=\"#cbd5e1\" stroke=\"#0f172a\" stroke-width=\"2\"/><circle cx=\"110\" cy=\"30\" r=\"16\" fill=\"#cbd5e1\" stroke=\"#0f172a\" stroke-width=\"2\"/><circle cx=\"110\" cy=\"120\" r=\"16\" fill=\"#cbd5e1\" stroke=\"#0f172a\" stroke-width=\"2\"/><circle cx=\"210\" cy=\"75\" r=\"16\" fill=\"#cbd5e1\" stroke=\"#0f172a\" stroke-width=\"2\"/><text x=\"26\" y=\"80\" font-size=\"12\" font-weight=\"bold\">S</text><text x=\"106\" y=\"35\" font-size=\"12\" font-weight=\"bold\">A</text><text x=\"106\" y=\"125\" font-size=\"12\" font-weight=\"bold\">B</text><text x=\"206\" y=\"80\" font-size=\"12\" font-weight=\"bold\">T</text><line x1=\"45\" y1=\"65\" x2=\"95\" y2=\"38\" stroke=\"#0f172a\" stroke-width=\"1.5\"/><text x=\"65\" y=\"45\" font-size=\"11\" fill=\"#ef4444\">3</text><line x1=\"45\" y1=\"85\" x2=\"95\" y2=\"112\" stroke=\"#0f172a\" stroke-width=\"1.5\"/><text x=\"65\" y=\"110\" font-size=\"11\" fill=\"#ef4444\">7</text><line x1=\"110\" y1=\"46\" x2=\"110\" y2=\"104\" stroke=\"#0f172a\" stroke-width=\"1.5\"/><text x=\"115\" y=\"78\" font-size=\"11\" fill=\"#ef4444\">2</text><line x1=\"125\" y1=\"38\" x2=\"195\" y2=\"65\" stroke=\"#0f172a\" stroke-width=\"1.5\"/><text x=\"160\" y=\"45\" font-size=\"11\" fill=\"#ef4444\">8</text><line x1=\"125\" y1=\"112\" x2=\"195\" y2=\"85\" stroke=\"#0f172a\" stroke-width=\"1.5\"/><text x=\"160\" y=\"110\" font-size=\"11\" fill=\"#ef4444\">2</text></svg></div>",
+        "question": "في الشبكة الموجهة الموضحة أدناه حيث تمثل أوزان الحواف تكاليف الانتقال، ما هي تكلفة المسار الأقصر من المصدر \\( S \\) إلى المصب \\( T \\)؟<div class=\"my-4\"></div>",
         "options": [
           "\\( 7 \\)",
           "\\( 8 \\)",
@@ -2841,7 +2841,7 @@
         "explanation": "نحتاج إلى حل المعادلة \\( 7d \\equiv 1 \\pmod{160} \\). بتطبيق خوارزمية إقليدس: \\( 160 = 7 \\times 22 + 6 \\implies 6 = 160 - 22(7) \\)؛ \\( 7 = 6 \\times 1 + 1 \\implies 1 = 7 - 1(6) = 7 - 1(160 - 22(7)) = 23(7) - 1(160) \\). بأخذ الموديلو \\( 160 \\): \\( 23 \\times 7 \\equiv 1 \\pmod{160} \\). بالتالي، \\( d = 23 \\)."
       }
     },
-    "correct_index": "23"
+    "correct_index": "0"
   },
   {
     "id": "KAUST-100",
@@ -2864,7 +2864,7 @@
         "explanation": "وفقًا لمبرهنة المصافحة، \\( \\sum \\text{deg}(v) = 2E \\). هنا \\( E = 21 \\)، لذا فإن مجموع الدرجات هو \\( 2 \\times 21 = 42 \\). بجمع الدرجات المعطاة: \\( 4(3) + 3(4) + 3(d) = 12 + 12 + 3d = 24 + 3d \\). بمساواة \\( 24 + 3d = 42 \\implies 3d = 18 \\implies d = 6 \\)."
       }
     },
-    "correct_index": "6"
+    "correct_index": "0"
   },
   {
     "id": "KAUST-101",
@@ -2957,7 +2957,7 @@
         "explanation": "لتكن \\( E_1 = E(S_1) \\) و \\( E_2 = E(S_2) \\).\nمن \\( S_1 \\): \\( E_1 = 1 + 0.5 E_1 + 0.5 E_2 \\implies E_1 - E_2 = 2 \\).\nمن \\( S_2 \\): \\( E_2 = 1 + 0.5 E_1 + 0.5(0) \\implies E_2 = 1 + 0.5 E_1 \\).\nبالتعويض:\n\\( E_1 - (1 + 0.5 E_1) = 2 \\implies 0.5 E_1 = 3 \\implies E_1 = 6 \\)."
       }
     },
-    "correct_index": "6"
+    "correct_index": "0"
   },
   {
     "id": "KAUST-104",
@@ -3015,7 +3015,7 @@
         "explanation": "بفرض \\( x' = x-1, y' = y-1, z' = z-1 \\)، نصل إلى \\( x' + y' + z' = 12 \\) حيث \\( 0 \\le x' \\le 4 \\)، \\( 0 \\le y' \\le 5 \\)، \\( 0 \\le z' \\le 6 \\).\nعدد الحلول الكلي غير السالبة هو \\( \\binom{14}{2} = 91 \\).\nتطبيق مبدأ الشمول والاستبعاد على الشروط المتجاوزة:\nالانتهاكات الفردية: \\( 36 + 28 + 21 = 85 \\).\nالتقاطعات الثنائية: \\( 3 + 1 + 0 = 4 \\).\nعدد الحلول الصحيحة = \\( 91 - 85 + 4 = 10 \\)."
       }
     },
-    "correct_index": "10"
+    "correct_index": "0"
   },
   {
     "id": "KAUST-106",
@@ -3166,7 +3166,7 @@
         "explanation": "1. المعادلة المميزة هي \\( r^2 - 3r + 2 = 0 \\implies (r-1)(r-2) = 0 \\).\n2. الجذور هي \\( r_1 = 1 \\) و \\( r_2 = 2 \\).\n3. الصيغة العامة: \\( a_n = C_1 + C_2 \\cdot 2^n \\).\n4. بالتعويض بالشروط الابتدائية نجد \\( C_2 = 2 \\) و \\( C_1 = -1 \\).\n5. إذن \\( a_n = 2^{n+1} - 1 \\).\n6. عند \\( n = 10 \\): \\( a_{10} = 2^{11} - 1 = 2047 \\)."
       }
     },
-    "correct_index": "2047"
+    "correct_index": "0"
   },
   {
     "id": "KAUST-111",
@@ -3177,7 +3177,7 @@
     "difficulty": "hard",
     "content": {
       "en": {
-        "question": "Consider the flow network from source \\( S \\) to sink \\( T \\) shown below. The capacity of each directed edge is indicated. What is the maximum flow value from \\( S \\) to \\( T \\)?<br/><svg viewBox=\"0 0 320 180\" class=\"w-full max-w-xs mx-auto bg-white rounded-lg p-2\"><circle cx=\"40\" cy=\"90\" r=\"16\" fill=\"#22c55e\"/><text x=\"40\" y=\"95\" text-anchor=\"middle\" fill=\"white\" font-weight=\"bold\">S</text><circle cx=\"160\" cy=\"40\" r=\"16\" fill=\"#3b82f6\"/><text x=\"160\" y=\"45\" text-anchor=\"middle\" fill=\"white\" font-weight=\"bold\">A</text><circle cx=\"160\" cy=\"140\" r=\"16\" fill=\"#3b82f6\"/><text x=\"160\" y=\"145\" text-anchor=\"middle\" fill=\"white\" font-weight=\"bold\">B</text><circle cx=\"280\" cy=\"90\" r=\"16\" fill=\"#ef4444\"/><text x=\"280\" y=\"95\" text-anchor=\"middle\" fill=\"white\" font-weight=\"bold\">T</text><line x1=\"55\" y1=\"80\" x2=\"145\" y2=\"45\" stroke=\"#475569\" stroke-width=\"2\" marker-end=\"url(#arrow)\"/><text x=\"90\" y=\"55\" fill=\"#1e293b\" font-size=\"12\">\\( 10 \\)</text><line x1=\"55\" y1=\"100\" x2=\"145\" y2=\"135\" stroke=\"#475569\" stroke-width=\"2\"/><text x=\"90\" y=\"135\" fill=\"#1e293b\" font-size=\"12\">\\( 10 \\)</text><line x1=\"160\" y1=\"56\" x2=\"160\" y2=\"124\" stroke=\"#475569\" stroke-width=\"2\"/><text x=\"145\" y=\"95\" fill=\"#1e293b\" font-size=\"12\">\\( 5 \\)</text><line x1=\"175\" y1=\"45\" x2=\"265\" y2=\"80\" stroke=\"#475569\" stroke-width=\"2\"/><text x=\"225\" y=\"55\" fill=\"#1e293b\" font-size=\"12\">\\( 8 \\)</text><line x1=\"175\" y1=\"135\" x2=\"265\" y2=\"100\" stroke=\"#475569\" stroke-width=\"2\"/><text x=\"225\" y=\"135\" fill=\"#1e293b\" font-size=\"12\">\\( 7 \\)</text></svg>",
+        "question": "Consider the flow network from source \\( S \\) to sink \\( T \\) shown below. The capacity of each directed edge is indicated. What is the maximum flow value from \\( S \\) to \\( T \\)?",
         "options": [
           "\\( 12 \\)",
           "\\( 14 \\)",
@@ -3189,7 +3189,7 @@
         "explanation": "Consider the cut separating \\( \\{S, A, B\\} \\) from \\( \\{T\\} \\):\nEdges going across this cut are \\( (A, T) \\) with capacity \\( 8 \\), and \\( (B, T) \\) with capacity \\( 7 \\).\nTotal cut capacity = \\( 8 + 7 = 15 \\).\nSince maximum flow cannot exceed the minimum cut capacity, and we can achieve flow \\( 8 \\) along \\( S \\rightarrow A \\rightarrow T \\) and flow \\( 7 \\) along \\( S \\rightarrow B \\rightarrow T \\) (total \\( 15 \\)), the maximum flow value is \\( 15 \\)."
       },
       "ar": {
-        "question": "تأمل شبكة التدفق من المصدر \\( S \\) إلى المصب \\( T \\) الموضحة أدناه. سعة كل ضلع موجه مكتوبة عليه. ما هي القيمة القصوى للتدفق من \\( S \\) إلى \\( T \\)؟<br/><svg viewBox=\"0 0 320 180\" class=\"w-full max-w-xs mx-auto bg-white rounded-lg p-2\"><circle cx=\"40\" cy=\"90\" r=\"16\" fill=\"#22c55e\"/><text x=\"40\" y=\"95\" text-anchor=\"middle\" fill=\"white\" font-weight=\"bold\">S</text><circle cx=\"160\" cy=\"40\" r=\"16\" fill=\"#3b82f6\"/><text x=\"160\" y=\"45\" text-anchor=\"middle\" fill=\"white\" font-weight=\"bold\">A</text><circle cx=\"160\" cy=\"140\" r=\"16\" fill=\"#3b82f6\"/><text x=\"160\" y=\"145\" text-anchor=\"middle\" fill=\"white\" font-weight=\"bold\">B</text><circle cx=\"280\" cy=\"90\" r=\"16\" fill=\"#ef4444\"/><text x=\"280\" y=\"95\" text-anchor=\"middle\" fill=\"white\" font-weight=\"bold\">T</text><line x1=\"55\" y1=\"80\" x2=\"145\" y2=\"45\" stroke=\"#475569\" stroke-width=\"2\"/><text x=\"90\" y=\"55\" fill=\"#1e293b\" font-size=\"12\">\\( 10 \\)</text><line x1=\"55\" y1=\"100\" x2=\"145\" y2=\"135\" stroke=\"#475569\" stroke-width=\"2\"/><text x=\"90\" y=\"135\" fill=\"#1e293b\" font-size=\"12\">\\( 10 \\)</text><line x1=\"160\" y1=\"56\" x2=\"160\" y2=\"124\" stroke=\"#475569\" stroke-width=\"2\"/><text x=\"145\" y=\"95\" fill=\"#1e293b\" font-size=\"12\">\\( 5 \\)</text><line x1=\"175\" y1=\"45\" x2=\"265\" y2=\"80\" stroke=\"#475569\" stroke-width=\"2\"/><text x=\"225\" y=\"55\" fill=\"#1e293b\" font-size=\"12\">\\( 8 \\)</text><line x1=\"175\" y1=\"135\" x2=\"265\" y2=\"100\" stroke=\"#475569\" stroke-width=\"2\"/><text x=\"225\" y=\"135\" fill=\"#1e293b\" font-size=\"12\">\\( 7 \\)</text></svg>",
+        "question": "تأمل شبكة التدفق من المصدر \\( S \\) إلى المصب \\( T \\) الموضحة أدناه. سعة كل ضلع موجه مكتوبة عليه. ما هي القيمة القصوى للتدفق من \\( S \\) إلى \\( T \\)؟",
         "options": [
           "\\( 12 \\)",
           "\\( 14 \\)",
@@ -3224,7 +3224,7 @@
         "explanation": "عندما تكون \\( n = 5 \\):\n\\( !5 = 120 \\left( 1 - 1 + \\frac{1}{2} - \\frac{1}{6} + \\frac{1}{24} - \\frac{1}{120} \\right) \\)\n\\( !5 = 60 - 20 + 5 - 1 = 44 \\)."
       }
     },
-    "correct_index": "44"
+    "correct_index": "0"
   },
   {
     "id": "KAUST-113",
@@ -3317,7 +3317,7 @@
         "explanation": "1. من \\( n \\equiv 2 \\pmod 3 \\) و \\( n \\equiv 2 \\pmod 7 \\)، نحصل على \\( n \\equiv 2 \\pmod{21} \\).\n2. نكتب \\( n = 21k + 2 \\).\n3. بالتعويض في \\( n \\equiv 3 \\pmod 5 \\):\n\\( 21k + 2 \\equiv 3 \\pmod 5 \\implies k \\equiv 1 \\pmod 5 \\).\n4. أصغر قيمة لـ \\( k \\) هي \\( k = 1 \\).\n5. بالتالي \\( n = 21(1) + 2 = 23 \\)."
       }
     },
-    "correct_index": "23"
+    "correct_index": "0"
   },
   {
     "id": "KAUST-116",
@@ -3363,7 +3363,7 @@
     "difficulty": "medium",
     "content": {
       "en": {
-        "question": "A bounded feasible region is shown with corner vertices at \\( (0,0) \\), \\( (0,4) \\), \\( (3,3) \\), and \\( (5,0) \\). What is the maximum value of the objective function \\( Z = 2x + 5y \\) over this feasible region?<br/><svg viewBox=\"0 0 200 200\" class=\"w-full max-w-xs mx-auto bg-white rounded-lg p-2\"><line x1=\"30\" y1=\"170\" x2=\"180\" y2=\"170\" stroke=\"#64748b\" stroke-width=\"2\"/><line x1=\"30\" y1=\"170\" x2=\"30\" y2=\"20\" stroke=\"#64748b\" stroke-width=\"2\"/><polygon points=\"30,170 30,50 120,80 180,170\" fill=\"#3b82f6\" fill-opacity=\"0.3\" stroke=\"#1d4ed8\" stroke-width=\"2\"/><circle cx=\"30\" cy=\"170\" r=\"4\" fill=\"#1e293b\"/><text x=\"15\" y=\"185\" font-size=\"10\">(0,0)</text><circle cx=\"30\" cy=\"50\" r=\"4\" fill=\"#1e293b\"/><text x=\"35\" y=\"50\" font-size=\"10\">(0,4)</text><circle cx=\"120\" cy=\"80\" r=\"4\" fill=\"#1e293b\"/><text x=\"125\" y=\"75\" font-size=\"10\">(3,3)</text><circle cx=\"180\" cy=\"170\" r=\"4\" fill=\"#1e293b\"/><text x=\"170\" y=\"185\" font-size=\"10\">(5,0)</text></svg>",
+        "question": "A bounded feasible region is shown with corner vertices at \\( (0,0) \\), \\( (0,4) \\), \\( (3,3) \\), and \\( (5,0) \\). What is the maximum value of the objective function \\( Z = 2x + 5y \\) over this feasible region?",
         "options": [
           "\\( 15 \\)",
           "\\( 18 \\)",
@@ -3375,7 +3375,7 @@
         "explanation": "By the Fundamental Theorem of Linear Programming, the maximum occurs at one of the vertices:\n1. At \\( (0,0) \\): \\( Z = 2(0) + 5(0) = 0 \\)\n2. At \\( (0,4) \\): \\( Z = 2(0) + 5(4) = 20 \\)\n3. At \\( (3,3) \\): \\( Z = 2(3) + 5(3) = 6 + 15 = 21 \\)\n4. At \\( (5,0) \\): \\( Z = 2(5) + 5(0) = 10 \\)\nThe maximum value is \\( 21 \\) at \\( (3,3) \\)."
       },
       "ar": {
-        "question": "تظهر في الشكل منطقة مقبولة محددة برؤوس عند \\( (0,0) \\)، \\( (0,4) \\)، \\( (3,3) \\)، و \\( (5,0) \\). ما هي القيمة العظمى لدالة الهدف \\( Z = 2x + 5y \\) فوق هذه المنطقة المقبولة؟<br/><svg viewBox=\"0 0 200 200\" class=\"w-full max-w-xs mx-auto bg-white rounded-lg p-2\"><line x1=\"30\" y1=\"170\" x2=\"180\" y2=\"170\" stroke=\"#64748b\" stroke-width=\"2\"/><line x1=\"30\" y1=\"170\" x2=\"30\" y2=\"20\" stroke=\"#64748b\" stroke-width=\"2\"/><polygon points=\"30,170 30,50 120,80 180,170\" fill=\"#3b82f6\" fill-opacity=\"0.3\" stroke=\"#1d4ed8\" stroke-width=\"2\"/><circle cx=\"30\" cy=\"170\" r=\"4\" fill=\"#1e293b\"/><text x=\"15\" y=\"185\" font-size=\"10\">(0,0)</text><circle cx=\"30\" cy=\"50\" r=\"4\" fill=\"#1e293b\"/><text x=\"35\" y=\"50\" font-size=\"10\">(0,4)</text><circle cx=\"120\" cy=\"80\" r=\"4\" fill=\"#1e293b\"/><text x=\"125\" y=\"75\" font-size=\"10\">(3,3)</text><circle cx=\"180\" cy=\"170\" r=\"4\" fill=\"#1e293b\"/><text x=\"170\" y=\"185\" font-size=\"10\">(5,0)</text></svg>",
+        "question": "تظهر في الشكل منطقة مقبولة محددة برؤوس عند \\( (0,0) \\)، \\( (0,4) \\)، \\( (3,3) \\)، و \\( (5,0) \\). ما هي القيمة العظمى لدالة الهدف \\( Z = 2x + 5y \\) فوق هذه المنطقة المقبولة؟",
         "options": [
           "\\( 15 \\)",
           "\\( 18 \\)",
@@ -3410,7 +3410,7 @@
         "explanation": "1. تعطي المتسلسلة: \\( \\frac{1}{(1-2x)^3} = \\sum_{n=0}^{\\infty} \\binom{n+2}{2} 2^n x^n \\).\n2. لإيجاد معامل \\( x^4 \\)، نضع \\( n = 4 \\).\n3. المعامل = \\( \\binom{6}{2} \\times 2^4 = 15 \\times 16 = 240 \\)."
       }
     },
-    "correct_index": "240"
+    "correct_index": "0"
   },
   {
     "id": "KAUST-119",
@@ -3456,19 +3456,19 @@
     "difficulty": "easy",
     "content": {
       "en": {
-        "question": "Two vectors in two-dimensional space are given by \\( \\vec{u} = \\begin{pmatrix} 3 \\\\ 4 \\end{pmatrix} \\) and \\( \\vec{v} = \\begin{pmatrix} 12 \\\\ -5 \\end{pmatrix} \\) as shown below. Find the dot product \\( \\vec{u} \\cdot \\vec{v} \\).<br/><svg viewBox=\"0 0 200 200\" class=\"w-full max-w-xs mx-auto bg-white rounded-lg p-2\"><line x1=\"20\" y1=\"100\" x2=\"180\" y2=\"100\" stroke=\"#94a3b8\" stroke-width=\"1\"/><line x1=\"100\" y1=\"20\" x2=\"100\" y2=\"180\" stroke=\"#94a3b8\" stroke-width=\"1\"/><line x1=\"100\" y1=\"100\" x2=\"130\" y2=\"60\" stroke=\"#2563eb\" stroke-width=\"3\"/><text x=\"135\" y=\"55\" fill=\"#2563eb\" font-bold=\"true\">u</text><line x1=\"100\" y1=\"100\" x2=\"170\" y2=\"130\" stroke=\"#dc2626\" stroke-width=\"3\"/><text x=\"175\" y=\"135\" fill=\"#dc2626\" font-bold=\"true\">v</text></svg>",
+        "question": "Two vectors in two-dimensional space are given by \\( \\vec{u} = \\begin{pmatrix} 3 \\\\ 4 \\end{pmatrix} \\) and \\( \\vec{v} = \\begin{pmatrix} 12 \\\\ -5 \\end{pmatrix} \\) as shown below. Find the dot product \\( \\vec{u} \\cdot \\vec{v} \\).",
         "options": [],
         "hint": "Use the dot product formula \\( \\vec{u} \\cdot \\vec{v} = u_x v_x + u_y v_y \\).",
         "explanation": "Calculate the dot product directly:\n\\( \\vec{u} \\cdot \\vec{v} = (3)(12) + (4)(-5) = 36 - 20 = 16 \\)."
       },
       "ar": {
-        "question": "متجرد متجهات في الفضاء ثنائي الأبعاد يُعطيان بـ \\( \\vec{u} = \\begin{pmatrix} 3 \\\\ 4 \\end{pmatrix} \\) و \\( \\vec{v} = \\begin{pmatrix} 12 \\\\ -5 \\end{pmatrix} \\) كما هو موضح أدناه. أوجد الجداء النقطي (القياسي) \\( \\vec{u} \\cdot \\vec{v} \\)؟<br/><svg viewBox=\"0 0 200 200\" class=\"w-full max-w-xs mx-auto bg-white rounded-lg p-2\"><line x1=\"20\" y1=\"100\" x2=\"180\" y2=\"100\" stroke=\"#94a3b8\" stroke-width=\"1\"/><line x1=\"100\" y1=\"20\" x2=\"100\" y2=\"180\" stroke=\"#94a3b8\" stroke-width=\"1\"/><line x1=\"100\" y1=\"100\" x2=\"130\" y2=\"60\" stroke=\"#2563eb\" stroke-width=\"3\"/><text x=\"135\" y=\"55\" fill=\"#2563eb\" font-bold=\"true\">u</text><line x1=\"100\" y1=\"100\" x2=\"170\" y2=\"130\" stroke=\"#dc2626\" stroke-width=\"3\"/><text x=\"175\" y=\"135\" fill=\"#dc2626\" font-bold=\"true\">v</text></svg>",
+        "question": "متجرد متجهات في الفضاء ثنائي الأبعاد يُعطيان بـ \\( \\vec{u} = \\begin{pmatrix} 3 \\\\ 4 \\end{pmatrix} \\) و \\( \\vec{v} = \\begin{pmatrix} 12 \\\\ -5 \\end{pmatrix} \\) كما هو موضح أدناه. أوجد الجداء النقطي (القياسي) \\( \\vec{u} \\cdot \\vec{v} \\)؟",
         "options": [],
         "hint": "استخدم قانون الجداء النقطي \\( \\vec{u} \\cdot \\vec{v} = u_x v_x + u_y v_y \\).",
         "explanation": "احسب الجداء النقطي مباشرة:\n\\( \\vec{u} \\cdot \\vec{v} = (3)(12) + (4)(-5) = 36 - 20 = 16 \\)."
       }
     },
-    "correct_index": "16"
+    "correct_index": "0"
   },
   {
     "id": "KAUST-121",
@@ -3524,7 +3524,7 @@
         "explanation": "لتقليل التكلفة، استخدم السعة الكاملة للمصنع \\( A \\) (تكلفة \\( 10 \\)) أولاً: \\( 40 \\times 10 = 400 \\). الطلب المتبقي هو \\( 80 - 40 = 40 \\) وحدة. ينتج هذه الـ \\( 40 \\) وحدة في المصنع \\( B \\) (تكلفة \\( 15 \\)): \\( 40 \\times 15 = 600 \\). التكلفة الأدنى الإجمالية هي \\( 400 + 600 = 1000 \\)."
       }
     },
-    "correct_index": "1000"
+    "correct_index": "0"
   },
   {
     "id": "KAUST-123",
@@ -3568,19 +3568,19 @@
     "difficulty": "hard",
     "content": {
       "en": {
-        "question": "A grid of size \\( 4 \\times 4 \\) (from \\( (0,0) \\) to \\( (4,4) \\)) contains a blocked intersection at point \\( (2,2) \\), as illustrated below. <svg viewBox='0 0 200 200' class='w-full max-w-xs mx-auto bg-white rounded-lg p-2'><path d='M 20 20 L 180 20 M 20 60 L 180 60 M 20 100 L 180 100 M 20 140 L 180 140 M 20 180 L 180 180' stroke='#cbd5e1' stroke-width='2'/><path d='M 20 20 L 20 180 M 60 20 L 60 180 M 100 20 L 100 180 M 140 20 L 140 180 M 180 20 L 180 180' stroke='#cbd5e1' stroke-width='2'/><circle cx='20' cy='180' r='5' fill='#16a34a'/><circle cx='180' cy='20' r='5' fill='#2563eb'/><circle cx='100' cy='100' r='7' fill='#dc2626'/><text x='15' y='195' font-size='10' fill='#16a34a' font-weight='bold'>(0,0)</text><text x='170' y='15' font-size='10' fill='#2563eb' font-weight='bold'>(4,4)</text><text x='105' y='95' font-size='10' fill='#dc2626' font-weight='bold'>(2,2)</text></svg> How many paths moving only right and up exist from \\( (0,0) \\) to \\( (4,4) \\) that do NOT pass through \\( (2,2) \\)?",
+        "question": "A grid of size \\( 4 \\times 4 \\) (from \\( (0,0) \\) to \\( (4,4) \\)) contains a blocked intersection at point \\( (2,2) \\), as illustrated below.  How many paths moving only right and up exist from \\( (0,0) \\) to \\( (4,4) \\) that do NOT pass through \\( (2,2) \\)?",
         "options": [],
         "hint": "Subtract the number of paths passing through \\( (2,2) \\) from the total unrestricted paths.",
         "explanation": "Total unrestricted paths from \\( (0,0) \\) to \\( (4,4) \\) is \\( \\binom{4+4}{4} = \\binom{8}{4} = 70 \\). Paths passing through \\( (2,2) \\) equals (paths from \\( (0,0) \\) to \\( (2,2) \\)) \\( \\times \\) (paths from \\( (2,2) \\) to \\( (4,4) \\)). Paths from \\( (0,0) \\) to \\( (2,2) \\) is \\( \\binom{2+2}{2} = \\binom{4}{2} = 6 \\). Paths from \\( (2,2) \\) to \\( (4,4) \\) is \\( \\binom{4}{2} = 6 \\). Thus, paths through \\( (2,2) \\) = \\( 6 \\times 6 = 36 \\). Valid paths avoiding \\( (2,2) \\) = \\( 70 - 36 = 34 \\)."
       },
       "ar": {
-        "question": "شبكة بأبعاد \\( 4 \\times 4 \\) (من \\( (0,0) \\) إلى \\( (4,4) \\)) تحتوي على نقطة تقاطع محظورة عند \\( (2,2) \\)، كما هو موضح أدناه. <svg viewBox='0 0 200 200' class='w-full max-w-xs mx-auto bg-white rounded-lg p-2'><path d='M 20 20 L 180 20 M 20 60 L 180 60 M 20 100 L 180 100 M 20 140 L 180 140 M 20 180 L 180 180' stroke='#cbd5e1' stroke-width='2'/><path d='M 20 20 L 20 180 M 60 20 L 60 180 M 100 20 L 100 180 M 140 20 L 140 180 M 180 20 L 180 180' stroke='#cbd5e1' stroke-width='2'/><circle cx='20' cy='180' r='5' fill='#16a34a'/><circle cx='180' cy='20' r='5' fill='#2563eb'/><circle cx='100' cy='100' r='7' fill='#dc2626'/><text x='15' y='195' font-size='10' fill='#16a34a' font-weight='bold'>(0,0)</text><text x='170' y='15' font-size='10' fill='#2563eb' font-weight='bold'>(4,4)</text><text x='105' y='95' font-size='10' fill='#dc2626' font-weight='bold'>(2,2)</text></svg> كم عدد المسارات التي تتحرك لليمين وللأعلى فقط من \\( (0,0) \\) إلى \\( (4,4) \\) والتي لا تمر عبر \\( (2,2) \\)؟",
+        "question": "شبكة بأبعاد \\( 4 \\times 4 \\) (من \\( (0,0) \\) إلى \\( (4,4) \\)) تحتوي على نقطة تقاطع محظورة عند \\( (2,2) \\)، كما هو موضح أدناه.  كم عدد المسارات التي تتحرك لليمين وللأعلى فقط من \\( (0,0) \\) إلى \\( (4,4) \\) والتي لا تمر عبر \\( (2,2) \\)؟",
         "options": [],
         "hint": "اطرح عدد المسارات التي تمر عبر \\( (2,2) \\) من إجمالي المسارات غير المقيدة.",
         "explanation": "إجمالي المسارات غير المقيدة من \\( (0,0) \\) إلى \\( (4,4) \\) هو \\( \\binom{4+4}{4} = \\binom{8}{4} = 70 \\). المسارات التي تمر عبر \\( (2,2) \\) تساوي (المسارات من \\( (0,0) \\) إلى \\( (2,2) \\)) \\( \\times \\) (المسارات من \\( (2,2) \\) إلى \\( (4,4) \\)). المسارات من \\( (0,0) \\) إلى \\( (2,2) \\) هي \\( \\binom{2+2}{2} = \\binom{4}{2} = 6 \\). المسارات من \\( (2,2) \\) إلى \\( (4,4) \\) هي \\( \\binom{4}{2} = 6 \\). إذن المسارات المارة عبر \\( (2,2) \\) = \\( 6 \\times 6 = 36 \\). المسارات الصالحة التي تتجنب \\( (2,2) \\) = \\( 70 - 36 = 34 \\)."
       }
     },
-    "correct_index": "34"
+    "correct_index": "0"
   },
   {
     "id": "KAUST-125",
@@ -3647,7 +3647,7 @@
     "difficulty": "medium",
     "content": {
       "en": {
-        "question": "The bar chart below represents the frequency distribution of scores \\( \\{1, 2, 3, 4\\} \\) obtained by a group of student participants. <svg viewBox='0 0 200 150' class='w-full max-w-xs mx-auto bg-white rounded-lg p-2'><line x1='30' y1='120' x2='180' y2='120' stroke='#334155' stroke-width='2'/><line x1='30' y1='20' x2='30' y2='120' stroke='#334155' stroke-width='2'/><rect x='45' y='80' width='20' height='40' fill='#3b82f6'/><rect x='80' y='40' width='20' height='80' fill='#3b82f6'/><rect x='115' y='60' width='20' height='60' fill='#3b82f6'/><rect x='150' y='100' width='20' height='20' fill='#3b82f6'/><text x='52' y='135' font-size='10'>1</text><text x='87' y='135' font-size='10'>2</text><text x='122' y='135' font-size='10'>3</text><text x='157' y='135' font-size='10'>4</text><text x='15' y='85' font-size='10'>2</text><text x='15' y='45' font-size='10'>4</text><text x='15' y='65' font-size='10'>3</text><text x='15' y='105' font-size='10'>1</text></svg> The heights correspond to frequencies: score \\( 1 \\) (frequency \\( 2 \\)), score \\( 2 \\) (frequency \\( 4 \\)), score \\( 3 \\) (frequency \\( 3 \\)), score \\( 4 \\) (frequency \\( 1 \\)). What is the mean score of this dataset?",
+        "question": "The bar chart below represents the frequency distribution of scores \\( \\{1, 2, 3, 4\\} \\) obtained by a group of student participants.  The heights correspond to frequencies: score \\( 1 \\) (frequency \\( 2 \\)), score \\( 2 \\) (frequency \\( 4 \\)), score \\( 3 \\) (frequency \\( 3 \\)), score \\( 4 \\) (frequency \\( 1 \\)). What is the mean score of this dataset?",
         "options": [
           "\\( 2.10 \\)",
           "\\( 2.30 \\)",
@@ -3658,7 +3658,7 @@
         "explanation": "Total frequency \\( N = 2 + 4 + 3 + 1 = 10 \\). Sum of scores = \\( (1 \\times 2) + (2 \\times 4) + (3 \\times 3) + (4 \\times 1) = 2 + 8 + 9 + 4 = 23 \\). Mean score \\( \\bar{x} = \\frac{23}{10} = 2.30 \\)."
       },
       "ar": {
-        "question": "يمثل المخطط شريطي أدناه توزيع التكرار للدرجات \\( \\{1, 2, 3, 4\\} \\) التي حصلت عليها مجموعة من الطلاب المشاركين. <svg viewBox='0 0 200 150' class='w-full max-w-xs mx-auto bg-white rounded-lg p-2'><line x1='30' y1='120' x2='180' y2='120' stroke='#334155' stroke-width='2'/><line x1='30' y1='20' x2='30' y2='120' stroke='#334155' stroke-width='2'/><rect x='45' y='80' width='20' height='40' fill='#3b82f6'/><rect x='80' y='40' width='20' height='80' fill='#3b82f6'/><rect x='115' y='60' width='20' height='60' fill='#3b82f6'/><rect x='150' y='100' width='20' height='20' fill='#3b82f6'/><text x='52' y='135' font-size='10'>1</text><text x='87' y='135' font-size='10'>2</text><text x='122' y='135' font-size='10'>3</text><text x='157' y='135' font-size='10'>4</text><text x='15' y='85' font-size='10'>2</text><text x='15' y='45' font-size='10'>4</text><text x='15' y='65' font-size='10'>3</text><text x='15' y='105' font-size='10'>1</text></svg> تتوافق الأطوال مع التكرارات: الدرجة \\( 1 \\) (تكرار \\( 2 \\))، الدرجة \\( 2 \\) (تكرار \\( 4 \\))، الدرجة \\( 3 \\) (تكرار \\( 3 \\))، الدرجة \\( 4 \\) (تكرار \\( 1 \\)). ما هو الوسط الحسابي لدرجات هذه المجموعة؟",
+        "question": "يمثل المخطط شريطي أدناه توزيع التكرار للدرجات \\( \\{1, 2, 3, 4\\} \\) التي حصلت عليها مجموعة من الطلاب المشاركين.  تتوافق الأطوال مع التكرارات: الدرجة \\( 1 \\) (تكرار \\( 2 \\))، الدرجة \\( 2 \\) (تكرار \\( 4 \\))، الدرجة \\( 3 \\) (تكرار \\( 3 \\))، الدرجة \\( 4 \\) (تكرار \\( 1 \\)). ما هو الوسط الحسابي لدرجات هذه المجموعة؟",
         "options": [
           "\\( 2.10 \\)",
           "\\( 2.30 \\)",
@@ -3680,19 +3680,19 @@
     "difficulty": "extreme",
     "content": {
       "en": {
-        "question": "Find the maximum flow from Source \\( S \\) to Sink \\( T \\) in the network directed graph below, where edge labels indicate maximum capacities: <svg viewBox='0 0 240 160' class='w-full max-w-xs mx-auto bg-white rounded-lg p-2'><circle cx='30' cy='80' r='12' fill='#334155'/><text x='26' y='84' fill='#fff' font-size='12'>S</text><circle cx='100' cy='30' r='12' fill='#334155'/><text x='96' y='34' fill='#fff' font-size='12'>A</text><circle cx='100' cy='130' r='12' fill='#334155'/><text x='96' y='134' fill='#fff' font-size='12'>B</text><circle cx='210' cy='80' r='12' fill='#334155'/><text x='206' y='84' fill='#fff' font-size='12'>T</text><line x1='40' y1='72' x2='90' y2='38' stroke='#000' stroke-width='2'/><text x='60' y='50' font-size='11' font-weight='bold'>10</text><line x1='40' y1='88' x2='90' y2='122' stroke='#000' stroke-width='2'/><text x='60' y='120' font-size='11' font-weight='bold'>8</text><line x1='100' y1='42' x2='100' y2='118' stroke='#000' stroke-width='2'/><text x='105' y='84' font-size='11' font-weight='bold'>4</text><line x1='112' y1='34' x2='200' y2='72' stroke='#000' stroke-width='2'/><text x='155' y='50' font-size='11' font-weight='bold'>7</text><line x1='112' y1='126' x2='200' y2='88' stroke='#000' stroke-width='2'/><text x='155' y='120' font-size='11' font-weight='bold'>10</text></svg>",
+        "question": "Find the maximum flow from Source \\( S \\) to Sink \\( T \\) in the network directed graph below, where edge labels indicate maximum capacities: ",
         "options": [],
         "hint": "Use the Max-Flow Min-Cut Theorem to calculate the bottleneck capacities.",
         "explanation": "Consider paths: 1) \\( S \\to A \\to T \\): sends flow \\( \\min(10, 7) = 7 \\). Remaining capacity on \\( S \\to A \\) is \\( 3 \\). 2) \\( S \\to A \\to B \\to T \\): sends flow \\( \\min(3, 4, 10) = 3 \\). Capacity on \\( S \\to A \\) is now \\( 0 \\). 3) \\( S \\to B \\to T \\): sends flow \\( \\min(8, 10 - 3) = 7 \\). Total maximum flow = \\( 7 + 3 + 7 = 17 \\)."
       },
       "ar": {
-        "question": "أوجد التدفق الأقصى من المصدر \\( S \\) إلى المصب \\( T \\) في شبكة الرسم البياني الموجه أدناه، حيث تشير التسميات على الحواف إلى السعات القصوى: <svg viewBox='0 0 240 160' class='w-full max-w-xs mx-auto bg-white rounded-lg p-2'><circle cx='30' cy='80' r='12' fill='#334155'/><text x='26' y='84' fill='#fff' font-size='12'>S</text><circle cx='100' cy='30' r='12' fill='#334155'/><text x='96' y='34' fill='#fff' font-size='12'>A</text><circle cx='100' cy='130' r='12' fill='#334155'/><text x='96' y='134' fill='#fff' font-size='12'>B</text><circle cx='210' cy='80' r='12' fill='#334155'/><text x='206' y='84' fill='#fff' font-size='12'>T</text><line x1='40' y1='72' x2='90' y2='38' stroke='#000' stroke-width='2'/><text x='60' y='50' font-size='11' font-weight='bold'>10</text><line x1='40' y1='88' x2='90' y2='122' stroke='#000' stroke-width='2'/><text x='60' y='120' font-size='11' font-weight='bold'>8</text><line x1='100' y1='42' x2='100' y2='118' stroke='#000' stroke-width='2'/><text x='105' y='84' font-size='11' font-weight='bold'>4</text><line x1='112' y1='34' x2='200' y2='72' stroke='#000' stroke-width='2'/><text x='155' y='50' font-size='11' font-weight='bold'>7</text><line x1='112' y1='126' x2='200' y2='88' stroke='#000' stroke-width='2'/><text x='155' y='120' font-size='11' font-weight='bold'>10</text></svg>",
+        "question": "أوجد التدفق الأقصى من المصدر \\( S \\) إلى المصب \\( T \\) في شبكة الرسم البياني الموجه أدناه، حيث تشير التسميات على الحواف إلى السعات القصوى: ",
         "options": [],
         "hint": "استخدم نظرية أقصى تدفق وأدنى قطع لحساب سعات الاختناق.",
         "explanation": "تأمل المسارات: 1) \\( S \\to A \\to T \\): يرسل تدفقاً قدره \\( \\min(10, 7) = 7 \\). السعة المتبقية على \\( S \\to A \\) هي \\( 3 \\). 2) \\( S \\to A \\to B \\to T \\): يرسل تدفقاً قدره \\( \\min(3, 4, 10) = 3 \\). السعة على \\( S \\to A \\) أصبحت الآن \\( 0 \\). 3) \\( S \\to B \\to T \\): يرسل تدفقاً قدره \\( \\min(8, 10 - 3) = 7 \\). التدفق الأقصى الإجمالي = \\( 7 + 3 + 7 = 17 \\)."
       }
     },
-    "correct_index": "17"
+    "correct_index": "0"
   },
   {
     "id": "KAUST-129",
@@ -3748,7 +3748,7 @@
         "explanation": "المعادلة المميزة هي \\( r^2 - 3r + 2 = 0 \\implies (r-1)(r-2) = 0 \\)، لذا الجذور هي \\( r = 1 \\) و \\( r = 2 \\). الصيغة العامة: \\( a_n = A + B \\cdot 2^n \\). باستخدام الشروط الأولية: \\( a_0 = A + B = 2 \\) و \\( a_1 = A + 2B = 5 \\). بالطرح نجد \\( B = 3 \\)، وبالتالي \\( A = -1 \\). إذن، \\( a_n = 3 \\cdot 2^n - 1 \\). عند \\( n = 10 \\): \\( a_{10} = 3 \\cdot 2^{10} - 1 = 3(1024) - 1 = 3071 \\)."
       }
     },
-    "correct_index": "3071"
+    "correct_index": "0"
   },
   {
     "id": "KAUST-131",
@@ -3860,7 +3860,7 @@
         "explanation": "صيغة عدد الإرباكات \\( !n \\) هي \\( !n = n! \\sum_{k=0}^{n} \\frac{(-1)^k}{k!} \\). بالنسبة إلى \\( n = 5 \\): \\( !5 = 120 \\left( 1 - 1 + \\frac{1}{2} - \\frac{1}{6} + \\frac{1}{24} - \\frac{1}{120} \\right) = 60 - 20 + 5 - 1 = 44 \\)."
       }
     },
-    "correct_index": "44"
+    "correct_index": "0"
   },
   {
     "id": "KAUST-135",
@@ -3871,7 +3871,7 @@
     "difficulty": "medium",
     "content": {
       "en": {
-        "question": "Consider the logic circuit diagram shown below with inputs \\( A \\) and \\( B \\). <svg viewBox='0 0 220 120' class='w-full max-w-xs mx-auto bg-white rounded-lg p-2'><text x='10' y='35' font-size='12' font-weight='bold'>A</text><text x='10' y='85' font-size='12' font-weight='bold'>B</text><line x1='25' y1='30' x2='70' y2='30' stroke='#000' stroke-width='2'/><line x1='25' y1='80' x2='70' y2='80' stroke='#000' stroke-width='2'/><rect x='70' y='15' width='40' height='30' fill='#e2e8f0' stroke='#000' stroke-width='2'/><text x='78' y='35' font-size='10' font-weight='bold'>NOT</text><rect x='70' y='65' width='40' height='30' fill='#e2e8f0' stroke='#000' stroke-width='2'/><text x='78' y='85' font-size='10' font-weight='bold'>NOT</text><line x1='110' y1='30' x2='140' y2='40' stroke='#000' stroke-width='2'/><line x1='110' y1='80' x2='140' y2='60' stroke='#000' stroke-width='2'/><rect x='140' y='35' width='45' height='30' fill='#cbd5e1' stroke='#000' stroke-width='2'/><text x='148' y='55' font-size='10' font-weight='bold'>AND</text><line x1='185' y1='50' x2='210' y2='50' stroke='#000' stroke-width='2'/><text x='195' y='42' font-size='12' font-weight='bold'>Y</text></svg> Which logical operation represents the output \\( Y \\)?",
+        "question": "Consider the logic circuit diagram shown below with inputs \\( A \\) and \\( B \\).  Which logical operation represents the output \\( Y \\)?",
         "options": [
           "\\( A \\text{ OR } B \\)",
           "\\( A \\text{ NAND } B \\)",
@@ -3882,7 +3882,7 @@
         "explanation": "The upper gate produces \\( \\bar{A} \\) and the lower gate produces \\( \\bar{B} \\). The AND gate combines them to yield \\( Y = \\bar{A} \\cdot \\bar{B} \\). By De Morgan's Law, \\( \\bar{A} \\cdot \\bar{B} = \\overline{A + B} \\), which is the logical NOR function."
       },
       "ar": {
-        "question": "تأمل مخطط الدائرة المنطقية الموضحة أدناه بمدخلين \\( A \\) و \\( B \\). <svg viewBox='0 0 220 120' class='w-full max-w-xs mx-auto bg-white rounded-lg p-2'><text x='10' y='35' font-size='12' font-weight='bold'>A</text><text x='10' y='85' font-size='12' font-weight='bold'>B</text><line x1='25' y1='30' x2='70' y2='30' stroke='#000' stroke-width='2'/><line x1='25' y1='80' x2='70' y2='80' stroke='#000' stroke-width='2'/><rect x='70' y='15' width='40' height='30' fill='#e2e8f0' stroke='#000' stroke-width='2'/><text x='78' y='35' font-size='10' font-weight='bold'>NOT</text><rect x='70' y='65' width='40' height='30' fill='#e2e8f0' stroke='#000' stroke-width='2'/><text x='78' y='85' font-size='10' font-weight='bold'>NOT</text><line x1='110' y1='30' x2='140' y2='40' stroke='#000' stroke-width='2'/><line x1='110' y1='80' x2='140' y2='60' stroke='#000' stroke-width='2'/><rect x='140' y='35' width='45' height='30' fill='#cbd5e1' stroke='#000' stroke-width='2'/><text x='148' y='55' font-size='10' font-weight='bold'>AND</text><line x1='185' y1='50' x2='210' y2='50' stroke='#000' stroke-width='2'/><text x='195' y='42' font-size='12' font-weight='bold'>Y</text></svg> أي عملية منطقية تمثل المخرج \\( Y \\)؟",
+        "question": "تأمل مخطط الدائرة المنطقية الموضحة أدناه بمدخلين \\( A \\) و \\( B \\).  أي عملية منطقية تمثل المخرج \\( Y \\)؟",
         "options": [
           "\\( A \\text{ OR } B \\)",
           "\\( A \\text{ NAND } B \\)",
@@ -3916,7 +3916,7 @@
         "explanation": "ليكن العرض الممتد على القطر \\( 2x \\) والارتفاع \\( y \\). إذن \\( x^2 + y^2 = R^2 = 100 \\). المساحة \\( A = 2xy \\). باستخدام \\( x = R \\cos \\theta \\) و \\( y = R \\sin \\theta \\)، نحصل على \\( A = 2 R^2 \\sin \\theta \\cos \\theta = R^2 \\sin(2\\theta) \\). أقصى قيمة لـ \\( \\sin(2\\theta) \\) هي \\( 1 \\) (عندما تكون \\( \\theta = 45^\\circ \\)). بالتالي تكون المساحة القصوى = \\( R^2 = 10^2 = 100 \\)."
       }
     },
-    "correct_index": "100"
+    "correct_index": "0"
   },
   {
     "id": "KAUST-137",
@@ -4020,7 +4020,7 @@
         "explanation": "بضرب الطرفين في \\( 6xy \\) نحصل على \\( 6y + 6x = xy \\implies xy - 6x - 6y = 0 \\). بإضافة \\( 36 \\) للطرفين يمكننا التحليل: \\( (x - 6)(y - 6) = 36 \\). بما أن \\( x, y > 0 \\)، فإن \\( x - 6 \\) و \\( y - 6 \\) هما قواسم موجبة للعدد \\( 36 \\). العدد \\( 36 = 2^2 \\cdot 3^2 \\) يملك \\( (2+1)(2+1) = 9 \\) قواسم موجبة. كل قاسم يقابل زوجاً فريداً \\( (x, y) \\). بالتالي يوجد \\( 9 \\) أزواج من الأعداد الصحيحة الموجبة."
       }
     },
-    "correct_index": "9"
+    "correct_index": "0"
   },
   {
     "id": "KAUST-141",
@@ -4120,7 +4120,7 @@
     "difficulty": "hard",
     "content": {
       "en": {
-        "question": "A pipeline connects point \\( A(0, 3) \\) to point \\( B(8, 5) \\) via a pumping station located at point \\( P(x, 0) \\) on the x-axis, as shown below:<br/><svg viewBox=\"0 0 240 140\" class=\"w-full max-w-xs mx-auto bg-white rounded-lg p-2\"><line x1=\"20\" y1=\"110\" x2=\"220\" y2=\"110\" stroke=\"#475569\" stroke-width=\"2\"/><line x1=\"40\" y1=\"10\" x2=\"40\" y2=\"130\" stroke=\"#475569\" stroke-width=\"2\"/><circle cx=\"40\" cy=\"50\" r=\"5\" fill=\"#2563eb\"/><text x=\"25\" y=\"50\" font-size=\"12\" fill=\"#1e293b\">A(0,3)</text><circle cx=\"200\" cy=\"10\" r=\"5\" fill=\"#2563eb\"/><text x=\"180\" y=\"25\" font-size=\"12\" fill=\"#1e293b\">B(8,5)</text><circle cx=\"100\" cy=\"110\" r=\"5\" fill=\"#dc2626\"/><text x=\"95\" y=\"128\" font-size=\"12\" fill=\"#1e293b\">P(x,0)</text><line x1=\"40\" y1=\"50\" x2=\"100\" y2=\"110\" stroke=\"#2563eb\" stroke-width=\"2\"/><line x1=\"100\" y1=\"110\" x2=\"200\" y2=\"10\" stroke=\"#2563eb\" stroke-width=\"2\"/></svg><br/>For what value of \\( x \\) is the total pipeline length \\( AP + PB \\) minimized?",
+        "question": "A pipeline connects point \\( A(0, 3) \\) to point \\( B(8, 5) \\) via a pumping station located at point \\( P(x, 0) \\) on the x-axis, as shown below:<br/>For what value of \\( x \\) is the total pipeline length \\( AP + PB \\) minimized?",
         "options": [
           "\\( 2 \\)",
           "\\( 3 \\)",
@@ -4131,7 +4131,7 @@
         "explanation": "Reflect \\( A(0,3) \\) across the x-axis to \\( A'(0,-3) \\). The line segment connecting \\( A'(0,-3) \\) and \\( B(8,5) \\) intersects the x-axis at \\( P(x,0) \\). The line equation is \\( y - 5 = \\frac{5 - (-3)}{8 - 0} (x - 8) = 1 \\cdot (x - 8) \\implies y = x - 3 \\). Setting \\( y = 0 \\) gives \\( x = 3 \\)."
       },
       "ar": {
-        "question": "يربط خط أنابيب بين النقطة \\( A(0, 3) \\) والنقطة \\( B(8, 5) \\) عبر محطة ضخ تقع عند النقطة \\( P(x, 0) \\) على المحور السيني، كما هو موضح أدناه:<br/><svg viewBox=\"0 0 240 140\" class=\"w-full max-w-xs mx-auto bg-white rounded-lg p-2\"><line x1=\"20\" y1=\"110\" x2=\"220\" y2=\"110\" stroke=\"#475569\" stroke-width=\"2\"/><line x1=\"40\" y1=\"10\" x2=\"40\" y2=\"130\" stroke=\"#475569\" stroke-width=\"2\"/><circle cx=\"40\" cy=\"50\" r=\"5\" fill=\"#2563eb\"/><text x=\"25\" y=\"50\" font-size=\"12\" fill=\"#1e293b\">A(0,3)</text><circle cx=\"200\" cy=\"10\" r=\"5\" fill=\"#2563eb\"/><text x=\"180\" y=\"25\" font-size=\"12\" fill=\"#1e293b\">B(8,5)</text><circle cx=\"100\" cy=\"110\" r=\"5\" fill=\"#dc2626\"/><text x=\"95\" y=\"128\" font-size=\"12\" fill=\"#1e293b\">P(x,0)</text><line x1=\"40\" y1=\"50\" x2=\"100\" y2=\"110\" stroke=\"#2563eb\" stroke-width=\"2\"/><line x1=\"100\" y1=\"110\" x2=\"200\" y2=\"10\" stroke=\"#2563eb\" stroke-width=\"2\"/></svg><br/>ما هي قيمة \\( x \\) التي تجعل إجمالي طول خط الأنابيب \\( AP + PB \\) أصغر ما يمكن؟",
+        "question": "يربط خط أنابيب بين النقطة \\( A(0, 3) \\) والنقطة \\( B(8, 5) \\) عبر محطة ضخ تقع عند النقطة \\( P(x, 0) \\) على المحور السيني، كما هو موضح أدناه:<br/>ما هي قيمة \\( x \\) التي تجعل إجمالي طول خط الأنابيب \\( AP + PB \\) أصغر ما يمكن؟",
         "options": [
           "\\( 2 \\)",
           "\\( 3 \\)",
@@ -4221,7 +4221,7 @@
         "explanation": "باستخدام العلاقة التكرارية \\( a_n = a_{n-1} + a_{n-2} + a_{n-3} \\): \\( a_4 = 7 + 4 + 2 = 13 \\)، \\( a_5 = 13 + 7 + 4 = 24 \\)، \\( a_6 = 24 + 13 + 7 = 44 \\)."
       }
     },
-    "correct_index": "44"
+    "correct_index": "0"
   },
   {
     "id": "KAUST-148",
@@ -4277,7 +4277,7 @@
         "explanation": "المعادلة التفاضلية هي \\( \\frac{dS}{dt} = 6 - 0.03 S \\)، وحلها \\( S(t) = 200(1 - e^{-0.03 t}) \\). عند \\( t = 100 \\)، يكون \\( S(100) = 200(1 - e^{-3}) \\approx 200 \\times 0.95 = 190 \\)."
       }
     },
-    "correct_index": "190"
+    "correct_index": "0"
   },
   {
     "id": "KAUST-150",
@@ -4333,7 +4333,7 @@
         "explanation": "مساحة المربع الداخلي المضلل تساوي \\( \\frac{1}{5} \\) من المساحة الكلية للمربع الخارجي. المساحة الكلية = \\( 10^2 = 100 \\)، وبالتالي تكون مساحة المنطقة المضللة = \\( \\frac{100}{5} = 20 \\)."
       }
     },
-    "correct_index": "20"
+    "correct_index": "0"
   },
   {
     "id": "KAUST-152",
@@ -4511,7 +4511,7 @@
         "explanation": "باستخدام خوارزمية إقليدس الممتدة، نصل إلى \\( 1 = 2 \\times 43 - 5 \\times 17 \\)، مما يعني أن المعكوس هو \\( -5 \\pmod{43} \\)، وبإضافة \\( 43 \\) نحصل على \\( x = 38 \\)."
       }
     },
-    "correct_index": "38"
+    "correct_index": "0"
   },
   {
     "id": "KAUST-158",
@@ -4567,7 +4567,7 @@
         "explanation": "باستخدام متباينة الوسط الحسابي والهندسي للأعداد \\( x, x, y \\): \\( \\frac{x + x + y}{3} \\ge \\sqrt[3]{x^2 y} \\implies \\frac{12}{3} = 4 \\ge \\sqrt[3]{x^2 y} \\implies x^2 y \\le 64 \\). المساواة تتحقق عندما تكون \\( x = 4 \\) و \\( y = 4 \\)، والقيمة العظمى هي \\( 64 \\)."
       }
     },
-    "correct_index": "64"
+    "correct_index": "0"
   },
   {
     "id": "KAUST-160",

@@ -74,7 +74,7 @@
     "difficulty": "medium",
     "content": {
       "en": {
-        "question": "The bar graph below shows the favorite fruits of a group of students. How many more students chose Bananas than Oranges? <svg viewBox=\"0 0 240 160\" class=\"w-full max-w-xs mx-auto bg-white rounded-lg p-2\"><line x1=\"40\" y1=\"130\" x2=\"220\" y2=\"130\" stroke=\"#334155\" stroke-width=\"2\"/><line x1=\"40\" y1=\"20\" x2=\"40\" y2=\"130\" stroke=\"#334155\" stroke-width=\"2\"/><rect x=\"60\" y=\"50\" width=\"30\" height=\"80\" fill=\"#ef4444\"/><rect x=\"110\" y=\"30\" width=\"30\" height=\"100\" fill=\"#eab308\"/><rect x=\"160\" y=\"70\" width=\"30\" height=\"60\" fill=\"#f97316\"/><text x=\"75\" y=\"145\" text-anchor=\"middle\" font-size=\"10\">Apple</text><text x=\"125\" y=\"145\" text-anchor=\"middle\" font-size=\"10\">Banana</text><text x=\"175\" y=\"145\" text-anchor=\"middle\" font-size=\"10\">Orange</text><text x=\"30\" y=\"55\" font-size=\"10\">\\( 8 \\)</text><text x=\"30\" y=\"35\" font-size=\"10\">\\( 10 \\)</text><text x=\"30\" y=\"75\" font-size=\"10\">\\( 6 \\)</text></svg>",
+        "question": "The bar graph below shows the favorite fruits of a group of students. How many more students chose Bananas than Oranges? ",
         "options": [
           "\\( 2 \\)",
           "\\( 4 \\)",
@@ -85,7 +85,7 @@
         "explanation": "Bananas were chosen by \\( 10 \\) students, and Oranges were chosen by \\( 6 \\) students. The difference is \\( 10 - 6 = 4 \\) students."
       },
       "ar": {
-        "question": "يوضح التمثيل بالأعمدة أدناه الفاكهة المفضلة لمجموعة من الطلاب. كم يزيد عدد الطلاب الذين فضلوا الموز على الذين فضلوا البرتقال؟ <svg viewBox=\"0 0 240 160\" class=\"w-full max-w-xs mx-auto bg-white rounded-lg p-2\"><line x1=\"40\" y1=\"130\" x2=\"220\" y2=\"130\" stroke=\"#334155\" stroke-width=\"2\"/><line x1=\"40\" y1=\"20\" x2=\"40\" y2=\"130\" stroke=\"#334155\" stroke-width=\"2\"/><rect x=\"60\" y=\"50\" width=\"30\" height=\"80\" fill=\"#ef4444\"/><rect x=\"110\" y=\"30\" width=\"30\" height=\"100\" fill=\"#eab308\"/><rect x=\"160\" y=\"70\" width=\"30\" height=\"60\" fill=\"#f97316\"/><text x=\"75\" y=\"145\" text-anchor=\"middle\" font-size=\"10\">تفاح</text><text x=\"125\" y=\"145\" text-anchor=\"middle\" font-size=\"10\">موز</text><text x=\"175\" y=\"145\" text-anchor=\"middle\" font-size=\"10\">برتقال</text><text x=\"30\" y=\"55\" font-size=\"10\">\\( 8 \\)</text><text x=\"30\" y=\"35\" font-size=\"10\">\\( 10 \\)</text><text x=\"30\" y=\"75\" font-size=\"10\">\\( 6 \\)</text></svg>",
+        "question": "يوضح التمثيل بالأعمدة أدناه الفاكهة المفضلة لمجموعة من الطلاب. كم يزيد عدد الطلاب الذين فضلوا الموز على الذين فضلوا البرتقال؟ ",
         "options": [
           "\\( 2 \\)",
           "\\( 4 \\)",
@@ -107,7 +107,7 @@
     "difficulty": "easy",
     "content": {
       "en": {
-        "question": "Which fraction represents the shaded region in the circle below? <svg viewBox=\"0 0 120 120\" class=\"w-full max-w-xs mx-auto bg-white rounded-lg p-2\"><circle cx=\"60\" cy=\"60\" r=\"50\" fill=\"#e2e8f0\" stroke=\"#1e293b\" stroke-width=\"2\"/><path d=\"M60,60 L110,60 A50,50 0 0,0 60,10 Z\" fill=\"#3b82f6\"/><path d=\"M60,60 L60,10 A50,50 0 0,0 10,60 Z\" fill=\"#3b82f6\"/><path d=\"M60,60 L10,60 A50,50 0 0,0 60,110 Z\" fill=\"#3b82f6\"/><line x1=\"10\" y1=\"60\" x2=\"110\" y2=\"60\" stroke=\"#1e293b\" stroke-width=\"2\"/><line x1=\"60\" y1=\"10\" x2=\"60\" y2=\"110\" stroke=\"#1e293b\" stroke-width=\"2\"/></svg>",
+        "question": "Which fraction represents the shaded region in the circle below? ",
         "options": [
           "\\( \\frac{1}{4} \\)",
           "\\( \\frac{2}{4} \\)",
@@ -118,7 +118,7 @@
         "explanation": "The circle is divided into \\( 4 \\) equal parts, and \\( 3 \\) parts are shaded. Thus, the fraction is \\( \\frac{3}{4} \\)."
       },
       "ar": {
-        "question": "أي من الكسور التالية يمثل الجزء المظلل في الدائرة أدناه؟ <svg viewBox=\"0 0 120 120\" class=\"w-full max-w-xs mx-auto bg-white rounded-lg p-2\"><circle cx=\"60\" cy=\"60\" r=\"50\" fill=\"#e2e8f0\" stroke=\"#1e293b\" stroke-width=\"2\"/><path d=\"M60,60 L110,60 A50,50 0 0,0 60,10 Z\" fill=\"#3b82f6\"/><path d=\"M60,60 L60,10 A50,50 0 0,0 10,60 Z\" fill=\"#3b82f6\"/><path d=\"M60,60 L10,60 A50,50 0 0,0 60,110 Z\" fill=\"#3b82f6\"/><line x1=\"10\" y1=\"60\" x2=\"110\" y2=\"60\" stroke=\"#1e293b\" stroke-width=\"2\"/><line x1=\"60\" y1=\"10\" x2=\"60\" y2=\"110\" stroke=\"#1e293b\" stroke-width=\"2\"/></svg>",
+        "question": "أي من الكسور التالية يمثل الجزء المظلل في الدائرة أدناه؟ ",
         "options": [
           "\\( \\frac{1}{4} \\)",
           "\\( \\frac{2}{4} \\)",
@@ -206,7 +206,7 @@
     "difficulty": "medium",
     "content": {
       "en": {
-        "question": "The bar chart below shows the favorite fruits of a class of students:\n<svg viewBox=\"0 0 240 160\" class=\"w-full max-w-xs mx-auto bg-white rounded-lg p-2\"><rect x=\"30\" y=\"40\" width=\"30\" height=\"80\" fill=\"#ef4444\"/><rect x=\"80\" y=\"70\" width=\"30\" height=\"50\" fill=\"#eab308\"/><rect x=\"130\" y=\"0\" width=\"30\" height=\"120\" fill=\"#f97316\"/><rect x=\"180\" y=\"50\" width=\"30\" height=\"70\" fill=\"#8b5cf6\"/><line x1=\"20\" y1=\"120\" x2=\"220\" y2=\"120\" stroke=\"#334155\" stroke-width=\"2\"/><text x=\"45\" y=\"135\" font-size=\"10\" text-anchor=\"middle\">Apples</text><text x=\"95\" y=\"135\" font-size=\"10\" text-anchor=\"middle\">Bananas</text><text x=\"145\" y=\"135\" font-size=\"10\" text-anchor=\"middle\">Oranges</text><text x=\"195\" y=\"135\" font-size=\"10\" text-anchor=\"middle\">Grapes</text><text x=\"45\" y=\"35\" font-size=\"10\" text-anchor=\"middle\">\\( 8 \\)</text><text x=\"95\" y=\"65\" font-size=\"10\" text-anchor=\"middle\">\\( 5 \\)</text><text x=\"145\" y=\"-5\" font-size=\"10\" text-anchor=\"middle\">\\( 12 \\)</text><text x=\"195\" y=\"45\" font-size=\"10\" text-anchor=\"middle\">\\( 7 \\)</text></svg>\nHow many more students chose Oranges than Bananas?",
+        "question": "The bar chart below shows the favorite fruits of a class of students:\n\nHow many more students chose Oranges than Bananas?",
         "options": [
           "\\( 5 \\)",
           "\\( 7 \\)",
@@ -217,7 +217,7 @@
         "explanation": "Oranges were chosen by \\( 12 \\) students, and Bananas by \\( 5 \\) students. Difference: \\( 12 - 5 = 7 \\)."
       },
       "ar": {
-        "question": "يمثل رسم الأعمدة التالي الفواكه المفضلة لدى مجموعة من الطلاب:\n<svg viewBox=\"0 0 240 160\" class=\"w-full max-w-xs mx-auto bg-white rounded-lg p-2\"><rect x=\"30\" y=\"40\" width=\"30\" height=\"80\" fill=\"#ef4444\"/><rect x=\"80\" y=\"70\" width=\"30\" height=\"50\" fill=\"#eab308\"/><rect x=\"130\" y=\"0\" width=\"30\" height=\"120\" fill=\"#f97316\"/><rect x=\"180\" y=\"50\" width=\"30\" height=\"70\" fill=\"#8b5cf6\"/><line x1=\"20\" y1=\"120\" x2=\"220\" y2=\"120\" stroke=\"#334155\" stroke-width=\"2\"/><text x=\"45\" y=\"135\" font-size=\"10\" text-anchor=\"middle\">تفاح</text><text x=\"95\" y=\"135\" font-size=\"10\" text-anchor=\"middle\">موز</text><text x=\"145\" y=\"135\" font-size=\"10\" text-anchor=\"middle\">برتقال</text><text x=\"195\" y=\"135\" font-size=\"10\" text-anchor=\"middle\">عنب</text><text x=\"45\" y=\"35\" font-size=\"10\" text-anchor=\"middle\">\\( 8 \\)</text><text x=\"95\" y=\"65\" font-size=\"10\" text-anchor=\"middle\">\\( 5 \\)</text><text x=\"145\" y=\"-5\" font-size=\"10\" text-anchor=\"middle\">\\( 12 \\)</text><text x=\"195\" y=\"45\" font-size=\"10\" text-anchor=\"middle\">\\( 7 \\)</text></svg>\nكم يزيد عدد الطلاب الذين فضلوا البرتقال على الموز؟",
+        "question": "يمثل رسم الأعمدة التالي الفواكه المفضلة لدى مجموعة من الطلاب:\n\nكم يزيد عدد الطلاب الذين فضلوا البرتقال على الموز؟",
         "options": [
           "\\( 5 \\)",
           "\\( 7 \\)",
@@ -338,7 +338,7 @@
     "difficulty": "medium",
     "content": {
       "en": {
-        "question": "The bar chart below shows the number of books read by \\( 4 \\) students: <svg viewBox=\"0 0 300 150\" class=\"w-full max-w-xs mx-auto bg-white rounded-lg p-2\"><rect x=\"40\" y=\"20\" width=\"30\" height=\"100\" fill=\"#3b82f6\"/><rect x=\"100\" y=\"50\" width=\"30\" height=\"70\" fill=\"#10b981\"/><rect x=\"160\" y=\"80\" width=\"30\" height=\"40\" fill=\"#f59e0b\"/><rect x=\"220\" y=\"30\" width=\"30\" height=\"90\" fill=\"#ef4444\"/><line x1=\"30\" y1=\"120\" x2=\"270\" y2=\"120\" stroke=\"#333\" stroke-width=\"2\"/><text x=\"45\" y=\"135\" font-size=\"12\">Amal</text><text x=\"105\" y=\"135\" font-size=\"12\">Sara</text><text x=\"165\" y=\"135\" font-size=\"12\">Mona</text><text x=\"225\" y=\"135\" font-size=\"12\">Noura</text></svg> If Amal read \\( 10 \\) books, how many books did Mona read?",
+        "question": "The bar chart below shows the number of books read by \\( 4 \\) students:  If Amal read \\( 10 \\) books, how many books did Mona read?",
         "options": [
           "\\( 4 \\)",
           "\\( 5 \\)",
@@ -349,7 +349,7 @@
         "explanation": "Amal's bar has a height of \\( 100 \\) units representing \\( 10 \\) books. Mona's bar height is \\( 40 \\) units, which corresponds to \\( 4 \\) books."
       },
       "ar": {
-        "question": "يُظهر التمثيل بالأعمدة أدناه عدد الكتب التي قرأتها \\( 4 \\) طالبات: <svg viewBox=\"0 0 300 150\" class=\"w-full max-w-xs mx-auto bg-white rounded-lg p-2\"><rect x=\"40\" y=\"20\" width=\"30\" height=\"100\" fill=\"#3b82f6\"/><rect x=\"100\" y=\"50\" width=\"30\" height=\"70\" fill=\"#10b981\"/><rect x=\"160\" y=\"80\" width=\"30\" height=\"40\" fill=\"#f59e0b\"/><rect x=\"220\" y=\"30\" width=\"30\" height=\"90\" fill=\"#ef4444\"/><line x1=\"30\" y1=\"120\" x2=\"270\" y2=\"120\" stroke=\"#333\" stroke-width=\"2\"/><text x=\"45\" y=\"135\" font-size=\"12\">أمل</text><text x=\"105\" y=\"135\" font-size=\"12\">سارة</text><text x=\"165\" y=\"135\" font-size=\"12\">منى</text><text x=\"225\" y=\"135\" font-size=\"12\">نورة</text></svg> إذا قرأت أمل \\( 10 \\) كتب، فكم كتاباً قرأت منى؟",
+        "question": "يُظهر التمثيل بالأعمدة أدناه عدد الكتب التي قرأتها \\( 4 \\) طالبات:  إذا قرأت أمل \\( 10 \\) كتب، فكم كتاباً قرأت منى؟",
         "options": [
           "\\( 4 \\)",
           "\\( 5 \\)",
@@ -437,7 +437,7 @@
     "difficulty": "medium",
     "content": {
       "en": {
-        "question": "Look at the clock below: <svg viewBox=\"0 0 100 100\" class=\"w-full max-w-xs mx-auto bg-white rounded-lg p-2\"><circle cx=\"50\" cy=\"50\" r=\"45\" fill=\"none\" stroke=\"#1e293b\" stroke-width=\"4\"/><line x1=\"50\" y1=\"50\" x2=\"50\" y2=\"20\" stroke=\"#ef4444\" stroke-width=\"2\"/><line x1=\"50\" y1=\"50\" x2=\"70\" y2=\"50\" stroke=\"#1e293b\" stroke-width=\"4\"/><circle cx=\"50\" cy=\"50\" r=\"3\" fill=\"#1e293b\"/></svg> What time does the clock show?",
+        "question": "Look at the clock below:  What time does the clock show?",
         "options": [
           "\\( 3:00 \\)",
           "\\( 12:15 \\)",
@@ -448,7 +448,7 @@
         "explanation": "The hour hand is pointing at \\( 3 \\) and the minute hand is pointing at \\( 12 \\), so the time is \\( 3:00 \\)."
       },
       "ar": {
-        "question": "انظر إلى الساعة أدناه: <svg viewBox=\"0 0 100 100\" class=\"w-full max-w-xs mx-auto bg-white rounded-lg p-2\"><circle cx=\"50\" cy=\"50\" r=\"45\" fill=\"none\" stroke=\"#1e293b\" stroke-width=\"4\"/><line x1=\"50\" y1=\"50\" x2=\"50\" y2=\"20\" stroke=\"#ef4444\" stroke-width=\"2\"/><line x1=\"50\" y1=\"50\" x2=\"70\" y2=\"50\" stroke=\"#1e293b\" stroke-width=\"4\"/><circle cx=\"50\" cy=\"50\" r=\"3\" fill=\"#1e293b\"/></svg> ما الوقت الذي تشير إليه الساعة؟",
+        "question": "انظر إلى الساعة أدناه:  ما الوقت الذي تشير إليه الساعة؟",
         "options": [
           "\\( 3:00 \\)",
           "\\( 12:15 \\)",
@@ -503,7 +503,7 @@
     "difficulty": "medium",
     "content": {
       "en": {
-        "question": "What fraction of the circle is shaded? <svg viewBox=\"0 0 100 100\" class=\"w-full max-w-xs mx-auto bg-white rounded-lg p-2\"><circle cx=\"50\" cy=\"50\" r=\"40\" fill=\"#e2e8f0\" stroke=\"#1e293b\" stroke-width=\"2\"/><path d=\"M50,50 L50,10 A40,40 0 0,1 90,50 Z\" fill=\"#3b82f6\"/><path d=\"M50,50 L90,50 A40,40 0 0,1 50,90 Z\" fill=\"#3b82f6\"/><path d=\"M50,50 L50,90 A40,40 0 0,1 10,50 Z\" fill=\"#3b82f6\"/></svg>",
+        "question": "What fraction of the circle is shaded? ",
         "options": [
           "\\( \\frac{1}{4} \\)",
           "\\( \\frac{2}{4} \\)",
@@ -514,7 +514,7 @@
         "explanation": "There are \\( 3 \\) shaded parts out of a total of \\( 4 \\) equal parts, representing \\( \\frac{3}{4} \\)."
       },
       "ar": {
-        "question": "ما الكسر الذي يمثل الجزء المظلل من الدائرة؟ <svg viewBox=\"0 0 100 100\" class=\"w-full max-w-xs mx-auto bg-white rounded-lg p-2\"><circle cx=\"50\" cy=\"50\" r=\"40\" fill=\"#e2e8f0\" stroke=\"#1e293b\" stroke-width=\"2\"/><path d=\"M50,50 L50,10 A40,40 0 0,1 90,50 Z\" fill=\"#3b82f6\"/><path d=\"M50,50 L90,50 A40,40 0 0,1 50,90 Z\" fill=\"#3b82f6\"/><path d=\"M50,50 L50,90 A40,40 0 0,1 10,50 Z\" fill=\"#3b82f6\"/></svg>",
+        "question": "ما الكسر الذي يمثل الجزء المظلل من الدائرة؟ ",
         "options": [
           "\\( \\frac{1}{4} \\)",
           "\\( \\frac{2}{4} \\)",
@@ -668,7 +668,7 @@
     "difficulty": "medium",
     "content": {
       "en": {
-        "question": "Which fraction represents the shaded region of the circle shown below? <svg viewBox=\"0 0 120 120\" class=\"w-full max-w-xs mx-auto bg-white rounded-lg p-2\"><circle cx=\"60\" cy=\"60\" r=\"50\" fill=\"none\" stroke=\"#1E293B\" stroke-width=\"2\"/><path d=\"M 60,60 L 60,10 A 50,50 0 0,1 110,60 Z\" fill=\"#3B82F6\" stroke=\"#1E293B\" stroke-width=\"1\"/><path d=\"M 60,60 L 110,60 A 50,50 0 0,1 60,110 Z\" fill=\"#3B82F6\" stroke=\"#1E293B\" stroke-width=\"1\"/><path d=\"M 60,60 L 60,110 A 50,50 0 0,1 10,60 Z\" fill=\"#3B82F6\" stroke=\"#1E293B\" stroke-width=\"1\"/><path d=\"M 60,60 L 10,60 A 50,50 0 0,1 60,10 Z\" fill=\"#FFFFFF\" stroke=\"#1E293B\" stroke-width=\"1\"/></svg>",
+        "question": "Which fraction represents the shaded region of the circle shown below? ",
         "options": [
           "\\( \\frac{1}{4} \\)",
           "\\( \\frac{1}{2} \\)",
@@ -679,7 +679,7 @@
         "explanation": "The circle is divided into \\( 4 \\) equal parts, and \\( 3 \\) parts are shaded. Thus, the fraction is \\( \\frac{3}{4} \\)."
       },
       "ar": {
-        "question": "أي من الكسور التالية يمثل الجزء المظلل من الدائرة الموضحة أدناه؟ <svg viewBox=\"0 0 120 120\" class=\"w-full max-w-xs mx-auto bg-white rounded-lg p-2\"><circle cx=\"60\" cy=\"60\" r=\"50\" fill=\"none\" stroke=\"#1E293B\" stroke-width=\"2\"/><path d=\"M 60,60 L 60,10 A 50,50 0 0,1 110,60 Z\" fill=\"#3B82F6\" stroke=\"#1E293B\" stroke-width=\"1\"/><path d=\"M 60,60 L 110,60 A 50,50 0 0,1 60,110 Z\" fill=\"#3B82F6\" stroke=\"#1E293B\" stroke-width=\"1\"/><path d=\"M 60,60 L 60,110 A 50,50 0 0,1 10,60 Z\" fill=\"#3B82F6\" stroke=\"#1E293B\" stroke-width=\"1\"/><path d=\"M 60,60 L 10,60 A 50,50 0 0,1 60,10 Z\" fill=\"#FFFFFF\" stroke=\"#1E293B\" stroke-width=\"1\"/></svg>",
+        "question": "أي من الكسور التالية يمثل الجزء المظلل من الدائرة الموضحة أدناه؟ ",
         "options": [
           "\\( \\frac{1}{4} \\)",
           "\\( \\frac{1}{2} \\)",
@@ -734,7 +734,7 @@
     "difficulty": "medium",
     "content": {
       "en": {
-        "question": "A teacher placed \\( 4 \\) bags on the table. Each bag contains \\( 3 \\) apples as shown below: <svg viewBox='0 0 300 100' class='w-full max-w-xs mx-auto bg-slate-50 rounded-lg p-2'><circle cx='35' cy='50' r='25' fill='#e2e8f0' stroke='#475569' stroke-width='2'/><circle cx='25' cy='45' r='5' fill='#ef4444'/><circle cx='45' cy='45' r='5' fill='#ef4444'/><circle cx='35' cy='60' r='5' fill='#ef4444'/><circle cx='110' cy='50' r='25' fill='#e2e8f0' stroke='#475569' stroke-width='2'/><circle cx='100' cy='45' r='5' fill='#ef4444'/><circle cx='120' cy='45' r='5' fill='#ef4444'/><circle cx='110' cy='60' r='5' fill='#ef4444'/><circle cx='185' cy='50' r='25' fill='#e2e8f0' stroke='#475569' stroke-width='2'/><circle cx='175' cy='45' r='5' fill='#ef4444'/><circle cx='195' cy='45' r='5' fill='#ef4444'/><circle cx='185' cy='60' r='5' fill='#ef4444'/><circle cx='260' cy='50' r='25' fill='#e2e8f0' stroke='#475569' stroke-width='2'/><circle cx='250' cy='45' r='5' fill='#ef4444'/><circle cx='270' cy='45' r='5' fill='#ef4444'/><circle cx='260' cy='60' r='5' fill='#ef4444'/></svg> Which multiplication sentence represents the total number of apples?",
+        "question": "A teacher placed \\( 4 \\) bags on the table. Each bag contains \\( 3 \\) apples as shown below:  Which multiplication sentence represents the total number of apples?",
         "options": [
           "\\( 4 \\times 3 = 12 \\)",
           "\\( 4 + 3 = 7 \\)",
@@ -745,7 +745,7 @@
         "explanation": "There are \\( 4 \\) groups and each group has \\( 3 \\) apples. The multiplication sentence is \\( 4 \\times 3 = 12 \\)."
       },
       "ar": {
-        "question": "وضعت المعلمة \\( 4 \\) أكياس على الطاولة. يحتوي كل كيس على \\( 3 \\) تفاحات كما هو موضح أدناه: <svg viewBox='0 0 300 100' class='w-full max-w-xs mx-auto bg-slate-50 rounded-lg p-2'><circle cx='35' cy='50' r='25' fill='#e2e8f0' stroke='#475569' stroke-width='2'/><circle cx='25' cy='45' r='5' fill='#ef4444'/><circle cx='45' cy='45' r='5' fill='#ef4444'/><circle cx='35' cy='60' r='5' fill='#ef4444'/><circle cx='110' cy='50' r='25' fill='#e2e8f0' stroke='#475569' stroke-width='2'/><circle cx='100' cy='45' r='5' fill='#ef4444'/><circle cx='120' cy='45' r='5' fill='#ef4444'/><circle cx='110' cy='60' r='5' fill='#ef4444'/><circle cx='185' cy='50' r='25' fill='#e2e8f0' stroke='#475569' stroke-width='2'/><circle cx='175' cy='45' r='5' fill='#ef4444'/><circle cx='195' cy='45' r='5' fill='#ef4444'/><circle cx='185' cy='60' r='5' fill='#ef4444'/><circle cx='260' cy='50' r='25' fill='#e2e8f0' stroke='#475569' stroke-width='2'/><circle cx='250' cy='45' r='5' fill='#ef4444'/><circle cx='270' cy='45' r='5' fill='#ef4444'/><circle cx='260' cy='60' r='5' fill='#ef4444'/></svg> أي جملة ضرب تمثل العدد الكلي للتفاح؟",
+        "question": "وضعت المعلمة \\( 4 \\) أكياس على الطاولة. يحتوي كل كيس على \\( 3 \\) تفاحات كما هو موضح أدناه:  أي جملة ضرب تمثل العدد الكلي للتفاح؟",
         "options": [
           "\\( 4 \\times 3 = 12 \\)",
           "\\( 4 + 3 = 7 \\)",
@@ -866,7 +866,7 @@
     "difficulty": "easy",
     "content": {
       "en": {
-        "question": "Which fraction represents the shaded region of the shape below? <svg viewBox='0 0 120 120' class='w-full max-w-xs mx-auto bg-slate-50 rounded-lg p-2'><circle cx='60' cy='60' r='50' fill='none' stroke='#334155' stroke-width='2'/><path d='M60,60 L110,60 A50,50 0 0,0 60,10 Z' fill='#22c55e'/><path d='M60,60 L60,10 A50,50 0 0,0 10,60 Z' fill='#22c55e'/><path d='M60,60 L10,60 A50,50 0 0,0 25.36,95.36 Z' fill='#22c55e'/><line x1='60' y1='10' x2='60' y2='110' stroke='#334155' stroke-width='1.5'/><line x1='10' y1='60' x2='110' y2='60' stroke='#334155' stroke-width='1.5'/><line x1='24.64' y1='24.64' x2='95.36' y2='95.36' stroke='#334155' stroke-width='1.5'/><line x1='24.64' y1='95.36' x2='95.36' y2='24.64' stroke='#334155' stroke-width='1.5'/></svg>",
+        "question": "Which fraction represents the shaded region of the shape below? ",
         "options": [
           "\\( \\frac{3}{8} \\)",
           "\\( \\frac{5}{8} \\)",
@@ -877,7 +877,7 @@
         "explanation": "There are \\( 3 \\) shaded parts out of \\( 8 \\) equal parts in total, so the fraction is \\( \\frac{3}{8} \\)."
       },
       "ar": {
-        "question": "أي كسر يمثل الجزء المظلل من الشكل أدناه؟ <svg viewBox='0 0 120 120' class='w-full max-w-xs mx-auto bg-slate-50 rounded-lg p-2'><circle cx='60' cy='60' r='50' fill='none' stroke='#334155' stroke-width='2'/><path d='M60,60 L110,60 A50,50 0 0,0 60,10 Z' fill='#22c55e'/><path d='M60,60 L60,10 A50,50 0 0,0 10,60 Z' fill='#22c55e'/><path d='M60,60 L10,60 A50,50 0 0,0 25.36,95.36 Z' fill='#22c55e'/><line x1='60' y1='10' x2='60' y2='110' stroke='#334155' stroke-width='1.5'/><line x1='10' y1='60' x2='110' y2='60' stroke='#334155' stroke-width='1.5'/><line x1='24.64' y1='24.64' x2='95.36' y2='95.36' stroke='#334155' stroke-width='1.5'/><line x1='24.64' y1='95.36' x2='95.36' y2='24.64' stroke='#334155' stroke-width='1.5'/></svg>",
+        "question": "أي كسر يمثل الجزء المظلل من الشكل أدناه؟ ",
         "options": [
           "\\( \\frac{3}{8} \\)",
           "\\( \\frac{5}{8} \\)",
@@ -899,7 +899,7 @@
     "difficulty": "medium",
     "content": {
       "en": {
-        "question": "What is the perimeter of the shaded shape drawn on the grid, where each square side represents \\( 1 \\text{ cm} \\)? <svg viewBox=\"0 0 200 200\" class=\"w-full max-w-xs mx-auto bg-white rounded-lg p-2 border border-slate-300\"><defs><pattern id=\"grid\" width=\"30\" height=\"30\" patternUnits=\"userSpaceOnUse\"><path d=\"M 30 0 L 0 0 0 30\" fill=\"none\" stroke=\"#CBD5E1\" stroke-width=\"1\"/></pattern></defs><rect width=\"200\" height=\"200\" fill=\"url(#grid)\"/><path d=\"M 30 30 L 90 30 L 90 90 L 60 90 L 60 150 L 30 150 Z\" fill=\"#93C5FD\" stroke=\"#1E40AF\" stroke-width=\"3\"/></svg>",
+        "question": "What is the perimeter of the shaded shape drawn on the grid, where each square side represents \\( 1 \\text{ cm} \\)? ",
         "options": [
           "\\( 10 \\text{ cm} \\)",
           "\\( 16 \\text{ cm} \\)",
@@ -910,7 +910,7 @@
         "explanation": "Counting the grid segments along the outer edge: Top = \\( 2 \\) units, Right-top = \\( 2 \\) units, Inner-horizontal = \\( 1 \\) unit, Inner-vertical = \\( 2 \\) units, Bottom = \\( 1 \\) unit, Left = \\( 4 \\) units. Total perimeter = \\( (2 + 2 + 1 + 2 + 1 + 4) \\times 2 \\text{ cm} = 16 \\text{ cm} \\)."
       },
       "ar": {
-        "question": "ما هو محيط الشكل المظلل المرسوم على الشبكة، حيث يمثل ضلع كل مربّع \\( 1 \\text{ سم} \\)؟ <svg viewBox=\"0 0 200 200\" class=\"w-full max-w-xs mx-auto bg-white rounded-lg p-2 border border-slate-300\"><defs><pattern id=\"grid2\" width=\"30\" height=\"30\" patternUnits=\"userSpaceOnUse\"><path d=\"M 30 0 L 0 0 0 30\" fill=\"none\" stroke=\"#CBD5E1\" stroke-width=\"1\"/></pattern></defs><rect width=\"200\" height=\"200\" fill=\"url(#grid2)\"/><path d=\"M 30 30 L 90 30 L 90 90 L 60 90 L 60 150 L 30 150 Z\" fill=\"#93C5FD\" stroke=\"#1E40AF\" stroke-width=\"3\"/></svg>",
+        "question": "ما هو محيط الشكل المظلل المرسوم على الشبكة، حيث يمثل ضلع كل مربّع \\( 1 \\text{ سم} \\)؟ ",
         "options": [
           "\\( 10 \\text{ سم} \\)",
           "\\( 16 \\text{ سم} \\)",
@@ -1163,7 +1163,7 @@
     "difficulty": "easy",
     "content": {
       "en": {
-        "question": "Based on the bar chart below showing students' favorite fruits, how many more students chose Bananas than Dates? <svg viewBox=\"0 0 300 160\" class=\"w-full max-w-xs mx-auto bg-white rounded-lg p-2\"><rect x=\"40\" y=\"40\" width=\"30\" height=\"80\" fill=\"#ef4444\"/><rect x=\"100\" y=\"0\" width=\"30\" height=\"120\" fill=\"#eab308\"/><rect x=\"160\" y=\"60\" width=\"30\" height=\"60\" fill=\"#f97316\"/><rect x=\"220\" y=\"80\" width=\"30\" height=\"40\" fill=\"#8b5cf6\"/><line x1=\"20\" y1=\"120\" x2=\"280\" y2=\"120\" stroke=\"#334155\" stroke-width=\"2\"/><text x=\"55\" y=\"140\" fill=\"#0f172a\" font-size=\"10\" text-anchor=\"middle\">Apples (\\( 8 \\))</text><text x=\"115\" y=\"140\" fill=\"#0f172a\" font-size=\"10\" text-anchor=\"middle\">Bananas (\\( 12 \\))</text><text x=\"175\" y=\"140\" fill=\"#0f172a\" font-size=\"10\" text-anchor=\"middle\">Oranges (\\( 6 \\))</text><text x=\"235\" y=\"140\" fill=\"#0f172a\" font-size=\"10\" text-anchor=\"middle\">Dates (\\( 4 \\))</text></svg>",
+        "question": "Based on the bar chart below showing students' favorite fruits, how many more students chose Bananas than Dates? ",
         "options": [
           "\\( 8 \\)",
           "\\( 6 \\)",
@@ -1174,7 +1174,7 @@
         "explanation": "Bananas = \\( 12 \\), Dates = \\( 4 \\). Difference = \\( 12 - 4 = 8 \\)."
       },
       "ar": {
-        "question": "بناءً على التمثيل بالأعمدة أدناه والذي يوضح الفواكه المفضلة للطلاب، كم يزيد عدد الطلاب الذين اختاروا الموز على الذين اختاروا التمر؟ <svg viewBox=\"0 0 300 160\" class=\"w-full max-w-xs mx-auto bg-white rounded-lg p-2\"><rect x=\"40\" y=\"40\" width=\"30\" height=\"80\" fill=\"#ef4444\"/><rect x=\"100\" y=\"0\" width=\"30\" height=\"120\" fill=\"#eab308\"/><rect x=\"160\" y=\"60\" width=\"30\" height=\"60\" fill=\"#f97316\"/><rect x=\"220\" y=\"80\" width=\"30\" height=\"40\" fill=\"#8b5cf6\"/><line x1=\"20\" y1=\"120\" x2=\"280\" y2=\"120\" stroke=\"#334155\" stroke-width=\"2\"/><text x=\"55\" y=\"140\" fill=\"#0f172a\" font-size=\"10\" text-anchor=\"middle\">تفاح (\\( 8 \\))</text><text x=\"115\" y=\"140\" fill=\"#0f172a\" font-size=\"10\" text-anchor=\"middle\">موز (\\( 12 \\))</text><text x=\"175\" y=\"140\" fill=\"#0f172a\" font-size=\"10\" text-anchor=\"middle\">برتقال (\\( 6 \\))</text><text x=\"235\" y=\"140\" fill=\"#0f172a\" font-size=\"10\" text-anchor=\"middle\">تمر (\\( 4 \\))</text></svg>",
+        "question": "بناءً على التمثيل بالأعمدة أدناه والذي يوضح الفواكه المفضلة للطلاب، كم يزيد عدد الطلاب الذين اختاروا الموز على الذين اختاروا التمر؟ ",
         "options": [
           "\\( 8 \\)",
           "\\( 6 \\)",
@@ -1196,7 +1196,7 @@
     "difficulty": "medium",
     "content": {
       "en": {
-        "question": "What is the sum of the shaded fractions in the two figures combined? <svg viewBox=\"0 0 220 100\" class=\"w-full max-w-xs mx-auto bg-white rounded-lg p-2\"><g transform=\"translate(10,10)\"><circle cx=\"40\" cy=\"40\" r=\"35\" fill=\"none\" stroke=\"#0f172a\" stroke-width=\"2\"/><path d=\"M40,40 L40,5 A35,35 0 1,1 5,40 Z\" fill=\"#3b82f6\"/><circle cx=\"40\" cy=\"40\" r=\"35\" fill=\"none\" stroke=\"#0f172a\" stroke-width=\"2\"/></g><g transform=\"translate(120,10)\"><circle cx=\"40\" cy=\"40\" r=\"35\" fill=\"none\" stroke=\"#0f172a\" stroke-width=\"2\"/><path d=\"M40,40 L40,5 A35,35 0 0,1 75,40 L40,40 A35,35 0 0,1 40,75 Z\" fill=\"#3b82f6\"/><circle cx=\"40\" cy=\"40\" r=\"35\" fill=\"none\" stroke=\"#0f172a\" stroke-width=\"2\"/></g></svg>",
+        "question": "What is the sum of the shaded fractions in the two figures combined? ",
         "options": [
           "\\( \\frac{8}{8} \\)",
           "\\( \\frac{5}{8} \\)",
@@ -1207,7 +1207,7 @@
         "explanation": "Sum = \\( \\frac{5}{8} + \\frac{3}{8} = \\frac{8}{8} = 1 \\)."
       },
       "ar": {
-        "question": "ما مجموع الكسرين اللذين يمثلان الأجزاء المظللة في الشكلين معاً؟ <svg viewBox=\"0 0 220 100\" class=\"w-full max-w-xs mx-auto bg-white rounded-lg p-2\"><g transform=\"translate(10,10)\"><circle cx=\"40\" cy=\"40\" r=\"35\" fill=\"none\" stroke=\"#0f172a\" stroke-width=\"2\"/><path d=\"M40,40 L40,5 A35,35 0 1,1 5,40 Z\" fill=\"#3b82f6\"/><circle cx=\"40\" cy=\"40\" r=\"35\" fill=\"none\" stroke=\"#0f172a\" stroke-width=\"2\"/></g><g transform=\"translate(120,10)\"><circle cx=\"40\" cy=\"40\" r=\"35\" fill=\"none\" stroke=\"#0f172a\" stroke-width=\"2\"/><path d=\"M40,40 L40,5 A35,35 0 0,1 75,40 L40,40 A35,35 0 0,1 40,75 Z\" fill=\"#3b82f6\"/><circle cx=\"40\" cy=\"40\" r=\"35\" fill=\"none\" stroke=\"#0f172a\" stroke-width=\"2\"/></g></svg>",
+        "question": "ما مجموع الكسرين اللذين يمثلان الأجزاء المظللة في الشكلين معاً؟ ",
         "options": [
           "\\( \\frac{8}{8} \\)",
           "\\( \\frac{5}{8} \\)",
@@ -1394,7 +1394,7 @@
     "difficulty": "medium",
     "content": {
       "en": {
-        "question": "What time is shown on the analog clock below?<br/><svg viewBox=\"0 0 100 100\" class=\"w-full max-w-xs mx-auto bg-white rounded-lg p-2\"><circle cx=\"50\" cy=\"50\" r=\"45\" fill=\"none\" stroke=\"#1e293b\" stroke-width=\"3\"/><text x=\"50\" y=\"18\" text-anchor=\"middle\" font-size=\"10\" font-weight=\"bold\">12</text><text x=\"82\" y=\"53\" text-anchor=\"middle\" font-size=\"10\" font-weight=\"bold\">3</text><text x=\"50\" y=\"88\" text-anchor=\"middle\" font-size=\"10\" font-weight=\"bold\">6</text><text x=\"18\" y=\"53\" text-anchor=\"middle\" font-size=\"10\" font-weight=\"bold\">9</text><line x1=\"50\" y1=\"50\" x2=\"40\" y2=\"60\" stroke=\"#1e293b\" stroke-width=\"3\" stroke-linecap=\"round\"/><line x1=\"50\" y1=\"50\" x2=\"50\" y2=\"80\" stroke=\"#ef4444\" stroke-width=\"2\" stroke-linecap=\"round\"/></svg>",
+        "question": "What time is shown on the analog clock below?",
         "options": [
           "\\( 3:00 \\)",
           "\\( 3:30 \\)",
@@ -1405,7 +1405,7 @@
         "explanation": "The hour hand is halfway between \\( 3 \\) and \\( 4 \\), and the minute hand points to \\( 6 \\) (which represents \\( 30 \\) minutes). So the time is \\( 3:30 \\)."
       },
       "ar": {
-        "question": "ما الوقت الذي تشير إليه الساعة أدناه؟<br/><svg viewBox=\"0 0 100 100\" class=\"w-full max-w-xs mx-auto bg-white rounded-lg p-2\"><circle cx=\"50\" cy=\"50\" r=\"45\" fill=\"none\" stroke=\"#1e293b\" stroke-width=\"3\"/><text x=\"50\" y=\"18\" text-anchor=\"middle\" font-size=\"10\" font-weight=\"bold\">12</text><text x=\"82\" y=\"53\" text-anchor=\"middle\" font-size=\"10\" font-weight=\"bold\">3</text><text x=\"50\" y=\"88\" text-anchor=\"middle\" font-size=\"10\" font-weight=\"bold\">6</text><text x=\"18\" y=\"53\" text-anchor=\"middle\" font-size=\"10\" font-weight=\"bold\">9</text><line x1=\"50\" y1=\"50\" x2=\"40\" y2=\"60\" stroke=\"#1e293b\" stroke-width=\"3\" stroke-linecap=\"round\"/><line x1=\"50\" y1=\"50\" x2=\"50\" y2=\"80\" stroke=\"#ef4444\" stroke-width=\"2\" stroke-linecap=\"round\"/></svg>",
+        "question": "ما الوقت الذي تشير إليه الساعة أدناه؟",
         "options": [
           "\\( 3:00 \\)",
           "\\( 3:30 \\)",
@@ -1427,7 +1427,7 @@
     "difficulty": "medium",
     "content": {
       "en": {
-        "question": "What fraction represents the shaded region of the circle below?<br/><svg viewBox=\"0 0 100 100\" class=\"w-full max-w-xs mx-auto bg-white rounded-lg p-2\"><circle cx=\"50\" cy=\"50\" r=\"40\" fill=\"#e2e8f0\" stroke=\"#1e293b\" stroke-width=\"2\"/><path d=\"M 50 50 L 50 10 A 40 40 0 1 1 10 50 Z\" fill=\"#3b82f6\"/><line x1=\"50\" y1=\"10\" x2=\"50\" y2=\"90\" stroke=\"#1e293b\" stroke-width=\"2\"/><line x1=\"10\" y1=\"50\" x2=\"90\" y2=\"50\" stroke=\"#1e293b\" stroke-width=\"2\"/></svg>",
+        "question": "What fraction represents the shaded region of the circle below?",
         "options": [
           "\\( \\frac{1}{4} \\)",
           "\\( \\frac{1}{2} \\)",
@@ -1438,7 +1438,7 @@
         "explanation": "There are \\( 3 \\) shaded parts out of \\( 4 \\) total equal parts, which is \\( \\frac{3}{4} \\)."
       },
       "ar": {
-        "question": "ما الكسر الذي يمثل الجزء المظلل من الدائرة أدناه؟<br/><svg viewBox=\"0 0 100 100\" class=\"w-full max-w-xs mx-auto bg-white rounded-lg p-2\"><circle cx=\"50\" cy=\"50\" r=\"40\" fill=\"#e2e8f0\" stroke=\"#1e293b\" stroke-width=\"2\"/><path d=\"M 50 50 L 50 10 A 40 40 0 1 1 10 50 Z\" fill=\"#3b82f6\"/><line x1=\"50\" y1=\"10\" x2=\"50\" y2=\"90\" stroke=\"#1e293b\" stroke-width=\"2\"/><line x1=\"10\" y1=\"50\" x2=\"90\" y2=\"50\" stroke=\"#1e293b\" stroke-width=\"2\"/></svg>",
+        "question": "ما الكسر الذي يمثل الجزء المظلل من الدائرة أدناه؟",
         "options": [
           "\\( \\frac{1}{4} \\)",
           "\\( \\frac{1}{2} \\)",
@@ -1592,7 +1592,7 @@
     "difficulty": "easy",
     "content": {
       "en": {
-        "question": "What fraction of the circle below is shaded? <svg viewBox='0 0 100 100' class='w-full max-w-xs mx-auto bg-white rounded-lg p-2'><circle cx='50' cy='50' r='40' fill='none' stroke='#000' stroke-width='2'/><path d='M 50 50 L 50 10 A 40 40 0 0 1 90 50 Z' fill='#3b82f6'/><path d='M 50 50 L 90 50 A 40 40 0 0 1 50 90 Z' fill='#3b82f6'/><line x1='50' y1='10' x2='50' y2='90' stroke='#000' stroke-width='1.5'/><line x1='10' y1='50' x2='90' y2='50' stroke='#000' stroke-width='1.5'/></svg>",
+        "question": "What fraction of the circle below is shaded? ",
         "options": [
           "\\( \\frac{1}{4} \\)",
           "\\( \\frac{1}{3} \\)",
@@ -1603,7 +1603,7 @@
         "explanation": "The circle is divided into \\( 4 \\) equal parts, and \\( 2 \\) parts are shaded. The fraction is \\( \\frac{2}{4} = \\frac{1}{2} \\)."
       },
       "ar": {
-        "question": "ما الكسر الذي يمثل الجزء المضلل في الدائرة أدناه؟ <svg viewBox='0 0 100 100' class='w-full max-w-xs mx-auto bg-white rounded-lg p-2'><circle cx='50' cy='50' r='40' fill='none' stroke='#000' stroke-width='2'/><path d='M 50 50 L 50 10 A 40 40 0 0 1 90 50 Z' fill='#3b82f6'/><path d='M 50 50 L 90 50 A 40 40 0 0 1 50 90 Z' fill='#3b82f6'/><line x1='50' y1='10' x2='50' y2='90' stroke='#000' stroke-width='1.5'/><line x1='10' y1='50' x2='90' y2='50' stroke='#000' stroke-width='1.5'/></svg>",
+        "question": "ما الكسر الذي يمثل الجزء المضلل في الدائرة أدناه؟ ",
         "options": [
           "\\( \\frac{1}{4} \\)",
           "\\( \\frac{1}{3} \\)",
@@ -1658,7 +1658,7 @@
     "difficulty": "medium",
     "content": {
       "en": {
-        "question": "Observe the geometric block pattern below. If the pattern continues by adding the same number of blocks each time, what is the total number of blocks in the \\( 7^{\\text{th}} \\) term?<br/><svg viewBox=\"0 0 350 100\" class=\"w-full max-w-md mx-auto bg-slate-50 rounded-lg p-2 mb-2\"><g transform=\"translate(10,20)\"><rect x=\"0\" y=\"40\" width=\"15\" height=\"15\" fill=\"#3b82f6\"/><rect x=\"17\" y=\"40\" width=\"15\" height=\"15\" fill=\"#3b82f6\"/><rect x=\"0\" y=\"23\" width=\"15\" height=\"15\" fill=\"#3b82f6\"/><rect x=\"17\" y=\"23\" width=\"15\" height=\"15\" fill=\"#3b82f6\"/><text x=\"12\" y=\"75\" font-size=\"12\" text-anchor=\"middle\">Term 1 (4)</text></g><g transform=\"translate(110,20)\"><rect x=\"0\" y=\"40\" width=\"15\" height=\"15\" fill=\"#3b82f6\"/><rect x=\"17\" y=\"40\" width=\"15\" height=\"15\" fill=\"#3b82f6\"/><rect x=\"34\" y=\"40\" width=\"15\" height=\"15\" fill=\"#3b82f6\"/><rect x=\"51\" y=\"40\" width=\"15\" height=\"15\" fill=\"#3b82f6\"/><rect x=\"0\" y=\"23\" width=\"15\" height=\"15\" fill=\"#3b82f6\"/><rect x=\"17\" y=\"23\" width=\"15\" height=\"15\" fill=\"#3b82f6\"/><rect x=\"34\" y=\"23\" width=\"15\" height=\"15\" fill=\"#3b82f6\"/><rect x=\"51\" y=\"23\" width=\"15\" height=\"15\" fill=\"#3b82f6\"/><text x=\"32\" y=\"75\" font-size=\"12\" text-anchor=\"middle\">Term 2 (8)</text></g><g transform=\"translate(230,20)\"><rect x=\"0\" y=\"40\" width=\"12\" height=\"12\" fill=\"#3b82f6\"/><rect x=\"14\" y=\"40\" width=\"12\" height=\"12\" fill=\"#3b82f6\"/><rect x=\"28\" y=\"40\" width=\"12\" height=\"12\" fill=\"#3b82f6\"/><rect x=\"42\" y=\"40\" width=\"12\" height=\"12\" fill=\"#3b82f6\"/><rect x=\"56\" y=\"40\" width=\"12\" height=\"12\" fill=\"#3b82f6\"/><rect x=\"70\" y=\"40\" width=\"12\" height=\"12\" fill=\"#3b82f6\"/><rect x=\"0\" y=\"26\" width=\"12\" height=\"12\" fill=\"#3b82f6\"/><rect x=\"14\" y=\"26\" width=\"12\" height=\"12\" fill=\"#3b82f6\"/><rect x=\"28\" y=\"26\" width=\"12\" height=\"12\" fill=\"#3b82f6\"/><rect x=\"42\" y=\"26\" width=\"12\" height=\"12\" fill=\"#3b82f6\"/><rect x=\"56\" y=\"26\" width=\"12\" height=\"12\" fill=\"#3b82f6\"/><rect x=\"70\" y=\"26\" width=\"12\" height=\"12\" fill=\"#3b82f6\"/><text x=\"40\" y=\"75\" font-size=\"12\" text-anchor=\"middle\">Term 3 (12)</text></g></svg>",
+        "question": "Observe the geometric block pattern below. If the pattern continues by adding the same number of blocks each time, what is the total number of blocks in the \\( 7^{\\text{th}} \\) term?",
         "options": [
           "\\( 20 \\)",
           "\\( 24 \\)",
@@ -1669,7 +1669,7 @@
         "explanation": "The sequence starts with \\( 4 \\), \\( 8 \\), \\( 12 \\), which increases by \\( 4 \\) each step. The \\( n^{\\text{th}} \\) term is \\( 4 \\times n \\). For \\( n = 7 \\), the number of blocks is \\( 4 \\times 7 = 28 \\)."
       },
       "ar": {
-        "question": "تأمّل النمط الهندسي أدناه. إذا استمر النمط بإضافة نفس عدد المكعبات في كل مرة، فما هو عدد المكعبات الإجمالي في الحد \\( 7 \\)؟<br/><svg viewBox=\"0 0 350 100\" class=\"w-full max-w-md mx-auto bg-slate-50 rounded-lg p-2 mb-2\"><g transform=\"translate(10,20)\"><rect x=\"0\" y=\"40\" width=\"15\" height=\"15\" fill=\"#3b82f6\"/><rect x=\"17\" y=\"40\" width=\"15\" height=\"15\" fill=\"#3b82f6\"/><rect x=\"0\" y=\"23\" width=\"15\" height=\"15\" fill=\"#3b82f6\"/><rect x=\"17\" y=\"23\" width=\"15\" height=\"15\" fill=\"#3b82f6\"/><text x=\"12\" y=\"75\" font-size=\"12\" text-anchor=\"middle\">الحد 1 (4)</text></g><g transform=\"translate(110,20)\"><rect x=\"0\" y=\"40\" width=\"15\" height=\"15\" fill=\"#3b82f6\"/><rect x=\"17\" y=\"40\" width=\"15\" height=\"15\" fill=\"#3b82f6\"/><rect x=\"34\" y=\"40\" width=\"15\" height=\"15\" fill=\"#3b82f6\"/><rect x=\"51\" y=\"40\" width=\"15\" height=\"15\" fill=\"#3b82f6\"/><rect x=\"0\" y=\"23\" width=\"15\" height=\"15\" fill=\"#3b82f6\"/><rect x=\"17\" y=\"23\" width=\"15\" height=\"15\" fill=\"#3b82f6\"/><rect x=\"34\" y=\"23\" width=\"15\" height=\"15\" fill=\"#3b82f6\"/><rect x=\"51\" y=\"23\" width=\"15\" height=\"15\" fill=\"#3b82f6\"/><text x=\"32\" y=\"75\" font-size=\"12\" text-anchor=\"middle\">الحد 2 (8)</text></g><g transform=\"translate(230,20)\"><rect x=\"0\" y=\"40\" width=\"12\" height=\"12\" fill=\"#3b82f6\"/><rect x=\"14\" y=\"40\" width=\"12\" height=\"12\" fill=\"#3b82f6\"/><rect x=\"28\" y=\"40\" width=\"12\" height=\"12\" fill=\"#3b82f6\"/><rect x=\"42\" y=\"40\" width=\"12\" height=\"12\" fill=\"#3b82f6\"/><rect x=\"56\" y=\"40\" width=\"12\" height=\"12\" fill=\"#3b82f6\"/><rect x=\"70\" y=\"40\" width=\"12\" height=\"12\" fill=\"#3b82f6\"/><rect x=\"0\" y=\"26\" width=\"12\" height=\"12\" fill=\"#3b82f6\"/><rect x=\"14\" y=\"26\" width=\"12\" height=\"12\" fill=\"#3b82f6\"/><rect x=\"28\" y=\"26\" width=\"12\" height=\"12\" fill=\"#3b82f6\"/><rect x=\"42\" y=\"26\" width=\"12\" height=\"12\" fill=\"#3b82f6\"/><rect x=\"56\" y=\"26\" width=\"12\" height=\"12\" fill=\"#3b82f6\"/><rect x=\"70\" y=\"26\" width=\"12\" height=\"12\" fill=\"#3b82f6\"/><text x=\"40\" y=\"75\" font-size=\"12\" text-anchor=\"middle\">الحد 3 (12)</text></g></svg>",
+        "question": "تأمّل النمط الهندسي أدناه. إذا استمر النمط بإضافة نفس عدد المكعبات في كل مرة، فما هو عدد المكعبات الإجمالي في الحد \\( 7 \\)؟",
         "options": [
           "\\( 20 \\)",
           "\\( 24 \\)",
@@ -1856,7 +1856,7 @@
     "difficulty": "medium",
     "content": {
       "en": {
-        "question": "The bar graph below shows the number of books read by four students: Amal, Sara, Mona, and Reem. How many more books did Sara read than Amal?<br/><svg viewBox='0 0 300 180' class='w-full max-w-xs mx-auto bg-slate-50 rounded-lg p-2 border border-slate-200'><rect x='40' y='100' width='30' height='40' fill='#3b82f6'/><rect x='100' y='40' width='30' height='100' fill='#10b981'/><rect x='160' y='80' width='30' height='60' fill='#f59e0b'/><rect x='220' y='60' width='30' height='80' fill='#8b5cf6'/><line x1='30' y1='140' x2='270' y2='140' stroke='#334155' stroke-width='2'/><text x='55' y='155' font-size='12' text-anchor='middle'>Amal</text><text x='115' y='155' font-size='12' text-anchor='middle'>Sara</text><text x='175' y='155' font-size='12' text-anchor='middle'>Mona</text><text x='235' y='155' font-size='12' text-anchor='middle'>Reem</text><text x='55' y='95' font-size='10' text-anchor='middle'>4</text><text x='115' y='35' font-size='10' text-anchor='middle'>10</text><text x='175' y='75' font-size='10' text-anchor='middle'>6</text><text x='235' y='55' font-size='10' text-anchor='middle'>8</text></svg>",
+        "question": "The bar graph below shows the number of books read by four students: Amal, Sara, Mona, and Reem. How many more books did Sara read than Amal?",
         "options": [
           "\\( 4 \\)",
           "\\( 6 \\)",
@@ -1867,7 +1867,7 @@
         "explanation": "Sara read \\( 10 \\) books and Amal read \\( 4 \\) books. The difference is \\( 10 - 4 = 6 \\) books."
       },
       "ar": {
-        "question": "يمثل التمثيل بالأعمدة أدناه عدد الكتب التي قرأتها أربع طالبات: أمل، سارة، منى، وريم. كم يزيد عدد الكتب التي قرأتها سارة على عدد الكتب التي قرأتها أمل؟<br/><svg viewBox='0 0 300 180' class='w-full max-w-xs mx-auto bg-slate-50 rounded-lg p-2 border border-slate-200'><rect x='40' y='100' width='30' height='40' fill='#3b82f6'/><rect x='100' y='40' width='30' height='100' fill='#10b981'/><rect x='160' y='80' width='30' height='60' fill='#f59e0b'/><rect x='220' y='60' width='30' height='80' fill='#8b5cf6'/><line x1='30' y1='140' x2='270' y2='140' stroke='#334155' stroke-width='2'/><text x='55' y='155' font-size='12' text-anchor='middle'>أمل</text><text x='115' y='155' font-size='12' text-anchor='middle'>سارة</text><text x='175' y='155' font-size='12' text-anchor='middle'>منى</text><text x='235' y='155' font-size='12' text-anchor='middle'>ريم</text><text x='55' y='95' font-size='10' text-anchor='middle'>4</text><text x='115' y='35' font-size='10' text-anchor='middle'>10</text><text x='175' y='75' font-size='10' text-anchor='middle'>6</text><text x='235' y='55' font-size='10' text-anchor='middle'>8</text></svg>",
+        "question": "يمثل التمثيل بالأعمدة أدناه عدد الكتب التي قرأتها أربع طالبات: أمل، سارة، منى، وريم. كم يزيد عدد الكتب التي قرأتها سارة على عدد الكتب التي قرأتها أمل؟",
         "options": [
           "\\( 4 \\)",
           "\\( 6 \\)",
@@ -1955,7 +1955,7 @@
     "difficulty": "medium",
     "content": {
       "en": {
-        "question": "Which fraction represents the shaded region of the circle shown below?<br/><svg viewBox='0 0 160 160' class='w-full max-w-xs mx-auto bg-white rounded-lg p-2'><circle cx='80' cy='80' r='60' fill='#e2e8f0' stroke='#1e293b' stroke-width='2'/><path d='M 80 80 L 140 80 A 60 60 0 0 1 80 140 Z' fill='#3b82f6'/><path d='M 80 80 L 80 140 A 60 60 0 0 1 20 80 Z' fill='#3b82f6'/><path d='M 80 80 L 20 80 A 60 60 0 0 1 37.57 37.57 Z' fill='#3b82f6'/><circle cx='80' cy='80' r='60' fill='none' stroke='#1e293b' stroke-width='2'/><line x1='80' y1='20' x2='80' y2='140' stroke='#1e293b' stroke-width='1.5'/><line x1='20' y1='80' x2='140' y2='80' stroke='#1e293b' stroke-width='1.5'/><line x1='37.57' y1='37.57' x2='122.43' y2='122.43' stroke='#1e293b' stroke-width='1.5'/><line x1='37.57' y1='122.43' x2='122.43' y2='37.57' stroke='#1e293b' stroke-width='1.5'/></svg>",
+        "question": "Which fraction represents the shaded region of the circle shown below?",
         "options": [
           "\\( \\frac{1}{4} \\)",
           "\\( \\frac{3}{8} \\)",
@@ -1966,7 +1966,7 @@
         "explanation": "The circle is divided into \\( 8 \\) equal parts, and \\( 3 \\) parts are shaded. Therefore, the fraction is \\( \\frac{3}{8} \\)."
       },
       "ar": {
-        "question": "ما الكسر الذي يمثل الجزء المظلل من الدائرة الموضحة أدناه؟<br/><svg viewBox='0 0 160 160' class='w-full max-w-xs mx-auto bg-white rounded-lg p-2'><circle cx='80' cy='80' r='60' fill='#e2e8f0' stroke='#1e293b' stroke-width='2'/><path d='M 80 80 L 140 80 A 60 60 0 0 1 80 140 Z' fill='#3b82f6'/><path d='M 80 80 L 80 140 A 60 60 0 0 1 20 80 Z' fill='#3b82f6'/><path d='M 80 80 L 20 80 A 60 60 0 0 1 37.57 37.57 Z' fill='#3b82f6'/><circle cx='80' cy='80' r='60' fill='none' stroke='#1e293b' stroke-width='2'/><line x1='80' y1='20' x2='80' y2='140' stroke='#1e293b' stroke-width='1.5'/><line x1='20' y1='80' x2='140' y2='80' stroke='#1e293b' stroke-width='1.5'/><line x1='37.57' y1='37.57' x2='122.43' y2='122.43' stroke='#1e293b' stroke-width='1.5'/><line x1='37.57' y1='122.43' x2='122.43' y2='37.57' stroke='#1e293b' stroke-width='1.5'/></svg>",
+        "question": "ما الكسر الذي يمثل الجزء المظلل من الدائرة الموضحة أدناه؟",
         "options": [
           "\\( \\frac{1}{4} \\)",
           "\\( \\frac{3}{8} \\)",
@@ -2186,7 +2186,7 @@
     "difficulty": "medium",
     "content": {
       "en": {
-        "question": "The clock below shows the time Amal started studying. If she finished studying after \\( 45 \\) minutes, at what time did she finish?<br/><svg viewBox='0 0 120 120' class='w-full max-w-xs mx-auto bg-white rounded-lg p-2'><circle cx='60' cy='60' r='50' fill='none' stroke='#1e293b' stroke-width='2'/><text x='60' y='22' text-anchor='middle' font-size='10'>\\( 12 \\)</text><text x='100' y='64' text-anchor='middle' font-size='10'>\\( 3 \\)</text><text x='60' y='105' text-anchor='middle' font-size='10'>\\( 6 \\)</text><text x='20' y='64' text-anchor='middle' font-size='10'>\\( 9 \\)</text><line x1='60' y1='60' x2='30' y2='60' stroke='#1e293b' stroke-width='3'/><line x1='60' y1='60' x2='60' y2='95' stroke='#ef4444' stroke-width='2'/></svg>",
+        "question": "The clock below shows the time Amal started studying. If she finished studying after \\( 45 \\) minutes, at what time did she finish?",
         "options": [
           "\\( 4:15 \\)",
           "\\( 4:30 \\)",
@@ -2197,7 +2197,7 @@
         "explanation": "The starting time shown on the clock is \\( 3:45 \\). Adding \\( 45 \\) minutes gives \\( 3:45 + 45 \\text{ min} = 4:30 \\)."
       },
       "ar": {
-        "question": "تبين الساعة أدناه الوقت الذي بدأت فيه أمل المذاكرة. إذا انتهت من المذاكرة بعد \\( 45 \\) دقيقة، ففي أي وقت انتهت؟<br/><svg viewBox='0 0 120 120' class='w-full max-w-xs mx-auto bg-white rounded-lg p-2'><circle cx='60' cy='60' r='50' fill='none' stroke='#1e293b' stroke-width='2'/><text x='60' y='22' text-anchor='middle' font-size='10'>\\( 12 \\)</text><text x='100' y='64' text-anchor='middle' font-size='10'>\\( 3 \\)</text><text x='60' y='105' text-anchor='middle' font-size='10'>\\( 6 \\)</text><text x='20' y='64' text-anchor='middle' font-size='10'>\\( 9 \\)</text><line x1='60' y1='60' x2='30' y2='60' stroke='#1e293b' stroke-width='3'/><line x1='60' y1='60' x2='60' y2='95' stroke='#ef4444' stroke-width='2'/></svg>",
+        "question": "تبين الساعة أدناه الوقت الذي بدأت فيه أمل المذاكرة. إذا انتهت من المذاكرة بعد \\( 45 \\) دقيقة، ففي أي وقت انتهت؟",
         "options": [
           "\\( 4:15 \\)",
           "\\( 4:30 \\)",
@@ -2318,7 +2318,7 @@
     "difficulty": "medium",
     "content": {
       "en": {
-        "question": "Which fraction represents the shaded region in the figure below? <svg viewBox='0 0 100 100' class='w-full max-w-xs mx-auto bg-white rounded-lg p-2'><rect x='10' y='10' width='80' height='80' fill='none' stroke='#0f172a' stroke-width='2'/><line x1='50' y1='10' x2='50' y2='90' stroke='#0f172a' stroke-width='2'/><line x1='10' y1='50' x2='90' y2='50' stroke='#0f172a' stroke-width='2'/><rect x='10' y='10' width='40' height='40' fill='#3b82f6'/><rect x='50' y='10' width='40' height='40' fill='#3b82f6'/><rect x='10' y='50' width='40' height='40' fill='#3b82f6'/></svg>",
+        "question": "Which fraction represents the shaded region in the figure below? ",
         "options": [
           "\\( \\frac{1}{4} \\)",
           "\\( \\frac{1}{2} \\)",
@@ -2329,7 +2329,7 @@
         "explanation": "There are \\( 3 \\) shaded squares out of \\( 4 \\) equal squares in total, so the fraction is \\( \\frac{3}{4} \\)."
       },
       "ar": {
-        "question": "أي كسْر يُمثّل الجزء المظلل في الشكل أدناه؟ <svg viewBox='0 0 100 100' class='w-full max-w-xs mx-auto bg-white rounded-lg p-2'><rect x='10' y='10' width='80' height='80' fill='none' stroke='#0f172a' stroke-width='2'/><line x1='50' y1='10' x2='50' y2='90' stroke='#0f172a' stroke-width='2'/><line x1='10' y1='50' x2='90' y2='50' stroke='#0f172a' stroke-width='2'/><rect x='10' y='10' width='40' height='40' fill='#3b82f6'/><rect x='50' y='10' width='40' height='40' fill='#3b82f6'/><rect x='10' y='50' width='40' height='40' fill='#3b82f6'/></svg>",
+        "question": "أي كسْر يُمثّل الجزء المظلل في الشكل أدناه؟ ",
         "options": [
           "\\( \\frac{1}{4} \\)",
           "\\( \\frac{1}{2} \\)",
@@ -3836,7 +3836,7 @@
     "difficulty": "hard",
     "content": {
       "en": {
-        "question": "A total of \\( 200 \\) students voted in a school election. The pie chart shows the vote distribution:\n<svg viewBox=\"0 0 160 160\" class=\"w-full max-w-xs mx-auto bg-white rounded-lg p-2\"><circle cx=\"80\" cy=\"80\" r=\"60\" fill=\"#38bdf8\"/><path d=\"M 80 80 L 80 20 A 60 60 0 0 1 137.06 98.54 Z\" fill=\"#f43f5e\"/><path d=\"M 80 80 L 137.06 98.54 A 60 60 0 0 1 20 80 Z\" fill=\"#a855f7\"/><text x=\"55\" y=\"50\" font-size=\"10\" fill=\"white\">Ali (\\( 40\\% \\))</text><text x=\"95\" y=\"95\" font-size=\"10\" fill=\"white\">Sara (\\( 35\\% \\))</text><text x=\"35\" y=\"100\" font-size=\"10\" fill=\"white\">Tariq (\\( 25\\% \\))</text></svg>\nHow many more votes did Ali receive than Tariq?",
+        "question": "A total of \\( 200 \\) students voted in a school election. The pie chart shows the vote distribution:\n\nHow many more votes did Ali receive than Tariq?",
         "options": [
           "\\( 15 \\)",
           "\\( 20 \\)",
@@ -3847,7 +3847,7 @@
         "explanation": "Difference in percentage \\( = 40\\% - 25\\% = 15\\% \\). Number of votes \\( = 15\\% \\times 200 = 30 \\)."
       },
       "ar": {
-        "question": "شارك \\( 200 \\) طالب في انتخابات المدرسة. يوضح القطاع الدائري التالي توزيع الأصوات:\n<svg viewBox=\"0 0 160 160\" class=\"w-full max-w-xs mx-auto bg-white rounded-lg p-2\"><circle cx=\"80\" cy=\"80\" r=\"60\" fill=\"#38bdf8\"/><path d=\"M 80 80 L 80 20 A 60 60 0 0 1 137.06 98.54 Z\" fill=\"#f43f5e\"/><path d=\"M 80 80 L 137.06 98.54 A 60 60 0 0 1 20 80 Z\" fill=\"#a855f7\"/><text x=\"55\" y=\"50\" font-size=\"10\" fill=\"white\">علي (\\( 40\\% \\))</text><text x=\"95\" y=\"95\" font-size=\"10\" fill=\"white\">سارة (\\( 35\\% \\))</text><text x=\"35\" y=\"100\" font-size=\"10\" fill=\"white\">طارق (\\( 25\\% \\))</text></svg>\nكم يزيد عدد الأصوات التي حصل عليها علي مقارنة بطارق؟",
+        "question": "شارك \\( 200 \\) طالب في انتخابات المدرسة. يوضح القطاع الدائري التالي توزيع الأصوات:\n\nكم يزيد عدد الأصوات التي حصل عليها علي مقارنة بطارق؟",
         "options": [
           "\\( 15 \\)",
           "\\( 20 \\)",
@@ -4067,7 +4067,7 @@
     "difficulty": "hard",
     "content": {
       "en": {
-        "question": "The linear graph below passes through points \\( (0, 3) \\) and \\( (2, 7) \\):\n<svg viewBox=\"0 0 200 180\" class=\"w-full max-w-xs mx-auto bg-white rounded-lg p-2\"><line x1=\"20\" y1=\"100\" x2=\"180\" y2=\"100\" stroke=\"#94a3b8\" stroke-width=\"1.5\"/><line x1=\"60\" y1=\"20\" x2=\"60\" y2=\"160\" stroke=\"#94a3b8\" stroke-width=\"1.5\"/><line x1=\"30\" y1=\"130\" x2=\"150\" y2=\"10\" stroke=\"#dc2626\" stroke-width=\"2\"/><circle cx=\"60\" y=\"70\" r=\"3\" fill=\"#dc2626\"/><circle cx=\"100\" y=\"30\" r=\"3\" fill=\"#dc2626\"/><text x=\"65\" y=\"73\" font-size=\"9\">\\( (0, 3) \\)</text><text x=\"105\" y=\"33\" font-size=\"9\">\\( (2, 7) \\)</text></svg>\nWhich equation represents this linear function \\( f(x) \\)?",
+        "question": "The linear graph below passes through points \\( (0, 3) \\) and \\( (2, 7) \\):\n\nWhich equation represents this linear function \\( f(x) \\)?",
         "options": [
           "\\( f(x) = 2x + 3 \\)",
           "\\( f(x) = 3x + 2 \\)",
@@ -4078,7 +4078,7 @@
         "explanation": "Slope \\( m = \\frac{7 - 3}{2 - 0} = 2 \\). The y-intercept is \\( (0, 3) \\implies b = 3 \\). The equation is \\( f(x) = 2x + 3 \\)."
       },
       "ar": {
-        "question": "يمر المستقيم الموضح أدناه بالنقطتين \\( (0, 3) \\) و \\( (2, 7) \\):\n<svg viewBox=\"0 0 200 180\" class=\"w-full max-w-xs mx-auto bg-white rounded-lg p-2\"><line x1=\"20\" y1=\"100\" x2=\"180\" y2=\"100\" stroke=\"#94a3b8\" stroke-width=\"1.5\"/><line x1=\"60\" y1=\"20\" x2=\"60\" y2=\"160\" stroke=\"#94a3b8\" stroke-width=\"1.5\"/><line x1=\"30\" y1=\"130\" x2=\"150\" y2=\"10\" stroke=\"#dc2626\" stroke-width=\"2\"/><circle cx=\"60\" y=\"70\" r=\"3\" fill=\"#dc2626\"/><circle cx=\"100\" y=\"30\" r=\"3\" fill=\"#dc2626\"/><text x=\"65\" y=\"73\" font-size=\"9\">\\( (0, 3) \\)</text><text x=\"105\" y=\"33\" font-size=\"9\">\\( (2, 7) \\)</text></svg>\nأي معادلة تمثل هذه الدالة الخطية \\( f(x) \\)؟",
+        "question": "يمر المستقيم الموضح أدناه بالنقطتين \\( (0, 3) \\) و \\( (2, 7) \\):\n\nأي معادلة تمثل هذه الدالة الخطية \\( f(x) \\)؟",
         "options": [
           "\\( f(x) = 2x + 3 \\)",
           "\\( f(x) = 3x + 2 \\)",
@@ -4397,7 +4397,7 @@
     "difficulty": "medium",
     "content": {
       "en": {
-        "question": "What are the coordinates of point \\( P \\) shown on the coordinate plane? <svg viewBox=\"0 0 160 160\" class=\"w-full max-w-xs mx-auto bg-white rounded-lg p-2\"><line x1=\"20\" y1=\"140\" x2=\"140\" y2=\"140\" stroke=\"#000\" stroke-width=\"2\"/><line x1=\"20\" y1=\"20\" x2=\"20\" y2=\"140\" stroke=\"#000\" stroke-width=\"2\"/><circle cx=\"80\" cy=\"60\" r=\"5\" fill=\"#ef4444\"/><text x=\"90\" y=\"60\" font-size=\"12\">P</text><text x=\"140\" y=\"155\" font-size=\"10\">x</text><text x=\"5\" y=\"20\" font-size=\"10\">y</text></svg> (Where point \\( P \\) is located \\( 3 \\) units along the horizontal axis and \\( 4 \\) units along the vertical axis).",
+        "question": "What are the coordinates of point \\( P \\) shown on the coordinate plane?  (Where point \\( P \\) is located \\( 3 \\) units along the horizontal axis and \\( 4 \\) units along the vertical axis).",
         "options": [
           "\\( (3, 4) \\)",
           "\\( (4, 3) \\)",
@@ -4408,7 +4408,7 @@
         "explanation": "The horizontal position is \\( 3 \\) and the vertical position is \\( 4 \\), so the ordered pair is \\( (3, 4) \\)."
       },
       "ar": {
-        "question": "ما هما إحداثيا النقطة \\( P \\) الموضحة في المستوى الإحداثي؟ <svg viewBox=\"0 0 160 160\" class=\"w-full max-w-xs mx-auto bg-white rounded-lg p-2\"><line x1=\"20\" y1=\"140\" x2=\"140\" y2=\"140\" stroke=\"#000\" stroke-width=\"2\"/><line x1=\"20\" y1=\"20\" x2=\"20\" y2=\"140\" stroke=\"#000\" stroke-width=\"2\"/><circle cx=\"80\" cy=\"60\" r=\"5\" fill=\"#ef4444\"/><text x=\"90\" y=\"60\" font-size=\"12\">P</text><text x=\"140\" y=\"155\" font-size=\"10\">x</text><text x=\"5\" y=\"20\" font-size=\"10\">y</text></svg> (حيث تقع النقطة \\( P \\) عند \\( 3 \\) وحدات أفقياً و \\( 4 \\) وحدات رأسيين).",
+        "question": "ما هما إحداثيا النقطة \\( P \\) الموضحة في المستوى الإحداثي؟  (حيث تقع النقطة \\( P \\) عند \\( 3 \\) وحدات أفقياً و \\( 4 \\) وحدات رأسيين).",
         "options": [
           "\\( (3, 4) \\)",
           "\\( (4, 3) \\)",
@@ -4595,7 +4595,7 @@
     "difficulty": "extreme",
     "content": {
       "en": {
-        "question": "The graph below shows two intersecting lines representing the system: \\( y = x + 1 \\) and \\( y = -2x + 7 \\). <svg viewBox=\"0 0 160 160\" class=\"w-full max-w-xs mx-auto bg-white rounded-lg p-2\"><line x1=\"10\" y1=\"140\" x2=\"150\" y2=\"140\" stroke=\"#000\" stroke-width=\"1.5\"/><line x1=\"20\" y1=\"10\" x2=\"20\" y2=\"150\" stroke=\"#000\" stroke-width=\"1.5\"/><line x1=\"20\" y1=\"120\" x2=\"120\" y2=\"20\" stroke=\"#2563eb\" stroke-width=\"2\"/><line x1=\"20\" y1=\"20\" x2=\"100\" y2=\"140\" stroke=\"#dc2626\" stroke-width=\"2\"/><circle cx=\"60\" cy=\"80\" r=\"4\" fill=\"#16a34a\"/><text x=\"70\" y=\"80\" font-size=\"12\">(2, 3)</text></svg> What is the solution \\( (x, y) \\) to this system?",
+        "question": "The graph below shows two intersecting lines representing the system: \\( y = x + 1 \\) and \\( y = -2x + 7 \\).  What is the solution \\( (x, y) \\) to this system?",
         "options": [
           "\\( (2, 3) \\)",
           "\\( (3, 2) \\)",
@@ -4606,7 +4606,7 @@
         "explanation": "Setting \\( x + 1 = -2x + 7 \\implies 3x = 6 \\implies x = 2 \\), then \\( y = 2 + 1 = 3 \\). The intersection point is \\( (2, 3) \\)."
       },
       "ar": {
-        "question": "يُظهر الرسم البياني أدناه مستقيمين متقاطعين يمثلان النظام: \\( y = x + 1 \\) و \\( y = -2x + 7 \\). <svg viewBox=\"0 0 160 160\" class=\"w-full max-w-xs mx-auto bg-white rounded-lg p-2\"><line x1=\"10\" y1=\"140\" x2=\"150\" y2=\"140\" stroke=\"#000\" stroke-width=\"1.5\"/><line x1=\"20\" y1=\"10\" x2=\"20\" y2=\"150\" stroke=\"#000\" stroke-width=\"1.5\"/><line x1=\"20\" y1=\"120\" x2=\"120\" y2=\"20\" stroke=\"#2563eb\" stroke-width=\"2\"/><line x1=\"20\" y1=\"20\" x2=\"100\" y2=\"140\" stroke=\"#dc2626\" stroke-width=\"2\"/><circle cx=\"60\" cy=\"80\" r=\"4\" fill=\"#16a34a\"/><text x=\"70\" y=\"80\" font-size=\"12\">(2, 3)</text></svg> ما هو حل هذا النظام \\( (x, y) \\)؟",
+        "question": "يُظهر الرسم البياني أدناه مستقيمين متقاطعين يمثلان النظام: \\( y = x + 1 \\) و \\( y = -2x + 7 \\).  ما هو حل هذا النظام \\( (x, y) \\)؟",
         "options": [
           "\\( (2, 3) \\)",
           "\\( (3, 2) \\)",
@@ -4793,7 +4793,7 @@
     "difficulty": "hard",
     "content": {
       "en": {
-        "question": "The bar chart below represents the number of students participating in four different school clubs. What percentage of the total participants belongs to the Science Club? <svg viewBox=\"0 0 240 160\" class=\"w-full max-w-xs mx-auto bg-white rounded-lg p-2\"><line x1=\"40\" y1=\"130\" x2=\"220\" y2=\"130\" stroke=\"#475569\" stroke-width=\"2\"/><line x1=\"40\" y1=\"20\" x2=\"40\" y2=\"130\" stroke=\"#475569\" stroke-width=\"2\"/><rect x=\"55\" y=\"50\" width=\"25\" height=\"80\" fill=\"#3B82F6\"/><rect x=\"95\" y=\"30\" width=\"25\" height=\"100\" fill=\"#10B981\"/><rect x=\"135\" y=\"10\" width=\"25\" height=\"120\" fill=\"#F59E0B\"/><rect x=\"175\" y=\"30\" width=\"25\" height=\"100\" fill=\"#EF4444\"/><text x=\"52\" y=\"145\" font-size=\"10\">Math</text><text x=\"90\" y=\"145\" font-size=\"10\">Science</text><text x=\"135\" y=\"145\" font-size=\"10\">Art</text><text x=\"170\" y=\"145\" font-size=\"10\">Sports</text><text x=\"20\" y=\"55\" font-size=\"10\">\\( 40 \\)</text><text x=\"20\" y=\"35\" font-size=\"10\">\\( 50 \\)</text><text x=\"20\" y=\"15\" font-size=\"10\">\\( 60 \\)</text></svg>",
+        "question": "The bar chart below represents the number of students participating in four different school clubs. What percentage of the total participants belongs to the Science Club? ",
         "options": [
           "\\( 20\\% \\)",
           "\\( 25\\% \\)",
@@ -4804,7 +4804,7 @@
         "explanation": "Math \\( = 40 \\), Science \\( = 50 \\), Art \\( = 60 \\), Sports \\( = 50 \\). Total participants \\( = 40 + 50 + 60 + 50 = 200 \\). The percentage for Science Club is \\( \\frac{50}{200} \\times 100\\% = 25\\% \\)."
       },
       "ar": {
-        "question": "يمثل الرسم البياني بالأعمدة أدناه عدد الطلاب المشاركين في أربعة أندية مدرسية مختلفة. ما النسبة المئوية للمشاركين في نادي العلوم من إجمالي المشاركين؟ <svg viewBox=\"0 0 240 160\" class=\"w-full max-w-xs mx-auto bg-white rounded-lg p-2\"><line x1=\"40\" y1=\"130\" x2=\"220\" y2=\"130\" stroke=\"#475569\" stroke-width=\"2\"/><line x1=\"40\" y1=\"20\" x2=\"40\" y2=\"130\" stroke=\"#475569\" stroke-width=\"2\"/><rect x=\"55\" y=\"50\" width=\"25\" height=\"80\" fill=\"#3B82F6\"/><rect x=\"95\" y=\"30\" width=\"25\" height=\"100\" fill=\"#10B981\"/><rect x=\"135\" y=\"10\" width=\"25\" height=\"120\" fill=\"#F59E0B\"/><rect x=\"175\" y=\"30\" width=\"25\" height=\"100\" fill=\"#EF4444\"/><text x=\"52\" y=\"145\" font-size=\"10\">رياضيات</text><text x=\"90\" y=\"145\" font-size=\"10\">علوم</text><text x=\"135\" y=\"145\" font-size=\"10\">فنون</text><text x=\"170\" y=\"145\" font-size=\"10\">رياضة</text><text x=\"20\" y=\"55\" font-size=\"10\">\\( 40 \\)</text><text x=\"20\" y=\"35\" font-size=\"10\">\\( 50 \\)</text><text x=\"20\" y=\"15\" font-size=\"10\">\\( 60 \\)</text></svg>",
+        "question": "يمثل الرسم البياني بالأعمدة أدناه عدد الطلاب المشاركين في أربعة أندية مدرسية مختلفة. ما النسبة المئوية للمشاركين في نادي العلوم من إجمالي المشاركين؟ ",
         "options": [
           "\\( 20\\% \\)",
           "\\( 25\\% \\)",
@@ -5288,7 +5288,7 @@
     "difficulty": "medium",
     "content": {
       "en": {
-        "question": "The bar chart below shows the savings of Faisal over four months in SAR: <svg viewBox='0 0 250 150' class='w-full max-w-xs mx-auto bg-slate-50 rounded-lg p-2'><line x1='30' y1='120' x2='230' y2='120' stroke='#334155' stroke-width='2'/><line x1='30' y1='10' x2='30' y2='120' stroke='#334155' stroke-width='2'/><rect x='45' y='60' width='30' height='60' fill='#f59e0b'/><rect x='95' y='40' width='30' height='80' fill='#f59e0b'/><rect x='145' y='20' width='30' height='100' fill='#f59e0b'/><rect x='195' y='10' width='30' height='110' fill='#f59e0b'/><text x='60' y='135' font-size='9' text-anchor='middle'>Jan</text><text x='110' y='135' font-size='9' text-anchor='middle'>Feb</text><text x='160' y='135' font-size='9' text-anchor='middle'>Mar</text><text x='210' y='135' font-size='9' text-anchor='middle'>Apr</text><text x='25' y='65' font-size='8' text-anchor='end'>150</text><text x='25' y='45' font-size='8' text-anchor='end'>200</text><text x='25' y='25' font-size='8' text-anchor='end'>250</text><text x='25' y='15' font-size='8' text-anchor='end'>300</text></svg> What is the mean (average) monthly amount saved by Faisal?",
+        "question": "The bar chart below shows the savings of Faisal over four months in SAR:  What is the mean (average) monthly amount saved by Faisal?",
         "options": [
           "\\( 200\\text{ SAR} \\)",
           "\\( 225\\text{ SAR} \\)",
@@ -5299,7 +5299,7 @@
         "explanation": "Total savings = \\( 150 + 200 + 250 + 300 = 900\\text{ SAR} \\). Mean = \\( 900 \\div 4 = 225\\text{ SAR} \\)."
       },
       "ar": {
-        "question": "يبين التمثيل بالأعمدة أدناه مدخرات فيصل خلال أربعة أشهر بالريال السعودي: <svg viewBox='0 0 250 150' class='w-full max-w-xs mx-auto bg-slate-50 rounded-lg p-2'><line x1='30' y1='120' x2='230' y2='120' stroke='#334155' stroke-width='2'/><line x1='30' y1='10' x2='30' y2='120' stroke='#334155' stroke-width='2'/><rect x='45' y='60' width='30' height='60' fill='#f59e0b'/><rect x='95' y='40' width='30' height='80' fill='#f59e0b'/><rect x='145' y='20' width='30' height='100' fill='#f59e0b'/><rect x='195' y='10' width='30' height='110' fill='#f59e0b'/><text x='60' y='135' font-size='9' text-anchor='middle'>يناير</text><text x='110' y='135' font-size='9' text-anchor='middle'>فبراير</text><text x='160' y='135' font-size='9' text-anchor='middle'>مارس</text><text x='210' y='135' font-size='9' text-anchor='middle'>أبريل</text><text x='25' y='65' font-size='8' text-anchor='end'>150</text><text x='25' y='45' font-size='8' text-anchor='end'>200</text><text x='25' y='25' font-size='8' text-anchor='end'>250</text><text x='25' y='15' font-size='8' text-anchor='end'>300</text></svg> ما هو المتوسط الحسابي للمبلغ الذي ادخره فيصل شهريًا؟",
+        "question": "يبين التمثيل بالأعمدة أدناه مدخرات فيصل خلال أربعة أشهر بالريال السعودي:  ما هو المتوسط الحسابي للمبلغ الذي ادخره فيصل شهريًا؟",
         "options": [
           "\\( 200\\text{ ريال} \\)",
           "\\( 225\\text{ ريال} \\)",
@@ -5387,7 +5387,7 @@
     "difficulty": "medium",
     "content": {
       "en": {
-        "question": "Find the total volume of the rectangular prism shown below: <svg viewBox='0 0 180 140' class='w-full max-w-xs mx-auto bg-slate-50 rounded-lg p-2'><polygon points='30,90 110,90 150,50 70,50' fill='#e2e8f0' stroke='#334155' stroke-width='2'/><polygon points='30,90 110,90 110,130 30,130' fill='#cbd5e1' stroke='#334155' stroke-width='2'/><polygon points='110,90 150,50 150,90 110,130' fill='#94a3b8' stroke='#334155' stroke-width='2'/><text x='70' y='115' font-size='10' text-anchor='middle'>8 cm</text><text x='135' y='115' font-size='10' text-anchor='middle'>5 cm</text><text x='20' y='110' font-size='10' text-anchor='middle'>4 cm</text></svg>",
+        "question": "Find the total volume of the rectangular prism shown below: ",
         "options": [
           "\\( 120\\text{ cm}^3 \\)",
           "\\( 140\\text{ cm}^3 \\)",
@@ -5398,7 +5398,7 @@
         "explanation": "Volume = \\( 8 \\times 5 \\times 4 = 160\\text{ cm}^3 \\)."
       },
       "ar": {
-        "question": "أوجد الحجم الكلي لمتوازي المستطيلات الموضح أدناه: <svg viewBox='0 0 180 140' class='w-full max-w-xs mx-auto bg-slate-50 rounded-lg p-2'><polygon points='30,90 110,90 150,50 70,50' fill='#e2e8f0' stroke='#334155' stroke-width='2'/><polygon points='30,90 110,90 110,130 30,130' fill='#cbd5e1' stroke='#334155' stroke-width='2'/><polygon points='110,90 150,50 150,90 110,130' fill='#94a3b8' stroke='#334155' stroke-width='2'/><text x='70' y='115' font-size='10' text-anchor='middle'>8 سم</text><text x='135' y='115' font-size='10' text-anchor='middle'>5 سم</text><text x='20' y='110' font-size='10' text-anchor='middle'>4 سم</text></svg>",
+        "question": "أوجد الحجم الكلي لمتوازي المستطيلات الموضح أدناه: ",
         "options": [
           "\\( 120\\text{ سم}^3 \\)",
           "\\( 140\\text{ سم}^3 \\)",
@@ -5519,7 +5519,7 @@
     "difficulty": "medium",
     "content": {
       "en": {
-        "question": "Find the value of \\( x \\) in the right-angled triangle shown below: <svg viewBox='0 0 160 140' class='w-full max-w-xs mx-auto bg-slate-50 rounded-lg p-2'><polygon points='20,120 140,120 20,30' fill='none' stroke='#0f172a' stroke-width='2'/><rect x='20' y='110' width='10' height='10' fill='none' stroke='#0f172a' stroke-width='1'/><text x='80' y='135' font-size='10' text-anchor='middle'>8</text><text x='10' y='80' font-size='10' text-anchor='middle'>6</text><text x='85' y='70' font-size='10' text-anchor='middle'>x</text></svg>",
+        "question": "Find the value of \\( x \\) in the right-angled triangle shown below: ",
         "options": [
           "\\( 9 \\)",
           "\\( 10 \\)",
@@ -5530,7 +5530,7 @@
         "explanation": "\\( x^2 = 6^2 + 8^2 = 36 + 64 = 100 \\Rightarrow x = \\sqrt{100} = 10 \\)."
       },
       "ar": {
-        "question": "أوجد قيمة \\( x \\) في المثلث قائم الزاوية الموضح أدناه: <svg viewBox='0 0 160 140' class='w-full max-w-xs mx-auto bg-slate-50 rounded-lg p-2'><polygon points='20,120 140,120 20,30' fill='none' stroke='#0f172a' stroke-width='2'/><rect x='20' y='110' width='10' height='10' fill='none' stroke='#0f172a' stroke-width='1'/><text x='80' y='135' font-size='10' text-anchor='middle'>8</text><text x='10' y='80' font-size='10' text-anchor='middle'>6</text><text x='85' y='70' font-size='10' text-anchor='middle'>x</text></svg>",
+        "question": "أوجد قيمة \\( x \\) في المثلث قائم الزاوية الموضح أدناه: ",
         "options": [
           "\\( 9 \\)",
           "\\( 10 \\)",
@@ -5915,7 +5915,7 @@
     "difficulty": "medium",
     "content": {
       "en": {
-        "question": "What is the volume of the rectangular prism shown below? <svg viewBox=\"0 0 200 150\" class=\"w-full max-w-xs mx-auto bg-white rounded-lg p-2 border border-slate-300\"><path d=\"M 30 90 L 110 90 L 160 50 L 80 50 Z\" fill=\"#DDD6FE\" stroke=\"#6D28D9\" stroke-width=\"2\"/><path d=\"M 30 90 L 30 130 L 110 130 L 110 90 Z\" fill=\"#C4B5FD\" stroke=\"#6D28D9\" stroke-width=\"2\"/><path d=\"M 110 130 L 160 90 L 160 50 L 110 90 Z\" fill=\"#A78BFA\" stroke=\"#6D28D9\" stroke-width=\"2\"/><text x=\"70\" y=\"145\" font-size=\"12\">8 cm</text><text x=\"145\" y=\"120\" font-size=\"12\">5 cm</text><text x=\"15\" y=\"115\" font-size=\"12\">6 cm</text></svg>",
+        "question": "What is the volume of the rectangular prism shown below? ",
         "options": [
           "\\( 120 \\text{ cm}^3 \\)",
           "\\( 180 \\text{ cm}^3 \\)",
@@ -5926,7 +5926,7 @@
         "explanation": "Volume = \\( 8 \\text{ cm} \\times 5 \\text{ cm} \\times 6 \\text{ cm} = 240 \\text{ cm}^3 \\)."
       },
       "ar": {
-        "question": "ما هو حجم منشور المستطيلات الموضح أدناه؟ <svg viewBox=\"0 0 200 150\" class=\"w-full max-w-xs mx-auto bg-white rounded-lg p-2 border border-slate-300\"><path d=\"M 30 90 L 110 90 L 160 50 L 80 50 Z\" fill=\"#DDD6FE\" stroke=\"#6D28D9\" stroke-width=\"2\"/><path d=\"M 30 90 L 30 130 L 110 130 L 110 90 Z\" fill=\"#C4B5FD\" stroke=\"#6D28D9\" stroke-width=\"2\"/><path d=\"M 110 130 L 160 90 L 160 50 L 110 90 Z\" fill=\"#A78BFA\" stroke=\"#6D28D9\" stroke-width=\"2\"/><text x=\"70\" y=\"145\" font-size=\"12\">8 cm</text><text x=\"145\" y=\"120\" font-size=\"12\">5 cm</text><text x=\"15\" y=\"115\" font-size=\"12\">6 cm</text></svg>",
+        "question": "ما هو حجم منشور المستطيلات الموضح أدناه؟ ",
         "options": [
           "\\( 120 \\text{ سم}^3 \\)",
           "\\( 180 \\text{ سم}^3 \\)",
@@ -5948,7 +5948,7 @@
     "difficulty": "medium",
     "content": {
       "en": {
-        "question": "Find the length of the hypotenuse \\( x \\) in the right-angled triangle below: <svg viewBox=\"0 0 200 160\" class=\"w-full max-w-xs mx-auto bg-white rounded-lg p-2 border border-slate-300\"><polygon points=\"30,130 150,130 30,40\" fill=\"#FDE68A\" stroke=\"#D97706\" stroke-width=\"3\"/><rect x=\"30\" y=\"115\" width=\"15\" height=\"15\" fill=\"none\" stroke=\"#D97706\" stroke-width=\"2\"/><text x=\"90\" y=\"148\" font-size=\"12\">12 cm</text><text x=\"10\" y=\"90\" font-size=\"12\">9 cm</text><text x=\"100\" y=\"75\" font-size=\"14\" font-weight=\"bold\">x</text></svg>",
+        "question": "Find the length of the hypotenuse \\( x \\) in the right-angled triangle below: ",
         "options": [
           "\\( 13 \\text{ cm} \\)",
           "\\( 15 \\text{ cm} \\)",
@@ -5959,7 +5959,7 @@
         "explanation": "Using Pythagorean theorem: \\( x^2 = 12^2 + 9^2 = 144 + 81 = 225 \\implies x = \\sqrt{225} = 15 \\text{ cm} \\)."
       },
       "ar": {
-        "question": "أوجد طول الوتر \\( x \\) في المثلث القائم الزاوية الموضح أدناه: <svg viewBox=\"0 0 200 160\" class=\"w-full max-w-xs mx-auto bg-white rounded-lg p-2 border border-slate-300\"><polygon points=\"30,130 150,130 30,40\" fill=\"#FDE68A\" stroke=\"#D97706\" stroke-width=\"3\"/><rect x=\"30\" y=\"115\" width=\"15\" height=\"15\" fill=\"none\" stroke=\"#D97706\" stroke-width=\"2\"/><text x=\"90\" y=\"148\" font-size=\"12\">12 cm</text><text x=\"10\" y=\"90\" font-size=\"12\">9 cm</text><text x=\"100\" y=\"75\" font-size=\"14\" font-weight=\"bold\">x</text></svg>",
+        "question": "أوجد طول الوتر \\( x \\) في المثلث القائم الزاوية الموضح أدناه: ",
         "options": [
           "\\( 13 \\text{ سم} \\)",
           "\\( 15 \\text{ سم} \\)",
@@ -6014,7 +6014,7 @@
     "difficulty": "hard",
     "content": {
       "en": {
-        "question": "The bar chart shows monthly sales of a store in thousands of SAR: <svg viewBox=\"0 0 240 160\" class=\"w-full max-w-xs mx-auto bg-white rounded-lg p-2 border border-slate-300\"><line x1=\"40\" y1=\"130\" x2=\"220\" y2=\"130\" stroke=\"#475569\" stroke-width=\"2\"/><line x1=\"40\" y1=\"20\" x2=\"40\" y2=\"130\" stroke=\"#475569\" stroke-width=\"2\"/><rect x=\"55\" y=\"90\" width=\"25\" height=\"40\" fill=\"#3B82F6\"/><rect x=\"95\" y=\"70\" width=\"25\" height=\"60\" fill=\"#3B82F6\"/><rect x=\"135\" y=\"50\" width=\"25\" height=\"80\" fill=\"#3B82F6\"/><rect x=\"175\" y=\"30\" width=\"25\" height=\"100\" fill=\"#3B82F6\"/><text x=\"67\" y=\"145\" font-size=\"10\">Jan</text><text x=\"107\" y=\"145\" font-size=\"10\">Feb</text><text x=\"147\" y=\"145\" font-size=\"10\">Mar</text><text x=\"187\" y=\"145\" font-size=\"10\">Apr</text><text x=\"20\" y=\"95\" font-size=\"10\">40</text><text x=\"20\" y=\"35\" font-size=\"10\">100</text></svg> What is the percentage increase in sales from January to April?",
+        "question": "The bar chart shows monthly sales of a store in thousands of SAR:  What is the percentage increase in sales from January to April?",
         "options": [
           "\\( 60\\% \\)",
           "\\( 100\\% \\)",
@@ -6025,7 +6025,7 @@
         "explanation": "January sales = \\( 40 \\), April sales = \\( 100 \\). Increase = \\( 100 - 40 = 60 \\). Percentage increase = \\( \\frac{60}{40} \\times 100\\% = 150\\% \\)."
       },
       "ar": {
-        "question": "يعرض الرسم البياني بالأعمدة مبيعات متجر شهرياً بآلاف الريالات: <svg viewBox=\"0 0 240 160\" class=\"w-full max-w-xs mx-auto bg-white rounded-lg p-2 border border-slate-300\"><line x1=\"40\" y1=\"130\" x2=\"220\" y2=\"130\" stroke=\"#475569\" stroke-width=\"2\"/><line x1=\"40\" y1=\"20\" x2=\"40\" y2=\"130\" stroke=\"#475569\" stroke-width=\"2\"/><rect x=\"55\" y=\"90\" width=\"25\" height=\"40\" fill=\"#3B82F6\"/><rect x=\"95\" y=\"70\" width=\"25\" height=\"60\" fill=\"#3B82F6\"/><rect x=\"135\" y=\"50\" width=\"25\" height=\"80\" fill=\"#3B82F6\"/><rect x=\"175\" y=\"30\" width=\"25\" height=\"100\" fill=\"#3B82F6\"/><text x=\"62\" y=\"145\" font-size=\"10\">يناير</text><text x=\"102\" y=\"145\" font-size=\"10\">فبراير</text><text x=\"142\" y=\"145\" font-size=\"10\">مارس</text><text x=\"182\" y=\"145\" font-size=\"10\">أبريل</text><text x=\"20\" y=\"95\" font-size=\"10\">40</text><text x=\"20\" y=\"35\" font-size=\"10\">100</text></svg> ما هي النسبة المئوية للزيادة في المبيعات من شهر يناير إلى شهر أبريل؟",
+        "question": "يعرض الرسم البياني بالأعمدة مبيعات متجر شهرياً بآلاف الريالات:  ما هي النسبة المئوية للزيادة في المبيعات من شهر يناير إلى شهر أبريل؟",
         "options": [
           "\\( 60\\% \\)",
           "\\( 100\\% \\)",
@@ -6311,7 +6311,7 @@
     "difficulty": "medium",
     "content": {
       "en": {
-        "question": "The balance scale below is balanced. What is the value of \\( x \\)? <svg viewBox=\"0 0 260 120\" class=\"w-full max-w-xs mx-auto bg-white rounded-lg p-2\"><line x1=\"30\" y1=\"70\" x2=\"230\" y2=\"70\" stroke=\"#0f172a\" stroke-width=\"4\"/><polygon points=\"130,70 115,110 145,110\" fill=\"#475569\"/><rect x=\"40\" y=\"40\" width=\"60\" height=\"30\" fill=\"#93c5fd\" stroke=\"#1d4ed8\"/><text x=\"70\" y=\"60\" fill=\"#0f172a\" font-size=\"12\" text-anchor=\"middle\">\\( 3x + 4 \\text{ kg} \\)</text><rect x=\"160\" y=\"40\" width=\"60\" height=\"30\" fill=\"#fca5a5\" stroke=\"#b91c1c\"/><text x=\"190\" y=\"60\" fill=\"#0f172a\" font-size=\"12\" text-anchor=\"middle\">\\( 19 \\text{ kg} \\)</text></svg>",
+        "question": "The balance scale below is balanced. What is the value of \\( x \\)? ",
         "options": [
           "\\( 5 \\)",
           "\\( 6 \\)",
@@ -6322,7 +6322,7 @@
         "explanation": "\\( 3x + 4 = 19 \\implies 3x = 15 \\implies x = 5 \\)."
       },
       "ar": {
-        "question": "ميزان كفتين أدناه في حالة اتزان. ما قيمة \\( x \\)؟ <svg viewBox=\"0 0 260 120\" class=\"w-full max-w-xs mx-auto bg-white rounded-lg p-2\"><line x1=\"30\" y1=\"70\" x2=\"230\" y2=\"70\" stroke=\"#0f172a\" stroke-width=\"4\"/><polygon points=\"130,70 115,110 145,110\" fill=\"#475569\"/><rect x=\"40\" y=\"40\" width=\"60\" height=\"30\" fill=\"#93c5fd\" stroke=\"#1d4ed8\"/><text x=\"70\" y=\"60\" fill=\"#0f172a\" font-size=\"12\" text-anchor=\"middle\">\\( 3x + 4 \\text{ كجم} \\)</text><rect x=\"160\" y=\"40\" width=\"60\" height=\"30\" fill=\"#fca5a5\" stroke=\"#b91c1c\"/><text x=\"190\" y=\"60\" fill=\"#0f172a\" font-size=\"12\" text-anchor=\"middle\">\\( 19 \\text{ كجم} \\)</text></svg>",
+        "question": "ميزان كفتين أدناه في حالة اتزان. ما قيمة \\( x \\)؟ ",
         "options": [
           "\\( 5 \\)",
           "\\( 6 \\)",
@@ -6344,7 +6344,7 @@
     "difficulty": "medium",
     "content": {
       "en": {
-        "question": "A rectangular prism has a volume of \\( 240 \\text{ cm}^3 \\), a length of \\( 8 \\text{ cm} \\), and a width of \\( 5 \\text{ cm} \\). What is its height \\( h \\)? <svg viewBox=\"0 0 200 150\" class=\"w-full max-w-xs mx-auto bg-white rounded-lg p-2\"><path d=\"M20,100 L100,100 L140,60 L60,60 Z\" fill=\"#cbd5e1\" stroke=\"#0f172a\"/><path d=\"M20,100 L20,30 L60,10 L60,60 Z\" fill=\"#94a3b8\" stroke=\"#0f172a\"/><path d=\"M20,30 L100,30 L140,10 L60,10 Z\" fill=\"#e2e8f0\" stroke=\"#0f172a\"/><path d=\"M100,100 L100,30 L140,10 L140,60 Z\" fill=\"#64748b\" stroke=\"#0f172a\"/><text x=\"60\" y=\"115\" fill=\"#0f172a\" font-size=\"11\">\\( 8 \\text{ cm} \\)</text><text x=\"125\" y=\"85\" fill=\"#0f172a\" font-size=\"11\">\\( 5 \\text{ cm} \\)</text><text x=\"10\" y=\"65\" fill=\"#ef4444\" font-size=\"11\">\\( h \\)</text></svg>",
+        "question": "A rectangular prism has a volume of \\( 240 \\text{ cm}^3 \\), a length of \\( 8 \\text{ cm} \\), and a width of \\( 5 \\text{ cm} \\). What is its height \\( h \\)? ",
         "options": [
           "\\( 6 \\text{ cm} \\)",
           "\\( 8 \\text{ cm} \\)",
@@ -6355,7 +6355,7 @@
         "explanation": "\\( V = l \\times w \\times h \\implies 240 = 8 \\times 5 \\times h = 40h \\implies h = 6 \\text{ cm} \\)."
       },
       "ar": {
-        "question": "منشور مستطيلي (متوازي مستطيلات) حسابه للحجم يساوي \\( 240 \\text{ سم}^3 \\)، وطوله \\( 8 \\text{ سم} \\)، وعرضه \\( 5 \\text{ سم} \\). ما ارتفاعه \\( h \\)؟ <svg viewBox=\"0 0 200 150\" class=\"w-full max-w-xs mx-auto bg-white rounded-lg p-2\"><path d=\"M20,100 L100,100 L140,60 L60,60 Z\" fill=\"#cbd5e1\" stroke=\"#0f172a\"/><path d=\"M20,100 L20,30 L60,10 L60,60 Z\" fill=\"#94a3b8\" stroke=\"#0f172a\"/><path d=\"M20,30 L100,30 L140,10 L60,10 Z\" fill=\"#e2e8f0\" stroke=\"#0f172a\"/><path d=\"M100,100 L100,30 L140,10 L140,60 Z\" fill=\"#64748b\" stroke=\"#0f172a\"/><text x=\"60\" y=\"115\" fill=\"#0f172a\" font-size=\"11\">\\( 8 \\text{ سم} \\)</text><text x=\"125\" y=\"85\" fill=\"#0f172a\" font-size=\"11\">\\( 5 \\text{ سم} \\)</text><text x=\"10\" y=\"65\" fill=\"#ef4444\" font-size=\"11\">\\( h \\)</text></svg>",
+        "question": "منشور مستطيلي (متوازي مستطيلات) حسابه للحجم يساوي \\( 240 \\text{ سم}^3 \\)، وطوله \\( 8 \\text{ سم} \\)، وعرضه \\( 5 \\text{ سم} \\). ما ارتفاعه \\( h \\)؟ ",
         "options": [
           "\\( 6 \\text{ سم} \\)",
           "\\( 8 \\text{ سم} \\)",
@@ -6674,7 +6674,7 @@
     "difficulty": "medium",
     "content": {
       "en": {
-        "question": "The bar chart below displays the favorite fruits chosen by a group of students. How many total students participated in the survey?<br/><svg viewBox=\"0 0 240 160\" class=\"w-full max-w-xs mx-auto bg-white rounded-lg p-2\"><line x1=\"30\" y1=\"130\" x2=\"220\" y2=\"130\" stroke=\"#1e293b\" stroke-width=\"2\"/><line x1=\"30\" y1=\"20\" x2=\"30\" y2=\"130\" stroke=\"#1e293b\" stroke-width=\"2\"/><rect x=\"45\" y=\"70\" width=\"25\" height=\"60\" fill=\"#ef4444\"/><rect x=\"90\" y=\"30\" width=\"25\" height=\"100\" fill=\"#eab308\"/><rect x=\"135\" y=\"50\" width=\"25\" height=\"80\" fill=\"#f97316\"/><rect x=\"180\" y=\"90\" width=\"25\" height=\"40\" fill=\"#a855f7\"/><text x=\"57\" y=\"145\" font-size=\"10\" text-anchor=\"middle\">Apple</text><text x=\"102\" y=\"145\" font-size=\"10\" text-anchor=\"middle\">Banana</text><text x=\"147\" y=\"145\" font-size=\"10\" text-anchor=\"middle\">Orange</text><text x=\"192\" y=\"145\" font-size=\"10\" text-anchor=\"middle\">Grape</text><text x=\"20\" y=\"75\" font-size=\"10\" text-anchor=\"end\">15</text><text x=\"20\" y=\"35\" font-size=\"10\" text-anchor=\"end\">25</text><text x=\"20\" y=\"55\" font-size=\"10\" text-anchor=\"end\">20</text><text x=\"20\" y=\"95\" font-size=\"10\" text-anchor=\"end\">10</text></svg>",
+        "question": "The bar chart below displays the favorite fruits chosen by a group of students. How many total students participated in the survey?",
         "options": [
           "\\( 60 \\)",
           "\\( 70 \\)",
@@ -6685,7 +6685,7 @@
         "explanation": "Total students = \\( 15 + 25 + 20 + 10 = 70 \\)."
       },
       "ar": {
-        "question": "يمثل الرسم البياني بالأعمدة أدناه الفاكهة المفضلة لمجموعة من الطلاب. ما إجمالي عدد الطلاب المشاركين في المسح؟<br/><svg viewBox=\"0 0 240 160\" class=\"w-full max-w-xs mx-auto bg-white rounded-lg p-2\"><line x1=\"30\" y1=\"130\" x2=\"220\" y2=\"130\" stroke=\"#1e293b\" stroke-width=\"2\"/><line x1=\"30\" y1=\"20\" x2=\"30\" y2=\"130\" stroke=\"#1e293b\" stroke-width=\"2\"/><rect x=\"45\" y=\"70\" width=\"25\" height=\"60\" fill=\"#ef4444\"/><rect x=\"90\" y=\"30\" width=\"25\" height=\"100\" fill=\"#eab308\"/><rect x=\"135\" y=\"50\" width=\"25\" height=\"80\" fill=\"#f97316\"/><rect x=\"180\" y=\"90\" width=\"25\" height=\"40\" fill=\"#a855f7\"/><text x=\"57\" y=\"145\" font-size=\"10\" text-anchor=\"middle\">تفاح</text><text x=\"102\" y=\"145\" font-size=\"10\" text-anchor=\"middle\">موز</text><text x=\"147\" y=\"145\" font-size=\"10\" text-anchor=\"middle\">برتقال</text><text x=\"192\" y=\"145\" font-size=\"10\" text-anchor=\"middle\">عنب</text><text x=\"20\" y=\"75\" font-size=\"10\" text-anchor=\"end\">15</text><text x=\"20\" y=\"35\" font-size=\"10\" text-anchor=\"end\">25</text><text x=\"20\" y=\"55\" font-size=\"10\" text-anchor=\"end\">20</text><text x=\"20\" y=\"95\" font-size=\"10\" text-anchor=\"end\">10</text></svg>",
+        "question": "يمثل الرسم البياني بالأعمدة أدناه الفاكهة المفضلة لمجموعة من الطلاب. ما إجمالي عدد الطلاب المشاركين في المسح؟",
         "options": [
           "\\( 60 \\)",
           "\\( 70 \\)",
@@ -7136,7 +7136,7 @@
     "difficulty": "medium",
     "content": {
       "en": {
-        "question": "The bar chart shows temperature recorded in degrees Celsius over \\( 4 \\) days. What is the mean temperature for these \\( 4 \\) days? <svg viewBox='0 0 200 150' class='w-full max-w-xs mx-auto bg-white rounded-lg p-2'><line x1='30' y1='120' x2='180' y2='120' stroke='#000' stroke-width='1.5'/><line x1='30' y1='20' x2='30' y2='120' stroke='#000' stroke-width='1.5'/><rect x='40' y='60' width='25' height='60' fill='#3b82f6'/><rect x='75' y='40' width='25' height='80' fill='#3b82f6'/><rect x='110' y='80' width='25' height='40' fill='#3b82f6'/><rect x='145' y='20' width='25' height='100' fill='#3b82f6'/><text x='45' y='135' font-size='10'>D1</text><text x='80' y='135' font-size='10'>D2</text><text x='115' y='135' font-size='10'>D3</text><text x='150' y='135' font-size='10'>D4</text><text x='43' y='55' font-size='10'>15</text><text x='78' y='35' font-size='10'>20</text><text x='113' y='75' font-size='10'>10</text><text x='148' y='15' font-size='10'>25</text></svg>",
+        "question": "The bar chart shows temperature recorded in degrees Celsius over \\( 4 \\) days. What is the mean temperature for these \\( 4 \\) days? ",
         "options": [
           "\\( 15^\\circ\\text{C} \\)",
           "\\( 17.5^\\circ\\text{C} \\)",
@@ -7147,7 +7147,7 @@
         "explanation": "Temperatures are \\( 15 \\), \\( 20 \\), \\( 10 \\), and \\( 25 \\). The sum is \\( 15 + 20 + 10 + 25 = 70 \\). Mean = \\( \\frac{70}{4} = 17.5^\\circ\\text{C} \\)."
       },
       "ar": {
-        "question": "يوضح الرسم البياني بالأعمدة درجات الحرارة المسجلة بالسلسيوس خلال \\( 4 \\) أيام. ما هو متوسط درجات الحرارة لهذه الأيام الأربعة؟ <svg viewBox='0 0 200 150' class='w-full max-w-xs mx-auto bg-white rounded-lg p-2'><line x1='30' y1='120' x2='180' y2='120' stroke='#000' stroke-width='1.5'/><line x1='30' y1='20' x2='30' y2='120' stroke='#000' stroke-width='1.5'/><rect x='40' y='60' width='25' height='60' fill='#3b82f6'/><rect x='75' y='40' width='25' height='80' fill='#3b82f6'/><rect x='110' y='80' width='25' height='40' fill='#3b82f6'/><rect x='145' y='20' width='25' height='100' fill='#3b82f6'/><text x='45' y='135' font-size='10'>ي1</text><text x='80' y='135' font-size='10'>ي2</text><text x='115' y='135' font-size='10'>ي3</text><text x='150' y='135' font-size='10'>ي4</text><text x='43' y='55' font-size='10'>15</text><text x='78' y='35' font-size='10'>20</text><text x='113' y='75' font-size='10'>10</text><text x='148' y='15' font-size='10'>25</text></svg>",
+        "question": "يوضح الرسم البياني بالأعمدة درجات الحرارة المسجلة بالسلسيوس خلال \\( 4 \\) أيام. ما هو متوسط درجات الحرارة لهذه الأيام الأربعة؟ ",
         "options": [
           "\\( 15^\\circ\\text{س} \\)",
           "\\( 17.5^\\circ\\text{س} \\)",
@@ -7532,7 +7532,7 @@
     "difficulty": "medium",
     "content": {
       "en": {
-        "question": "The graph below shows a linear function passing through points \\( (-2, -2) \\) and \\( (2, 2) \\). What is the slope of this line? <svg viewBox='0 0 200 200' class='w-full max-w-xs mx-auto bg-white rounded-lg p-2'><line x1='100' y1='10' x2='100' y2='190' stroke='#000' stroke-width='2'/><line x1='10' y1='100' x2='190' y2='100' stroke='#000' stroke-width='2'/><line x1='20' y1='180' x2='180' y2='20' stroke='#2563eb' stroke-width='2'/><circle cx='140' cy='60' r='4' fill='#ef4444'/><text x='145' y='60' font-size='10'>(2, 2)</text><circle cx='60' cy='140' r='4' fill='#ef4444'/><text x='10' y='145' font-size='10'>(-2, -2)</text></svg>",
+        "question": "The graph below shows a linear function passing through points \\( (-2, -2) \\) and \\( (2, 2) \\). What is the slope of this line? ",
         "options": [
           "\\( -1 \\)",
           "\\( 0 \\)",
@@ -7543,7 +7543,7 @@
         "explanation": "Slope \\( m = \\frac{2 - (-2)}{2 - (-2)} = \\frac{4}{4} = 1 \\)."
       },
       "ar": {
-        "question": "يمثل الرسم البياني أدناه دالة خطية تمر بالنقطتين \\( (-2, -2) \\) و \\( (2, 2) \\). ما هو ميل هذا الخط المستقيم؟ <svg viewBox='0 0 200 200' class='w-full max-w-xs mx-auto bg-white rounded-lg p-2'><line x1='100' y1='10' x2='100' y2='190' stroke='#000' stroke-width='2'/><line x1='10' y1='100' x2='190' y2='100' stroke='#000' stroke-width='2'/><line x1='20' y1='180' x2='180' y2='20' stroke='#2563eb' stroke-width='2'/><circle cx='140' cy='60' r='4' fill='#ef4444'/><text x='145' y='60' font-size='10'>(2, 2)</text><circle cx='60' cy='140' r='4' fill='#ef4444'/><text x='10' y='145' font-size='10'>(-2, -2)</text></svg>",
+        "question": "يمثل الرسم البياني أدناه دالة خطية تمر بالنقطتين \\( (-2, -2) \\) و \\( (2, 2) \\). ما هو ميل هذا الخط المستقيم؟ ",
         "options": [
           "\\( -1 \\)",
           "\\( 0 \\)",
@@ -7697,7 +7697,7 @@
     "difficulty": "medium",
     "content": {
       "en": {
-        "question": "The bar chart below represents the test scores of a student across \\( 4 \\) different subjects:<br/><svg viewBox=\"0 0 250 150\" class=\"w-full max-w-xs mx-auto bg-slate-50 rounded-lg p-2 mb-2\"><line x1=\"30\" y1=\"120\" x2=\"230\" y2=\"120\" stroke=\"#333\" stroke-width=\"2\"/><line x1=\"30\" y1=\"10\" x2=\"30\" y2=\"120\" stroke=\"#333\" stroke-width=\"2\"/><rect x=\"45\" y=\"35\" width=\"25\" height=\"85\" fill=\"#3b82f6\"/><text x=\"57.5\" y=\"30\" font-size=\"10\" text-anchor=\"middle\">85</text><text x=\"57.5\" y=\"135\" font-size=\"10\" text-anchor=\"middle\">Math</text><rect x=\"95\" y=\"30\" width=\"25\" height=\"90\" fill=\"#10b981\"/><text x=\"107.5\" y=\"25\" font-size=\"10\" text-anchor=\"middle\">90</text><text x=\"107.5\" y=\"135\" font-size=\"10\" text-anchor=\"middle\">Sci</text><rect x=\"145\" y=\"45\" width=\"25\" height=\"75\" fill=\"#f59e0b\"/><text x=\"157.5\" y=\"40\" font-size=\"10\" text-anchor=\"middle\">75</text><text x=\"157.5\" y=\"135\" font-size=\"10\" text-anchor=\"middle\">Eng</text><rect x=\"195\" y=\"50\" width=\"25\" height=\"70\" fill=\"#ef4444\"/><text x=\"207.5\" y=\"45\" font-size=\"10\" text-anchor=\"middle\">70</text><text x=\"207.5\" y=\"135\" font-size=\"10\" text-anchor=\"middle\">Hist</text></svg>What is the mean (average) score of the student?",
+        "question": "The bar chart below represents the test scores of a student across \\( 4 \\) different subjects:What is the mean (average) score of the student?",
         "options": [
           "\\( 78 \\)",
           "\\( 80 \\)",
@@ -7708,7 +7708,7 @@
         "explanation": "Sum of scores = \\( 85 + 90 + 75 + 70 = 320 \\). Mean = \\( \\frac{320}{4} = 80 \\)."
       },
       "ar": {
-        "question": "يمثل الرسم البياني بالأعمدة أدناه درجات طالب في \\( 4 \\) مواد مختلفة:<br/><svg viewBox=\"0 0 250 150\" class=\"w-full max-w-xs mx-auto bg-slate-50 rounded-lg p-2 mb-2\"><line x1=\"30\" y1=\"120\" x2=\"230\" y2=\"120\" stroke=\"#333\" stroke-width=\"2\"/><line x1=\"30\" y1=\"10\" x2=\"30\" y2=\"120\" stroke=\"#333\" stroke-width=\"2\"/><rect x=\"45\" y=\"35\" width=\"25\" height=\"85\" fill=\"#3b82f6\"/><text x=\"57.5\" y=\"30\" font-size=\"10\" text-anchor=\"middle\">85</text><text x=\"57.5\" y=\"135\" font-size=\"10\" text-anchor=\"middle\">رياضيات</text><rect x=\"95\" y=\"30\" width=\"25\" height=\"90\" fill=\"#10b981\"/><text x=\"107.5\" y=\"25\" font-size=\"10\" text-anchor=\"middle\">90</text><text x=\"107.5\" y=\"135\" font-size=\"10\" text-anchor=\"middle\">علوم</text><rect x=\"145\" y=\"45\" width=\"25\" height=\"75\" fill=\"#f59e0b\"/><text x=\"157.5\" y=\"40\" font-size=\"10\" text-anchor=\"middle\">75</text><text x=\"157.5\" y=\"135\" font-size=\"10\" text-anchor=\"middle\">إنجليزي</text><rect x=\"195\" y=\"50\" width=\"25\" height=\"70\" fill=\"#ef4444\"/><text x=\"207.5\" y=\"45\" font-size=\"10\" text-anchor=\"middle\">70</text><text x=\"207.5\" y=\"135\" font-size=\"10\" text-anchor=\"middle\">تاريخ</text></svg>ما هو المتوسط الحسابي لدرجات الطالب؟",
+        "question": "يمثل الرسم البياني بالأعمدة أدناه درجات طالب في \\( 4 \\) مواد مختلفة:ما هو المتوسط الحسابي لدرجات الطالب؟",
         "options": [
           "\\( 78 \\)",
           "\\( 80 \\)",
@@ -7796,7 +7796,7 @@
     "difficulty": "hard",
     "content": {
       "en": {
-        "question": "In the diagram below, two parallel lines \\( L_1 \\) and \\( L_2 \\) are intersected by a transversal line \\( T \\). Find the value of \\( x \\).<br/><svg viewBox=\"0 0 200 120\" class=\"w-full max-w-xs mx-auto bg-slate-50 rounded-lg p-2 mb-2\"><line x1=\"20\" y1=\"30\" x2=\"180\" y2=\"30\" stroke=\"#1e293b\" stroke-width=\"2\"/><line x1=\"20\" y1=\"90\" x2=\"180\" y2=\"90\" stroke=\"#1e293b\" stroke-width=\"2\"/><line x1=\"50\" y1=\"110\" x2=\"150\" y2=\"10\" stroke=\"#ef4444\" stroke-width=\"2\"/><text x=\"110\" y=\"25\" font-size=\"10\" fill=\"#1e293b\">\\( 2x + 10^\\circ \\)</text><text x=\"80\" y=\"98\" font-size=\"10\" fill=\"#1e293b\">\\( 70^\\circ \\)</text><text x=\"185\" y=\"33\" font-size=\"10\">\\( L_1 \\)</text><text x=\"185\" y=\"93\" font-size=\"10\">\\( L_2 \\)</text></svg>",
+        "question": "In the diagram below, two parallel lines \\( L_1 \\) and \\( L_2 \\) are intersected by a transversal line \\( T \\). Find the value of \\( x \\).",
         "options": [
           "\\( 30 \\)",
           "\\( 35 \\)",
@@ -7807,7 +7807,7 @@
         "explanation": "The two given angles are alternate interior angles, so they are equal: \\( 2x + 10 = 70 \\implies 2x = 60 \\implies x = 30 \\)."
       },
       "ar": {
-        "question": "في الشكل أدناه، المستقيمان المتوازيان \\( L_1 \\) و \\( L_2 \\) يقطعهما القاطع \\( T \\). أوجد قيمة \\( x \\).<br/><svg viewBox=\"0 0 200 120\" class=\"w-full max-w-xs mx-auto bg-slate-50 rounded-lg p-2 mb-2\"><line x1=\"20\" y1=\"30\" x2=\"180\" y2=\"30\" stroke=\"#1e293b\" stroke-width=\"2\"/><line x1=\"20\" y1=\"90\" x2=\"180\" y2=\"90\" stroke=\"#1e293b\" stroke-width=\"2\"/><line x1=\"50\" y1=\"110\" x2=\"150\" y2=\"10\" stroke=\"#ef4444\" stroke-width=\"2\"/><text x=\"110\" y=\"25\" font-size=\"10\" fill=\"#1e293b\">\\( 2x + 10^\\circ \\)</text><text x=\"80\" y=\"98\" font-size=\"10\" fill=\"#1e293b\">\\( 70^\\circ \\)</text><text x=\"185\" y=\"33\" font-size=\"10\">\\( L_1 \\)</text><text x=\"185\" y=\"93\" font-size=\"10\">\\( L_2 \\)</text></svg>",
+        "question": "في الشكل أدناه، المستقيمان المتوازيان \\( L_1 \\) و \\( L_2 \\) يقطعهما القاطع \\( T \\). أوجد قيمة \\( x \\).",
         "options": [
           "\\( 30 \\)",
           "\\( 35 \\)",
@@ -7862,7 +7862,7 @@
     "difficulty": "medium",
     "content": {
       "en": {
-        "question": "In the right-angled triangle below, the length of the base is \\( 9 \\text{ cm} \\) and the hypotenuse is \\( 15 \\text{ cm} \\). What is the area of the triangle?<br/><svg viewBox=\"0 0 180 140\" class=\"w-full max-w-xs mx-auto bg-slate-50 rounded-lg p-2 mb-2\"><polygon points=\"30,110 150,110 150,20\" fill=\"#dcfce7\" stroke=\"#16a34a\" stroke-width=\"2\"/><rect x=\"140\" y=\"100\" width=\"10\" height=\"10\" fill=\"none\" stroke=\"#16a34a\" stroke-width=\"1.5\"/><text x=\"90\" y=\"125\" font-size=\"12\" text-anchor=\"middle\">\\( 9 \\text{ cm} \\)</text><text x=\"80\" y=\"60\" font-size=\"12\" text-anchor=\"middle\">\\( 15 \\text{ cm} \\)</text><text x=\"160\" y=\"65\" font-size=\"12\" text-anchor=\"start\">\\( x \\)</text></svg>",
+        "question": "In the right-angled triangle below, the length of the base is \\( 9 \\text{ cm} \\) and the hypotenuse is \\( 15 \\text{ cm} \\). What is the area of the triangle?",
         "options": [
           "\\( 54 \\text{ cm}^2 \\)",
           "\\( 108 \\text{ cm}^2 \\)",
@@ -7873,7 +7873,7 @@
         "explanation": "By Pythagorean theorem: \\( x = \\sqrt{15^2 - 9^2} = \\sqrt{225 - 81} = \\sqrt{144} = 12 \\text{ cm} \\). Area of triangle = \\( \\frac{1}{2} \\times \\text{base} \\times \\text{height} = \\frac{1}{2} \\times 9 \\times 12 = 54 \\text{ cm}^2 \\)."
       },
       "ar": {
-        "question": "في المثلث قائم الزاوية أدناه، طول القاعدة يساوي \\( 9 \\text{ سم} \\) والوتر يساوي \\( 15 \\text{ سم} \\). ما هي مساحة المثلث؟<br/><svg viewBox=\"0 0 180 140\" class=\"w-full max-w-xs mx-auto bg-slate-50 rounded-lg p-2 mb-2\"><polygon points=\"30,110 150,110 150,20\" fill=\"#dcfce7\" stroke=\"#16a34a\" stroke-width=\"2\"/><rect x=\"140\" y=\"100\" width=\"10\" height=\"10\" fill=\"none\" stroke=\"#16a34a\" stroke-width=\"1.5\"/><text x=\"90\" y=\"125\" font-size=\"12\" text-anchor=\"middle\">\\( 9 \\text{ سم} \\)</text><text x=\"80\" y=\"60\" font-size=\"12\" text-anchor=\"middle\">\\( 15 \\text{ سم} \\)</text><text x=\"160\" y=\"65\" font-size=\"12\" text-anchor=\"start\">\\( x \\)</text></svg>",
+        "question": "في المثلث قائم الزاوية أدناه، طول القاعدة يساوي \\( 9 \\text{ سم} \\) والوتر يساوي \\( 15 \\text{ سم} \\). ما هي مساحة المثلث؟",
         "options": [
           "\\( 54 \\text{ سم}^2 \\)",
           "\\( 108 \\text{ سم}^2 \\)",
@@ -8126,7 +8126,7 @@
     "difficulty": "hard",
     "content": {
       "en": {
-        "question": "A rectangular prism has a length of \\( 6\\text{ cm} \\), a width of \\( 4\\text{ cm} \\), and a height of \\( 5\\text{ cm} \\). What is its total surface area?<br/><svg viewBox='0 0 200 160' class='w-full max-w-xs mx-auto bg-white rounded-lg p-2'><path d='M 30 100 L 110 100 L 150 60 L 70 60 Z' fill='#e2e8f0' stroke='#334155' stroke-width='2'/><path d='M 30 100 L 30 140 L 110 140 L 110 100 Z' fill='#cbd5e1' stroke='#334155' stroke-width='2'/><path d='M 110 100 L 150 60 L 150 100 L 110 140 Z' fill='#94a3b8' stroke='#334155' stroke-width='2'/><text x='65' y='135' font-size='12'>6 cm</text><text x='135' y='125' font-size='12'>4 cm</text><text x='20' y='120' font-size='12'>5 cm</text></svg>",
+        "question": "A rectangular prism has a length of \\( 6\\text{ cm} \\), a width of \\( 4\\text{ cm} \\), and a height of \\( 5\\text{ cm} \\). What is its total surface area?",
         "options": [
           "\\( 120\\text{ cm}^2 \\)",
           "\\( 136\\text{ cm}^2 \\)",
@@ -8137,7 +8137,7 @@
         "explanation": "Surface Area \\( = 2(6 \\times 4 + 6 \\times 5 + 4 \\times 5) = 2(24 + 30 + 20) = 2(74) = 148\\text{ cm}^2 \\)."
       },
       "ar": {
-        "question": "منشور مستطيلي (متوازي مستطيلات) طوله \\( 6\\text{ سم} \\)، وعرضه \\( 4\\text{ سم} \\)، وارتفاعه \\( 5\\text{ سم} \\). ما مساحته الكلية؟<br/><svg viewBox='0 0 200 160' class='w-full max-w-xs mx-auto bg-white rounded-lg p-2'><path d='M 30 100 L 110 100 L 150 60 L 70 60 Z' fill='#e2e8f0' stroke='#334155' stroke-width='2'/><path d='M 30 100 L 30 140 L 110 140 L 110 100 Z' fill='#cbd5e1' stroke='#334155' stroke-width='2'/><path d='M 110 100 L 150 60 L 150 100 L 110 140 Z' fill='#94a3b8' stroke='#334155' stroke-width='2'/><text x='65' y='135' font-size='12'>6 cm</text><text x='135' y='125' font-size='12'>4 cm</text><text x='20' y='120' font-size='12'>5 cm</text></svg>",
+        "question": "منشور مستطيلي (متوازي مستطيلات) طوله \\( 6\\text{ سم} \\)، وعرضه \\( 4\\text{ سم} \\)، وارتفاعه \\( 5\\text{ سم} \\). ما مساحته الكلية؟",
         "options": [
           "\\( 120\\text{ سم}^2 \\)",
           "\\( 136\\text{ سم}^2 \\)",
@@ -8258,7 +8258,7 @@
     "difficulty": "medium",
     "content": {
       "en": {
-        "question": "A survey was conducted among \\( 200 \\) students about their favorite sport. The results are shown in the pie chart below. How many students chose Football?\\n(Blue sector = Football: \\( 45\\% \\))<br/><svg viewBox='0 0 200 200' class='w-full max-w-xs mx-auto bg-white rounded-lg p-2'><circle cx='100' cy='100' r='80' fill='#f8fafc' stroke='#334155' stroke-width='2'/><path d='M 100 100 L 100 20 A 80 80 0 0 1 176 125 Z' fill='#3b82f6'/><path d='M 100 100 L 176 125 A 80 80 0 0 1 100 180 Z' fill='#10b981'/><path d='M 100 100 L 100 180 A 80 80 0 0 1 23 125 Z' fill='#f59e0b'/><path d='M 100 100 L 23 125 A 80 80 0 0 1 100 20 Z' fill='#8b5cf6'/><text x='125' y='75' font-size='10' fill='#fff'>45%</text><text x='125' y='140' font-size='10' fill='#fff'>25%</text><text x='70' y='140' font-size='10' fill='#fff'>20%</text><text x='50' y='75' font-size='10' fill='#fff'>10%</text></svg>",
+        "question": "A survey was conducted among \\( 200 \\) students about their favorite sport. The results are shown in the pie chart below. How many students chose Football?\\n(Blue sector = Football: \\( 45\\% \\))",
         "options": [
           "\\( 80 \\)",
           "\\( 90 \\)",
@@ -8269,7 +8269,7 @@
         "explanation": "Number of students \\( = 45\\% \\times 200 = 0.45 \\times 200 = 90 \\) students."
       },
       "ar": {
-        "question": "أجري مسح على \\( 200 \\) طالب حول رياضتهم المفضلة، وتم تمثيل النتائج في القطاع الدائري أدناه. كم طالباً اختار كرة القدم؟\\n(القطاع الأزرق = كرة القدم: \\( 45\\% \\))<br/><svg viewBox='0 0 200 200' class='w-full max-w-xs mx-auto bg-white rounded-lg p-2'><circle cx='100' cy='100' r='80' fill='#f8fafc' stroke='#334155' stroke-width='2'/><path d='M 100 100 L 100 20 A 80 80 0 0 1 176 125 Z' fill='#3b82f6'/><path d='M 100 100 L 176 125 A 80 80 0 0 1 100 180 Z' fill='#10b981'/><path d='M 100 100 L 100 180 A 80 80 0 0 1 23 125 Z' fill='#f59e0b'/><path d='M 100 100 L 23 125 A 80 80 0 0 1 100 20 Z' fill='#8b5cf6'/><text x='125' y='75' font-size='10' fill='#fff'>45%</text><text x='125' y='140' font-size='10' fill='#fff'>25%</text><text x='70' y='140' font-size='10' fill='#fff'>20%</text><text x='50' y='75' font-size='10' fill='#fff'>10%</text></svg>",
+        "question": "أجري مسح على \\( 200 \\) طالب حول رياضتهم المفضلة، وتم تمثيل النتائج في القطاع الدائري أدناه. كم طالباً اختار كرة القدم؟\\n(القطاع الأزرق = كرة القدم: \\( 45\\% \\))",
         "options": [
           "\\( 80 \\)",
           "\\( 90 \\)",
@@ -8423,7 +8423,7 @@
     "difficulty": "medium",
     "content": {
       "en": {
-        "question": "The box plot below summarizes student test scores. Determine the Interquartile Range (IQR) of the data set.<br/><svg viewBox='0 0 260 120' class='w-full max-w-xs mx-auto bg-white rounded-lg p-2'><line x1='30' y1='60' x2='230' y2='60' stroke='#94a3b8' stroke-width='2'/><line x1='30' y1='50' x2='30' y2='70' stroke='#334155' stroke-width='2'/><line x1='230' y1='50' x2='230' y2='70' stroke='#334155' stroke-width='2'/><rect x='80' y='40' width='80' height='40' fill='#cbd5e1' stroke='#334155' stroke-width='2'/><line x1='120' y1='40' x2='120' y2='80' stroke='#ef4444' stroke-width='2'/><text x='30' y='95' font-size='10' text-anchor='middle'>50</text><text x='80' y='95' font-size='10' text-anchor='middle'>65</text><text x='120' y='95' font-size='10' text-anchor='middle'>75</text><text x='160' y='95' font-size='10' text-anchor='middle'>85</text><text x='230' y='95' font-size='10' text-anchor='middle'>95</text></svg>",
+        "question": "The box plot below summarizes student test scores. Determine the Interquartile Range (IQR) of the data set.",
         "options": [
           "\\( 10 \\)",
           "\\( 20 \\)",
@@ -8434,7 +8434,7 @@
         "explanation": "First quartile \\( Q1 = 65 \\) and third quartile \\( Q3 = 85 \\). The Interquartile Range \\( \\text{IQR} = Q3 - Q1 = 85 - 65 = 20 \\)."
       },
       "ar": {
-        "question": "يمثل التمثيل بالصندوق والطرفين أدناه توزيع درجات إحدى الاختبارات. حدد المدى الربيعي (IQR) للبيانات.<br/><svg viewBox='0 0 260 120' class='w-full max-w-xs mx-auto bg-white rounded-lg p-2'><line x1='30' y1='60' x2='230' y2='60' stroke='#94a3b8' stroke-width='2'/><line x1='30' y1='50' x2='30' y2='70' stroke='#334155' stroke-width='2'/><line x1='230' y1='50' x2='230' y2='70' stroke='#334155' stroke-width='2'/><rect x='80' y='40' width='80' height='40' fill='#cbd5e1' stroke='#334155' stroke-width='2'/><line x1='120' y1='40' x2='120' y2='80' stroke='#ef4444' stroke-width='2'/><text x='30' y='95' font-size='10' text-anchor='middle'>50</text><text x='80' y='95' font-size='10' text-anchor='middle'>65</text><text x='120' y='95' font-size='10' text-anchor='middle'>75</text><text x='160' y='95' font-size='10' text-anchor='middle'>85</text><text x='230' y='95' font-size='10' text-anchor='middle'>95</text></svg>",
+        "question": "يمثل التمثيل بالصندوق والطرفين أدناه توزيع درجات إحدى الاختبارات. حدد المدى الربيعي (IQR) للبيانات.",
         "options": [
           "\\( 10 \\)",
           "\\( 20 \\)",
@@ -8621,7 +8621,7 @@
     "difficulty": "medium",
     "content": {
       "en": {
-        "question": "The bar graph below represents the number of students in four classes. What is the mean (average) number of students per class?<br/><svg viewBox='0 0 200 130' class='w-full max-w-xs mx-auto bg-white rounded-lg p-2'><line x1='30' y1='100' x2='190' y2='100' stroke='#1e293b' stroke-width='2'/><line x1='30' y1='10' x2='30' y2='100' stroke='#1e293b' stroke-width='2'/><rect x='40' y='60' width='25' height='40' fill='#3b82f6'/><rect x='80' y='30' width='25' height='70' fill='#3b82f6'/><rect x='120' y='50' width='25' height='50' fill='#3b82f6'/><rect x='160' y='40' width='25' height='60' fill='#3b82f6'/><text x='52.5' y='115' font-size='8' text-anchor='middle'>A</text><text x='92.5' y='115' font-size='8' text-anchor='middle'>B</text><text x='132.5' y='115' font-size='8' text-anchor='middle'>C</text><text x='172.5' y='115' font-size='8' text-anchor='middle'>D</text><text x='52.5' y='55' font-size='8' text-anchor='middle'>\\( 20 \\)</text><text x='92.5' y='25' font-size='8' text-anchor='middle'>\\( 35 \\)</text><text x='132.5' y='45' font-size='8' text-anchor='middle'>\\( 25 \\)</text><text x='172.5' y='35' font-size='8' text-anchor='middle'>\\( 30 \\)</text></svg>",
+        "question": "The bar graph below represents the number of students in four classes. What is the mean (average) number of students per class?",
         "options": [
           "\\( 25 \\)",
           "\\( 27.5 \\)",
@@ -8632,7 +8632,7 @@
         "explanation": "Sum of students = \\( 20 + 35 + 25 + 30 = 110 \\). Mean = \\( 110 \\div 4 = 27.5 \\)."
       },
       "ar": {
-        "question": "يمثل التمثيل بالأعمدة أدناه عدد الطلاب في أربعة فصول. ما هو المتوسط الحسابي لعدد الطلاب في الفصل الواحد؟<br/><svg viewBox='0 0 200 130' class='w-full max-w-xs mx-auto bg-white rounded-lg p-2'><line x1='30' y1='100' x2='190' y2='100' stroke='#1e293b' stroke-width='2'/><line x1='30' y1='10' x2='30' y2='100' stroke='#1e293b' stroke-width='2'/><rect x='40' y='60' width='25' height='40' fill='#3b82f6'/><rect x='80' y='30' width='25' height='70' fill='#3b82f6'/><rect x='120' y='50' width='25' height='50' fill='#3b82f6'/><rect x='160' y='40' width='25' height='60' fill='#3b82f6'/><text x='52.5' y='115' font-size='8' text-anchor='middle'>أ</text><text x='92.5' y='115' font-size='8' text-anchor='middle'>ب</text><text x='132.5' y='115' font-size='8' text-anchor='middle'>ج</text><text x='172.5' y='115' font-size='8' text-anchor='middle'>د</text><text x='52.5' y='55' font-size='8' text-anchor='middle'>\\( 20 \\)</text><text x='92.5' y='25' font-size='8' text-anchor='middle'>\\( 35 \\)</text><text x='132.5' y='45' font-size='8' text-anchor='middle'>\\( 25 \\)</text><text x='172.5' y='35' font-size='8' text-anchor='middle'>\\( 30 \\)</text></svg>",
+        "question": "يمثل التمثيل بالأعمدة أدناه عدد الطلاب في أربعة فصول. ما هو المتوسط الحسابي لعدد الطلاب في الفصل الواحد؟",
         "options": [
           "\\( 25 \\)",
           "\\( 27.5 \\)",
@@ -8786,7 +8786,7 @@
     "difficulty": "hard",
     "content": {
       "en": {
-        "question": "The figure below shows the graph of the quadratic function \\( f(x) = -x^2 + 4x + 5 \\). What are the x-intercepts (roots) of this function?<br/><svg viewBox='0 0 200 150' class='w-full max-w-xs mx-auto bg-white rounded-lg p-2'><line x1='10' y1='110' x2='190' y2='110' stroke='#1e293b' stroke-width='1.5'/><line x1='50' y1='10' x2='50' y2='140' stroke='#1e293b' stroke-width='1.5'/><path d='M 20,135 Q 90,10 160,135' fill='none' stroke='#2563eb' stroke-width='2.5'/><circle cx='30' cy='110' r='3' fill='#ef4444'/><circle cx='150' cy='110' r='3' fill='#ef4444'/><text x='25' y='125' font-size='9'>\\( -1 \\)</text><text x='150' y='125' font-size='9'>\\( 5 \\)</text><text x='55' y='25' font-size='9'>\\( (2,9) \\)</text></svg>",
+        "question": "The figure below shows the graph of the quadratic function \\( f(x) = -x^2 + 4x + 5 \\). What are the x-intercepts (roots) of this function?",
         "options": [
           "\\( x = -1 \\) and \\( x = 5 \\)",
           "\\( x = 1 \\) and \\( x = -5 \\)",
@@ -8797,7 +8797,7 @@
         "explanation": "Set \\( -x^2 + 4x + 5 = 0 \\implies x^2 - 4x - 5 = 0 \\implies (x - 5)(x + 1) = 0 \\). Thus, the roots are \\( x = 5 \\) and \\( x = -1 \\)."
       },
       "ar": {
-        "question": "يبين الشكل أدناه التمثيل البياني للدالة التربيعية \\( f(x) = -x^2 + 4x + 5 \\). ما هي المقاطع السينية (الأصفار) لهذه الدالة؟<br/><svg viewBox='0 0 200 150' class='w-full max-w-xs mx-auto bg-white rounded-lg p-2'><line x1='10' y1='110' x2='190' y2='110' stroke='#1e293b' stroke-width='1.5'/><line x1='50' y1='10' x2='50' y2='140' stroke='#1e293b' stroke-width='1.5'/><path d='M 20,135 Q 90,10 160,135' fill='none' stroke='#2563eb' stroke-width='2.5'/><circle cx='30' cy='110' r='3' fill='#ef4444'/><circle cx='150' cy='110' r='3' fill='#ef4444'/><text x='25' y='125' font-size='9'>\\( -1 \\)</text><text x='150' y='125' font-size='9'>\\( 5 \\)</text><text x='55' y='25' font-size='9'>\\( (2,9) \\)</text></svg>",
+        "question": "يبين الشكل أدناه التمثيل البياني للدالة التربيعية \\( f(x) = -x^2 + 4x + 5 \\). ما هي المقاطع السينية (الأصفار) لهذه الدالة؟",
         "options": [
           "\\( x = -1 \\) و \\( x = 5 \\)",
           "\\( x = 1 \\) و \\( x = -5 \\)",
@@ -9248,7 +9248,7 @@
     "difficulty": "hard",
     "content": {
       "en": {
-        "question": "Find the \\( x \\)-intercepts of the quadratic function graphed below, given by equation \\( f(x) = x^2 - 4 \\). <svg viewBox='0 0 200 160' class='w-full max-w-xs mx-auto bg-white rounded-lg p-2'><line x1='20' y1='100' x2='180' y2='100' stroke='#64748b' stroke-width='2'/><line x1='100' y1='10' x2='100' y2='150' stroke='#64748b' stroke-width='2'/><path d='M 40,20 Q 100,180 160,20' fill='none' stroke='#2563eb' stroke-width='3'/><circle cx='60' cy='100' r='4' fill='#dc2626'/><circle cx='140' cy='100' r='4' fill='#dc2626'/><text x='55' y='118' font-size='10' fill='#0f172a'>-2</text><text x='140' y='118' font-size='10' fill='#0f172a'>2</text><text x='105' y='145' font-size='10' fill='#0f172a'>-4</text></svg>",
+        "question": "Find the \\( x \\)-intercepts of the quadratic function graphed below, given by equation \\( f(x) = x^2 - 4 \\). ",
         "options": [
           "\\( x = \\pm 2 \\)",
           "\\( x = \\pm 4 \\)",
@@ -9259,7 +9259,7 @@
         "explanation": "Setting \\( x^2 - 4 = 0 \\implies x^2 = 4 \\implies x = \\pm 2 \\)."
       },
       "ar": {
-        "question": "أوجد المقطعين \\( x \\) للدالة التربيعية الموضحة في الرسم البياني أدناه، الممثلة بالمعادلة \\( f(x) = x^2 - 4 \\). <svg viewBox='0 0 200 160' class='w-full max-w-xs mx-auto bg-white rounded-lg p-2'><line x1='20' y1='100' x2='180' y2='100' stroke='#64748b' stroke-width='2'/><line x1='100' y1='10' x2='100' y2='150' stroke='#64748b' stroke-width='2'/><path d='M 40,20 Q 100,180 160,20' fill='none' stroke='#2563eb' stroke-width='3'/><circle cx='60' cy='100' r='4' fill='#dc2626'/><circle cx='140' cy='100' r='4' fill='#dc2626'/><text x='55' y='118' font-size='10' fill='#0f172a'>-2</text><text x='140' y='118' font-size='10' fill='#0f172a'>2</text><text x='105' y='145' font-size='10' fill='#0f172a'>-4</text></svg>",
+        "question": "أوجد المقطعين \\( x \\) للدالة التربيعية الموضحة في الرسم البياني أدناه، الممثلة بالمعادلة \\( f(x) = x^2 - 4 \\). ",
         "options": [
           "\\( x = \\pm 2 \\)",
           "\\( x = \\pm 4 \\)",
@@ -9479,7 +9479,7 @@
     "difficulty": "medium",
     "content": {
       "en": {
-        "question": "Which inequality is represented on the number line shown below? <svg viewBox='0 0 220 60' class='w-full max-w-xs mx-auto bg-white rounded-lg p-2'><line x1='20' y1='30' x2='200' y2='30' stroke='#0f172a' stroke-width='2'/><line x1='60' y1='25' x2='60' y2='35' stroke='#0f172a'/><line x1='110' y1='25' x2='110' y2='35' stroke='#0f172a'/><line x1='160' y1='25' x2='160' y2='35' stroke='#0f172a'/><text x='60' y='50' font-size='10' text-anchor='middle'>-2</text><text x='110' y='50' font-size='10' text-anchor='middle'>-1</text><text x='160' y='50' font-size='10' text-anchor='middle'>0</text><line x1='110' y1='30' x2='195' y2='30' stroke='#2563eb' stroke-width='4'/><polygon points='195,25 205,30 195,35' fill='#2563eb'/><circle cx='110' cy='30' r='5' fill='#2563eb'/></svg>",
+        "question": "Which inequality is represented on the number line shown below? ",
         "options": [
           "\\( x > -1 \\)",
           "\\( x \\ge -1 \\)",
@@ -9490,7 +9490,7 @@
         "explanation": "Since the circle at \\( -1 \\) is solid/closed and the line goes to the right, the inequality is \\( x \\ge -1 \\)."
       },
       "ar": {
-        "question": "أي متباينة ممثلة على خط الأعداد الموضح أدناه؟ <svg viewBox='0 0 220 60' class='w-full max-w-xs mx-auto bg-white rounded-lg p-2'><line x1='20' y1='30' x2='200' y2='30' stroke='#0f172a' stroke-width='2'/><line x1='60' y1='25' x2='60' y2='35' stroke='#0f172a'/><line x1='110' y1='25' x2='110' y2='35' stroke='#0f172a'/><line x1='160' y1='25' x2='160' y2='35' stroke='#0f172a'/><text x='60' y='50' font-size='10' text-anchor='middle'>-2</text><text x='110' y='50' font-size='10' text-anchor='middle'>-1</text><text x='160' y='50' font-size='10' text-anchor='middle'>0</text><line x1='110' y1='30' x2='195' y2='30' stroke='#2563eb' stroke-width='4'/><polygon points='195,25 205,30 195,35' fill='#2563eb'/><circle cx='110' cy='30' r='5' fill='#2563eb'/></svg>",
+        "question": "أي متباينة ممثلة على خط الأعداد الموضح أدناه؟ ",
         "options": [
           "\\( x > -1 \\)",
           "\\( x \\ge -1 \\)",

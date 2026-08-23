@@ -78,7 +78,7 @@
     "difficulty": "medium",
     "content": {
       "en": {
-        "question": "The figure below shows the net of a cube with symbols on its faces:\n<svg viewBox=\"0 0 240 180\" class=\"w-full max-w-xs mx-auto bg-white rounded-lg p-2\"><rect x=\"70\" y=\"10\" width=\"40\" height=\"40\" fill=\"#f1f5f9\" stroke=\"#334155\" stroke-width=\"2\"/><text x=\"90\" y=\"35\" font-size=\"20\" text-anchor=\"middle\" fill=\"#0f172a\">A</text><rect x=\"20\" y=\"50\" width=\"40\" height=\"40\" fill=\"#f1f5f9\" stroke=\"#334155\" stroke-width=\"2\"/><text x=\"40\" y=\"75\" font-size=\"20\" text-anchor=\"middle\" fill=\"#0f172a\">B</text><rect x=\"70\" y=\"50\" width=\"40\" height=\"40\" fill=\"#f1f5f9\" stroke=\"#334155\" stroke-width=\"2\"/><text x=\"90\" y=\"75\" font-size=\"20\" text-anchor=\"middle\" fill=\"#2563eb\">★</text><rect x=\"120\" y=\"50\" width=\"40\" height=\"40\" fill=\"#f1f5f9\" stroke=\"#334155\" stroke-width=\"2\"/><text x=\"140\" y=\"75\" font-size=\"20\" text-anchor=\"middle\" fill=\"#0f172a\">C</text><rect x=\"170\" y=\"50\" width=\"40\" height=\"40\" fill=\"#f1f5f9\" stroke=\"#334155\" stroke-width=\"2\"/><text x=\"190\" y=\"75\" font-size=\"20\" text-anchor=\"middle\" fill=\"#0f172a\">D</text><rect x=\"70\" y=\"90\" width=\"40\" height=\"40\" fill=\"#f1f5f9\" stroke=\"#334155\" stroke-width=\"2\"/><text x=\"90\" y=\"115\" font-size=\"20\" text-anchor=\"middle\" fill=\"#0f172a\">E</text></svg>\nWhen folded into a 3D cube, which letter face will be directly opposite to the star symbol \\( \\text{★} \\)?",
+        "question": "The figure below shows the net of a cube with symbols on its faces:\n\nWhen folded into a 3D cube, which letter face will be directly opposite to the star symbol \\( \\text{★} \\)?",
         "options": [
           "\\( \\text{A} \\)",
           "\\( \\text{B} \\)",
@@ -90,7 +90,7 @@
         "explanation": "In the horizontal row of four faces \\( (\\text{B}, \\text{★}, \\text{C}, \\text{D}) \\), faces separated by one square are opposite to each other. Therefore, face \\( \\text{B} \\) is opposite to face \\( \\text{C} \\), and face \\( \\text{★} \\) is opposite to face \\( \\text{D} \\)."
       },
       "ar": {
-        "question": "يُظهر الشكل أدناه مخططًا لمكعب يحتوي على رموز على أوجيهه:\n<svg viewBox=\"0 0 240 180\" class=\"w-full max-w-xs mx-auto bg-white rounded-lg p-2\"><rect x=\"70\" y=\"10\" width=\"40\" height=\"40\" fill=\"#f1f5f9\" stroke=\"#334155\" stroke-width=\"2\"/><text x=\"90\" y=\"35\" font-size=\"20\" text-anchor=\"middle\" fill=\"#0f172a\">A</text><rect x=\"20\" y=\"50\" width=\"40\" height=\"40\" fill=\"#f1f5f9\" stroke=\"#334155\" stroke-width=\"2\"/><text x=\"40\" y=\"75\" font-size=\"20\" text-anchor=\"middle\" fill=\"#0f172a\">B</text><rect x=\"70\" y=\"50\" width=\"40\" height=\"40\" fill=\"#f1f5f9\" stroke=\"#334155\" stroke-width=\"2\"/><text x=\"90\" y=\"75\" font-size=\"20\" text-anchor=\"middle\" fill=\"#2563eb\">★</text><rect x=\"120\" y=\"50\" width=\"40\" height=\"40\" fill=\"#f1f5f9\" stroke=\"#334155\" stroke-width=\"2\"/><text x=\"140\" y=\"75\" font-size=\"20\" text-anchor=\"middle\" fill=\"#0f172a\">C</text><rect x=\"170\" y=\"50\" width=\"40\" height=\"40\" fill=\"#f1f5f9\" stroke=\"#334155\" stroke-width=\"2\"/><text x=\"190\" y=\"75\" font-size=\"20\" text-anchor=\"middle\" fill=\"#0f172a\">D</text><rect x=\"70\" y=\"90\" width=\"40\" height=\"40\" fill=\"#f1f5f9\" stroke=\"#334155\" stroke-width=\"2\"/><text x=\"90\" y=\"115\" font-size=\"20\" text-anchor=\"middle\" fill=\"#0f172a\">E</text></svg>\nعند طي المخطط لتكوين مكعب ثلاثي الأبعاد، أي وجه يحمل حرفًا سيكون مقابلًا تمامًا لرمز النجمة \\( \\text{★} \\)؟",
+        "question": "يُظهر الشكل أدناه مخططًا لمكعب يحتوي على رموز على أوجيهه:\n\nعند طي المخطط لتكوين مكعب ثلاثي الأبعاد، أي وجه يحمل حرفًا سيكون مقابلًا تمامًا لرمز النجمة \\( \\text{★} \\)؟",
         "options": [
           "\\( \\text{A} \\)",
           "\\( \\text{B} \\)",
@@ -218,7 +218,7 @@
     "difficulty": "medium",
     "content": {
       "en": {
-        "question": "Consider two balanced scales shown below:\n<svg viewBox=\"0 0 300 120\" class=\"w-full max-w-xs mx-auto bg-white rounded-lg p-2\"><g transform=\"translate(10,0)\"><line x1=\"20\" y1=\"70\" x2=\"120\" y2=\"70\" stroke=\"#334155\" stroke-width=\"3\"/><polygon points=\"70,70 60,95 80,95\" fill=\"#64748b\"/><circle cx=\"40\" cy=\"60\" r=\"8\" fill=\"#3b82f6\"/><circle cx=\"55\" cy=\"60\" r=\"8\" fill=\"#3b82f6\"/><polygon points=\"85,52 77,68 93,68\" fill=\"#ef4444\"/><rect x=\"100\" y=\"52\" width=\"14\" height=\"14\" fill=\"#22c55e\"/></g><g transform=\"translate(150,0)\"><line x1=\"20\" y1=\"70\" x2=\"120\" y2=\"70\" stroke=\"#334155\" stroke-width=\"3\"/><polygon points=\"70,70 60,95 80,95\" fill=\"#64748b\"/><rect x=\"35\" y=\"52\" width=\"14\" height=\"14\" fill=\"#22c55e\"/><polygon points=\"80,52 72,68 88,68\" fill=\"#ef4444\"/><polygon points=\"95,52 87,68 103,68\" fill=\"#ef4444\"/><polygon points=\"110,52 102,68 118,68\" fill=\"#ef4444\"/></g></svg>\nThe first scale balances \\( 2 \\) circles and \\( 1 \\) triangle with \\( 1 \\) square and \\( 1 \\) circle. The second scale balances \\( 1 \\) square with \\( 3 \\) triangles. How many triangles are needed to balance \\( 1 \\) circle?",
+        "question": "Consider two balanced scales shown below:\n\nThe first scale balances \\( 2 \\) circles and \\( 1 \\) triangle with \\( 1 \\) square and \\( 1 \\) circle. The second scale balances \\( 1 \\) square with \\( 3 \\) triangles. How many triangles are needed to balance \\( 1 \\) circle?",
         "options": [
           "\\( 1 \\)",
           "\\( 2 \\)",
@@ -230,7 +230,7 @@
         "explanation": "From scale 1: \\( 2C + T = S + C \\implies C + T = S \\). From scale 2: \\( S = 3T \\). Substituting \\( S \\) gives \\( C + T = 3T \\implies C = 2T \\). Thus, \\( 2 \\) triangles balance \\( 1 \\) circle."
       },
       "ar": {
-        "question": "تأمل الميزانين المتوازنين الموضَحين أدناه:\n<svg viewBox=\"0 0 300 120\" class=\"w-full max-w-xs mx-auto bg-white rounded-lg p-2\"><g transform=\"translate(10,0)\"><line x1=\"20\" y1=\"70\" x2=\"120\" y2=\"70\" stroke=\"#334155\" stroke-width=\"3\"/><polygon points=\"70,70 60,95 80,95\" fill=\"#64748b\"/><circle cx=\"40\" cy=\"60\" r=\"8\" fill=\"#3b82f6\"/><circle cx=\"55\" cy=\"60\" r=\"8\" fill=\"#3b82f6\"/><polygon points=\"85,52 77,68 93,68\" fill=\"#ef4444\"/><rect x=\"100\" y=\"52\" width=\"14\" height=\"14\" fill=\"#22c55e\"/></g><g transform=\"translate(150,0)\"><line x1=\"20\" y1=\"70\" x2=\"120\" y2=\"70\" stroke=\"#334155\" stroke-width=\"3\"/><polygon points=\"70,70 60,95 80,95\" fill=\"#64748b\"/><rect x=\"35\" y=\"52\" width=\"14\" height=\"14\" fill=\"#22c55e\"/><polygon points=\"80,52 72,68 88,68\" fill=\"#ef4444\"/><polygon points=\"95,52 87,68 103,68\" fill=\"#ef4444\"/><polygon points=\"110,52 102,68 118,68\" fill=\"#ef4444\"/></g></svg>\nالميزان الأول يوازن \\( 2 \\) دائرتين و\\( 1 \\) مثلث مع \\( 1 \\) مربع و\\( 1 \\) دائرة. الميزان الثاني يوازن \\( 1 \\) مربع مع \\( 3 \\) مثلثات. كم مثلثًا يلزم لموازنة \\( 1 \\) دائرة؟",
+        "question": "تأمل الميزانين المتوازنين الموضَحين أدناه:\n\nالميزان الأول يوازن \\( 2 \\) دائرتين و\\( 1 \\) مثلث مع \\( 1 \\) مربع و\\( 1 \\) دائرة. الميزان الثاني يوازن \\( 1 \\) مربع مع \\( 3 \\) مثلثات. كم مثلثًا يلزم لموازنة \\( 1 \\) دائرة؟",
         "options": [
           "\\( 1 \\)",
           "\\( 2 \\)",
@@ -288,7 +288,7 @@
     "difficulty": "medium",
     "content": {
       "en": {
-        "question": "In the \\( 4 \\times 4 \\) grid below, three squares are currently shaded:\n<svg viewBox=\"0 0 180 180\" class=\"w-full max-w-xs mx-auto bg-white rounded-lg p-2\"><rect x=\"10\" y=\"10\" width=\"160\" height=\"160\" fill=\"none\" stroke=\"#334155\" stroke-width=\"2\"/><line x1=\"50\" y1=\"10\" x2=\"50\" y2=\"170\" stroke=\"#cbd5e1\"/><line x1=\"90\" y1=\"10\" x2=\"90\" y2=\"170\" stroke=\"#cbd5e1\"/><line x1=\"130\" y1=\"10\" x2=\"130\" y2=\"170\" stroke=\"#cbd5e1\"/><line x1=\"10\" y1=\"50\" x2=\"170\" y2=\"50\" stroke=\"#cbd5e1\"/><line x1=\"10\" y1=\"90\" x2=\"170\" y2=\"90\" stroke=\"#cbd5e1\"/><line x1=\"10\" y1=\"130\" x2=\"170\" y2=\"130\" stroke=\"#cbd5e1\"/><rect x=\"10\" y=\"10\" width=\"40\" height=\"40\" fill=\"#3b82f6\"/><rect x=\"90\" y=\"50\" width=\"40\" height=\"40\" fill=\"#3b82f6\"/><rect x=\"130\" y=\"130\" width=\"40\" height=\"40\" fill=\"#3b82f6\"/><line x1=\"10\" y1=\"10\" x2=\"170\" y2=\"170\" stroke=\"#ef4444\" stroke-width=\"2\" stroke-dasharray=\"4\"/></svg>\nWhat is the minimum number of additional squares that must be shaded so that the resulting grid design is symmetric with respect to the dashed diagonal line?",
+        "question": "In the \\( 4 \\times 4 \\) grid below, three squares are currently shaded:\n\nWhat is the minimum number of additional squares that must be shaded so that the resulting grid design is symmetric with respect to the dashed diagonal line?",
         "options": [
           "\\( 1 \\)",
           "\\( 2 \\)",
@@ -300,7 +300,7 @@
         "explanation": "Label cells by \\( (\\text{row}, \\text{column}) \\) from top-left \\( (1,1) \\). The shaded cells are \\( (1,1) \\), \\( (2,3) \\), and \\( (4,4) \\). Reflection across the main diagonal maps \\( (r,c) \\) to \\( (c,r) \\). \\( (1,1) \\) maps to \\( (1,1) \\) and \\( (4,4) \\) maps to \\( (4,4) \\). \\( (2,3) \\) reflects to \\( (3,2) \\), which is currently unshaded. Thus, only \\( 1 \\) additional square at \\( (3,2) \\) needs to be shaded."
       },
       "ar": {
-        "question": "في الشبكة \\( 4 \\times 4 \\) أدناه، ثلاثة مربعات مظللة حاليًا:\n<svg viewBox=\"0 0 180 180\" class=\"w-full max-w-xs mx-auto bg-white rounded-lg p-2\"><rect x=\"10\" y=\"10\" width=\"160\" height=\"160\" fill=\"none\" stroke=\"#334155\" stroke-width=\"2\"/><line x1=\"50\" y1=\"10\" x2=\"50\" y2=\"170\" stroke=\"#cbd5e1\"/><line x1=\"90\" y1=\"10\" x2=\"90\" y2=\"170\" stroke=\"#cbd5e1\"/><line x1=\"130\" y1=\"10\" x2=\"130\" y2=\"170\" stroke=\"#cbd5e1\"/><line x1=\"10\" y1=\"50\" x2=\"170\" y2=\"50\" stroke=\"#cbd5e1\"/><line x1=\"10\" y1=\"90\" x2=\"170\" y2=\"90\" stroke=\"#cbd5e1\"/><line x1=\"10\" y1=\"130\" x2=\"170\" y2=\"130\" stroke=\"#cbd5e1\"/><rect x=\"10\" y=\"10\" width=\"40\" height=\"40\" fill=\"#3b82f6\"/><rect x=\"90\" y=\"50\" width=\"40\" height=\"40\" fill=\"#3b82f6\"/><rect x=\"130\" y=\"130\" width=\"40\" height=\"40\" fill=\"#3b82f6\"/><line x1=\"10\" y1=\"10\" x2=\"170\" y2=\"170\" stroke=\"#ef4444\" stroke-width=\"2\" stroke-dasharray=\"4\"/></svg>\nما هو أقل عدد من المربعات إضافية التي يجب تظليلها بحيث يصبح تصميم الشبكة متماثلاً بالنسبة للخط القطري المنقط؟",
+        "question": "في الشبكة \\( 4 \\times 4 \\) أدناه، ثلاثة مربعات مظللة حاليًا:\n\nما هو أقل عدد من المربعات إضافية التي يجب تظليلها بحيث يصبح تصميم الشبكة متماثلاً بالنسبة للخط القطري المنقط؟",
         "options": [
           "\\( 1 \\)",
           "\\( 2 \\)",
@@ -428,7 +428,7 @@
     "difficulty": "medium",
     "content": {
       "en": {
-        "question": "The bar chart below displays the scores obtained by \\( 20 \\) students on a \\( 5 \\)-point quiz:\n<svg viewBox=\"0 0 220 160\" class=\"w-full max-w-xs mx-auto bg-white rounded-lg p-2\"><line x1=\"30\" y1=\"130\" x2=\"200\" y2=\"130\" stroke=\"#334155\" stroke-width=\"2\"/><line x1=\"30\" y1=\"10\" x2=\"30\" y2=\"130\" stroke=\"#334155\" stroke-width=\"2\"/><rect x=\"45\" y=\"106\" width=\"20\" height=\"24\" fill=\"#3b82f6\"/><text x=\"55\" y=\"145\" font-size=\"12\" text-anchor=\"middle\">1</text><rect x=\"75\" y=\"70\" width=\"20\" height=\"60\" fill=\"#3b82f6\"/><text x=\"85\" y=\"145\" font-size=\"12\" text-anchor=\"middle\">2</text><rect x=\"105\" y=\"34\" width=\"20\" height=\"96\" fill=\"#3b82f6\"/><text x=\"115\" y=\"145\" font-size=\"12\" text-anchor=\"middle\">3</text><rect x=\"135\" y=\"94\" width=\"20\" height=\"36\" fill=\"#3b82f6\"/><text x=\"145\" y=\"145\" font-size=\"12\" text-anchor=\"middle\">4</text><rect x=\"165\" y=\"106\" width=\"20\" height=\"24\" fill=\"#3b82f6\"/><text x=\"175\" y=\"145\" font-size=\"12\" text-anchor=\"middle\">5</text><text x=\"20\" y=\"110\" font-size=\"10\" text-anchor=\"end\">2</text><text x=\"20\" y=\"74\" font-size=\"10\" text-anchor=\"end\">5</text><text x=\"20\" y=\"38\" font-size=\"10\" text-anchor=\"end\">8</text></svg>\nWhat is the median score of the class?",
+        "question": "The bar chart below displays the scores obtained by \\( 20 \\) students on a \\( 5 \\)-point quiz:\n\nWhat is the median score of the class?",
         "options": [
           "\\( 2 \\)",
           "\\( 2.5 \\)",
@@ -440,7 +440,7 @@
         "explanation": "The counts for scores \\( 1, 2, 3, 4, 5 \\) are \\( 2, 5, 8, 3, 2 \\) respectively (totaling \\( 20 \\) students). Cumulative totals are: score \\( 1 \\) (up to 2nd student), score \\( 2 \\) (up to 7th student), score \\( 3 \\) (up to 15th student). Both the \\( 10\\text{th} \\) and \\( 11\\text{th} \\) students scored \\( 3 \\). Thus, the median score is \\( 3 \\)."
       },
       "ar": {
-        "question": "يعرض الرسم البياني الشريطي أدناه الدرجات التي حصل عليها \\( 20 \\) طالبًا في اختبار من \\( 5 \\) درجات:\n<svg viewBox=\"0 0 220 160\" class=\"w-full max-w-xs mx-auto bg-white rounded-lg p-2\"><line x1=\"30\" y1=\"130\" x2=\"200\" y2=\"130\" stroke=\"#334155\" stroke-width=\"2\"/><line x1=\"30\" y1=\"10\" x2=\"30\" y2=\"130\" stroke=\"#334155\" stroke-width=\"2\"/><rect x=\"45\" y=\"106\" width=\"20\" height=\"24\" fill=\"#3b82f6\"/><text x=\"55\" y=\"145\" font-size=\"12\" text-anchor=\"middle\">1</text><rect x=\"75\" y=\"70\" width=\"20\" height=\"60\" fill=\"#3b82f6\"/><text x=\"85\" y=\"145\" font-size=\"12\" text-anchor=\"middle\">2</text><rect x=\"105\" y=\"34\" width=\"20\" height=\"96\" fill=\"#3b82f6\"/><text x=\"115\" y=\"145\" font-size=\"12\" text-anchor=\"middle\">3</text><rect x=\"135\" y=\"94\" width=\"20\" height=\"36\" fill=\"#3b82f6\"/><text x=\"145\" y=\"145\" font-size=\"12\" text-anchor=\"middle\">4</text><rect x=\"165\" y=\"106\" width=\"20\" height=\"24\" fill=\"#3b82f6\"/><text x=\"175\" y=\"145\" font-size=\"12\" text-anchor=\"middle\">5</text><text x=\"20\" y=\"110\" font-size=\"10\" text-anchor=\"end\">2</text><text x=\"20\" y=\"74\" font-size=\"10\" text-anchor=\"end\">5</text><text x=\"20\" y=\"38\" font-size=\"10\" text-anchor=\"end\">8</text></svg>\nما هو الوسيط لدرجات الطلاب؟",
+        "question": "يعرض الرسم البياني الشريطي أدناه الدرجات التي حصل عليها \\( 20 \\) طالبًا في اختبار من \\( 5 \\) درجات:\n\nما هو الوسيط لدرجات الطلاب؟",
         "options": [
           "\\( 2 \\)",
           "\\( 2.5 \\)",
@@ -673,7 +673,7 @@
     "difficulty": "easy",
     "content": {
       "en": {
-        "question": "A structure built from identical unit cubes is shown in the isometric view below (with no hidden missing cubes underneath):\n<svg viewBox=\"0 0 200 180\" class=\"w-full max-w-xs mx-auto bg-white rounded-lg p-2\"><g transform=\"translate(100,30)\"><polygon points=\"0,0 20,10 0,20 -20,10\" fill=\"#94a3b8\" stroke=\"#334155\"/><polygon points=\"-20,10 0,20 0,40 -20,30\" fill=\"#64748b\" stroke=\"#334155\"/><polygon points=\"0,20 20,10 20,30 0,40\" fill=\"#cbd5e1\" stroke=\"#334155\"/></g><g transform=\"translate(80,40)\"><polygon points=\"0,0 20,10 0,20 -20,10\" fill=\"#94a3b8\" stroke=\"#334155\"/><polygon points=\"-20,10 0,20 0,40 -20,30\" fill=\"#64748b\" stroke=\"#334155\"/><polygon points=\"0,20 20,10 20,30 0,40\" fill=\"#cbd5e1\" stroke=\"#334155\"/></g><g transform=\"translate(120,40)\"><polygon points=\"0,0 20,10 0,20 -20,10\" fill=\"#94a3b8\" stroke=\"#334155\"/><polygon points=\"-20,10 0,20 0,40 -20,30\" fill=\"#64748b\" stroke=\"#334155\"/><polygon points=\"0,20 20,10 20,30 0,40\" fill=\"#cbd5e1\" stroke=\"#334155\"/></g><g transform=\"translate(100,50)\"><polygon points=\"0,0 20,10 0,20 -20,10\" fill=\"#94a3b8\" stroke=\"#334155\"/><polygon points=\"-20,10 0,20 0,40 -20,30\" fill=\"#64748b\" stroke=\"#334155\"/><polygon points=\"0,20 20,10 20,30 0,40\" fill=\"#cbd5e1\" stroke=\"#334155\"/></g><g transform=\"translate(100,10)\"><polygon points=\"0,0 20,10 0,20 -20,10\" fill=\"#94a3b8\" stroke=\"#334155\"/><polygon points=\"-20,10 0,20 0,40 -20,30\" fill=\"#64748b\" stroke=\"#334155\"/><polygon points=\"0,20 20,10 20,30 0,40\" fill=\"#cbd5e1\" stroke=\"#334155\"/></g></svg>\nIf the structure has a base layer of \\( 4 \\) cubes arranged in a diamond shape and \\( 1 \\) cube placed centrally on top, how many total unit cubes were used to build it?",
+        "question": "A structure built from identical unit cubes is shown in the isometric view below (with no hidden missing cubes underneath):\n\nIf the structure has a base layer of \\( 4 \\) cubes arranged in a diamond shape and \\( 1 \\) cube placed centrally on top, how many total unit cubes were used to build it?",
         "options": [
           "\\( 4 \\)",
           "\\( 5 \\)",
@@ -685,7 +685,7 @@
         "explanation": "The base layer consists of \\( 4 \\) unit cubes. The top layer consists of \\( 1 \\) central cube resting on top. Total number of unit cubes \\( = 4 + 1 = 5 \\)."
       },
       "ar": {
-        "question": "مجسم تم بناؤه من مكعبات وحدة متطابقة كما هو موضح في المنظور أدناه (بدون وجود مكعبات مفقودة مخفية تحتها):\n<svg viewBox=\"0 0 200 180\" class=\"w-full max-w-xs mx-auto bg-white rounded-lg p-2\"><g transform=\"translate(100,30)\"><polygon points=\"0,0 20,10 0,20 -20,10\" fill=\"#94a3b8\" stroke=\"#334155\"/><polygon points=\"-20,10 0,20 0,40 -20,30\" fill=\"#64748b\" stroke=\"#334155\"/><polygon points=\"0,20 20,10 20,30 0,40\" fill=\"#cbd5e1\" stroke=\"#334155\"/></g><g transform=\"translate(80,40)\"><polygon points=\"0,0 20,10 0,20 -20,10\" fill=\"#94a3b8\" stroke=\"#334155\"/><polygon points=\"-20,10 0,20 0,40 -20,30\" fill=\"#64748b\" stroke=\"#334155\"/><polygon points=\"0,20 20,10 20,30 0,40\" fill=\"#cbd5e1\" stroke=\"#334155\"/></g><g transform=\"translate(120,40)\"><polygon points=\"0,0 20,10 0,20 -20,10\" fill=\"#94a3b8\" stroke=\"#334155\"/><polygon points=\"-20,10 0,20 0,40 -20,30\" fill=\"#64748b\" stroke=\"#334155\"/><polygon points=\"0,20 20,10 20,30 0,40\" fill=\"#cbd5e1\" stroke=\"#334155\"/></g><g transform=\"translate(100,50)\"><polygon points=\"0,0 20,10 0,20 -20,10\" fill=\"#94a3b8\" stroke=\"#334155\"/><polygon points=\"-20,10 0,20 0,40 -20,30\" fill=\"#64748b\" stroke=\"#334155\"/><polygon points=\"0,20 20,10 20,30 0,40\" fill=\"#cbd5e1\" stroke=\"#334155\"/></g><g transform=\"translate(100,10)\"><polygon points=\"0,0 20,10 0,20 -20,10\" fill=\"#94a3b8\" stroke=\"#334155\"/><polygon points=\"-20,10 0,20 0,40 -20,30\" fill=\"#64748b\" stroke=\"#334155\"/><polygon points=\"0,20 20,10 20,30 0,40\" fill=\"#cbd5e1\" stroke=\"#334155\"/></g></svg>\nإذا كان المجسم يتكون من طبقة سفلية بها \\( 4 \\) مكعبات مرتبة على شكل معين، ومكعب واحد \\( 1 \\) موضوع في المنتصف في الأعلى، فكم عدد مكعبات الوحدة الإجمالي المستخدم لبنائه؟",
+        "question": "مجسم تم بناؤه من مكعبات وحدة متطابقة كما هو موضح في المنظور أدناه (بدون وجود مكعبات مفقودة مخفية تحتها):\n\nإذا كان المجسم يتكون من طبقة سفلية بها \\( 4 \\) مكعبات مرتبة على شكل معين، ومكعب واحد \\( 1 \\) موضوع في المنتصف في الأعلى، فكم عدد مكعبات الوحدة الإجمالي المستخدم لبنائه؟",
         "options": [
           "\\( 4 \\)",
           "\\( 5 \\)",
@@ -778,7 +778,7 @@
     "difficulty": "hard",
     "content": {
       "en": {
-        "question": "A cube with edge length \\( 3 \\) cm is assembled from \\( 27 \\) unit cubes of side length \\( 1 \\) cm. The center unit cube and the \\( 6 \\) face-center unit cubes are removed. How many unit squares form the total surface area of the resulting solid?<svg viewBox=\"0 0 200 200\" class=\"w-full max-w-xs mx-auto bg-white rounded-lg p-2\"><rect x=\"50\" y=\"50\" width=\"100\" height=\"100\" fill=\"#e2e8f0\" stroke=\"#1e293b\" stroke-width=\"2\"/><rect x=\"83.3\" y=\"83.3\" width=\"33.3\" height=\"33.3\" fill=\"#475569\" stroke=\"#0f172a\" stroke-width=\"1\"/><line x1=\"83.3\" y1=\"50\" x2=\"83.3\" y2=\"150\" stroke=\"#94a3b8\" stroke-dasharray=\"2,2\"/><line x1=\"116.6\" y1=\"50\" x2=\"116.6\" y2=\"150\" stroke=\"#94a3b8\" stroke-dasharray=\"2,2\"/><line x1=\"50\" y1=\"83.3\" x2=\"150\" y2=\"83.3\" stroke=\"#94a3b8\" stroke-dasharray=\"2,2\"/><line x1=\"50\" y1=\"116.6\" x2=\"150\" y2=\"116.6\" stroke=\"#94a3b8\" stroke-dasharray=\"2,2\"/></svg>",
+        "question": "A cube with edge length \\( 3 \\) cm is assembled from \\( 27 \\) unit cubes of side length \\( 1 \\) cm. The center unit cube and the \\( 6 \\) face-center unit cubes are removed. How many unit squares form the total surface area of the resulting solid?",
         "options": [
           "\\( 54 \\)",
           "\\( 66 \\)",
@@ -790,7 +790,7 @@
         "explanation": "The original cube has \\( 6 \\) faces, each made of \\( 9 \\) unit squares, giving an initial surface area of \\( 6 \\times 9 = 54 \\) unit squares. When a face-center cube is removed from each of the \\( 6 \\) outer faces, \\( 1 \\) outer unit square is lost per face (total \\( 6 \\) lost). However, removing that cube exposes \\( 4 \\) inner side faces going into the tunnel. Since all \\( 6 \\) face-center cubes and the center cube are removed, a central cross-shaped tunnel network is created. For each of the \\( 6 \\) face holes, we lose \\( 1 \\) surface square and gain \\( 4 \\) interior wall squares. Thus, net change per face hole is \\( +3 \\) unit squares. Total surface area \\( = 54 + 6 \\times (-1 + 4) = 54 + 18 = 72 \\) unit squares."
       },
       "ar": {
-        "question": "تم تجميع مكعب طول ضلعه \\( 3 \\) سم من \\( 27 \\) مكعب وحدة طول ضلع كل منها \\( 1 \\) سم. تم إزالة مكعب الوحدة المركزي والمكعبات الـ \\( 6 \\) الموجودة في مراكز أوجه المكعب الكبير. كم عدد مربعات الوحدة التي تشكل المساحة السطحية الكلية للمجسم الناتج؟<svg viewBox=\"0 0 200 200\" class=\"w-full max-w-xs mx-auto bg-white rounded-lg p-2\"><rect x=\"50\" y=\"50\" width=\"100\" height=\"100\" fill=\"#e2e8f0\" stroke=\"#1e293b\" stroke-width=\"2\"/><rect x=\"83.3\" y=\"83.3\" width=\"33.3\" height=\"33.3\" fill=\"#475569\" stroke=\"#0f172a\" stroke-width=\"1\"/><line x1=\"83.3\" y1=\"50\" x2=\"83.3\" y2=\"150\" stroke=\"#94a3b8\" stroke-dasharray=\"2,2\"/><line x1=\"116.6\" y1=\"50\" x2=\"116.6\" y2=\"150\" stroke=\"#94a3b8\" stroke-dasharray=\"2,2\"/><line x1=\"50\" y1=\"83.3\" x2=\"150\" y2=\"83.3\" stroke=\"#94a3b8\" stroke-dasharray=\"2,2\"/><line x1=\"50\" y1=\"116.6\" x2=\"150\" y2=\"116.6\" stroke=\"#94a3b8\" stroke-dasharray=\"2,2\"/></svg>",
+        "question": "تم تجميع مكعب طول ضلعه \\( 3 \\) سم من \\( 27 \\) مكعب وحدة طول ضلع كل منها \\( 1 \\) سم. تم إزالة مكعب الوحدة المركزي والمكعبات الـ \\( 6 \\) الموجودة في مراكز أوجه المكعب الكبير. كم عدد مربعات الوحدة التي تشكل المساحة السطحية الكلية للمجسم الناتج؟",
         "options": [
           "\\( 54 \\)",
           "\\( 66 \\)",
@@ -918,7 +918,7 @@
     "difficulty": "medium",
     "content": {
       "en": {
-        "question": "A ant moves on a grid starting at \\( (0,0) \\) to \\( (3,3) \\). The ant can only move \\( 1 \\) unit Up or \\( 1 \\) unit Right at each step, but it CANNOT pass through the point \\( (2,1) \\). How many valid paths are there?<svg viewBox=\"0 0 200 200\" class=\"w-full max-w-xs mx-auto bg-white rounded-lg p-2\"><line x1=\"40\" y1=\"160\" x2=\"160\" y2=\"160\" stroke=\"#64748b\" stroke-width=\"2\"/><line x1=\"40\" y1=\"120\" x2=\"160\" y2=\"120\" stroke=\"#64748b\" stroke-width=\"1\"/><line x1=\"40\" y1=\"80\" x2=\"160\" y2=\"80\" stroke=\"#64748b\" stroke-width=\"1\"/><line x1=\"40\" y1=\"40\" x2=\"160\" y2=\"40\" stroke=\"#64748b\" stroke-width=\"2\"/><line x1=\"40\" y1=\"40\" x2=\"40\" y2=\"160\" stroke=\"#64748b\" stroke-width=\"2\"/><line x1=\"80\" y1=\"40\" x2=\"80\" y2=\"160\" stroke=\"#64748b\" stroke-width=\"1\"/><line x1=\"120\" y1=\"40\" x2=\"120\" y2=\"160\" stroke=\"#64748b\" stroke-width=\"1\"/><line x1=\"160\" y1=\"40\" x2=\"160\" y2=\"160\" stroke=\"#64748b\" stroke-width=\"2\"/><circle cx=\"120\" cy=\"120\" r=\"5\" fill=\"#ef4444\"/><text x=\"25\" y=\"175\" font-size=\"10\">(0,0)</text><text x=\"160\" y=\"30\" font-size=\"10\">(3,3)</text><text x=\"125\" y=\"132\" font-size=\"10\" fill=\"#ef4444\">(2,1)</text></svg>",
+        "question": "A ant moves on a grid starting at \\( (0,0) \\) to \\( (3,3) \\). The ant can only move \\( 1 \\) unit Up or \\( 1 \\) unit Right at each step, but it CANNOT pass through the point \\( (2,1) \\). How many valid paths are there?",
         "options": [
           "\\( 11 \\)",
           "\\( 12 \\)",
@@ -930,7 +930,7 @@
         "explanation": "Total paths from \\( (0,0) \\) to \\( (3,3) \\) with \\( 3 \\) Rights and \\( 3 \\) Ups is \\( \\binom{3+3}{3} = \\binom{6}{3} = 20 \\).\nNow count paths passing through \\( (2,1) \\):\n1) Paths from \\( (0,0) \\) to \\( (2,1) \\): \\( 2 \\) Rights, \\( 1 \\) Up \\( \\implies \\binom{2+1}{1} = 3 \\) paths.\n2) Paths from \\( (2,1) \\) to \\( (3,3) \\): \\( 1 \\) Right, \\( 2 \\) Ups \\( \\implies \\binom{1+2}{1} = 3 \\) paths.\nSo, paths through \\( (2,1) \\) equal \\( 3 \\times 3 = 9 \\).\nThus, valid paths avoiding \\( (2,1) \\) are \\( 20 - 9 = 11 \\)."
       },
       "ar": {
-        "question": "تتحرك نملة على شبكة تبدأ من النقطة \\( (0,0) \\) إلى النقطة \\( (3,3) \\). يمكن للنملة التحرك فقط وحدة واحدة إلى الأعلى أو وحدة واحدة إلى اليمين في كل خطوة، ولكن يُحظر عليها المرور بالنقطة \\( (2,1) \\). كم عدد المسارات الصالحة؟<svg viewBox=\"0 0 200 200\" class=\"w-full max-w-xs mx-auto bg-white rounded-lg p-2\"><line x1=\"40\" y1=\"160\" x2=\"160\" y2=\"160\" stroke=\"#64748b\" stroke-width=\"2\"/><line x1=\"40\" y1=\"120\" x2=\"160\" y2=\"120\" stroke=\"#64748b\" stroke-width=\"1\"/><line x1=\"40\" y1=\"80\" x2=\"160\" y2=\"80\" stroke=\"#64748b\" stroke-width=\"1\"/><line x1=\"40\" y1=\"40\" x2=\"160\" y2=\"40\" stroke=\"#64748b\" stroke-width=\"2\"/><line x1=\"40\" y1=\"40\" x2=\"40\" y2=\"160\" stroke=\"#64748b\" stroke-width=\"2\"/><line x1=\"80\" y1=\"40\" x2=\"80\" y2=\"160\" stroke=\"#64748b\" stroke-width=\"1\"/><line x1=\"120\" y1=\"40\" x2=\"120\" y2=\"160\" stroke=\"#64748b\" stroke-width=\"1\"/><line x1=\"160\" y1=\"40\" x2=\"160\" y2=\"160\" stroke=\"#64748b\" stroke-width=\"2\"/><circle cx=\"120\" cy=\"120\" r=\"5\" fill=\"#ef4444\"/><text x=\"25\" y=\"175\" font-size=\"10\">(0,0)</text><text x=\"160\" y=\"30\" font-size=\"10\">(3,3)</text><text x=\"125\" y=\"132\" font-size=\"10\" fill=\"#ef4444\">(2,1)</text></svg>",
+        "question": "تتحرك نملة على شبكة تبدأ من النقطة \\( (0,0) \\) إلى النقطة \\( (3,3) \\). يمكن للنملة التحرك فقط وحدة واحدة إلى الأعلى أو وحدة واحدة إلى اليمين في كل خطوة، ولكن يُحظر عليها المرور بالنقطة \\( (2,1) \\). كم عدد المسارات الصالحة؟",
         "options": [
           "\\( 11 \\)",
           "\\( 12 \\)",
@@ -1163,7 +1163,7 @@
     "difficulty": "hard",
     "content": {
       "en": {
-        "question": "A net of a cube is shown with numbers \\( 1, 2, 3, 4, 5, 6 \\) on its faces. When folded into a cube, the product of numbers on opposite faces is calculated. What is the sum of the three products of opposite faces?<svg viewBox=\"0 0 200 160\" class=\"w-full max-w-xs mx-auto bg-white rounded-lg p-2\"><rect x=\"70\" y=\"10\" width=\"35\" height=\"35\" fill=\"#f8fafc\" stroke=\"#1e293b\" stroke-width=\"1.5\"/><text x=\"83\" y=\"32\" font-size=\"14\">1</text><rect x=\"35\" y=\"45\" width=\"35\" height=\"35\" fill=\"#f8fafc\" stroke=\"#1e293b\" stroke-width=\"1.5\"/><text x=\"48\" y=\"67\" font-size=\"14\">2</text><rect x=\"70\" y=\"45\" width=\"35\" height=\"35\" fill=\"#f8fafc\" stroke=\"#1e293b\" stroke-width=\"1.5\"/><text x=\"83\" y=\"67\" font-size=\"14\">3</text><rect x=\"105\" y=\"45\" width=\"35\" height=\"35\" fill=\"#f8fafc\" stroke=\"#1e293b\" stroke-width=\"1.5\"/><text x=\"118\" y=\"67\" font-size=\"14\">4</text><rect x=\"140\" y=\"45\" width=\"35\" height=\"35\" fill=\"#f8fafc\" stroke=\"#1e293b\" stroke-width=\"1.5\"/><text x=\"153\" y=\"67\" font-size=\"14\">5</text><rect x=\"70\" y=\"80\" width=\"35\" height=\"35\" fill=\"#f8fafc\" stroke=\"#1e293b\" stroke-width=\"1.5\"/><text x=\"83\" y=\"102\" font-size=\"14\">6</text></svg>",
+        "question": "A net of a cube is shown with numbers \\( 1, 2, 3, 4, 5, 6 \\) on its faces. When folded into a cube, the product of numbers on opposite faces is calculated. What is the sum of the three products of opposite faces?",
         "options": [
           "\\( 29 \\)",
           "\\( 31 \\)",
@@ -1175,7 +1175,7 @@
         "explanation": "Let's analyze the given cube net:\n- Face \\( 1 \\) (top extension) folds opposite to Face \\( 6 \\) (bottom extension).\n- Face \\( 2 \\) folds opposite to Face \\( 4 \\).\n- Face \\( 3 \\) folds opposite to Face \\( 5 \\).\nLet's calculate the products of opposite face pairs:\nPair 1: \\( 1 \\times 6 = 6 \\)\nPair 2: \\( 2 \\times 4 = 8 \\)\nPair 3: \\( 3 \\times 5 = 15 \\)\nThe sum of these three products is \\( 6 + 8 + 15 = 29 \\)."
       },
       "ar": {
-        "question": "يُظهر الشكل شبكة مكعب بأرقام \\( 1, 2, 3, 4, 5, 6 \\) على أوجهه. عند طي الشبكة لتكوين مكعب، يتم حساب حاصل ضرب الأعداد على الأوجه المتقابلة. ما هو مجموع نواتج الضرب الثلاثة للأوجه المتقابلة؟<svg viewBox=\"0 0 200 160\" class=\"w-full max-w-xs mx-auto bg-white rounded-lg p-2\"><rect x=\"70\" y=\"10\" width=\"35\" height=\"35\" fill=\"#f8fafc\" stroke=\"#1e293b\" stroke-width=\"1.5\"/><text x=\"83\" y=\"32\" font-size=\"14\">1</text><rect x=\"35\" y=\"45\" width=\"35\" height=\"35\" fill=\"#f8fafc\" stroke=\"#1e293b\" stroke-width=\"1.5\"/><text x=\"48\" y=\"67\" font-size=\"14\">2</text><rect x=\"70\" y=\"45\" width=\"35\" height=\"35\" fill=\"#f8fafc\" stroke=\"#1e293b\" stroke-width=\"1.5\"/><text x=\"83\" y=\"67\" font-size=\"14\">3</text><rect x=\"105\" y=\"45\" width=\"35\" height=\"35\" fill=\"#f8fafc\" stroke=\"#1e293b\" stroke-width=\"1.5\"/><text x=\"118\" y=\"67\" font-size=\"14\">4</text><rect x=\"140\" y=\"45\" width=\"35\" height=\"35\" fill=\"#f8fafc\" stroke=\"#1e293b\" stroke-width=\"1.5\"/><text x=\"153\" y=\"67\" font-size=\"14\">5</text><rect x=\"70\" y=\"80\" width=\"35\" height=\"35\" fill=\"#f8fafc\" stroke=\"#1e293b\" stroke-width=\"1.5\"/><text x=\"83\" y=\"102\" font-size=\"14\">6</text></svg>",
+        "question": "يُظهر الشكل شبكة مكعب بأرقام \\( 1, 2, 3, 4, 5, 6 \\) على أوجهه. عند طي الشبكة لتكوين مكعب، يتم حساب حاصل ضرب الأعداد على الأوجه المتقابلة. ما هو مجموع نواتج الضرب الثلاثة للأوجه المتقابلة؟",
         "options": [
           "\\( 29 \\)",
           "\\( 31 \\)",
@@ -1513,7 +1513,7 @@
     "difficulty": "medium",
     "content": {
       "en": {
-        "question": "The net shown below is folded to form a standard die where the sum of numbers on opposite faces is always \\( 7 \\). Which number is on the face opposite to the face numbered \\( 3 \\)?<div class='my-4'><svg viewBox='0 0 200 150' class='w-full max-w-xs mx-auto bg-slate-50 rounded-lg p-2 border border-slate-300'><rect x='70' y='10' width='30' height='30' fill='white' stroke='#1e293b' stroke-width='2'/><text x='85' y='30' font-size='16' text-anchor='middle'>1</text><rect x='40' y='40' width='30' height='30' fill='white' stroke='#1e293b' stroke-width='2'/><text x='55' y='60' font-size='16' text-anchor='middle'>2</text><rect x='70' y='40' width='30' height='30' fill='white' stroke='#1e293b' stroke-width='2'/><text x='85' y='60' font-size='16' text-anchor='middle'>3</text><rect x='100' y='40' width='30' height='30' fill='white' stroke='#1e293b' stroke-width='2'/><text x='115' y='60' font-size='16' text-anchor='middle'>4</text><rect x='130' y='40' width='30' height='30' fill='white' stroke='#1e293b' stroke-width='2'/><text x='145' y='60' font-size='16' text-anchor='middle'>5</text><rect x='70' y='70' width='30' height='30' fill='white' stroke='#1e293b' stroke-width='2'/><text x='85' y='90' font-size='16' text-anchor='middle'>6</text></svg></div>",
+        "question": "The net shown below is folded to form a standard die where the sum of numbers on opposite faces is always \\( 7 \\). Which number is on the face opposite to the face numbered \\( 3 \\)?<div class='my-4'></div>",
         "options": [
           "\\( 1 \\)",
           "\\( 2 \\)",
@@ -1525,7 +1525,7 @@
         "explanation": "When folding the T-like net: Face \\( 1 \\) and Face \\( 6 \\) fold to be opposite each other. Face \\( 2 \\) and Face \\( 4 \\) fold to be opposite each other. Face \\( 3 \\) and Face \\( 5 \\) fold to be opposite each other. Therefore, the face opposite to \\( 3 \\) is \\( 5 \\)."
       },
       "ar": {
-        "question": "تم طي الشبكة المبينة أدناه لتشكيل نرد قياسي حيث يكون مجموع العددين على الوجهين المتقابلين دائماً \\( 7 \\). ما هو العدد الموجود على الوجه المقابل للوجه الذي يحمل الرقم \\( 3 \\)؟<div class='my-4'><svg viewBox='0 0 200 150' class='w-full max-w-xs mx-auto bg-slate-50 rounded-lg p-2 border border-slate-300'><rect x='70' y='10' width='30' height='30' fill='white' stroke='#1e293b' stroke-width='2'/><text x='85' y='30' font-size='16' text-anchor='middle'>1</text><rect x='40' y='40' width='30' height='30' fill='white' stroke='#1e293b' stroke-width='2'/><text x='55' y='60' font-size='16' text-anchor='middle'>2</text><rect x='70' y='40' width='30' height='30' fill='white' stroke='#1e293b' stroke-width='2'/><text x='85' y='60' font-size='16' text-anchor='middle'>3</text><rect x='100' y='40' width='30' height='30' fill='white' stroke='#1e293b' stroke-width='2'/><text x='115' y='60' font-size='16' text-anchor='middle'>4</text><rect x='130' y='40' width='30' height='30' fill='white' stroke='#1e293b' stroke-width='2'/><text x='145' y='60' font-size='16' text-anchor='middle'>5</text><rect x='70' y='70' width='30' height='30' fill='white' stroke='#1e293b' stroke-width='2'/><text x='85' y='90' font-size='16' text-anchor='middle'>6</text></svg></div>",
+        "question": "تم طي الشبكة المبينة أدناه لتشكيل نرد قياسي حيث يكون مجموع العددين على الوجهين المتقابلين دائماً \\( 7 \\). ما هو العدد الموجود على الوجه المقابل للوجه الذي يحمل الرقم \\( 3 \\)؟<div class='my-4'></div>",
         "options": [
           "\\( 1 \\)",
           "\\( 2 \\)",
@@ -1723,7 +1723,7 @@
     "difficulty": "medium",
     "content": {
       "en": {
-        "question": "A \\( 4 \\times 4 \\) grid has two opposite corner squares removed as shown. What is the maximum number of non-overlapping \\( 1 \\times 2 \\) dominoes that can be placed on the remaining squares?<div class='my-4'><svg viewBox='0 0 160 160' class='w-full max-w-xs mx-auto bg-slate-50 rounded-lg p-2 border border-slate-300'><rect x='40' y='0' width='40' height='40' fill='#cbd5e1' stroke='#1e293b'/><rect x='80' y='0' width='40' height='40' fill='#cbd5e1' stroke='#1e293b'/><rect x='120' y='0' width='40' height='40' fill='#cbd5e1' stroke='#1e293b'/><rect x='0' y='40' width='40' height='40' fill='#cbd5e1' stroke='#1e293b'/><rect x='40' y='40' width='40' height='40' fill='#cbd5e1' stroke='#1e293b'/><rect x='80' y='40' width='40' height='40' fill='#cbd5e1' stroke='#1e293b'/><rect x='120' y='40' width='40' height='40' fill='#cbd5e1' stroke='#1e293b'/><rect x='0' y='80' width='40' height='40' fill='#cbd5e1' stroke='#1e293b'/><rect x='40' y='80' width='40' height='40' fill='#cbd5e1' stroke='#1e293b'/><rect x='80' y='80' width='40' height='40' fill='#cbd5e1' stroke='#1e293b'/><rect x='120' y='80' width='40' height='40' fill='#cbd5e1' stroke='#1e293b'/><rect x='0' y='120' width='40' height='40' fill='#cbd5e1' stroke='#1e293b'/><rect x='40' y='120' width='40' height='40' fill='#cbd5e1' stroke='#1e293b'/><rect x='80' y='120' width='40' height='40' fill='#cbd5e1' stroke='#1e293b'/></svg></div>",
+        "question": "A \\( 4 \\times 4 \\) grid has two opposite corner squares removed as shown. What is the maximum number of non-overlapping \\( 1 \\times 2 \\) dominoes that can be placed on the remaining squares?<div class='my-4'></div>",
         "options": [
           "\\( 4 \\)",
           "\\( 5 \\)",
@@ -1735,7 +1735,7 @@
         "explanation": "Color the original \\( 4 \\times 4 \\) grid like a chessboard with \\( 8 \\) black and \\( 8 \\) white squares. Two opposite corner squares have the same color (say, black). Removing them leaves \\( 6 \\) black squares and \\( 8 \\) white squares (total \\( 14 \\) squares). Each \\( 1 \\times 2 \\) domino covers exactly \\( 1 \\) black square and \\( 1 \\) white square. Therefore, at most \\( 6 \\) dominoes can be placed without overlap."
       },
       "ar": {
-        "question": "شبكة \\( 4 \\times 4 \\) تم إزالة مربعين متقابلين عند الزاويتين منها كما هو موضح. ما هو أقصى عدد من أحجار الدومينو \\( 1 \\times 2 \\) غير المتداخلة التي يمكن وضعها على المربعات المتبقية؟<div class='my-4'><svg viewBox='0 0 160 160' class='w-full max-w-xs mx-auto bg-slate-50 rounded-lg p-2 border border-slate-300'><rect x='40' y='0' width='40' height='40' fill='#cbd5e1' stroke='#1e293b'/><rect x='80' y='0' width='40' height='40' fill='#cbd5e1' stroke='#1e293b'/><rect x='120' y='0' width='40' height='40' fill='#cbd5e1' stroke='#1e293b'/><rect x='0' y='40' width='40' height='40' fill='#cbd5e1' stroke='#1e293b'/><rect x='40' y='40' width='40' height='40' fill='#cbd5e1' stroke='#1e293b'/><rect x='80' y='40' width='40' height='40' fill='#cbd5e1' stroke='#1e293b'/><rect x='120' y='40' width='40' height='40' fill='#cbd5e1' stroke='#1e293b'/><rect x='0' y='80' width='40' height='40' fill='#cbd5e1' stroke='#1e293b'/><rect x='40' y='80' width='40' height='40' fill='#cbd5e1' stroke='#1e293b'/><rect x='80' y='80' width='40' height='40' fill='#cbd5e1' stroke='#1e293b'/><rect x='120' y='80' width='40' height='40' fill='#cbd5e1' stroke='#1e293b'/><rect x='0' y='120' width='40' height='40' fill='#cbd5e1' stroke='#1e293b'/><rect x='40' y='120' width='40' height='40' fill='#cbd5e1' stroke='#1e293b'/><rect x='80' y='120' width='40' height='40' fill='#cbd5e1' stroke='#1e293b'/></svg></div>",
+        "question": "شبكة \\( 4 \\times 4 \\) تم إزالة مربعين متقابلين عند الزاويتين منها كما هو موضح. ما هو أقصى عدد من أحجار الدومينو \\( 1 \\times 2 \\) غير المتداخلة التي يمكن وضعها على المربعات المتبقية؟<div class='my-4'></div>",
         "options": [
           "\\( 4 \\)",
           "\\( 5 \\)",
@@ -1863,7 +1863,7 @@
     "difficulty": "medium",
     "content": {
       "en": {
-        "question": "Four interlocking gears \\( A, B, C, D \\) are connected in a row. Gear \\( A \\) has \\( 12 \\) teeth, gear \\( B \\) has \\( 24 \\) teeth, gear \\( C \\) has \\( 8 \\) teeth, and gear \\( D \\) has \\( 16 \\) teeth. If gear \\( A \\) rotates clockwise by \\( 2 \\) full revolutions, how many full revolutions does gear \\( D \\) make and in which direction?<div class='my-4'><svg viewBox='0 0 300 80' class='w-full max-w-xs mx-auto bg-slate-50 rounded-lg p-2 border border-slate-300'><circle cx='30' cy='40' r='20' fill='#94a3b8' stroke='#1e293b' stroke-width='2'/><text x='30' y='45' font-size='12' text-anchor='middle'>A</text><circle cx='80' cy='40' r='30' fill='#cbd5e1' stroke='#1e293b' stroke-width='2'/><text x='80' y='45' font-size='12' text-anchor='middle'>B</text><circle cx='125' cy='40' r='15' fill='#94a3b8' stroke='#1e293b' stroke-width='2'/><text x='125' y='45' font-size='12' text-anchor='middle'>C</text><circle cx='165' cy='40' r='25' fill='#cbd5e1' stroke='#1e293b' stroke-width='2'/><text x='165' y='45' font-size='12' text-anchor='middle'>D</text></svg></div>",
+        "question": "Four interlocking gears \\( A, B, C, D \\) are connected in a row. Gear \\( A \\) has \\( 12 \\) teeth, gear \\( B \\) has \\( 24 \\) teeth, gear \\( C \\) has \\( 8 \\) teeth, and gear \\( D \\) has \\( 16 \\) teeth. If gear \\( A \\) rotates clockwise by \\( 2 \\) full revolutions, how many full revolutions does gear \\( D \\) make and in which direction?<div class='my-4'></div>",
         "options": [
           "\\( 1.5 \\) revolutions counter-clockwise",
           "\\( 1.5 \\) revolutions clockwise",
@@ -1875,7 +1875,7 @@
         "explanation": "Total teeth turned by gear A = \\( 2 \\times 12 = 24 \\) teeth. Since all gears are interlocked, gear D also turns by \\( 24 \\) teeth. Number of revolutions for gear D = \\( 24 / 16 = 1.5 \\) revolutions. For direction: A is clockwise \\( \\rightarrow \\) B is counter-clockwise \\( \\rightarrow \\) C is clockwise \\( \\rightarrow \\) D is counter-clockwise. Thus, D makes \\( 1.5 \\) revolutions counter-clockwise."
       },
       "ar": {
-        "question": "أربعة تروس متداخلة \\( A, B, C, D \\) متصلة في خط مستقيم. الترس \\( A \\) به \\( 12 \\) سنّاً، و \\( B \\) به \\( 24 \\) سنّاً، و \\( C \\) به \\( 8 \\) أسنان، و \\( D \\) به \\( 16 \\) سنّاً. إذا دار الترس \\( A \\) مع عقارب الساعة بـ \\( 2 \\) دورة كاملة، فكم عدد الدورات التي يدورها الترس \\( D \\) وفي أي اتجاه؟<div class='my-4'><svg viewBox='0 0 300 80' class='w-full max-w-xs mx-auto bg-slate-50 rounded-lg p-2 border border-slate-300'><circle cx='30' cy='40' r='20' fill='#94a3b8' stroke='#1e293b' stroke-width='2'/><text x='30' y='45' font-size='12' text-anchor='middle'>A</text><circle cx='80' cy='40' r='30' fill='#cbd5e1' stroke='#1e293b' stroke-width='2'/><text x='80' y='45' font-size='12' text-anchor='middle'>B</text><circle cx='125' cy='40' r='15' fill='#94a3b8' stroke='#1e293b' stroke-width='2'/><text x='125' y='45' font-size='12' text-anchor='middle'>C</text><circle cx='165' cy='40' r='25' fill='#cbd5e1' stroke='#1e293b' stroke-width='2'/><text x='165' y='45' font-size='12' text-anchor='middle'>D</text></svg></div>",
+        "question": "أربعة تروس متداخلة \\( A, B, C, D \\) متصلة في خط مستقيم. الترس \\( A \\) به \\( 12 \\) سنّاً، و \\( B \\) به \\( 24 \\) سنّاً، و \\( C \\) به \\( 8 \\) أسنان، و \\( D \\) به \\( 16 \\) سنّاً. إذا دار الترس \\( A \\) مع عقارب الساعة بـ \\( 2 \\) دورة كاملة، فكم عدد الدورات التي يدورها الترس \\( D \\) وفي أي اتجاه؟<div class='my-4'></div>",
         "options": [
           "\\( 1.5 \\) دورة عكس عقارب الساعة",
           "\\( 1.5 \\) دورة مع عقارب الساعة",
@@ -2073,7 +2073,7 @@
     "difficulty": "medium",
     "content": {
       "en": {
-        "question": "Based on the two balanced scales shown below, how many spheres \\( (\\bigcirc) \\) are required to balance exactly one cube \\( (\\square) \\)?<div class='my-4'><svg viewBox='0 0 300 120' class='w-full max-w-xs mx-auto bg-slate-50 rounded-lg p-2 border border-slate-300'><line x1='30' y1='60' x2='110' y2='60' stroke='#1e293b' stroke-width='3'/><polygon points='70,60 65,80 75,80' fill='#1e293b'/><rect x='35' y='45' width='15' height='15' fill='#94a3b8' stroke='#1e293b'/><path d='M 95 60 L 90 45 L 100 45 Z' fill='#cbd5e1' stroke='#1e293b'/><path d='M 105 60 L 100 45 L 110 45 Z' fill='#cbd5e1' stroke='#1e293b'/><line x1='190' y1='60' x2='270' y2='60' stroke='#1e293b' stroke-width='3'/><polygon points='230,60 225,80 235,80' fill='#1e293b'/><path d='M 200 60 L 195 45 L 205 45 Z' fill='#cbd5e1' stroke='#1e293b'/><circle cx='250' cy='52' r='6' fill='#64748b'/><circle cx='262' cy='52' r='6' fill='#64748b'/><circle cx='256' cy='40' r='6' fill='#64748b'/></svg></div>",
+        "question": "Based on the two balanced scales shown below, how many spheres \\( (\\bigcirc) \\) are required to balance exactly one cube \\( (\\square) \\)?<div class='my-4'></div>",
         "options": [
           "\\( 3 \\)",
           "\\( 4 \\)",
@@ -2085,7 +2085,7 @@
         "explanation": "From scale 1: \\( 1 \\text{ cube} = 2 \\text{ pyramids} \\).\nFrom scale 2: \\( 1 \\text{ pyramid} = 3 \\text{ spheres} \\).\nSubstituting scale 2 into scale 1 gives: \\( 1 \\text{ cube} = 2 \\times (3 \\text{ spheres}) = 6 \\text{ spheres} \\)."
       },
       "ar": {
-        "question": "استناداً إلى الميزانين المتوازنين الموضحين أدناه، كم عدداً من الكرات \\( (\\bigcirc) \\) يلزم لموازنة مكعب واحد \\( (\\square) \\) تماماً؟<div class='my-4'><svg viewBox='0 0 300 120' class='w-full max-w-xs mx-auto bg-slate-50 rounded-lg p-2 border border-slate-300'><line x1='30' y1='60' x2='110' y2='60' stroke='#1e293b' stroke-width='3'/><polygon points='70,60 65,80 75,80' fill='#1e293b'/><rect x='35' y='45' width='15' height='15' fill='#94a3b8' stroke='#1e293b'/><path d='M 95 60 L 90 45 L 100 45 Z' fill='#cbd5e1' stroke='#1e293b'/><path d='M 105 60 L 100 45 L 110 45 Z' fill='#cbd5e1' stroke='#1e293b'/><line x1='190' y1='60' x2='270' y2='60' stroke='#1e293b' stroke-width='3'/><polygon points='230,60 225,80 235,80' fill='#1e293b'/><path d='M 200 60 L 195 45 L 205 45 Z' fill='#cbd5e1' stroke='#1e293b'/><circle cx='250' cy='52' r='6' fill='#64748b'/><circle cx='262' cy='52' r='6' fill='#64748b'/><circle cx='256' cy='40' r='6' fill='#64748b'/></svg></div>",
+        "question": "استناداً إلى الميزانين المتوازنين الموضحين أدناه، كم عدداً من الكرات \\( (\\bigcirc) \\) يلزم لموازنة مكعب واحد \\( (\\square) \\) تماماً؟<div class='my-4'></div>",
         "options": [
           "\\( 3 \\)",
           "\\( 4 \\)",
@@ -2143,7 +2143,7 @@
     "difficulty": "medium",
     "content": {
       "en": {
-        "question": "A grid contains positive integers as shown below. You start at the top-left cell \\( (1) \\) and must reach the bottom-right cell \\( (3) \\), moving only right or down from cell to cell.<br/><svg viewBox='0 0 180 180' class='w-full max-w-xs mx-auto bg-white rounded-lg p-2'><rect x='5' y='5' width='50' height='50' fill='#f1f5f9' stroke='#334155' stroke-width='2'/><text x='30' y='35' text-anchor='middle' font-size='20' font-weight='bold'>1</text><rect x='65' y='5' width='50' height='50' fill='#f1f5f9' stroke='#334155' stroke-width='2'/><text x='90' y='35' text-anchor='middle' font-size='20' font-weight='bold'>3</text><rect x='125' y='5' width='50' height='50' fill='#f1f5f9' stroke='#334155' stroke-width='2'/><text x='150' y='35' text-anchor='middle' font-size='20' font-weight='bold'>2</text><rect x='5' y='65' width='50' height='50' fill='#f1f5f9' stroke='#334155' stroke-width='2'/><text x='30' y='95' text-anchor='middle' font-size='20' font-weight='bold'>4</text><rect x='65' y='65' width='50' height='50' fill='#f1f5f9' stroke='#334155' stroke-width='2'/><text x='90' y='95' text-anchor='middle' font-size='20' font-weight='bold'>2</text><rect x='125' y='65' width='50' height='50' fill='#f1f5f9' stroke='#334155' stroke-width='2'/><text x='150' y='95' text-anchor='middle' font-size='20' font-weight='bold'>5</text><rect x='5' y='125' width='50' height='50' fill='#f1f5f9' stroke='#334155' stroke-width='2'/><text x='30' y='155' text-anchor='middle' font-size='20' font-weight='bold'>2</text><rect x='65' y='125' width='50' height='50' fill='#f1f5f9' stroke='#334155' stroke-width='2'/><text x='90' y='155' text-anchor='middle' font-size='20' font-weight='bold'>6</text><rect x='125' y='125' width='50' height='50' fill='#f1f5f9' stroke='#334155' stroke-width='2'/><text x='150' y='155' text-anchor='middle' font-size='20' font-weight='bold'>3</text></svg><br/>What is the maximum possible product of the numbers along any valid path?",
+        "question": "A grid contains positive integers as shown below. You start at the top-left cell \\( (1) \\) and must reach the bottom-right cell \\( (3) \\), moving only right or down from cell to cell.<br/>What is the maximum possible product of the numbers along any valid path?",
         "options": [
           "\\( 90 \\)",
           "\\( 108 \\)",
@@ -2155,7 +2155,7 @@
         "explanation": "Let's track the maximum product to reach each cell \\( (r,c) \\):\nRow 1: \\( (1,1)=1 \\), \\( (1,2)=1 \\times 3 = 3 \\), \\( (1,3)=3 \\times 2 = 6 \\).\nRow 2:\n- \\( (2,1)=1 \\times 4 = 4 \\)\n- \\( (2,2) \\): from top \\( 3 \\times 2 = 6 \\); from left \\( 4 \\times 2 = 8 \\). Max = \\( 8 \\).\n- \\( (2,3) \\): from top \\( 6 \\times 5 = 30 \\); from left \\( 8 \\times 5 = 40 \\). Max = \\( 40 \\).\nRow 3:\n- \\( (3,1)=4 \\times 2 = 8 \\)\n- \\( (3,2) \\): from top \\( 8 \\times 6 = 48 \\); from left \\( 8 \\times 6 = 48 \\). Max = \\( 48 \\).\n- \\( (3,3) \\): from top \\( 40 \\times 3 = 120 \\); from left \\( 48 \\times 3 = 144 \\). Max = \\( 144 \\).\nThus, the maximum possible product is \\( 144 \\)."
       },
       "ar": {
-        "question": "تحتوي شبكة على أعداد صحيحة موجبة كما هو موضح أدناه. تبدأ من الخلية العلوية اليسرى \\( (1) \\) ويجب أن تصل إلى الخلية السفلية اليمنى \\( (3) \\)، مع التحرك فقط إلى اليمين أو إلى الأسفل من خلية إلى أخرى.<br/><svg viewBox='0 0 180 180' class='w-full max-w-xs mx-auto bg-white rounded-lg p-2'><rect x='5' y='5' width='50' height='50' fill='#f1f5f9' stroke='#334155' stroke-width='2'/><text x='30' y='35' text-anchor='middle' font-size='20' font-weight='bold'>1</text><rect x='65' y='5' width='50' height='50' fill='#f1f5f9' stroke='#334155' stroke-width='2'/><text x='90' y='35' text-anchor='middle' font-size='20' font-weight='bold'>3</text><rect x='125' y='5' width='50' height='50' fill='#f1f5f9' stroke='#334155' stroke-width='2'/><text x='150' y='35' text-anchor='middle' font-size='20' font-weight='bold'>2</text><rect x='5' y='65' width='50' height='50' fill='#f1f5f9' stroke='#334155' stroke-width='2'/><text x='30' y='95' text-anchor='middle' font-size='20' font-weight='bold'>4</text><rect x='65' y='65' width='50' height='50' fill='#f1f5f9' stroke='#334155' stroke-width='2'/><text x='90' y='95' text-anchor='middle' font-size='20' font-weight='bold'>2</text><rect x='125' y='65' width='50' height='50' fill='#f1f5f9' stroke='#334155' stroke-width='2'/><text x='150' y='95' text-anchor='middle' font-size='20' font-weight='bold'>5</text><rect x='5' y='125' width='50' height='50' fill='#f1f5f9' stroke='#334155' stroke-width='2'/><text x='30' y='155' text-anchor='middle' font-size='20' font-weight='bold'>2</text><rect x='65' y='125' width='50' height='50' fill='#f1f5f9' stroke='#334155' stroke-width='2'/><text x='90' y='155' text-anchor='middle' font-size='20' font-weight='bold'>6</text><rect x='125' y='125' width='50' height='50' fill='#f1f5f9' stroke='#334155' stroke-width='2'/><text x='150' y='155' text-anchor='middle' font-size='20' font-weight='bold'>3</text></svg><br/>ما هو أكبر حاصل ضرب ممكن للأعداد على طول أي مسار صحيح؟",
+        "question": "تحتوي شبكة على أعداد صحيحة موجبة كما هو موضح أدناه. تبدأ من الخلية العلوية اليسرى \\( (1) \\) ويجب أن تصل إلى الخلية السفلية اليمنى \\( (3) \\)، مع التحرك فقط إلى اليمين أو إلى الأسفل من خلية إلى أخرى.<br/>ما هو أكبر حاصل ضرب ممكن للأعداد على طول أي مسار صحيح؟",
         "options": [
           "\\( 90 \\)",
           "\\( 108 \\)",
@@ -2318,7 +2318,7 @@
     "difficulty": "easy",
     "content": {
       "en": {
-        "question": "The net shown below is folded along the grid lines to form a cube.<br/><svg viewBox='0 0 200 150' class='w-full max-w-xs mx-auto bg-white rounded-lg p-2'><rect x='50' y='10' width='35' height='35' fill='#f8fafc' stroke='#334155' stroke-width='2'/><text x='67.5' y='32.5' text-anchor='middle' font-size='16' font-weight='bold'>1</text><rect x='15' y='45' width='35' height='35' fill='#f8fafc' stroke='#334155' stroke-width='2'/><text x='32.5' y='67.5' text-anchor='middle' font-size='16' font-weight='bold'>2</text><rect x='50' y='45' width='35' height='35' fill='#f8fafc' stroke='#334155' stroke-width='2'/><text x='67.5' y='67.5' text-anchor='middle' font-size='16' font-weight='bold'>3</text><rect x='85' y='45' width='35' height='35' fill='#f8fafc' stroke='#334155' stroke-width='2'/><text x='102.5' y='67.5' text-anchor='middle' font-size='16' font-weight='bold'>4</text><rect x='120' y='45' width='35' height='35' fill='#f8fafc' stroke='#334155' stroke-width='2'/><text x='137.5' y='67.5' text-anchor='middle' font-size='16' font-weight='bold'>5</text><rect x='50' y='80' width='35' height='35' fill='#f8fafc' stroke='#334155' stroke-width='2'/><text x='67.5' y='102.5' text-anchor='middle' font-size='16' font-weight='bold'>6</text></svg><br/>Which number will be on the face opposite to the face with the number \\( 4 \\)?",
+        "question": "The net shown below is folded along the grid lines to form a cube.<br/>Which number will be on the face opposite to the face with the number \\( 4 \\)?",
         "options": [
           "\\( 1 \\)",
           "\\( 2 \\)",
@@ -2330,7 +2330,7 @@
         "explanation": "Along the horizontal row of four faces \\( [2, 3, 4, 5] \\):\n- Face \\( 2 \\) is opposite to face \\( 4 \\).\n- Face \\( 3 \\) is opposite to face \\( 5 \\).\n- Top face \\( 1 \\) is opposite to bottom face \\( 6 \\).\nTherefore, the number opposite to \\( 4 \\) is \\( 2 \\)."
       },
       "ar": {
-        "question": "تم طي المخطط الموضح أدناه على طول خطوط الشبكة لتكوين مكعب.<br/><svg viewBox='0 0 200 150' class='w-full max-w-xs mx-auto bg-white rounded-lg p-2'><rect x='50' y='10' width='35' height='35' fill='#f8fafc' stroke='#334155' stroke-width='2'/><text x='67.5' y='32.5' text-anchor='middle' font-size='16' font-weight='bold'>1</text><rect x='15' y='45' width='35' height='35' fill='#f8fafc' stroke='#334155' stroke-width='2'/><text x='32.5' y='67.5' text-anchor='middle' font-size='16' font-weight='bold'>2</text><rect x='50' y='45' width='35' height='35' fill='#f8fafc' stroke='#334155' stroke-width='2'/><text x='67.5' y='67.5' text-anchor='middle' font-size='16' font-weight='bold'>3</text><rect x='85' y='45' width='35' height='35' fill='#f8fafc' stroke='#334155' stroke-width='2'/><text x='102.5' y='67.5' text-anchor='middle' font-size='16' font-weight='bold'>4</text><rect x='120' y='45' width='35' height='35' fill='#f8fafc' stroke='#334155' stroke-width='2'/><text x='137.5' y='67.5' text-anchor='middle' font-size='16' font-weight='bold'>5</text><rect x='50' y='80' width='35' height='35' fill='#f8fafc' stroke='#334155' stroke-width='2'/><text x='67.5' y='102.5' text-anchor='middle' font-size='16' font-weight='bold'>6</text></svg><br/>أي رقم سيكون على الوجه المقابل للوجه الذي يحمل الرقم \\( 4 \\)؟",
+        "question": "تم طي المخطط الموضح أدناه على طول خطوط الشبكة لتكوين مكعب.<br/>أي رقم سيكون على الوجه المقابل للوجه الذي يحمل الرقم \\( 4 \\)؟",
         "options": [
           "\\( 1 \\)",
           "\\( 2 \\)",
@@ -2458,7 +2458,7 @@
     "difficulty": "medium",
     "content": {
       "en": {
-        "question": "A \\( 4 \\times 4 \\) grid has \\( 5 \\) shaded squares as shown below.<br/><svg viewBox='0 0 160 160' class='w-full max-w-xs mx-auto bg-white rounded-lg p-2'><rect x='0' y='0' width='160' height='160' fill='none' stroke='#334155' stroke-width='2'/><path d='M40,0 V160 M80,0 V160 M120,0 V160 M0,40 H160 M0,80 H160 M0,120 H160' stroke='#cbd5e1' stroke-width='1.5'/><rect x='0' y='0' width='40' height='40' fill='#334155'/><rect x='120' y='0' width='40' height='40' fill='#334155'/><rect x='0' y='120' width='40' height='40' fill='#334155'/><rect x='40' y='40' width='40' height='40' fill='#334155'/><rect x='80' y='80' width='40' height='40' fill='#334155'/></svg><br/>What is the minimum number of additional squares that must be shaded so that the resulting grid has rotational symmetry of order \\( 4 \\) (i.e. looks unchanged after a \\( 90^\\circ \\) rotation)?",
+        "question": "A \\( 4 \\times 4 \\) grid has \\( 5 \\) shaded squares as shown below.<br/>What is the minimum number of additional squares that must be shaded so that the resulting grid has rotational symmetry of order \\( 4 \\) (i.e. looks unchanged after a \\( 90^\\circ \\) rotation)?",
         "options": [
           "\\( 2 \\)",
           "\\( 3 \\)",
@@ -2470,7 +2470,7 @@
         "explanation": "Under \\( 90^\\circ \\) rotations:\n- The four corner squares form one orbit. Currently, \\( 3 \\) corners are shaded, so we need \\( 1 \\) more corner square shaded to complete this orbit.\n- The four central squares form another orbit. Currently, \\( 2 \\) central squares are shaded, so we need \\( 2 \\) more central squares shaded to complete this orbit.\nAdding these required squares gives \\( 1 + 2 = 3 \\) additional squares in total."
       },
       "ar": {
-        "question": "شبكة بأبعاد \\( 4 \\times 4 \\) بها \\( 5 \\) مربعات مظللة كما هو موضح أدناه.<br/><svg viewBox='0 0 160 160' class='w-full max-w-xs mx-auto bg-white rounded-lg p-2'><rect x='0' y='0' width='160' height='160' fill='none' stroke='#334155' stroke-width='2'/><path d='M40,0 V160 M80,0 V160 M120,0 V160 M0,40 H160 M0,80 H160 M0,120 H160' stroke='#cbd5e1' stroke-width='1.5'/><rect x='0' y='0' width='40' height='40' fill='#334155'/><rect x='120' y='0' width='40' height='40' fill='#334155'/><rect x='0' y='120' width='40' height='40' fill='#334155'/><rect x='40' y='40' width='40' height='40' fill='#334155'/><rect x='80' y='80' width='40' height='40' fill='#334155'/></svg><br/>ما هو الحد الأدنى لعدد المربعات الإضافية التي يجب تظليلها لتصبح للشبكة الناتجة تماثل دوراني من الرتبة \\( 4 \\) (أي تبدو دون تغيير بعد دوران بنسبة \\( 90^\\circ \\))؟",
+        "question": "شبكة بأبعاد \\( 4 \\times 4 \\) بها \\( 5 \\) مربعات مظللة كما هو موضح أدناه.<br/>ما هو الحد الأدنى لعدد المربعات الإضافية التي يجب تظليلها لتصبح للشبكة الناتجة تماثل دوراني من الرتبة \\( 4 \\) (أي تبدو دون تغيير بعد دوران بنسبة \\( 90^\\circ \\))؟",
         "options": [
           "\\( 2 \\)",
           "\\( 3 \\)",
@@ -2563,7 +2563,7 @@
     "difficulty": "hard",
     "content": {
       "en": {
-        "question": "A digital clock shows time in \\( 24 \\)-hour format \\( \\text{HH:MM} \\), where \\( \\text{HH} \\in \\{00, \\dots, 23\\} \\) and \\( \\text{MM} \\in \\{00, \\dots, 59\\} \\).<br/><svg viewBox='0 0 200 80' class='w-full max-w-xs mx-auto bg-slate-900 rounded-lg p-2'><rect x='10' y='10' width='180' height='60' rx='8' fill='#0f172a' stroke='#38bdf8' stroke-width='2'/><text x='100' y='52' text-anchor='middle' font-family='monospace' font-size='36' fill='#38bdf8' font-weight='bold'>09:56</text></svg><br/>How many times in a single day does the sum of the four displayed digits equal \\( 20 \\)?",
+        "question": "A digital clock shows time in \\( 24 \\)-hour format \\( \\text{HH:MM} \\), where \\( \\text{HH} \\in \\{00, \\dots, 23\\} \\) and \\( \\text{MM} \\in \\{00, \\dots, 59\\} \\).<br/>How many times in a single day does the sum of the four displayed digits equal \\( 20 \\)?",
         "options": [
           "\\( 15 \\)",
           "\\( 20 \\)",
@@ -2575,7 +2575,7 @@
         "explanation": "Represent time as \\( h_1 h_2 : m_1 m_2 \\) with \\( h_1 h_2 + m_1 m_2 \\) digit sum equal to \\( 20 \\).\n\nCase 1: \\( h_1 = 0 \\)\nWe need \\( h_2 + m_1 + m_2 = 20 \\) where \\( m_1 \\le 5 \\) and \\( h_2, m_2 \\le 9 \\).\n- \\( m_1 = 2 \\implies h_2 + m_2 = 18 \\implies (9,9) \\) (1 time: 09:29)\n- \\( m_1 = 3 \\implies h_2 + m_2 = 17 \\implies (8,9), (9,8) \\) (2 times)\n- \\( m_1 = 4 \\implies h_2 + m_2 = 16 \\implies (7,9), (8,8), (9,7) \\) (3 times)\n- \\( m_1 = 5 \\implies h_2 + m_2 = 15 \\implies (6,9), (7,8), (8,7), (9,6) \\) (4 times)\nTotal for \\( h_1 = 0 \\) is \\( 1 + 2 + 3 + 4 = 10 \\).\n\nCase 2: \\( h_1 = 1 \\)\nWe need \\( h_2 + m_1 + m_2 = 19 \\).\n- \\( m_1 = 1 \\implies h_2 + m_2 = 18 \\implies (9,9) \\) (1 time)\n- \\( m_1 = 2 \\implies h_2 + m_2 = 17 \\implies (8,9), (9,8) \\) (2 times)\n- \\( m_1 = 3 \\implies h_2 + m_2 = 16 \\implies (7,9), (8,8), (9,7) \\) (3 times)\n- \\( m_1 = 4 \\implies h_2 + m_2 = 15 \\implies (6,9), (7,8), (8,7), (9,6) \\) (4 times)\n- \\( m_1 = 5 \\implies h_2 + m_2 = 14 \\implies (5,9), (6,8), (7,7), (8,6), (9,5) \\) (5 times)\nTotal for \\( h_1 = 1 \\) is \\( 1 + 2 + 3 + 4 + 5 = 15 \\).\n\nCase 3: \\( h_1 = 2 \\)\nHere \\( h_2 \\le 3 \\) and \\( m_1 \\le 5 \\), so maximum sum \\( h_2 + m_1 + m_2 \\le 3 + 5 + 9 = 17 \\), which cannot reach \\( 18 \\). So \\( 0 \\) times.\n\nGrand total = \\( 10 + 15 + 0 = 25 \\) times."
       },
       "ar": {
-        "question": "تعرض ساعة رقمية الوقت بنظام \\( 24 \\) ساعة بصيغة \\( \\text{HH:MM} \\)، حيث \\( \\text{HH} \\in \\{00, \\dots, 23\\} \\) و \\( \\text{MM} \\in \\{00, \\dots, 59\\} \\).<br/><svg viewBox='0 0 200 80' class='w-full max-w-xs mx-auto bg-slate-900 rounded-lg p-2'><rect x='10' y='10' width='180' height='60' rx='8' fill='#0f172a' stroke='#38bdf8' stroke-width='2'/><text x='100' y='52' text-anchor='middle' font-family='monospace' font-size='36' fill='#38bdf8' font-weight='bold'>09:56</text></svg><br/>كم مرة في اليوم الواحد يكون مجموع الأرقام الأربعة المعروضة مساوياً لـ \\( 20 \\)؟",
+        "question": "تعرض ساعة رقمية الوقت بنظام \\( 24 \\) ساعة بصيغة \\( \\text{HH:MM} \\)، حيث \\( \\text{HH} \\in \\{00, \\dots, 23\\} \\) و \\( \\text{MM} \\in \\{00, \\dots, 59\\} \\).<br/>كم مرة في اليوم الواحد يكون مجموع الأرقام الأربعة المعروضة مساوياً لـ \\( 20 \\)؟",
         "options": [
           "\\( 15 \\)",
           "\\( 20 \\)",
@@ -2843,7 +2843,7 @@
     "difficulty": "medium",
     "content": {
       "en": {
-        "question": "Two balance scales show balanced weights of geometric shapes as shown below. How many circles \\( (C) \\) are needed to balance \\( 1 \\) square \\( (S) \\)?\n<svg viewBox='0 0 300 120' class='w-full max-w-sm mx-auto bg-white rounded-lg p-2'><path d='M 20 60 L 80 60 M 50 60 L 50 90 M 30 90 L 70 90' stroke='#1e293b' stroke-width='3'/><rect x='25' y='42' width='16' height='16' fill='#3b82f6'/><rect x='43' y='42' width='16' height='16' fill='#3b82f6'/><polygon points='70,42 63,58 77,58' fill='#ef4444'/><circle cx='110' cy='50' r='6' fill='#10b981'/><circle cx='124' cy='50' r='6' fill='#10b981'/><circle cx='138' cy='50' r='6' fill='#10b981'/><circle cx='117' cy='36' r='6' fill='#10b981'/><circle cx='131' cy='36' r='6' fill='#10b981'/><path d='M 180 60 L 240 60 M 210 60 L 210 90 M 190 90 L 230 90' stroke='#1e293b' stroke-width='3'/><rect x='185' y='42' width='16' height='16' fill='#3b82f6'/><polygon points='225,42 218,58 232,58' fill='#ef4444'/><circle cx='245' cy='50' r='6' fill='#10b981'/></svg>",
+        "question": "Two balance scales show balanced weights of geometric shapes as shown below. How many circles \\( (C) \\) are needed to balance \\( 1 \\) square \\( (S) \\)?\n",
         "options": [
           "\\( 1 \\)",
           "\\( 2 \\)",
@@ -2855,7 +2855,7 @@
         "explanation": "From the second scale: \\( 1 \\text{ square } (S) = 1 \\text{ triangle } (T) + 1 \\text{ circle } (C) \\implies T = S - C \\). From the first scale: \\( 2S + T = 5C \\). Substitute \\( T \\): \\( 2S + (S - C) = 5C \n\\implies 3S = 6C \\implies S = 2C \\). Therefore, \\( 1 \\) square is balanced by \\( 2 \\) circles."
       },
       "ar": {
-        "question": "يوضح الميزانان أدناه حالتي اتزان لأشكال هندسية. كم دائرة \\( (C) \\) تلزم لموازنة مربع واحد \\( (S) \\)؟\n<svg viewBox='0 0 300 120' class='w-full max-w-sm mx-auto bg-white rounded-lg p-2'><path d='M 20 60 L 80 60 M 50 60 L 50 90 M 30 90 L 70 90' stroke='#1e293b' stroke-width='3'/><rect x='25' y='42' width='16' height='16' fill='#3b82f6'/><rect x='43' y='42' width='16' height='16' fill='#3b82f6'/><polygon points='70,42 63,58 77,58' fill='#ef4444'/><circle cx='110' cy='50' r='6' fill='#10b981'/><circle cx='124' cy='50' r='6' fill='#10b981'/><circle cx='138' cy='50' r='6' fill='#10b981'/><circle cx='117' cy='36' r='6' fill='#10b981'/><circle cx='131' cy='36' r='6' fill='#10b981'/><path d='M 180 60 L 240 60 M 210 60 L 210 90 M 190 90 L 230 90' stroke='#1e293b' stroke-width='3'/><rect x='185' y='42' width='16' height='16' fill='#3b82f6'/><polygon points='225,42 218,58 232,58' fill='#ef4444'/><circle cx='245' cy='50' r='6' fill='#10b981'/></svg>",
+        "question": "يوضح الميزانان أدناه حالتي اتزان لأشكال هندسية. كم دائرة \\( (C) \\) تلزم لموازنة مربع واحد \\( (S) \\)؟\n",
         "options": [
           "\\( 1 \\)",
           "\\( 2 \\)",
@@ -2948,7 +2948,7 @@
     "difficulty": "medium",
     "content": {
       "en": {
-        "question": "A square sheet of paper with side length \\( 12\\text{ cm} \\) is folded in half twice to form a smaller square of side length \\( 6\\text{ cm} \\). A triangular corner with sides of length \\( 3\\text{ cm} \\) and \\( 3\\text{ cm} \\) is cut off at the center fold corner, as illustrated. When the sheet is fully unfolded, what is the area of the remaining paper?\n<svg viewBox='0 0 200 120' class='w-full max-w-xs mx-auto bg-white rounded-lg p-2'><rect x='10' y='10' width='80' height='80' fill='#cbd5e1' stroke='#334155' stroke-width='2'/><polygon points='10,10 40,10 10,40' fill='#ef4444'/><text x='15' y='80' font-size='12' fill='#1e293b'>Folded</text><path d='M 100 50 L 120 50' stroke='#334155' stroke-width='2' marker-end='url(#arrow)'/></svg>",
+        "question": "A square sheet of paper with side length \\( 12\\text{ cm} \\) is folded in half twice to form a smaller square of side length \\( 6\\text{ cm} \\). A triangular corner with sides of length \\( 3\\text{ cm} \\) and \\( 3\\text{ cm} \\) is cut off at the center fold corner, as illustrated. When the sheet is fully unfolded, what is the area of the remaining paper?\n",
         "options": [
           "\\( 108\\text{ cm}^2 \\)",
           "\\( 120\\text{ cm}^2 \\)",
@@ -2960,7 +2960,7 @@
         "explanation": "Initial area = \\( 12 \\times 12 = 144\\text{ cm}^2 \\). The center fold corner forms a hole at the center of the original unfolded paper consisting of \\( 4 \\) right triangles of legs \\( 3\\text{ cm} \\) and \\( 3\\text{ cm} \\). Area of cut-out = \\( 4 \\times \\left(\\frac{1}{2} \\times 3 \\times 3\\right) = 18\\text{ cm}^2 \\). Remaining area = \\( 144 - 18 = 126\\text{ cm}^2 \\)."
       },
       "ar": {
-        "question": "ورقة مربعة الشكل طول ضلعها \\( 12\\text{ سم} \\) طُويت إلى النصف مرتين لتشكيل مربع أصغر طول ضلعه \\( 6\\text{ سم} \\). ثم قُصت زاوية مثلثية طولا ضلعيها \\( 3\\text{ سم} \\) و \\( 3\\text{ سم} \\) عند زاوية الطي المركزية. عند فتح الورقة بالكامل، ما مساحة الورقة المتبقية؟\n<svg viewBox='0 0 200 120' class='w-full max-w-xs mx-auto bg-white rounded-lg p-2'><rect x='10' y='10' width='80' height='80' fill='#cbd5e1' stroke='#334155' stroke-width='2'/><polygon points='10,10 40,10 10,40' fill='#ef4444'/><text x='15' y='80' font-size='12' fill='#1e293b'>مطوية</text><path d='M 100 50 L 120 50' stroke='#334155' stroke-width='2' marker-end='url(#arrow)'/></svg>",
+        "question": "ورقة مربعة الشكل طول ضلعها \\( 12\\text{ سم} \\) طُويت إلى النصف مرتين لتشكيل مربع أصغر طول ضلعه \\( 6\\text{ سم} \\). ثم قُصت زاوية مثلثية طولا ضلعيها \\( 3\\text{ سم} \\) و \\( 3\\text{ سم} \\) عند زاوية الطي المركزية. عند فتح الورقة بالكامل، ما مساحة الورقة المتبقية؟\n",
         "options": [
           "\\( 108\\text{ سم}^2 \\)",
           "\\( 120\\text{ سم}^2 \\)",
@@ -3053,7 +3053,7 @@
     "difficulty": "easy",
     "content": {
       "en": {
-        "question": "Gear \\( A \\) with \\( 15 \\) teeth is meshed with Gear \\( B \\) with \\( 24 \\) teeth. If Gear \\( A \\) rotates through \\( 8 \\) full clockwise revolutions, how many full counterclockwise revolutions does Gear \\( B \\) complete?\n<svg viewBox='0 0 200 120' class='w-full max-w-xs mx-auto bg-white rounded-lg p-2'><circle cx='65' cy='60' r='35' fill='#cbd5e1' stroke='#1e293b' stroke-width='2'/><circle cx='135' cy='60' r='45' fill='#94a3b8' stroke='#1e293b' stroke-width='2'/><text x='65' y='65' text-anchor='middle' font-weight='bold'>A</text><text x='135' y='65' text-anchor='middle' font-weight='bold'>B</text></svg>",
+        "question": "Gear \\( A \\) with \\( 15 \\) teeth is meshed with Gear \\( B \\) with \\( 24 \\) teeth. If Gear \\( A \\) rotates through \\( 8 \\) full clockwise revolutions, how many full counterclockwise revolutions does Gear \\( B \\) complete?\n",
         "options": [
           "\\( 3 \\)",
           "\\( 4 \\)",
@@ -3065,7 +3065,7 @@
         "explanation": "Total number of teeth passing the contact point = \\( 15 \\times 8 = 120 \\) teeth. The number of full revolutions made by Gear \\( B \\) is \\( \\frac{120}{24} = 5 \\) revolutions."
       },
       "ar": {
-        "question": "التَرس \\( A \\) ذو الـ \\( 15 \\) سنّاً معشَّق مع التَرس \\( B \\) ذي الـ \\( 24 \\) سنّاً. إذا دار التَرس \\( A \\) بمقدار \\( 8 \\) دورات كاملة في اتجاه عقارب الساعة، فكم دورة كاملة عكس اتجاه عقارب الساعة يدورها التَرس \\( B \\)؟\n<svg viewBox='0 0 200 120' class='w-full max-w-xs mx-auto bg-white rounded-lg p-2'><circle cx='65' cy='60' r='35' fill='#cbd5e1' stroke='#1e293b' stroke-width='2'/><circle cx='135' cy='60' r='45' fill='#94a3b8' stroke='#1e293b' stroke-width='2'/><text x='65' y='65' text-anchor='middle' font-weight='bold'>A</text><text x='135' y='65' text-anchor='middle' font-weight='bold'>B</text></svg>",
+        "question": "التَرس \\( A \\) ذو الـ \\( 15 \\) سنّاً معشَّق مع التَرس \\( B \\) ذي الـ \\( 24 \\) سنّاً. إذا دار التَرس \\( A \\) بمقدار \\( 8 \\) دورات كاملة في اتجاه عقارب الساعة، فكم دورة كاملة عكس اتجاه عقارب الساعة يدورها التَرس \\( B \\)؟\n",
         "options": [
           "\\( 3 \\)",
           "\\( 4 \\)",
@@ -3123,7 +3123,7 @@
     "difficulty": "medium",
     "content": {
       "en": {
-        "question": "What is the maximum number of non-overlapping L-trominoes (each formed by \\( 3 \\) unit squares) that can be placed on a \\( 4 \\times 4 \\) grid board?\n<svg viewBox='0 0 160 160' class='w-full max-w-xs mx-auto bg-white rounded-lg p-2'><defs><pattern id='grid' width='40' height='40' patternUnits='userSpaceOnUse'><path d='M 40 0 L 0 0 0 40' fill='none' stroke='#cbd5e1' stroke-width='2'/></pattern></defs><rect width='160' height='160' fill='url(#grid)' stroke='#1e293b' stroke-width='3'/><path d='M 0 0 L 80 0 L 80 40 L 40 40 L 40 80 L 0 80 Z' fill='#3b82f6' opacity='0.7'/><path d='M 160 0 L 160 80 L 120 80 L 120 40 L 80 40 L 80 0 Z' fill='#10b981' opacity='0.7'/></svg>",
+        "question": "What is the maximum number of non-overlapping L-trominoes (each formed by \\( 3 \\) unit squares) that can be placed on a \\( 4 \\times 4 \\) grid board?\n",
         "options": [
           "\\( 3 \\)",
           "\\( 4 \\)",
@@ -3135,7 +3135,7 @@
         "explanation": "A \\( 4 \\times 4 \\) grid has \\( 16 \\) unit squares. Since each L-tromino consists of \\( 3 \\) squares, the maximum number possible is \\( \\lfloor 16 / 3 \\rfloor = 5 \\) trominoes (covering \\( 15 \\) squares and leaving \\( 1 \\) empty)."
       },
       "ar": {
-        "question": "ما أقصى عدد من أشكال L-ترومينو غير المتداخلة (كل شكل مكون من \\( 3 \\) مربعات وحدة) يمكن وضعها على لوحة شبكية بمقاس \\( 4 \\times 4 \\)؟\n<svg viewBox='0 0 160 160' class='w-full max-w-xs mx-auto bg-white rounded-lg p-2'><defs><pattern id='grid' width='40' height='40' patternUnits='userSpaceOnUse'><path d='M 40 0 L 0 0 0 40' fill='none' stroke='#cbd5e1' stroke-width='2'/></pattern></defs><rect width='160' height='160' fill='url(#grid)' stroke='#1e293b' stroke-width='3'/><path d='M 0 0 L 80 0 L 80 40 L 40 40 L 40 80 L 0 80 Z' fill='#3b82f6' opacity='0.7'/><path d='M 160 0 L 160 80 L 120 80 L 120 40 L 80 40 L 80 0 Z' fill='#10b981' opacity='0.7'/></svg>",
+        "question": "ما أقصى عدد من أشكال L-ترومينو غير المتداخلة (كل شكل مكون من \\( 3 \\) مربعات وحدة) يمكن وضعها على لوحة شبكية بمقاس \\( 4 \\times 4 \\)؟\n",
         "options": [
           "\\( 3 \\)",
           "\\( 4 \\)",
@@ -3578,7 +3578,7 @@
     "difficulty": "easy",
     "content": {
       "en": {
-        "question": "<svg viewBox=\"0 0 250 200\" class=\"w-full max-w-xs mx-auto bg-white rounded-lg p-2\"><g stroke=\"#1e293b\" stroke-width=\"2\" fill=\"none\"><rect x=\"80\" y=\"10\" width=\"40\" height=\"40\"/><rect x=\"40\" y=\"50\" width=\"40\" height=\"40\"/><rect x=\"80\" y=\"50\" width=\"40\" height=\"40\"/><rect x=\"120\" y=\"50\" width=\"40\" height=\"40\"/><rect x=\"160\" y=\"50\" width=\"40\" height=\"40\"/><rect x=\"80\" y=\"90\" width=\"40\" height=\"40\"/></g><text x=\"95\" y=\"35\" font-size=\"20\">★</text><text x=\"55\" y=\"75\" font-size=\"20\">♥</text><text x=\"95\" y=\"75\" font-size=\"20\">◯</text><text x=\"135\" y=\"75\" font-size=\"20\">■</text><text x=\"175\" y=\"75\" font-size=\"20\">◆</text><text x=\"95\" y=\"115\" font-size=\"20\">▲</text></svg>The figure shows the flat net of a cube. When folded into a 3D cube, which symbol will be on the face opposite to the face with the circle \\( \\bigcirc \\)?",
+        "question": "The figure shows the flat net of a cube. When folded into a 3D cube, which symbol will be on the face opposite to the face with the circle \\( \\bigcirc \\)?",
         "options": [
           "Square \\( \\blacksquare \\)",
           "Triangle \\( \\Delta \\)",
@@ -3590,7 +3590,7 @@
         "explanation": "Looking at the row of 4 horizontal faces: Heart, Circle, Square, Diamond. Alternate faces in a line fold opposite to each other. Thus, Heart is opposite Square, and Circle \\( \\bigcirc \\) is opposite Diamond \\( \\diamond \\). Top Star and bottom Triangle fold to be opposite each other."
       },
       "ar": {
-        "question": "<svg viewBox=\"0 0 250 200\" class=\"w-full max-w-xs mx-auto bg-white rounded-lg p-2\"><g stroke=\"#1e293b\" stroke-width=\"2\" fill=\"none\"><rect x=\"80\" y=\"10\" width=\"40\" height=\"40\"/><rect x=\"40\" y=\"50\" width=\"40\" height=\"40\"/><rect x=\"80\" y=\"50\" width=\"40\" height=\"40\"/><rect x=\"120\" y=\"50\" width=\"40\" height=\"40\"/><rect x=\"160\" y=\"50\" width=\"40\" height=\"40\"/><rect x=\"80\" y=\"90\" width=\"40\" height=\"40\"/></g><text x=\"95\" y=\"35\" font-size=\"20\">★</text><text x=\"55\" y=\"75\" font-size=\"20\">♥</text><text x=\"95\" y=\"75\" font-size=\"20\">◯</text><text x=\"135\" y=\"75\" font-size=\"20\">■</text><text x=\"175\" y=\"75\" font-size=\"20\">◆</text><text x=\"95\" y=\"115\" font-size=\"20\">▲</text></svg>يُظهر الشكل المخطط المسطح لمكعب. عند طيه لتشكيل مكعب ثلاثي الأبعاد، أي رمز سيكون على الوجه المقابل للوجه الذي يحتوي على الدائرة \\( \\bigcirc \\)؟",
+        "question": "يُظهر الشكل المخطط المسطح لمكعب. عند طيه لتشكيل مكعب ثلاثي الأبعاد، أي رمز سيكون على الوجه المقابل للوجه الذي يحتوي على الدائرة \\( \\bigcirc \\)؟",
         "options": [
           "مربع \\( \\blacksquare \\)",
           "مثلث \\( \\Delta \\)",
@@ -3788,7 +3788,7 @@
     "difficulty": "easy",
     "content": {
       "en": {
-        "question": "<svg viewBox=\"0 0 220 160\" class=\"w-full max-w-xs mx-auto bg-white rounded-lg p-2\"><line x1=\"20\" y1=\"30\" x2=\"200\" y2=\"30\" stroke=\"#1e293b\" stroke-width=\"2\"/><line x1=\"20\" y1=\"130\" x2=\"200\" y2=\"130\" stroke=\"#1e293b\" stroke-width=\"2\"/><path d=\"M 40,30 L 110,80 L 50,130\" stroke=\"#ef4444\" stroke-width=\"2\" fill=\"none\"/><text x=\"10\" y=\"35\" font-size=\"12\">L1</text><text x=\"10\" y=\"135\" font-size=\"12\">L2</text><text x=\"55\" y=\"48\" font-size=\"12\">42°</text><text x=\"65\" y=\"120\" font-size=\"12\">68°</text><text x=\"120\" y=\"85\" font-size=\"14\" font-weight=\"bold\">x</text></svg>In the figure above, lines \\( L_1 \\) and \\( L_2 \\) are parallel. Given the angles \\( 42^\\circ \\) and \\( 68^\\circ \\) shown in the diagram, what is the measure of angle \\( x \\)?",
+        "question": "In the figure above, lines \\( L_1 \\) and \\( L_2 \\) are parallel. Given the angles \\( 42^\\circ \\) and \\( 68^\\circ \\) shown in the diagram, what is the measure of angle \\( x \\)?",
         "options": [
           "\\( 100^\\circ \\)",
           "\\( 105^\\circ \\)",
@@ -3800,7 +3800,7 @@
         "explanation": "By drawing a line parallel to \\( L_1 \\) and \\( L_2 \\) passing through the vertex of angle \\( x \\), the angle \\( x \\) is split into two alternate interior angles equal to \\( 42^\\circ \\) and \\( 68^\\circ \\). Thus, \\( x = 42^\\circ + 68^\\circ = 110^\\circ \\)."
       },
       "ar": {
-        "question": "<svg viewBox=\"0 0 220 160\" class=\"w-full max-w-xs mx-auto bg-white rounded-lg p-2\"><line x1=\"20\" y1=\"30\" x2=\"200\" y2=\"30\" stroke=\"#1e293b\" stroke-width=\"2\"/><line x1=\"20\" y1=\"130\" x2=\"200\" y2=\"130\" stroke=\"#1e293b\" stroke-width=\"2\"/><path d=\"M 40,30 L 110,80 L 50,130\" stroke=\"#ef4444\" stroke-width=\"2\" fill=\"none\"/><text x=\"10\" y=\"35\" font-size=\"12\">L1</text><text x=\"10\" y=\"135\" font-size=\"12\">L2</text><text x=\"55\" y=\"48\" font-size=\"12\">42°</text><text x=\"65\" y=\"120\" font-size=\"12\">68°</text><text x=\"120\" y=\"85\" font-size=\"14\" font-weight=\"bold\">x</text></svg>في الشكل أعلاه، المستقيمان \\( L_1 \\) و \\( L_2 \\) متوازيان. بناءً على الزاويتين \\( 42^\\circ \\) و \\( 68^\\circ \\) الموضحتين بالرسم، ما قياس الزاوية \\( x \\)؟",
+        "question": "في الشكل أعلاه، المستقيمان \\( L_1 \\) و \\( L_2 \\) متوازيان. بناءً على الزاويتين \\( 42^\\circ \\) و \\( 68^\\circ \\) الموضحتين بالرسم، ما قياس الزاوية \\( x \\)؟",
         "options": [
           "\\( 100^\\circ \\)",
           "\\( 105^\\circ \\)",
@@ -3858,7 +3858,7 @@
     "difficulty": "medium",
     "content": {
       "en": {
-        "question": "<svg viewBox=\"0 0 200 200\" class=\"w-full max-w-xs mx-auto bg-white rounded-lg p-2\"><polygon points=\"100,20 169.3,60 169.3,140 100,180 30.7,140 30.7,60\" stroke=\"#1e293b\" stroke-width=\"2\" fill=\"none\"/><line x1=\"100\" y1=\"100\" x2=\"100\" y2=\"20\" stroke=\"#94a3b8\"/><line x1=\"100\" y1=\"100\" x2=\"169.3\" y2=\"60\" stroke=\"#94a3b8\"/><line x1=\"100\" y1=\"100\" x2=\"169.3\" y2=\"140\" stroke=\"#94a3b8\"/><line x1=\"100\" y1=\"100\" x2=\"100\" y2=\"180\" stroke=\"#94a3b8\"/><line x1=\"100\" y1=\"100\" x2=\"30.7\" y2=\"140\" stroke=\"#94a3b8\"/><line x1=\"100\" y1=\"100\" x2=\"30.7\" y2=\"60\" stroke=\"#94a3b8\"/><polygon points=\"100,60 134.65,40 100,20\" fill=\"#3b82f6\" opacity=\"0.8\"/><polygon points=\"100,140 134.65,160 100,180\" fill=\"#3b82f6\" opacity=\"0.8\"/><polygon points=\"65.35,100 30.7,100 30.7,60\" fill=\"#3b82f6\" opacity=\"0.8\"/></svg>A regular hexagon is divided into \\( 6 \\) identical equilateral triangles. Inside three of these triangles, smaller triangles are shaded by connecting midpoints of sides as shown. What fraction of the total area of the regular hexagon is shaded?",
+        "question": "A regular hexagon is divided into \\( 6 \\) identical equilateral triangles. Inside three of these triangles, smaller triangles are shaded by connecting midpoints of sides as shown. What fraction of the total area of the regular hexagon is shaded?",
         "options": [
           "\\( \\frac{1}{6} \\)",
           "\\( \\frac{1}{8} \\)",
@@ -3870,7 +3870,7 @@
         "explanation": "Connecting midpoints of an equilateral triangle creates a medial triangle whose area is \\( \\frac{1}{4} \\) of the large triangle's area. Since \\( 3 \\) such small triangles are shaded, the total shaded area is \\( 3 \\times \\frac{1}{4} = \\frac{3}{4} \\) of one large triangle. The entire hexagon consists of \\( 6 \\) large triangles, so the shaded fraction is \\( \\frac{3/4}{6} = \\frac{3}{24} = \\frac{1}{8} \\)."
       },
       "ar": {
-        "question": "<svg viewBox=\"0 0 200 200\" class=\"w-full max-w-xs mx-auto bg-white rounded-lg p-2\"><polygon points=\"100,20 169.3,60 169.3,140 100,180 30.7,140 30.7,60\" stroke=\"#1e293b\" stroke-width=\"2\" fill=\"none\"/><line x1=\"100\" y1=\"100\" x2=\"100\" y2=\"20\" stroke=\"#94a3b8\"/><line x1=\"100\" y1=\"100\" x2=\"169.3\" y2=\"60\" stroke=\"#94a3b8\"/><line x1=\"100\" y1=\"100\" x2=\"169.3\" y2=\"140\" stroke=\"#94a3b8\"/><line x1=\"100\" y1=\"100\" x2=\"100\" y2=\"180\" stroke=\"#94a3b8\"/><line x1=\"100\" y1=\"100\" x2=\"30.7\" y2=\"140\" stroke=\"#94a3b8\"/><line x1=\"100\" y1=\"100\" x2=\"30.7\" y2=\"60\" stroke=\"#94a3b8\"/><polygon points=\"100,60 134.65,40 100,20\" fill=\"#3b82f6\" opacity=\"0.8\"/><polygon points=\"100,140 134.65,160 100,180\" fill=\"#3b82f6\" opacity=\"0.8\"/><polygon points=\"65.35,100 30.7,100 30.7,60\" fill=\"#3b82f6\" opacity=\"0.8\"/></svg>تم تقسيم مسدس منتظم إلى \\( 6 \\) مثلثات متطابقة متساوية الأضلاع. داخل ثلاثة من هذه المثلثات، تُم تظليل مثلثات أصغر عن طريق توصيل منتصفات الأضلاع كما هو موضح. ما الكسر الذي تمثله المساحة المظللة من المساحة الكلية للمسدس المنتظم؟",
+        "question": "تم تقسيم مسدس منتظم إلى \\( 6 \\) مثلثات متطابقة متساوية الأضلاع. داخل ثلاثة من هذه المثلثات، تُم تظليل مثلثات أصغر عن طريق توصيل منتصفات الأضلاع كما هو موضح. ما الكسر الذي تمثله المساحة المظللة من المساحة الكلية للمسدس المنتظم؟",
         "options": [
           "\\( \\frac{1}{6} \\)",
           "\\( \\frac{1}{8} \\)",
@@ -3998,7 +3998,7 @@
     "difficulty": "easy",
     "content": {
       "en": {
-        "question": "<svg viewBox=\"0 0 240 160\" class=\"w-full max-w-xs mx-auto bg-white rounded-lg p-2\"><line x1=\"30\" y1=\"130\" x2=\"220\" y2=\"130\" stroke=\"#1e293b\" stroke-width=\"2\"/><line x1=\"30\" y1=\"20\" x2=\"30\" y2=\"130\" stroke=\"#1e293b\" stroke-width=\"2\"/><rect x=\"45\" y=\"60\" width=\"30\" height=\"70\" fill=\"#3b82f6\"/><rect x=\"90\" y=\"25\" width=\"30\" height=\"105\" fill=\"#3b82f6\"/><rect x=\"135\" y=\"37\" width=\"30\" height=\"93\" fill=\"#ef4444\"/><rect x=\"180\" y=\"48\" width=\"30\" height=\"82\" fill=\"#3b82f6\"/><text x=\"45\" y=\"148\" font-size=\"10\">Anna</text><text x=\"93\" y=\"148\" font-size=\"10\">Ben</text><text x=\"136\" y=\"148\" font-size=\"10\">Carl</text><text x=\"178\" y=\"148\" font-size=\"10\">Diana</text><text x=\"52\" y=\"55\" font-size=\"10\">12</text><text x=\"97\" y=\"20\" font-size=\"10\">18</text><text x=\"145\" y=\"32\" font-size=\"10\">?</text><text x=\"187\" y=\"43\" font-size=\"10\">14</text></svg>The bar chart shows the scores of four students in a competition. The mean (average) score of all four students is \\( 15 \\). What is Carl's score?",
+        "question": "The bar chart shows the scores of four students in a competition. The mean (average) score of all four students is \\( 15 \\). What is Carl's score?",
         "options": [
           "\\( 14 \\)",
           "\\( 15 \\)",
@@ -4010,7 +4010,7 @@
         "explanation": "Total sum of all four scores is \\( 4 \\times 15 = 60 \\). The sum of Anna's, Ben's, and Diana's scores is \\( 12 + 18 + 14 = 44 \\). Therefore, Carl's score is \\( 60 - 44 = 16 \\)."
       },
       "ar": {
-        "question": "<svg viewBox=\"0 0 240 160\" class=\"w-full max-w-xs mx-auto bg-white rounded-lg p-2\"><line x1=\"30\" y1=\"130\" x2=\"220\" y2=\"130\" stroke=\"#1e293b\" stroke-width=\"2\"/><line x1=\"30\" y1=\"20\" x2=\"30\" y2=\"130\" stroke=\"#1e293b\" stroke-width=\"2\"/><rect x=\"45\" y=\"60\" width=\"30\" height=\"70\" fill=\"#3b82f6\"/><rect x=\"90\" y=\"25\" width=\"30\" height=\"105\" fill=\"#3b82f6\"/><rect x=\"135\" y=\"37\" width=\"30\" height=\"93\" fill=\"#ef4444\"/><rect x=\"180\" y=\"48\" width=\"30\" height=\"82\" fill=\"#3b82f6\"/><text x=\"45\" y=\"148\" font-size=\"10\">آنا</text><text x=\"93\" y=\"148\" font-size=\"10\">بين</text><text x=\"136\" y=\"148\" font-size=\"10\">كارل</text><text x=\"178\" y=\"148\" font-size=\"10\">ديانا</text><text x=\"52\" y=\"55\" font-size=\"10\">12</text><text x=\"97\" y=\"20\" font-size=\"10\">18</text><text x=\"145\" y=\"32\" font-size=\"10\">?</text><text x=\"187\" y=\"43\" font-size=\"10\">14</text></svg>يُظهر الرسم البياني بالفيئان درجات أربعة طلاب في مسابقة. المتوسط الحسابي لدرجات الطلاب الأربعة هو \\( 15 \\). ما هي درجة كارل؟",
+        "question": "يُظهر الرسم البياني بالفيئان درجات أربعة طلاب في مسابقة. المتوسط الحسابي لدرجات الطلاب الأربعة هو \\( 15 \\). ما هي درجة كارل؟",
         "options": [
           "\\( 14 \\)",
           "\\( 15 \\)",
@@ -4103,7 +4103,7 @@
     "difficulty": "medium",
     "content": {
       "en": {
-        "question": "<svg viewBox=\"0 0 200 200\" class=\"w-full max-w-xs mx-auto bg-white rounded-lg p-2\"><polygon points=\"100,20 170,140 30,140\" stroke=\"#1e293b\" stroke-width=\"2\" fill=\"none\"/><polygon points=\"100,180 170,60 30,60\" stroke=\"#1e293b\" stroke-width=\"2\" fill=\"none\"/></svg>Two identical equilateral triangles, each with a side length of \\( 9 \\text{ cm} \\), overlap to form a regular six-pointed star as shown above. What is the total perimeter of the outer boundary of this star?",
+        "question": "Two identical equilateral triangles, each with a side length of \\( 9 \\text{ cm} \\), overlap to form a regular six-pointed star as shown above. What is the total perimeter of the outer boundary of this star?",
         "options": [
           "\\( 27 \\text{ cm} \\)",
           "\\( 36 \\text{ cm} \\)",
@@ -4115,7 +4115,7 @@
         "explanation": "When two identical equilateral triangles form a regular six-pointed star, each of the \\( 3 \\) sides of both triangles is trisected into \\( 3 \\) equal segments of length \\( 9 \\div 3 = 3 \\text{ cm} \\). The outer boundary of the star consists of \\( 12 \\) such equal segments. Therefore, the total outer perimeter is \\( 12 \\times 3 = 36 \\text{ cm} \\)."
       },
       "ar": {
-        "question": "<svg viewBox=\"0 0 200 200\" class=\"w-full max-w-xs mx-auto bg-white rounded-lg p-2\"><polygon points=\"100,20 170,140 30,140\" stroke=\"#1e293b\" stroke-width=\"2\" fill=\"none\"/><polygon points=\"100,180 170,60 30,60\" stroke=\"#1e293b\" stroke-width=\"2\" fill=\"none\"/></svg>مثلثان متطابقان متساويا الأضلاع، طول ضلع كل منهما \\( 9 \\text{ cm} \\)، يتداخلان لتشكيل نجمة سداسية منتظمة كما هو موضح أعلاه. ما هو المحيط الإجمالي للحدود الخارجية لهذه النجمة؟",
+        "question": "مثلثان متطابقان متساويا الأضلاع، طول ضلع كل منهما \\( 9 \\text{ cm} \\)، يتداخلان لتشكيل نجمة سداسية منتظمة كما هو موضح أعلاه. ما هو المحيط الإجمالي للحدود الخارجية لهذه النجمة؟",
         "options": [
           "\\( 27 \\text{ cm} \\)",
           "\\( 36 \\text{ cm} \\)",
@@ -4383,7 +4383,7 @@
     "difficulty": "easy",
     "content": {
       "en": {
-        "question": "The figure below shows the net of a cube with faces numbered from \\( 1 \\) to \\( 6 \\).\n<svg viewBox=\"0 0 200 120\" class=\"w-full max-w-xs mx-auto bg-white rounded-lg p-2\"><rect x=\"70\" y=\"10\" width=\"30\" height=\"30\" fill=\"none\" stroke=\"#1e293b\" stroke-width=\"2\"/><text x=\"81\" y=\"30\" fill=\"#1e293b\" font-size=\"14\">1</text><rect x=\"40\" y=\"40\" width=\"30\" height=\"30\" fill=\"none\" stroke=\"#1e293b\" stroke-width=\"2\"/><text x=\"51\" y=\"60\" fill=\"#1e293b\" font-size=\"14\">2</text><rect x=\"70\" y=\"40\" width=\"30\" height=\"30\" fill=\"none\" stroke=\"#1e293b\" stroke-width=\"2\"/><text x=\"81\" y=\"60\" fill=\"#1e293b\" font-size=\"14\">3</text><rect x=\"100\" y=\"40\" width=\"30\" height=\"30\" fill=\"none\" stroke=\"#1e293b\" stroke-width=\"2\"/><text x=\"111\" y=\"60\" fill=\"#1e293b\" font-size=\"14\">4</text><rect x=\"130\" y=\"40\" width=\"30\" height=\"30\" fill=\"none\" stroke=\"#1e293b\" stroke-width=\"2\"/><text x=\"141\" y=\"60\" fill=\"#1e293b\" font-size=\"14\">5</text><rect x=\"70\" y=\"70\" width=\"30\" height=\"30\" fill=\"none\" stroke=\"#1e293b\" stroke-width=\"2\"/><text x=\"81\" y=\"90\" fill=\"#1e293b\" font-size=\"14\">6</text></svg>\nWhen folded to form a cube, which face will be opposite to face \\( 3 \\)?",
+        "question": "The figure below shows the net of a cube with faces numbered from \\( 1 \\) to \\( 6 \\).\n\nWhen folded to form a cube, which face will be opposite to face \\( 3 \\)?",
         "options": [
           "\\( 1 \\)",
           "\\( 2 \\)",
@@ -4395,7 +4395,7 @@
         "explanation": "When folding the net, face \\( 3 \\) serves as a base. Face \\( 2 \\) folds up to the left, face \\( 4 \\) folds up to the right, and face \\( 5 \\) folds over to become the top face opposite to face \\( 3 \\). Therefore, face \\( 5 \\) is opposite face \\( 3 \\)."
       },
       "ar": {
-        "question": "يوضح الشكل أدناه مخططًا لمكعب بأوجه مرقمة من \\( 1 \\) إلى \\( 6 \\).\n<svg viewBox=\"0 0 200 120\" class=\"w-full max-w-xs mx-auto bg-white rounded-lg p-2\"><rect x=\"70\" y=\"10\" width=\"30\" height=\"30\" fill=\"none\" stroke=\"#1e293b\" stroke-width=\"2\"/><text x=\"81\" y=\"30\" fill=\"#1e293b\" font-size=\"14\">1</text><rect x=\"40\" y=\"40\" width=\"30\" height=\"30\" fill=\"none\" stroke=\"#1e293b\" stroke-width=\"2\"/><text x=\"51\" y=\"60\" fill=\"#1e293b\" font-size=\"14\">2</text><rect x=\"70\" y=\"40\" width=\"30\" height=\"30\" fill=\"none\" stroke=\"#1e293b\" stroke-width=\"2\"/><text x=\"81\" y=\"60\" fill=\"#1e293b\" font-size=\"14\">3</text><rect x=\"100\" y=\"40\" width=\"30\" height=\"30\" fill=\"none\" stroke=\"#1e293b\" stroke-width=\"2\"/><text x=\"111\" y=\"60\" fill=\"#1e293b\" font-size=\"14\">4</text><rect x=\"130\" y=\"40\" width=\"30\" height=\"30\" fill=\"none\" stroke=\"#1e293b\" stroke-width=\"2\"/><text x=\"141\" y=\"60\" fill=\"#1e293b\" font-size=\"14\">5</text><rect x=\"70\" y=\"70\" width=\"30\" height=\"30\" fill=\"none\" stroke=\"#1e293b\" stroke-width=\"2\"/><text x=\"81\" y=\"90\" fill=\"#1e293b\" font-size=\"14\">6</text></svg>\nعند طي المخطط لتكوين مكعب، ما الوجه الذي سيكون مقابلًا للوجه رقم \\( 3 \\)؟",
+        "question": "يوضح الشكل أدناه مخططًا لمكعب بأوجه مرقمة من \\( 1 \\) إلى \\( 6 \\).\n\nعند طي المخطط لتكوين مكعب، ما الوجه الذي سيكون مقابلًا للوجه رقم \\( 3 \\)؟",
         "options": [
           "\\( 1 \\)",
           "\\( 2 \\)",
@@ -4418,7 +4418,7 @@
     "difficulty": "easy",
     "content": {
       "en": {
-        "question": "On the balanced scale shown below, \\( 2 \\) spheres and \\( 1 \\) cube balance \\( 1 \\) sphere and \\( 2 \\) cubes.\n<svg viewBox=\"0 0 200 120\" class=\"w-full max-w-xs mx-auto bg-white rounded-lg p-2\"><line x1=\"100\" y1=\"100\" x2=\"100\" y2=\"40\" stroke=\"#475569\" stroke-width=\"4\"/><polygon points=\"80,100 120,100 100,80\" fill=\"#475569\"/><line x1=\"30\" y1=\"40\" x2=\"170\" y2=\"40\" stroke=\"#1e293b\" stroke-width=\"3\"/><circle cx=\"50\" cy=\"30\" r=\"10\" fill=\"#ef4444\"/><circle cx=\"30\" cy=\"30\" r=\"10\" fill=\"#ef4444\"/><rect x=\"60\" y=\"20\" width=\"15\" height=\"15\" fill=\"#3b82f6\"/><circle cx=\"130\" cy=\"30\" r=\"10\" fill=\"#ef4444\"/><rect x=\"145\" y=\"20\" width=\"15\" height=\"15\" fill=\"#3b82f6\"/><rect x=\"162\" y=\"20\" width=\"15\" height=\"15\" fill=\"#3b82f6\"/></svg>\nIf \\( 1 \\) cube weighs \\( 12 \\) grams, what is the weight of \\( 1 \\) sphere in grams?",
+        "question": "On the balanced scale shown below, \\( 2 \\) spheres and \\( 1 \\) cube balance \\( 1 \\) sphere and \\( 2 \\) cubes.\n\nIf \\( 1 \\) cube weighs \\( 12 \\) grams, what is the weight of \\( 1 \\) sphere in grams?",
         "options": [
           "\\( 6 \\)",
           "\\( 8 \\)",
@@ -4430,7 +4430,7 @@
         "explanation": "Let \\( S \\) be the weight of one sphere and \\( C \\) be the weight of one cube. The scale gives \\( 2S + C = S + 2C \\). Subtracting \\( S + C \\) from both sides gives \\( S = C \\). Since \\( C = 12 \\) grams, the weight of one sphere is \\( S = 12 \\) grams."
       },
       "ar": {
-        "question": "في الميزان المتوازن الموضح أدناه، تتوازن كرتان ومكعب واحد مع كرة واحدة ومكعبين.\n<svg viewBox=\"0 0 200 120\" class=\"w-full max-w-xs mx-auto bg-white rounded-lg p-2\"><line x1=\"100\" y1=\"100\" x2=\"100\" y2=\"40\" stroke=\"#475569\" stroke-width=\"4\"/><polygon points=\"80,100 120,100 100,80\" fill=\"#475569\"/><line x1=\"30\" y1=\"40\" x2=\"170\" y2=\"40\" stroke=\"#1e293b\" stroke-width=\"3\"/><circle cx=\"50\" cy=\"30\" r=\"10\" fill=\"#ef4444\"/><circle cx=\"30\" cy=\"30\" r=\"10\" fill=\"#ef4444\"/><rect x=\"60\" y=\"20\" width=\"15\" height=\"15\" fill=\"#3b82f6\"/><circle cx=\"130\" cy=\"30\" r=\"10\" fill=\"#ef4444\"/><rect x=\"145\" y=\"20\" width=\"15\" height=\"15\" fill=\"#3b82f6\"/><rect x=\"162\" y=\"20\" width=\"15\" height=\"15\" fill=\"#3b82f6\"/></svg>\nإذا كان وزن المكعب الواحد يساوي \\( 12 \\) جرامًا، فما وزن الكرة الواحدة بالجرام؟",
+        "question": "في الميزان المتوازن الموضح أدناه، تتوازن كرتان ومكعب واحد مع كرة واحدة ومكعبين.\n\nإذا كان وزن المكعب الواحد يساوي \\( 12 \\) جرامًا، فما وزن الكرة الواحدة بالجرام؟",
         "options": [
           "\\( 6 \\)",
           "\\( 8 \\)",
@@ -4617,7 +4617,7 @@
         "explanation": "الحدود الأولى للمتتالية هي:\n\\( a_1 = 2 \\)\n\\( a_2 = 3 \\)\n\\( a_3 = 1 \\)\n\\( a_4 = -2 \\)\n\\( a_5 = -3 \\)\n\\( a_6 = -1 \\)\n\\( a_7 = 2 = a_1 \\)\nالمتتالية دورية وطول دورتها يساوي \\( 6 \\). وبما أن \\( 2024 = 6 \\times 337 + 2 \\)، فإن \\( a_{2024} = a_2 = 3 \\)."
       }
     },
-    "correct_index": "4"
+    "correct_index": "0"
   },
   {
     "id": "KANGAROO-133",
@@ -4967,7 +4967,7 @@
         "explanation": "للحصول على أكبر قيمة لـ \\( K \\)، يجب أن نجعل عدد الكعك الذي أكله الأطفال الـ \\( 4 \\) الآخرون أقل ما يمكن. وبما أن أعداد الكعك مختلفة وموجبة، فإن أصغر أعداد صحيحة مختلفة للأطفال الأربعة هي \\( 1 \\) و \\( 2 \\) و \\( 3 \\) و \\( 4 \\). مجموع هذه الأعداد هو \\( 1 + 2 + 3 + 4 = 10 \\). بالتالي، فإن أكبر عدد كعك يمكن أن يأكله الطفل الخامس هو \\( K = 31 - 10 = 21 \\)."
       }
     },
-    "correct_index": "4"
+    "correct_index": "0"
   },
   {
     "id": "KANGAROO-143",
@@ -4978,7 +4978,7 @@
     "difficulty": "medium",
     "content": {
       "en": {
-        "question": "Below is the net of a standard cube with faces numbered \\( 1 \\) to \\( 6 \\).<svg viewBox='0 0 200 160' class='w-full max-w-xs mx-auto bg-white rounded-lg p-2'><g stroke='#334155' stroke-width='2' fill='#e2e8f0'><rect x='70' y='10' width='35' height='35'/><rect x='35' y='45' width='35' height='35'/><rect x='70' y='45' width='35' height='35'/><rect x='105' y='45' width='35' height='35'/><rect x='140' y='45' width='35' height='35'/><rect x='105' y='80' width='35' height='35'/></g><text x='84' y='33' font-size='14' font-weight='bold' fill='#0f172a'>1</text><text x='49' y='68' font-size='14' font-weight='bold' fill='#0f172a'>2</text><text x='84' y='68' font-size='14' font-weight='bold' fill='#0f172a'>3</text><text x='119' y='68' font-size='14' font-weight='bold' fill='#0f172a'>4</text><text x='154' y='68' font-size='14' font-weight='bold' fill='#0f172a'>5</text><text x='119' y='103' font-size='14' font-weight='bold' fill='#0f172a'>6</text></svg>When this net is folded into a 3D cube, which number will be on the face opposite to the face with the number \\( 4 \\)?",
+        "question": "Below is the net of a standard cube with faces numbered \\( 1 \\) to \\( 6 \\).When this net is folded into a 3D cube, which number will be on the face opposite to the face with the number \\( 4 \\)?",
         "options": [
           "\\( 1 \\)",
           "\\( 2 \\)",
@@ -4990,7 +4990,7 @@
         "explanation": "In a horizontal row of four adjacent faces in a net (here faces \\( 2 \\), \\( 3 \\), \\( 4 \\), and \\( 5 \\)), alternating faces become opposite faces when folded into a cube. Face \\( 2 \\) is opposite to face \\( 4 \\), and face \\( 3 \\) is opposite to face \\( 5 \\). Therefore, the face opposite to \\( 4 \\) is \\( 2 \\)."
       },
       "ar": {
-        "question": "أدناه مخطط لمكعب قياسي أوجيهه مرقمة من \\( 1 \\) إلى \\( 6 \\).<svg viewBox='0 0 200 160' class='w-full max-w-xs mx-auto bg-white rounded-lg p-2'><g stroke='#334155' stroke-width='2' fill='#e2e8f0'><rect x='70' y='10' width='35' height='35'/><rect x='35' y='45' width='35' height='35'/><rect x='70' y='45' width='35' height='35'/><rect x='105' y='45' width='35' height='35'/><rect x='140' y='45' width='35' height='35'/><rect x='105' y='80' width='35' height='35'/></g><text x='84' y='33' font-size='14' font-weight='bold' fill='#0f172a'>1</text><text x='49' y='68' font-size='14' font-weight='bold' fill='#0f172a'>2</text><text x='84' y='68' font-size='14' font-weight='bold' fill='#0f172a'>3</text><text x='119' y='68' font-size='14' font-weight='bold' fill='#0f172a'>4</text><text x='154' y='68' font-size='14' font-weight='bold' fill='#0f172a'>5</text><text x='119' y='103' font-size='14' font-weight='bold' fill='#0f172a'>6</text></svg>عند طي هذا المخطط لتكوين مكعب ثلاثي الأبعاد، أي رقم سيكون على الوجه المقابل للوجه الذي يحمل الرقم \\( 4 \\)؟",
+        "question": "أدناه مخطط لمكعب قياسي أوجيهه مرقمة من \\( 1 \\) إلى \\( 6 \\).عند طي هذا المخطط لتكوين مكعب ثلاثي الأبعاد، أي رقم سيكون على الوجه المقابل للوجه الذي يحمل الرقم \\( 4 \\)؟",
         "options": [
           "\\( 1 \\)",
           "\\( 2 \\)",
@@ -5363,7 +5363,7 @@
     "difficulty": "hard",
     "content": {
       "en": {
-        "question": "A grid of size \\( 4 \\times 4 \\) is shown below.<svg viewBox='0 0 160 160' class='w-full max-w-xs mx-auto bg-white rounded-lg p-2'><path d='M20 20 H140 M20 50 H140 M20 80 H140 M20 110 H140 M20 140 H140 M20 20 V140 M50 20 V140 M80 20 V140 M110 20 V140 M140 20 V140' stroke='#94a3b8' stroke-width='1.5'/><circle cx='20' cy='140' r='4' fill='#16a34a'/><circle cx='140' cy='20' r='4' fill='#dc2626'/><circle cx='80' cy='80' r='5' fill='#2563eb'/><text x='10' y='155' font-size='12' font-weight='bold' fill='#16a34a'>A</text><text x='145' y='18' font-size='12' font-weight='bold' fill='#dc2626'>B</text><text x='85' y='75' font-size='12' font-weight='bold' fill='#2563eb'>C</text></svg>How many shortest paths along the grid lines lead from point \\( A \\) (bottom-left) to point \\( B \\) (top-right) without passing through point \\( C \\) (center)?",
+        "question": "A grid of size \\( 4 \\times 4 \\) is shown below.How many shortest paths along the grid lines lead from point \\( A \\) (bottom-left) to point \\( B \\) (top-right) without passing through point \\( C \\) (center)?",
         "options": [
           "\\( 28 \\)",
           "\\( 32 \\)",
@@ -5375,7 +5375,7 @@
         "explanation": "Total shortest paths from \\( A(0,0) \\) to \\( B(4,4) \\) requires \\( 4 \\) Right steps and \\( 4 \\) Up steps: \\( \\binom{4+4}{4} = \\binom{8}{4} = 70 \\). Paths from \\( A(0,0) \\) to \\( C(2,2) \\) require \\( 2 \\) Right and \\( 2 \\) Up steps: \\( \\binom{2+2}{2} = \\binom{4}{2} = 6 \\). Paths from \\( C(2,2) \\) to \\( B(4,4) \\) also require \\( 2 \\) Right and \\( 2 \\) Up steps: \\( \\binom{4}{2} = 6 \\). The number of paths passing through \\( C \\) is \\( 6 \\times 6 = 36 \\). Therefore, the number of paths NOT passing through \\( C \\) is \\( 70 - 36 = 34 \\)."
       },
       "ar": {
-        "question": "شبكة بأبعاد \\( 4 \\times 4 \\) موضحة أدناه.<svg viewBox='0 0 160 160' class='w-full max-w-xs mx-auto bg-white rounded-lg p-2'><path d='M20 20 H140 M20 50 H140 M20 80 H140 M20 110 H140 M20 140 H140 M20 20 V140 M50 20 V140 M80 20 V140 M110 20 V140 M140 20 V140' stroke='#94a3b8' stroke-width='1.5'/><circle cx='20' cy='140' r='4' fill='#16a34a'/><circle cx='140' cy='20' r='4' fill='#dc2626'/><circle cx='80' cy='80' r='5' fill='#2563eb'/><text x='10' y='155' font-size='12' font-weight='bold' fill='#16a34a'>A</text><text x='145' y='18' font-size='12' font-weight='bold' fill='#dc2626'>B</text><text x='85' y='75' font-size='12' font-weight='bold' fill='#2563eb'>C</text></svg>كم عدد أقصر الطرق على خطوط الشبكة التي تؤدي من النقطة \\( A \\) (أسفل اليسار) إلى النقطة \\( B \\) (أعلى اليمين) دون المرور بالنقطة \\( C \\) (المركز)؟",
+        "question": "شبكة بأبعاد \\( 4 \\times 4 \\) موضحة أدناه.كم عدد أقصر الطرق على خطوط الشبكة التي تؤدي من النقطة \\( A \\) (أسفل اليسار) إلى النقطة \\( B \\) (أعلى اليمين) دون المرور بالنقطة \\( C \\) (المركز)؟",
         "options": [
           "\\( 28 \\)",
           "\\( 32 \\)",
@@ -5468,7 +5468,7 @@
     "difficulty": "easy",
     "content": {
       "en": {
-        "question": "The bar chart below shows the distribution of test scores (from \\( 1 \\) to \\( 5 \\)) for a class of \\( 25 \\) students.<svg viewBox='0 0 220 150' class='w-full max-w-xs mx-auto bg-white rounded-lg p-2'><line x1='30' y1='120' x2='200' y2='120' stroke='#334155' stroke-width='2'/><line x1='30' y1='20' x2='30' y2='120' stroke='#334155' stroke-width='2'/><rect x='40' y='100' width='20' height='20' fill='#60a5fa'/><rect x='70' y='70' width='20' height='50' fill='#60a5fa'/><rect x='100' y='20' width='20' height='100' fill='#60a5fa'/><rect x='130' y='60' width='20' height='60' fill='#60a5fa'/><rect x='160' y='100' width='20' height='20' fill='#60a5fa'/><text x='47' y='135' font-size='10'>1</text><text x='77' y='135' font-size='10'>2</text><text x='107' y='135' font-size='10'>3</text><text x='137' y='135' font-size='10'>4</text><text x='167' y='135' font-size='10'>5</text><text x='15' y='103' font-size='10'>2</text><text x='15' y='73' font-size='10'>5</text><text x='10' y='23' font-size='10'>10</text></svg>What is the median score of the class?",
+        "question": "The bar chart below shows the distribution of test scores (from \\( 1 \\) to \\( 5 \\)) for a class of \\( 25 \\) students.What is the median score of the class?",
         "options": [
           "\\( 2 \\)",
           "\\( 2.5 \\)",
@@ -5480,7 +5480,7 @@
         "explanation": "The number of students receiving each score is: Score \\( 1 \\): \\( 2 \\) students, Score \\( 2 \\): \\( 5 \\) students, Score \\( 3 \\): \\( 10 \\) students, Score \\( 4 \\): \\( 6 \\) students, Score \\( 5 \\): \\( 2 \\) students. Total students = \\( 2 + 5 + 10 + 6 + 2 = 25 \\). The median is the \\( 13 \\)-th value when sorted in order. The first \\( 2 + 5 = 7 \\) students scored \\( 1 \\) or \\( 2 \\). The next \\( 10 \\) students (from \\( 8 \\)-th to \\( 17 \\)-th) scored \\( 3 \\). Since the \\( 13 \\)-th student falls in this group, the median score is \\( 3 \\)."
       },
       "ar": {
-        "question": "يمثل المخطط شريطي أدناه توزيع درجات الاختبار (من \\( 1 \\) إلى \\( 5 \\)) لفصل مكون من \\( 25 \\) طالباً.<svg viewBox='0 0 220 150' class='w-full max-w-xs mx-auto bg-white rounded-lg p-2'><line x1='30' y1='120' x2='200' y2='120' stroke='#334155' stroke-width='2'/><line x1='30' y1='20' x2='30' y2='120' stroke='#334155' stroke-width='2'/><rect x='40' y='100' width='20' height='20' fill='#60a5fa'/><rect x='70' y='70' width='20' height='50' fill='#60a5fa'/><rect x='100' y='20' width='20' height='100' fill='#60a5fa'/><rect x='130' y='60' width='20' height='60' fill='#60a5fa'/><rect x='160' y='100' width='20' height='20' fill='#60a5fa'/><text x='47' y='135' font-size='10'>1</text><text x='77' y='135' font-size='10'>2</text><text x='107' y='135' font-size='10'>3</text><text x='137' y='135' font-size='10'>4</text><text x='167' y='135' font-size='10'>5</text><text x='15' y='103' font-size='10'>2</text><text x='15' y='73' font-size='10'>5</text><text x='10' y='23' font-size='10'>10</text></svg>ما هي الوسيط لدرجات الطلاب في الفصل؟",
+        "question": "يمثل المخطط شريطي أدناه توزيع درجات الاختبار (من \\( 1 \\) إلى \\( 5 \\)) لفصل مكون من \\( 25 \\) طالباً.ما هي الوسيط لدرجات الطلاب في الفصل؟",
         "options": [
           "\\( 2 \\)",
           "\\( 2.5 \\)",
@@ -5678,7 +5678,7 @@
     "difficulty": "hard",
     "content": {
       "en": {
-        "question": "A ant wants to travel from point \\( A \\) to point \\( B \\) along the grid lines shown below, moving only right and up. <svg viewBox='0 0 120 120' class='w-full max-w-xs mx-auto bg-white rounded-lg p-2'><path d='M 10,110 L 110,110 M 10,76.6 L 110,76.6 M 10,43.3 L 110,43.3 M 10,10 L 110,10 M 10,110 L 10,10 M 43.3,110 L 43.3,10 M 76.6,110 L 76.6,10 M 110,110 L 110,10' stroke='black' stroke-width='1.5'/><circle cx='43.3' cy='76.6' r='6' fill='#ef4444'/><text x='5' y='118' font-size='10'>A</text><text x='112' y='12' font-size='10'>B</text><text x='38' y='72' font-size='8' fill='#ef4444'>X</text></svg> However, the vertex marked \\( X \\) is blocked and cannot be visited. How many valid paths are there from \\( A \\) to \\( B \\)?",
+        "question": "A ant wants to travel from point \\( A \\) to point \\( B \\) along the grid lines shown below, moving only right and up.  However, the vertex marked \\( X \\) is blocked and cannot be visited. How many valid paths are there from \\( A \\) to \\( B \\)?",
         "options": [
           "\\( 8 \\)",
           "\\( 11 \\)",
@@ -5690,7 +5690,7 @@
         "explanation": "The grid is \\( 3 \\times 3 \\) units, meaning any path from \\( A \\) to \\( B \\) requires \\( 3 \\) right moves and \\( 3 \\) up moves. Total paths without restriction = \\( \\binom{6}{3} = 20 \\). Point \\( X \\) is at coordinate \\( (1, 1) \\) relative to \\( A(0,0) \\). Paths from \\( A \\) to \\( X \\) = \\( \\binom{2}{1} = 2 \\). Paths from \\( X \\) to \\( B(3,3) \\) = \\( \\binom{4}{2} = 6 \\). Paths passing through \\( X \\) = \\( 2 \\times 6 = 12 \\). Valid paths avoiding \\( X \\) = \\( 20 - 12 = 8 \\)."
       },
       "ar": {
-        "question": "تريد نملة الانتقال من النقطة \\( A \\) إلى النقطة \\( B \\) عبر خطوط الشبكة الموضحة أدناه، بالتحرك يميناً وللأعلى فقط. <svg viewBox='0 0 120 120' class='w-full max-w-xs mx-auto bg-white rounded-lg p-2'><path d='M 10,110 L 110,110 M 10,76.6 L 110,76.6 M 10,43.3 L 110,43.3 M 10,10 L 110,10 M 10,110 L 10,10 M 43.3,110 L 43.3,10 M 76.6,110 L 76.6,10 M 110,110 L 110,10' stroke='black' stroke-width='1.5'/><circle cx='43.3' cy='76.6' r='6' fill='#ef4444'/><text x='5' y='118' font-size='10'>A</text><text x='112' y='12' font-size='10'>B</text><text x='38' y='72' font-size='8' fill='#ef4444'>X</text></svg> مع العلم أن الرأس المحدد بالحرف \\( X \\) مغلق ولا يمكن المرور به. كم عدداً الطرق الصالحة للانتقال من \\( A \\) إلى \\( B \\)؟",
+        "question": "تريد نملة الانتقال من النقطة \\( A \\) إلى النقطة \\( B \\) عبر خطوط الشبكة الموضحة أدناه، بالتحرك يميناً وللأعلى فقط.  مع العلم أن الرأس المحدد بالحرف \\( X \\) مغلق ولا يمكن المرور به. كم عدداً الطرق الصالحة للانتقال من \\( A \\) إلى \\( B \\)؟",
         "options": [
           "\\( 8 \\)",
           "\\( 11 \\)",
@@ -5818,7 +5818,7 @@
     "difficulty": "hard",
     "content": {
       "en": {
-        "question": "The net shown below is folded to form a cube. <svg viewBox='0 0 160 120' class='w-full max-w-xs mx-auto bg-white rounded-lg p-2'><rect x='40' y='10' width='30' height='30' fill='none' stroke='black' stroke-width='1.5'/><text x='52' y='30' font-size='14'>1</text><rect x='10' y='40' width='30' height='30' fill='none' stroke='black' stroke-width='1.5'/><text x='22' y='60' font-size='14'>2</text><rect x='40' y='40' width='30' height='30' fill='none' stroke='black' stroke-width='1.5'/><text x='52' y='60' font-size='14'>3</text><rect x='70' y='40' width='30' height='30' fill='none' stroke='black' stroke-width='1.5'/><text x='82' y='60' font-size='14'>4</text><rect x='100' y='40' width='30' height='30' fill='none' stroke='black' stroke-width='1.5'/><text x='112' y='60' font-size='14'>5</text><rect x='40' y='70' width='30' height='30' fill='none' stroke='black' stroke-width='1.5'/><text x='52' y='90' font-size='14'>6</text></svg> Which number will be on the face opposite to the face with the number \\( 3 \\)?",
+        "question": "The net shown below is folded to form a cube.  Which number will be on the face opposite to the face with the number \\( 3 \\)?",
         "options": [
           "\\( 1 \\)",
           "\\( 2 \\)",
@@ -5830,7 +5830,7 @@
         "explanation": "In this T-like/cross net layout: The row of four faces is \\( 2, 3, 4, 5 \\). In a line of four squares, face \\( 2 \\) is opposite to face \\( 4 \\), and face \\( 3 \\) is opposite to face \\( 5 \\). The top face \\( 1 \\) and bottom face \\( 6 \\) fold to be opposite each other. Thus, the face opposite to \\( 3 \\) is \\( 5 \\)."
       },
       "ar": {
-        "question": "تم طي المخطط الموضح أدناه لتشكيل مكعب. <svg viewBox='0 0 160 120' class='w-full max-w-xs mx-auto bg-white rounded-lg p-2'><rect x='40' y='10' width='30' height='30' fill='none' stroke='black' stroke-width='1.5'/><text x='52' y='30' font-size='14'>1</text><rect x='10' y='40' width='30' height='30' fill='none' stroke='black' stroke-width='1.5'/><text x='22' y='60' font-size='14'>2</text><rect x='40' y='40' width='30' height='30' fill='none' stroke='black' stroke-width='1.5'/><text x='52' y='60' font-size='14'>3</text><rect x='70' y='40' width='30' height='30' fill='none' stroke='black' stroke-width='1.5'/><text x='82' y='60' font-size='14'>4</text><rect x='100' y='40' width='30' height='30' fill='none' stroke='black' stroke-width='1.5'/><text x='112' y='60' font-size='14'>5</text><rect x='40' y='70' width='30' height='30' fill='none' stroke='black' stroke-width='1.5'/><text x='52' y='90' font-size='14'>6</text></svg> ما هو الرقم الذي سيكون على الوجه المقابل للوجه الذي يحمل الرقم \\( 3 \\)؟",
+        "question": "تم طي المخطط الموضح أدناه لتشكيل مكعب.  ما هو الرقم الذي سيكون على الوجه المقابل للوجه الذي يحمل الرقم \\( 3 \\)؟",
         "options": [
           "\\( 1 \\)",
           "\\( 2 \\)",
@@ -6063,7 +6063,7 @@
     "difficulty": "hard",
     "content": {
       "en": {
-        "question": "A large cube of dimension \\( 3 \\times 3 \\times 3 \\) is painted red on all outer surfaces and then cut into \\( 27 \\) unit cubes of dimension \\( 1 \\times 1 \\times 1 \\). <svg viewBox='0 0 100 100' class='w-full max-w-xs mx-auto bg-white rounded-lg p-2'><path d='M 10,35 L 50,15 L 90,35 L 50,55 Z' fill='none' stroke='black' stroke-width='1.5'/><path d='M 10,35 L 10,75 L 50,95 L 50,55' fill='none' stroke='black' stroke-width='1.5'/><path d='M 90,35 L 90,75 L 50,95' fill='none' stroke='black' stroke-width='1.5'/><line x1='23.3' y1='28.3' x2='63.3' y2='48.3' stroke='black'/><line x1='36.6' y1='21.6' x2='76.6' y2='41.6' stroke='black'/><line x1='36.6' y1='21.6' x2='36.6' y2='61.6' stroke='black'/><line x1='63.3' y1='35' x2='63.3' y2='75' stroke='black'/></svg> How many of these unit cubes have exactly \\( 2 \\) faces painted red?",
+        "question": "A large cube of dimension \\( 3 \\times 3 \\times 3 \\) is painted red on all outer surfaces and then cut into \\( 27 \\) unit cubes of dimension \\( 1 \\times 1 \\times 1 \\).  How many of these unit cubes have exactly \\( 2 \\) faces painted red?",
         "options": [
           "\\( 6 \\)",
           "\\( 8 \\)",
@@ -6075,7 +6075,7 @@
         "explanation": "In a \\( 3 \\times 3 \\times 3 \\) cube: Corner unit cubes have \\( 3 \\) painted faces (there are \\( 8 \\) corners). Edge unit cubes (not including corners) have \\( 2 \\) painted faces. A cube has \\( 12 \\) edges, and on each edge of length \\( 3 \\), there is exactly \\( 1 \\) middle cube with \\( 2 \\) painted faces. Thus, there are \\( 12 \\times 1 = 12 \\) unit cubes with exactly \\( 2 \\) painted faces."
       },
       "ar": {
-        "question": "تم طلاء مكعب كبير أبعاده \\( 3 \\times 3 \\times 3 \\) باللون الأحمر على جميع أوجهه الخارجية، ثم تم تقطيعه إلى \\( 27 \\) مكعباً صغيراً أبعاد كل منها \\( 1 \\times 1 \\times 1 \\). <svg viewBox='0 0 100 100' class='w-full max-w-xs mx-auto bg-white rounded-lg p-2'><path d='M 10,35 L 50,15 L 90,35 L 50,55 Z' fill='none' stroke='black' stroke-width='1.5'/><path d='M 10,35 L 10,75 L 50,95 L 50,55' fill='none' stroke='black' stroke-width='1.5'/><path d='M 90,35 L 90,75 L 50,95' fill='none' stroke='black' stroke-width='1.5'/><line x1='23.3' y1='28.3' x2='63.3' y2='48.3' stroke='black'/><line x1='36.6' y1='21.6' x2='76.6' y2='41.6' stroke='black'/><line x1='36.6' y1='21.6' x2='36.6' y2='61.6' stroke='black'/><line x1='63.3' y1='35' x2='63.3' y2='75' stroke='black'/></svg> كم عدداً للمكعبات الصغيرة التي تحتوي على وجهين اثنين فقط ملونين باللون الأحمر؟",
+        "question": "تم طلاء مكعب كبير أبعاده \\( 3 \\times 3 \\times 3 \\) باللون الأحمر على جميع أوجهه الخارجية، ثم تم تقطيعه إلى \\( 27 \\) مكعباً صغيراً أبعاد كل منها \\( 1 \\times 1 \\times 1 \\).  كم عدداً للمكعبات الصغيرة التي تحتوي على وجهين اثنين فقط ملونين باللون الأحمر؟",
         "options": [
           "\\( 6 \\)",
           "\\( 8 \\)",
@@ -6413,7 +6413,7 @@
     "difficulty": "medium",
     "content": {
       "en": {
-        "question": "The diagram below shows the net of a cube with symbols printed on its faces. <svg viewBox='0 0 200 150' class='w-full max-w-xs mx-auto bg-white rounded-lg p-2'><rect x='50' y='10' width='30' height='30' fill='#f1f5f9' stroke='#334155'/><text x='61' y='30' font-size='16'>○</text><rect x='20' y='40' width='30' height='30' fill='#f1f5f9' stroke='#334155'/><text x='31' y='60' font-size='16'>□</text><rect x='50' y='40' width='30' height='30' fill='#f1f5f9' stroke='#334155'/><text x='61' y='60' font-size='16'>★</text><rect x='80' y='40' width='30' height='30' fill='#f1f5f9' stroke='#334155'/><text x='91' y='60' font-size='16'>△</text><rect x='110' y='40' width='30' height='30' fill='#f1f5f9' stroke='#334155'/><text x='121' y='60' font-size='16'>♥</text><rect x='80' y='70' width='30' height='30' fill='#f1f5f9' stroke='#334155'/><text x='91' y='90' font-size='16'>♦</text></svg> When folded to form a 3D cube, which symbol will be on the face opposite to the face with the star \\( \\bigstar \\)?",
+        "question": "The diagram below shows the net of a cube with symbols printed on its faces.  When folded to form a 3D cube, which symbol will be on the face opposite to the face with the star \\( \\bigstar \\)?",
         "options": [
           "\\( \\bigcirc \\)",
           "\\( \\square \\)",
@@ -6425,7 +6425,7 @@
         "explanation": "In a horizontal strip of four faces, face \\( 1 \\) (\\( \\square \\)) is opposite face \\( 3 \\) (\\( \\triangle \\)), and face \\( 2 \\) (\\( \\bigstar \\)) is opposite face \\( 4 \\) (\\( \\heartsuit \\)). Thus, the face opposite to \\( \\bigstar \\) is \\( \\heartsuit \\)."
       },
       "ar": {
-        "question": "يوضح الشكل أدناه شبكة مكعب طُبعت رموز على أوجهه. <svg viewBox='0 0 200 150' class='w-full max-w-xs mx-auto bg-white rounded-lg p-2'><rect x='50' y='10' width='30' height='30' fill='#f1f5f9' stroke='#334155'/><text x='61' y='30' font-size='16'>○</text><rect x='20' y='40' width='30' height='30' fill='#f1f5f9' stroke='#334155'/><text x='31' y='60' font-size='16'>□</text><rect x='50' y='40' width='30' height='30' fill='#f1f5f9' stroke='#334155'/><text x='61' y='60' font-size='16'>★</text><rect x='80' y='40' width='30' height='30' fill='#f1f5f9' stroke='#334155'/><text x='91' y='60' font-size='16'>△</text><rect x='110' y='40' width='30' height='30' fill='#f1f5f9' stroke='#334155'/><text x='121' y='60' font-size='16'>♥</text><rect x='80' y='70' width='30' height='30' fill='#f1f5f9' stroke='#334155'/><text x='91' y='90' font-size='16'>♦</text></svg> عند طي هذه الشبكة لتكوين مكعب ثلاثي الأبعاد، أي رمز سيكون على الوجه المقابل للوجه الذي يحمل النجمة \\( \\bigstar \\)؟",
+        "question": "يوضح الشكل أدناه شبكة مكعب طُبعت رموز على أوجهه.  عند طي هذه الشبكة لتكوين مكعب ثلاثي الأبعاد، أي رمز سيكون على الوجه المقابل للوجه الذي يحمل النجمة \\( \\bigstar \\)؟",
         "options": [
           "\\( \\bigcirc \\)",
           "\\( \\square \\)",
@@ -6623,7 +6623,7 @@
     "difficulty": "hard",
     "content": {
       "en": {
-        "question": "A grid of size \\( 4 \\times 4 \\) contains \\( 16 \\) unit squares. <svg viewBox='0 0 160 160' class='w-full max-w-xs mx-auto bg-white rounded-lg p-2'><path d='M0 0h160v160H0z' fill='none' stroke='#334155' stroke-width='2'/><path d='M40 0v160M80 0v160M120 0v160M0 40h160M0 80h160M0 120h160' stroke='#cbd5e1' stroke-width='1.5'/><path d='M0 0h80v40H40v40H0z' fill='#3b82f6' fill-opacity='0.4' stroke='#1d4ed8' stroke-width='2'/></svg> What is the maximum number of non-overlapping \\( L \\)-trominoes (tiles made of \\( 3 \\) unit squares in an 'L' shape) that can be placed on this grid?",
+        "question": "A grid of size \\( 4 \\times 4 \\) contains \\( 16 \\) unit squares.  What is the maximum number of non-overlapping \\( L \\)-trominoes (tiles made of \\( 3 \\) unit squares in an 'L' shape) that can be placed on this grid?",
         "options": [
           "\\( 3 \\)",
           "\\( 4 \\)",
@@ -6635,7 +6635,7 @@
         "explanation": "The total area of a \\( 4 \\times 4 \\) grid is \\( 16 \\) unit squares. Each \\( L \\)-tromino covers \\( 3 \\) squares. The maximum theoretical number is \\( \\lfloor 16 / 3 \\rfloor = 5 \\) trominoes (covering \\( 15 \\) squares with \\( 1 \\) square empty). Indeed, \\( 5 \\) non-overlapping \\( L \\)-trominoes can be successfully packed into a \\( 4 \\times 4 \\) board."
       },
       "ar": {
-        "question": "شبكة بأبعاد \\( 4 \\times 4 \\) تحتوي على \\( 16 \\) مربع وحدة. <svg viewBox='0 0 160 160' class='w-full max-w-xs mx-auto bg-white rounded-lg p-2'><path d='M0 0h160v160H0z' fill='none' stroke='#334155' stroke-width='2'/><path d='M40 0v160M80 0v160M120 0v160M0 40h160M0 80h160M0 120h160' stroke='#cbd5e1' stroke-width='1.5'/><path d='M0 0h80v40H40v40H0z' fill='#3b82f6' fill-opacity='0.4' stroke='#1d4ed8' stroke-width='2'/></svg> ما هو أقصى عدد من بلاطات ترومينو L غير المتداخلة (بلاطة مكونة من \\( 3 \\) مربعات وحدة على شكل حرف L) يمكن وضعها في هذه الشبكة؟",
+        "question": "شبكة بأبعاد \\( 4 \\times 4 \\) تحتوي على \\( 16 \\) مربع وحدة.  ما هو أقصى عدد من بلاطات ترومينو L غير المتداخلة (بلاطة مكونة من \\( 3 \\) مربعات وحدة على شكل حرف L) يمكن وضعها في هذه الشبكة؟",
         "options": [
           "\\( 3 \\)",
           "\\( 4 \\)",
@@ -6658,7 +6658,7 @@
     "difficulty": "hard",
     "content": {
       "en": {
-        "question": "A robot starts at point \\( (0, 0) \\) on a coordinate grid and wants to reach point \\( (4, 4) \\). <svg viewBox='0 0 180 180' class='w-full max-w-xs mx-auto bg-white rounded-lg p-2'><path d='M20 20h140v140H20z' fill='none' stroke='#334155' stroke-width='2'/><path d='M55 20v140M90 20v140M125 20v140M20 55h140M20 90h140M20 125h140' stroke='#cbd5e1' stroke-width='1'/><circle cx='20' cy='160' r='5' fill='#22c55e'/><circle cx='160' cy='20' r='5' fill='#2563eb'/><circle cx='90' cy='90' r='6' fill='#dc2626'/><text x='10' y='175' font-size='10'>(0,0)</text><text x='140' y='15' font-size='10'>(4,4)</text><text x='95' y='85' font-size='10' fill='#dc2626' font-weight='bold'>(2,2)</text></svg> The robot can only move Right or Up along grid segments. How many paths are there from \\( (0, 0) \\) to \\( (4, 4) \\) that do NOT pass through the forbidden intersection \\( (2, 2) \\)?",
+        "question": "A robot starts at point \\( (0, 0) \\) on a coordinate grid and wants to reach point \\( (4, 4) \\).  The robot can only move Right or Up along grid segments. How many paths are there from \\( (0, 0) \\) to \\( (4, 4) \\) that do NOT pass through the forbidden intersection \\( (2, 2) \\)?",
         "options": [
           "\\( 30 \\)",
           "\\( 34 \\)",
@@ -6670,7 +6670,7 @@
         "explanation": "Total paths from \\( (0, 0) \\) to \\( (4, 4) \\) using \\( 4 \\) Right and \\( 4 \\) Up moves is \\( \\binom{4+4}{4} = \\binom{8}{4} = 70 \\). Paths going through \\( (2, 2) \\): From \\( (0, 0) \\) to \\( (2, 2) \\) there are \\( \\binom{4}{2} = 6 \\) paths, and from \\( (2, 2) \\) to \\( (4, 4) \\) there are \\( \\binom{4}{2} = 6 \\) paths. Total paths through \\( (2, 2) \\) = \\( 6 \\times 6 = 36 \\). Paths avoiding \\( (2, 2) \\) = \\( 70 - 36 = 34 \\)."
       },
       "ar": {
-        "question": "يبدأ روبوت عند النقطة \\( (0, 0) \\) على شبكة إحداثيات ويريد الوصول إلى النقطة \\( (4, 4) \\). <svg viewBox='0 0 180 180' class='w-full max-w-xs mx-auto bg-white rounded-lg p-2'><path d='M20 20h140v140H20z' fill='none' stroke='#334155' stroke-width='2'/><path d='M55 20v140M90 20v140M125 20v140M20 55h140M20 90h140M20 125h140' stroke='#cbd5e1' stroke-width='1'/><circle cx='20' cy='160' r='5' fill='#22c55e'/><circle cx='160' cy='20' r='5' fill='#2563eb'/><circle cx='90' cy='90' r='6' fill='#dc2626'/><text x='10' y='175' font-size='10'>(0,0)</text><text x='140' y='15' font-size='10'>(4,4)</text><text x='95' y='85' font-size='10' fill='#dc2626' font-weight='bold'>(2,2)</text></svg> يستطيع الروبوت التحرك لليمين أو للأعلى فقط على خطوط الشبكة. كم عدد المسارات الممكنة من \\( (0, 0) \\) إلى \\( (4, 4) \\) التي لا تمر بالنقطة المحظورة \\( (2, 2) \\)؟",
+        "question": "يبدأ روبوت عند النقطة \\( (0, 0) \\) على شبكة إحداثيات ويريد الوصول إلى النقطة \\( (4, 4) \\).  يستطيع الروبوت التحرك لليمين أو للأعلى فقط على خطوط الشبكة. كم عدد المسارات الممكنة من \\( (0, 0) \\) إلى \\( (4, 4) \\) التي لا تمر بالنقطة المحظورة \\( (2, 2) \\)؟",
         "options": [
           "\\( 30 \\)",
           "\\( 34 \\)",
@@ -7253,7 +7253,7 @@
     "difficulty": "medium",
     "content": {
       "en": {
-        "question": "The diagram shows the net of a cube with symbols printed on its faces. Which of the five cubes below can be folded from this net?<br/><svg viewBox=\"0 0 200 150\" class=\"w-full max-w-xs mx-auto bg-white rounded-lg p-2\"><rect x=\"60\" y=\"10\" width=\"35\" height=\"35\" fill=\"#f8fafc\" stroke=\"#1e293b\" stroke-width=\"1.5\"/><text x=\"77.5\" y=\"32\" text-anchor=\"middle\" class=\"text-base font-bold\">1</text><rect x=\"25\" y=\"45\" width=\"35\" height=\"35\" fill=\"#f8fafc\" stroke=\"#1e293b\" stroke-width=\"1.5\"/><text x=\"42.5\" y=\"67\" text-anchor=\"middle\" class=\"text-base font-bold\">2</text><rect x=\"60\" y=\"45\" width=\"35\" height=\"35\" fill=\"#f8fafc\" stroke=\"#1e293b\" stroke-width=\"1.5\"/><text x=\"77.5\" y=\"67\" text-anchor=\"middle\" class=\"text-base font-bold\">3</text><rect x=\"95\" y=\"45\" width=\"35\" height=\"35\" fill=\"#f8fafc\" stroke=\"#1e293b\" stroke-width=\"1.5\"/><text x=\"112.5\" y=\"67\" text-anchor=\"middle\" class=\"text-base font-bold\">4</text><rect x=\"130\" y=\"45\" width=\"35\" height=\"35\" fill=\"#f8fafc\" stroke=\"#1e293b\" stroke-width=\"1.5\"/><text x=\"147.5\" y=\"67\" text-anchor=\"middle\" class=\"text-base font-bold\">5</text><rect x=\"60\" y=\"80\" width=\"35\" height=\"35\" fill=\"#f8fafc\" stroke=\"#1e293b\" stroke-width=\"1.5\"/><text x=\"77.5\" y=\"102\" text-anchor=\"middle\" class=\"text-base font-bold\">6</text></svg>In the cube, which number is opposite to face \\( 3 \\)?",
+        "question": "The diagram shows the net of a cube with symbols printed on its faces. Which of the five cubes below can be folded from this net?In the cube, which number is opposite to face \\( 3 \\)?",
         "options": [
           "\\( 1 \\)",
           "\\( 2 \\)",
@@ -7265,7 +7265,7 @@
         "explanation": "In a standard T-shaped or line-and-wings cube net: face \\( 1 \\) and face \\( 6 \\) are opposite to each other. In the middle row \\( 2 - 3 - 4 - 5 \\), faces separated by one face are opposite. Thus, face \\( 2 \\) is opposite to face \\( 4 \\), and face \\( 3 \\) is opposite to face \\( 5 \\)."
       },
       "ar": {
-        "question": "يُظهر الشكل شبكة مكعب بأرقام مطبوعة على وجوهه. أي رقم يكون في الوجه المقابل للوجه \\( 3 \\) عند طي المكعب؟<br/><svg viewBox=\"0 0 200 150\" class=\"w-full max-w-xs mx-auto bg-white rounded-lg p-2\"><rect x=\"60\" y=\"10\" width=\"35\" height=\"35\" fill=\"#f8fafc\" stroke=\"#1e293b\" stroke-width=\"1.5\"/><text x=\"77.5\" y=\"32\" text-anchor=\"middle\" class=\"text-base font-bold\">1</text><rect x=\"25\" y=\"45\" width=\"35\" height=\"35\" fill=\"#f8fafc\" stroke=\"#1e293b\" stroke-width=\"1.5\"/><text x=\"42.5\" y=\"67\" text-anchor=\"middle\" class=\"text-base font-bold\">2</text><rect x=\"60\" y=\"45\" width=\"35\" height=\"35\" fill=\"#f8fafc\" stroke=\"#1e293b\" stroke-width=\"1.5\"/><text x=\"77.5\" y=\"67\" text-anchor=\"middle\" class=\"text-base font-bold\">3</text><rect x=\"95\" y=\"45\" width=\"35\" height=\"35\" fill=\"#f8fafc\" stroke=\"#1e293b\" stroke-width=\"1.5\"/><text x=\"112.5\" y=\"67\" text-anchor=\"middle\" class=\"text-base font-bold\">4</text><rect x=\"130\" y=\"45\" width=\"35\" height=\"35\" fill=\"#f8fafc\" stroke=\"#1e293b\" stroke-width=\"1.5\"/><text x=\"147.5\" y=\"67\" text-anchor=\"middle\" class=\"text-base font-bold\">5</text><rect x=\"60\" y=\"80\" width=\"35\" height=\"35\" fill=\"#f8fafc\" stroke=\"#1e293b\" stroke-width=\"1.5\"/><text x=\"77.5\" y=\"102\" text-anchor=\"middle\" class=\"text-base font-bold\">6</text></svg>في هذا المكعب، أي رقم يكون مقابلاً للوجه \\( 3 \\)؟",
+        "question": "يُظهر الشكل شبكة مكعب بأرقام مطبوعة على وجوهه. أي رقم يكون في الوجه المقابل للوجه \\( 3 \\) عند طي المكعب؟في هذا المكعب، أي رقم يكون مقابلاً للوجه \\( 3 \\)؟",
         "options": [
           "\\( 1 \\)",
           "\\( 2 \\)",
@@ -7393,7 +7393,7 @@
     "difficulty": "hard",
     "content": {
       "en": {
-        "question": "How many paths are there from point \\( A \\) to point \\( B \\) along the grid lines shown below, moving ONLY to the right (\\( \\rightarrow \\)) or upwards (\\( \\uparrow \\)), that do NOT pass through point \\( C \\)?<br/><svg viewBox=\"0 0 200 160\" class=\"w-full max-w-xs mx-auto bg-white rounded-lg p-2\"><defs><pattern id=\"grid\" width=\"30\" height=\"30\" patternUnits=\"userSpaceOnUse\"><path d=\"M 30 0 L 0 0 0 30\" fill=\"none\" stroke=\"#cbd5e1\" stroke-width=\"1\"/></pattern></defs><rect x=\"40\" y=\"20\" width=\"120\" height=\"120\" fill=\"url(#grid)\" stroke=\"#475569\" stroke-width=\"2\"/><circle cx=\"40\" cy=\"140\" r=\"5\" fill=\"#22c55e\"/><circle cx=\"160\" cy=\"20\" r=\"5\" fill=\"#ef4444\"/><circle cx=\"100\" cy=\"80\" r=\"5\" fill=\"#3b82f6\"/><text x=\"28\" y=\"145\" class=\"text-xs font-bold\">A</text><text x=\"170\" y=\"20\" class=\"text-xs font-bold\">B</text><text x=\"108\" y=\"80\" class=\"text-xs font-bold\">C</text></svg>",
+        "question": "How many paths are there from point \\( A \\) to point \\( B \\) along the grid lines shown below, moving ONLY to the right (\\( \\rightarrow \\)) or upwards (\\( \\uparrow \\)), that do NOT pass through point \\( C \\)?",
         "options": [
           "\\( 34 \\)",
           "\\( 36 \\)",
@@ -7405,7 +7405,7 @@
         "explanation": "Grid dimensions: Point \\( A \\) is at \\( (0,0) \\), \\( C \\) is at \\( (2,2) \\), and \\( B \\) is at \\( (4,4) \\). Total paths from \\( A \\) to \\( B \\) without restrictions is \\( \\binom{4+4}{4} = \\binom{8}{4} = \\frac{8 \\times 7 \\times 6 \\times 5}{24} = 70 \\). Paths from \\( A \\) to \\( C \\): \\( \\binom{2+2}{2} = \\binom{4}{2} = 6 \\). Paths from \\( C \\) to \\( B \\): \\( \\binom{2+2}{2} = \\binom{4}{2} = 6 \\). Total paths passing through \\( C \\) = \\( 6 \\times 6 = 36 \\). Paths that do NOT pass through \\( C \\) = \\( 70 - 36 = 34 \\)."
       },
       "ar": {
-        "question": "كم عدد المسارات من النقطة \\( A \\) إلى النقطة \\( B \\) على خطوط الشبكة الموضحة أدناه، مع التحرك فقط إلى اليمين (\\( \\rightarrow \\)) أو للأعلى (\\( \\uparrow \\))، ولا تمر بالنقطة \\( C \\)؟<br/><svg viewBox=\"0 0 200 160\" class=\"w-full max-w-xs mx-auto bg-white rounded-lg p-2\"><defs><pattern id=\"grid2\" width=\"30\" height=\"30\" patternUnits=\"userSpaceOnUse\"><path d=\"M 30 0 L 0 0 0 30\" fill=\"none\" stroke=\"#cbd5e1\" stroke-width=\"1\"/></pattern></defs><rect x=\"40\" y=\"20\" width=\"120\" height=\"120\" fill=\"url(#grid2)\" stroke=\"#475569\" stroke-width=\"2\"/><circle cx=\"40\" cy=\"140\" r=\"5\" fill=\"#22c55e\"/><circle cx=\"160\" cy=\"20\" r=\"5\" fill=\"#ef4444\"/><circle cx=\"100\" cy=\"80\" r=\"5\" fill=\"#3b82f6\"/><text x=\"28\" y=\"145\" class=\"text-xs font-bold\">A</text><text x=\"170\" y=\"20\" class=\"text-xs font-bold\">B</text><text x=\"108\" y=\"80\" class=\"text-xs font-bold\">C</text></svg>",
+        "question": "كم عدد المسارات من النقطة \\( A \\) إلى النقطة \\( B \\) على خطوط الشبكة الموضحة أدناه، مع التحرك فقط إلى اليمين (\\( \\rightarrow \\)) أو للأعلى (\\( \\uparrow \\))، ولا تمر بالنقطة \\( C \\)؟",
         "options": [
           "\\( 34 \\)",
           "\\( 36 \\)",
@@ -7918,7 +7918,7 @@
     "difficulty": "medium",
     "content": {
       "en": {
-        "question": "Three balanced scales are shown using shapes: circles \\( (C) \\), squares \\( (S) \\), and triangles \\( (T) \\).<br/>Scale 1: \\( 2C + 1S \\) balances \\( 1T + 1C \\).<br/>Scale 2: \\( 3S \\) balances \\( 1T + 1C \\).<br/>How many circles are needed to balance \\( 1 \\) triangle?<br/><svg viewBox=\"0 0 250 100\" class=\"w-full max-w-xs mx-auto bg-white rounded-lg p-2\" xmlns=\"http://www.w3.org/2000/svg\"><line x1=\"20\" y1=\"60\" x2=\"230\" y2=\"60\" stroke=\"#1e293b\" stroke-width=\"4\"/><polygon points=\"125,60 115,90 135,90\" fill=\"#64748b\"/><circle cx=\"50\" cy=\"45\" r=\"10\" fill=\"#3b82f6\"/><circle cx=\"75\" cy=\"45\" r=\"10\" fill=\"#3b82f6\"/><rect x=\"90\" y=\"35\" width=\"20\" height=\"20\" fill=\"#22c55e\"/><polygon points=\"180,30 170,50 190,50\" fill=\"#ef4444\"/><circle cx=\"205\" cy=\"40\" r=\"10\" fill=\"#3b82f6\"/></svg>",
+        "question": "Three balanced scales are shown using shapes: circles \\( (C) \\), squares \\( (S) \\), and triangles \\( (T) \\).<br/>Scale 1: \\( 2C + 1S \\) balances \\( 1T + 1C \\).<br/>Scale 2: \\( 3S \\) balances \\( 1T + 1C \\).<br/>How many circles are needed to balance \\( 1 \\) triangle?",
         "options": [
           "\\( 1 \\)",
           "\\( 2 \\)",
@@ -7930,7 +7930,7 @@
         "explanation": "From Scale 1: \\( 2C + S = T + C \\implies C + S = T \\). From Scale 2: \\( 3S = T + C \\). Substituting \\( T = C + S \\) into Scale 2 gives \\( 3S = (C + S) + C = 2C + S \\implies 2S = 2C \\implies S = C \\). Then \\( T = C + C = 2C \\). Therefore, \\( 1 \\) triangle balances \\( 2 \\) circles."
       },
       "ar": {
-        "question": "ثلاثة موازين متوازنة تظهر فيها أشكال: دوائر \\( (C) \\)، مربعات \\( (S) \\)، ومثلثات \\( (T) \\).<br/>الميزان 1: \\( 2C + 1S \\) يوازن \\( 1T + 1C \\).<br/>الميزان 2: \\( 3S \\) يوازن \\( 1T + 1C \\).<br/>كم دائر يحتاجها الميزان ليلزم لموازنة مثلث واحد \\( (1T) \\)؟<br/><svg viewBox=\"0 0 250 100\" class=\"w-full max-w-xs mx-auto bg-white rounded-lg p-2\" xmlns=\"http://www.w3.org/2000/svg\"><line x1=\"20\" y1=\"60\" x2=\"230\" y2=\"60\" stroke=\"#1e293b\" stroke-width=\"4\"/><polygon points=\"125,60 115,90 135,90\" fill=\"#64748b\"/><circle cx=\"50\" cy=\"45\" r=\"10\" fill=\"#3b82f6\"/><circle cx=\"75\" cy=\"45\" r=\"10\" fill=\"#3b82f6\"/><rect x=\"90\" y=\"35\" width=\"20\" height=\"20\" fill=\"#22c55e\"/><polygon points=\"180,30 170,50 190,50\" fill=\"#ef4444\"/><circle cx=\"205\" cy=\"40\" r=\"10\" fill=\"#3b82f6\"/></svg>",
+        "question": "ثلاثة موازين متوازنة تظهر فيها أشكال: دوائر \\( (C) \\)، مربعات \\( (S) \\)، ومثلثات \\( (T) \\).<br/>الميزان 1: \\( 2C + 1S \\) يوازن \\( 1T + 1C \\).<br/>الميزان 2: \\( 3S \\) يوازن \\( 1T + 1C \\).<br/>كم دائر يحتاجها الميزان ليلزم لموازنة مثلث واحد \\( (1T) \\)؟",
         "options": [
           "\\( 1 \\)",
           "\\( 2 \\)",
@@ -8653,7 +8653,7 @@
     "difficulty": "medium",
     "content": {
       "en": {
-        "question": "The two balance scales below are perfectly balanced. How many circles are needed to balance \\( 3 \\) squares? <svg viewBox='0 0 300 120' class='w-full max-w-md mx-auto bg-slate-50 rounded-lg p-2'><line x1='20' y1='50' x2='120' y2='50' stroke='#1e293b' stroke-width='3'/><polygon points='70,50 60,70 80,70' fill='#64748b'/><rect x='30' y='35' width='15' height='15' fill='#3b82f6'/><polygon points='100,35 92,50 108,50' fill='#ef4444'/><polygon points='115,35 107,50 123,50' fill='#ef4444'/><line x1='180' y1='50' x2='280' y2='50' stroke='#1e293b' stroke-width='3'/><polygon points='230,50 220,70 240,70' fill='#64748b'/><polygon points='195,35 187,50 203,50' fill='#ef4444'/><circle cx='255' cy='42' r='7' fill='#22c55e'/><circle cx='270' cy='42' r='7' fill='#22c55e'/></svg>",
+        "question": "The two balance scales below are perfectly balanced. How many circles are needed to balance \\( 3 \\) squares? ",
         "options": [
           "\\( 6 \\)",
           "\\( 8 \\)",
@@ -8665,7 +8665,7 @@
         "explanation": "From Scale 1: \\( 1 \\text{ Square} = 2 \\text{ Triangles} \\). From Scale 2: \\( 1 \\text{ Triangle} = 2 \\text{ Circles} \\). Substituting Scale 2 into Scale 1 gives \\( 1 \\text{ Square} = 2 \\times (2 \\text{ Circles}) = 4 \\text{ Circles} \\). Therefore, \\( 3 \\text{ Squares} = 3 \\times 4 = 12 \\text{ Circles} \\)."
       },
       "ar": {
-        "question": "الميزانان أدناه في حالة توازن تام. كم دائرة تلزم لموازنة \\( 3 \\) مربّعات؟ <svg viewBox='0 0 300 120' class='w-full max-w-md mx-auto bg-slate-50 rounded-lg p-2'><line x1='20' y1='50' x2='120' y2='50' stroke='#1e293b' stroke-width='3'/><polygon points='70,50 60,70 80,70' fill='#64748b'/><rect x='30' y='35' width='15' height='15' fill='#3b82f6'/><polygon points='100,35 92,50 108,50' fill='#ef4444'/><polygon points='115,35 107,50 123,50' fill='#ef4444'/><line x1='180' y1='50' x2='280' y2='50' stroke='#1e293b' stroke-width='3'/><polygon points='230,50 220,70 240,70' fill='#64748b'/><polygon points='195,35 187,50 203,50' fill='#ef4444'/><circle cx='255' cy='42' r='7' fill='#22c55e'/><circle cx='270' cy='42' r='7' fill='#22c55e'/></svg>",
+        "question": "الميزانان أدناه في حالة توازن تام. كم دائرة تلزم لموازنة \\( 3 \\) مربّعات؟ ",
         "options": [
           "\\( 6 \\)",
           "\\( 8 \\)",
@@ -8723,7 +8723,7 @@
     "difficulty": "hard",
     "content": {
       "en": {
-        "question": "A \\( 5 \\times 5 \\) grid currently has \\( 4 \\) shaded unit squares as shown. What is the minimum number of additional unit squares that must be shaded so that every \\( 2 \\times 2 \\) subgrid contains at least \\( 2 \\) shaded squares? <svg viewBox='0 0 160 160' class='w-full max-w-xs mx-auto bg-slate-50 rounded-lg p-2'><rect x='5' y='5' width='150' height='150' fill='none' stroke='#1e293b' stroke-width='2'/><path d='M35 5 v150 M65 5 v150 M95 5 v150 M125 5 v150 M5 35 h150 M5 65 h150 M5 95 h150 M5 125 h150' stroke='#cbd5e1' stroke-width='1'/><rect x='5' y='5' width='30' height='30' fill='#3b82f6'/><rect x='95' y='35' width='30' height='30' fill='#3b82f6'/><rect x='35' y='95' width='30' height='30' fill='#3b82f6'/><rect x='125' y='125' width='30' height='30' fill='#3b82f6'/></svg>",
+        "question": "A \\( 5 \\times 5 \\) grid currently has \\( 4 \\) shaded unit squares as shown. What is the minimum number of additional unit squares that must be shaded so that every \\( 2 \\times 2 \\) subgrid contains at least \\( 2 \\) shaded squares? ",
         "options": [
           "\\( 4 \\)",
           "\\( 5 \\)",
@@ -8735,7 +8735,7 @@
         "explanation": "Consider the four non-overlapping \\( 2 \\times 2 \\) subgrids in the four corners of the \\( 5 \\times 5 \\) board. Each of these four corner \\( 2 \\times 2 \\) subgrids must contain at least \\( 2 \\) shaded squares. Since they do not overlap, a minimum total of \\( 4 \\times 2 = 8 \\) shaded squares is required across the entire board. Currently, \\( 4 \\) squares are shaded, but to satisfy all central \\( 2 \\times 2 \\) subgrids simultaneously, optimal placement requires a total of \\( 10 \\) shaded squares. Thus, \\( 10 - 4 = 6 \\) additional squares must be shaded."
       },
       "ar": {
-        "question": "شبكة \\( 5 \\times 5 \\) تحتوي حالياً على \\( 4 \\) مربعات مظللة كما هو موضح. ما هو أقل عدد من المربعات الإضافية التي يجب تظليلها بحيث تحتوي كل شبكة فرعية \\( 2 \\times 2 \\) على المربعين المظللين على الأقل؟ <svg viewBox='0 0 160 160' class='w-full max-w-xs mx-auto bg-slate-50 rounded-lg p-2'><rect x='5' y='5' width='150' height='150' fill='none' stroke='#1e293b' stroke-width='2'/><path d='M35 5 v150 M65 5 v150 M95 5 v150 M125 5 v150 M5 35 h150 M5 65 h150 M5 95 h150 M5 125 h150' stroke='#cbd5e1' stroke-width='1'/><rect x='5' y='5' width='30' height='30' fill='#3b82f6'/><rect x='95' y='35' width='30' height='30' fill='#3b82f6'/><rect x='35' y='95' width='30' height='30' fill='#3b82f6'/><rect x='125' y='125' width='30' height='30' fill='#3b82f6'/></svg>",
+        "question": "شبكة \\( 5 \\times 5 \\) تحتوي حالياً على \\( 4 \\) مربعات مظللة كما هو موضح. ما هو أقل عدد من المربعات الإضافية التي يجب تظليلها بحيث تحتوي كل شبكة فرعية \\( 2 \\times 2 \\) على المربعين المظللين على الأقل؟ ",
         "options": [
           "\\( 4 \\)",
           "\\( 5 \\)",
@@ -9073,7 +9073,7 @@
     "difficulty": "hard",
     "content": {
       "en": {
-        "question": "A structure is built from unit cubes. The top view (a \\( 2 \\times 2 \\) grid) shows all \\( 4 \\) positions are occupied by at least one cube. The front view shows \\( 2 \\) columns: the left column has a height of \\( 3 \\) cubes and the right column has a height of \\( 2 \\) cubes. What is the maximum possible number of unit cubes used in this structure? <svg viewBox='0 0 240 100' class='w-full max-w-xs mx-auto bg-slate-50 rounded-lg p-2'><text x='40' y='20' font-size='12' font-weight='bold'>Top View</text><rect x='30' y='30' width='40' height='40' fill='#cbd5e1' stroke='#1e293b' stroke-width='2'/><path d='M50 30 v40 M30 50 h40' stroke='#1e293b'/><text x='150' y='20' font-size='12' font-weight='bold'>Front View</text><rect x='140' y='30' width='20' height='60' fill='#38bdf8' stroke='#1e293b' stroke-width='1.5'/><rect x='160' y='50' width='20' height='40' fill='#38bdf8' stroke='#1e293b' stroke-width='1.5'/></svg>",
+        "question": "A structure is built from unit cubes. The top view (a \\( 2 \\times 2 \\) grid) shows all \\( 4 \\) positions are occupied by at least one cube. The front view shows \\( 2 \\) columns: the left column has a height of \\( 3 \\) cubes and the right column has a height of \\( 2 \\) cubes. What is the maximum possible number of unit cubes used in this structure? ",
         "options": [
           "\\( 6 \\)",
           "\\( 8 \\)",
@@ -9085,7 +9085,7 @@
         "explanation": "The top view has \\( 2 \\times 2 = 4 \\) cells. The front view restricts the maximum height of both cells in the left column to \\( 3 \\) cubes, and both cells in the right column to \\( 2 \\) cubes. To maximize the total cubes, we make both cells in the left column have height \\( 3 \\) (sum = \\( 3 + 3 = 6 \\)), and both cells in the right column have height \\( 2 \\) (sum = \\( 2 + 2 = 4 \\)). Maximum cubes = \\( 6 + 4 = 10 \\)."
       },
       "ar": {
-        "question": "تم بناء مجسم من مكعبات الوحدة. يوضح المنظر العلوي (شبكة \\( 2 \\times 2 \\)) أن المواضع الأربعة جميعها مشغولة بمكعب واحد على الأقل. ويظهر المنظر الأمامي عمودين: العمود الأيسر بارتفاع \\( 3 \\) مكعبات والعمود الأيمن بارتفاع \\( 2 \\) مكعبين. ما هو أقصى عدد ممكن من مكعبات الوحدة المستخدمة في هذا المجسم؟ <svg viewBox='0 0 240 100' class='w-full max-w-xs mx-auto bg-slate-50 rounded-lg p-2'><text x='40' y='20' font-size='12' font-weight='bold'>مسقط علوي</text><rect x='30' y='30' width='40' height='40' fill='#cbd5e1' stroke='#1e293b' stroke-width='2'/><path d='M50 30 v40 M30 50 h40' stroke='#1e293b'/><text x='150' y='20' font-size='12' font-weight='bold'>مسقط أمامي</text><rect x='140' y='30' width='20' height='60' fill='#38bdf8' stroke='#1e293b' stroke-width='1.5'/><rect x='160' y='50' width='20' height='40' fill='#38bdf8' stroke='#1e293b' stroke-width='1.5'/></svg>",
+        "question": "تم بناء مجسم من مكعبات الوحدة. يوضح المنظر العلوي (شبكة \\( 2 \\times 2 \\)) أن المواضع الأربعة جميعها مشغولة بمكعب واحد على الأقل. ويظهر المنظر الأمامي عمودين: العمود الأيسر بارتفاع \\( 3 \\) مكعبات والعمود الأيمن بارتفاع \\( 2 \\) مكعبين. ما هو أقصى عدد ممكن من مكعبات الوحدة المستخدمة في هذا المجسم؟ ",
         "options": [
           "\\( 6 \\)",
           "\\( 8 \\)",
