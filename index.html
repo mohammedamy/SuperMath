@@ -127,6 +127,35 @@
     .custom-scrollbar::-webkit-scrollbar-thumb:hover {
       background: #94a3b8;
     }
+
+    @media print {
+      body * {
+        visibility: hidden;
+      }
+      #print-container, #print-container * {
+        visibility: visible;
+      }
+      #print-container {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        margin: 0;
+        padding: 0;
+        background: white !important;
+        color: black !important;
+      }
+      .no-break {
+        page-break-inside: avoid;
+      }
+      .page-break {
+        page-break-before: always;
+      }
+      /* Ensure SVGs print cleanly */
+      svg {
+        max-width: 100% !important;
+      }
+    }
   </style>
 </head>
 <body class="min-h-screen flex flex-col font-sans antialiased selection:bg-amber-500 selection:text-white bg-slate-50 text-slate-900 dark:bg-slate-900 dark:text-slate-100 transition-colors duration-300">
@@ -409,6 +438,11 @@
             <option value="Complex Numbers">الأعداد المركبة (Complex)</option>
             <option value="Logic and Combinatorics">التركيبات (Combinatorics)</option>
           </select>
+
+          <!-- Print Button -->
+          <button onclick="openPrintModal()" class="bg-slate-800 hover:bg-slate-700 text-emerald-400 border border-emerald-500/50 text-xs sm:text-sm rounded-xl px-4 py-2.5 font-bold transition-all flex items-center gap-2 shadow-lg hover:shadow-emerald-500/20">
+            🖨️ <span id="btn-print-text">طباعة الاختبار</span>
+          </button>
         </div>
       </div>
 
@@ -535,6 +569,31 @@
     </section>
 
   </main>
+
+  <!-- PRINT MODAL -->
+  <div id="print-modal" class="fixed inset-0 z-[100] hidden items-center justify-center bg-black/60 backdrop-blur-sm">
+    <div class="bg-slate-900 border border-slate-700 rounded-3xl p-8 max-w-md w-full mx-4 shadow-2xl relative">
+      <h3 class="text-xl font-bold text-white mb-2" id="print-modal-title">🖨️ إعداد ورقة الاختبار</h3>
+      <p class="text-sm text-slate-400 mb-6" id="print-modal-desc">اختر عدد الأسئلة التي ترغب في طباعتها بناءً على الفلاتر المحددة حالياً. سيتم دمجها في ورقة نظيفة جاهزة للطباعة مع مفتاح الإجابات في النهاية.</p>
+      
+      <div class="space-y-4">
+        <div>
+          <label class="block text-sm text-slate-300 mb-1" id="print-modal-lbl">عدد الأسئلة (Max <span id="print-max-q">0</span>)</label>
+          <input type="number" id="print-q-count" min="1" value="20" class="w-full bg-slate-800 border border-slate-700 text-white rounded-xl px-4 py-3 focus:ring-2 focus:ring-emerald-500 outline-none">
+        </div>
+        
+        <div class="flex gap-3 pt-4">
+          <button onclick="closePrintModal()" class="flex-1 py-3 bg-slate-800 hover:bg-slate-700 text-white font-bold rounded-xl transition-all" id="print-btn-cancel">إلغاء (Cancel)</button>
+          <button onclick="executePrint()" class="flex-1 py-3 bg-emerald-500 hover:bg-emerald-600 text-slate-900 font-bold rounded-xl transition-all" id="print-btn-confirm">توليد وطباعة (Generate)</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- HIDDEN PRINT CONTAINER -->
+  <div id="print-container" class="hidden font-serif bg-white text-black p-8">
+    <!-- Populated by JS for printing -->
+  </div>
 
   <!-- FOOTER -->
   <footer class="bg-slate-900 text-slate-400 text-xs py-8 border-t border-slate-800 mt-12">
@@ -723,7 +782,16 @@
         btnHint: "💡 عرض التلميح",
         btnSubmit: "تأكيد الإجابة",
         txtCorrect: "✨ إجابة صحيحة! أحسنت العمل.",
-        txtIncorrect: "❌ إجابة غير صحيحة. راجع خطوات الحل أعلاه."
+        txtIncorrect: "❌ إجابة غير صحيحة. راجع خطوات الحل أعلاه.",
+        printBtnText: "طباعة الاختبار",
+        printModalTitle: "🖨️ إعداد ورقة الاختبار",
+        printModalDesc: "اختر عدد الأسئلة التي ترغب في طباعتها بناءً على الفلاتر المحددة حالياً. سيتم دمجها في ورقة نظيفة جاهزة للطباعة مع مفتاح الإجابات في النهاية.",
+        printModalLbl: "عدد الأسئلة",
+        printBtnCancel: "إلغاء (Cancel)",
+        printBtnConfirm: "توليد وطباعة (Generate)",
+        printTitle: "اختبار رياضيات",
+        printAnswerKey: "مفتاح الإجابات",
+        printQNum: "سؤال"
       },
       en: {
         appTitle: "Math Path Analytics Platform | Edugates International School",
@@ -772,7 +840,16 @@
         btnHint: "💡 Show Hint",
         btnSubmit: "Submit Answer",
         txtCorrect: "✨ Correct Answer! Outstanding work.",
-        txtIncorrect: "❌ Incorrect. Check the mathematical breakdown above."
+        txtIncorrect: "❌ Incorrect. Check the mathematical breakdown above.",
+        printBtnText: "Print Test",
+        printModalTitle: "🖨️ Setup Print Sheet",
+        printModalDesc: "Select the number of questions you want to print based on the currently active filters. They will be merged into a clean, printable sheet with an Answer Key at the end.",
+        printModalLbl: "Number of Questions",
+        printBtnCancel: "Cancel",
+        printBtnConfirm: "Generate & Print",
+        printTitle: "Mathematics Test",
+        printAnswerKey: "Answer Key",
+        printQNum: "Question"
       }
     };
 
@@ -998,6 +1075,14 @@
       document.getElementById('lbl-json-size').innerText = t.lblJsonSize;
       document.getElementById('lbl-lang-nodes').innerText = t.lblLangNodes;
       document.getElementById('footer-text').innerText = t.footerText;
+
+      // Print Translations
+      if (document.getElementById('btn-print-text')) document.getElementById('btn-print-text').innerText = t.printBtnText;
+      if (document.getElementById('print-modal-title')) document.getElementById('print-modal-title').innerText = t.printModalTitle;
+      if (document.getElementById('print-modal-desc')) document.getElementById('print-modal-desc').innerText = t.printModalDesc;
+      if (document.getElementById('print-modal-lbl')) document.getElementById('print-modal-lbl').innerHTML = `${t.printModalLbl} (Max <span id="print-max-q">0</span>)`;
+      if (document.getElementById('print-btn-cancel')) document.getElementById('print-btn-cancel').innerText = t.printBtnCancel;
+      if (document.getElementById('print-btn-confirm')) document.getElementById('print-btn-confirm').innerText = t.printBtnConfirm;
 
       renderGradeFilters();
       renderTracksGrid();
@@ -1404,6 +1489,114 @@
       renderCharts();
       populateTracksGrid();
     });
+
+    // --- 8. PRINT ENGINE ---
+    function openPrintModal() {
+      const modal = document.getElementById('print-modal');
+      const maxSpan = document.getElementById('print-max-q');
+      const input = document.getElementById('print-q-count');
+      
+      const maxQ = currentFilteredQuestions.length;
+      maxSpan.innerText = maxQ;
+      input.max = maxQ;
+      input.value = Math.min(20, maxQ);
+      
+      if (maxQ === 0) {
+        input.value = 0;
+        input.disabled = true;
+        document.getElementById('print-btn-confirm').disabled = true;
+      } else {
+        input.disabled = false;
+        document.getElementById('print-btn-confirm').disabled = false;
+      }
+      
+      modal.classList.remove('hidden');
+      modal.classList.add('flex');
+    }
+
+    function closePrintModal() {
+      const modal = document.getElementById('print-modal');
+      modal.classList.add('hidden');
+      modal.classList.remove('flex');
+    }
+
+    function executePrint() {
+      const count = parseInt(document.getElementById('print-q-count').value) || 0;
+      if (count <= 0 || currentFilteredQuestions.length === 0) return;
+      
+      closePrintModal();
+      
+      const t = dict[currentLang];
+      const isAr = currentLang === 'ar';
+      const container = document.getElementById('print-container');
+      
+      let html = `<div dir="${isAr ? 'rtl' : 'ltr'}" class="max-w-4xl mx-auto">`;
+      html += `<div class="text-center mb-8 border-b-2 border-black pb-4">
+                 <h1 class="text-3xl font-bold">${t.printTitle}</h1>
+               </div>`;
+               
+      const questionsToPrint = currentFilteredQuestions.slice(0, count);
+      
+      questionsToPrint.forEach((q, index) => {
+        const text = isAr ? q.question_ar : q.question_en;
+        html += `
+          <div class="mb-8 no-break">
+            <div class="font-bold mb-2">${t.printQNum} ${index + 1}:</div>
+            <div class="text-lg leading-relaxed math-font mb-4">${text}</div>
+        `;
+        
+        if (q.diagram) {
+           html += `<div class="flex justify-center my-4">${q.diagram}</div>`;
+        }
+        
+        if (q.options && q.options.length > 0) {
+          html += `<div class="grid grid-cols-2 gap-4 text-base">`;
+          const labels = ['A', 'B', 'C', 'D', 'E'];
+          q.options.forEach((opt, oIdx) => {
+             const optText = isAr ? opt.ar : opt.en;
+             html += `<div class="flex items-center gap-2">
+                        <span class="font-bold border border-black rounded-full w-6 h-6 flex items-center justify-center shrink-0" style="min-width: 1.5rem;">${labels[oIdx]}</span>
+                        <span class="math-font">${optText}</span>
+                      </div>`;
+          });
+          html += `</div>`;
+        }
+        html += `</div>`;
+      });
+      
+      // Answer Key Page
+      html += `<div class="page-break"></div>`;
+      html += `<div class="text-center mb-8 border-b-2 border-black pb-4">
+                 <h2 class="text-2xl font-bold">${t.printAnswerKey}</h2>
+               </div>`;
+               
+      html += `<div class="grid grid-cols-4 gap-4">`;
+      const labels = ['A', 'B', 'C', 'D', 'E'];
+      questionsToPrint.forEach((q, index) => {
+        let ans = "FRQ";
+        if (q.correct_index !== undefined && q.correct_index !== null) {
+           ans = labels[q.correct_index];
+        }
+        html += `<div class="border-b border-gray-300 pb-1" style="font-family: monospace; font-size: 1.1rem;">
+                   <span class="font-bold">${index + 1}.</span> ${ans}
+                 </div>`;
+      });
+      html += `</div>`;
+      html += `</div>`; // end container
+      
+      container.innerHTML = html;
+      
+      // Tell MathJax to re-render the print container
+      if (window.MathJax) {
+        MathJax.typesetPromise([container]).then(() => {
+          setTimeout(() => {
+            window.print();
+          }, 500); // give a tiny delay for SVGs/Math to settle
+        });
+      } else {
+        window.print();
+      }
+    }
   </script>
 </body>
 </html>
