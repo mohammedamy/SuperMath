@@ -375,6 +375,14 @@
             <option value="Phase 3: Elite Research">🚀 المرحلة 3: النمذجة المتقدمة (Phase 3)</option>
           </select>
 
+          <!-- NSMO Phase Filter (shows only when nsmo track is selected) -->
+          <select id="quiz-nsmo-phase-select" onchange="filterQuestions()" class="bg-slate-800 text-white border border-emerald-500/50 text-xs sm:text-sm rounded-xl px-3 py-2.5 focus:ring-2 focus:ring-emerald-500 outline-none">
+            <option value="all">كل مراحل الأولمبياد الوطني NSMO</option>
+            <option value="Phase 1: Junior Olympiad (Grades 5-7)">🥉 المرحلة 1: أولمبياد الناشئين (G5-7)</option>
+            <option value="Phase 2: Intermediate Olympiad (Grades 8-9)">🥈 المرحلة 2: الأولمبياد المتوسط (G8-9)</option>
+            <option value="Phase 3: Senior National Olympiad (Grades 10-12)">🥇 المرحلة 3: الأولمبياد الوطني (G10-12)</option>
+          </select>
+
           <select id="quiz-topic-select" onchange="filterQuestions()" class="bg-slate-800 text-white border border-slate-700 text-xs sm:text-sm rounded-xl px-3 py-2.5 focus:ring-2 focus:ring-amber-500 outline-none">
             <option value="all">كل المواضيع (All Topics)</option>
             <option value="Algebra">الجبر (Algebra)</option>
@@ -1289,15 +1297,18 @@
       const nafesGradeVal = document.getElementById('quiz-nafes-grade-select').value;
       const kangLevelVal = document.getElementById('quiz-kangaroo-level-select').value;
       const kaustPhaseVal = document.getElementById('quiz-kaust-phase-select').value;
+      const nsmoPhaseVal = document.getElementById('quiz-nsmo-phase-select').value;
 
       // Show/hide sub-filters based on track selection
       const nafesGradeSelect = document.getElementById('quiz-nafes-grade-select');
       const kangLevelSelect = document.getElementById('quiz-kangaroo-level-select');
       const kaustPhaseSelect = document.getElementById('quiz-kaust-phase-select');
+      const nsmoPhaseSelect = document.getElementById('quiz-nsmo-phase-select');
       
       nafesGradeSelect.style.display = (trackVal === 'nafes' || trackVal === 'all') ? 'block' : 'none';
       kangLevelSelect.style.display = (trackVal === 'kangaroo' || trackVal === 'all') ? 'block' : 'none';
       kaustPhaseSelect.style.display = (trackVal === 'kaust' || trackVal === 'all') ? 'block' : 'none';
+      nsmoPhaseSelect.style.display = (trackVal === 'nsmo' || trackVal === 'all') ? 'block' : 'none';
 
       currentFilteredQuestions = appData.questions.filter(q => {
         const matchTrack = trackVal === 'all' || q.track === trackVal;
@@ -1315,7 +1326,11 @@
         const matchKaustPhase = kaustPhaseVal === 'all' || (q.track === 'kaust' && q.level === kaustPhaseVal);
         if (kaustPhaseVal !== 'all' && q.track !== 'kaust') return false;
 
-        return matchTrack && matchTopic && matchNafesGrade && matchKangLevel && matchKaustPhase;
+        // NSMO phase filter
+        const matchNsmoPhase = nsmoPhaseVal === 'all' || (q.track === 'nsmo' && q.level === nsmoPhaseVal);
+        if (nsmoPhaseVal !== 'all' && q.track !== 'nsmo') return false;
+
+        return matchTrack && matchTopic && matchNafesGrade && matchKangLevel && matchKaustPhase && matchNsmoPhase;
       });
 
       currentQuestionIdx = 0;
