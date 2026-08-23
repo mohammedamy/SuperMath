@@ -1,22 +1,13 @@
 import json
 import os
 import time
+from openai import OpenAI
 
-# NOTE: This script requires the `google-genai` package and an API key.
-# Run: pip install google-genai
-# Set your API key: export GEMINI_API_KEY="your_api_key_here"
-
-from google import genai
-from google.genai import types
-
-# Initialize the Gemini client
-# It automatically picks up the GEMINI_API_KEY environment variable.
-try:
-    client = genai.Client()
-except Exception as e:
-    print(f"Error initializing client: {e}", flush=True)
-    print("Please ensure GEMINI_API_KEY is set in your environment.", flush=True)
-    exit(1)
+# Initialize OpenRouter client
+client = OpenAI(
+  base_url="https://openrouter.ai/api/v1",
+  api_key=os.environ.get("OPENROUTER_API_KEY")
+)
 
 # Define the target paths
 DATA_DIR = "data"
@@ -31,54 +22,6 @@ TRACKS = {
 
 QUESTIONS_PER_BATCH = 20
 TOTAL_WANTED = 250
-
-def get_schema():
-    return {
-        "type": "ARRAY",
-        "items": {
-            "type": "OBJECT",
-            "properties": {
-                "id": {"type": "STRING", "description": "Unique ID like KAN-001, JEE-045, etc."},
-                "track": {"type": "STRING", "description": "The track ID (e.g. kangaroo, jee, nsmo)"},
-                "level": {"type": "STRING", "description": "The target grade level or stage."},
-                "topic": {"type": "STRING", "description": "The mathematical topic."},
-                "type": {"type": "STRING", "description": "MCQ or FRQ."},
-                "difficulty": {"type": "STRING", "description": "easy, medium, hard, extreme."},
-                "content": {
-                    "type": "OBJECT",
-                    "properties": {
-                        "en": {
-                            "type": "OBJECT",
-                            "properties": {
-                                "question": {"type": "STRING", "description": "The question text in English. Use \\( \\) for inline LaTeX and $$ $$ for block LaTeX."},
-                                "options": {
-                                    "type": "ARRAY", 
-                                    "items": {"type": "STRING"},
-                                    "description": "Leave empty if FRQ."
-                                },
-                                "hint": {"type": "STRING"},
-                                "explanation": {"type": "STRING", "description": "Step by step explanation in English."}
-                            }
-                        },
-                        "ar": {
-                            "type": "OBJECT",
-                            "properties": {
-                                "question": {"type": "STRING", "description": "The question text in Arabic. Use \\( \\) for inline LaTeX and $$ $$ for block LaTeX."},
-                                "options": {
-                                    "type": "ARRAY", 
-                                    "items": {"type": "STRING"},
-                                    "description": "Leave empty if FRQ."
-                                },
-                                "hint": {"type": "STRING"},
-                                "explanation": {"type": "STRING", "description": "Step by step explanation in Arabic."}
-                            }
-                        }
-                    }
-                },
-                "correct_index": {"type": "STRING", "description": "For MCQ, the integer index of the correct option (0-indexed). For FRQ, the exact numerical answer as a string."}
-            }
-        }
-    }
 
 def generate_batch(track_id, existing_count):
     track_info = TRACKS[track_id]
@@ -103,21 +46,47 @@ def generate_batch(track_id, existing_count):
     CRITICAL REQUIREMENT:
     All generated questions MUST closely mimic the ACTUAL PAST PAPERS of the {track_id} competition.
     Match the exact style, rigor, formatting, tone, and typical mathematical depth found in the real exams.
+    
+    OUTPUT FORMAT:
+    You must output ONLY a valid JSON object containing a single key "questions" whose value is an array of the {QUESTIONS_PER_BATCH} question objects.
+    
+    Each question object must strictly follow this exact schema:
+    {{
+        "id": "KAUST-001",
+        "track": "{track_id}",
+        "level": "{track_info['level']}",
+        "topic": "Topic Name",
+        "type": "MCQ", 
+        "difficulty": "hard",
+        "content": {{
+            "en": {{
+                "question": "English question text",
+                "options": ["A", "B", "C", "D"], 
+                "hint": "English hint",
+                "explanation": "English explanation"
+            }},
+            "ar": {{
+                "question": "Arabic question text",
+                "options": ["A", "B", "C", "D"], 
+                "hint": "Arabic hint",
+                "explanation": "Arabic explanation"
+            }}
+        }},
+        "correct_index": "0" 
+    }}
     """
     
     print(f"Generating batch for {track_id} (Questions {existing_count+1} to {existing_count+QUESTIONS_PER_BATCH})...", flush=True)
     
-    response = client.models.generate_content(
-        model='gemini-3.6-flash',
-        contents=prompt,
-        config=types.GenerateContentConfig(
-            response_mime_type="application/json",
-            response_schema=get_schema(),
-            temperature=0.7
-        )
+    response = client.chat.completions.create(
+        model="openai/gpt-4o-mini",
+        messages=[{"role": "user", "content": prompt}],
+        response_format={"type": "json_object"},
+        temperature=0.7
     )
     
-    return json.loads(response.text)
+    content = response.choices[0].message.content
+    return json.loads(content)["questions"]
 
 def main():
     if not os.path.exists(DATA_DIR):
@@ -139,6 +108,10 @@ def main():
         current_count = len(questions)
         print(f"[{track_id}] Currently has {current_count} questions.", flush=True)
         
+        # Only process tracks that aren't finished
+        if current_count >= TOTAL_WANTED:
+             continue
+
         # Generate until we reach the target
         while current_count < TOTAL_WANTED:
             try:
@@ -153,12 +126,12 @@ def main():
                 print(f"[{track_id}] Successfully added batch. Total now: {current_count}/{TOTAL_WANTED}", flush=True)
                 
                 # Sleep to avoid rate limits
-                time.sleep(10)
+                time.sleep(1)
                 
             except Exception as e:
                 print(f"Error generating batch for {track_id}: {e}", flush=True)
-                print("Retrying in 10 seconds...", flush=True)
-                time.sleep(10)
+                print("Retrying in 5 seconds...", flush=True)
+                time.sleep(5)
         
         # Track finished, push to git
         if current_count >= TOTAL_WANTED:

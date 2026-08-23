@@ -350,13 +350,48 @@
             <option value="nsmo">NSMO</option>
           </select>
 
+          <!-- Nafes Grade Filter (shows only when nafes track is selected) -->
+          <select id="quiz-nafes-grade-select" onchange="filterQuestions()" class="bg-slate-800 text-white border border-amber-500/50 text-xs sm:text-sm rounded-xl px-3 py-2.5 focus:ring-2 focus:ring-amber-500 outline-none">
+            <option value="all">كل صفوف نافس (All Nafes Grades)</option>
+            <option value="Grade 3">🟢 نافس الصف 3 (Grade 3)</option>
+            <option value="Grade 6">🔵 نافس الصف 6 (Grade 6)</option>
+            <option value="Grade 9">🟣 نافس الصف 9 (Grade 9)</option>
+          </select>
+
+          <!-- Kangaroo Level Filter (shows only when kangaroo track is selected) -->
+          <select id="quiz-kangaroo-level-select" onchange="filterQuestions()" class="bg-slate-800 text-white border border-rose-500/50 text-xs sm:text-sm rounded-xl px-3 py-2.5 focus:ring-2 focus:ring-rose-500 outline-none">
+            <option value="all">كل مستويات كانجارو (All Kangaroo Levels)</option>
+            <option value="Ecolier">🌱 إيكولير (Ecolier: G3-4)</option>
+            <option value="Benjamin">🌿 بنجامين (Benjamin: G5-6)</option>
+            <option value="Cadet">🌳 كاديت (Cadet: G7-8)</option>
+            <option value="Junior">🎓 جونيور (Junior: G9-10)</option>
+          </select>
+
           <select id="quiz-topic-select" onchange="filterQuestions()" class="bg-slate-800 text-white border border-slate-700 text-xs sm:text-sm rounded-xl px-3 py-2.5 focus:ring-2 focus:ring-amber-500 outline-none">
             <option value="all">كل المواضيع (All Topics)</option>
-            <option value="Logical Puzzles">أحاجي منطقية (Logic)</option>
-            <option value="Basic Algebra">الجبر الأساسي (Algebra)</option>
-            <option value="Complex Numbers">الأعداد المركبة (Complex)</option>
+            <option value="Algebra">الجبر (Algebra)</option>
+            <option value="Geometry">الهندسة (Geometry)</option>
+            <option value="Fractions">الكسور (Fractions)</option>
+            <option value="Word Problems">مسائل كلامية (Word Problems)</option>
+            <option value="Statistics">الإحصاء (Statistics)</option>
+            <option value="Probability">الاحتمالات (Probability)</option>
             <option value="Number Theory">نظرية الأعداد (Number Theory)</option>
-            <option value="Logic and Combinatorics">التركيبات والعد (Combinatorics)</option>
+            <option value="Sequences">المتتاليات (Sequences)</option>
+            <option value="Trigonometry">المثلثات (Trigonometry)</option>
+            <option value="Functions">الدوال (Functions)</option>
+            <option value="Quadratic Equations">المعادلات التربيعية (Quadratic)</option>
+            <option value="Coordinate Geometry">الهندسة التحليلية (Coordinate)</option>
+            <option value="Systems of Equations">الأنظمة (Systems)</option>
+            <option value="Integers">الأعداد الصحيحة (Integers)</option>
+            <option value="Percentages">النسب المئوية (Percentages)</option>
+            <option value="Ratio">النسب والتناسب (Ratio)</option>
+            <option value="LCM and HCF">م.م.أ وق.م.أ (LCM & HCF)</option>
+            <option value="Decimals">الأعداد العشرية (Decimals)</option>
+            <option value="Logic">المنطق (Logic)</option>
+            <option value="Logical Puzzles">أحاجي منطقية (Logical Puzzles)</option>
+            <option value="Basic Algebra">الجبر الأساسي (Basic Algebra)</option>
+            <option value="Complex Numbers">الأعداد المركبة (Complex)</option>
+            <option value="Logic and Combinatorics">التركيبات (Combinatorics)</option>
           </select>
         </div>
       </div>
@@ -1243,11 +1278,29 @@
     function filterQuestions() {
       const trackVal = document.getElementById('quiz-track-select').value;
       const topicVal = document.getElementById('quiz-topic-select').value;
+      const nafesGradeVal = document.getElementById('quiz-nafes-grade-select').value;
+      const kangLevelVal = document.getElementById('quiz-kangaroo-level-select').value;
+
+      // Show/hide sub-filters based on track selection
+      const nafesGradeSelect = document.getElementById('quiz-nafes-grade-select');
+      const kangLevelSelect = document.getElementById('quiz-kangaroo-level-select');
+      
+      nafesGradeSelect.style.display = (trackVal === 'nafes' || trackVal === 'all') ? 'block' : 'none';
+      kangLevelSelect.style.display = (trackVal === 'kangaroo' || trackVal === 'all') ? 'block' : 'none';
 
       currentFilteredQuestions = appData.questions.filter(q => {
         const matchTrack = trackVal === 'all' || q.track === trackVal;
         const matchTopic = topicVal === 'all' || q.topic === topicVal;
-        return matchTrack && matchTopic;
+        
+        // Nafes grade filter
+        const matchNafesGrade = nafesGradeVal === 'all' || (q.track === 'nafes' && q.level === nafesGradeVal);
+        if (nafesGradeVal !== 'all' && q.track !== 'nafes') return false;
+
+        // Kangaroo level filter
+        const matchKangLevel = kangLevelVal === 'all' || (q.track === 'kangaroo' && q.level === kangLevelVal);
+        if (kangLevelVal !== 'all' && q.track !== 'kangaroo') return false;
+
+        return matchTrack && matchTopic && matchNafesGrade && matchKangLevel;
       });
 
       currentQuestionIdx = 0;
