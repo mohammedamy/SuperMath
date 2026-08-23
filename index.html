@@ -367,6 +367,14 @@
             <option value="Junior">🎓 جونيور (Junior: G9-10)</option>
           </select>
 
+          <!-- KAUST Phase Filter (shows only when kaust track is selected) -->
+          <select id="quiz-kaust-phase-select" onchange="filterQuestions()" class="bg-slate-800 text-white border border-teal-500/50 text-xs sm:text-sm rounded-xl px-3 py-2.5 focus:ring-2 focus:ring-teal-500 outline-none">
+            <option value="all">كل مراحل كاوست (All KAUST Phases)</option>
+            <option value="Phase 1: Foundation Research">🧬 المرحلة 1: أساسيات البحث (Phase 1)</option>
+            <option value="Phase 2: Advanced Analysis">🔬 المرحلة 2: التحليل المتقدم (Phase 2)</option>
+            <option value="Phase 3: Elite Research">🚀 المرحلة 3: النمذجة المتقدمة (Phase 3)</option>
+          </select>
+
           <select id="quiz-topic-select" onchange="filterQuestions()" class="bg-slate-800 text-white border border-slate-700 text-xs sm:text-sm rounded-xl px-3 py-2.5 focus:ring-2 focus:ring-amber-500 outline-none">
             <option value="all">كل المواضيع (All Topics)</option>
             <option value="Algebra">الجبر (Algebra)</option>
@@ -1280,13 +1288,16 @@
       const topicVal = document.getElementById('quiz-topic-select').value;
       const nafesGradeVal = document.getElementById('quiz-nafes-grade-select').value;
       const kangLevelVal = document.getElementById('quiz-kangaroo-level-select').value;
+      const kaustPhaseVal = document.getElementById('quiz-kaust-phase-select').value;
 
       // Show/hide sub-filters based on track selection
       const nafesGradeSelect = document.getElementById('quiz-nafes-grade-select');
       const kangLevelSelect = document.getElementById('quiz-kangaroo-level-select');
+      const kaustPhaseSelect = document.getElementById('quiz-kaust-phase-select');
       
       nafesGradeSelect.style.display = (trackVal === 'nafes' || trackVal === 'all') ? 'block' : 'none';
       kangLevelSelect.style.display = (trackVal === 'kangaroo' || trackVal === 'all') ? 'block' : 'none';
+      kaustPhaseSelect.style.display = (trackVal === 'kaust' || trackVal === 'all') ? 'block' : 'none';
 
       currentFilteredQuestions = appData.questions.filter(q => {
         const matchTrack = trackVal === 'all' || q.track === trackVal;
@@ -1300,7 +1311,11 @@
         const matchKangLevel = kangLevelVal === 'all' || (q.track === 'kangaroo' && q.level === kangLevelVal);
         if (kangLevelVal !== 'all' && q.track !== 'kangaroo') return false;
 
-        return matchTrack && matchTopic && matchNafesGrade && matchKangLevel;
+        // KAUST phase filter
+        const matchKaustPhase = kaustPhaseVal === 'all' || (q.track === 'kaust' && q.level === kaustPhaseVal);
+        if (kaustPhaseVal !== 'all' && q.track !== 'kaust') return false;
+
+        return matchTrack && matchTopic && matchNafesGrade && matchKangLevel && matchKaustPhase;
       });
 
       currentQuestionIdx = 0;
