@@ -211,6 +211,12 @@
             <span id="stat-questions-count">6 المسارات متكاملة (1,000+ سؤال لكل مسار)</span>
           </div>
 
+          <!-- Brilliant Classroom Link -->
+          <a href="https://brilliant.org/classroom/join-v2/19fe3e01-311f-4170-8c40-52a8982e3111" target="_blank" rel="noopener noreferrer" class="bg-brand-600 hover:bg-brand-500 text-white border border-brand-500 px-4 py-2 rounded-xl text-sm font-bold transition-all duration-300 flex items-center gap-2 hover:shadow-lg hover:shadow-brand-500/20">
+            <span>✨</span>
+            <span id="brilliant-join-text">انضم للفصل في Brilliant</span>
+          </a>
+
           <!-- Theme Switcher -->
           <button id="theme-toggle-btn" onclick="toggleTheme()" class="bg-slate-800/80 hover:bg-slate-700 text-amber-400 border border-slate-700 px-4 py-2 rounded-xl text-sm font-bold transition-all duration-300 flex items-center gap-2 hover:shadow-lg hover:shadow-amber-500/10">
             <span id="theme-icon">🌙</span>
@@ -791,7 +797,8 @@
         printBtnConfirm: "توليد وطباعة (Generate)",
         printTitle: "اختبار رياضيات",
         printAnswerKey: "مفتاح الإجابات",
-        printQNum: "سؤال"
+        printQNum: "سؤال",
+        btnBrilliant: "انضم للفصل في Brilliant"
       },
       en: {
         appTitle: "Math Path Analytics Platform | Edugates International School",
@@ -849,7 +856,8 @@
         printBtnConfirm: "Generate & Print",
         printTitle: "Mathematics Test",
         printAnswerKey: "Answer Key",
-        printQNum: "Question"
+        printQNum: "Question",
+        btnBrilliant: "Join Brilliant Classroom"
       }
     };
 
@@ -1041,6 +1049,8 @@
       document.getElementById('stat-3-val').innerText = t.stat3Value;
       document.getElementById('stat-4-label').innerText = t.stat4Label;
       document.getElementById('stat-4-val').innerText = t.stat4Value;
+      
+      document.getElementById('brilliant-join-text').innerText = t.btnBrilliant;
 
       document.getElementById('sec1-title').innerText = t.sec1Title;
       document.getElementById('sec1-desc').innerText = t.sec1Desc;
