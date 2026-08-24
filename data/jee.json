@@ -53,7 +53,8 @@
         "explanation": "نعيد كتابة المجموع بالشكل \\( L = \\lim_{n \\to \\infty} \\frac{1}{n} \\sum_{k=1}^{n} \\frac{1}{1 + (k/n)^2} \\). هذا يمثل تكامل ريمان المحصى بالتكامل المحدد \\( \\int_{0}^{1} \\frac{1}{1 + x^2} dx = \\frac{\\pi}{4} \\). إذن \\( L = \\frac{\\pi}{4} \\) والقيمة المطلوبة هي \\( 1 \\)."
       }
     },
-    "correct_index": "1"
+    "correct_index": "1",
+    "correct_answer": "1"
   },
   {
     "id": "JEE-003",
@@ -142,7 +143,8 @@
         "explanation": "بما أن \\( 1 + \\omega^2 = -\\omega \\)، فإن الحد الأول يساوي \\( (-2\\omega)^5 = -32\\omega^2 \\). وبما أن \\( 1 + \\omega = -\\omega^2 \\)، فإن الحد الثاني يساوي \\( (-2\\omega^2)^5 = -32\\omega \\). المجموع يساوي \\( -32(\\omega^2 + \\omega) = -32(-1) = 32 \\)."
       }
     },
-    "correct_index": "0"
+    "correct_index": "0",
+    "correct_answer": "32"
   },
   {
     "id": "JEE-006",
@@ -231,7 +233,8 @@
         "explanation": "نقاط التقاطع هما \\( x = 0 \\) و \\( x = 1 \\). المساحة \\( A = \\int_{0}^{1} (2x - 2x^2) dx = \\left[ x^2 - \\frac{2x^3}{3} \\right]_0^1 = \\frac{1}{3} \\). إذن \\( 3A = 1 \\)."
       }
     },
-    "correct_index": "1"
+    "correct_index": "1",
+    "correct_answer": "1"
   },
   {
     "id": "JEE-009",
@@ -353,7 +356,8 @@
         "explanation": "بتطبيق الخاصية نجد أن \\( 2I = \\int_0^{\\pi/2} 1 dx = \\frac{\\pi}{2} \\implies I = \\frac{\\pi}{4} \\). بالتالي، القيمة المطلوبة \\( K = 1 \\)."
       }
     },
-    "correct_index": "1"
+    "correct_index": "1",
+    "correct_answer": "1"
   },
   {
     "id": "JEE-013",
@@ -442,7 +446,8 @@
         "explanation": "نعيد كتابة التكامل بالشكل \\( \\int \\frac{x^6 dx}{x^7(x^7 + 1)} \\). بالتعويض \\( u = x^7 \\) نجد \\( \\frac{1}{7} \\int \\frac{du}{u(u + 1)} = \\frac{1}{7} \\ln \\left| \\frac{x^7}{x^7 + 1} \\right| + C \\). إذن \\( A = 7 \\)."
       }
     },
-    "correct_index": "0"
+    "correct_index": "0",
+    "correct_answer": "7"
   },
   {
     "id": "JEE-016",
@@ -531,7 +536,8 @@
         "explanation": "بما أن \\( z = \\omega \\)، فإن الحد الأول يساوي \\( (-1)^2 = 1 \\)، والحد الثاني يساوي \\( (-1)^2 = 1 \\)، والحد الثالث يساوي \\( 2^2 = 4 \\). المجموع الكلي يساوي \\( 1 + 1 + 4 = 6 \\)."
       }
     },
-    "correct_index": "0"
+    "correct_index": "0",
+    "correct_answer": "6"
   },
   {
     "id": "JEE-019",
@@ -587,7 +593,8 @@
         "explanation": "من المعادلة الدالية، نجد \\( f(0) = 1 \\). ثم \\( f'(x) = f(x) f'(0) = 3 f(x) \\). بالتالي، فإن النسب المذكورة تساوي \\( \\frac{f'(1)}{f(1)} = 3 \\)."
       }
     },
-    "correct_index": "3"
+    "correct_index": "3",
+    "correct_answer": "3"
   },
   {
     "id": "JEE-021",
@@ -610,7 +617,8 @@
         "explanation": "عامل التكامل هو \\( I(x) = 1 + x^2 \\). بضرب المعادلة التفاضلية به نحصل على \\( \\frac{d}{dx}[y(1+x^2)] = 4x^2 \\). بمكاملة الطرفين نحصل على \\( y(1+x^2) = \\frac{4}{3} x^3 + C \\). باستخدام الشرط \\( y(0) = 0 \\)، نجد أن \\( C = 0 \\). بالتالي \\( y(1) = \\frac{2}{3} \\)، وتكون القيمة المطلوبة \\( 3 \\cdot y(1) = 2 \\)."
       }
     },
-    "correct_index": "2"
+    "correct_index": "2",
+    "correct_answer": "2"
   },
   {
     "id": "JEE-022",
@@ -699,7 +707,8 @@
         "explanation": "جذور المعادلة المميزة هي \\( r_1 = 1 \\) و \\( r_2 = 2 \\). بالتالي، فإن \\( f(x) = C_1 e^x + C_2 e^{2x} \\). باستخدام الشروط الابتدائية: \\( C_1 + C_2 = 1 \\) و \\( C_1 + 2C_2 = 3 \\)، نجد أن \\( C_2 = 2 \\) و \\( C_1 = -1 \\). إذن \\( f(x) = -e^x + 2e^{2x} \\). بالتعويض عن \\( x = \\ln 2 \\) نحصل على \\( f(\\ln 2) = -2 + 2(4) = 6 \\)."
       }
     },
-    "correct_index": "0"
+    "correct_index": "0",
+    "correct_answer": "2"
   },
   {
     "id": "JEE-025",
@@ -776,7 +785,7 @@
     "difficulty": "medium",
     "content": {
       "en": {
-        "question": "The graph of \\( f(x) = 2x^3 - 9x^2 + 12x + 1 \\) is shown below. What is the sum of the local maximum and local minimum values of \\( f(x) \\)?\n",
+        "question": "The graph of \\( f(x) = 2x^3 - 9x^2 + 12x + 1 \\) is. What is the sum of the local maximum and local minimum values of \\( f(x) \\)?",
         "options": [
           "\\( 11 \\)",
           "\\( 13 \\)",
@@ -787,7 +796,7 @@
         "explanation": "\\( f'(x) = 6x^2 - 18x + 12 = 6(x-1)(x-2) \\). Critical points are \\( x = 1 \\) and \\( x = 2 \\). Local maximum occurs at \\( x = 1 \\) with \\( f(1) = 6 \\). Local minimum occurs at \\( x = 2 \\) with \\( f(2) = 5 \\). The sum of these extremum values is \\( 6 + 5 = 11 \\)."
       },
       "ar": {
-        "question": "الرسم البياني للدالة \\( f(x) = 2x^3 - 9x^2 + 12x + 1 \\) موضح أدناه. ما هو مجموع قيمتي الحد الأقصى المحلي والحد الأدنى المحلي للدالة \\( f(x) \\)؟\n",
+        "question": "الرسم البياني للدالة \\( f(x) = 2x^3 - 9x^2 + 12x + 1 \\) موضح أدناه. ما هو مجموع قيمتي الحد الأقصى المحلي والحد الأدنى المحلي للدالة \\( f(x) \\)؟",
         "options": [
           "\\( 11 \\)",
           "\\( 13 \\)",
@@ -809,7 +818,7 @@
     "difficulty": "medium",
     "content": {
       "en": {
-        "question": "Find the area of the region bounded by the curves \\( y = x^2 \\) and \\( y = \\sqrt{x} \\), represented by the shaded region in the figure below.\n",
+        "question": "Find the area of the region bounded by the curves \\( y = x^2 \\) and \\( y = \\sqrt{x} \\), represented by the shaded region",
         "options": [
           "\\( \\frac{1}{3} \\)",
           "\\( \\frac{1}{2} \\)",
@@ -820,7 +829,7 @@
         "explanation": "Intersection points occur at \\( x = 0 \\) and \\( x = 1 \\). The area is \\( \\int_0^1 (\\sqrt{x} - x^2) \\, dx = \\left[ \\frac{2}{3} x^{3/2} - \\frac{x^3}{3} \\right]_0^1 = \\frac{2}{3} - \\frac{1}{3} = \\frac{1}{3} \\)."
       },
       "ar": {
-        "question": "أوجد مساحة المنطقة المحصورة بين المنحنيين \\( y = x^2 \\) و \\( y = \\sqrt{x} \\)، الممثلة بالمنطقة المظللة في الشكل أدناه.\n",
+        "question": "أوجد مساحة المنطقة المحصورة بين المنحنيين \\( y = x^2 \\) و \\( y = \\sqrt{x} \\)، الممثلة بالمنطقة المظللة في الشكل أدناه.",
         "options": [
           "\\( \\frac{1}{3} \\)",
           "\\( \\frac{1}{2} \\)",
@@ -854,7 +863,8 @@
         "explanation": "بالنسبة للدائرة الأولى: \\( g_1 = 1 \\)، \\( f_1 = 2 \\)، \\( c_1 = 1 \\). وبالنسبة للدائرة الثانية: \\( g_2 = -2 \\)، \\( f_2 = -1 \\)، \\( c_2 = c \\). شرط التعامد يعطي: \\( 2(1)(-2) + 2(2)(-1) = 1 + c \\implies -8 = 1 + c \\implies c = -9 \\)."
       }
     },
-    "correct_index": "-9"
+    "correct_index": "-9",
+    "correct_answer": "4"
   },
   {
     "id": "JEE-030",
@@ -865,7 +875,7 @@
     "difficulty": "hard",
     "content": {
       "en": {
-        "question": "The locus of a complex number \\( z \\) satisfying \\( \\text{Arg}\\left(\\frac{z - 2}{z + 2}\\right) = \\frac{\\pi}{3} \\) is a circular arc shown in the figure. Find the radius of the circle containing this arc.\n",
+        "question": "The locus of a complex number \\( z \\) satisfying \\( \\text{Arg}\\left(\\frac{z - 2}{z + 2}\\right) = \\frac{\\pi}{3} \\) is a circular arc. Find the radius of the circle containing this arc.",
         "options": [
           "\\( \\frac{4}{\\sqrt{3}} \\)",
           "\\( \\frac{2}{\\sqrt{3}} \\)",
@@ -876,7 +886,7 @@
         "explanation": "The distance between the fixed points \\( z_1 = -2 \\) and \\( z_2 = 2 \\) is the chord length \\( L = 4 \\). The angle subtended by this chord at any point on the circular arc is \\( \\theta = \\frac{\\pi}{3} \\). Using \\( L = 2 R \\sin \\theta \\), we have \\( 4 = 2 R \\sin\\left(\\frac{\\pi}{3}\\right) = \\sqrt{3} R \\implies R = \\frac{4}{\\sqrt{3}} \\)."
       },
       "ar": {
-        "question": "المحل الهندسي للعدد المركب \\( z \\) الذي يحقق \\( \\text{Arg}\\left(\\frac{z - 2}{z + 2}\\right) = \\frac{\\pi}{3} \\) هو قوس دائري موضح في الشكل. أوجد نصف قطر الدائرة التي تحوي هذا القوس.\n",
+        "question": "المحل الهندسي للعدد المركب \\( z \\) الذي يحقق \\( \\text{Arg}\\left(\\frac{z - 2}{z + 2}\\right) = \\frac{\\pi}{3} \\) هو قوس دائري موضح في الشكل. أوجد نصف قطر الدائرة التي تحوي هذا القوس.",
         "options": [
           "\\( \\frac{4}{\\sqrt{3}} \\)",
           "\\( \\frac{2}{\\sqrt{3}} \\)",
@@ -965,7 +975,7 @@
         "explanation": "Here \\( h = 1 \\). Using the formula: \\( T = \\frac{1}{2} [ 1 + 21 + 2(3 + 7 + 13) ] = \\frac{1}{2} [ 22 + 2(23) ] = \\frac{1}{2} [ 22 + 46 ] = \\frac{68}{2} = 34 \\)."
       },
       "ar": {
-        "question": "تم أخذ عينات لدالة مستمرة \\( f(x) \\) عند فترات متساوية كما هو موضح في الجدول أدناه:\n<table class=\"w-full text-center border-collapse border border-slate-700 my-4\"><thead><tr class=\"bg-slate-800 text-white\"><th class=\"border border-slate-600 p-2\">\\( x \\)</th><th class=\"border border-slate-600 p-2\">\\( 0 \\)</th><th class=\"border border-slate-600 p-2\">\\( 1 \\)</th><th class=\"border border-slate-600 p-2\">\\( 2 \\)</th><th class=\"border border-slate-600 p-2\">\\( 3 \\)</th><th class=\"border border-slate-600 p-2\">\\( 4 \\)</th></tr></thead><tbody><tr><td class=\"border border-slate-700 p-2\">\\( f(x) \\)</td><td class=\"border border-slate-700 p-2\">\\( 1 \\)</td><td class=\"border border-slate-700 p-2\">\\( 3 \\)</td><td class=\"border border-slate-700 p-2\">\\( 7 \\)</td><td class=\"border border-slate-700 p-2\">\\( 13 \\)</td><td class=\"border border-slate-700 p-2\">\\( 21 \\)</td></tr></tbody></table>\nباستخدام قاعدة شبه المنحرف بحجم خطوة \\( h = 1 \\)، قدر قيمة \\( \\int_0^4 f(x) \\, dx \\).",
+        "question": "تم أخذ عينات لدالة مستمرة \\( f(x) \\) عند فترات متساوية.في الجدول أدناه:\n<table class=\"w-full text-center border-collapse border border-slate-700 my-4\"><thead><tr class=\"bg-slate-800 text-white\"><th class=\"border border-slate-600 p-2\">\\( x \\)</th><th class=\"border border-slate-600 p-2\">\\( 0 \\)</th><th class=\"border border-slate-600 p-2\">\\( 1 \\)</th><th class=\"border border-slate-600 p-2\">\\( 2 \\)</th><th class=\"border border-slate-600 p-2\">\\( 3 \\)</th><th class=\"border border-slate-600 p-2\">\\( 4 \\)</th></tr></thead><tbody><tr><td class=\"border border-slate-700 p-2\">\\( f(x) \\)</td><td class=\"border border-slate-700 p-2\">\\( 1 \\)</td><td class=\"border border-slate-700 p-2\">\\( 3 \\)</td><td class=\"border border-slate-700 p-2\">\\( 7 \\)</td><td class=\"border border-slate-700 p-2\">\\( 13 \\)</td><td class=\"border border-slate-700 p-2\">\\( 21 \\)</td></tr></tbody></table>\nباستخدام قاعدة شبه المنحرف بحجم خطوة \\( h = 1 \\)، قدر قيمة \\( \\int_0^4 f(x) \\, dx \\).",
         "options": [
           "\\( 34 \\)",
           "\\( 32 \\)",
@@ -2411,7 +2421,7 @@
     "difficulty": "hard",
     "content": {
       "en": {
-        "question": "Consider the region bounded by the curves \\( f(x) = \\sqrt{x} \\) and \\( g(x) = x^2 \\) shown in the diagram below:<br/>The area of the shaded region is:",
+        "question": "Consider the region bounded by the curves \\( f(x) = \\sqrt{x} \\) and \\( g(x) = x^2 \\). below:<br/>The area of the shaded region is:",
         "options": [
           "\\( \\frac{1}{3} \\)",
           "\\( \\frac{1}{2} \\)",
@@ -2422,7 +2432,7 @@
         "explanation": "The intersection points are found by setting \\( \\sqrt{x} = x^2 \\), giving \\( x = 0 \\) and \\( x = 1 \\). The area is \\( A = \\int_0^1 (\\sqrt{x} - x^2) dx = \\left[ \\frac{2}{3}x^{3/2} - \\frac{1}{3}x^3 \\right]_0^1 = \\frac{2}{3} - \\frac{1}{3} = \\frac{1}{3} \\)."
       },
       "ar": {
-        "question": "تأمل المنطقة المحصورة بين المنحنيين \\( f(x) = \\sqrt{x} \\) و \\( g(x) = x^2 \\) كما هو موضح في الشكل أدناه:<br/>مساحة المنطقة المظللة تساوي:",
+        "question": "تأمل المنطقة المحصورة بين المنحنيين \\( f(x) = \\sqrt{x} \\) و \\( g(x) = x^2 \\).أدناه:<br/>مساحة المنطقة المظللة تساوي:",
         "options": [
           "\\( \\frac{1}{3} \\)",
           "\\( \\frac{1}{2} \\)",
@@ -2787,7 +2797,7 @@
     "difficulty": "hard",
     "content": {
       "en": {
-        "question": "The region bounded by \\( y = \\sin(x) \\) and the \\( x \\)-axis from \\( x = 0 \\) to \\( x = \\pi \\) is shown below:<br/>The volume of the solid generated by revolving this region about the \\( x \\)-axis is:",
+        "question": "The region bounded by \\( y = \\sin(x) \\) and the \\( x \\)-axis from \\( x = 0 \\) to \\( x = \\pi \\) is.<br/>The volume of the solid generated by revolving this region about the \\( x \\)-axis is:",
         "options": [
           "\\( \\frac{\\pi^2}{2} \\)",
           "\\( \\pi^2 \\)",
@@ -2899,7 +2909,7 @@
     "difficulty": "hard",
     "content": {
       "en": {
-        "question": "Let \\( I_n = \\int_0^1 x^n e^x dx \\) for \\( n \\ge 0 \\). A table of the first few integral values is shown below:<br/><table class=\"w-full text-center border-collapse border border-slate-700\"><tr class=\"bg-slate-200\"><th class=\"border border-slate-600 px-2 py-1\">\\( n \\)</th><th class=\"border border-slate-600 px-2 py-1\">\\( 0 \\)</th><th class=\"border border-slate-600 px-2 py-1\">\\( 1 \\)</th><th class=\"border border-slate-600 px-2 py-1\">\\( 2 \\)</th></tr><tr><td class=\"border border-slate-600 px-2 py-1\">\\( I_n \\)</td><td class=\"border border-slate-600 px-2 py-1\">\\( e - 1 \\)</td><td class=\"border border-slate-600 px-2 py-1\">\\( 1 \\)</td><td class=\"border border-slate-600 px-2 py-1\">\\( e - 2 \\)</td></tr></table><br/>The recurrence relation is \\( I_n = e - k \\cdot I_{n-1} \\). The expression for \\( k \\) in terms of \\( n \\) is:",
+        "question": "Let \\( I_n = \\int_0^1 x^n e^x dx \\) for \\( n \\ge 0 \\). A table of the first few integral values is.<br/><table class=\"w-full text-center border-collapse border border-slate-700\"><tr class=\"bg-slate-200\"><th class=\"border border-slate-600 px-2 py-1\">\\( n \\)</th><th class=\"border border-slate-600 px-2 py-1\">\\( 0 \\)</th><th class=\"border border-slate-600 px-2 py-1\">\\( 1 \\)</th><th class=\"border border-slate-600 px-2 py-1\">\\( 2 \\)</th></tr><tr><td class=\"border border-slate-600 px-2 py-1\">\\( I_n \\)</td><td class=\"border border-slate-600 px-2 py-1\">\\( e - 1 \\)</td><td class=\"border border-slate-600 px-2 py-1\">\\( 1 \\)</td><td class=\"border border-slate-600 px-2 py-1\">\\( e - 2 \\)</td></tr></table><br/>The recurrence relation is \\( I_n = e - k \\cdot I_{n-1} \\). The expression for \\( k \\) in terms of \\( n \\) is:",
         "options": [
           "\\( n \\)",
           "\\( n - 1 \\)",
@@ -3941,9 +3951,25 @@
     "difficulty": "hard",
     "content": {
       "en": {
-        "question": "A parabola \\( y^2 = 4x \\) has normal lines drawn from point \\( P(h, 0) \\). The table below lists the slope \\( m \\) and the corresponding foot of the normal: <table class=\"w-full text-center border-collapse border border-slate-700 my-2\"><tr class=\"bg-slate-100\"><th class=\"border border-slate-600 p-1\">Slope \\( m \\)</th><th class=\"border border-slate-600 p-1\">Foot of Normal \\( (x, y) \\)</th></tr><tr><td class=\"border border-slate-600 p-1\">\\( m_1 \\)</td><td class=\"border border-slate-600 p-1\">\\( (m_1^2, -2m_1) \\)</td></tr><tr><td class="
+        "question": "A parabola \\( y^2 = 4x \\) has normal lines drawn from point \\( P(h, 0) \\). The table below lists the slope \\( m \\) and the corresponding foot of the normal: <table class=\"w-full text-center border-collapse border border-slate-700 my-2\"><tr class=\"bg-slate-100\"><th class=\"border border-slate-600 p-1\">Slope \\( m \\)</th><th class=\"border border-slate-600 p-1\">Foot of Normal \\( (x, y) \\)</th></tr><tr><td class=\"border border-slate-600 p-1\">\\( m_1 \\)</td><td class=\"border border-slate-600 p-1\">\\( (m_1^2, -2m_1) \\)</td></tr><tr><td class=",
+        "options": [
+          "\\\\( 3 \\\\)",
+          "\\\\( 1 \\\\)",
+          "\\\\( 2 \\\\)",
+          "\\\\( 0 \\\\)"
+        ]
+      },
+      "ar": {
+        "question": "A parabola \\( y^2 = 4x \\) has normal lines drawn from point \\( P(h, 0) \\). The table below lists the slope \\( m \\) and the corresponding foot of the normal: <table class=\"w-full text-center border-collapse border border-slate-700 my-2\"><tr class=\"bg-slate-100\"><th class=\"border border-slate-600 p-1\">Slope \\( m \\)</th><th class=\"border border-slate-600 p-1\">Foot of Normal \\( (x, y) \\)</th></tr><tr><td class=\"border border-slate-600 p-1\">\\( m_1 \\)</td><td class=\"border border-slate-600 p-1\">\\( (m_1^2, -2m_1) \\)</td></tr><tr><td class=",
+        "options": [
+          "\\\\( 3 \\\\)",
+          "\\\\( 1 \\\\)",
+          "\\\\( 2 \\\\)",
+          "\\\\( 0 \\\\)"
+        ]
       }
-    }
+    },
+    "correct_index": 0
   },
   {
     "id": "JEE-133",
@@ -4836,7 +4862,7 @@
         "explanation": "Intersection points: \\( x^2 = x \\implies x(x - 1) = 0 \\implies x = 0 \\) and \\( x = 1 \\).\nThe area \\( A \\) is given by:\n$$ A = \\int_{0}^{1} (x - x^2) \\, dx = \\left[ \\frac{x^2}{2} - \\frac{x^3}{3} \\right]_{0}^{1} = \\frac{1}{2} - \\frac{1}{3} = \\frac{1}{6} $$"
       },
       "ar": {
-        "question": "أوجد مساحة المنطقة المحصورة بين القطع المكافئ \\( y = x^2 \\) والخط المستقيم \\( y = x \\)، والموضحة بالمساحة المظللة أدناه:",
+        "question": "أوجد مساحة المنطقة المحصورة بين القطع المكافئ \\( y = x^2 \\) والخط المستقيم \\( y = x \\)، و.ة بالمساحة المظللة أدناه:",
         "options": [
           "\\( \\frac{1}{2} \\)",
           "\\( \\frac{1}{6} \\)",
@@ -5567,9 +5593,25 @@
     "difficulty": "medium",
     "content": {
       "en": {
-        "question": "Consider a probability transition matrix for a Markov chain with three states: <table class=\"w-full text-center border-collapse border border-slate-700 my-4\"><thead><tr class=\"bg-slate-100\"><th class=\"border border-slate-600 p-2\">State</th><th class=\"border border-slate-600 p-2\">\\( 1 \\)</th><th class=\"border border-slate-600 p-2\">\\( 2 \\)</th><th class=\"border border-slate-600 p-2\">\\( 3 \\)</th></tr></thead><tbody><tr><td class="
+        "question": "Consider a probability transition matrix for a Markov chain with three states: <table class=\"w-full text-center border-collapse border border-slate-700 my-4\"><thead><tr class=\"bg-slate-100\"><th class=\"border border-slate-600 p-2\">State</th><th class=\"border border-slate-600 p-2\">\\( 1 \\)</th><th class=\"border border-slate-600 p-2\">\\( 2 \\)</th><th class=\"border border-slate-600 p-2\">\\( 3 \\)</th></tr></thead><tbody><tr><td class=",
+        "options": [
+          "\\\\( \\begin{pmatrix} 1/3 \\\\\\\\ 1/3 \\\\\\\\ 1/3 \\end{pmatrix} \\\\)",
+          "\\\\( \\begin{pmatrix} 1/4 \\\\\\\\ 1/2 \\\\\\\\ 1/4 \\end{pmatrix} \\\\)",
+          "\\\\( \\begin{pmatrix} 1/2 \\\\\\\\ 1/4 \\\\\\\\ 1/4 \\end{pmatrix} \\\\)",
+          "\\\\( \\begin{pmatrix} 2/5 \\\\\\\\ 2/5 \\\\\\\\ 1/5 \\end{pmatrix} \\\\)"
+        ]
+      },
+      "ar": {
+        "question": "Consider a probability transition matrix for a Markov chain with three states: <table class=\"w-full text-center border-collapse border border-slate-700 my-4\"><thead><tr class=\"bg-slate-100\"><th class=\"border border-slate-600 p-2\">State</th><th class=\"border border-slate-600 p-2\">\\( 1 \\)</th><th class=\"border border-slate-600 p-2\">\\( 2 \\)</th><th class=\"border border-slate-600 p-2\">\\( 3 \\)</th></tr></thead><tbody><tr><td class=",
+        "options": [
+          "\\\\( \\begin{pmatrix} 1/3 \\\\\\\\ 1/3 \\\\\\\\ 1/3 \\end{pmatrix} \\\\)",
+          "\\\\( \\begin{pmatrix} 1/4 \\\\\\\\ 1/2 \\\\\\\\ 1/4 \\end{pmatrix} \\\\)",
+          "\\\\( \\begin{pmatrix} 1/2 \\\\\\\\ 1/4 \\\\\\\\ 1/4 \\end{pmatrix} \\\\)",
+          "\\\\( \\begin{pmatrix} 2/5 \\\\\\\\ 2/5 \\\\\\\\ 1/5 \\end{pmatrix} \\\\)"
+        ]
       }
-    }
+    },
+    "correct_index": 0
   },
   {
     "id": "JEE-185",
@@ -5580,7 +5622,7 @@
     "difficulty": "hard",
     "content": {
       "en": {
-        "question": "Let \\( f : [0, 1] \\to \\mathbb{R} \\) be a continuous function whose graph is shown below.Evaluate the definite integral $$ I = \\int_{0}^{1} f(x) \\left( 3 x^2 - 2 x \\right) dx $$ given that \\( f(0) = 1 \\), \\( f(1) = 4 \\), \\( \\int_{0}^{1} x^2 f'(x) dx = 5 \\), and \\( \\int_{0}^{1} x^3 f'(x) dx = 2 \\).",
+        "question": "Let \\( f : [0, 1] \\to \\mathbb{R} \\) be a continuous function whose graph is.Evaluate the definite integral $$ I = \\int_{0}^{1} f(x) \\left( 3 x^2 - 2 x \\right) dx $$ given that \\( f(0) = 1 \\), \\( f(1) = 4 \\), \\( \\int_{0}^{1} x^2 f'(x) dx = 5 \\), and \\( \\int_{0}^{1} x^3 f'(x) dx = 2 \\).",
         "options": [
           "\\( 1 \\)",
           "\\( 2 \\)",
@@ -5669,7 +5711,7 @@
     "difficulty": "hard",
     "content": {
       "en": {
-        "question": "Consider the ellipse \\( \\frac{x^2}{16} + \\frac{y^2}{9} = 1 \\) shown below.A tangent to this ellipse at a point in the first quadrant cuts the coordinate axes at \\( A \\) and \\( B \\). The minimum length of the segment \\( AB \\) is:",
+        "question": "Consider the ellipse \\( \\frac{x^2}{16} + \\frac{y^2}{9} = 1 \\).A tangent to this ellipse at a point in the first quadrant cuts the coordinate axes at \\( A \\) and \\( B \\). The minimum length of the segment \\( AB \\) is:",
         "options": [
           "\\( 5 \\)",
           "\\( 7 \\)",
@@ -5680,7 +5722,7 @@
         "explanation": "Let the point of contact be \\( P(4 \\cos \\theta, 3 \\sin \\theta) \\). The equation of tangent is $$ \\frac{x \\cos \\theta}{4} + \\frac{y \\sin \\theta}{3} = 1 $$ The intercepts are \\( A\\left(\\frac{4}{\\cos \\theta}, 0\\right) \\) and \\( B\\left(0, \\frac{3}{\\sin \\theta}\\right) \\). The length square \\( AB^2 = \\frac{16}{\\cos^2 \\theta} + \\frac{9}{\\sin^2 \\theta} \\). Using Cauchy-Schwarz or calculus, the minimum value of \\( AB^2 \\) is \\( (a + b)^2 = (4 + 3)^2 = 49 \\). Thus, the minimum length \\( AB = 7 \\)."
       },
       "ar": {
-        "question": "تأمل القطع الناقص \\( \\frac{x^2}{16} + \\frac{y^2}{9} = 1 \\) الموضح أدناه.مماس لهذا القطع الناقص عند نقطة في الربع الأول يقطع المحورين الإحداثيين في النقطتين \\( A \\) و \\( B \\). القيمة الصغرى لطول القطعة المستقيمة \\( AB \\) هي:",
+        "question": "تأمل القطع الناقص \\( \\frac{x^2}{16} + \\frac{y^2}{9} = 1 \\).مماس لهذا القطع الناقص عند نقطة في الربع الأول يقطع المحورين الإحداثيين في النقطتين \\( A \\) و \\( B \\). القيمة الصغرى لطول القطعة المستقيمة \\( AB \\) هي:",
         "options": [
           "\\( 5 \\)",
           "\\( 7 \\)",
@@ -5791,7 +5833,7 @@
     "difficulty": "hard",
     "content": {
       "en": {
-        "question": "The bounded region between the parabolas \\( y = x^2 \\) and \\( y = 2 - x^2 \\) is illustrated in the diagram below.Find the area of this bounded region.",
+        "question": "The bounded region between the parabolas \\( y = x^2 \\) and \\( y = 2 - x^2 \\) is illustratedFind the area of this bounded region.",
         "options": [
           "\\( \\frac{8}{3} \\)",
           "\\( \\frac{4}{3} \\)",
@@ -5857,7 +5899,7 @@
     "difficulty": "hard",
     "content": {
       "en": {
-        "question": "A circle passes through the vertex and the endpoints of the latus rectum of the parabola \\( y^2 = 4x \\), as shown in the diagram below.The equation of this circle is:",
+        "question": "A circle passes through the vertex and the endpoints of the latus rectum of the parabola \\( y^2 = 4x \\),. below.The equation of this circle is:",
         "options": [
           "\\( x^2 + y^2 - 5x = 0 \\)",
           "\\( x^2 + y^2 - 4x = 0 \\)",
@@ -5868,7 +5910,7 @@
         "explanation": "For the parabola \\( y^2 = 4x \\), \\( a = 1 \\). The vertex is \\( (0,0) \\) and endpoints of latus rectum are \\( (1, 2) \\) and \\( (1, -2) \\). General circle equation passing through origin is \\( x^2 + y^2 + 2gx + 2fy = 0 \\). By symmetry with respect to the x-axis, \\( f = 0 \\). Substituting point \\( (1, 2) \\): $$ 1^2 + 2^2 + 2g(1) = 0 \\implies 5 + 2g = 0 \\implies 2g = -5 $$ Therefore, the equation of the circle is \\( x^2 + y^2 - 5x = 0 \\)."
       },
       "ar": {
-        "question": "دائرة تمر برأس القطع المكافئ \\( y^2 = 4x \\) وبنهايتي الوتر البؤري العمودي له، كما هو موضح أدناه.معادلة هذه الدائرة هي:",
+        "question": "دائرة تمر برأس القطع المكافئ \\( y^2 = 4x \\) وبنهايتي الوتر البؤري العمودي له،.معادلة هذه الدائرة هي:",
         "options": [
           "\\( x^2 + y^2 - 5x = 0 \\)",
           "\\( x^2 + y^2 - 4x = 0 \\)",

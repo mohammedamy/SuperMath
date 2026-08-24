@@ -85,7 +85,8 @@
         "explanation": "المتوسط = $$ \\frac{45 + 56 + 67 + 78 + 89 + 90 + 91 + 94 + 95 + 100}{10} = \\frac{865}{10} = 86.5 $$.",
         "correct_index": ""
       }
-    }
+    },
+    "correct_answer": "80.5"
   },
   {
     "id": "NSMO-004",
@@ -151,7 +152,7 @@
     "difficulty": "hard",
     "content": {
       "en": {
-        "question": "In the diagram below, what is the length of the hypotenuse of a right triangle with legs of lengths $$ 6 $$ and $$ 8 $$?",
+        "question": "what is the length of the hypotenuse of a right triangle with legs of lengths $$ 6 $$ and $$ 8 $$?",
         "options": [
           "10",
           "14",
@@ -1056,7 +1057,8 @@
         "answer": "28"
       }
     },
-    "correct_index": ""
+    "correct_index": "",
+    "correct_answer": "28"
   },
   {
     "id": "NSMO-038",
@@ -1685,7 +1687,8 @@
         "explanation": "المساحة هي \\( 10 \times 5 = 50 \\) وحدة مربعة. المحيط هو \\( 2(10 + 5) = 30 \\) وحدة."
       }
     },
-    "correct_index": ""
+    "correct_index": "",
+    "correct_answer": "50"
   },
   {
     "id": "NSMO-061",
@@ -2399,7 +2402,8 @@
         "explanation": "محيط المستطيل \\( P \\) يُعطى بـ \\( P = 2(l + w) \\). وبالتالي، \\( P = 2(10 + 4) = 28 \\) وحدات."
       }
     },
-    "correct_index": ""
+    "correct_index": "",
+    "correct_answer": "28"
   },
   {
     "id": "NSMO-087",
@@ -2901,7 +2905,8 @@
         "explanation": ""
       }
     },
-    "correct_index": ""
+    "correct_index": "",
+    "correct_answer": "13.9"
   },
   {
     "id": "NSMO-105",
@@ -4995,7 +5000,8 @@
         "explanation": "لإيجاد المتوسط، احسب $$ \text{المتوسط} = \\frac{85 + 90 + 78 + 92 + 88}{5} = \\frac{433}{5} = 86.6 $$."
       }
     },
-    "correct_index": ""
+    "correct_index": "",
+    "correct_answer": "86.6"
   },
   {
     "id": "NSMO-181",
@@ -5565,7 +5571,8 @@
         "explanation": "المتوسط = \\( \\frac{10 + 20 + 30 + 40 + 50}{5} = \\frac{150}{5} = 30 \\)."
       }
     },
-    "correct_index": ""
+    "correct_index": "",
+    "correct_answer": "30"
   },
   {
     "id": "NSMO-201",
@@ -5654,7 +5661,8 @@
         "options": []
       }
     },
-    "correct_index": "0"
+    "correct_index": "0",
+    "correct_answer": "86.6"
   },
   {
     "id": "NSMO-204",
@@ -6203,7 +6211,8 @@
         "explanation": "يمكن العثور على القاسم المشترك الأكبر من خلال تحديد أقل القوى لعوامل الأولية المشتركة."
       }
     },
-    "correct_index": ""
+    "correct_index": "",
+    "correct_answer": "12"
   },
   {
     "id": "NSMO-223",
@@ -6906,7 +6915,8 @@
         "explanation": "المساحة تُعطى بواسطة $$ A = \\text{الطول} \\times \\text{العرض} = 12 \\times 5 = 60 $$."
       }
     },
-    "correct_index": ""
+    "correct_index": "",
+    "correct_answer": "60"
   },
   {
     "id": "NSMO-015",

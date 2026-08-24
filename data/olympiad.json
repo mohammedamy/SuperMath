@@ -8,13 +8,13 @@
     "difficulty": "hard",
     "content": {
       "en": {
-        "question": "A grid graph of size \\( 4 \\times 4 \\) is shown below. Find the total number of paths from the bottom-left vertex \\( (0,0) \\) to the top-right vertex \\( (4,4) \\) using only unit steps right \\( (1,0) \\) or up \\( (0,1) \\) that do not cross above the main diagonal line \\( y = x \\). ",
+        "question": "A grid graph of size \\( 4 \\times 4 \\) is. Find the total number of paths from the bottom-left vertex \\( (0,0) \\) to the top-right vertex \\( (4,4) \\) using only unit steps right \\( (1,0) \\) or up \\( (0,1) \\) that do not cross above the main diagonal line \\( y = x \\).",
         "options": [],
         "hint": "Consider Catalan numbers \\( C_n = \\frac{1}{n+1} \\binom{2n}{n} \\).",
         "explanation": "The number of monotonic paths on an \\( n \\times n \\) grid that do not pass above the diagonal \\( y = x \\) is given by the \\( n \\)-th Catalan number \\( C_n = \\frac{1}{n+1} \\binom{2n}{n} \\). For \\( n = 4 \\), we have \\( C_4 = \\frac{1}{5} \\binom{8}{4} = \\frac{70}{5} = 14 \\)."
       },
       "ar": {
-        "question": "شبكة إحداثية بأبعاد \\( 4 \\times 4 \\) موضحة أدناه. أوجد العدد الإجمالي للمسارات من الرأس السفلي الأيسر \\( (0,0) \\) إلى الرأس العلوي الأيمن \\( (4,4) \\) باستخدام خطوات وحدة لليمين \\( (1,0) \\) أو للأعلى \\( (0,1) \\) فقط، بشرط عدم تجاوز الخط القطري الرئيسي \\( y = x \\) للأعلى. ",
+        "question": "شبكة إحداثية بأبعاد \\( 4 \\times 4 \\) موضحة أدناه. أوجد العدد الإجمالي للمسارات من الرأس السفلي الأيسر \\( (0,0) \\) إلى الرأس العلوي الأيمن \\( (4,4) \\) باستخدام خطوات وحدة لليمين \\( (1,0) \\) أو للأعلى \\( (0,1) \\) فقط، بشرط عدم تجاوز الخط القطري الرئيسي \\( y = x \\) للأعلى.",
         "options": [],
         "hint": "فكر في أعداد كاتالان \\( C_n = \\frac{1}{n+1} \\binom{2n}{n} \\).",
         "explanation": "عدد المسارات المتزايدة على شبكة \\( n \\times n \\) التي لا ترتفع فوق القطر \\( y = x \\) يُعطى بعدد كاتالان الرابع \\( C_n = \\frac{1}{n+1} \\binom{2n}{n} \\). عندما \\( n = 4 \\)، فإن \\( C_4 = \\frac{1}{5} \\binom{8}{4} = \\frac{70}{5} = 14 \\)."
@@ -544,13 +544,13 @@
     "difficulty": "hard",
     "content": {
       "en": {
-        "question": "A particle moves on the \\( 4 \\times 4 \\) grid shown below from the top-left cell \\( (1,1) \\) to the bottom-right cell \\( (4,4) \\) moving only right or down. <table class=\"w-full max-w-xs mx-auto text-center border-collapse border border-slate-700 my-2\"><tr class=\"border-b border-slate-700\"><td class=\"border-r border-slate-700 p-2 bg-emerald-100\">(1,1)</td><td class=\"border-r border-slate-700 p-2\">(1,2)</td><td class=\"border-r border-slate-700 p-2\">(1,3)</td><td class=\"p-2\">(1,4)</td></tr><tr class=\"border-b border-slate-700\"><td class=\"border-r border-slate-700 p-2\">(2,1)</td><td class=\"border-r border-slate-700 p-2\">(2,2)</td><td class=\"border-r border-slate-700 p-2 bg-red-200 font-bold text-red-700\">X</td><td class=\"p-2\">(2,4)</td></tr><tr class=\"border-b border-slate-700\"><td class=\"border-r border-slate-700 p-2\">(3,1)</td><td class=\"border-r border-slate-700 p-2 bg-red-200 font-bold text-red-700\">X</td><td class=\"border-r border-slate-700 p-2\">(3,3)</td><td class=\"p-2\">(3,4)</td></tr><tr><td class=\"border-r border-slate-700 p-2\">(4,1)</td><td class=\"border-r border-slate-700 p-2\">(4,2)</td><td class=\"border-r border-slate-700 p-2\">(4,3)</td><td class=\"p-2 bg-emerald-100\">(4,4)</td></tr></table> How many paths avoid both blocked cells marked with X, i.e., cells \\( (2,3) \\) and \\( (3,2) \\)?",
+        "question": "A particle moves on the \\( 4 \\times 4 \\) grid. from the top-left cell \\( (1,1) \\) to the bottom-right cell \\( (4,4) \\) moving only right or down. <table class=\"w-full max-w-xs mx-auto text-center border-collapse border border-slate-700 my-2\"><tr class=\"border-b border-slate-700\"><td class=\"border-r border-slate-700 p-2 bg-emerald-100\">(1,1)</td><td class=\"border-r border-slate-700 p-2\">(1,2)</td><td class=\"border-r border-slate-700 p-2\">(1,3)</td><td class=\"p-2\">(1,4)</td></tr><tr class=\"border-b border-slate-700\"><td class=\"border-r border-slate-700 p-2\">(2,1)</td><td class=\"border-r border-slate-700 p-2\">(2,2)</td><td class=\"border-r border-slate-700 p-2 bg-red-200 font-bold text-red-700\">X</td><td class=\"p-2\">(2,4)</td></tr><tr class=\"border-b border-slate-700\"><td class=\"border-r border-slate-700 p-2\">(3,1)</td><td class=\"border-r border-slate-700 p-2 bg-red-200 font-bold text-red-700\">X</td><td class=\"border-r border-slate-700 p-2\">(3,3)</td><td class=\"p-2\">(3,4)</td></tr><tr><td class=\"border-r border-slate-700 p-2\">(4,1)</td><td class=\"border-r border-slate-700 p-2\">(4,2)</td><td class=\"border-r border-slate-700 p-2\">(4,3)</td><td class=\"p-2 bg-emerald-100\">(4,4)</td></tr></table> How many paths avoid both blocked cells marked with X, i.e., cells \\( (2,3) \\) and \\( (3,2) \\)?",
         "options": [],
         "hint": "Use the Principle of Inclusion-Exclusion on the paths passing through \\( (2,3) \\) and \\( (3,2) \\).",
         "explanation": "Total grid paths from \\( (1,1) \\) to \\( (4,4) \\) using \\( 3 \\) right and \\( 3 \\) down moves: \\( \\binom{6}{3} = 20 \\).\nPaths passing through \\( (2,3) \\):\nFrom \\( (1,1) \\) to \\( (2,3) \\): \\( 1 \\) down, \\( 2 \\) right \\( \\implies \\binom{3}{1} = 3 \\).\nFrom \\( (2,3) \\) to \\( (4,4) \\): \\( 2 \\) down, \\( 1 \\) right \\( \\implies \\binom{3}{1} = 3 \\).\nTotal through \\( (2,3) = 3 \\times 3 = 9 \\).\nBy symmetry, total paths through \\( (3,2) = 9 \\).\nNo path can visit both \\( (2,3) \\) and \\( (3,2) \\) because moving only right or down cannot connect \\( (2,3) \\) to \\( (3,2) \\).\nTherefore, valid paths = \\( 20 - 9 - 9 = 2 \\)."
       },
       "ar": {
-        "question": "يتحرك جسيم على شبكة \\( 4 \\times 4 \\) الموضحة أدناه من الخلية العلوية اليسرى \\( (1,1) \\) إلى الخلية السفلية اليمنى \\( (4,4) \\) بالتحرك لليمين أو للأسفل فقط. <table class=\"w-full max-w-xs mx-auto text-center border-collapse border border-slate-700 my-2\"><tr class=\"border-b border-slate-700\"><td class=\"border-r border-slate-700 p-2 bg-emerald-100\">(1,1)</td><td class=\"border-r border-slate-700 p-2\">(1,2)</td><td class=\"border-r border-slate-700 p-2\">(1,3)</td><td class=\"p-2\">(1,4)</td></tr><tr class=\"border-b border-slate-700\"><td class=\"border-r border-slate-700 p-2\">(2,1)</td><td class=\"border-r border-slate-700 p-2\">(2,2)</td><td class=\"border-r border-slate-700 p-2 bg-red-200 font-bold text-red-700\">X</td><td class=\"p-2\">(2,4)</td></tr><tr class=\"border-b border-slate-700\"><td class=\"border-r border-slate-700 p-2\">(3,1)</td><td class=\"border-r border-slate-700 p-2 bg-red-200 font-bold text-red-700\">X</td><td class=\"border-r border-slate-700 p-2\">(3,3)</td><td class=\"p-2\">(3,4)</td></tr><tr><td class=\"border-r border-slate-700 p-2\">(4,1)</td><td class=\"border-r border-slate-700 p-2\">(4,2)</td><td class=\"border-r border-slate-700 p-2\">(4,3)</td><td class=\"p-2 bg-emerald-100\">(4,4)</td></tr></table> كم عدد المسارات التي تتجنب كلا الخليتين المحظورتين المرمزتين بـ X، أي الخليتين \\( (2,3) \\) و \\( (3,2) \\)؟",
+        "question": "يتحرك جسيم على شبكة \\( 4 \\times 4 \\).ة أدناه من الخلية العلوية اليسرى \\( (1,1) \\) إلى الخلية السفلية اليمنى \\( (4,4) \\) بالتحرك لليمين أو للأسفل فقط. <table class=\"w-full max-w-xs mx-auto text-center border-collapse border border-slate-700 my-2\"><tr class=\"border-b border-slate-700\"><td class=\"border-r border-slate-700 p-2 bg-emerald-100\">(1,1)</td><td class=\"border-r border-slate-700 p-2\">(1,2)</td><td class=\"border-r border-slate-700 p-2\">(1,3)</td><td class=\"p-2\">(1,4)</td></tr><tr class=\"border-b border-slate-700\"><td class=\"border-r border-slate-700 p-2\">(2,1)</td><td class=\"border-r border-slate-700 p-2\">(2,2)</td><td class=\"border-r border-slate-700 p-2 bg-red-200 font-bold text-red-700\">X</td><td class=\"p-2\">(2,4)</td></tr><tr class=\"border-b border-slate-700\"><td class=\"border-r border-slate-700 p-2\">(3,1)</td><td class=\"border-r border-slate-700 p-2 bg-red-200 font-bold text-red-700\">X</td><td class=\"border-r border-slate-700 p-2\">(3,3)</td><td class=\"p-2\">(3,4)</td></tr><tr><td class=\"border-r border-slate-700 p-2\">(4,1)</td><td class=\"border-r border-slate-700 p-2\">(4,2)</td><td class=\"border-r border-slate-700 p-2\">(4,3)</td><td class=\"p-2 bg-emerald-100\">(4,4)</td></tr></table> كم عدد المسارات التي تتجنب كلا الخليتين المحظورتين المرمزتين بـ X، أي الخليتين \\( (2,3) \\) و \\( (3,2) \\)؟",
         "options": [],
         "hint": "استخدم مبدأ الإحتواء والاستبعاد على المسارات التي تمر عبر \\( (2,3) \\) و \\( (3,2) \\).",
         "explanation": "إجمالي مسارات الشبكة من \\( (1,1) \\) إلى \\( (4,4) \\) باستخدام \\( 3 \\) خطوات لليمين و \\( 3 \\) أسفل هو: \\( \\binom{6}{3} = 20 \\).\nالمسارات المارة بـ \\( (2,3) \\):\nمن \\( (1,1) \\) إلى \\( (2,3) \\): \\( \\binom{3}{1} = 3 \\).\nمن \\( (2,3) \\) إلى \\( (4,4) \\): \\( \\binom{3}{1} = 3 \\).\nإجمالي المسارات المارة بـ \\( (2,3) = 3 \\times 3 = 9 \\).\nبالتماثل، إجمالي المسارات المارة بـ \\( (3,2) = 9 \\).\nلا يوجد مسار يمر بكلا الخليتين معاً. إذن عدد المسارات الصالحة = \\( 20 - 9 - 9 = 2 \\)."
@@ -613,13 +613,13 @@
     "difficulty": "hard",
     "content": {
       "en": {
-        "question": "Consider the complete bipartite graph \\( K_{3,3} \\) shown below.  What is the minimum number of edges that must be removed from \\( K_{3,3} \\) so that the remaining graph contains no 4-cycle (\\( C_4 \\))?",
+        "question": "Consider the complete bipartite graph \\( K_{3,3} \\). What is the minimum number of edges that must be removed from \\( K_{3,3} \\) so that the remaining graph contains no 4-cycle (\\( C_4 \\))?",
         "options": [],
         "hint": "Find the maximum number of edges in a \\( C_4 \\)-free subgraph of \\( K_{3,3} \\).",
         "explanation": "The graph \\( K_{3,3} \\) has \\( 9 \\) edges.\nA subgraph of \\( K_{3,3} \\) without a 4-cycle \\( C_4 \\) can contain at most \\( 6 \\) edges (for instance, a 6-cycle \\( C_6 \\) has \\( 6 \\) edges and no \\( C_4 \\)).\nIf a subgraph had \\( 7 \\) edges, by counting common neighbors between vertices on one side, there would exist two vertices sharing at least \\( 2 \\) common neighbors, creating a \\( C_4 \\).\nThus, maximum edges without \\( C_4 \\) is \\( 6 \\).\nThe minimum number of edges to remove is \\( 9 - 6 = 3 \\)."
       },
       "ar": {
-        "question": "تأمل الرسم البياني الثنائي التام \\( K_{3,3} \\) الموضح أدناه.  ما هو الحد الأدنى لعدد الحواف التي يجب إزالتها من \\( K_{3,3} \\) بحيث لا يحتوي الرسم البياني المتبقي على أي دورة رباعية (\\( C_4 \\))؟",
+        "question": "تأمل الرسم البياني الثنائي التام \\( K_{3,3} \\). ما هو الحد الأدنى لعدد الحواف التي يجب إزالتها من \\( K_{3,3} \\) بحيث لا يحتوي الرسم البياني المتبقي على أي دورة رباعية (\\( C_4 \\))؟",
         "options": [],
         "hint": "أوجد أقصى عدد من الحواف في رسم بياني جزئي خالي من \\( C_4 \\) في \\( K_{3,3} \\).",
         "explanation": "يحتوي الرسم البياني \\( K_{3,3} \\) على \\( 9 \\) حواف.\nأي رسم بياني جزئي لا يحتوي على \\( C_4 \\) يمكن أن يحوي على الأكثر \\( 6 \\) حواف (على سبيل المثال، الدورة السداسية \\( C_6 \\) تحوي \\( 6 \\) حواف ولا تحوي \\( C_4 \\)).\nإذا احتوى على \\( 7 \\) حواف، فبالمبدأ برج الحمام سيتواجد رأسين يتشاركان في جارين على الأقل مما يشكل \\( C_4 \\).\nإذن، الحد الأقصى للحواف هو \\( 6 \\).\nالحد الأدنى للحواف الواجب إزالتها هو \\( 9 - 6 = 3 \\)."
@@ -1269,7 +1269,8 @@
         "explanation": "لأي عدد صحيح \\( a > 1 \\) وأعداد صحيحة موجبة \\( m, n \\)، لدينا \\( \\gcd(a^m - 1, a^n - 1) = a^{\\gcd(m, n)} - 1 \\). هنا، \\( m = 2024 \\) و \\( n = 2016 \\). القاسم المشترك الأكبر للأسين هو \\( \\gcd(2024, 2016) = \\gcd(8, 2016) = 8 \\). بالتالي، فإن الناتج هو \\( 2^8 - 1 = 255 \\)."
       }
     },
-    "correct_index": "\\( 255 \\)"
+    "correct_index": "\\( 255 \\)",
+    "correct_answer": "2"
   },
   {
     "id": "OLYMPIAD-055",
@@ -1418,13 +1419,13 @@
     "difficulty": "hard",
     "content": {
       "en": {
-        "question": "Consider a grid of dimensions \\( 3 \\times 3 \\) as shown below. Find the total number of shortest lattice paths from the origin \\( (0,0) \\) to the point \\( (3,3) \\) that do NOT pass through the internal vertex \\( (1,1) \\).\n\n",
+        "question": "Consider a grid of dimensions \\( 3 \\times 3 \\). Find the total number of shortest lattice paths from the origin \\( (0,0) \\) to the point \\( (3,3) \\) that do NOT pass through the internal vertex \\( (1,1) \\).",
         "options": [],
         "hint": "Calculate the total number of paths without restriction using binomial coefficients, then subtract the paths that pass through \\( (1,1) \\).",
         "explanation": "1. The total number of paths from \\( (0,0) \\) to \\( (3,3) \\) taking \\( 3 \\) right steps and \\( 3 \\) up steps is \\( \\binom{3+3}{3} = \\binom{6}{3} = 20 \\).\n2. The number of paths from \\( (0,0) \\) to \\( (1,1) \\) is \\( \\binom{1+1}{1} = 2 \\).\n3. The number of paths from \\( (1,1) \\) to \\( (3,3) \\) is \\( \\binom{2+2}{2} = 6 \\).\n4. The number of paths passing through \\( (1,1) \\) is \\( 2 \\times 6 = 12 \\).\n5. Subtracting these gives \\( 20 - 12 = 8 \\)."
       },
       "ar": {
-        "question": "تأمل شبكة ذات أبعاد \\( 3 \\times 3 \\) كما هو موضح أدناه. أوجد العدد الإجمالي لأقصر المسارات الشبكية من نقطة الأصل \\( (0,0) \\) إلى النقطة \\( (3,3) \\) والتي لا تمر بالرأس الداخلي \\( (1,1) \\).\n\n",
+        "question": "تأمل شبكة ذات أبعاد \\( 3 \\times 3 \\). أوجد العدد الإجمالي لأقصر المسارات الشبكية من نقطة الأصل \\( (0,0) \\) إلى النقطة \\( (3,3) \\) والتي لا تمر بالرأس الداخلي \\( (1,1) \\).",
         "options": [],
         "hint": "احسب عدد المسارات الكلي دون قيود باستخدام المعاملات الثنائية، ثم اطرح المسارات التي تمر بالنقطة \\( (1,1) \\).",
         "explanation": "1. عدد المسارات الكلي من \\( (0,0) \\) إلى \\( (3,3) \\) باتخاذ \\( 3 \\) خطوات يمينًا و \\( 3 \\) خطوات لأعلى هو \\( \\binom{3+3}{3} = \\binom{6}{3} = 20 \\).\n2. عدد المسارات من \\( (0,0) \\) إلى \\( (1,1) \\) هو \\( \\binom{1+1}{1} = 2 \\).\n3. عدد المسارات من \\( (1,1) \\) إلى \\( (3,3) \\) هو \\( \\binom{2+2}{2} = 6 \\).\n4. عدد المسارات التي تمر عبر \\( (1,1) \\) هو \\( 2 \\times 6 = 12 \\).\n5. بطرح هذه المسارات نحصل على \\( 20 - 12 = 8 \\)."
@@ -1901,7 +1902,7 @@
     "difficulty": "hard",
     "content": {
       "en": {
-        "question": "A grid of size \\( 4 \\times 4 \\) is shown below. Find the number of paths along grid lines from \\( (0,0) \\) to \\( (4,4) \\) using only unit steps right and up such that the path never strictly goes above the diagonal line \\( y = x \\). <div class=\"my-4\"></div>",
+        "question": "A grid of size \\( 4 \\times 4 \\) is. Find the number of paths along grid lines from \\( (0,0) \\) to \\( (4,4) \\) using only unit steps right and up such that the path never strictly goes above the diagonal line \\( y = x \\). <div class=\"my-4\"></div>",
         "options": [],
         "hint": "Recall the definition of Catalan numbers \\( C_n = \\frac{1}{n+1}\\binom{2n}{n} \\).",
         "explanation": "The problem asks for the number of Dyck paths of length \\( 2 n \\) with \\( n = 4 \\). This is given directly by the \\( 4 \\)-th Catalan number \\( C_4 \\):\n\\[ C_4 = \\frac{1}{4+1}\\binom{8}{4} = \\frac{1}{5} \\times 70 = 14 \\]"
@@ -2361,13 +2362,13 @@
     "difficulty": "medium",
     "content": {
       "en": {
-        "question": "Consider the grid shown below. Find the number of grid paths from \\( (0, 0) \\) to \\( (3, 3) \\) moving only right or up along grid lines that do not cross strictly above the diagonal line \\( y = x \\) (red dashed line).\n",
+        "question": "Consider the grid. Find the number of grid paths from \\( (0, 0) \\) to \\( (3, 3) \\) moving only right or up along grid lines that do not cross strictly above the diagonal line \\( y = x \\) (red dashed line).",
         "options": [],
         "hint": "This problem is equivalent to finding the Catalan number \\( C_3 \\).",
         "explanation": "The number of paths on an \\( n \\times n \\) grid that do not cross above the main diagonal is given by the \\( n \\)-th Catalan number \\( C_n = \\frac{1}{n+1}\\binom{2n}{n} \\). For \\( n = 3 \\), we have \\( C_3 = \\frac{1}{4}\\binom{6}{3} = \\frac{20}{4} = 5 \\)."
       },
       "ar": {
-        "question": "تأمل الشبكة المبينة أدناه. أوجد عدد مسارات الشبكة من \\( (0, 0) \\) إلى \\( (3, 3) \\) التي تتحرك فقط لليمين أو للأعلى عبر خطوط الشبكة دون أن تتجاوز القطري \\( y = x \\) (الخط الأحمر المنقط).\n",
+        "question": "تأمل الشبكة.ة أدناه. أوجد عدد مسارات الشبكة من \\( (0, 0) \\) إلى \\( (3, 3) \\) التي تتحرك فقط لليمين أو للأعلى عبر خطوط الشبكة دون أن تتجاوز القطري \\( y = x \\) (الخط الأحمر المنقط).",
         "options": [],
         "hint": "تتلمح هذه المسألة إلى حساب عدد كاتالان \\( C_3 \\).",
         "explanation": "عدد المسارات على شبكة \\( n \\times n \\) التي لا ترتفع أعلى القطر الرئيسي يُعطى بعدد كاتالان \\( C_n = \\frac{1}{n+1}\\binom{2n}{n} \\). بالنسبة لـ \\( n = 3 \\)، نجد أن \\( C_3 = \\frac{1}{4}\\binom{6}{3} = \\frac{20}{4} = 5 \\)."
@@ -2534,7 +2535,8 @@
         "explanation": "باستخدام النتيجة المعروفة \\( \\gcd(a^m - 1, a^n - 1) = a^{\\gcd(m, n)} - 1 \\) للأعداد الصحيحة \\( a \\geq 2 \\)، نحسب \\( \\gcd(2024, 2000) \\). باستخدام خوارزمية إقليدس، \\( \\gcd(2024, 2000) = \\gcd(2000, 24) = \\gcd(24, 8) = 8 \\). وبالتالي، \\( \\gcd(2^{2024} - 1, 2^{2000} - 1) = 2^8 - 1 = 255 \\)."
       }
     },
-    "correct_index": "0"
+    "correct_index": "0",
+    "correct_answer": "2"
   },
   {
     "id": "OLYMPIAD-110",
@@ -2591,13 +2593,13 @@
     "difficulty": "hard",
     "content": {
       "en": {
-        "question": "How many simple paths (paths that do not visit any vertex more than once) of length at least \\( 1 \\) exist in the complete graph \\( K_4 \\) shown below?\n",
+        "question": "How many simple paths (paths that do not visit any vertex more than once) of length at least \\( 1 \\) exist in the complete graph \\( K_4 \\).",
         "options": [],
         "hint": "Count paths by the number of vertices they contain (2, 3, or 4 vertices).",
         "explanation": "A simple path is determined by an ordered list of distinct vertices. Paths of length 1 use 2 vertices: \\( P(4, 2) = 4 \\times 3 = 12 \\). Paths of length 2 use 3 vertices: \\( P(4, 3) = 4 \\times 3 \\times 2 = 24 \\). Paths of length 3 use 4 vertices: \\( P(4, 4) = 4! = 24 \\). Summing all path lengths: \\( 12 + 24 + 24 = 60 \\)."
       },
       "ar": {
-        "question": "كم عدد المسارات البسيطة (المسارات التي لا تزور أي رأس أكثر من مرة واحدة) التي طولها على الأقل \\( 1 \\) في الرسم البياني الكامل \\( K_4 \\) الموضح أدناه؟\n",
+        "question": "كم عدد المسارات البسيطة (المسارات التي لا تزور أي رأس أكثر من مرة واحدة) التي طولها على الأقل \\( 1 \\) في الرسم البياني الكامل \\( K_4 \\).",
         "options": [],
         "hint": "احسب عدد المسارات حسب عدد الرؤوس التي تمر بها (2 أو 3 أو 4 رؤوس).",
         "explanation": "المسار البسيط يتحدد بقائمة مرتبة من الرؤوس المتميزة. المسارات ذات الطول 1 تمر برأسين: \\( P(4, 2) = 4 \\times 3 = 12 \\). المسارات ذات الطول 2 تمر بـ 3 رؤوس: \\( P(4, 3) = 4 \\times 3 \\times 2 = 24 \\). المسارات ذات الطول 3 تمر بـ 4 رؤوس: \\( P(4, 4) = 4! = 24 \\). بمجموع كافة أطوال المسارات: \\( 12 + 24 + 24 = 60 \\)."
@@ -2683,13 +2685,13 @@
     "difficulty": "medium",
     "content": {
       "en": {
-        "question": "The vertex of the parabola \\( f(x) = -a x^2 + b x \\) is at \\( (2, 4) \\), as shown in the plot below. Find the value of \\( f(6) \\).\n",
+        "question": "The vertex of the parabola \\( f(x) = -a x^2 + b x \\) is at \\( (2, 4) \\), as shown in the plot below. Find the value of \\( f(6) \\).",
         "options": [],
         "hint": "Express the quadratic function in vertex form: \\( f(x) = -c(x - 2)^2 + 4 \\).",
         "explanation": "Using vertex form, \\( f(x) = -c(x - 2)^2 + 4 \\). Since \\( f(0) = 0 \\), we have \\( -c(0 - 2)^2 + 4 = 0 \\implies -4c + 4 = 0 \\implies c = 1 \\). So \\( f(x) = -(x - 2)^2 + 4 \\). Evaluating at \\( x = 6 \\) gives \\( f(6) = -(6 - 2)^2 + 4 = -16 + 4 = -12 \\)."
       },
       "ar": {
-        "question": "تقع رأس القطع المكافئ \\( f(x) = -a x^2 + b x \\) عند النقطة \\( (2, 4) \\)، كما هو موضح في الرسم أدناه. أوجد قيمة \\( f(6) \\).\n",
+        "question": "تقع رأس القطع المكافئ \\( f(x) = -a x^2 + b x \\) عند النقطة \\( (2, 4) \\)،.في الرسم أدناه. أوجد قيمة \\( f(6) \\).",
         "options": [],
         "hint": "عَبِّر عن الدالة التربيعية بصيغة الرأس: \\( f(x) = -c(x - 2)^2 + 4 \\).",
         "explanation": "باستخدام صيغة الرأس، \\( f(x) = -c(x - 2)^2 + 4 \\). وبما أن \\( f(0) = 0 \\)، نجد أن \\( -c(0 - 2)^2 + 4 = 0 \\implies -4c + 4 = 0 \\implies c = 1 \\). إذن \\( f(x) = -(x - 2)^2 + 4 \\). بالتعويض بـ \\( x = 6 \\) نحصل على \\( f(6) = -(6 - 2)^2 + 4 = -16 + 4 = -12 \\)."
@@ -2821,7 +2823,7 @@
     "difficulty": "hard",
     "content": {
       "en": {
-        "question": "The table below displays sample values for a non-constant function \\( f: \\mathbb{R} \\to \\mathbb{R} \\) satisfying \\( f(xy) = f(x)f(y) - f(x+y) + 1 \\) for all \\( x, y \\in \\mathbb{R} \\).<table class=\"w-full text-center border-collapse border border-slate-700 my-4\"><thead><tr class=\"bg-slate-800\"><th class=\"border border-slate-600 p-2\">\\( x \\)</th><th class=\"border border-slate-600 p-2\">\\( f(x) \\)</th></tr></thead><tbody><tr><td class=\"border border-slate-700 p-2\">\\( 0 \\)</td><td class=\"border border-slate-700 p-2\">?</td></tr><tr><td class=\"border border-slate-700 p-2\">\\( 1 \\)</td><td class=\"border border-slate-700 p-2\">\\( 1 \\)</td></tr></tbody></table>Find the value of \\( f(0) \\).",
+        "question": "The table below displays given values for a non-constant function \\( f: \\mathbb{R} \\to \\mathbb{R} \\) satisfying \\( f(xy) = f(x)f(y) - f(x+y) + 1 \\) for all \\( x, y \\in \\mathbb{R} \\).<table class=\"w-full text-center border-collapse border border-slate-700 my-4\"><thead><tr class=\"bg-slate-800\"><th class=\"border border-slate-600 p-2\">\\( x \\)</th><th class=\"border border-slate-600 p-2\">\\( f(x) \\)</th></tr></thead><tbody><tr><td class=\"border border-slate-700 p-2\">\\( 0 \\)</td><td class=\"border border-slate-700 p-2\">?</td></tr><tr><td class=\"border border-slate-700 p-2\">\\( 1 \\)</td><td class=\"border border-slate-700 p-2\">\\( 1 \\)</td></tr></tbody></table>Find the value of \\( f(0) \\).",
         "options": [],
         "hint": "Substitute \\( x = 0 \\) and \\( y = 0 \\) into the functional equation.",
         "explanation": "Substituting \\( x = 0 \\) and \\( y = 0 \\) into \\( f(xy) = f(x)f(y) - f(x+y) + 1 \\) gives \\( f(0) = f(0)^2 - f(0) + 1 \\). Rearranging yields \\( f(0)^2 - 2f(0) + 1 = 0 \\), which factors as \\( (f(0) - 1)^2 = 0 \\). Thus, \\( f(0) = 1 \\)."
@@ -2844,7 +2846,7 @@
     "difficulty": "hard",
     "content": {
       "en": {
-        "question": "The diagram below shows \\( 10 \\) ordered points on a line segment.Find the total number of subsets of \\( \\{1, 2, 3, 4, 5, 6, 7, 8, 9, 10\\} \\) that contain no two consecutive integers.",
+        "question": "Consider: \\( 10 \\) ordered points on a line segment.Find the total number of subsets of \\( \\{1, 2, 3, 4, 5, 6, 7, 8, 9, 10\\} \\) that contain no two consecutive integers.",
         "options": [],
         "hint": "Let \\( a_n \\) be the number of such subsets for \\( \\{1, 2, \\dots, n\\} \\). Express \\( a_n \\) as a Fibonacci sequence recurrence.",
         "explanation": "Let \\( a_n \\) be the number of valid subsets of \\( \\{1, 2, \\dots, n\\} \\). If \\( n \\notin S \\), there are \\( a_{n-1} \\) choices. If \\( n \\in S \\), then \\( n-1 \\notin S \\), giving \\( a_{n-2} \\) choices. Thus \\( a_n = a_{n-1} + a_{n-2} \\). For \\( n=1 \\), \\( a_1 = 2 \\); for \\( n=2 \\), \\( a_2 = 3 \\). This sequence corresponds to Fibonacci numbers \\( F_{n+2} \\). For \\( n = 10 \\), \\( a_{10} = F_{12} = 144 \\)."
@@ -2936,7 +2938,7 @@
     "difficulty": "easy",
     "content": {
       "en": {
-        "question": "The figure below shows a regular hexagon.Find the total number of triangles formed by choosing any \\( 3 \\) vertices of this regular hexagon.",
+        "question": "Consider: a regular hexagon.Find the total number of triangles formed by choosing any \\( 3 \\) vertices of this regular hexagon.",
         "options": [],
         "hint": "Count the number of ways to choose \\( 3 \\) vertices out of \\( 6 \\).",
         "explanation": "Since no \\( 3 \\) vertices of a regular hexagon are collinear, any combination of \\( 3 \\) vertices forms a valid triangle. The total number of triangles is \\( \\binom{6}{3} = \\frac{6 \\times 5 \\times 4}{3 \\times 2 \\times 1} = 20 \\)."
@@ -3109,7 +3111,8 @@
         "explanation": "لأي عدد صحيح موجب \\( a > 1 \\)، لدينا \\( \\gcd(a^m - 1, a^n - 1) = a^{\\gcd(m, n)} - 1 \\). هنا، \\( \\gcd(2024, 2016) = \\gcd(2016, 8) = 8 \\). بالتالي، \\( \\gcd(2^{2024} - 1, 2^{2016} - 1) = 2^8 - 1 = 256 - 1 = 255 \\)."
       }
     },
-    "correct_index": "0"
+    "correct_index": "0",
+    "correct_answer": "2"
   },
   {
     "id": "OLYMPIAD-135",
@@ -3258,13 +3261,13 @@
     "difficulty": "hard",
     "content": {
       "en": {
-        "question": "Let \\( f: \\mathbb{R} \\to \\mathbb{R} \\) be a function such that for all \\( x, y \\in \\mathbb{R} \\), \\( f(x f(y) + f(x)) = x f(y) + f(x) \\). The graph below illustrates a candidate constant solution line \\( y = c \\):  If \\( f(0) = 1 \\), calculate the value of \\( f(2024) \\).",
+        "question": "Let \\( f: \\mathbb{R} \\to \\mathbb{R} \\) be a function such that for all \\( x, y \\in \\mathbb{R} \\), \\( f(x f(y) + f(x)) = x f(y) + f(x) \\).Consider: a candidate constant solution line \\( y = c \\): If \\( f(0) = 1 \\), calculate the value of \\( f(2024) \\).",
         "options": [],
         "hint": "Evaluate the equation at \\( x = 0 \\) and examine if \\( f \\) can be the identity or a constant function.",
         "explanation": "Setting \\( x = 0 \\) gives \\( f(f(0)) = f(0) \\). Since \\( f(0) = 1 \\), we get \\( f(1) = 1 \\). Now substitute \\( x = 1 \\): \\( f(f(y) + 1) = f(y) + 1 \\). Let \\( z = f(y) + 1 \\); then \\( f(z) = z \\) for all \\( z \\) in the range of \\( f + 1 \\). Further analysis shows the only continuous/valid function satisfying \\( f(0) = 1 \\) for all inputs is \\( f(x) = 1 \\) for all \\( x \\). Hence \\( f(2024) = 1 \\)."
       },
       "ar": {
-        "question": "لتكن \\( f: \\mathbb{R} \\to \\mathbb{R} \\) دالة بحيث لكل \\( x, y \\in \\mathbb{R} \\)، تتحقق المعادلة \\( f(x f(y) + f(x)) = x f(y) + f(x) \\). يوضح الرسم البياني أدناه حلاً مرشحاً خطياً مستقراً \\( y = c \\):  إذا كان \\( f(0) = 1 \\)، فاحسب قيمة \\( f(2024) \\).",
+        "question": "لتكن \\( f: \\mathbb{R} \\to \\mathbb{R} \\) دالة بحيث لكل \\( x, y \\in \\mathbb{R} \\)، تتحقق المعادلة \\( f(x f(y) + f(x)) = x f(y) + f(x) \\). يوضح الرسم البياني أدناه حلاً مرشحاً خطياً مستقراً \\( y = c \\): إذا كان \\( f(0) = 1 \\)، فاحسب قيمة \\( f(2024) \\).",
         "options": [],
         "hint": "عوض بقيمة \\( x = 0 \\) وتحقق مما إذا كانت الدالة ثنائية أو ثابتة.",
         "explanation": "بالتعويض عن \\( x = 0 \\) نحصل على \\( f(f(0)) = f(0) \\). وبما أن \\( f(0) = 1 \\)، فإن \\( f(1) = 1 \\). بالتعويض عن \\( x = 1 \\) نحصل على \\( f(f(y) + 1) = f(y) + 1 \\). ينتج من التحليل أن الدالة الوحيدة التي تحقق الشرط هي \\( f(x) = 1 \\) لجميع القيم. وبالتالي \\( f(2024) = 1 \\)."
@@ -3304,13 +3307,13 @@
     "difficulty": "hard",
     "content": {
       "en": {
-        "question": "A particle moves on the grid shown below from point \\( A = (0,0) \\) to point \\( B = (3,3) \\) moving only right or up along the grid edges:  Determine the total number of distinct paths from \\( A \\) to \\( B \\).",
+        "question": "A particle moves on the grid. from point \\( A = (0,0) \\) to point \\( B = (3,3) \\) moving only right or up along the grid edges: Determine the total number of distinct paths from \\( A \\) to \\( B \\).",
         "options": [],
         "hint": "Each path consists of exactly \\( 3 \\) right steps and \\( 3 \\) up steps.",
         "explanation": "To move from \\( (0,0) \\) to \\( (3,3) \\), a path must consist of \\( 3 \\) steps to the Right (\\( R \\)) and \\( 3 \\) steps Up (\\( U \\)). The total number of unique sequences is given by the binomial coefficient \\( \\binom{3+3}{3} = \\binom{6}{3} = \\frac{6 \\times 5 \\times 4}{3 \\times 2 \\times 1} = 20 \\)."
       },
       "ar": {
-        "question": "يتنقل جسيم على الشبكة المبينة أدناه من النقطة \\( A = (0,0) \\) إلى النقطة \\( B = (3,3) \\) بالتحرك فقط إلى اليمين أو لأعلى على أضلاع الشبكة:  أحصِ عدد المسارات المختلفة من \\( A \\) إلى \\( B \\).",
+        "question": "يتنقل جسيم على الشبكة.ة أدناه من النقطة \\( A = (0,0) \\) إلى النقطة \\( B = (3,3) \\) بالتحرك فقط إلى اليمين أو لأعلى على أضلاع الشبكة: أحصِ عدد المسارات المختلفة من \\( A \\) إلى \\( B \\).",
         "options": [],
         "hint": "يتكون كل مسار من \\( 3 \\) خطوات لليمين و \\( 3 \\) خطوات للأعلى.",
         "explanation": "للانتقال من \\( (0,0) \\) إلى \\( (3,3) \\)، يتطلب ذلك \\( 3 \\) خطوات لليمين و \\( 3 \\) خطوات للأعلى. عدد المسارات الكلي يعطى بالتوافيق \\( \\binom{6}{3} = \\frac{6 \\times 5 \\times 4}{3 \\times 2 \\times 1} = 20 \\)."
@@ -3396,13 +3399,13 @@
     "difficulty": "extreme",
     "content": {
       "en": {
-        "question": "Consider the geometric arrangement of triangular numbers shown below:  The \\( n \\)-th triangular number is \\( T_n = \\frac{n(n+1)}{2} \\). Find the smallest positive integer \\( n > 1 \\) such that \\( T_n \\) is a perfect square.",
+        "question": "Consider the geometric arrangement of triangular numbers. The \\( n \\)-th triangular number is \\( T_n = \\frac{n(n+1)}{2} \\). Find the smallest positive integer \\( n > 1 \\) such that \\( T_n \\) is a perfect square.",
         "options": [],
         "hint": "Set \\( \\frac{n(n+1)}{2} = k^2 \\) and rewrite as a Pell equation \\( (2n+1)^2 - 8k^2 = 1 \\).",
         "explanation": "We require \\( \\frac{n(n+1)}{2} = k^2 \\implies n(n+1) = 2k^2 \\implies 4n^2 + 4n + 1 - 1 = 8k^2 \\implies (2n+1)^2 - 8k^2 = 1 \\). Let \\( X = 2n+1 \\) and \\( Y = k \\). The fundamental solution to \\( X^2 - 8Y^2 = 1 \\) is \\( (3, 1) \\), which gives \\( 2n+1 = 3 \\implies n = 1 \\). The next smallest positive integer solution comes from \\( (3 + \n\\sqrt{8})^2 = 17 + 6\\sqrt{8} \\), so \\( X = 17 \\). Setting \\( 2n+1 = 17 \\implies 2n = 16 \\implies n = 8 \\). Indeed, \\( T_8 = \\frac{8 \\times 9}{2} = 36 = 6^2 \\)."
       },
       "ar": {
-        "question": "تأمل الترتيب الهندسي للأعداد المثلثية المبين أدناه:  العدد المثلثي رقم \\( n \\) هو \\( T_n = \\frac{n(n+1)}{2} \\). أوجد أصغر عدد صحيح موجب \\( n > 1 \\) بحيث يكون \\( T_n \\) مربكاً كاملاً.",
+        "question": "تأمل الترتيب الهندسي للأعداد المثلثية. العدد المثلثي رقم \\( n \\) هو \\( T_n = \\frac{n(n+1)}{2} \\). أوجد أصغر عدد صحيح موجب \\( n > 1 \\) بحيث يكون \\( T_n \\) مربكاً كاملاً.",
         "options": [],
         "hint": "ضع \\( \\frac{n(n+1)}{2} = k^2 \\) وحولها إلى معادلة بيل \\( (2n+1)^2 - 8k^2 = 1 \\).",
         "explanation": "نحتاج إلى تحقق \\( \\frac{n(n+1)}{2} = k^2 \\implies (2n+1)^2 - 8k^2 = 1 \\). الحل الأساسي الأصغر بعد \\( n = 1 \\) يعطي \\( 2n+1 = 17 \\)، ومنه \\( n = 8 \\). والعدد هو \\( T_8 = 36 = 6^2 \\)."
@@ -3557,13 +3560,13 @@
     "difficulty": "hard",
     "content": {
       "en": {
-        "question": "Consider the Catalan lattice path setup shown below for \\( n = 3 \\):  How many valid paths stay weakly below the diagonal line from \\( (0,0) \\) to \\( (3,3) \\)\null?",
+        "question": "Consider the Catalan lattice path setup. for \\( n = 3 \\): How many valid paths stay weakly below the diagonal line from \\( (0,0) \\) to \\( (3,3) \\)\null?",
         "options": [],
         "hint": "The number of non-crossing lattice paths is given by the \\( 3 \\)-rd Catalan number \\( C_3 \\).",
         "explanation": "The number of paths staying below the diagonal in an \\( n \\times n \\) grid is given by the Catalan number \\( C_n = \\frac{1}{n+1} \\binom{2n}{n} \\). For \\( n = 3 \\): \\( C_3 = \\frac{1}{4} \\binom{6}{3} = \\frac{20}{4} = 5 \\)."
       },
       "ar": {
-        "question": "تأمل مسارات كالان على شبكة \\( 3 \\times 3 \\) المبينة أدناه:  ما هو عدد المسارات التي تظل تحت القطر الرئيسي الممتد من \\( (0,0) \\) إلى \\( (3,3) \\)\null؟",
+        "question": "تأمل مسارات كالان على شبكة \\( 3 \\times 3 \\).ة أدناه: ما هو عدد المسارات التي تظل تحت القطر الرئيسي الممتد من \\( (0,0) \\) إلى \\( (3,3) \\)\null؟",
         "options": [],
         "hint": "عدد المسارات يعطى بعدد كاتالان الثالث \\( C_3 \\).",
         "explanation": "عدد المسارات التي تظل دون القطر في شبكة \\( n \\times n \\) هو عدد كاتالان \\( C_n = \\frac{1}{n+1} \\binom{2n}{n} \\). بالنسبة لـ \\( n = 3 \\): \\( C_3 = \\frac{1}{4} \\binom{6}{3} = 5 \\)."
@@ -3672,13 +3675,13 @@
     "difficulty": "extreme",
     "content": {
       "en": {
-        "question": "Consider the subset lattice Hasse diagram shown below for a set with \\( 3 \\) elements:  According to Sperner's Theorem, what is the maximum size of an antichain in the subset lattice of a set with \\( 4 \\) elements?",
+        "question": "Consider the subset lattice Hasse diagram. for a set with \\( 3 \\) elements: According to Sperner's Theorem, what is the maximum size of an antichain in the subset lattice of a set with \\( 4 \\) elements?",
         "options": [],
         "hint": "Sperner's Theorem states that the maximum antichain size is \\( \\binom{n}{\\lfloor n/2 \\rfloor} \\).",
         "explanation": "By Sperner's Theorem, the maximum size of an antichain of subsets of an \\( n \\)-element set is given by \\( \\binom{n}{\\lfloor n/2 \\rfloor} \\). For \\( n = 4 \\), this value is \\( \\binom{4}{2} = 6 \\)."
       },
       "ar": {
-        "question": "تأمل مخطط هاس لشبكة المجموعات الجزئية لمجموعة بها \\( 3 \\) عناصر أدناه:  وفقاً لمبرهنة سبيرنر (Sperner's Theorem)، ما هو الحجم الأقصى لسلسلة مضادة (Antichain) في شبكة المجموعات الجزئية لمجموعة بها \\( 4 \\) عناصر\null؟",
+        "question": "تأمل مخطط هاس لشبكة المجموعات الجزئية لمجموعة بها \\( 3 \\) عناصر أدناه: وفقاً لمبرهنة سبيرنر (Sperner's Theorem)، ما هو الحجم الأقصى لسلسلة مضادة (Antichain) في شبكة المجموعات الجزئية لمجموعة بها \\( 4 \\) عناصر\null؟",
         "options": [],
         "hint": "تنص مبرهنة سبيرنر على أن أقصى حجم هو \\( \\binom{n}{\\lfloor n/2 \\rfloor} \\).",
         "explanation": "حسب مبرهنة سبيرنر، أقصى حجم لسلسلة مضادة لمجموعة بها \\( n \\) من العناصر هو \\( \\binom{n}{\\lfloor n/2 \\rfloor} \\). بالنسبة لـ \\( n = 4 \\)، القيمة هي \\( \\binom{4}{2} = 6 \\)."
@@ -3741,19 +3744,20 @@
     "difficulty": "hard",
     "content": {
       "en": {
-        "question": "Consider the grid of points \\( (a, b) \\) where \\( 1 \\le a, b \\le 6 \\) as shown below:<br/>How many pairs of integers \\( (a, b) \\) satisfy \\( 1 \\le a, b \\le 6 \\) such that \\( \\gcd(a, b) = 1 \\)?",
+        "question": "Consider the grid of points \\( (a, b) \\) where \\( 1 \\le a, b \\le 6 \\).<br/>How many pairs of integers \\( (a, b) \\) satisfy \\( 1 \\le a, b \\le 6 \\) such that \\( \\gcd(a, b) = 1 \\)?",
         "options": [],
         "hint": "Count the coprime pairs for each value of \\( a \\) from \\( 1 \\) to \\( 6 \\).",
         "explanation": "We count the number of values of \\( b \\in \\{1, 2, 3, 4, 5, 6\\} \\) coprime to \\( a \\):\n- For \\( a = 1 \\): \\( b \\in \\{1, 2, 3, 4, 5, 6\\} \\) (\\( 6 \\) pairs)\n- For \\( a = 2 \\): \\( b \\in \\{1, 3, 5\\} \\) (\\( 3 \\) pairs)\n- For \\( a = 3 \\): \\( b \\in \\{1, 2, 4, 5\\} \\) (\\( 4 \\) pairs)\n- For \\( a = 4 \\): \\( b \\in \\{1, 3, 5\\} \\) (\\( 3 \\) pairs)\n- For \\( a = 5 \\): \\( b \\in \\{1, 2, 3, 4, 6\\} \\) (\\( 5 \\) pairs)\n- For \\( a = 6 \\): \\( b \\in \\{1, 5\\} \\) (\\( 2 \\) pairs)\n\nTotal count = \\( 6 + 3 + 4 + 3 + 5 + 2 = 23 \\)."
       },
       "ar": {
-        "question": "تأمل شبكة النقاط \\( (a, b) \\) حيث \\( 1 \\le a, b \\le 6 \\) كما هو موضح أدناه:<br/>كم عدد أزواج الأعداد الصحيحة \\( (a, b) \\) التي تحقق \\( 1 \\le a, b \\le 6 \\) بحيث يكون \\( \\gcd(a, b) = 1 \\)؟",
+        "question": "تأمل شبكة النقاط \\( (a, b) \\) حيث \\( 1 \\le a, b \\le 6 \\).<br/>كم عدد أزواج الأعداد الصحيحة \\( (a, b) \\) التي تحقق \\( 1 \\le a, b \\le 6 \\) بحيث يكون \\( \\gcd(a, b) = 1 \\)؟",
         "options": [],
         "hint": "احسب عدد الأزواج الأولية فيما بينها لكل قيمة لـ \\( a \\) من \\( 1 \\) إلى \\( 6 \\).",
         "explanation": "نحسب عدد قيم \\( b \\in \\{1, 2, 3, 4, 5, 6\\} \\) الأولية مع \\( a \\):\n- عندما \\( a = 1 \\): \\( b \\in \\{1, 2, 3, 4, 5, 6\\} \\) (\\( 6 \\) أزواج)\n- عندما \\( a = 2 \\): \\( b \\in \\{1, 3, 5\\} \\) (\\( 3 \\) أزواج)\n- عندما \\( a = 3 \\): \\( b \\in \\{1, 2, 4, 5\\} \\) (\\( 4 \\) أزواج)\n- عندما \\( a = 4 \\): \\( b \\in \\{1, 3, 5\\} \\) (\\( 3 \\) أزواج)\n- عندما \\( a = 5 \\): \\( b \\in \\{1, 2, 3, 4, 6\\} \\) (\\( 5 \\) أزواج)\n- عندما \\( a = 6 \\): \\( b \\in \\{1, 5\\} \\) (\\( 2 \\) أزواج)\n\nالمجموع الكلي = \\( 6 + 3 + 4 + 3 + 5 + 2 = 23 \\)."
       }
     },
-    "correct_index": "0"
+    "correct_index": "0",
+    "correct_answer": "6"
   },
   {
     "id": "OLYMPIAD-163",
@@ -3856,13 +3860,13 @@
     "difficulty": "medium",
     "content": {
       "en": {
-        "question": "Two chords \\( AB \\) and \\( CD \\) of a circle intersect at point \\( P \\) inside the circle as shown below:<br/>If \\( AP = 4 \\), \\( PB = 6 \\), and \\( CP = 3 \\), find the length of segment \\( PD \\).",
+        "question": "Two chords \\( AB \\) and \\( CD \\) of a circle intersect at point \\( P \\) inside the circle.<br/>If \\( AP = 4 \\), \\( PB = 6 \\), and \\( CP = 3 \\), find the length of segment \\( PD \\).",
         "options": [],
         "hint": "Use the Power of a Point theorem for intersecting chords inside a circle.",
         "explanation": "By the Intersecting Chords Theorem (Power of a Point):\n\\[ AP \\cdot PB = CP \\cdot PD \\]\nSubstituting the given values:\n\\[ 4 \\cdot 6 = 3 \\cdot PD \\implies 24 = 3 \\cdot PD \\implies PD = 8 \\]."
       },
       "ar": {
-        "question": "تقاطع الوتران \\( AB \\) و \\( CD \\) لدائرة في النقطه \\( P \\) داخل الدائرة كما هو موضح أدناه:<br/>إذا كان \\( AP = 4 \\) و \\( PB = 6 \\) و \\( CP = 3 \\)، فأوجد طول القطعة \\( PD \\).",
+        "question": "تقاطع الوتران \\( AB \\) و \\( CD \\) لدائرة في النقطه \\( P \\) داخل الدائرة.<br/>إذا كان \\( AP = 4 \\) و \\( PB = 6 \\) و \\( CP = 3 \\)، فأوجد طول القطعة \\( PD \\).",
         "options": [],
         "hint": "استخدم نظرية قوة نقطة بالنسبة للأوتار المتقاطعة داخل الدائرة.",
         "explanation": "باستخدام نظرية الأوتار المتقاطعة (قوة نقطة):\n\\[ AP \\cdot PB = CP \\cdot PD \\]\nبالتعويض بالقيم المعطاة:\n\\[ 4 \\cdot 6 = 3 \\cdot PD \\implies 24 = 3 \\cdot PD \\implies PD = 8 \\]."
@@ -3902,13 +3906,13 @@
     "difficulty": "medium",
     "content": {
       "en": {
-        "question": "Consider the bipartite graph with set of left vertices \\( \\{A, B, C\\} \\) and set of right vertices \\( \\{1, 2, 3\\} \\) shown below:<br/>How many perfect matchings exist in this graph?",
+        "question": "Consider the bipartite graph with set of left vertices \\( \\{A, B, C\\} \\) and set of right vertices \\( \\{1, 2, 3\\} \\).<br/>How many perfect matchings exist in this graph?",
         "options": [],
         "hint": "Check the possible assignments for vertex \\( A \\) and see if valid non-conflicting choices remain for \\( B \\) and \\( C \\).",
         "explanation": "A perfect matching pairs each of \\( \\{A, B, C\\} \\) to a unique element in \\( \\{1, 2, 3\\} \\).\n- If \\( A \\to 1 \\): Then \\( C \\) cannot take \\( 1 \\), so \\( C \\to 3 \\). Then \\( B \\) must take \\( 2 \\). Check edges: \\( (A,1), (B,2), (C,3) \\) are all present. (Matching 1)\n- If \\( A \\to 2 \\): Then \\( B \\) cannot take \\( 2 \\), so \\( B \\to 3 \\). Then \\( C \\) must take \\( 1 \\). Check edges: \\( (A,2), (B,3), (C,1) \\) are all present. (Matching 2)\n- \\( A \\) has no edge to \\( 3 \\).\n\nHence, there are exactly \\( 2 \\) perfect matchings."
       },
       "ar": {
-        "question": "تأمل الرسم البياني ثنائي التجزئة برؤوس يسار \\( \\{A, B, C\\} \\) ورؤوس يمين \\( \\{1, 2, 3\\} \\) الموضح أدناه:<br/>كم عدد الاقترانات التامة (perfect matchings) الموجودة في هذا الرسم البيان؟",
+        "question": "تأمل الرسم البياني ثنائي التجزئة برؤوس يسار \\( \\{A, B, C\\} \\) ورؤوس يمين \\( \\{1, 2, 3\\} \\).<br/>كم عدد الاقترانات التامة (perfect matchings) الموجودة في هذا الرسم البيان؟",
         "options": [],
         "hint": "افحص التعيينات الممكنة للرأس \\( A \\) وانظر ما إذا كانت هناك خيارات غير متضاربة لـ \\( B \\) و \\( C \\).",
         "explanation": "الاقتران التام يقرن كل رأس من \\( \\{A, B, C\\} \\) بعنصر فريد من \\( \\{1, 2, 3\\} \\).\n- إذا كان \\( A \\to 1 \\): لا يمكن لـ \\( C \\) أخذ \\( 1 \\)، إذن \\( C \\to 3 \\). وبالتالي ينبغي أن تأخذ \\( B \\to 2 \\). الوصلات \\( (A,1), (B,2), (C,3) \\) موجودة. (الاقتران 1)\n- إذا كان \\( A \\to 2 \\): لا يمكن لـ \\( B \\) أخذ \\( 2 \\)، إذن \\( B \\to 3 \\). وبالتالي تأخذ \\( C \\to 1 \\). الوصلات \\( (A,2), (B,3), (C,1) \\) موجودة. (الاقتران 2)\n- لا توجد وصلة بين \\( A \\) و \\( 3 \\).\n\nإذن يوجد بالضبط اقترانان تامان."
@@ -3971,7 +3975,7 @@
     "difficulty": "medium",
     "content": {
       "en": {
-        "question": "A \\( 2 \\times 4 \\) grid board is shown below:<br/>In how many distinct ways can this \\( 2 \\times 4 \\) board be completely tiled with \\( 1 \\times 2 \\) dominoes?",
+        "question": "A \\( 2 \\times 4 \\) grid board is.<br/>In how many distinct ways can this \\( 2 \\times 4 \\) board be completely tiled with \\( 1 \\times 2 \\) dominoes?",
         "options": [],
         "hint": "The number of domino tilings for a \\( 2 \\times n \\) board is given by the Fibonacci number \\( F_{n+1} \\).",
         "explanation": "Let \\( T(n) \\) be the number of tilings of a \\( 2 \\times n \\) grid.\nSetting up the recurrence:\n- If the last column is covered by one vertical domino, there are \\( T(n-1) \\) ways.\n- If the last two columns are covered by two horizontal dominoes, there are \\( T(n-2) \\) ways.\nSo \\( T(n) = T(n-1) + T(n-2) \\) with \\( T(1) = 1 \\), \\( T(2) = 2 \\).\nThus:\n- \\( T(3) = 1 + 2 = 3 \\)\n- \\( T(4) = 2 + 3 = 5 \\)\n\nThere are \\( 5 \\) ways to tile a \\( 2 \\times 4 \\) grid."
@@ -4040,13 +4044,13 @@
     "difficulty": "medium",
     "content": {
       "en": {
-        "question": "A right-angled triangle with leg lengths \\( 5 \\) and \\( 12 \\) and hypotenuse \\( 13 \\) contains an inscribed circle (incircle) of radius \\( r \\) as shown below:<br/>Find the radius \\( r \\) of the inscribed circle.",
+        "question": "A right-angled triangle with leg lengths \\( 5 \\) and \\( 12 \\) and hypotenuse \\( 13 \\) contains an inscribed circle (incircle) of radius \\( r \\).<br/>Find the radius \\( r \\) of the inscribed circle.",
         "options": [],
         "hint": "Use the formula \\( r = \\frac{a + b - c}{2} \\) for a right triangle with legs \\( a, b \\) and hypotenuse \\( c \\).",
         "explanation": "For any right-angled triangle with legs \\( a \\) and \\( b \\) and hypotenuse \\( c \\), the inradius \\( r \\) is given by:\n\\[ r = \\frac{a + b - c}{2} \\]\nSubstituting \\( a = 5 \\), \\( b = 12 \\), \\( c = 13 \\):\n\\[ r = \\frac{5 + 12 - 13}{2} = \\frac{4}{2} = 2 \\]."
       },
       "ar": {
-        "question": "مثلث قائم الزاوية طولا ضلعيه القائمين \\( 5 \\) و \\( 12 \\) وطول وتره \\( 13 \\) يحتوي على دائرة داخلياً مرسومة بنصف قطر \\( r \\) كما هو موضح أدناه:<br/>أوجد نصف قطر الدائرة المماسة داخلياً \\( r \\).",
+        "question": "مثلث قائم الزاوية طولا ضلعيه القائمين \\( 5 \\) و \\( 12 \\) وطول وتره \\( 13 \\) يحتوي على دائرة داخلياً مرسومة بنصف قطر \\( r \\).<br/>أوجد نصف قطر الدائرة المماسة داخلياً \\( r \\).",
         "options": [],
         "hint": "استخدم صيغة \\( r = \\frac{a + b - c}{2} \\) للمثلث قائم الزاوية ذي الضلعين \\( a, b \\) والوتر \\( c \\).",
         "explanation": "في أي مثلث قائم الزاوية طولا ضلعيه القائمين \\( a \\) و \\( b \\) ووتره \\( c \\)، يعطى نصف قطر الدائرة الداخلية بـ:\n\\[ r = \\frac{a + b - c}{2} \\]\nبالتعويض عن \\( a = 5 \\)، \\( b = 12 \\)، \\( c = 13 \\):\n\\[ r = \\frac{5 + 12 - 13}{2} = \\frac{4}{2} = 2 \\]."
@@ -4224,13 +4228,13 @@
     "difficulty": "hard",
     "content": {
       "en": {
-        "question": "Consider a \\( 3 \\times 3 \\) grid filled with positive integers as shown below:\n<table class='w-full text-center border-collapse border border-slate-700 max-w-xs mx-auto my-2'><tr><td class='border border-slate-600 p-2'>\\( 1 \\)</td><td class='border border-slate-600 p-2'>\\( 2 \\)</td><td class='border border-slate-600 p-2'>\\( 3 \\)</td></tr><tr><td class='border border-slate-600 p-2'>\\( 4 \\)</td><td class='border border-slate-600 p-2'>\\( 5 \\)</td><td class='border border-slate-600 p-2'>\\( 6 \\)</td></tr><tr><td class='border border-slate-600 p-2'>\\( 7 \\)</td><td class='border border-slate-600 p-2'>\\( 8 \\)</td><td class='border border-slate-600 p-2'>\\( 9 \\)</td></tr></table>\nA path starts at cell \\( 1 \\) and moves only Right or Down to reach cell \\( 9 \\). Find the sum of the path sums across all possible paths.",
+        "question": "Consider a \\( 3 \\times 3 \\) grid filled with positive integers.\n<table class='w-full text-center border-collapse border border-slate-700 max-w-xs mx-auto my-2'><tr><td class='border border-slate-600 p-2'>\\( 1 \\)</td><td class='border border-slate-600 p-2'>\\( 2 \\)</td><td class='border border-slate-600 p-2'>\\( 3 \\)</td></tr><tr><td class='border border-slate-600 p-2'>\\( 4 \\)</td><td class='border border-slate-600 p-2'>\\( 5 \\)</td><td class='border border-slate-600 p-2'>\\( 6 \\)</td></tr><tr><td class='border border-slate-600 p-2'>\\( 7 \\)</td><td class='border border-slate-600 p-2'>\\( 8 \\)</td><td class='border border-slate-600 p-2'>\\( 9 \\)</td></tr></table>\nA path starts at cell \\( 1 \\) and moves only Right or Down to reach cell \\( 9 \\). Find the sum of the path sums across all possible paths.",
         "options": [],
         "hint": "Count the number of paths passing through each cell.",
         "explanation": "There are \\( \\binom{4}{2} = 6 \\) total paths from \\( 1 \\) to \\( 9 \\). By counting the number of paths through each cell, the sum of all path sums is \\( 21 + 23 + 25 + 25 + 27 + 29 = 150 \\)."
       },
       "ar": {
-        "question": "تأمل شبكة بمقاس \\( 3 \\times 3 \\) ممتلئة بأعداد صحيحة موجبة كما هو موضح أدناه:\n<table class='w-full text-center border-collapse border border-slate-700 max-w-xs mx-auto my-2'><tr><td class='border border-slate-600 p-2'>\\( 1 \\)</td><td class='border border-slate-600 p-2'>\\( 2 \\)</td><td class='border border-slate-600 p-2'>\\( 3 \\)</td></tr><tr><td class='border border-slate-600 p-2'>\\( 4 \\)</td><td class='border border-slate-600 p-2'>\\( 5 \\)</td><td class='border border-slate-600 p-2'>\\( 6 \\)</td></tr><tr><td class='border border-slate-600 p-2'>\\( 7 \\)</td><td class='border border-slate-600 p-2'>\\( 8 \\)</td><td class='border border-slate-600 p-2'>\\( 9 \\)</td></tr></table>\nيبدأ مسار من الخلية \\( 1 \\) ويتحرك فقط إلى اليمين أو الأسفل للوصول إلى الخلية \\( 9 \\). جد مجموع مبالغ جميع المسارات الممكنة.",
+        "question": "تأمل شبكة بمقاس \\( 3 \\times 3 \\) ممتلئة بأعداد صحيحة موجبة.\n<table class='w-full text-center border-collapse border border-slate-700 max-w-xs mx-auto my-2'><tr><td class='border border-slate-600 p-2'>\\( 1 \\)</td><td class='border border-slate-600 p-2'>\\( 2 \\)</td><td class='border border-slate-600 p-2'>\\( 3 \\)</td></tr><tr><td class='border border-slate-600 p-2'>\\( 4 \\)</td><td class='border border-slate-600 p-2'>\\( 5 \\)</td><td class='border border-slate-600 p-2'>\\( 6 \\)</td></tr><tr><td class='border border-slate-600 p-2'>\\( 7 \\)</td><td class='border border-slate-600 p-2'>\\( 8 \\)</td><td class='border border-slate-600 p-2'>\\( 9 \\)</td></tr></table>\nيبدأ مسار من الخلية \\( 1 \\) ويتحرك فقط إلى اليمين أو الأسفل للوصول إلى الخلية \\( 9 \\). جد مجموع مبالغ جميع المسارات الممكنة.",
         "options": [],
         "hint": "احسب عدد المسارات التي تمر بكل خلية.",
         "explanation": "إجمالي عدد المسارات من \\( 1 \\) إلى \\( 9 \\) هو \\( \\binom{4}{2} = 6 \\). بحساب عدد المسارات المارة بكل خلية، نجد أن مجموع أعداد كل المسارات هو \\( 21 + 23 + 25 + 25 + 27 + 29 = 150 \\)."
@@ -4604,7 +4608,8 @@
         "explanation": "بتطبيق الخاصية \\( \\gcd(2^a - 1, 2^b - 1) = 2^{\\gcd(a, b)} - 1 \\)، نجد أن \\( \\gcd(2024, 2016) = 8 \\). بالتالي، فإن \\( \\gcd(2^{2024} - 1, 2^{2016} - 1) = 2^8 - 1 = 255 \\)."
       }
     },
-    "correct_index": "0"
+    "correct_index": "0",
+    "correct_answer": "2"
   },
   {
     "id": "OLYMPIAD-200",
@@ -5104,13 +5109,13 @@
     "difficulty": "extreme",
     "content": {
       "en": {
-        "question": "Consider a \\( 4 \\times 4 \\) grid of squares as shown below. Each square is to be colored either black or white such that every \\( 2 \\times 2 \\) subgrid contains an odd number of black squares. How many valid colorings of the grid exist?\n",
+        "question": "Consider a \\( 4 \\times 4 \\) grid of squares. Each square is to be colored either black or white such that every \\( 2 \\times 2 \\) subgrid contains an odd number of black squares. How many valid colorings of the grid exist?",
         "options": [],
         "hint": "Represent black as \\( 1 \\) and white as \\( 0 \\) in \\( \\mathbb{F}_2 \\). The condition means the sum of the \\( 4 \\) cells in each \\( 2 \\times 2 \\) square is \\( 1 \\pmod 2 \\).",
         "explanation": "Let \\( x_{i,j} \\in \\mathbb{F}_2 \\) for \\( 1 \\le i, j \\le 4 \\).\nThe condition is \\( x_{i,j} + x_{i+1,j} + x_{i,j+1} + x_{i+1,j+1} = 1 \\pmod 2 \\) for \\( i, j \\in \\{1, 2, 3\\} \\).\nThere are \\( 16 \\) variables and \\( 9 \\) linear constraints over \\( \\mathbb{F}_2 \\).\nNotice that the \\( 9 \\) linear equations are linearly independent.\nTherefore, the dimension of the solution space is \\( 16 - 9 = 7 \\).\nThe number of valid colorings is \\( 2^7 = 128 \\)."
       },
       "ar": {
-        "question": "نعتبر شبكة مربعة بمقاس \\( 4 \\times 4 \\) كما هو موضح أدناه. المراد تلوين كل مربع إما باللون الأسود أو الأبيض بحيث يحتوي كل مربع فرعي بمقاس \\( 2 \\times 2 \\) على عدد فردي من المربعات السوداء. كم عدد التلوينات الصالحة للشبكة؟\n",
+        "question": "نعتبر شبكة مربعة بمقاس \\( 4 \\times 4 \\). المراد تلوين كل مربع إما باللون الأسود أو الأبيض بحيث يحتوي كل مربع فرعي بمقاس \\( 2 \\times 2 \\) على عدد فردي من المربعات السوداء. كم عدد التلوينات الصالحة للشبكة؟",
         "options": [],
         "hint": "مثل اللون الأسود بـ \\( 1 \\) والأبيض بـ \\( 0 \\) في الحقل \\( \\mathbb{F}_2 \\). الشرط يعني أن مجموع الخانات الأربع في كل مربع \\( 2 \\times 2 \\) يساوي \\( 1 \\pmod 2 \\).",
         "explanation": "نفرض أن \\( x_{i,j} \\in \\mathbb{F}_2 \\) لكل \\( 1 \\le i, j \\le 4 \\).\nالشرط هو \\( x_{i,j} + x_{i+1,j} + x_{i,j+1} + x_{i+1,j+1} = 1 \\pmod 2 \\) لكل \\( i, j \\in \\{1, 2, 3\\} \\).\nيوجد لدينا \\( 16 \\) متغيراً و\\( 9 \\) قيود خطية مستقلة فوق \\( \\mathbb{F}_2 \\).\nبالتالي، بعد أبعاد الفضاء الجزئي للحلول هو \\( 16 - 9 = 7 \\).\nعدد التلوينات الصالحة هو \\( 2^7 = 128 \\)."
@@ -5242,13 +5247,13 @@
     "difficulty": "hard",
     "content": {
       "en": {
-        "question": "In the directed graph shown below, find the total number of paths from vertex \\( A \\) to vertex \\( F \\) that visit each vertex at most once.\n",
+        "question": "In the directed graph., find the total number of paths from vertex \\( A \\) to vertex \\( F \\) that visit each vertex at most once.",
         "options": [],
         "hint": "Count simple paths systematically based on their length (number of edges).",
         "explanation": "Edges exist: \\( A \\to B, A \\to C \\), \\( B \\to D, B \\to C \\), \\( C \\to E, C \\to B \\), \\( D \\to F, D \\to E \\), \\( E \\to F, E \\to D \\).\nLet's list all simple paths (visiting no vertex twice):\n1) \\( A \\to B \\to D \\to F \\)\n2) \\( A \\to B \\to D \\to E \\to F \\)\n3) \\( A \\to B \\to C \\to E \\to F \\)\n4) \\( A \\to B \\to C \\to E \\to D \\to F \\)\n5) \\( A \\to C \\to E \\to F \\)\n6) \\( A \\to C \\to E \\to D \\to F \\)\n7) \\( A \\to C \\to B \\to D \\to F \\)\n8) \\( A \\to C \\to B \\to D \\to E \\to F \\)\nThus, there are exactly \\( 8 \\) valid paths."
       },
       "ar": {
-        "question": "في الرسم البياني الموجه الموضح أدناه، أوجد إجمالي عدد المسارات من الرأس \\( A \\) إلى الرأس \\( F \\) والتي تزور كل رأس مرة واحدة على الأكثر.\n",
+        "question": "في الرسم البياني الموجه.، أوجد إجمالي عدد المسارات من الرأس \\( A \\) إلى الرأس \\( F \\) والتي تزور كل رأس مرة واحدة على الأكثر.",
         "options": [],
         "hint": "قم بعد المسارات البسيطة بانتظام بناءً على مسار الحركة عبر الرؤوس.",
         "explanation": "نسرد جميع المسارات البسيطة (التي لا تكرر أي رأس):\n1) \\( A \\to B \\to D \\to F \\)\n2) \\( A \\to B \\to D \\to E \\to F \\)\n3) \\( A \\to B \\to C \\to E \\to F \\)\n4) \\( A \\to B \\to C \\to E \\to D \\to F \\)\n5) \\( A \\to C \\to E \\to F \\)\n6) \\( A \\to C \\to E \\to D \\to F \\)\n7) \\( A \\to C \\to B \\to D \\to F \\)\n8) \\( A \\to C \\to B \\to D \\to E \\to F \\)\nإذن، يوجد بالضبط \\( 8 \\) مسارات صالحة."
@@ -5346,7 +5351,8 @@
         "explanation": "بفرض أن \\( d = \\gcd(n^2+20, n^2+2n+21) \\).\nفإن \\( d \\) يقسم الفرق \\( (n^2+2n+21) - (n^2+20) = 2n+1 \\).\nوبما أن \\( d \\mid (2n+1) \\)، فإن \\( d \\) يقسم أيضاً المقدار \\( 4(n^2+20) = 4n^2 + 80 \\).\nيمكننا كتابة:\n\\( 4n^2 + 80 = (2n-1)(2n+1) + 81 \\).\nبما أن \\( d \\mid (2n+1) \\)، يلزم أن يكون \\( d \\mid 81 \\).\nبالتالي فإن أقصى قيمة ممكنة لـ \\( d \\) هي \\( 81 \\).\nوتتحقق هذه القيمة عندما \\( 2n+1 \\equiv 0 \\pmod{81} \\)، مثلاً عند \\( n = 40 \\):\n\\( a_{40} = 40^2 + 20 = 1620 \\)،\n\\( a_{41} = 41^2 + 20 = 1701 \\)،\nو\\( \\gcd(1620, 1701) = 81 \\)."
       }
     },
-    "correct_index": "0"
+    "correct_index": "0",
+    "correct_answer": "1"
   },
   {
     "id": "OLYMPIAD-234",
@@ -5495,13 +5501,13 @@
     "difficulty": "medium",
     "content": {
       "en": {
-        "question": "A lattice triangle drawn on a grid has \\( I = 5 \\) interior lattice points and \\( B = 8 \\) boundary lattice points, as represented in the figure below. Calculate the area \\( A \\) of the triangle using Pick's Theorem.\n",
+        "question": "A lattice triangle drawn on a grid has \\( I = 5 \\) interior lattice points and \\( B = 8 \\) boundary lattice points, as representedCalculate the area \\( A \\) of the triangle using Pick's Theorem.",
         "options": [],
         "hint": "Pick's Theorem states that \\( A = I + \\frac{B}{2} - 1 \\).",
         "explanation": "According to Pick's Theorem, the area \\( A \\) of a polygon with vertices on a integer lattice is given by:\n$$ A = I + \\frac{B}{2} - 1 $$\nwhere \\( I \\) is the number of interior lattice points and \\( B \\) is the number of boundary lattice points.\nGiven \\( I = 5 \\) and \\( B = 8 \\):\n\\( A = 5 + \\frac{8}{2} - 1 = 5 + 4 - 1 = 8 \\)."
       },
       "ar": {
-        "question": "مثلث شبكي مرسوم على شبكة مربعات يحتوي على \\( I = 5 \\) نقاط شبكية داخلية و\\( B = 8 \\) نقاط شبكية على المحيط، كما هو موضح في الشكل أدناه. أحسب مساحة المثلث \\( A \\) باستخدام نظرية بيك (Pick's Theorem).\n",
+        "question": "مثلث شبكي مرسوم على شبكة مربعات يحتوي على \\( I = 5 \\) نقاط شبكية داخلية و\\( B = 8 \\) نقاط شبكية على المحيط،.أدناه. أحسب مساحة المثلث \\( A \\) باستخدام نظرية بيك (Pick's Theorem).",
         "options": [],
         "hint": "تنص نظرية بيك على أن \\( A = I + \\frac{B}{2} - 1 \\).",
         "explanation": "وفقاً لنظرية بيك، تُعطى مساحة المضلع الشبكي \\( A \\) بالعلاقة:\n$$ A = I + \\frac{B}{2} - 1 $$\nحيث \\( I \\) عدد النقاط الداخلية و \\( B \\) عدد النقاط على الحدود.\nبالتعويض عن \\( I = 5 \\) و \\( B = 8 \\):\n\\( A = 5 + \\frac{8}{2} - 1 = 5 + 4 - 1 = 8 \\)."
@@ -5564,13 +5570,13 @@
     "difficulty": "medium",
     "content": {
       "en": {
-        "question": "Consider a \\( 4 \\times 4 \\) grid of square cells as shown in the diagram. Find the number of paths from the bottom-left corner \\( (0, 0) \\) to the top-right corner \\( (4, 4) \\) moving only right and up, such that the path never goes strictly above the diagonal line \\( y = x \\). ",
+        "question": "Consider a \\( 4 \\times 4 \\) grid of square cells. Find the number of paths from the bottom-left corner \\( (0, 0) \\) to the top-right corner \\( (4, 4) \\) moving only right and up, such that the path never goes strictly above the diagonal line \\( y = x \\).",
         "options": [],
         "hint": "This is equivalent to finding the \\( 4 \\)-th Catalan number \\( C_4 \\).",
         "explanation": "The number of monotonic lattice paths from \\( (0,0) \\) to \\( (n,n) \\) along a grid that do not pass above the diagonal line \\( y = x \\) is given by the \\( n \\)-th Catalan number:\n$$ C_n = \\frac{1}{n+1} \\binom{2n}{n} $$\nFor \\( n = 4 \\):\n$$ C_4 = \\frac{1}{5} \\binom{8}{4} = \\frac{1}{5} \\times 70 = 14 $$."
       },
       "ar": {
-        "question": "تأمل شبكة \\( 4 \\times 4 \\) من الخلايا المربعة كما هو موضح في الشكل. أوجد عدد المسارات من الزاوية السفلية اليسرى \\( (0, 0) \\) إلى الزاوية العلوية اليمنى \\( (4, 4) \\) بالتحرك يميناً وأعلى فقط، بحيث لا يرتفع المسار أبداً فوق القطعة المستقيمة القطرية \\( y = x \\). ",
+        "question": "تأمل شبكة \\( 4 \\times 4 \\) من الخلايا المربعة. أوجد عدد المسارات من الزاوية السفلية اليسرى \\( (0, 0) \\) إلى الزاوية العلوية اليمنى \\( (4, 4) \\) بالتحرك يميناً وأعلى فقط، بحيث لا يرتفع المسار أبداً فوق القطعة المستقيمة القطرية \\( y = x \\).",
         "options": [],
         "hint": "هذه المسألة مكافئة لإيجاد عدد كاتالان الرابع \\( C_4 \\).",
         "explanation": "عدد المسارات الشبكية من \\( (0,0) \\) إلى \\( (n,n) \\) التي لا ترتفع فوق القطر \\( y = x \\) يُعطى بعدد كاتالان \\( n \\):\n$$ C_n = \\frac{1}{n+1} \\binom{2n}{n} $$\nمن أجل \\( n = 4 \\):\n$$ C_4 = \\frac{1}{5} \\binom{8}{4} = \\frac{1}{5} \\times 70 = 14 $$."
@@ -5610,13 +5616,13 @@
     "difficulty": "hard",
     "content": {
       "en": {
-        "question": "Let \\( P(x) = x^3 - 3x + 1 \\). Determine the product of all real roots of the composite polynomial \\( P(P(x)) = 0 \\). The plot of \\( y = P(x) \\) is shown below. ",
+        "question": "Let \\( P(x) = x^3 - 3x + 1 \\). Determine the product of all real roots of the composite polynomial \\( P(P(x)) = 0 \\). The plot of \\( y = P(x) \\) is.",
         "options": [],
         "hint": "Let \\( r_1, r_2, r_3 \\) be roots of \\( P(x) = 0 \\). Then \\( P(P(x)) = 0 \\iff P(x) = r_i \\). Use Vieta's formulas.",
         "explanation": "Let \\( r_1, r_2, r_3 \\) be the roots of \\( P(x) = 0 \\).\nThe equation \\( P(P(x)) = 0 \\) splits into three cubic equations: \\( P(x) = r_i \\iff x^3 - 3x + (1 - r_i) = 0 \\) for \\( i \\in \\{1, 2, 3\\} \\).\nBy Vieta's formulas, the product of roots for each equation \\( x^3 - 3x + (1 - r_i) = 0 \\) is \\( -(1 - r_i) = r_i - 1 \\).\nTherefore, the product of all \\( 9 \\) roots is:\n$$ \\prod_{i=1}^3 (r_i - 1) = -(1 - r_1)(1 - r_2)(1 - r_3) = -P(1) $$\nEvaluating \\( P(1) = 1^3 - 3(1) + 1 = -1 \\).\nThus, the product of all roots is \\( -(-1) = 1 \\)."
       },
       "ar": {
-        "question": "ليكن \\( P(x) = x^3 - 3x + 1 \\). أوجد حاصل ضرب جميع الجذور الحقيقية لكثير الحدود المركب \\( P(P(x)) = 0 \\). البيان البياني لـ \\( y = P(x) \\) موضح أدناه. ",
+        "question": "ليكن \\( P(x) = x^3 - 3x + 1 \\). أوجد حاصل ضرب جميع الجذور الحقيقية لكثير الحدود المركب \\( P(P(x)) = 0 \\). البيان البياني لـ \\( y = P(x) \\) موضح أدناه.",
         "options": [],
         "hint": "لتكن \\( r_1, r_2, r_3 \\) جذور \\( P(x) = 0 \\). عندئذ \\( P(P(x)) = 0 \\iff P(x) = r_i \\). استخدم صيغ فييتا.",
         "explanation": "لتكن \\( r_1, r_2, r_3 \\) جذور \\( P(x) = 0 \\).\nالمعادلة \\( P(P(x)) = 0 \\) تنقسم إلى ثلاث معادلات تكعيبية: \\( P(x) = r_i \\iff x^3 - 3x + (1 - r_i) = 0 \\) من أجل \\( i \\in \\{1, 2, 3\\} \\).\nباستخدام صيغ فييتا، حاصل ضرب جذور كل معادلة \\( x^3 - 3x + (1 - r_i) = 0 \\) هو \\( -(1 - r_i) = r_i - 1 \\).\nبالتالي، حاصل ضرب جميع الجذور الـ \\( 9 \\) هو:\n$$ \\prod_{i=1}^3 (r_i - 1) = -(1 - r_1)(1 - r_2)(1 - r_3) = -P(1) $$\nبحساب \\( P(1) = 1^3 - 3(1) + 1 = -1 \\).\nإذن، حاصل ضرب الجذور يساوي \\( -(-1) = 1 \\)."
@@ -5748,13 +5754,13 @@
     "difficulty": "medium",
     "content": {
       "en": {
-        "question": "In the Cartesian coordinate plane, find the area of the region bounded by the equation \\( |x - y| + |x + y| \\le 4 \\), illustrated in the diagram below. ",
+        "question": "In the Cartesian coordinate plane, find the area of the region bounded by the equation \\( |x - y| + |x + y| \\le 4 \\), illustrated",
         "options": [],
         "hint": "Use the algebraic identity \\( |u| + |v| = 2 \\max(|x|, |y|) \\) where \\( u = x-y \\) and \\( v = x+y \\).",
         "explanation": "Using the identity \\( |x - y| + |x + y| = 2 \\max(|x|, |y|) \\):\nThe given inequality \\( |x - y| + |x + y| \\le 4 \\) simplifies to:\n$$ 2 \\max(|x|, |y|) \\le 4 \\implies \\max(|x|, |y|) \\le 2 $$\nThis describes a square centered at the origin with vertices at \\( (2,2) \\), \\( (-2,2) \\), \\( (-2,-2) \\), and \\( (2,-2) \\).\nThe side length of this square is \\( 4 \\).\nTherefore, the area of the region is \\( 4 \\times 4 = 16 \\)."
       },
       "ar": {
-        "question": "في مستوى الإحداثيات الديكارتية، أوجد مساحة المنطقة المحدودة بـ \\( |x - y| + |x + y| \\le 4 \\)، والموضحة في الشكل أدناه. ",
+        "question": "في مستوى الإحداثيات الديكارتية، أوجد مساحة المنطقة المحدودة بـ \\( |x - y| + |x + y| \\le 4 \\)، و.ة في الشكل أدناه.",
         "options": [],
         "hint": "استخدم المتطابقة الجبرية \\( |u| + |v| = 2 \\max(|x|, |y|) \\) حيث \\( u = x-y \\) و \\( v = x+y \\).",
         "explanation": "باستخدام المتطابقة \\( |x - y| + |x + y| = 2 \\max(|x|, |y|) \\):\nتتبسط المتباينة المعطاة \\( |x - y| + |x + y| \\le 4 \\) إلى:\n$$ 2 \\max(|x|, |y|) \\le 4 \\implies \\max(|x|, |y|) \\le 2 $$\nوهذا يمثل مربعاً مركزه نقطة الأصل ورؤوسه عند \\( (2,2) \\)، \\( (-2,2) \\)، \\( (-2,-2) \\)، و \\( (2,-2) \\).\nطول ضلع هذا المربع هو \\( 4 \\).\nبالتالي، مساحة المنطقة هي \\( 4 \\times 4 = 16 \\)."

@@ -456,7 +456,7 @@
     "difficulty": "hard",
     "content": {
       "en": {
-        "question": "Consider the flow network shown below, where numbers on edges denote capacities. What is the maximum flow from source \\( S \\) to sink \\( T \\)?",
+        "question": "Consider the flow network., where numbers on edges denote capacities. What is the maximum flow from source \\( S \\) to sink \\( T \\)?",
         "options": [
           "\\( 10 \\)",
           "\\( 12 \\)",
@@ -467,7 +467,7 @@
         "explanation": "Consider the cut separating \\( \\{S, A, B\\} \\) from \\( \\{C, D, T\\} \\). The edges crossing this cut are \\( (A, C) \\) with capacity \\( 7 \\) and \\( (B, D) \\) with capacity \\( 5 \\). The total cut capacity is \\( 7 + 5 = 12 \\). By the Max-Flow Min-Cut Theorem, the maximum flow cannot exceed \\( 12 \\). A flow of \\( 12 \\) can be achieved by sending \\( 7 \\) units along \\( S \\to A \\to C \\to T \\) and \\( 5 \\) units along \\( S \\to B \\to D \\to T \\). Thus, max flow = \\( 12 \\)."
       },
       "ar": {
-        "question": "تأمل شبكة التدفق الموضحة أدناه، حيث تمثل الأعداد على الحواف السعات. ما هو أقصى تدفق من المصدر \\( S \\) إلى المصب \\( T \\)؟",
+        "question": "تأمل شبكة التدفق.ة أدناه، حيث تمثل الأعداد على الحواف السعات. ما هو أقصى تدفق من المصدر \\( S \\) إلى المصب \\( T \\)؟",
         "options": [
           "\\( 10 \\)",
           "\\( 12 \\)",
@@ -743,13 +743,13 @@
     "difficulty": "hard",
     "content": {
       "en": {
-        "question": "A discrete dynamical system transitions between two states \\( S_1 \\) and \\( S_2 \\) according to the transition matrix \\( T \\) shown below:\n<table class=\"w-full text-center border-collapse border border-slate-700\"><thead><tr><th class=\"border border-slate-600 p-1\">State</th><th class=\"border border-slate-600 p-1\">To \\( S_1 \\)</th><th class=\"border border-slate-600 p-1\">To \\( S_2 \\)</th></tr></thead><tbody><tr><td class=\"border border-slate-600 p-1\">From \\( S_1 \\)</td><td class=\"border border-slate-600 p-1\">\\( 0.8 \\)</td><td class=\"border border-slate-600 p-1\">\\( 0.2 \\)</td></tr><tr><td class=\"border border-slate-600 p-1\">From \\( S_2 \\)</td><td class=\"border border-slate-600 p-1\">\\( 0.3 \\)</td><td class=\"border border-slate-600 p-1\">\\( 0.7 \\)</td></tr></tbody></table>\nIn the long run (steady state), what is the probability \\( p_1 \\) that the system is in state \\( S_1 \\)? Express your answer as a simplified fraction \\( a/b \\) or decimal. What is the value of \\( 10 \\cdot p_1 \\)?",
+        "question": "A discrete dynamical system transitions between two states \\( S_1 \\) and \\( S_2 \\) according to the transition matrix \\( T \\).\n<table class=\"w-full text-center border-collapse border border-slate-700\"><thead><tr><th class=\"border border-slate-600 p-1\">State</th><th class=\"border border-slate-600 p-1\">To \\( S_1 \\)</th><th class=\"border border-slate-600 p-1\">To \\( S_2 \\)</th></tr></thead><tbody><tr><td class=\"border border-slate-600 p-1\">From \\( S_1 \\)</td><td class=\"border border-slate-600 p-1\">\\( 0.8 \\)</td><td class=\"border border-slate-600 p-1\">\\( 0.2 \\)</td></tr><tr><td class=\"border border-slate-600 p-1\">From \\( S_2 \\)</td><td class=\"border border-slate-600 p-1\">\\( 0.3 \\)</td><td class=\"border border-slate-600 p-1\">\\( 0.7 \\)</td></tr></tbody></table>\nIn the long run (steady state), what is the probability \\( p_1 \\) that the system is in state \\( S_1 \\)? Express your answer as a simplified fraction \\( a/b \\) or decimal. What is the value of \\( 10 \\cdot p_1 \\)?",
         "options": [],
         "hint": "Set up the steady-state equation \\( \\pi T = \\pi \\) where \\( \\pi = [p_1, p_2] \\) and \\( p_1 + p_2 = 1 \\).",
         "explanation": "Let \\( p_1 \\) and \\( p_2 \\) be the steady-state probabilities of being in \\( S_1 \\) and \\( S_2 \\) respectively.\nThe transition equations are:\n\\( p_1 = 0.8 p_1 + 0.3 p_2 \\)\n\\( p_2 = 0.2 p_1 + 0.7 p_2 \\)\nAnd \\( p_1 + p_2 = 1 \\).\nFrom the first equation:\n\\( 0.2 p_1 = 0.3 p_2 \\implies 2 p_1 = 3 p_2 \\implies p_2 = \\frac{2}{3} p_1 \\).\nSubstitute into \\( p_1 + p_2 = 1 \\):\n\\( p_1 + \\frac{2}{3} p_1 = 1 \\implies \\frac{5}{3} p_1 = 1 \\implies p_1 = \\frac{3}{5} = 0.6 \\).\nTherefore, \\( 10 \\cdot p_1 = 10 \\cdot 0.6 = 6 \\)."
       },
       "ar": {
-        "question": "ينتقل نظام ديناميكي منفصل بين حالتين \\( S_1 \\) و \\( S_2 \\) وفقاً لمصفوفة الانتقال \\( T \\) الموضحة أدناه:\n<table class=\"w-full text-center border-collapse border border-slate-700\"><thead><tr><th class=\"border border-slate-600 p-1\">الحالة</th><th class=\"border border-slate-600 p-1\">إلى \\( S_1 \\)</th><th class=\"border border-slate-600 p-1\">إلى \\( S_2 \\)</th></tr></thead><tbody><tr><td class=\"border border-slate-600 p-1\">من \\( S_1 \\)</td><td class=\"border border-slate-600 p-1\">\\( 0.8 \\)</td><td class=\"border border-slate-600 p-1\">\\( 0.2 \\)</td></tr><tr><td class=\"border border-slate-600 p-1\">من \\( S_2 \\)</td><td class=\"border border-slate-600 p-1\">\\( 0.3 \\)</td><td class=\"border border-slate-600 p-1\">\\( 0.7 \\)</td></tr></tbody></table>\nعلى المدى الطويل (الحالة المستقرة)، ما هو الاحتمال \\( p_1 \\) ليكون النظام في الحالة \\( S_1 \\)؟ ما قيمة \\( 10 \\cdot p_1 \\)؟",
+        "question": "ينتقل نظام ديناميكي منفصل بين حالتين \\( S_1 \\) و \\( S_2 \\) وفقاً لمصفوفة الانتقال \\( T \\).ة أدناه:\n<table class=\"w-full text-center border-collapse border border-slate-700\"><thead><tr><th class=\"border border-slate-600 p-1\">الحالة</th><th class=\"border border-slate-600 p-1\">إلى \\( S_1 \\)</th><th class=\"border border-slate-600 p-1\">إلى \\( S_2 \\)</th></tr></thead><tbody><tr><td class=\"border border-slate-600 p-1\">من \\( S_1 \\)</td><td class=\"border border-slate-600 p-1\">\\( 0.8 \\)</td><td class=\"border border-slate-600 p-1\">\\( 0.2 \\)</td></tr><tr><td class=\"border border-slate-600 p-1\">من \\( S_2 \\)</td><td class=\"border border-slate-600 p-1\">\\( 0.3 \\)</td><td class=\"border border-slate-600 p-1\">\\( 0.7 \\)</td></tr></tbody></table>\nعلى المدى الطويل (الحالة المستقرة)، ما هو الاحتمال \\( p_1 \\) ليكون النظام في الحالة \\( S_1 \\)؟ ما قيمة \\( 10 \\cdot p_1 \\)؟",
         "options": [],
         "hint": "أنشئ معادلة الحالة المستقرة \\( \\pi T = \\pi \\) حيث \\( \\pi = [p_1, p_2] \\) و \\( p_1 + p_2 = 1 \\).",
         "explanation": "لتكن \\( p_1 \\) و \\( p_2 \\) احتمالات الحالة المستقرة بالتواجد في \\( S_1 \\) و \\( S_2 \\) على التوالي.\nمعادلات الانتقال هي:\n\\( p_1 = 0.8 p_1 + 0.3 p_2 \\)\nو \\( p_1 + p_2 = 1 \\).\nمن المعادلة الأولى:\n\\( 0.2 p_1 = 0.3 p_2 \\implies 2 p_1 = 3 p_2 \\implies p_2 = \\frac{2}{3} p_1 \\).\nبالتعويض في \\( p_1 + p_2 = 1 \\):\n\\( p_1 + \\frac{2}{3} p_1 = 1 \\implies \\frac{5}{3} p_1 = 1 \\implies p_1 = \\frac{3}{5} = 0.6 \\).\nبالتالي، \\( 10 \\cdot p_1 = 10 \\cdot 0.6 = 6 \\)."
@@ -888,7 +888,7 @@
     "difficulty": "easy",
     "content": {
       "en": {
-        "question": "In a cohort of \\( 100 \\) high school students, \\( 65 \\) study Mathematics, \\( 45 \\) study Physics, and \\( 20 \\) study neither subject, as represented in the Venn diagram below. How many students study BOTH Mathematics and Physics? ",
+        "question": "In a cohort of \\( 100 \\) high school students, \\( 65 \\) study Mathematics, \\( 45 \\) study Physics, and \\( 20 \\) study neither subject, as represented in the Venn diagram below. How many students study BOTH Mathematics and Physics?",
         "options": [
           "\\( 20 \\)",
           "\\( 25 \\)",
@@ -899,7 +899,7 @@
         "explanation": "The total number of students studying at least one subject is:\n\\( |M \\cup P| = 100 - 20 = 80 \\).\nBy the Principle of Inclusion-Exclusion:\n\\( |M \\cup P| = |M| + |P| - |M \\cap P| \\)\n\\( 80 = 65 + 45 - |M \\cap P| \\)\n\\( 80 = 110 - |M \\cap P| \\implies |M \\cap P| = 110 - 80 = 30 \\).\nSo, \\( 30 \\) students study both subjects."
       },
       "ar": {
-        "question": "في مجموعة تضم \\( 100 \\) طالب في المرحلة الثانوية، يدرس \\( 65 \\) طالباً الرياضيات، و \\( 45 \\) يدرسون الفيزياء، و \\( 20 \\) لا يدرسون أيًا من المادتين، كما هو موضح في شكل فين أدناه. كم عدد الطلاب الذين يدرسون كلا المادتين: الرياضيات والفيزياء؟ ",
+        "question": "في مجموعة تضم \\( 100 \\) طالب في المرحلة الثانوية، يدرس \\( 65 \\) طالباً الرياضيات، و \\( 45 \\) يدرسون الفيزياء، و \\( 20 \\) لا يدرسون أيًا من المادتين،.في شكل فين أدناه. كم عدد الطلاب الذين يدرسون كلا المادتين: الرياضيات والفيزياء؟",
         "options": [
           "\\( 20 \\)",
           "\\( 25 \\)",
@@ -1234,7 +1234,7 @@
     "difficulty": "hard",
     "content": {
       "en": {
-        "question": "A system transitions between three states \\( S_1, S_2, S_3 \\) according to the transition matrix shown below:<br/><table class=\"w-full text-center border-collapse border border-slate-700 my-2\"><thead><tr class=\"bg-slate-800 text-slate-200\"><th class=\"border border-slate-700 p-2\">From \\ To</th><th class=\"border border-slate-700 p-2\">\\( S_1 \\)</th><th class=\"border border-slate-700 p-2\">\\( S_2 \\)</th><th class=\"border border-slate-700 p-2\">\\( S_3 \\)</th></tr></thead><tbody><tr><td class=\"border border-slate-700 p-2 font-bold\">\\( S_1 \\)</td><td class=\"border border-slate-700 p-2\">\\( 0.5 \\)</td><td class=\"border border-slate-700 p-2\">\\( 0.3 \\)</td><td class=\"border border-slate-700 p-2\">\\( 0.2 \\)</td></tr><tr><td class=\"border border-slate-700 p-2 font-bold\">\\( S_2 \\)</td><td class=\"border border-slate-700 p-2\">\\( 0.2 \\)</td><td class=\"border border-slate-700 p-2\">\\( 0.6 \\)</td><td class=\"border border-slate-700 p-2\">\\( 0.2 \\)</td></tr><tr><td class=\"border border-slate-700 p-2 font-bold\">\\( S_3 \\)</td><td class=\"border border-slate-700 p-2\">\\( 0.1 \\)</td><td class=\"border border-slate-700 p-2\">\\( 0.4 \\)</td><td class=\"border border-slate-700 p-2\">\\( 0.5 \\)</td></tr></tbody></table><br/>What is the steady-state probability \\( \\pi_2 \\) of being in state \\( S_2 \\)?",
+        "question": "A system transitions between three states \\( S_1, S_2, S_3 \\) according to the transition matrix.<br/><table class=\"w-full text-center border-collapse border border-slate-700 my-2\"><thead><tr class=\"bg-slate-800 text-slate-200\"><th class=\"border border-slate-700 p-2\">From \\ To</th><th class=\"border border-slate-700 p-2\">\\( S_1 \\)</th><th class=\"border border-slate-700 p-2\">\\( S_2 \\)</th><th class=\"border border-slate-700 p-2\">\\( S_3 \\)</th></tr></thead><tbody><tr><td class=\"border border-slate-700 p-2 font-bold\">\\( S_1 \\)</td><td class=\"border border-slate-700 p-2\">\\( 0.5 \\)</td><td class=\"border border-slate-700 p-2\">\\( 0.3 \\)</td><td class=\"border border-slate-700 p-2\">\\( 0.2 \\)</td></tr><tr><td class=\"border border-slate-700 p-2 font-bold\">\\( S_2 \\)</td><td class=\"border border-slate-700 p-2\">\\( 0.2 \\)</td><td class=\"border border-slate-700 p-2\">\\( 0.6 \\)</td><td class=\"border border-slate-700 p-2\">\\( 0.2 \\)</td></tr><tr><td class=\"border border-slate-700 p-2 font-bold\">\\( S_3 \\)</td><td class=\"border border-slate-700 p-2\">\\( 0.1 \\)</td><td class=\"border border-slate-700 p-2\">\\( 0.4 \\)</td><td class=\"border border-slate-700 p-2\">\\( 0.5 \\)</td></tr></tbody></table><br/>What is the steady-state probability \\( \\pi_2 \\) of being in state \\( S_2 \\)?",
         "options": [
           "\\( \\frac{23}{49} \\)",
           "\\( \\frac{12}{49} \\)",
@@ -1245,7 +1245,7 @@
         "explanation": "Let \\( \\pi = (\\pi_1, \\pi_2, \\pi_3) \\) be the stationary probability vector.<br/>From \\( \\pi P = \\pi \\):<br/>1) \\( 0.5\\pi_1 + 0.2\\pi_2 + 0.1\\pi_3 = \\pi_1 \\implies 0.5\\pi_1 - 0.2\\pi_2 - 0.1\\pi_3 = 0 \\)<br/>2) \\( 0.3\\pi_1 + 0.6\\pi_2 + 0.4\\pi_3 = \\pi_2 \\implies -0.3\\pi_1 + 0.4\\pi_2 - 0.4\\pi_3 = 0 \\)<br/>3) \\( \\pi_1 + \\pi_2 + \\pi_3 = 1 \\)<br/>Solving this system yields \\( \\pi_1 = \\frac{12}{23}\\pi_2 \\) and \\( \\pi_3 = \\frac{14}{23}\\pi_2 \\).<br/>Substituting into \\( \\pi_1 + \\pi_2 + \\pi_3 = 1 \\):<br/>\\( \\frac{12}{23}\\pi_2 + \\pi_2 + \\frac{14}{23}\\pi_2 = \\frac{49}{23}\\pi_2 = 1 \\implies \\pi_2 = \\frac{23}{49} \\)."
       },
       "ar": {
-        "question": "ينتقل نظام بين ثلاث حالات \\( S_1, S_2, S_3 \\) وفق مصفوفة الانتقال الموضحة أدناه:<br/><table class=\"w-full text-center border-collapse border border-slate-700 my-2\"><thead><tr class=\"bg-slate-800 text-slate-200\"><th class=\"border border-slate-700 p-2\">من \\ إلى</th><th class=\"border border-slate-700 p-2\">\\( S_1 \\)</th><th class=\"border border-slate-700 p-2\">\\( S_2 \\)</th><th class=\"border border-slate-700 p-2\">\\( S_3 \\)</th></tr></thead><tbody><tr><td class=\"border border-slate-700 p-2 font-bold\">\\( S_1 \\)</td><td class=\"border border-slate-700 p-2\">\\( 0.5 \\)</td><td class=\"border border-slate-700 p-2\">\\( 0.3 \\)</td><td class=\"border border-slate-700 p-2\">\\( 0.2 \\)</td></tr><tr><td class=\"border border-slate-700 p-2 font-bold\">\\( S_2 \\)</td><td class=\"border border-slate-700 p-2\">\\( 0.2 \\)</td><td class=\"border border-slate-700 p-2\">\\( 0.6 \\)</td><td class=\"border border-slate-700 p-2\">\\( 0.2 \\)</td></tr><tr><td class=\"border border-slate-700 p-2 font-bold\">\\( S_3 \\)</td><td class=\"border border-slate-700 p-2\">\\( 0.1 \\)</td><td class=\"border border-slate-700 p-2\">\\( 0.4 \\)</td><td class=\"border border-slate-700 p-2\">\\( 0.5 \\)</td></tr></tbody></table><br/>ما هو احتمال الحالة المستقرة \\( \\pi_2 \\) للتواجد في الحالة \\( S_2 \\)؟",
+        "question": "ينتقل نظام بين ثلاث حالات \\( S_1, S_2, S_3 \\) وفق مصفوفة الانتقال.ة أدناه:<br/><table class=\"w-full text-center border-collapse border border-slate-700 my-2\"><thead><tr class=\"bg-slate-800 text-slate-200\"><th class=\"border border-slate-700 p-2\">من \\ إلى</th><th class=\"border border-slate-700 p-2\">\\( S_1 \\)</th><th class=\"border border-slate-700 p-2\">\\( S_2 \\)</th><th class=\"border border-slate-700 p-2\">\\( S_3 \\)</th></tr></thead><tbody><tr><td class=\"border border-slate-700 p-2 font-bold\">\\( S_1 \\)</td><td class=\"border border-slate-700 p-2\">\\( 0.5 \\)</td><td class=\"border border-slate-700 p-2\">\\( 0.3 \\)</td><td class=\"border border-slate-700 p-2\">\\( 0.2 \\)</td></tr><tr><td class=\"border border-slate-700 p-2 font-bold\">\\( S_2 \\)</td><td class=\"border border-slate-700 p-2\">\\( 0.2 \\)</td><td class=\"border border-slate-700 p-2\">\\( 0.6 \\)</td><td class=\"border border-slate-700 p-2\">\\( 0.2 \\)</td></tr><tr><td class=\"border border-slate-700 p-2 font-bold\">\\( S_3 \\)</td><td class=\"border border-slate-700 p-2\">\\( 0.1 \\)</td><td class=\"border border-slate-700 p-2\">\\( 0.4 \\)</td><td class=\"border border-slate-700 p-2\">\\( 0.5 \\)</td></tr></tbody></table><br/>ما هو احتمال الحالة المستقرة \\( \\pi_2 \\) للتواجد في الحالة \\( S_2 \\)؟",
         "options": [
           "\\( \\frac{23}{49} \\)",
           "\\( \\frac{12}{49} \\)",
@@ -1623,7 +1623,7 @@
     "difficulty": "hard",
     "content": {
       "en": {
-        "question": "A student test score dataset is summarized in the frequency table below:<br/><table class=\"w-full text-center border-collapse border border-slate-700 my-2\"><thead><tr class=\"bg-slate-800 text-slate-200\"><th class=\"border border-slate-700 p-2\">Score Interval</th><th class=\"border border-slate-700 p-2\">Frequency (\\( f \\))</th></tr></thead><tbody><tr><td class=\"border border-slate-700 p-2\">\\( 50 - 59 \\)</td><td class=\"border border-slate-700 p-2\">\\( 4 \\)</td></tr><tr><td class=\"border border-slate-700 p-2\">\\( 60 - 69 \\)</td><td class=\"border border-slate-700 p-2\">\\( 7 \\)</td></tr><tr><td class=\"border border-slate-700 p-2\">\\( 70 - 79 \\)</td><td class=\"border border-slate-700 p-2\">\\( 12 \\)</td></tr><tr><td class=\"border border-slate-700 p-2\">\\( 80 - 89 \\)</td><td class=\"border border-slate-700 p-2\">\\( 11 \\)</td></tr><tr><td class=\"border border-slate-700 p-2\">\\( 90 - 99 \\)</td><td class=\"border border-slate-700 p-2\">\\( 6 \\)</td></tr></tbody></table><br/>Using the midpoint of each interval as its representative value, calculate the estimated sample mean score \\( \\bar{x} \\).",
+        "question": "A student test score dataset is summarized in the frequency table below:<br/><table class=\"w-full text-center border-collapse border border-slate-700 my-2\"><thead><tr class=\"bg-slate-800 text-slate-200\"><th class=\"border border-slate-700 p-2\">Score Interval</th><th class=\"border border-slate-700 p-2\">Frequency (\\( f \\))</th></tr></thead><tbody><tr><td class=\"border border-slate-700 p-2\">\\( 50 - 59 \\)</td><td class=\"border border-slate-700 p-2\">\\( 4 \\)</td></tr><tr><td class=\"border border-slate-700 p-2\">\\( 60 - 69 \\)</td><td class=\"border border-slate-700 p-2\">\\( 7 \\)</td></tr><tr><td class=\"border border-slate-700 p-2\">\\( 70 - 79 \\)</td><td class=\"border border-slate-700 p-2\">\\( 12 \\)</td></tr><tr><td class=\"border border-slate-700 p-2\">\\( 80 - 89 \\)</td><td class=\"border border-slate-700 p-2\">\\( 11 \\)</td></tr><tr><td class=\"border border-slate-700 p-2\">\\( 90 - 99 \\)</td><td class=\"border border-slate-700 p-2\">\\( 6 \\)</td></tr></tbody></table><br/>Using the midpoint of each interval as its representative value, calculate the estimated given mean score \\( \\bar{x} \\).",
         "options": [],
         "hint": "Find midpoints \\( m_i \\) for each interval, then calculate \\( \\bar{x} = \\frac{\\sum f_i m_i}{\\sum f_i} \\).",
         "explanation": "Interval midpoints \\( m_i \\) and products \\( f_i m_i \\):<br/>- \\( 50-59 \\): midpoint \\( 54.5 \\), \\( 4 \\times 54.5 = 218 \\)<br/>- \\( 60-69 \\): midpoint \\( 64.5 \\), \\( 7 \\times 64.5 = 451.5 \\)<br/>- \\( 70-79 \\): midpoint \\( 74.5 \\), \\( 12 \\times 74.5 = 894 \\)<br/>- \\( 80-89 \\): midpoint \\( 84.5 \\), \\( 11 \\times 84.5 = 929.5 \\)<br/>- \\( 90-99 \\): midpoint \\( 94.5 \\), \\( 6 \\times 94.5 = 567 \\)<br/>Total frequency \\( N = 4 + 7 + 12 + 11 + 6 = 40 \\).<br/>Sum of products \\( \\sum f_i m_i = 218 + 451.5 + 894 + 929.5 + 567 = 3060 \\).<br/>Mean \\( \\bar{x} = \\frac{3060}{40} = 76.5 \\)."
@@ -1635,7 +1635,8 @@
         "explanation": "مراكز الفئات \\( m_i \\) وجداء التكرارات \\( f_i m_i \\):<br/>- \\( 50-59 \\): مركز الفئة \\( 54.5 \\)، \\( 4 \\times 54.5 = 218 \\)<br/>- \\( 60-69 \\): مركز الفئة \\( 64.5 \\)، \\( 7 \\times 64.5 = 451.5 \\)<br/>- \\( 70-79 \\): مركز الفئة \\( 74.5 \\)، \\( 12 \\times 74.5 = 894 \\)<br/>- \\( 80-89 \\): مركز الفئة \\( 84.5 \\)، \\( 11 \\times 84.5 = 929.5 \\)<br/>- \\( 90-99 \\): مركز الفئة \\( 94.5 \\)، \\( 6 \\times 94.5 = 567 \\)<br/>إجمالي التكرارات \\( N = 4 + 7 + 12 + 11 + 6 = 40 \\).<br/>مجموع الجداءات \\( \\sum f_i m_i = 218 + 451.5 + 894 + 929.5 + 567 = 3060 \\).<br/>المتوسط \\( \\bar{x} = \\frac{3060}{40} = 76.5 \\)."
       }
     },
-    "correct_index": "76.5"
+    "correct_index": "76.5",
+    "correct_answer": "52.3"
   },
   {
     "id": "KAUST-058",
@@ -1893,7 +1894,7 @@
     "difficulty": "hard",
     "content": {
       "en": {
-        "question": "The region bounded by the parabola \\( y = x^2 - 4x + 7 \\) and the line \\( y = 2x + 2 \\) is shown below.  Find the volume of the solid generated when this region is rotated \\( 360^\\circ \\) about the x-axis.",
+        "question": "The region bounded by the parabola \\( y = x^2 - 4x + 7 \\) and the line \\( y = 2x + 2 \\) is. Find the volume of the solid generated when this region is rotated \\( 360^\\circ \\) about the x-axis.",
         "options": [
           "\\( \\frac{1024\\pi}{15} \\)",
           "\\( \\frac{2048\\pi}{15} \\)",
@@ -1904,7 +1905,7 @@
         "explanation": "The curves intersect at \\( x = 1 \\) and \\( x = 5 \\). Using the washer method, \\( V = \\pi \\int_1^5 \\left( (2x+2)^2 - (x^2-4x+7)^2 \\right) dx \\). Substituting \\( u = x - 3 \\) simplifies the integral to \\( 2\\pi \\int_0^2 (-u^4 - 8u^2 + 48) du = \\frac{2048\\pi}{15} \\)."
       },
       "ar": {
-        "question": "المنطقة المحصورة بين القطع المكافئ \\( y = x^2 - 4x + 7 \\) والمستقيم \\( y = 2x + 2 \\) موضحة أدناه.  أوجد حجم المجسم الناتج عن دوران هذه المنطقة \\( 360^\\circ \\) حول محور \\( x \\).",
+        "question": "المنطقة المحصورة بين القطع المكافئ \\( y = x^2 - 4x + 7 \\) والمستقيم \\( y = 2x + 2 \\) موضحة أدناه. أوجد حجم المجسم الناتج عن دوران هذه المنطقة \\( 360^\\circ \\) حول محور \\( x \\).",
         "options": [
           "\\( \\frac{1024\\pi}{15} \\)",
           "\\( \\frac{2048\\pi}{15} \\)",
@@ -1949,7 +1950,7 @@
     "difficulty": "medium",
     "content": {
       "en": {
-        "question": "Consider the logic circuit shown below with inputs \\( A \\), \\( B \\), and \\( C \\).  The boolean expression is \\( Y = (A \\oplus B) + (B \\cdot C) \\). Out of the \\( 8 \\) possible input combinations \\( (A, B, C) \\in \\{0, 1\\}^3 \\), how many result in \\( Y = 1 \\)?",
+        "question": "Consider the logic circuit. with inputs \\( A \\), \\( B \\), and \\( C \\). The boolean expression is \\( Y = (A \\oplus B) + (B \\cdot C) \\). Out of the \\( 8 \\) possible input combinations \\( (A, B, C) \\in \\{0, 1\\}^3 \\), how many result in \\( Y = 1 \\)?",
         "options": [
           "\\( 3 \\)",
           "\\( 4 \\)",
@@ -1960,7 +1961,7 @@
         "explanation": "Evaluating all \\( 8 \\) combinations: \\( (0,1,0) \\), \\( (0,1,1) \\), \\( (1,0,0) \\), \\( (1,0,1) \\), and \\( (1,1,1) \\) give \\( Y = 1 \\). Thus, there are \\( 5 \\) input combinations yielding \\( 1 \\)."
       },
       "ar": {
-        "question": "تأمل الدارة المنطقية الموضحة أدناه ذات المدخلات \\( A \\)، \\( B \\)، و \\( C \\).  التعبير المنطقي هو \\( Y = (A \\oplus B) + (B \\cdot C) \\). من بين التركيبات الـ \\( 8 \\) الممكنة للمدخلات \\( (A, B, C) \\in \\{0, 1\\}^3 \\)، كم عدد التركيبات التي تجعل \\( Y = 1 \\)؟",
+        "question": "تأمل الدارة المنطقية.ة أدناه ذات المدخلات \\( A \\)، \\( B \\)، و \\( C \\). التعبير المنطقي هو \\( Y = (A \\oplus B) + (B \\cdot C) \\). من بين التركيبات الـ \\( 8 \\) الممكنة للمدخلات \\( (A, B, C) \\in \\{0, 1\\}^3 \\)، كم عدد التركيبات التي تجعل \\( Y = 1 \\)؟",
         "options": [
           "\\( 3 \\)",
           "\\( 4 \\)",
@@ -2150,7 +2151,7 @@
     "difficulty": "medium",
     "content": {
       "en": {
-        "question": "A particle moves on the grid shown below from \\( (0,0) \\) to \\( (5,5) \\) using only unit steps right or up.  How many paths avoid passing through the point \\( (2,3) \\)?",
+        "question": "A particle moves on the grid. from \\( (0,0) \\) to \\( (5,5) \\) using only unit steps right or up. How many paths avoid passing through the point \\( (2,3) \\)?",
         "options": [
           "\\( 132 \\)",
           "\\( 152 \\)",
@@ -2161,7 +2162,7 @@
         "explanation": "Total paths without restrictions: \\( \\binom{10}{5} = 252 \\). Paths passing through \\( (2,3) \\): \\( \\binom{2+3}{2} \\times \\binom{3+2}{2} = 10 \\times 10 = 100 \\). Valid paths avoiding \\( (2,3) \\): \\( 252 - 100 = 152 \\)."
       },
       "ar": {
-        "question": "يتتحرك جسيم على الشبكة الموضحة أدناه من النقطة \\( (0,0) \\) إلى النقطة \\( (5,5) \\) متحركًا فقط بخطوات وحدة لليمين أو للأعلى.  كم عدد المسارات التي تتجنب المرور بالنقطة \\( (2,3) \\)؟",
+        "question": "يتتحرك جسيم على الشبكة.ة أدناه من النقطة \\( (0,0) \\) إلى النقطة \\( (5,5) \\) متحركًا فقط بخطوات وحدة لليمين أو للأعلى. كم عدد المسارات التي تتجنب المرور بالنقطة \\( (2,3) \\)؟",
         "options": [
           "\\( 132 \\)",
           "\\( 152 \\)",
@@ -2540,7 +2541,7 @@
         "explanation": "The vertices of the feasible region are \\( (0,0) \\), \\( (3,0) \\), \\( (2,3) \\), and \\( (0,4) \\). Evaluating \\( Z \\) at each vertex: \\( Z(0,0) = 0 \\), \\( Z(3,0) = 3(3) + 4(0) = 9 \\), \\( Z(0,4) = 3(0) + 4(4) = 16 \\), \\( Z(2,3) = 3(2) + 4(3) = 6 + 12 = 18 \\). Thus, the maximum value is \\( 18 \\)."
       },
       "ar": {
-        "question": "تأمل مسألة البرمجة الخطية لتعظيم \\( Z = 3x + 4y \\) تحت القيود \\( x + 2y \\le 8 \\)، \\( 3x + y \\le 9 \\)، \\( x \\ge 0 \\)، و \\( y \\ge 0 \\). المنطقة الممكنة محصورة كما هو موضح في الرسم أدناه.<div class=\"my-4\"></div>ما هي القيمة العظمى لـ \\( Z \\)؟",
+        "question": "تأمل مسألة البرمجة الخطية لتعظيم \\( Z = 3x + 4y \\) تحت القيود \\( x + 2y \\le 8 \\)، \\( 3x + y \\le 9 \\)، \\( x \\ge 0 \\)، و \\( y \\ge 0 \\). المنطقة الممكنة محصورة.في الرسم أدناه.<div class=\"my-4\"></div>ما هي القيمة العظمى لـ \\( Z \\)؟",
         "options": [
           "\\( 16 \\)",
           "\\( 17 \\)",
@@ -2618,7 +2619,7 @@
     "difficulty": "hard",
     "content": {
       "en": {
-        "question": "A system transitions between State \\( A \\) and State \\( B \\) according to the Markov chain transition graph shown below.<div class=\"my-4\"></div>What is the steady-state probability \\( \\pi_A \\) of being in State \\( A \\)?",
+        "question": "A system transitions between State \\( A \\) and State \\( B \\) according to the Markov chain transition graph.<div class=\"my-4\"></div>What is the steady-state probability \\( \\pi_A \\) of being in State \\( A \\)?",
         "options": [
           "\\( \\frac{1}{3} \\)",
           "\\( \\frac{1}{2} \\)",
@@ -2629,7 +2630,7 @@
         "explanation": "From the transition graph, \\( P(A \\to B) = 0.2 \\) and \\( P(B \\to A) = 0.4 \\). In steady state, probability flux leaving \\( A \\) equals probability flux entering \\( A \\): \\( \\pi_A (0.2) = \\pi_B (0.4) \\implies \\pi_A = 2 \\pi_B \\). Since \\( \\pi_A + \\pi_B = 1 \\), substituting gives \\( 2 \\pi_B + \\pi_B = 1 \\implies 3 \\pi_B = 1 \\implies \\pi_B = \\frac{1}{3} \\). Thus, \\( \\pi_A = \\frac{2}{3} \\)."
       },
       "ar": {
-        "question": "ينتقل نظام بين الحالة \\( A \\) والحالة \\( B \\) وفقًا لرسم سلسلة ماركوف الموضح أدناه.<div class=\"my-4\"></div>ما هو احتمال الحالة المستقرة \\( \\pi_A \\) للتواجد في الحالة \\( A \\)؟",
+        "question": "ينتقل نظام بين الحالة \\( A \\) والحالة \\( B \\) وفقًا لرسم سلسلة ماركوف.<div class=\"my-4\"></div>ما هو احتمال الحالة المستقرة \\( \\pi_A \\) للتواجد في الحالة \\( A \\)؟",
         "options": [
           "\\( \\frac{1}{3} \\)",
           "\\( \\frac{1}{2} \\)",
@@ -2674,7 +2675,7 @@
     "difficulty": "medium",
     "content": {
       "en": {
-        "question": "In the directed network shown below with edge weights representing travel costs, what is the minimum cost path from source \\( S \\) to sink \\( T \\)?<div class=\"my-4\"></div>",
+        "question": "In the directed network. with edge weights representing travel costs, what is the minimum cost path from source \\( S \\) to sink \\( T \\)?<div class=\"my-4\"></div>",
         "options": [
           "\\( 7 \\)",
           "\\( 8 \\)",
@@ -2685,7 +2686,7 @@
         "explanation": "Let us check all directed paths from \\( S \\) to \\( T \\): Path 1: \\( S \\to A \\to T \\) with cost \\( 3 + 8 = 11 \\). Path 2: \\( S \\to B \\to T \\) with cost \\( 7 + 2 = 9 \\). Path 3: \\( S \\to A \\to B \\to T \\) with cost \\( 3 + 2 + 2 = 7 \\). The minimum cost path is \\( 7 \\)."
       },
       "ar": {
-        "question": "في الشبكة الموجهة الموضحة أدناه حيث تمثل أوزان الحواف تكاليف الانتقال، ما هي تكلفة المسار الأقصر من المصدر \\( S \\) إلى المصب \\( T \\)؟<div class=\"my-4\"></div>",
+        "question": "في الشبكة الموجهة.ة أدناه حيث تمثل أوزان الحواف تكاليف الانتقال، ما هي تكلفة المسار الأقصر من المصدر \\( S \\) إلى المصب \\( T \\)؟<div class=\"my-4\"></div>",
         "options": [
           "\\( 7 \\)",
           "\\( 8 \\)",
@@ -3177,7 +3178,7 @@
     "difficulty": "hard",
     "content": {
       "en": {
-        "question": "Consider the flow network from source \\( S \\) to sink \\( T \\) shown below. The capacity of each directed edge is indicated. What is the maximum flow value from \\( S \\) to \\( T \\)?",
+        "question": "Consider the flow network from source \\( S \\) to sink \\( T \\). The capacity of each directed edge is indicated. What is the maximum flow value from \\( S \\) to \\( T \\)?",
         "options": [
           "\\( 12 \\)",
           "\\( 14 \\)",
@@ -3189,7 +3190,7 @@
         "explanation": "Consider the cut separating \\( \\{S, A, B\\} \\) from \\( \\{T\\} \\):\nEdges going across this cut are \\( (A, T) \\) with capacity \\( 8 \\), and \\( (B, T) \\) with capacity \\( 7 \\).\nTotal cut capacity = \\( 8 + 7 = 15 \\).\nSince maximum flow cannot exceed the minimum cut capacity, and we can achieve flow \\( 8 \\) along \\( S \\rightarrow A \\rightarrow T \\) and flow \\( 7 \\) along \\( S \\rightarrow B \\rightarrow T \\) (total \\( 15 \\)), the maximum flow value is \\( 15 \\)."
       },
       "ar": {
-        "question": "تأمل شبكة التدفق من المصدر \\( S \\) إلى المصب \\( T \\) الموضحة أدناه. سعة كل ضلع موجه مكتوبة عليه. ما هي القيمة القصوى للتدفق من \\( S \\) إلى \\( T \\)؟",
+        "question": "تأمل شبكة التدفق من المصدر \\( S \\) إلى المصب \\( T \\).ة أدناه. سعة كل ضلع موجه مكتوبة عليه. ما هي القيمة القصوى للتدفق من \\( S \\) إلى \\( T \\)؟",
         "options": [
           "\\( 12 \\)",
           "\\( 14 \\)",
@@ -3456,13 +3457,13 @@
     "difficulty": "easy",
     "content": {
       "en": {
-        "question": "Two vectors in two-dimensional space are given by \\( \\vec{u} = \\begin{pmatrix} 3 \\\\ 4 \\end{pmatrix} \\) and \\( \\vec{v} = \\begin{pmatrix} 12 \\\\ -5 \\end{pmatrix} \\) as shown below. Find the dot product \\( \\vec{u} \\cdot \\vec{v} \\).",
+        "question": "Two vectors in two-dimensional space are given by \\( \\vec{u} = \\begin{pmatrix} 3 \\\\ 4 \\end{pmatrix} \\) and \\( \\vec{v} = \\begin{pmatrix} 12 \\\\ -5 \\end{pmatrix} \\). Find the dot product \\( \\vec{u} \\cdot \\vec{v} \\).",
         "options": [],
         "hint": "Use the dot product formula \\( \\vec{u} \\cdot \\vec{v} = u_x v_x + u_y v_y \\).",
         "explanation": "Calculate the dot product directly:\n\\( \\vec{u} \\cdot \\vec{v} = (3)(12) + (4)(-5) = 36 - 20 = 16 \\)."
       },
       "ar": {
-        "question": "متجرد متجهات في الفضاء ثنائي الأبعاد يُعطيان بـ \\( \\vec{u} = \\begin{pmatrix} 3 \\\\ 4 \\end{pmatrix} \\) و \\( \\vec{v} = \\begin{pmatrix} 12 \\\\ -5 \\end{pmatrix} \\) كما هو موضح أدناه. أوجد الجداء النقطي (القياسي) \\( \\vec{u} \\cdot \\vec{v} \\)؟",
+        "question": "متجرد متجهات في الفضاء ثنائي الأبعاد يُعطيان بـ \\( \\vec{u} = \\begin{pmatrix} 3 \\\\ 4 \\end{pmatrix} \\) و \\( \\vec{v} = \\begin{pmatrix} 12 \\\\ -5 \\end{pmatrix} \\). أوجد الجداء النقطي (القياسي) \\( \\vec{u} \\cdot \\vec{v} \\)؟",
         "options": [],
         "hint": "استخدم قانون الجداء النقطي \\( \\vec{u} \\cdot \\vec{v} = u_x v_x + u_y v_y \\).",
         "explanation": "احسب الجداء النقطي مباشرة:\n\\( \\vec{u} \\cdot \\vec{v} = (3)(12) + (4)(-5) = 36 - 20 = 16 \\)."
@@ -3871,7 +3872,7 @@
     "difficulty": "medium",
     "content": {
       "en": {
-        "question": "Consider the logic circuit diagram shown below with inputs \\( A \\) and \\( B \\).  Which logical operation represents the output \\( Y \\)?",
+        "question": "Consider the logic circuit diagram. with inputs \\( A \\) and \\( B \\). Which logical operation represents the output \\( Y \\)?",
         "options": [
           "\\( A \\text{ OR } B \\)",
           "\\( A \\text{ NAND } B \\)",
@@ -3882,7 +3883,7 @@
         "explanation": "The upper gate produces \\( \\bar{A} \\) and the lower gate produces \\( \\bar{B} \\). The AND gate combines them to yield \\( Y = \\bar{A} \\cdot \\bar{B} \\). By De Morgan's Law, \\( \\bar{A} \\cdot \\bar{B} = \\overline{A + B} \\), which is the logical NOR function."
       },
       "ar": {
-        "question": "تأمل مخطط الدائرة المنطقية الموضحة أدناه بمدخلين \\( A \\) و \\( B \\).  أي عملية منطقية تمثل المخرج \\( Y \\)؟",
+        "question": "تأمل مخطط الدائرة المنطقية.ة أدناه بمدخلين \\( A \\) و \\( B \\). أي عملية منطقية تمثل المخرج \\( Y \\)؟",
         "options": [
           "\\( A \\text{ OR } B \\)",
           "\\( A \\text{ NAND } B \\)",
@@ -3994,7 +3995,13 @@
         "explanation": "Let Player 1 play R1 with probability \\( p \\) and R2 with probability \\( 1-p \\). Player 2 expected payoff for C1 = \\( 3p + 0(1-p) = 3p \\). Player 2 expected payoff for C2 = \\( -1p + 2(1-p) = 2 - 3p \\). Equating expected payoffs: \\( 3p = 2 - 3p \\implies 6p = 2 \\implies p = 1/3 \\). Substituting \\( p = 1/3 \\) into expected payoff gives value of game \\( V = 3(1/3) = 1 \\)."
       },
       "ar": {
-        "question": "تأمل مصفوفة العوائد للعبين: اللاعب 1 (الصفوف) واللاعب 2 (الأعمدة) في لعبة مصلحة صفرية لشخصين أدناه: <table class='w-full text-center border-collapse border border-slate-700 my-2'><thead><tr class='bg-slate-200'><th class='border border-slate-600 p-1'></th><th class='border border-slate-600 p-1'>C1</th><th class='border border-slate-600 p-1'>C2</th></tr></thead><tbody><tr><td class='border border-slate-600 p-1 bg-slate-100'>R1</td><td class='border border-slate-600 p-1'>\\( 3 \\)</td><td class='border border-slate-600 p-1'>\\( -1 \\)</td></tr><tr><td class='border border-slate-600 p-1 bg-slate-100'>R2</td><td class='border border-slate-600 p-1'>\\( 0 \\)</td><td class='border border-slate-600 p-1'>\\( 2 \\)</td></tr></tbody></table> ما هي قيمة هذه اللعبة تحت التوازن الاستراتيجي المختلط لـ "
+        "question": "تأمل مصفوفة العوائد للعبين: اللاعب 1 (الصفوف) واللاعب 2 (الأعمدة) في لعبة مصلحة صفرية لشخصين أدناه: <table class='w-full text-center border-collapse border border-slate-700 my-2'><thead><tr class='bg-slate-200'><th class='border border-slate-600 p-1'></th><th class='border border-slate-600 p-1'>C1</th><th class='border border-slate-600 p-1'>C2</th></tr></thead><tbody><tr><td class='border border-slate-600 p-1 bg-slate-100'>R1</td><td class='border border-slate-600 p-1'>\\( 3 \\)</td><td class='border border-slate-600 p-1'>\\( -1 \\)</td></tr><tr><td class='border border-slate-600 p-1 bg-slate-100'>R2</td><td class='border border-slate-600 p-1'>\\( 0 \\)</td><td class='border border-slate-600 p-1'>\\( 2 \\)</td></tr></tbody></table> ما هي قيمة هذه اللعبة تحت التوازن الاستراتيجي المختلط لـ ",
+        "options": [
+          "\\( 0 \\)",
+          "\\( \\frac{1}{2} \\)",
+          "\\( 1 \\)",
+          "\\( \\frac{6}{5} \\)"
+        ]
       }
     },
     "correct_index": "2"
@@ -4120,7 +4127,7 @@
     "difficulty": "hard",
     "content": {
       "en": {
-        "question": "A pipeline connects point \\( A(0, 3) \\) to point \\( B(8, 5) \\) via a pumping station located at point \\( P(x, 0) \\) on the x-axis, as shown below:<br/>For what value of \\( x \\) is the total pipeline length \\( AP + PB \\) minimized?",
+        "question": "A pipeline connects point \\( A(0, 3) \\) to point \\( B(8, 5) \\) via a pumping station located at point \\( P(x, 0) \\) on the x-axis,.<br/>For what value of \\( x \\) is the total pipeline length \\( AP + PB \\) minimized?",
         "options": [
           "\\( 2 \\)",
           "\\( 3 \\)",
@@ -4131,7 +4138,7 @@
         "explanation": "Reflect \\( A(0,3) \\) across the x-axis to \\( A'(0,-3) \\). The line segment connecting \\( A'(0,-3) \\) and \\( B(8,5) \\) intersects the x-axis at \\( P(x,0) \\). The line equation is \\( y - 5 = \\frac{5 - (-3)}{8 - 0} (x - 8) = 1 \\cdot (x - 8) \\implies y = x - 3 \\). Setting \\( y = 0 \\) gives \\( x = 3 \\)."
       },
       "ar": {
-        "question": "يربط خط أنابيب بين النقطة \\( A(0, 3) \\) والنقطة \\( B(8, 5) \\) عبر محطة ضخ تقع عند النقطة \\( P(x, 0) \\) على المحور السيني، كما هو موضح أدناه:<br/>ما هي قيمة \\( x \\) التي تجعل إجمالي طول خط الأنابيب \\( AP + PB \\) أصغر ما يمكن؟",
+        "question": "يربط خط أنابيب بين النقطة \\( A(0, 3) \\) والنقطة \\( B(8, 5) \\) عبر محطة ضخ تقع عند النقطة \\( P(x, 0) \\) على المحور السيني،.<br/>ما هي قيمة \\( x \\) التي تجعل إجمالي طول خط الأنابيب \\( AP + PB \\) أصغر ما يمكن؟",
         "options": [
           "\\( 2 \\)",
           "\\( 3 \\)",
@@ -4422,7 +4429,8 @@
         "explanation": "في \\( 30 \\) ثانية (أي \\( 0.5 \\) دقيقة)، المعلمة هي \\( \\lambda = 4 \\times 0.5 = 2 \\). احتمال استقبال \\( 0 \\) طلبات هو \\( P(X=0) = e^{-2} \\approx 0.14 \\)."
       }
     },
-    "correct_index": "0.14"
+    "correct_index": "0.14",
+    "correct_answer": "7.2"
   },
   {
     "id": "KAUST-155",
@@ -4741,7 +4749,8 @@
         "explanation": "المتوسط هو $$\\frac{5 + 8 + 12 + 15 + 18}{5} = 11.6$$؛ الوسيط هو $$12$$."
       }
     },
-    "correct_index": ""
+    "correct_index": "",
+    "correct_answer": "11.6"
   },
   {
     "id": "KAUST-166",
@@ -5135,7 +5144,8 @@
         "explanation": "المتوسط هو \\( \\frac{\\sum x}{n} \\) والانحراف المعياري هو \\( \\sqrt{\\frac{\\sum (x - \\bar{x})^2}{n}} \\)."
       }
     },
-    "correct_index": ""
+    "correct_index": "",
+    "correct_answer": "20.7"
   },
   {
     "id": "KAUST-180",
@@ -5280,7 +5290,8 @@
         "explanation": "يتم العثور على GCD من خلال أخذ أقل قوة لجميع العوامل الأولية."
       }
     },
-    "correct_index": ""
+    "correct_index": "",
+    "correct_answer": "12"
   },
   {
     "id": "KAUST-185",
@@ -5585,7 +5596,8 @@
         "explanation": "المتوسط: $$ \\mu = \\frac{12 + 15 + 20 + 22 + 25}{5} = 18.8 $$؛ الوسيط: القيمة الوسطى هي $$ 20 $$. "
       }
     },
-    "correct_index": ""
+    "correct_index": "",
+    "correct_answer": "18.8"
   },
   {
     "id": "KAUST-196",
@@ -6506,7 +6518,8 @@
         "explanation": "المساحة تُعطى بواسطة $$ \frac{1}{2} \times \text{قاعدة} \times \text{ارتفاع} = \frac{1}{2} \times 10 \times 5 = 25 $$."
       }
     },
-    "correct_index": ""
+    "correct_index": "",
+    "correct_answer": "25"
   },
   {
     "id": "KAUST-229",
@@ -7328,7 +7341,8 @@
         "explanation": "أكبر قاسم مشترك لـ \\( 56 \\) و \\( 98 \\) هو \\( 14 \\)."
       }
     },
-    "correct_index": ""
+    "correct_index": "",
+    "correct_answer": "14"
   },
   {
     "id": "KAUST-259",
