@@ -585,7 +585,7 @@
       <div class="space-y-4">
         <div>
           <label class="block text-sm text-slate-300 mb-1" id="print-modal-track-lbl">المسار (Track)</label>
-          <select id="print-track-select" onchange="updatePrintModalMax()" class="w-full bg-slate-800 border border-slate-700 text-white rounded-xl px-4 py-3 focus:ring-2 focus:ring-emerald-500 outline-none mb-4">
+          <select id="print-track-select" onchange="updatePrintPhaseOptions()" class="w-full bg-slate-800 border border-slate-700 text-white rounded-xl px-4 py-3 focus:ring-2 focus:ring-emerald-500 outline-none mb-4">
             <option value="current">Current Filters / الفلاتر الحالية</option>
             <option value="kangaroo">Kangaroo</option>
             <option value="nafes">Nafes (KSA)</option>
@@ -594,6 +594,13 @@
             <option value="olympiad">Math Olympiad</option>
             <option value="nsmo">NSMO (KSA)</option>
           </select>
+          
+          <div id="print-phase-container" style="display: none;">
+            <label class="block text-sm text-slate-300 mb-1" id="print-modal-phase-lbl">المرحلة (Phase/Grade)</label>
+            <select id="print-phase-select" onchange="updatePrintModalMax()" class="w-full bg-slate-800 border border-slate-700 text-white rounded-xl px-4 py-3 focus:ring-2 focus:ring-amber-500 outline-none mb-4">
+              <option value="all">All</option>
+            </select>
+          </div>
           
           <label class="block text-sm text-slate-300 mb-1" id="print-modal-lbl">عدد الأسئلة (Max <span id="print-max-q">0</span>)</label>
           <input type="number" id="print-q-count" min="1" value="20" class="w-full bg-slate-800 border border-slate-700 text-white rounded-xl px-4 py-3 focus:ring-2 focus:ring-emerald-500 outline-none">
@@ -1512,9 +1519,73 @@
     });
 
     // --- 8. PRINT ENGINE ---
+    const printPhases = {
+      nafes: [
+        { val: "all", text: "كل صفوف نافس (All Nafes Grades)" },
+        { val: "Grade 3", text: "🟢 نافس الصف 3 (Grade 3)" },
+        { val: "Grade 6", text: "🔵 نافس الصف 6 (Grade 6)" },
+        { val: "Grade 9", text: "🟣 نافس الصف 9 (Grade 9)" }
+      ],
+      kangaroo: [
+        { val: "all", text: "كل مستويات كانجارو (All Kangaroo Levels)" },
+        { val: "Ecolier", text: "🌱 إيكولير (Ecolier: G3-4)" },
+        { val: "Benjamin", text: "🌿 بنجامين (Benjamin: G5-6)" },
+        { val: "Cadet", text: "🌳 كاديت (Cadet: G7-8)" },
+        { val: "Junior", text: "🎓 جونيور (Junior: G9-10)" }
+      ],
+      kaust: [
+        { val: "all", text: "كل مراحل كاوست (All KAUST Phases)" },
+        { val: "Phase 1: Foundation Research", text: "🧬 المرحلة 1: أساسيات البحث (Phase 1)" },
+        { val: "Phase 2: Advanced Analysis", text: "🔬 المرحلة 2: التحليل المتقدم (Phase 2)" },
+        { val: "Phase 3: Elite Research", text: "🚀 المرحلة 3: النمذجة المتقدمة (Phase 3)" }
+      ],
+      nsmo: [
+        { val: "all", text: "كل مراحل الأولمبياد الوطني NSMO" },
+        { val: "Phase 1: Junior Olympiad (Grades 5-7)", text: "🥉 المرحلة 1: أولمبياد الناشئين (G5-7)" },
+        { val: "Phase 2: Intermediate Olympiad (Grades 8-9)", text: "🥈 المرحلة 2: الأولمبياد المتوسط (G8-9)" },
+        { val: "Phase 3: Senior National Olympiad (Grades 10-12)", text: "🥇 المرحلة 3: الأولمبياد الوطني (G10-12)" }
+      ]
+    };
+
+    function updatePrintPhaseOptions() {
+      const track = document.getElementById('print-track-select').value;
+      const phaseContainer = document.getElementById('print-phase-container');
+      const phaseSelect = document.getElementById('print-phase-select');
+      
+      phaseSelect.innerHTML = '';
+      if (printPhases[track]) {
+        printPhases[track].forEach(p => {
+          const opt = document.createElement('option');
+          opt.value = p.val;
+          opt.innerText = p.text;
+          phaseSelect.appendChild(opt);
+        });
+        phaseContainer.style.display = 'block';
+      } else {
+        phaseContainer.style.display = 'none';
+        const opt = document.createElement('option');
+        opt.value = 'all';
+        opt.innerText = 'All';
+        phaseSelect.appendChild(opt);
+      }
+      
+      updatePrintModalMax();
+    }
+
     function updatePrintModalMax() {
       const track = document.getElementById('print-track-select').value;
-      let pool = track === 'current' ? currentFilteredQuestions : appData.questions.filter(q => q.track === track);
+      const phase = document.getElementById('print-phase-select').value;
+      
+      let pool = [];
+      if (track === 'current') {
+        pool = currentFilteredQuestions;
+      } else {
+        pool = appData.questions.filter(q => {
+          if (q.track !== track) return false;
+          if (phase !== 'all' && q.level !== phase) return false;
+          return true;
+        });
+      }
       
       const maxSpan = document.getElementById('print-max-q');
       const input = document.getElementById('print-q-count');
@@ -1544,7 +1615,7 @@
       document.getElementById('print-track-select').value = 'current';
       document.getElementById('print-q-count').value = 20;
       
-      updatePrintModalMax();
+      updatePrintPhaseOptions();
       
       modal.classList.remove('hidden');
       modal.classList.add('flex');
@@ -1559,8 +1630,18 @@
     function executePrint() {
       const count = parseInt(document.getElementById('print-q-count').value) || 0;
       const track = document.getElementById('print-track-select').value;
+      const phase = document.getElementById('print-phase-select').value;
       
-      let pool = track === 'current' ? currentFilteredQuestions : appData.questions.filter(q => q.track === track);
+      let pool = [];
+      if (track === 'current') {
+        pool = currentFilteredQuestions;
+      } else {
+        pool = appData.questions.filter(q => {
+          if (q.track !== track) return false;
+          if (phase !== 'all' && q.level !== phase) return false;
+          return true;
+        });
+      }
       
       if (count <= 0 || pool.length === 0) return;
       
