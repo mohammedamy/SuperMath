@@ -1548,7 +1548,8 @@
       const questionsToPrint = currentFilteredQuestions.slice(0, count);
       
       questionsToPrint.forEach((q, index) => {
-        const text = isAr ? q.question_ar : q.question_en;
+        const qContent = q.content[currentLang] || q.content['en'];
+        const text = qContent.question;
         html += `
           <div class="mb-8 no-break">
             <div class="font-bold mb-2">${t.printQNum} ${index + 1}:</div>
@@ -1559,14 +1560,13 @@
            html += `<div class="flex justify-center my-4">${q.diagram}</div>`;
         }
         
-        if (q.options && q.options.length > 0) {
-          html += `<div class="grid grid-cols-2 gap-4 text-base">`;
+        if (qContent.options && qContent.options.length > 0) {
+          html += `<div class="grid grid-cols-2 gap-4 text-base mt-4">`;
           const labels = ['A', 'B', 'C', 'D', 'E'];
-          q.options.forEach((opt, oIdx) => {
-             const optText = isAr ? opt.ar : opt.en;
+          qContent.options.forEach((opt, oIdx) => {
              html += `<div class="flex items-center gap-2">
                         <span class="font-bold border border-black rounded-full w-6 h-6 flex items-center justify-center shrink-0" style="min-width: 1.5rem;">${labels[oIdx]}</span>
-                        <span class="math-font">${optText}</span>
+                        <span class="math-font">${opt}</span>
                       </div>`;
           });
           html += `</div>`;
