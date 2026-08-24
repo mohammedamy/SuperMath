@@ -584,6 +584,17 @@
       
       <div class="space-y-4">
         <div>
+          <label class="block text-sm text-slate-300 mb-1" id="print-modal-track-lbl">المسار (Track)</label>
+          <select id="print-track-select" onchange="updatePrintModalMax()" class="w-full bg-slate-800 border border-slate-700 text-white rounded-xl px-4 py-3 focus:ring-2 focus:ring-emerald-500 outline-none mb-4">
+            <option value="current">Current Filters / الفلاتر الحالية</option>
+            <option value="kangaroo">Kangaroo</option>
+            <option value="nafes">Nafes (KSA)</option>
+            <option value="kaust">KAUST SRSI</option>
+            <option value="jee">JEE Main/Adv</option>
+            <option value="olympiad">Math Olympiad</option>
+            <option value="nsmo">NSMO (KSA)</option>
+          </select>
+          
           <label class="block text-sm text-slate-300 mb-1" id="print-modal-lbl">عدد الأسئلة (Max <span id="print-max-q">0</span>)</label>
           <input type="number" id="print-q-count" min="1" value="20" class="w-full bg-slate-800 border border-slate-700 text-white rounded-xl px-4 py-3 focus:ring-2 focus:ring-emerald-500 outline-none">
         </div>
@@ -1501,15 +1512,21 @@
     });
 
     // --- 8. PRINT ENGINE ---
-    function openPrintModal() {
-      const modal = document.getElementById('print-modal');
+    function updatePrintModalMax() {
+      const track = document.getElementById('print-track-select').value;
+      let pool = track === 'current' ? currentFilteredQuestions : appData.questions.filter(q => q.track === track);
+      
       const maxSpan = document.getElementById('print-max-q');
       const input = document.getElementById('print-q-count');
       
-      const maxQ = currentFilteredQuestions.length;
+      const maxQ = pool.length;
       maxSpan.innerText = maxQ;
       input.max = maxQ;
-      input.value = Math.min(20, maxQ);
+      
+      const currentVal = parseInt(input.value) || 0;
+      if (currentVal > maxQ || currentVal === 0) {
+        input.value = Math.min(20, maxQ);
+      }
       
       if (maxQ === 0) {
         input.value = 0;
@@ -1519,6 +1536,15 @@
         input.disabled = false;
         document.getElementById('print-btn-confirm').disabled = false;
       }
+    }
+
+    function openPrintModal() {
+      const modal = document.getElementById('print-modal');
+      
+      document.getElementById('print-track-select').value = 'current';
+      document.getElementById('print-q-count').value = 20;
+      
+      updatePrintModalMax();
       
       modal.classList.remove('hidden');
       modal.classList.add('flex');
@@ -1532,7 +1558,11 @@
 
     function executePrint() {
       const count = parseInt(document.getElementById('print-q-count').value) || 0;
-      if (count <= 0 || currentFilteredQuestions.length === 0) return;
+      const track = document.getElementById('print-track-select').value;
+      
+      let pool = track === 'current' ? currentFilteredQuestions : appData.questions.filter(q => q.track === track);
+      
+      if (count <= 0 || pool.length === 0) return;
       
       closePrintModal();
       
@@ -1545,7 +1575,9 @@
                  <h1 class="text-3xl font-bold">${t.printTitle}</h1>
                </div>`;
                
-      const questionsToPrint = currentFilteredQuestions.slice(0, count);
+      // Randomize selection
+      const shuffled = [...pool].sort(() => 0.5 - Math.random());
+      const questionsToPrint = shuffled.slice(0, count);
       
       questionsToPrint.forEach((q, index) => {
         const qContent = q.content[currentLang] || q.content['en'];
