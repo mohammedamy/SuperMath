@@ -2448,74 +2448,6 @@
     "original_difficulty": "easy"
   },
   {
-    "id": "NAFES-3-075",
-    "track": "nafes",
-    "level": "Grade 3",
-    "topic": "Multiplication",
-    "type": "MCQ",
-    "difficulty": "Easy",
-    "content": {
-      "en": {
-        "question": "What is \\( 7 \\times 8 \\)?",
-        "options": [
-          "\\( 54 \\)",
-          "\\( 56 \\)",
-          "\\( 48 \\)",
-          "\\( 64 \\)"
-        ],
-        "hint": "Recall the multiplication table for 7.",
-        "explanation": "\\( 7 \\times 8 = 56 \\)."
-      },
-      "ar": {
-        "question": "ما ناتج \\( 7 \\times 8 \\)؟",
-        "options": [
-          "\\( 54 \\)",
-          "\\( 56 \\)",
-          "\\( 48 \\)",
-          "\\( 64 \\)"
-        ],
-        "hint": "تذكر جدول الضرب للعدد \\( 7 \\).",
-        "explanation": "\\( 7 \\times 8 = 56 \\)."
-      }
-    },
-    "correct_index": "1",
-    "original_difficulty": "easy"
-  },
-  {
-    "id": "NAFES-3-076",
-    "track": "nafes",
-    "level": "Grade 3",
-    "topic": "Division",
-    "type": "MCQ",
-    "difficulty": "Easy",
-    "content": {
-      "en": {
-        "question": "What is \\( 72 \\div 9 \\)?",
-        "options": [
-          "\\( 7 \\)",
-          "\\( 8 \\)",
-          "\\( 9 \\)",
-          "\\( 6 \\)"
-        ],
-        "hint": "Think: which number times \\( 9 \\) equals \\( 72 \\)?",
-        "explanation": "\\( 72 \\div 9 = 8 \\) because \\( 9 \\times 8 = 72 \\)."
-      },
-      "ar": {
-        "question": "ما ناتج \\( 72 \\div 9 \\)؟",
-        "options": [
-          "\\( 7 \\)",
-          "\\( 8 \\)",
-          "\\( 9 \\)",
-          "\\( 6 \\)"
-        ],
-        "hint": "فكّر: أي عدد مضروبًا في \\( 9 \\) يساوي \\( 72 \\)؟",
-        "explanation": "\\( 72 \\div 9 = 8 \\) لأن \\( 9 \\times 8 = 72 \\)."
-      }
-    },
-    "correct_index": "1",
-    "original_difficulty": "easy"
-  },
-  {
     "id": "NAFES-3-077",
     "track": "nafes",
     "level": "Grade 3",
@@ -2990,40 +2922,6 @@
     },
     "correct_index": "1",
     "original_difficulty": "hard"
-  },
-  {
-    "id": "NAFES-3-091",
-    "track": "nafes",
-    "level": "Grade 3",
-    "topic": "Multiplication",
-    "type": "MCQ",
-    "difficulty": "Medium",
-    "content": {
-      "en": {
-        "question": "What is \\( 4 \\times 25 \\)?",
-        "options": [
-          "\\( 80 \\)",
-          "\\( 90 \\)",
-          "\\( 100 \\)",
-          "\\( 120 \\)"
-        ],
-        "hint": "\\( 4 \\times 25 = 4 \\times (20 + 5) \\).",
-        "explanation": "\\( 4 \\times 25 = 100 \\). Think: \\( 4 \\) quarters make \\( 1 \\) dollar = \\( 100 \\) cents."
-      },
-      "ar": {
-        "question": "ما ناتج \\( 4 \\times 25 \\)؟",
-        "options": [
-          "\\( 80 \\)",
-          "\\( 90 \\)",
-          "\\( 100 \\)",
-          "\\( 120 \\)"
-        ],
-        "hint": "\\( 4 \\times 25 = 4 \\times (20 + 5) \\).",
-        "explanation": "\\( 4 \\times 25 = 100 \\)."
-      }
-    },
-    "correct_index": "2",
-    "original_difficulty": "medium"
   },
   {
     "id": "NAFES-3-093",
@@ -9214,74 +9112,6 @@
     "original_difficulty": "medium"
   },
   {
-    "id": "NAFES-3-101",
-    "track": "nafes",
-    "level": "Grade 3",
-    "topic": "Addition",
-    "type": "MCQ",
-    "difficulty": "Medium",
-    "content": {
-      "en": {
-        "question": "What is \\( 999 + 1 \\)?",
-        "options": [
-          "\\( 999 \\)",
-          "\\( 1{,}000 \\)",
-          "\\( 1{,}001 \\)",
-          "\\( 990 \\)"
-        ],
-        "hint": "Think about what happens to the ones, tens, and hundreds.",
-        "explanation": "\\( 999 + 1 = 1{,}000 \\)."
-      },
-      "ar": {
-        "question": "ما ناتج \\( 999 + 1 \\)؟",
-        "options": [
-          "\\( 999 \\)",
-          "\\( 1{,}000 \\)",
-          "\\( 1{,}001 \\)",
-          "\\( 990 \\)"
-        ],
-        "hint": "فكّر فيما يحدث للآحاد والعشرات والمئات.",
-        "explanation": "\\( 999 + 1 = 1{,}000 \\)."
-      }
-    },
-    "correct_index": "1",
-    "original_difficulty": "medium"
-  },
-  {
-    "id": "NAFES-3-102",
-    "track": "nafes",
-    "level": "Grade 3",
-    "topic": "Multiplication",
-    "type": "MCQ",
-    "difficulty": "Medium",
-    "content": {
-      "en": {
-        "question": "What is \\( 12 \\times 3 \\)?",
-        "options": [
-          "\\( 33 \\)",
-          "\\( 36 \\)",
-          "\\( 39 \\)",
-          "\\( 42 \\)"
-        ],
-        "hint": "Use the distributive property: \\( 12 \\times 3 = (10+2) \\times 3 \\).",
-        "explanation": "\\( 10 \\times 3 = 30 \\), \\( 2 \\times 3 = 6 \\), total \\( = 36 \\)."
-      },
-      "ar": {
-        "question": "ما ناتج \\( 12 \\times 3 \\)؟",
-        "options": [
-          "\\( 33 \\)",
-          "\\( 36 \\)",
-          "\\( 39 \\)",
-          "\\( 42 \\)"
-        ],
-        "hint": "\\( 12 \\times 3 = (10+2) \\times 3 \\).",
-        "explanation": "\\( 10 \\times 3 = 30 \\)، \\( 2 \\times 3 = 6 \\)، المجموع \\( = 36 \\)."
-      }
-    },
-    "correct_index": "1",
-    "original_difficulty": "medium"
-  },
-  {
     "id": "NAFES-3-103",
     "track": "nafes",
     "level": "Grade 3",
@@ -9384,40 +9214,6 @@
     "original_difficulty": "medium"
   },
   {
-    "id": "NAFES-3-106",
-    "track": "nafes",
-    "level": "Grade 3",
-    "topic": "Subtraction",
-    "type": "MCQ",
-    "difficulty": "Medium",
-    "content": {
-      "en": {
-        "question": "What is \\( 1{,}000 - 437 \\)?",
-        "options": [
-          "\\( 563 \\)",
-          "\\( 573 \\)",
-          "\\( 553 \\)",
-          "\\( 583 \\)"
-        ],
-        "hint": "Borrow through the zeros.",
-        "explanation": "\\( 1{,}000 - 437 = 563 \\)."
-      },
-      "ar": {
-        "question": "ما ناتج \\( 1{,}000 - 437 \\)؟",
-        "options": [
-          "\\( 563 \\)",
-          "\\( 573 \\)",
-          "\\( 553 \\)",
-          "\\( 583 \\)"
-        ],
-        "hint": "استعر عبر الأصفار.",
-        "explanation": "\\( 1{,}000 - 437 = 563 \\)."
-      }
-    },
-    "correct_index": "0",
-    "original_difficulty": "medium"
-  },
-  {
     "id": "NAFES-3-107",
     "track": "nafes",
     "level": "Grade 3",
@@ -9450,40 +9246,6 @@
     },
     "correct_index": "1",
     "original_difficulty": "medium"
-  },
-  {
-    "id": "NAFES-3-109",
-    "track": "nafes",
-    "level": "Grade 3",
-    "topic": "Fractions",
-    "type": "MCQ",
-    "difficulty": "Hard",
-    "content": {
-      "en": {
-        "question": "What is \\( \\dfrac{1}{4} + \\dfrac{2}{4} \\)?",
-        "options": [
-          "\\( \\dfrac{3}{8} \\)",
-          "\\( \\dfrac{3}{4} \\)",
-          "\\( \\dfrac{2}{4} \\)",
-          "\\( 1 \\)"
-        ],
-        "hint": "When denominators are the same, add numerators only.",
-        "explanation": "\\( \\dfrac{1}{4} + \\dfrac{2}{4} = \\dfrac{3}{4} \\)."
-      },
-      "ar": {
-        "question": "ما ناتج \\( \\dfrac{1}{4} + \\dfrac{2}{4} \\)؟",
-        "options": [
-          "\\( \\dfrac{3}{8} \\)",
-          "\\( \\dfrac{3}{4} \\)",
-          "\\( \\dfrac{2}{4} \\)",
-          "\\( 1 \\)"
-        ],
-        "hint": "عندما يكون المقامان متساويين، اجمع البسطين فقط.",
-        "explanation": "\\( \\dfrac{1}{4} + \\dfrac{2}{4} = \\dfrac{3}{4} \\)."
-      }
-    },
-    "correct_index": "1",
-    "original_difficulty": "hard"
   },
   {
     "id": "NAFES-3-110",
@@ -9792,40 +9554,6 @@
     "original_difficulty": "hard"
   },
   {
-    "id": "NAFES-3-119",
-    "track": "nafes",
-    "level": "Grade 3",
-    "topic": "Number Sense",
-    "type": "MCQ",
-    "difficulty": "Medium",
-    "content": {
-      "en": {
-        "question": "What is \\( 50 \\times 6 \\)?",
-        "options": [
-          "\\( 250 \\)",
-          "\\( 300 \\)",
-          "\\( 350 \\)",
-          "\\( 320 \\)"
-        ],
-        "hint": "\\( 50 \\times 6 = 5 \\times 6 \\times 10 \\).",
-        "explanation": "\\( 5 \\times 6 = 30 \\), then \\( \\times 10 = 300 \\)."
-      },
-      "ar": {
-        "question": "ما ناتج \\( 50 \\times 6 \\)؟",
-        "options": [
-          "\\( 250 \\)",
-          "\\( 300 \\)",
-          "\\( 350 \\)",
-          "\\( 320 \\)"
-        ],
-        "hint": "\\( 50 \\times 6 = 5 \\times 6 \\times 10 \\).",
-        "explanation": "\\( 5 \\times 6 = 30 \\)، ثم \\( \\times 10 = 300 \\)."
-      }
-    },
-    "correct_index": "1",
-    "original_difficulty": "medium"
-  },
-  {
     "id": "NAFES-3-120",
     "track": "nafes",
     "level": "Grade 3",
@@ -10030,40 +9758,6 @@
     "original_difficulty": "hard"
   },
   {
-    "id": "NAFES-3-126",
-    "track": "nafes",
-    "level": "Grade 3",
-    "topic": "Multiplication",
-    "type": "MCQ",
-    "difficulty": "Medium",
-    "content": {
-      "en": {
-        "question": "What is \\( 9 \\times 9 \\)?",
-        "options": [
-          "\\( 72 \\)",
-          "\\( 81 \\)",
-          "\\( 89 \\)",
-          "\\( 90 \\)"
-        ],
-        "hint": "\\( 9 \\times 9 \\) is one less than \\( 9 \\times 10 \\).",
-        "explanation": "\\( 9 \\times 9 = 81 \\)."
-      },
-      "ar": {
-        "question": "ما ناتج \\( 9 \\times 9 \\)؟",
-        "options": [
-          "\\( 72 \\)",
-          "\\( 81 \\)",
-          "\\( 89 \\)",
-          "\\( 90 \\)"
-        ],
-        "hint": "\\( 9 \\times 9 \\) أقل بواحدة من \\( 9 \\times 10 \\).",
-        "explanation": "\\( 9 \\times 9 = 81 \\)."
-      }
-    },
-    "correct_index": "1",
-    "original_difficulty": "medium"
-  },
-  {
     "id": "NAFES-3-127",
     "track": "nafes",
     "level": "Grade 3",
@@ -10198,40 +9892,6 @@
     },
     "correct_index": "2",
     "original_difficulty": "hard"
-  },
-  {
-    "id": "NAFES-3-131",
-    "track": "nafes",
-    "level": "Grade 3",
-    "topic": "Addition",
-    "type": "MCQ",
-    "difficulty": "Medium",
-    "content": {
-      "en": {
-        "question": "What is \\( 348 + 276 + 114 \\)?",
-        "options": [
-          "\\( 728 \\)",
-          "\\( 738 \\)",
-          "\\( 748 \\)",
-          "\\( 758 \\)"
-        ],
-        "hint": "Add step by step.",
-        "explanation": "\\( 348+276=624 \\), \\( 624+114=738 \\)."
-      },
-      "ar": {
-        "question": "ما ناتج \\( 348 + 276 + 114 \\)؟",
-        "options": [
-          "\\( 728 \\)",
-          "\\( 738 \\)",
-          "\\( 748 \\)",
-          "\\( 758 \\)"
-        ],
-        "hint": "اجمع خطوةً بخطوة.",
-        "explanation": "\\( 348+276=624 \\)، \\( 624+114=738 \\)."
-      }
-    },
-    "correct_index": "1",
-    "original_difficulty": "medium"
   },
   {
     "id": "NAFES-3-132",
@@ -10540,40 +10200,6 @@
     "original_difficulty": "medium"
   },
   {
-    "id": "NAFES-3-141",
-    "track": "nafes",
-    "level": "Grade 3",
-    "topic": "Fractions",
-    "type": "MCQ",
-    "difficulty": "Medium",
-    "content": {
-      "en": {
-        "question": "What is \\( \\dfrac{5}{6} - \\dfrac{1}{6} \\)?",
-        "options": [
-          "\\( \\dfrac{4}{6} \\)",
-          "\\( \\dfrac{5}{12} \\)",
-          "\\( \\dfrac{4}{12} \\)",
-          "\\( \\dfrac{6}{6} \\)"
-        ],
-        "hint": "Same denominator: just subtract numerators.",
-        "explanation": "\\( \\dfrac{5}{6} - \\dfrac{1}{6} = \\dfrac{4}{6} = \\dfrac{2}{3} \\)."
-      },
-      "ar": {
-        "question": "ما ناتج \\( \\dfrac{5}{6} - \\dfrac{1}{6} \\)؟",
-        "options": [
-          "\\( \\dfrac{4}{6} \\)",
-          "\\( \\dfrac{5}{12} \\)",
-          "\\( \\dfrac{4}{12} \\)",
-          "\\( \\dfrac{6}{6} \\)"
-        ],
-        "hint": "المقام واحد: اطرح البسطين فقط.",
-        "explanation": "\\( \\dfrac{5}{6} - \\dfrac{1}{6} = \\dfrac{4}{6} \\)."
-      }
-    },
-    "correct_index": "0",
-    "original_difficulty": "medium"
-  },
-  {
     "id": "NAFES-3-142",
     "track": "nafes",
     "level": "Grade 3",
@@ -10676,40 +10302,6 @@
     "original_difficulty": "medium"
   },
   {
-    "id": "NAFES-3-145",
-    "track": "nafes",
-    "level": "Grade 3",
-    "topic": "Subtraction",
-    "type": "MCQ",
-    "difficulty": "Medium",
-    "content": {
-      "en": {
-        "question": "What is \\( 5{,}000 - 3{,}248 \\)?",
-        "options": [
-          "\\( 1{,}752 \\)",
-          "\\( 1{,}762 \\)",
-          "\\( 1{,}742 \\)",
-          "\\( 1{,}852 \\)"
-        ],
-        "hint": "Borrow carefully through the zeros.",
-        "explanation": "\\( 5{,}000 - 3{,}248 = 1{,}752 \\)."
-      },
-      "ar": {
-        "question": "ما ناتج \\( 5{,}000 - 3{,}248 \\)؟",
-        "options": [
-          "\\( 1{,}752 \\)",
-          "\\( 1{,}762 \\)",
-          "\\( 1{,}742 \\)",
-          "\\( 1{,}852 \\)"
-        ],
-        "hint": "استعر بعناية عبر الأصفار.",
-        "explanation": "\\( 5{,}000 - 3{,}248 = 1{,}752 \\)."
-      }
-    },
-    "correct_index": "0",
-    "original_difficulty": "medium"
-  },
-  {
     "id": "NAFES-3-146",
     "track": "nafes",
     "level": "Grade 3",
@@ -10742,40 +10334,6 @@
     },
     "correct_index": "0",
     "original_difficulty": "easy"
-  },
-  {
-    "id": "NAFES-3-147",
-    "track": "nafes",
-    "level": "Grade 3",
-    "topic": "Division",
-    "type": "MCQ",
-    "difficulty": "Medium",
-    "content": {
-      "en": {
-        "question": "What is \\( 90 \\div 6 \\)?",
-        "options": [
-          "\\( 12 \\)",
-          "\\( 14 \\)",
-          "\\( 15 \\)",
-          "\\( 16 \\)"
-        ],
-        "hint": "Think: what times \\( 6 \\) equals \\( 90 \\)?",
-        "explanation": "\\( 6 \\times 15 = 90 \\), so \\( 90 \\div 6 = 15 \\)."
-      },
-      "ar": {
-        "question": "ما ناتج \\( 90 \\div 6 \\)؟",
-        "options": [
-          "\\( 12 \\)",
-          "\\( 14 \\)",
-          "\\( 15 \\)",
-          "\\( 16 \\)"
-        ],
-        "hint": "فكّر: ماذا يُضرب في \\( 6 \\) يساوي \\( 90 \\)؟",
-        "explanation": "\\( 6 \\times 15 = 90 \\)، إذن \\( 90 \\div 6 = 15 \\)."
-      }
-    },
-    "correct_index": "2",
-    "original_difficulty": "medium"
   },
   {
     "id": "NAFES-3-148",
@@ -10948,40 +10506,6 @@
     "original_difficulty": "medium"
   },
   {
-    "id": "NAFES-6-092",
-    "track": "nafes",
-    "level": "Grade 6",
-    "topic": "Fractions",
-    "type": "MCQ",
-    "difficulty": "Medium",
-    "content": {
-      "en": {
-        "question": "What is \\( \\dfrac{3}{4} \\times \\dfrac{8}{9} \\)?",
-        "options": [
-          "\\( \\dfrac{24}{36} \\)",
-          "\\( \\dfrac{2}{3} \\)",
-          "\\( \\dfrac{11}{13} \\)",
-          "\\( \\dfrac{1}{3} \\)"
-        ],
-        "hint": "Multiply numerators and denominators, then simplify.",
-        "explanation": "\\( \\dfrac{3 \\times 8}{4 \\times 9} = \\dfrac{24}{36} = \\dfrac{2}{3} \\)."
-      },
-      "ar": {
-        "question": "ما ناتج \\( \\dfrac{3}{4} \\times \\dfrac{8}{9} \\)؟",
-        "options": [
-          "\\( \\dfrac{24}{36} \\)",
-          "\\( \\dfrac{2}{3} \\)",
-          "\\( \\dfrac{11}{13} \\)",
-          "\\( \\dfrac{1}{3} \\)"
-        ],
-        "hint": "اضرب البسطين والمقامين ثم بسّط.",
-        "explanation": "\\( \\dfrac{24}{36} = \\dfrac{2}{3} \\)."
-      }
-    },
-    "correct_index": "1",
-    "original_difficulty": "medium"
-  },
-  {
     "id": "NAFES-6-093",
     "track": "nafes",
     "level": "Grade 6",
@@ -11047,74 +10571,6 @@
       }
     },
     "correct_index": "2",
-    "original_difficulty": "medium"
-  },
-  {
-    "id": "NAFES-6-095",
-    "track": "nafes",
-    "level": "Grade 6",
-    "topic": "Decimals",
-    "type": "MCQ",
-    "difficulty": "Medium",
-    "content": {
-      "en": {
-        "question": "What is \\( 3.6 \\times 2.5 \\)?",
-        "options": [
-          "\\( 8.5 \\)",
-          "\\( 9.0 \\)",
-          "\\( 9.5 \\)",
-          "\\( 10.0 \\)"
-        ],
-        "hint": "Multiply as whole numbers then place the decimal.",
-        "explanation": "\\( 36 \\times 25 = 900 \\). Two decimal places: \\( 9.00 \\)."
-      },
-      "ar": {
-        "question": "ما ناتج \\( 3.6 \\times 2.5 \\)؟",
-        "options": [
-          "\\( 8.5 \\)",
-          "\\( 9.0 \\)",
-          "\\( 9.5 \\)",
-          "\\( 10.0 \\)"
-        ],
-        "hint": "اضرب كأعداد صحيحة ثم ضع الفاصلة.",
-        "explanation": "\\( 36 \\times 25 = 900 \\). منزلتان: \\( 9.00 \\)."
-      }
-    },
-    "correct_index": "1",
-    "original_difficulty": "medium"
-  },
-  {
-    "id": "NAFES-6-096",
-    "track": "nafes",
-    "level": "Grade 6",
-    "topic": "Integers",
-    "type": "MCQ",
-    "difficulty": "Medium",
-    "content": {
-      "en": {
-        "question": "What is \\( -8 + 13 - 5 \\)?",
-        "options": [
-          "\\( -1 \\)",
-          "\\( 0 \\)",
-          "\\( 1 \\)",
-          "\\( 2 \\)"
-        ],
-        "hint": "Work left to right.",
-        "explanation": "\\( -8+13=5 \\). \\( 5-5=0 \\)."
-      },
-      "ar": {
-        "question": "ما ناتج \\( -8 + 13 - 5 \\)؟",
-        "options": [
-          "\\( -1 \\)",
-          "\\( 0 \\)",
-          "\\( 1 \\)",
-          "\\( 2 \\)"
-        ],
-        "hint": "اعمل من اليسار إلى اليمين.",
-        "explanation": "\\( -8+13=5 \\). \\( 5-5=0 \\)."
-      }
-    },
-    "correct_index": "1",
     "original_difficulty": "medium"
   },
   {
@@ -11424,40 +10880,6 @@
     "original_difficulty": "medium"
   },
   {
-    "id": "NAFES-3-151",
-    "track": "nafes",
-    "level": "Grade 3",
-    "topic": "Multiplication",
-    "type": "MCQ",
-    "difficulty": "Medium",
-    "content": {
-      "en": {
-        "question": "What is \\( 6 \\times 7 \\)?",
-        "options": [
-          "\\( 36 \\)",
-          "\\( 42 \\)",
-          "\\( 48 \\)",
-          "\\( 54 \\)"
-        ],
-        "hint": "Count by 6s: 6,12,18,24,30,36,42.",
-        "explanation": "\\( 6 \\times 7 = 42 \\)."
-      },
-      "ar": {
-        "question": "ما ناتج \\( 6 \\times 7 \\)؟",
-        "options": [
-          "\\( 36 \\)",
-          "\\( 42 \\)",
-          "\\( 48 \\)",
-          "\\( 54 \\)"
-        ],
-        "hint": "عدّ بمضاعفات 6.",
-        "explanation": "\\( 6 \\times 7 = 42 \\)."
-      }
-    },
-    "correct_index": "1",
-    "original_difficulty": "medium"
-  },
-  {
     "id": "NAFES-3-152",
     "track": "nafes",
     "level": "Grade 3",
@@ -11558,40 +10980,6 @@
     },
     "correct_index": "1",
     "original_difficulty": "medium"
-  },
-  {
-    "id": "NAFES-3-155",
-    "track": "nafes",
-    "level": "Grade 3",
-    "topic": "Division",
-    "type": "MCQ",
-    "difficulty": "Easy",
-    "content": {
-      "en": {
-        "question": "What is \\( 45 \\div 5 \\)?",
-        "options": [
-          "\\( 7 \\)",
-          "\\( 8 \\)",
-          "\\( 9 \\)",
-          "\\( 10 \\)"
-        ],
-        "hint": "Think: \\( 5 \\times ? = 45 \\).",
-        "explanation": "\\( 5 \\times 9 = 45 \\), so \\( 45 \\div 5 = 9 \\)."
-      },
-      "ar": {
-        "question": "ما ناتج \\( 45 \\div 5 \\)؟",
-        "options": [
-          "\\( 7 \\)",
-          "\\( 8 \\)",
-          "\\( 9 \\)",
-          "\\( 10 \\)"
-        ],
-        "hint": "فكّر: \\( 5 \\times ? = 45 \\).",
-        "explanation": "\\( 45 \\div 5 = 9 \\)."
-      }
-    },
-    "correct_index": "2",
-    "original_difficulty": "easy"
   },
   {
     "id": "NAFES-3-156",
@@ -11730,40 +11118,6 @@
     "original_difficulty": "hard"
   },
   {
-    "id": "NAFES-3-160",
-    "track": "nafes",
-    "level": "Grade 3",
-    "topic": "Addition",
-    "type": "MCQ",
-    "difficulty": "Medium",
-    "content": {
-      "en": {
-        "question": "What is \\( 2{,}345 + 1{,}678 \\)?",
-        "options": [
-          "\\( 3{,}923 \\)",
-          "\\( 4{,}023 \\)",
-          "\\( 4{,}123 \\)",
-          "\\( 5{,}023 \\)"
-        ],
-        "hint": "Add column by column, carrying as needed.",
-        "explanation": "\\( 2{,}345 + 1{,}678 = 4{,}023 \\)."
-      },
-      "ar": {
-        "question": "ما ناتج \\( 2{,}345 + 1{,}678 \\)؟",
-        "options": [
-          "\\( 3{,}923 \\)",
-          "\\( 4{,}023 \\)",
-          "\\( 4{,}123 \\)",
-          "\\( 4{,}923 \\)"
-        ],
-        "hint": "اجمع عموداً بعمود مع الحمل.",
-        "explanation": "\\( 2{,}345 + 1{,}678 = 4{,}023 \\)."
-      }
-    },
-    "correct_index": "1",
-    "original_difficulty": "medium"
-  },
-  {
     "id": "NAFES-3-161",
     "track": "nafes",
     "level": "Grade 3",
@@ -11900,40 +11254,6 @@
     "original_difficulty": "easy"
   },
   {
-    "id": "NAFES-3-165",
-    "track": "nafes",
-    "level": "Grade 3",
-    "topic": "Subtraction",
-    "type": "MCQ",
-    "difficulty": "Easy",
-    "content": {
-      "en": {
-        "question": "What is \\( 703 - 256 \\)?",
-        "options": [
-          "\\( 447 \\)",
-          "\\( 457 \\)",
-          "\\( 467 \\)",
-          "\\( 477 \\)"
-        ],
-        "hint": "Borrow from the tens and hundreds.",
-        "explanation": "\\( 703 - 256 = 447 \\)."
-      },
-      "ar": {
-        "question": "ما ناتج \\( 703 - 256 \\)؟",
-        "options": [
-          "\\( 447 \\)",
-          "\\( 457 \\)",
-          "\\( 467 \\)",
-          "\\( 477 \\)"
-        ],
-        "hint": "استعر من العشرات والمئات.",
-        "explanation": "\\( 703 - 256 = 447 \\)."
-      }
-    },
-    "correct_index": "0",
-    "original_difficulty": "easy"
-  },
-  {
     "id": "NAFES-3-166",
     "track": "nafes",
     "level": "Grade 3",
@@ -11966,40 +11286,6 @@
     },
     "correct_index": "1",
     "original_difficulty": "medium"
-  },
-  {
-    "id": "NAFES-3-167",
-    "track": "nafes",
-    "level": "Grade 3",
-    "topic": "Multiplication",
-    "type": "MCQ",
-    "difficulty": "Hard",
-    "content": {
-      "en": {
-        "question": "What is \\( 25 \\times 8 \\)?",
-        "options": [
-          "\\( 160 \\)",
-          "\\( 180 \\)",
-          "\\( 200 \\)",
-          "\\( 240 \\)"
-        ],
-        "hint": "\\( 25 \\times 8 = 25 \\times 4 \\times 2 = 100 \\times 2 \\).",
-        "explanation": "\\( 25 \\times 4 = 100 \\). \\( 100 \\times 2 = 200 \\)."
-      },
-      "ar": {
-        "question": "ما ناتج \\( 25 \\times 8 \\)؟",
-        "options": [
-          "\\( 160 \\)",
-          "\\( 180 \\)",
-          "\\( 200 \\)",
-          "\\( 240 \\)"
-        ],
-        "hint": "\\( 25 \\times 8 = 25 \\times 4 \\times 2 \\).",
-        "explanation": "\\( 25 \\times 4 = 100 \\)، \\( 100 \\times 2 = 200 \\)."
-      }
-    },
-    "correct_index": "2",
-    "original_difficulty": "hard"
   },
   {
     "id": "NAFES-3-168",
@@ -12240,40 +11526,6 @@
     "original_difficulty": "medium"
   },
   {
-    "id": "NAFES-3-176",
-    "track": "nafes",
-    "level": "Grade 3",
-    "topic": "Multiplication",
-    "type": "MCQ",
-    "difficulty": "Medium",
-    "content": {
-      "en": {
-        "question": "What is \\( 11 \\times 11 \\)?",
-        "options": [
-          "\\( 110 \\)",
-          "\\( 121 \\)",
-          "\\( 111 \\)",
-          "\\( 112 \\)"
-        ],
-        "hint": "\\( 11 \\times 11 = 11 \\times 10 + 11 \\).",
-        "explanation": "\\( 110+11=121 \\)."
-      },
-      "ar": {
-        "question": "ما ناتج \\( 11 \\times 11 \\)؟",
-        "options": [
-          "\\( 110 \\)",
-          "\\( 121 \\)",
-          "\\( 111 \\)",
-          "\\( 112 \\)"
-        ],
-        "hint": "\\( 11 \\times 11 = 11 \\times 10 + 11 \\).",
-        "explanation": "\\( 110+11=121 \\)."
-      }
-    },
-    "correct_index": "1",
-    "original_difficulty": "medium"
-  },
-  {
     "id": "NAFES-3-177",
     "track": "nafes",
     "level": "Grade 3",
@@ -12408,40 +11660,6 @@
     },
     "correct_index": "0",
     "original_difficulty": "hard"
-  },
-  {
-    "id": "NAFES-3-181",
-    "track": "nafes",
-    "level": "Grade 3",
-    "topic": "Addition",
-    "type": "MCQ",
-    "difficulty": "Easy",
-    "content": {
-      "en": {
-        "question": "What is \\( 575 + 425 \\)?",
-        "options": [
-          "\\( 900 \\)",
-          "\\( 1{,}000 \\)",
-          "\\( 990 \\)",
-          "\\( 1{,}100 \\)"
-        ],
-        "hint": "Look for numbers that make round numbers.",
-        "explanation": "\\( 575+425=1{,}000 \\)."
-      },
-      "ar": {
-        "question": "ما ناتج \\( 575 + 425 \\)؟",
-        "options": [
-          "\\( 900 \\)",
-          "\\( 1{,}000 \\)",
-          "\\( 990 \\)",
-          "\\( 1{,}100 \\)"
-        ],
-        "hint": "ابحث عن أعداد تعطي أعداداً مستديرة.",
-        "explanation": "\\( 575+425=1{,}000 \\)."
-      }
-    },
-    "correct_index": "1",
-    "original_difficulty": "easy"
   },
   {
     "id": "NAFES-3-182",
@@ -12648,40 +11866,6 @@
     "original_difficulty": "hard"
   },
   {
-    "id": "NAFES-3-189",
-    "track": "nafes",
-    "level": "Grade 3",
-    "topic": "Multiplication",
-    "type": "MCQ",
-    "difficulty": "Easy",
-    "content": {
-      "en": {
-        "question": "What is \\( 3 \\times 3 \\times 3 \\)?",
-        "options": [
-          "\\( 9 \\)",
-          "\\( 18 \\)",
-          "\\( 27 \\)",
-          "\\( 36 \\)"
-        ],
-        "hint": "First do \\( 3 \\times 3 \\), then multiply by \\( 3 \\) again.",
-        "explanation": "\\( 3 \\times 3=9 \\). \\( 9 \\times 3=27 \\)."
-      },
-      "ar": {
-        "question": "ما ناتج \\( 3 \\times 3 \\times 3 \\)؟",
-        "options": [
-          "\\( 9 \\)",
-          "\\( 18 \\)",
-          "\\( 27 \\)",
-          "\\( 36 \\)"
-        ],
-        "hint": "احسب \\( 3 \\times 3 \\) أولاً ثم اضرب في \\( 3 \\).",
-        "explanation": "\\( 3 \\times 3=9 \\). \\( 9 \\times 3=27 \\)."
-      }
-    },
-    "correct_index": "2",
-    "original_difficulty": "easy"
-  },
-  {
     "id": "NAFES-3-190",
     "track": "nafes",
     "level": "Grade 3",
@@ -12852,40 +12036,6 @@
     "original_difficulty": "medium"
   },
   {
-    "id": "NAFES-3-196",
-    "track": "nafes",
-    "level": "Grade 3",
-    "topic": "Subtraction",
-    "type": "MCQ",
-    "difficulty": "Medium",
-    "content": {
-      "en": {
-        "question": "What is \\( 7{,}006 - 4{,}389 \\)?",
-        "options": [
-          "\\( 2{,}617 \\)",
-          "\\( 2{,}627 \\)",
-          "\\( 2{,}717 \\)",
-          "\\( 2{,}527 \\)"
-        ],
-        "hint": "Use borrowing carefully.",
-        "explanation": "\\( 7{,}006 - 4{,}389 = 2{,}617 \\)."
-      },
-      "ar": {
-        "question": "ما ناتج \\( 7{,}006 - 4{,}389 \\)؟",
-        "options": [
-          "\\( 2{,}617 \\)",
-          "\\( 2{,}627 \\)",
-          "\\( 2{,}717 \\)",
-          "\\( 2{,}527 \\)"
-        ],
-        "hint": "استخدم الاستعارة بعناية.",
-        "explanation": "\\( 7{,}006 - 4{,}389 = 2{,}617 \\)."
-      }
-    },
-    "correct_index": "0",
-    "original_difficulty": "medium"
-  },
-  {
     "id": "NAFES-3-198",
     "track": "nafes",
     "level": "Grade 3",
@@ -12918,40 +12068,6 @@
     },
     "correct_index": "2",
     "original_difficulty": "hard"
-  },
-  {
-    "id": "NAFES-3-199",
-    "track": "nafes",
-    "level": "Grade 3",
-    "topic": "Number Sense",
-    "type": "MCQ",
-    "difficulty": "Medium",
-    "content": {
-      "en": {
-        "question": "What is \\( 1{,}000 \\times 7 \\)?",
-        "options": [
-          "\\( 700 \\)",
-          "\\( 7{,}000 \\)",
-          "\\( 70{,}000 \\)",
-          "\\( 700{,}000 \\)"
-        ],
-        "hint": "Multiplying by \\( 1{,}000 \\) adds three zeros.",
-        "explanation": "\\( 1{,}000 \\times 7 = 7{,}000 \\)."
-      },
-      "ar": {
-        "question": "ما ناتج \\( 1{,}000 \\times 7 \\)؟",
-        "options": [
-          "\\( 700 \\)",
-          "\\( 7{,}000 \\)",
-          "\\( 70{,}000 \\)",
-          "\\( 700{,}000 \\)"
-        ],
-        "hint": "الضرب في \\( 1{,}000 \\) يضيف ثلاثة أصفار.",
-        "explanation": "\\( 1{,}000 \\times 7 = 7{,}000 \\)."
-      }
-    },
-    "correct_index": "1",
-    "original_difficulty": "medium"
   },
   {
     "id": "NAFES-3-200",
@@ -13056,40 +12172,6 @@
     "original_difficulty": "medium"
   },
   {
-    "id": "NAFES-6-104",
-    "track": "nafes",
-    "level": "Grade 6",
-    "topic": "Fractions",
-    "type": "MCQ",
-    "difficulty": "Medium",
-    "content": {
-      "en": {
-        "question": "What is \\( 2\\dfrac{1}{3} + 1\\dfrac{2}{3} \\)?",
-        "options": [
-          "\\( 3 \\)",
-          "\\( 4 \\)",
-          "\\( 4\\dfrac{1}{3} \\)",
-          "\\( 3\\dfrac{1}{3} \\)"
-        ],
-        "hint": "Add whole parts and fraction parts separately.",
-        "explanation": "\\( 2+1=3 \\). \\( \\dfrac{1}{3}+\\dfrac{2}{3}=1 \\). Total \\( =4 \\)."
-      },
-      "ar": {
-        "question": "ما ناتج \\( 2\\dfrac{1}{3} + 1\\dfrac{2}{3} \\)؟",
-        "options": [
-          "\\( 3 \\)",
-          "\\( 4 \\)",
-          "\\( 4\\dfrac{1}{3} \\)",
-          "\\( 3\\dfrac{1}{3} \\)"
-        ],
-        "hint": "اجمع الأجزاء الصحيحة والكسرية بشكل منفصل.",
-        "explanation": "\\( 2+1=3 \\). \\( \\dfrac{1}{3}+\\dfrac{2}{3}=1 \\). الإجمالي \\( =4 \\)."
-      }
-    },
-    "correct_index": "1",
-    "original_difficulty": "medium"
-  },
-  {
     "id": "NAFES-6-105",
     "track": "nafes",
     "level": "Grade 6",
@@ -13122,40 +12204,6 @@
     },
     "correct_index": "2",
     "original_difficulty": "hard"
-  },
-  {
-    "id": "NAFES-6-106",
-    "track": "nafes",
-    "level": "Grade 6",
-    "topic": "Integers",
-    "type": "MCQ",
-    "difficulty": "Medium",
-    "content": {
-      "en": {
-        "question": "What is \\( (-4) \\times (-6) \\)?",
-        "options": [
-          "\\( -24 \\)",
-          "\\( 24 \\)",
-          "\\( -10 \\)",
-          "\\( 10 \\)"
-        ],
-        "hint": "Negative times negative = positive.",
-        "explanation": "\\( (-4) \\times (-6) = +24 \\)."
-      },
-      "ar": {
-        "question": "ما ناتج \\( (-4) \\times (-6) \\)؟",
-        "options": [
-          "\\( -24 \\)",
-          "\\( 24 \\)",
-          "\\( -10 \\)",
-          "\\( 10 \\)"
-        ],
-        "hint": "سالب × سالب = موجب.",
-        "explanation": "\\( (-4) \\times (-6) = +24 \\)."
-      }
-    },
-    "correct_index": "1",
-    "original_difficulty": "medium"
   },
   {
     "id": "NAFES-6-107",
@@ -13254,40 +12302,6 @@
         ],
         "hint": "المدى = الأكبر - الأصغر.",
         "explanation": "الأكبر=19، الأصغر=3. المدى: \\( 19-3=16 \\)."
-      }
-    },
-    "correct_index": "2",
-    "original_difficulty": "medium"
-  },
-  {
-    "id": "NAFES-6-110",
-    "track": "nafes",
-    "level": "Grade 6",
-    "topic": "Decimals",
-    "type": "MCQ",
-    "difficulty": "Medium",
-    "content": {
-      "en": {
-        "question": "What is \\( 4.8 \\div 0.6 \\)?",
-        "options": [
-          "\\( 6 \\)",
-          "\\( 7 \\)",
-          "\\( 8 \\)",
-          "\\( 9 \\)"
-        ],
-        "hint": "Multiply both by \\( 10 \\): \\( 48 \\div 6 \\).",
-        "explanation": "\\( 48 \\div 6 = 8 \\)."
-      },
-      "ar": {
-        "question": "ما ناتج \\( 4.8 \\div 0.6 \\)؟",
-        "options": [
-          "\\( 6 \\)",
-          "\\( 7 \\)",
-          "\\( 8 \\)",
-          "\\( 9 \\)"
-        ],
-        "hint": "اضرب كلاهما في \\( 10 \\): \\( 48 \\div 6 \\).",
-        "explanation": "\\( 48 \\div 6 = 8 \\)."
       }
     },
     "correct_index": "2",
@@ -13566,40 +12580,6 @@
     "original_difficulty": "medium"
   },
   {
-    "id": "NAFES-9-109",
-    "track": "nafes",
-    "level": "Grade 9",
-    "topic": "Functions",
-    "type": "MCQ",
-    "difficulty": "Hard",
-    "content": {
-      "en": {
-        "question": "If \\( f(x) = 3x - 5 \\), what is \\( f(4) \\)?",
-        "options": [
-          "\\( 5 \\)",
-          "\\( 7 \\)",
-          "\\( 9 \\)",
-          "\\( 11 \\)"
-        ],
-        "hint": "Substitute \\( x=4 \\) into the function.",
-        "explanation": "\\( f(4) = 3(4)-5=12-5=7 \\)."
-      },
-      "ar": {
-        "question": "إذا كان \\( f(x) = 3x - 5 \\)، فما \\( f(4) \\)؟",
-        "options": [
-          "\\( 5 \\)",
-          "\\( 7 \\)",
-          "\\( 9 \\)",
-          "\\( 11 \\)"
-        ],
-        "hint": "عوّض \\( x=4 \\) في الدالة.",
-        "explanation": "\\( f(4) = 3(4)-5=7 \\)."
-      }
-    },
-    "correct_index": "1",
-    "original_difficulty": "hard"
-  },
-  {
     "id": "NAFES-9-110",
     "track": "nafes",
     "level": "Grade 9",
@@ -13804,40 +12784,6 @@
     "original_difficulty": "hard"
   },
   {
-    "id": "NAFES-3-201",
-    "track": "nafes",
-    "level": "Grade 3",
-    "topic": "Multiplication",
-    "type": "MCQ",
-    "difficulty": "Easy",
-    "content": {
-      "en": {
-        "question": "What is \\( 8 \\times 8 \\)?",
-        "options": [
-          "\\( 56 \\)",
-          "\\( 64 \\)",
-          "\\( 72 \\)",
-          "\\( 80 \\)"
-        ],
-        "hint": "\\( 8 \\times 8 \\) is \\( 8 \\) less than \\( 8 \\times 9 \\).",
-        "explanation": "\\( 8 \\times 8 = 64 \\)."
-      },
-      "ar": {
-        "question": "ما ناتج \\( 8 \\times 8 \\)؟",
-        "options": [
-          "\\( 56 \\)",
-          "\\( 64 \\)",
-          "\\( 72 \\)",
-          "\\( 80 \\)"
-        ],
-        "hint": "\\( 8 \\times 8 \\) أقل بـ\\( 8 \\) من \\( 8 \\times 9 \\).",
-        "explanation": "\\( 8 \\times 8 = 64 \\)."
-      }
-    },
-    "correct_index": "1",
-    "original_difficulty": "easy"
-  },
-  {
     "id": "NAFES-3-202",
     "track": "nafes",
     "level": "Grade 3",
@@ -13872,40 +12818,6 @@
     "original_difficulty": "medium"
   },
   {
-    "id": "NAFES-3-203",
-    "track": "nafes",
-    "level": "Grade 3",
-    "topic": "Number Sense",
-    "type": "MCQ",
-    "difficulty": "Easy",
-    "content": {
-      "en": {
-        "question": "What is \\( 100 - 1 \\)?",
-        "options": [
-          "\\( 98 \\)",
-          "\\( 99 \\)",
-          "\\( 100 \\)",
-          "\\( 101 \\)"
-        ],
-        "hint": "Just count back one from 100.",
-        "explanation": "\\( 100 - 1 = 99 \\)."
-      },
-      "ar": {
-        "question": "ما ناتج \\( 100 - 1 \\)؟",
-        "options": [
-          "\\( 98 \\)",
-          "\\( 99 \\)",
-          "\\( 100 \\)",
-          "\\( 101 \\)"
-        ],
-        "hint": "عدّ بصورة عكسية واحدة من 100.",
-        "explanation": "\\( 100 - 1 = 99 \\)."
-      }
-    },
-    "correct_index": "1",
-    "original_difficulty": "easy"
-  },
-  {
     "id": "NAFES-3-204",
     "track": "nafes",
     "level": "Grade 3",
@@ -13938,74 +12850,6 @@
     },
     "correct_index": "1",
     "original_difficulty": "easy"
-  },
-  {
-    "id": "NAFES-3-205",
-    "track": "nafes",
-    "level": "Grade 3",
-    "topic": "Division",
-    "type": "MCQ",
-    "difficulty": "Medium",
-    "content": {
-      "en": {
-        "question": "What is \\( 144 \\div 12 \\)?",
-        "options": [
-          "\\( 10 \\)",
-          "\\( 11 \\)",
-          "\\( 12 \\)",
-          "\\( 13 \\)"
-        ],
-        "hint": "Think: \\( 12 \\times ? = 144 \\).",
-        "explanation": "\\( 12 \\times 12 = 144 \\). So \\( 144 \\div 12 = 12 \\)."
-      },
-      "ar": {
-        "question": "ما ناتج \\( 144 \\div 12 \\)؟",
-        "options": [
-          "\\( 10 \\)",
-          "\\( 11 \\)",
-          "\\( 12 \\)",
-          "\\( 13 \\)"
-        ],
-        "hint": "فكّر: \\( 12 \\times ? = 144 \\).",
-        "explanation": "\\( 144 \\div 12 = 12 \\)."
-      }
-    },
-    "correct_index": "2",
-    "original_difficulty": "medium"
-  },
-  {
-    "id": "NAFES-3-207",
-    "track": "nafes",
-    "level": "Grade 3",
-    "topic": "Fractions",
-    "type": "MCQ",
-    "difficulty": "Medium",
-    "content": {
-      "en": {
-        "question": "What is \\( 1 - \\dfrac{2}{7} \\)?",
-        "options": [
-          "\\( \\dfrac{5}{7} \\)",
-          "\\( \\dfrac{3}{7} \\)",
-          "\\( \\dfrac{4}{7} \\)",
-          "\\( \\dfrac{6}{7} \\)"
-        ],
-        "hint": "\\( 1 = \\dfrac{7}{7} \\).",
-        "explanation": "\\( \\dfrac{7}{7} - \\dfrac{2}{7} = \\dfrac{5}{7} \\)."
-      },
-      "ar": {
-        "question": "ما ناتج \\( 1 - \\dfrac{2}{7} \\)؟",
-        "options": [
-          "\\( \\dfrac{5}{7} \\)",
-          "\\( \\dfrac{3}{7} \\)",
-          "\\( \\dfrac{4}{7} \\)",
-          "\\( \\dfrac{6}{7} \\)"
-        ],
-        "hint": "\\( 1 = \\dfrac{7}{7} \\).",
-        "explanation": "\\( \\dfrac{7}{7} - \\dfrac{2}{7} = \\dfrac{5}{7} \\)."
-      }
-    },
-    "correct_index": "0",
-    "original_difficulty": "medium"
   },
   {
     "id": "NAFES-3-208",
@@ -14110,40 +12954,6 @@
     "original_difficulty": "medium"
   },
   {
-    "id": "NAFES-3-211",
-    "track": "nafes",
-    "level": "Grade 3",
-    "topic": "Subtraction",
-    "type": "MCQ",
-    "difficulty": "Hard",
-    "content": {
-      "en": {
-        "question": "What is \\( 10{,}000 - 6{,}543 \\)?",
-        "options": [
-          "\\( 3{,}457 \\)",
-          "\\( 3{,}547 \\)",
-          "\\( 4{,}457 \\)",
-          "\\( 3{,}467 \\)"
-        ],
-        "hint": "Borrow through the zeros.",
-        "explanation": "\\( 10{,}000 - 6{,}543 = 3{,}457 \\)."
-      },
-      "ar": {
-        "question": "ما ناتج \\( 10{,}000 - 6{,}543 \\)؟",
-        "options": [
-          "\\( 3{,}457 \\)",
-          "\\( 3{,}547 \\)",
-          "\\( 4{,}457 \\)",
-          "\\( 3{,}467 \\)"
-        ],
-        "hint": "استعر عبر الأصفار.",
-        "explanation": "\\( 10{,}000 - 6{,}543 = 3{,}457 \\)."
-      }
-    },
-    "correct_index": "0",
-    "original_difficulty": "hard"
-  },
-  {
     "id": "NAFES-3-212",
     "track": "nafes",
     "level": "Grade 3",
@@ -14176,40 +12986,6 @@
     },
     "correct_index": "1",
     "original_difficulty": "hard"
-  },
-  {
-    "id": "NAFES-3-213",
-    "track": "nafes",
-    "level": "Grade 3",
-    "topic": "Addition",
-    "type": "MCQ",
-    "difficulty": "Easy",
-    "content": {
-      "en": {
-        "question": "What is \\( 1{,}111 + 1{,}111 \\)?",
-        "options": [
-          "\\( 2{,}111 \\)",
-          "\\( 2{,}222 \\)",
-          "\\( 2{,}233 \\)",
-          "\\( 2{,}321 \\)"
-        ],
-        "hint": "Add digit by digit.",
-        "explanation": "\\( 1{,}111 + 1{,}111 = 2{,}222 \\)."
-      },
-      "ar": {
-        "question": "ما ناتج \\( 1{,}111 + 1{,}111 \\)؟",
-        "options": [
-          "\\( 2{,}111 \\)",
-          "\\( 2{,}222 \\)",
-          "\\( 2{,}233 \\)",
-          "\\( 2{,}321 \\)"
-        ],
-        "hint": "اجمع رقماً بعد رقم.",
-        "explanation": "\\( 1{,}111 + 1{,}111 = 2{,}222 \\)."
-      }
-    },
-    "correct_index": "1",
-    "original_difficulty": "easy"
   },
   {
     "id": "NAFES-3-214",
@@ -14416,40 +13192,6 @@
     "original_difficulty": "hard"
   },
   {
-    "id": "NAFES-3-220",
-    "track": "nafes",
-    "level": "Grade 3",
-    "topic": "Multiplication",
-    "type": "MCQ",
-    "difficulty": "Hard",
-    "content": {
-      "en": {
-        "question": "What is \\( 123 \\times 4 \\)?",
-        "options": [
-          "\\( 482 \\)",
-          "\\( 492 \\)",
-          "\\( 502 \\)",
-          "\\( 512 \\)"
-        ],
-        "hint": "Multiply each digit by \\( 4 \\) from right to left, carrying as needed.",
-        "explanation": "\\( 4 \\times 3=12 \\) (write 2 carry 1). \\( 4 \\times 2+1=9 \\). \\( 4 \\times 1=4 \\). Answer: \\( 492 \\)."
-      },
-      "ar": {
-        "question": "ما ناتج \\( 123 \\times 4 \\)؟",
-        "options": [
-          "\\( 482 \\)",
-          "\\( 492 \\)",
-          "\\( 502 \\)",
-          "\\( 512 \\)"
-        ],
-        "hint": "اضرب كل رقم في \\( 4 \\) من اليمين إلى اليسار مع الحمل.",
-        "explanation": "\\( 4 \\times 3=12 \\) (اكتب 2 واحمل 1). \\( 4 \\times 2+1=9 \\). \\( 4 \\times 1=4 \\). الإجابة: \\( 492 \\)."
-      }
-    },
-    "correct_index": "1",
-    "original_difficulty": "hard"
-  },
-  {
     "id": "NAFES-3-221",
     "track": "nafes",
     "level": "Grade 3",
@@ -14482,40 +13224,6 @@
     },
     "correct_index": "2",
     "original_difficulty": "easy"
-  },
-  {
-    "id": "NAFES-3-222",
-    "track": "nafes",
-    "level": "Grade 3",
-    "topic": "Addition",
-    "type": "MCQ",
-    "difficulty": "Medium",
-    "content": {
-      "en": {
-        "question": "What is \\( 4{,}567 + 3{,}288 \\)?",
-        "options": [
-          "\\( 7{,}755 \\)",
-          "\\( 7{,}855 \\)",
-          "\\( 7{,}955 \\)",
-          "\\( 8{,}055 \\)"
-        ],
-        "hint": "Add column by column with carrying.",
-        "explanation": "\\( 4{,}567 + 3{,}288 = 7{,}855 \\)."
-      },
-      "ar": {
-        "question": "ما ناتج \\( 4{,}567 + 3{,}288 \\)؟",
-        "options": [
-          "\\( 7{,}755 \\)",
-          "\\( 7{,}855 \\)",
-          "\\( 7{,}955 \\)",
-          "\\( 8{,}055 \\)"
-        ],
-        "hint": "اجمع عموداً بعمود مع الحمل.",
-        "explanation": "\\( 4{,}567 + 3{,}288 = 7{,}855 \\)."
-      }
-    },
-    "correct_index": "1",
-    "original_difficulty": "medium"
   },
   {
     "id": "NAFES-3-223",
@@ -14824,40 +13532,6 @@
     "original_difficulty": "hard"
   },
   {
-    "id": "NAFES-3-232",
-    "track": "nafes",
-    "level": "Grade 3",
-    "topic": "Division",
-    "type": "MCQ",
-    "difficulty": "Medium",
-    "content": {
-      "en": {
-        "question": "What is \\( 225 \\div 15 \\)?",
-        "options": [
-          "\\( 13 \\)",
-          "\\( 14 \\)",
-          "\\( 15 \\)",
-          "\\( 16 \\)"
-        ],
-        "hint": "Think: \\( 15 \\times 15 = ? \\)",
-        "explanation": "\\( 15 \\times 15 = 225 \\). So \\( 225 \\div 15 = 15 \\)."
-      },
-      "ar": {
-        "question": "ما ناتج \\( 225 \\div 15 \\)؟",
-        "options": [
-          "\\( 13 \\)",
-          "\\( 14 \\)",
-          "\\( 15 \\)",
-          "\\( 16 \\)"
-        ],
-        "hint": "فكّر: \\( 15 \\times 15 = ? \\)",
-        "explanation": "\\( 15 \\times 15 = 225 \\). إذن \\( 225 \\div 15 = 15 \\)."
-      }
-    },
-    "correct_index": "2",
-    "original_difficulty": "medium"
-  },
-  {
     "id": "NAFES-3-233",
     "track": "nafes",
     "level": "Grade 3",
@@ -14960,40 +13634,6 @@
     "original_difficulty": "hard"
   },
   {
-    "id": "NAFES-3-236",
-    "track": "nafes",
-    "level": "Grade 3",
-    "topic": "Multiplication",
-    "type": "MCQ",
-    "difficulty": "Medium",
-    "content": {
-      "en": {
-        "question": "What is \\( 200 \\times 30 \\)?",
-        "options": [
-          "\\( 600 \\)",
-          "\\( 6{,}000 \\)",
-          "\\( 60{,}000 \\)",
-          "\\( 600{,}000 \\)"
-        ],
-        "hint": "\\( 2 \\times 3 = 6 \\). Then count the zeros.",
-        "explanation": "\\( 200 \\times 30 = 6{,}000 \\). (\\( 2 \\times 3 = 6 \\) with 3 zeros.)"
-      },
-      "ar": {
-        "question": "ما ناتج \\( 200 \\times 30 \\)؟",
-        "options": [
-          "\\( 600 \\)",
-          "\\( 6{,}000 \\)",
-          "\\( 60{,}000 \\)",
-          "\\( 600{,}000 \\)"
-        ],
-        "hint": "\\( 2 \\times 3 = 6 \\). ثم عدّ الأصفار.",
-        "explanation": "\\( 200 \\times 30 = 6{,}000 \\)."
-      }
-    },
-    "correct_index": "1",
-    "original_difficulty": "medium"
-  },
-  {
     "id": "NAFES-3-237",
     "track": "nafes",
     "level": "Grade 3",
@@ -15093,40 +13733,6 @@
       }
     },
     "correct_index": "0",
-    "original_difficulty": "hard"
-  },
-  {
-    "id": "NAFES-3-240",
-    "track": "nafes",
-    "level": "Grade 3",
-    "topic": "Fractions",
-    "type": "MCQ",
-    "difficulty": "Hard",
-    "content": {
-      "en": {
-        "question": "What is \\( 2\\dfrac{3}{4} - 1\\dfrac{1}{4} \\)?",
-        "options": [
-          "\\( 1 \\)",
-          "\\( 1\\dfrac{1}{2} \\)",
-          "\\( 1\\dfrac{3}{4} \\)",
-          "\\( 2 \\)"
-        ],
-        "hint": "Subtract whole parts, then fraction parts.",
-        "explanation": "\\( (2-1) + (\\dfrac{3}{4}-\\dfrac{1}{4}) = 1 + \\dfrac{2}{4} = 1\\dfrac{1}{2} \\)."
-      },
-      "ar": {
-        "question": "ما ناتج \\( 2\\dfrac{3}{4} - 1\\dfrac{1}{4} \\)؟",
-        "options": [
-          "\\( 1 \\)",
-          "\\( 1\\dfrac{1}{2} \\)",
-          "\\( 1\\dfrac{3}{4} \\)",
-          "\\( 2 \\)"
-        ],
-        "hint": "اطرح الأجزاء الصحيحة ثم الكسرية.",
-        "explanation": "\\( 1 + \\dfrac{2}{4} = 1\\dfrac{1}{2} \\)."
-      }
-    },
-    "correct_index": "1",
     "original_difficulty": "hard"
   },
   {
@@ -15334,40 +13940,6 @@
     "original_difficulty": "hard"
   },
   {
-    "id": "NAFES-3-247",
-    "track": "nafes",
-    "level": "Grade 3",
-    "topic": "Number Sense",
-    "type": "MCQ",
-    "difficulty": "Medium",
-    "content": {
-      "en": {
-        "question": "What is \\( \\sqrt{64} \\)?",
-        "options": [
-          "\\( 6 \\)",
-          "\\( 7 \\)",
-          "\\( 8 \\)",
-          "\\( 9 \\)"
-        ],
-        "hint": "Which number times itself equals \\( 64 \\)?",
-        "explanation": "\\( 8 \\times 8 = 64 \\), so \\( \\sqrt{64} = 8 \\)."
-      },
-      "ar": {
-        "question": "ما قيمة \\( \\sqrt{64} \\)؟",
-        "options": [
-          "\\( 6 \\)",
-          "\\( 7 \\)",
-          "\\( 8 \\)",
-          "\\( 9 \\)"
-        ],
-        "hint": "أي عدد مضروب في نفسه يساوي \\( 64 \\)؟",
-        "explanation": "\\( 8 \\times 8 = 64 \\)، إذن \\( \\sqrt{64} = 8 \\)."
-      }
-    },
-    "correct_index": "2",
-    "original_difficulty": "medium"
-  },
-  {
     "id": "NAFES-3-248",
     "track": "nafes",
     "level": "Grade 3",
@@ -15470,40 +14042,6 @@
     "original_difficulty": "hard"
   },
   {
-    "id": "NAFES-6-116",
-    "track": "nafes",
-    "level": "Grade 6",
-    "topic": "Algebra",
-    "type": "MCQ",
-    "difficulty": "Medium",
-    "content": {
-      "en": {
-        "question": "If \\( \\dfrac{x}{4} = 9 \\), what is \\( x \\)?",
-        "options": [
-          "\\( 30 \\)",
-          "\\( 36 \\)",
-          "\\( 40 \\)",
-          "\\( 45 \\)"
-        ],
-        "hint": "Multiply both sides by \\( 4 \\).",
-        "explanation": "\\( x = 9 \\times 4 = 36 \\)."
-      },
-      "ar": {
-        "question": "إذا كان \\( \\dfrac{x}{4} = 9 \\)، فما \\( x \\)؟",
-        "options": [
-          "\\( 30 \\)",
-          "\\( 36 \\)",
-          "\\( 40 \\)",
-          "\\( 45 \\)"
-        ],
-        "hint": "اضرب الطرفين في \\( 4 \\).",
-        "explanation": "\\( x = 36 \\)."
-      }
-    },
-    "correct_index": "1",
-    "original_difficulty": "medium"
-  },
-  {
     "id": "NAFES-6-117",
     "track": "nafes",
     "level": "Grade 6",
@@ -15536,40 +14074,6 @@
     },
     "correct_index": "0",
     "original_difficulty": "hard"
-  },
-  {
-    "id": "NAFES-6-118",
-    "track": "nafes",
-    "level": "Grade 6",
-    "topic": "Fractions",
-    "type": "MCQ",
-    "difficulty": "Medium",
-    "content": {
-      "en": {
-        "question": "What is \\( \\dfrac{5}{6} \\div \\dfrac{2}{3} \\)?",
-        "options": [
-          "\\( \\dfrac{10}{18} \\)",
-          "\\( \\dfrac{5}{4} \\)",
-          "\\( \\dfrac{4}{5} \\)",
-          "\\( \\dfrac{3}{4} \\)"
-        ],
-        "hint": "Dividing by a fraction: multiply by its reciprocal.",
-        "explanation": "\\( \\dfrac{5}{6} \\times \\dfrac{3}{2} = \\dfrac{15}{12} = \\dfrac{5}{4} \\)."
-      },
-      "ar": {
-        "question": "ما ناتج \\( \\dfrac{5}{6} \\div \\dfrac{2}{3} \\)؟",
-        "options": [
-          "\\( \\dfrac{10}{18} \\)",
-          "\\( \\dfrac{5}{4} \\)",
-          "\\( \\dfrac{4}{5} \\)",
-          "\\( \\dfrac{3}{4} \\)"
-        ],
-        "hint": "القسمة على كسر = الضرب في مقلوبه.",
-        "explanation": "\\( \\dfrac{5}{6} \\times \\dfrac{3}{2} = \\dfrac{5}{4} \\)."
-      }
-    },
-    "correct_index": "1",
-    "original_difficulty": "medium"
   },
   {
     "id": "NAFES-6-119",
@@ -15640,40 +14144,6 @@
     "original_difficulty": "hard"
   },
   {
-    "id": "NAFES-6-121",
-    "track": "nafes",
-    "level": "Grade 6",
-    "topic": "Integers",
-    "type": "MCQ",
-    "difficulty": "Medium",
-    "content": {
-      "en": {
-        "question": "What is \\( (-20) \\div (-4) \\)?",
-        "options": [
-          "\\( -5 \\)",
-          "\\( 5 \\)",
-          "\\( -4 \\)",
-          "\\( 4 \\)"
-        ],
-        "hint": "Negative divided by negative = positive.",
-        "explanation": "\\( (-20) \\div (-4) = +5 \\)."
-      },
-      "ar": {
-        "question": "ما ناتج \\( (-20) \\div (-4) \\)؟",
-        "options": [
-          "\\( -5 \\)",
-          "\\( 5 \\)",
-          "\\( -4 \\)",
-          "\\( 4 \\)"
-        ],
-        "hint": "سالب ÷ سالب = موجب.",
-        "explanation": "\\( (-20) \\div (-4) = +5 \\)."
-      }
-    },
-    "correct_index": "1",
-    "original_difficulty": "medium"
-  },
-  {
     "id": "NAFES-6-122",
     "track": "nafes",
     "level": "Grade 6",
@@ -15706,40 +14176,6 @@
     },
     "correct_index": "0",
     "original_difficulty": "medium"
-  },
-  {
-    "id": "NAFES-6-123",
-    "track": "nafes",
-    "level": "Grade 6",
-    "topic": "Algebra",
-    "type": "MCQ",
-    "difficulty": "Hard",
-    "content": {
-      "en": {
-        "question": "If \\( \\dfrac{2x+1}{3} = 5 \\), what is \\( x \\)?",
-        "options": [
-          "\\( 6 \\)",
-          "\\( 7 \\)",
-          "\\( 8 \\)",
-          "\\( 9 \\)"
-        ],
-        "hint": "Multiply both sides by 3 first.",
-        "explanation": "\\( 2x+1=15 \\). \\( 2x=14 \\). \\( x=7 \\)."
-      },
-      "ar": {
-        "question": "إذا كان \\( \\dfrac{2x+1}{3} = 5 \\)، فما \\( x \\)؟",
-        "options": [
-          "\\( 6 \\)",
-          "\\( 7 \\)",
-          "\\( 8 \\)",
-          "\\( 9 \\)"
-        ],
-        "hint": "اضرب الطرفين في 3 أولاً.",
-        "explanation": "\\( 2x+1=15 \\). \\( x=7 \\)."
-      }
-    },
-    "correct_index": "1",
-    "original_difficulty": "hard"
   },
   {
     "id": "NAFES-6-124",
@@ -15946,40 +14382,6 @@
     "original_difficulty": "medium"
   },
   {
-    "id": "NAFES-9-119",
-    "track": "nafes",
-    "level": "Grade 9",
-    "topic": "Trigonometry",
-    "type": "MCQ",
-    "difficulty": "Hard",
-    "content": {
-      "en": {
-        "question": "What is \\( \\cos(60°) \\)?",
-        "options": [
-          "\\( 0 \\)",
-          "\\( \\dfrac{1}{2} \\)",
-          "\\( \\dfrac{\\sqrt{3}}{2} \\)",
-          "\\( 1 \\)"
-        ],
-        "hint": "Recall standard trigonometric values.",
-        "explanation": "\\( \\cos(60°) = \\dfrac{1}{2} \\)."
-      },
-      "ar": {
-        "question": "ما قيمة \\( \\cos(60°) \\)؟",
-        "options": [
-          "\\( 0 \\)",
-          "\\( \\dfrac{1}{2} \\)",
-          "\\( \\dfrac{\\sqrt{3}}{2} \\)",
-          "\\( 1 \\)"
-        ],
-        "hint": "تذكّر قيم المثلثات الأساسية.",
-        "explanation": "\\( \\cos(60°) = \\dfrac{1}{2} \\)."
-      }
-    },
-    "correct_index": "1",
-    "original_difficulty": "hard"
-  },
-  {
     "id": "NAFES-9-120",
     "track": "nafes",
     "level": "Grade 9",
@@ -16012,40 +14414,6 @@
     },
     "correct_index": "1",
     "original_difficulty": "medium"
-  },
-  {
-    "id": "NAFES-9-121",
-    "track": "nafes",
-    "level": "Grade 9",
-    "topic": "Algebra",
-    "type": "MCQ",
-    "difficulty": "Hard",
-    "content": {
-      "en": {
-        "question": "Solve: \\( x^2 + 6x + 9 = 0 \\).",
-        "options": [
-          "\\( x = -3 \\) only",
-          "\\( x = 3 \\) only",
-          "\\( x = \\pm 3 \\)",
-          "\\( x = -3 \\) or \\( x = 3 \\)"
-        ],
-        "hint": "Recognize this as a perfect square trinomial.",
-        "explanation": "\\( (x+3)^2 = 0 \\Rightarrow x = -3 \\) (double root)."
-      },
-      "ar": {
-        "question": "حلّ: \\( x^2 + 6x + 9 = 0 \\).",
-        "options": [
-          "\\( x = -3 \\) فقط",
-          "\\( x = 3 \\) فقط",
-          "\\( x = \\pm 3 \\)",
-          "\\( x = -3 \\) أو \\( x = 3 \\)"
-        ],
-        "hint": "تعرّف على هذه كمثلثة مربع تام.",
-        "explanation": "\\( (x+3)^2 = 0 \\Rightarrow x = -3 \\) (جذر مضاعف)."
-      }
-    },
-    "correct_index": "0",
-    "original_difficulty": "hard"
   },
   {
     "id": "NAFES-9-122",
@@ -16558,40 +14926,6 @@
     "original_difficulty": "hard"
   },
   {
-    "id": "NAFES-6-138",
-    "track": "nafes",
-    "level": "Grade 6",
-    "topic": "Algebra",
-    "type": "MCQ",
-    "difficulty": "Hard",
-    "content": {
-      "en": {
-        "question": "What is \\( 2^{10} \\)?",
-        "options": [
-          "\\( 512 \\)",
-          "\\( 1{,}024 \\)",
-          "\\( 2{,}048 \\)",
-          "\\( 256 \\)"
-        ],
-        "hint": "\\( 2^{10} = 2^5 \\times 2^5 = 32 \\times 32 \\).",
-        "explanation": "\\( 32 \\times 32 = 1{,}024 \\)."
-      },
-      "ar": {
-        "question": "ما قيمة \\( 2^{10} \\)؟",
-        "options": [
-          "\\( 512 \\)",
-          "\\( 1{,}024 \\)",
-          "\\( 2{,}048 \\)",
-          "\\( 256 \\)"
-        ],
-        "hint": "\\( 2^{10} = 32 \\times 32 \\).",
-        "explanation": "\\( 32 \\times 32 = 1{,}024 \\)."
-      }
-    },
-    "correct_index": "1",
-    "original_difficulty": "hard"
-  },
-  {
     "id": "NAFES-6-139",
     "track": "nafes",
     "level": "Grade 6",
@@ -16657,40 +14991,6 @@
       }
     },
     "correct_index": "1",
-    "original_difficulty": "hard"
-  },
-  {
-    "id": "NAFES-6-141",
-    "track": "nafes",
-    "level": "Grade 6",
-    "topic": "Integers",
-    "type": "MCQ",
-    "difficulty": "Hard",
-    "content": {
-      "en": {
-        "question": "What is \\( (-3)^3 \\)?",
-        "options": [
-          "\\( 9 \\)",
-          "\\( -9 \\)",
-          "\\( 27 \\)",
-          "\\( -27 \\)"
-        ],
-        "hint": "Odd power of a negative number is negative.",
-        "explanation": "\\( (-3)^3 = -3 \\times -3 \\times -3 = -27 \\)."
-      },
-      "ar": {
-        "question": "ما قيمة \\( (-3)^3 \\)؟",
-        "options": [
-          "\\( 9 \\)",
-          "\\( -9 \\)",
-          "\\( 27 \\)",
-          "\\( -27 \\)"
-        ],
-        "hint": "القوة الفردية لعدد سالب تعطي ناتجاً سالباً.",
-        "explanation": "\\( (-3)^3 = -27 \\)."
-      }
-    },
-    "correct_index": "3",
     "original_difficulty": "hard"
   },
   {
@@ -17068,40 +15368,6 @@
     "original_difficulty": "hard"
   },
   {
-    "id": "NAFES-6-153",
-    "track": "nafes",
-    "level": "Grade 6",
-    "topic": "Algebra",
-    "type": "MCQ",
-    "difficulty": "Medium",
-    "content": {
-      "en": {
-        "question": "What is \\( \\sqrt{144} \\)?",
-        "options": [
-          "\\( 10 \\)",
-          "\\( 11 \\)",
-          "\\( 12 \\)",
-          "\\( 13 \\)"
-        ],
-        "hint": "Which number squared gives \\( 144 \\)?",
-        "explanation": "\\( 12^2 = 144 \\). \\( \\sqrt{144} = 12 \\)."
-      },
-      "ar": {
-        "question": "ما قيمة \\( \\sqrt{144} \\)؟",
-        "options": [
-          "\\( 10 \\)",
-          "\\( 11 \\)",
-          "\\( 12 \\)",
-          "\\( 13 \\)"
-        ],
-        "hint": "أي عدد تربيعه يساوي \\( 144 \\)؟",
-        "explanation": "\\( 12^2 = 144 \\)."
-      }
-    },
-    "correct_index": "2",
-    "original_difficulty": "medium"
-  },
-  {
     "id": "NAFES-6-155",
     "track": "nafes",
     "level": "Grade 6",
@@ -17408,40 +15674,6 @@
     "original_difficulty": "hard"
   },
   {
-    "id": "NAFES-6-165",
-    "track": "nafes",
-    "level": "Grade 6",
-    "topic": "Decimals",
-    "type": "MCQ",
-    "difficulty": "Hard",
-    "content": {
-      "en": {
-        "question": "What is \\( 0.002 \\times 0.05 \\)?",
-        "options": [
-          "\\( 0.01 \\)",
-          "\\( 0.001 \\)",
-          "\\( 0.0001 \\)",
-          "\\( 0.00001 \\)"
-        ],
-        "hint": "Count decimal places: 3 + 2 = 5 total.",
-        "explanation": "\\( 2 \\times 5 = 10 \\). With 5 decimal places: \\( 0.0001 \\)."
-      },
-      "ar": {
-        "question": "ما ناتج \\( 0.002 \\times 0.05 \\)؟",
-        "options": [
-          "\\( 0.01 \\)",
-          "\\( 0.001 \\)",
-          "\\( 0.0001 \\)",
-          "\\( 0.00001 \\)"
-        ],
-        "hint": "عدّ المنازل العشرية: 3 + 2 = 5.",
-        "explanation": "\\( 2 \\times 5 = 10 \\). بـ5 منازل: \\( 0.0001 \\)."
-      }
-    },
-    "correct_index": "2",
-    "original_difficulty": "hard"
-  },
-  {
     "id": "NAFES-9-126",
     "track": "nafes",
     "level": "Grade 9",
@@ -17473,74 +15705,6 @@
       }
     },
     "correct_index": "0",
-    "original_difficulty": "hard"
-  },
-  {
-    "id": "NAFES-9-127",
-    "track": "nafes",
-    "level": "Grade 9",
-    "topic": "Algebra",
-    "type": "MCQ",
-    "difficulty": "Medium",
-    "content": {
-      "en": {
-        "question": "Simplify: \\( \\dfrac{4x^3}{2x} \\).",
-        "options": [
-          "\\( 2x^2 \\)",
-          "\\( 2x^3 \\)",
-          "\\( 4x^2 \\)",
-          "\\( 2x \\)"
-        ],
-        "hint": "Divide coefficients and subtract exponents.",
-        "explanation": "\\( \\dfrac{4}{2} \\times x^{3-1} = 2x^2 \\)."
-      },
-      "ar": {
-        "question": "بسّط: \\( \\dfrac{4x^3}{2x} \\).",
-        "options": [
-          "\\( 2x^2 \\)",
-          "\\( 2x^3 \\)",
-          "\\( 4x^2 \\)",
-          "\\( 2x \\)"
-        ],
-        "hint": "اقسم المعاملات واطرح الأسس.",
-        "explanation": "\\( 2x^2 \\)."
-      }
-    },
-    "correct_index": "0",
-    "original_difficulty": "medium"
-  },
-  {
-    "id": "NAFES-9-128",
-    "track": "nafes",
-    "level": "Grade 9",
-    "topic": "Functions",
-    "type": "MCQ",
-    "difficulty": "Hard",
-    "content": {
-      "en": {
-        "question": "If \\( f(x) = x^2 - 3x + 2 \\), what is \\( f(0) \\)?",
-        "options": [
-          "\\( -2 \\)",
-          "\\( 0 \\)",
-          "\\( 2 \\)",
-          "\\( 4 \\)"
-        ],
-        "hint": "Substitute \\( x=0 \\).",
-        "explanation": "\\( f(0) = 0 - 0 + 2 = 2 \\)."
-      },
-      "ar": {
-        "question": "إذا كان \\( f(x) = x^2 - 3x + 2 \\)، فما \\( f(0) \\)؟",
-        "options": [
-          "\\( -2 \\)",
-          "\\( 0 \\)",
-          "\\( 2 \\)",
-          "\\( 4 \\)"
-        ],
-        "hint": "عوّض \\( x=0 \\).",
-        "explanation": "\\( f(0) = 2 \\)."
-      }
-    },
-    "correct_index": "2",
     "original_difficulty": "hard"
   },
   {
@@ -17640,40 +15804,6 @@
         ],
         "hint": "القيم المتطرفة تسحب هذا المقياس نحوها.",
         "explanation": "المتوسط هو الأكثر تأثراً لأنه يستخدم جميع القيم في حسابه."
-      }
-    },
-    "correct_index": "2",
-    "original_difficulty": "hard"
-  },
-  {
-    "id": "NAFES-9-132",
-    "track": "nafes",
-    "level": "Grade 9",
-    "topic": "Algebra",
-    "type": "MCQ",
-    "difficulty": "Hard",
-    "content": {
-      "en": {
-        "question": "If \\( \\log_2 x = 5 \\), what is \\( x \\)?",
-        "options": [
-          "\\( 10 \\)",
-          "\\( 25 \\)",
-          "\\( 32 \\)",
-          "\\( 64 \\)"
-        ],
-        "hint": "\\( \\log_b x = n \\Rightarrow x = b^n \\).",
-        "explanation": "\\( x = 2^5 = 32 \\)."
-      },
-      "ar": {
-        "question": "إذا كان \\( \\log_2 x = 5 \\)، فما \\( x \\)؟",
-        "options": [
-          "\\( 10 \\)",
-          "\\( 25 \\)",
-          "\\( 32 \\)",
-          "\\( 64 \\)"
-        ],
-        "hint": "\\( \\log_b x = n \\Rightarrow x = b^n \\).",
-        "explanation": "\\( x = 2^5 = 32 \\)."
       }
     },
     "correct_index": "2",
@@ -17918,74 +16048,6 @@
     "original_difficulty": "hard"
   },
   {
-    "id": "NAFES-9-140",
-    "track": "nafes",
-    "level": "Grade 9",
-    "topic": "Functions",
-    "type": "MCQ",
-    "difficulty": "Hard",
-    "content": {
-      "en": {
-        "question": "If \\( g(x) = 2x^2 + x - 1 \\), what is \\( g(-1) \\)?",
-        "options": [
-          "\\( -2 \\)",
-          "\\( 0 \\)",
-          "\\( 2 \\)",
-          "\\( 4 \\)"
-        ],
-        "hint": "Substitute \\( x = -1 \\).",
-        "explanation": "\\( g(-1) = 2(1) + (-1) - 1 = 2 - 1 - 1 = 0 \\)."
-      },
-      "ar": {
-        "question": "إذا كان \\( g(x) = 2x^2 + x - 1 \\)، فما \\( g(-1) \\)؟",
-        "options": [
-          "\\( -2 \\)",
-          "\\( 0 \\)",
-          "\\( 2 \\)",
-          "\\( 4 \\)"
-        ],
-        "hint": "عوّض \\( x = -1 \\).",
-        "explanation": "\\( g(-1) = 2 - 1 - 1 = 0 \\)."
-      }
-    },
-    "correct_index": "1",
-    "original_difficulty": "hard"
-  },
-  {
-    "id": "NAFES-9-141",
-    "track": "nafes",
-    "level": "Grade 9",
-    "topic": "Algebra",
-    "type": "MCQ",
-    "difficulty": "Hard",
-    "content": {
-      "en": {
-        "question": "Solve: \\( |2x - 4| = 6 \\).",
-        "options": [
-          "\\( x=5 \\) only",
-          "\\( x=-1 \\) only",
-          "\\( x=5 \\) or \\( x=-1 \\)",
-          "\\( x=1 \\) or \\( x=-5 \\)"
-        ],
-        "hint": "Absolute value gives two cases: \\( 2x-4=6 \\) and \\( 2x-4=-6 \\).",
-        "explanation": "Case 1: \\( 2x=10 \\Rightarrow x=5 \\). Case 2: \\( 2x=-2 \\Rightarrow x=-1 \\)."
-      },
-      "ar": {
-        "question": "حلّ: \\( |2x - 4| = 6 \\).",
-        "options": [
-          "\\( x=5 \\) فقط",
-          "\\( x=-1 \\) فقط",
-          "\\( x=5 \\) أو \\( x=-1 \\)",
-          "\\( x=1 \\) أو \\( x=-5 \\)"
-        ],
-        "hint": "القيمة المطلقة تعطي حالتين.",
-        "explanation": "\\( x=5 \\) أو \\( x=-1 \\)."
-      }
-    },
-    "correct_index": "2",
-    "original_difficulty": "hard"
-  },
-  {
     "id": "NAFES-9-142",
     "track": "nafes",
     "level": "Grade 9",
@@ -18048,40 +16110,6 @@
         ],
         "hint": "استخدم: \\( r^2 = 8^2 + 6^2 \\).",
         "explanation": "\\( r = \\sqrt{100} = 10 \\) سم."
-      }
-    },
-    "correct_index": "1",
-    "original_difficulty": "hard"
-  },
-  {
-    "id": "NAFES-9-144",
-    "track": "nafes",
-    "level": "Grade 9",
-    "topic": "Algebra",
-    "type": "MCQ",
-    "difficulty": "Hard",
-    "content": {
-      "en": {
-        "question": "Solve: \\( 5^x = 125 \\).",
-        "options": [
-          "\\( x=2 \\)",
-          "\\( x=3 \\)",
-          "\\( x=4 \\)",
-          "\\( x=5 \\)"
-        ],
-        "hint": "Express 125 as a power of 5.",
-        "explanation": "\\( 125 = 5^3 \\). So \\( x=3 \\)."
-      },
-      "ar": {
-        "question": "حلّ: \\( 5^x = 125 \\).",
-        "options": [
-          "\\( x=2 \\)",
-          "\\( x=3 \\)",
-          "\\( x=4 \\)",
-          "\\( x=5 \\)"
-        ],
-        "hint": "عبّر عن 125 كقوة للعدد 5.",
-        "explanation": "\\( 125 = 5^3 \\). إذن \\( x=3 \\)."
       }
     },
     "correct_index": "1",
@@ -18153,40 +16181,6 @@
       }
     },
     "correct_index": "0",
-    "original_difficulty": "hard"
-  },
-  {
-    "id": "NAFES-9-147",
-    "track": "nafes",
-    "level": "Grade 9",
-    "topic": "Trigonometry",
-    "type": "MCQ",
-    "difficulty": "Hard",
-    "content": {
-      "en": {
-        "question": "What is \\( \\sin^2(\\theta) + \\cos^2(\\theta) \\)?",
-        "options": [
-          "\\( 0 \\)",
-          "\\( 1 \\)",
-          "\\( 2 \\)",
-          "Depends on \\( \\theta \\)"
-        ],
-        "hint": "This is a fundamental trigonometric identity.",
-        "explanation": "\\( \\sin^2(\\theta) + \\cos^2(\\theta) = 1 \\) for all \\( \\theta \\)."
-      },
-      "ar": {
-        "question": "ما قيمة \\( \\sin^2(\\theta) + \\cos^2(\\theta) \\)؟",
-        "options": [
-          "\\( 0 \\)",
-          "\\( 1 \\)",
-          "\\( 2 \\)",
-          "تعتمد على \\( \\theta \\)"
-        ],
-        "hint": "هذه هوية مثلثية أساسية.",
-        "explanation": "\\( \\sin^2(\\theta) + \\cos^2(\\theta) = 1 \\) لكل \\( \\theta \\)."
-      }
-    },
-    "correct_index": "1",
     "original_difficulty": "hard"
   },
   {
@@ -18768,40 +16762,6 @@
     "original_difficulty": "hard"
   },
   {
-    "id": "NAFES-6-183",
-    "track": "nafes",
-    "level": "Grade 6",
-    "topic": "Fractions",
-    "type": "MCQ",
-    "difficulty": "Hard",
-    "content": {
-      "en": {
-        "question": "What is \\( \\dfrac{7}{8} - \\dfrac{2}{3} \\)?",
-        "options": [
-          "\\( \\dfrac{5}{24} \\)",
-          "\\( \\dfrac{7}{24} \\)",
-          "\\( \\dfrac{5}{8} \\)",
-          "\\( \\dfrac{5}{12} \\)"
-        ],
-        "hint": "LCD of 8 and 3 is 24.",
-        "explanation": "\\( \\dfrac{21}{24} - \\dfrac{16}{24} = \\dfrac{5}{24} \\)."
-      },
-      "ar": {
-        "question": "ما ناتج \\( \\dfrac{7}{8} - \\dfrac{2}{3} \\)؟",
-        "options": [
-          "\\( \\dfrac{5}{24} \\)",
-          "\\( \\dfrac{7}{24} \\)",
-          "\\( \\dfrac{5}{8} \\)",
-          "\\( \\dfrac{5}{12} \\)"
-        ],
-        "hint": "م.م.أ(8,3) = 24.",
-        "explanation": "\\( \\dfrac{21}{24} - \\dfrac{16}{24} = \\dfrac{5}{24} \\)."
-      }
-    },
-    "correct_index": "0",
-    "original_difficulty": "hard"
-  },
-  {
     "id": "NAFES-6-184",
     "track": "nafes",
     "level": "Grade 6",
@@ -19072,74 +17032,6 @@
     },
     "correct_index": "1",
     "original_difficulty": "hard"
-  },
-  {
-    "id": "NAFES-6-192",
-    "track": "nafes",
-    "level": "Grade 6",
-    "topic": "Algebra",
-    "type": "MCQ",
-    "difficulty": "Medium",
-    "content": {
-      "en": {
-        "question": "Solve: \\( \\dfrac{x}{3} + 4 = 10 \\).",
-        "options": [
-          "\\( 12 \\)",
-          "\\( 15 \\)",
-          "\\( 18 \\)",
-          "\\( 21 \\)"
-        ],
-        "hint": "Subtract 4, then multiply by 3.",
-        "explanation": "\\( \\dfrac{x}{3} = 6 \\Rightarrow x = 18 \\)."
-      },
-      "ar": {
-        "question": "حلّ: \\( \\dfrac{x}{3} + 4 = 10 \\).",
-        "options": [
-          "\\( 12 \\)",
-          "\\( 15 \\)",
-          "\\( 18 \\)",
-          "\\( 21 \\)"
-        ],
-        "hint": "اطرح 4 ثم اضرب في 3.",
-        "explanation": "\\( x = 18 \\)."
-      }
-    },
-    "correct_index": "2",
-    "original_difficulty": "medium"
-  },
-  {
-    "id": "NAFES-6-193",
-    "track": "nafes",
-    "level": "Grade 6",
-    "topic": "Fractions",
-    "type": "MCQ",
-    "difficulty": "Medium",
-    "content": {
-      "en": {
-        "question": "What is \\( \\dfrac{5}{9} + \\dfrac{4}{9} \\)?",
-        "options": [
-          "\\( 1 \\)",
-          "\\( \\dfrac{9}{9} \\)",
-          "\\( \\dfrac{10}{9} \\)",
-          "Both A and B"
-        ],
-        "hint": "Same denominator: add numerators.",
-        "explanation": "\\( \\dfrac{5+4}{9} = \\dfrac{9}{9} = 1 \\). A and B are the same."
-      },
-      "ar": {
-        "question": "ما ناتج \\( \\dfrac{5}{9} + \\dfrac{4}{9} \\)؟",
-        "options": [
-          "\\( 1 \\)",
-          "\\( \\dfrac{9}{9} \\)",
-          "\\( \\dfrac{10}{9} \\)",
-          "كلاهما A و B"
-        ],
-        "hint": "نفس المقام: اجمع البسطين.",
-        "explanation": "\\( \\dfrac{9}{9} = 1 \\)."
-      }
-    },
-    "correct_index": "3",
-    "original_difficulty": "medium"
   },
   {
     "id": "NAFES-6-194",
@@ -19516,40 +17408,6 @@
     "original_difficulty": "hard"
   },
   {
-    "id": "NAFES-6-205",
-    "track": "nafes",
-    "level": "Grade 6",
-    "topic": "Integers",
-    "type": "MCQ",
-    "difficulty": "Medium",
-    "content": {
-      "en": {
-        "question": "What is \\( 15 - (-9) \\)?",
-        "options": [
-          "\\( 6 \\)",
-          "\\( -6 \\)",
-          "\\( 24 \\)",
-          "\\( -24 \\)"
-        ],
-        "hint": "Subtracting a negative = adding.",
-        "explanation": "\\( 15 - (-9) = 15 + 9 = 24 \\)."
-      },
-      "ar": {
-        "question": "ما ناتج \\( 15 - (-9) \\)؟",
-        "options": [
-          "\\( 6 \\)",
-          "\\( -6 \\)",
-          "\\( 24 \\)",
-          "\\( -24 \\)"
-        ],
-        "hint": "طرح سالب = جمع.",
-        "explanation": "\\( 15 + 9 = 24 \\)."
-      }
-    },
-    "correct_index": "2",
-    "original_difficulty": "medium"
-  },
-  {
     "id": "NAFES-6-207",
     "track": "nafes",
     "level": "Grade 6",
@@ -19652,74 +17510,6 @@
     "original_difficulty": "hard"
   },
   {
-    "id": "NAFES-6-211",
-    "track": "nafes",
-    "level": "Grade 6",
-    "topic": "Algebra",
-    "type": "MCQ",
-    "difficulty": "Hard",
-    "content": {
-      "en": {
-        "question": "Simplify: \\( \\dfrac{3x^2 \\times 4x^3}{6x} \\).",
-        "options": [
-          "\\( 2x^4 \\)",
-          "\\( 12x^4 \\)",
-          "\\( 2x^5 \\)",
-          "\\( 12x^5 \\)"
-        ],
-        "hint": "Multiply numerators, then divide: \\( \\dfrac{12x^5}{6x} \\).",
-        "explanation": "\\( \\dfrac{12x^5}{6x} = 2x^4 \\)."
-      },
-      "ar": {
-        "question": "بسّط: \\( \\dfrac{3x^2 \\times 4x^3}{6x} \\).",
-        "options": [
-          "\\( 2x^4 \\)",
-          "\\( 12x^4 \\)",
-          "\\( 2x^5 \\)",
-          "\\( 12x^5 \\)"
-        ],
-        "hint": "اضرب البسط ثم اقسم.",
-        "explanation": "\\( 2x^4 \\)."
-      }
-    },
-    "correct_index": "0",
-    "original_difficulty": "hard"
-  },
-  {
-    "id": "NAFES-6-212",
-    "track": "nafes",
-    "level": "Grade 6",
-    "topic": "Decimals",
-    "type": "MCQ",
-    "difficulty": "Hard",
-    "content": {
-      "en": {
-        "question": "What is \\( 3.75 + 0.125 - 1.5 \\)?",
-        "options": [
-          "\\( 2.375 \\)",
-          "\\( 2.25 \\)",
-          "\\( 3.25 \\)",
-          "\\( 2.5 \\)"
-        ],
-        "hint": "Work step by step.",
-        "explanation": "\\( 3.75 + 0.125 = 3.875 \\). \\( 3.875 - 1.5 = 2.375 \\)."
-      },
-      "ar": {
-        "question": "ما ناتج \\( 3.75 + 0.125 - 1.5 \\)؟",
-        "options": [
-          "\\( 2.375 \\)",
-          "\\( 2.25 \\)",
-          "\\( 3.25 \\)",
-          "\\( 2.5 \\)"
-        ],
-        "hint": "اعمل خطوةً بخطوة.",
-        "explanation": "\\( 2.375 \\)."
-      }
-    },
-    "correct_index": "0",
-    "original_difficulty": "hard"
-  },
-  {
     "id": "NAFES-6-213",
     "track": "nafes",
     "level": "Grade 6",
@@ -19785,108 +17575,6 @@
       }
     },
     "correct_index": "2",
-    "original_difficulty": "hard"
-  },
-  {
-    "id": "NAFES-6-215",
-    "track": "nafes",
-    "level": "Grade 6",
-    "topic": "Fractions",
-    "type": "MCQ",
-    "difficulty": "Hard",
-    "content": {
-      "en": {
-        "question": "What is \\( 1 - \\dfrac{1}{2} - \\dfrac{1}{4} - \\dfrac{1}{8} \\)?",
-        "options": [
-          "\\( \\dfrac{1}{8} \\)",
-          "\\( \\dfrac{3}{8} \\)",
-          "\\( \\dfrac{1}{4} \\)",
-          "\\( \\dfrac{1}{16} \\)"
-        ],
-        "hint": "Use 8 as LCD.",
-        "explanation": "\\( \\dfrac{8-4-2-1}{8} = \\dfrac{1}{8} \\)."
-      },
-      "ar": {
-        "question": "ما ناتج \\( 1 - \\dfrac{1}{2} - \\dfrac{1}{4} - \\dfrac{1}{8} \\)؟",
-        "options": [
-          "\\( \\dfrac{1}{8} \\)",
-          "\\( \\dfrac{3}{8} \\)",
-          "\\( \\dfrac{1}{4} \\)",
-          "\\( \\dfrac{1}{16} \\)"
-        ],
-        "hint": "استخدم 8 كمقام مشترك.",
-        "explanation": "\\( \\dfrac{8-4-2-1}{8} = \\dfrac{1}{8} \\)."
-      }
-    },
-    "correct_index": "0",
-    "original_difficulty": "hard"
-  },
-  {
-    "id": "NAFES-9-151",
-    "track": "nafes",
-    "level": "Grade 9",
-    "topic": "Algebra",
-    "type": "MCQ",
-    "difficulty": "Hard",
-    "content": {
-      "en": {
-        "question": "If \\( \\log_{10} 2 \\approx 0.301 \\), what is \\( \\log_{10} 8 \\)?",
-        "options": [
-          "\\( 0.602 \\)",
-          "\\( 0.699 \\)",
-          "\\( 0.903 \\)",
-          "\\( 0.799 \\)"
-        ],
-        "hint": "\\( 8 = 2^3 \\), so \\( \\log_{10} 8 = 3 \\log_{10} 2 \\).",
-        "explanation": "\\( 3 \\times 0.301 = 0.903 \\)."
-      },
-      "ar": {
-        "question": "إذا كان \\( \\log_{10} 2 \\approx 0.301 \\)، فما \\( \\log_{10} 8 \\)؟",
-        "options": [
-          "\\( 0.602 \\)",
-          "\\( 0.699 \\)",
-          "\\( 0.903 \\)",
-          "\\( 0.799 \\)"
-        ],
-        "hint": "\\( 8 = 2^3 \\)، إذن \\( \\log_{10} 8 = 3 \\log_{10} 2 \\).",
-        "explanation": "\\( 3 \\times 0.301 = 0.903 \\)."
-      }
-    },
-    "correct_index": "2",
-    "original_difficulty": "hard"
-  },
-  {
-    "id": "NAFES-9-152",
-    "track": "nafes",
-    "level": "Grade 9",
-    "topic": "Trigonometry",
-    "type": "MCQ",
-    "difficulty": "Hard",
-    "content": {
-      "en": {
-        "question": "What is \\( \\tan(45°) \\)?",
-        "options": [
-          "\\( 0 \\)",
-          "\\( 1 \\)",
-          "\\( \\sqrt{2} \\)",
-          "\\( \\dfrac{1}{\\sqrt{2}} \\)"
-        ],
-        "hint": "\\( \\tan(45°) = \\dfrac{\\sin 45°}{\\cos 45°} \\).",
-        "explanation": "\\( \\tan(45°) = 1 \\)."
-      },
-      "ar": {
-        "question": "ما قيمة \\( \\tan(45°) \\)؟",
-        "options": [
-          "\\( 0 \\)",
-          "\\( 1 \\)",
-          "\\( \\sqrt{2} \\)",
-          "\\( \\dfrac{1}{\\sqrt{2}} \\)"
-        ],
-        "hint": "\\( \\tan(45°) = \\dfrac{\\sin 45°}{\\cos 45°} \\).",
-        "explanation": "\\( \\tan(45°) = 1 \\)."
-      }
-    },
-    "correct_index": "1",
     "original_difficulty": "hard"
   },
   {
@@ -20020,40 +17708,6 @@
         ],
         "hint": "اضرب البسط والمقام في \\( \\sqrt{3} \\).",
         "explanation": "\\( \\dfrac{\\sqrt{3}}{3} \\)."
-      }
-    },
-    "correct_index": "0",
-    "original_difficulty": "hard"
-  },
-  {
-    "id": "NAFES-9-157",
-    "track": "nafes",
-    "level": "Grade 9",
-    "topic": "Systems of Equations",
-    "type": "MCQ",
-    "difficulty": "Hard",
-    "content": {
-      "en": {
-        "question": "Solve: \\( 3x - 2y = 8 \\) and \\( x + y = 6 \\).",
-        "options": [
-          "\\( x=4, y=2 \\)",
-          "\\( x=5, y=1 \\)",
-          "\\( x=3, y=3 \\)",
-          "\\( x=4, y=4 \\)"
-        ],
-        "hint": "From eq2: \\( x=6-y \\). Substitute into eq1.",
-        "explanation": "\\( 3(6-y)-2y=8 \\Rightarrow 18-5y=8 \\Rightarrow y=2, x=4 \\)."
-      },
-      "ar": {
-        "question": "حلّ: \\( 3x - 2y = 8 \\) و\\( x + y = 6 \\).",
-        "options": [
-          "\\( x=4, y=2 \\)",
-          "\\( x=5, y=1 \\)",
-          "\\( x=3, y=3 \\)",
-          "\\( x=4, y=4 \\)"
-        ],
-        "hint": "من المعادلة الثانية: \\( x=6-y \\). عوّض.",
-        "explanation": "\\( y=2, x=4 \\)."
       }
     },
     "correct_index": "0",
@@ -20196,40 +17850,6 @@
     "original_difficulty": "hard"
   },
   {
-    "id": "NAFES-9-162",
-    "track": "nafes",
-    "level": "Grade 9",
-    "topic": "Algebra",
-    "type": "MCQ",
-    "difficulty": "Hard",
-    "content": {
-      "en": {
-        "question": "Simplify: \\( \\sqrt{48} \\).",
-        "options": [
-          "\\( 4\\sqrt{3} \\)",
-          "\\( 6\\sqrt{2} \\)",
-          "\\( 3\\sqrt{4} \\)",
-          "\\( 2\\sqrt{12} \\)"
-        ],
-        "hint": "\\( 48 = 16 \\times 3 \\).",
-        "explanation": "\\( \\sqrt{48} = \\sqrt{16 \\times 3} = 4\\sqrt{3} \\)."
-      },
-      "ar": {
-        "question": "بسّط: \\( \\sqrt{48} \\).",
-        "options": [
-          "\\( 4\\sqrt{3} \\)",
-          "\\( 6\\sqrt{2} \\)",
-          "\\( 3\\sqrt{4} \\)",
-          "\\( 2\\sqrt{12} \\)"
-        ],
-        "hint": "\\( 48 = 16 \\times 3 \\).",
-        "explanation": "\\( \\sqrt{48} = 4\\sqrt{3} \\)."
-      }
-    },
-    "correct_index": "0",
-    "original_difficulty": "hard"
-  },
-  {
     "id": "NAFES-9-163",
     "track": "nafes",
     "level": "Grade 9",
@@ -20326,40 +17946,6 @@
         ],
         "hint": "التعبير تحت الجذر يجب أن يكون \\( \\geq 0 \\).",
         "explanation": "\\( x \\geq 4 \\)."
-      }
-    },
-    "correct_index": "1",
-    "original_difficulty": "hard"
-  },
-  {
-    "id": "NAFES-9-166",
-    "track": "nafes",
-    "level": "Grade 9",
-    "topic": "Algebra",
-    "type": "MCQ",
-    "difficulty": "Hard",
-    "content": {
-      "en": {
-        "question": "If \\( a + b = 7 \\) and \\( ab = 12 \\), what is \\( a^2 + b^2 \\)?",
-        "options": [
-          "\\( 23 \\)",
-          "\\( 25 \\)",
-          "\\( 27 \\)",
-          "\\( 49 \\)"
-        ],
-        "hint": "\\( a^2+b^2 = (a+b)^2 - 2ab \\).",
-        "explanation": "\\( 49 - 24 = 25 \\)."
-      },
-      "ar": {
-        "question": "إذا \\( a + b = 7 \\) و\\( ab = 12 \\)، فما \\( a^2 + b^2 \\)؟",
-        "options": [
-          "\\( 23 \\)",
-          "\\( 25 \\)",
-          "\\( 27 \\)",
-          "\\( 49 \\)"
-        ],
-        "hint": "\\( a^2+b^2 = (a+b)^2 - 2ab \\).",
-        "explanation": "\\( 49 - 24 = 25 \\)."
       }
     },
     "correct_index": "1",
@@ -20468,40 +18054,6 @@
     "original_difficulty": "hard"
   },
   {
-    "id": "NAFES-9-170",
-    "track": "nafes",
-    "level": "Grade 9",
-    "topic": "Algebra",
-    "type": "MCQ",
-    "difficulty": "Hard",
-    "content": {
-      "en": {
-        "question": "Solve: \\( \\sqrt{x+5} = 4 \\).",
-        "options": [
-          "\\( x=9 \\)",
-          "\\( x=11 \\)",
-          "\\( x=16 \\)",
-          "\\( x=21 \\)"
-        ],
-        "hint": "Square both sides.",
-        "explanation": "\\( x+5=16 \\Rightarrow x=11 \\)."
-      },
-      "ar": {
-        "question": "حلّ: \\( \\sqrt{x+5} = 4 \\).",
-        "options": [
-          "\\( x=9 \\)",
-          "\\( x=11 \\)",
-          "\\( x=16 \\)",
-          "\\( x=21 \\)"
-        ],
-        "hint": "ارفع الطرفين للقوة 2.",
-        "explanation": "\\( x+5=16 \\Rightarrow x=11 \\)."
-      }
-    },
-    "correct_index": "1",
-    "original_difficulty": "hard"
-  },
-  {
     "id": "NAFES-9-171",
     "track": "nafes",
     "level": "Grade 9",
@@ -20598,74 +18150,6 @@
         ],
         "hint": "إذا كانا متنافيين: P(A أو B) = P(A)+P(B).",
         "explanation": "P(A)+P(B) = 0.9 ≠ 0.7. إذن ليسا متنافيين."
-      }
-    },
-    "correct_index": "1",
-    "original_difficulty": "hard"
-  },
-  {
-    "id": "NAFES-9-174",
-    "track": "nafes",
-    "level": "Grade 9",
-    "topic": "Functions",
-    "type": "MCQ",
-    "difficulty": "Hard",
-    "content": {
-      "en": {
-        "question": "If \\( f(x) = \\dfrac{1}{x} \\), what is \\( f(f(2)) \\)?",
-        "options": [
-          "\\( \\dfrac{1}{2} \\)",
-          "\\( 2 \\)",
-          "\\( \\dfrac{1}{4} \\)",
-          "\\( 4 \\)"
-        ],
-        "hint": "First find \\( f(2) \\), then apply f again.",
-        "explanation": "\\( f(2) = \\dfrac{1}{2} \\). \\( f(\\dfrac{1}{2}) = 2 \\)."
-      },
-      "ar": {
-        "question": "إذا \\( f(x) = \\dfrac{1}{x} \\)، فما \\( f(f(2)) \\)؟",
-        "options": [
-          "\\( \\dfrac{1}{2} \\)",
-          "\\( 2 \\)",
-          "\\( \\dfrac{1}{4} \\)",
-          "\\( 4 \\)"
-        ],
-        "hint": "أوجد \\( f(2) \\) أولاً ثم طبّق f مجدداً.",
-        "explanation": "\\( f(2)=\\dfrac{1}{2} \\). \\( f(\\dfrac{1}{2})=2 \\)."
-      }
-    },
-    "correct_index": "1",
-    "original_difficulty": "hard"
-  },
-  {
-    "id": "NAFES-9-175",
-    "track": "nafes",
-    "level": "Grade 9",
-    "topic": "Algebra",
-    "type": "MCQ",
-    "difficulty": "Hard",
-    "content": {
-      "en": {
-        "question": "Solve: \\( 4^x = 64 \\).",
-        "options": [
-          "\\( x=2 \\)",
-          "\\( x=3 \\)",
-          "\\( x=4 \\)",
-          "\\( x=6 \\)"
-        ],
-        "hint": "Express 64 as a power of 4.",
-        "explanation": "\\( 64 = 4^3 \\). So \\( x=3 \\)."
-      },
-      "ar": {
-        "question": "حلّ: \\( 4^x = 64 \\).",
-        "options": [
-          "\\( x=2 \\)",
-          "\\( x=3 \\)",
-          "\\( x=4 \\)",
-          "\\( x=6 \\)"
-        ],
-        "hint": "عبّر عن 64 كقوة للعدد 4.",
-        "explanation": "\\( 64 = 4^3 \\Rightarrow x=3 \\)."
       }
     },
     "correct_index": "1",
@@ -20808,74 +18292,6 @@
     "original_difficulty": "hard"
   },
   {
-    "id": "NAFES-9-180",
-    "track": "nafes",
-    "level": "Grade 9",
-    "topic": "Algebra",
-    "type": "MCQ",
-    "difficulty": "Hard",
-    "content": {
-      "en": {
-        "question": "Simplify: \\( \\dfrac{2^5 \\times 2^3}{2^6} \\).",
-        "options": [
-          "\\( 4 \\)",
-          "\\( 8 \\)",
-          "\\( 16 \\)",
-          "\\( 32 \\)"
-        ],
-        "hint": "Add exponents in numerator, subtract denominator exponent.",
-        "explanation": "\\( 2^{5+3-6} = 2^2 = 4 \\)."
-      },
-      "ar": {
-        "question": "بسّط: \\( \\dfrac{2^5 \\times 2^3}{2^6} \\).",
-        "options": [
-          "\\( 4 \\)",
-          "\\( 8 \\)",
-          "\\( 16 \\)",
-          "\\( 32 \\)"
-        ],
-        "hint": "اجمع أسس البسط واطرح أس المقام.",
-        "explanation": "\\( 2^{5+3-6} = 2^2 = 4 \\)."
-      }
-    },
-    "correct_index": "0",
-    "original_difficulty": "hard"
-  },
-  {
-    "id": "NAFES-9-181",
-    "track": "nafes",
-    "level": "Grade 9",
-    "topic": "Functions",
-    "type": "MCQ",
-    "difficulty": "Hard",
-    "content": {
-      "en": {
-        "question": "If \\( h(x) = x^3 - x \\), what is \\( h(-2) \\)?",
-        "options": [
-          "\\( -6 \\)",
-          "\\( -4 \\)",
-          "\\( 4 \\)",
-          "\\( 6 \\)"
-        ],
-        "hint": "Substitute \\( x=-2 \\).",
-        "explanation": "\\( (-2)^3 - (-2) = -8 + 2 = -6 \\)."
-      },
-      "ar": {
-        "question": "إذا \\( h(x) = x^3 - x \\)، فما \\( h(-2) \\)؟",
-        "options": [
-          "\\( -6 \\)",
-          "\\( -4 \\)",
-          "\\( 4 \\)",
-          "\\( 6 \\)"
-        ],
-        "hint": "عوّض \\( x=-2 \\).",
-        "explanation": "\\( -8 + 2 = -6 \\)."
-      }
-    },
-    "correct_index": "0",
-    "original_difficulty": "hard"
-  },
-  {
     "id": "NAFES-9-182",
     "track": "nafes",
     "level": "Grade 9",
@@ -20907,40 +18323,6 @@
       }
     },
     "correct_index": "1",
-    "original_difficulty": "hard"
-  },
-  {
-    "id": "NAFES-9-183",
-    "track": "nafes",
-    "level": "Grade 9",
-    "topic": "Algebra",
-    "type": "MCQ",
-    "difficulty": "Hard",
-    "content": {
-      "en": {
-        "question": "If \\( x^2 = 9 \\) and \\( x < 0 \\), what is \\( x^3 \\)?",
-        "options": [
-          "\\( -27 \\)",
-          "\\( 27 \\)",
-          "\\( -9 \\)",
-          "\\( 9 \\)"
-        ],
-        "hint": "From \\( x^2=9 \\) and \\( x<0 \\): \\( x=-3 \\).",
-        "explanation": "\\( (-3)^3 = -27 \\)."
-      },
-      "ar": {
-        "question": "إذا \\( x^2 = 9 \\) و\\( x < 0 \\)، فما \\( x^3 \\)؟",
-        "options": [
-          "\\( -27 \\)",
-          "\\( 27 \\)",
-          "\\( -9 \\)",
-          "\\( 9 \\)"
-        ],
-        "hint": "\\( x=-3 \\).",
-        "explanation": "\\( (-3)^3 = -27 \\)."
-      }
-    },
-    "correct_index": "0",
     "original_difficulty": "hard"
   },
   {
@@ -21046,40 +18428,6 @@
     "original_difficulty": "hard"
   },
   {
-    "id": "NAFES-9-187",
-    "track": "nafes",
-    "level": "Grade 9",
-    "topic": "Algebra",
-    "type": "MCQ",
-    "difficulty": "Hard",
-    "content": {
-      "en": {
-        "question": "Simplify: \\( (x^{-2})^3 \\).",
-        "options": [
-          "\\( x^{-6} \\)",
-          "\\( x^6 \\)",
-          "\\( x^{-5} \\)",
-          "\\( x^5 \\)"
-        ],
-        "hint": "Multiply exponents: \\( -2 \\times 3 \\).",
-        "explanation": "\\( x^{-6} \\)."
-      },
-      "ar": {
-        "question": "بسّط: \\( (x^{-2})^3 \\).",
-        "options": [
-          "\\( x^{-6} \\)",
-          "\\( x^6 \\)",
-          "\\( x^{-5} \\)",
-          "\\( x^5 \\)"
-        ],
-        "hint": "اضرب الأسس: \\( -2 \\times 3 \\).",
-        "explanation": "\\( x^{-6} \\)."
-      }
-    },
-    "correct_index": "0",
-    "original_difficulty": "hard"
-  },
-  {
     "id": "NAFES-9-188",
     "track": "nafes",
     "level": "Grade 9",
@@ -21145,40 +18493,6 @@
       }
     },
     "correct_index": "1",
-    "original_difficulty": "hard"
-  },
-  {
-    "id": "NAFES-9-190",
-    "track": "nafes",
-    "level": "Grade 9",
-    "topic": "Algebra",
-    "type": "MCQ",
-    "difficulty": "Hard",
-    "content": {
-      "en": {
-        "question": "If \\( \\log_3 81 = x \\), what is \\( x \\)?",
-        "options": [
-          "\\( 2 \\)",
-          "\\( 3 \\)",
-          "\\( 4 \\)",
-          "\\( 5 \\)"
-        ],
-        "hint": "\\( 3^x = 81 \\). Express 81 as power of 3.",
-        "explanation": "\\( 81 = 3^4 \\). So \\( x=4 \\)."
-      },
-      "ar": {
-        "question": "إذا \\( \\log_3 81 = x \\)، فما \\( x \\)؟",
-        "options": [
-          "\\( 2 \\)",
-          "\\( 3 \\)",
-          "\\( 4 \\)",
-          "\\( 5 \\)"
-        ],
-        "hint": "\\( 3^x = 81 \\).",
-        "explanation": "\\( 81=3^4 \\Rightarrow x=4 \\)."
-      }
-    },
-    "correct_index": "2",
     "original_difficulty": "hard"
   },
   {
@@ -21420,40 +18734,6 @@
     "original_difficulty": "hard"
   },
   {
-    "id": "NAFES-9-198",
-    "track": "nafes",
-    "level": "Grade 9",
-    "topic": "Algebra",
-    "type": "MCQ",
-    "difficulty": "Hard",
-    "content": {
-      "en": {
-        "question": "What is \\( \\dfrac{\\sqrt{75}}{\\sqrt{3}} \\)?",
-        "options": [
-          "\\( 5 \\)",
-          "\\( \\sqrt{25} \\)",
-          "\\( 5\\sqrt{3} \\)",
-          "Both A and B"
-        ],
-        "hint": "\\( \\sqrt{\\dfrac{75}{3}} = \\sqrt{25} = 5 \\).",
-        "explanation": "\\( \\sqrt{25} = 5 \\). Both A and B are correct."
-      },
-      "ar": {
-        "question": "ما قيمة \\( \\dfrac{\\sqrt{75}}{\\sqrt{3}} \\)؟",
-        "options": [
-          "\\( 5 \\)",
-          "\\( \\sqrt{25} \\)",
-          "\\( 5\\sqrt{3} \\)",
-          "كلاهما A و B"
-        ],
-        "hint": "\\( \\sqrt{\\dfrac{75}{3}} = \\sqrt{25} = 5 \\).",
-        "explanation": "\\( 5 \\). كلاهما A و B صحيح."
-      }
-    },
-    "correct_index": "3",
-    "original_difficulty": "hard"
-  },
-  {
     "id": "NAFES-9-199",
     "track": "nafes",
     "level": "Grade 9",
@@ -21519,40 +18799,6 @@
       }
     },
     "correct_index": "2",
-    "original_difficulty": "hard"
-  },
-  {
-    "id": "NAFES-6-216",
-    "track": "nafes",
-    "level": "Grade 6",
-    "topic": "Algebra",
-    "type": "MCQ",
-    "difficulty": "Hard",
-    "content": {
-      "en": {
-        "question": "If \\( 2^{2x} = 64 \\), what is \\( x \\)?",
-        "options": [
-          "\\( 2 \\)",
-          "\\( 3 \\)",
-          "\\( 4 \\)",
-          "\\( 6 \\)"
-        ],
-        "hint": "\\( 64 = 2^6 \\), so \\( 2x=6 \\).",
-        "explanation": "\\( 2x=6 \\Rightarrow x=3 \\)."
-      },
-      "ar": {
-        "question": "إذا \\( 2^{2x} = 64 \\)، فما \\( x \\)؟",
-        "options": [
-          "\\( 2 \\)",
-          "\\( 3 \\)",
-          "\\( 4 \\)",
-          "\\( 6 \\)"
-        ],
-        "hint": "\\( 64 = 2^6 \\)، إذن \\( 2x=6 \\).",
-        "explanation": "\\( x=3 \\)."
-      }
-    },
-    "correct_index": "1",
     "original_difficulty": "hard"
   },
   {
@@ -21794,40 +19040,6 @@
     "original_difficulty": "medium"
   },
   {
-    "id": "NAFES-6-224",
-    "track": "nafes",
-    "level": "Grade 6",
-    "topic": "Algebra",
-    "type": "MCQ",
-    "difficulty": "Medium",
-    "content": {
-      "en": {
-        "question": "What is \\( 2^3 \\times 2^4 \\)?",
-        "options": [
-          "\\( 2^7 \\)",
-          "\\( 2^{12} \\)",
-          "\\( 4^7 \\)",
-          "\\( 2^1 \\)"
-        ],
-        "hint": "When multiplying same base, add exponents.",
-        "explanation": "\\( 2^{3+4} = 2^7 \\)."
-      },
-      "ar": {
-        "question": "ما ناتج \\( 2^3 \\times 2^4 \\)؟",
-        "options": [
-          "\\( 2^7 \\)",
-          "\\( 2^{12} \\)",
-          "\\( 4^7 \\)",
-          "\\( 2^1 \\)"
-        ],
-        "hint": "عند ضرب قواعد متساوية، تُجمع الأسس.",
-        "explanation": "\\( 2^7 \\)."
-      }
-    },
-    "correct_index": "0",
-    "original_difficulty": "medium"
-  },
-  {
     "id": "NAFES-6-225",
     "track": "nafes",
     "level": "Grade 6",
@@ -21962,40 +19174,6 @@
     },
     "correct_index": "2",
     "original_difficulty": "medium"
-  },
-  {
-    "id": "NAFES-6-229",
-    "track": "nafes",
-    "level": "Grade 6",
-    "topic": "Algebra",
-    "type": "MCQ",
-    "difficulty": "Hard",
-    "content": {
-      "en": {
-        "question": "Simplify: \\( 5x - 2(3x - 4) \\).",
-        "options": [
-          "\\( -x+8 \\)",
-          "\\( 11x-8 \\)",
-          "\\( -x-8 \\)",
-          "\\( x+8 \\)"
-        ],
-        "hint": "Distribute the \\( -2 \\) first.",
-        "explanation": "\\( 5x - 6x + 8 = -x + 8 \\)."
-      },
-      "ar": {
-        "question": "بسّط: \\( 5x - 2(3x - 4) \\).",
-        "options": [
-          "\\( -x+8 \\)",
-          "\\( 11x-8 \\)",
-          "\\( -x-8 \\)",
-          "\\( x+8 \\)"
-        ],
-        "hint": "وزّع \\( -2 \\) أولاً.",
-        "explanation": "\\( 5x - 6x + 8 = -x + 8 \\)."
-      }
-    },
-    "correct_index": "0",
-    "original_difficulty": "hard"
   },
   {
     "id": "NAFES-6-230",
@@ -22165,40 +19343,6 @@
       }
     },
     "correct_index": "2",
-    "original_difficulty": "hard"
-  },
-  {
-    "id": "NAFES-6-235",
-    "track": "nafes",
-    "level": "Grade 6",
-    "topic": "Algebra",
-    "type": "MCQ",
-    "difficulty": "Hard",
-    "content": {
-      "en": {
-        "question": "If \\( x : y = 3 : 4 \\) and \\( y = 20 \\), what is \\( x \\)?",
-        "options": [
-          "\\( 12 \\)",
-          "\\( 15 \\)",
-          "\\( 16 \\)",
-          "\\( 24 \\)"
-        ],
-        "hint": "\\( \\dfrac{x}{y} = \\dfrac{3}{4} \\).",
-        "explanation": "\\( x = \\dfrac{3}{4} \\times 20 = 15 \\)."
-      },
-      "ar": {
-        "question": "إذا \\( x : y = 3 : 4 \\) و\\( y = 20 \\)، فما \\( x \\)؟",
-        "options": [
-          "\\( 12 \\)",
-          "\\( 15 \\)",
-          "\\( 16 \\)",
-          "\\( 24 \\)"
-        ],
-        "hint": "\\( x = \\dfrac{3}{4} \\times 20 \\).",
-        "explanation": "\\( x = 15 \\)."
-      }
-    },
-    "correct_index": "1",
     "original_difficulty": "hard"
   },
   {
@@ -22474,40 +19618,6 @@
     "original_difficulty": "hard"
   },
   {
-    "id": "NAFES-6-244",
-    "track": "nafes",
-    "level": "Grade 6",
-    "topic": "Ratio",
-    "type": "MCQ",
-    "difficulty": "Hard",
-    "content": {
-      "en": {
-        "question": "If \\( \\dfrac{3}{x} = \\dfrac{9}{21} \\), what is \\( x \\)?",
-        "options": [
-          "\\( 3 \\)",
-          "\\( 5 \\)",
-          "\\( 7 \\)",
-          "\\( 9 \\)"
-        ],
-        "hint": "Cross multiply: \\( 3 \\times 21 = 9 \\times x \\).",
-        "explanation": "\\( 63 = 9x \\Rightarrow x = 7 \\)."
-      },
-      "ar": {
-        "question": "إذا \\( \\dfrac{3}{x} = \\dfrac{9}{21} \\)، فما \\( x \\)؟",
-        "options": [
-          "\\( 3 \\)",
-          "\\( 5 \\)",
-          "\\( 7 \\)",
-          "\\( 9 \\)"
-        ],
-        "hint": "ضرب تبادلي: \\( 3 \\times 21 = 9x \\).",
-        "explanation": "\\( x = 7 \\)."
-      }
-    },
-    "correct_index": "2",
-    "original_difficulty": "hard"
-  },
-  {
     "id": "NAFES-6-245",
     "track": "nafes",
     "level": "Grade 6",
@@ -22712,40 +19822,6 @@
     "original_difficulty": "hard"
   },
   {
-    "id": "NAFES-9-201",
-    "track": "nafes",
-    "level": "Grade 9",
-    "topic": "Algebra",
-    "type": "MCQ",
-    "difficulty": "Hard",
-    "content": {
-      "en": {
-        "question": "Simplify: \\( \\dfrac{x^2+5x+6}{x+2} \\).",
-        "options": [
-          "\\( x+3 \\)",
-          "\\( x+2 \\)",
-          "\\( x-3 \\)",
-          "\\( x+6 \\)"
-        ],
-        "hint": "Factorise numerator: \\( (x+2)(x+3) \\).",
-        "explanation": "\\( \\dfrac{(x+2)(x+3)}{x+2} = x+3 \\)."
-      },
-      "ar": {
-        "question": "بسّط: \\( \\dfrac{x^2+5x+6}{x+2} \\).",
-        "options": [
-          "\\( x+3 \\)",
-          "\\( x+2 \\)",
-          "\\( x-3 \\)",
-          "\\( x+6 \\)"
-        ],
-        "hint": "حلّل البسط.",
-        "explanation": "\\( x+3 \\)."
-      }
-    },
-    "correct_index": "0",
-    "original_difficulty": "hard"
-  },
-  {
     "id": "NAFES-9-202",
     "track": "nafes",
     "level": "Grade 9",
@@ -22845,40 +19921,6 @@
       }
     },
     "correct_index": "2",
-    "original_difficulty": "hard"
-  },
-  {
-    "id": "NAFES-9-205",
-    "track": "nafes",
-    "level": "Grade 9",
-    "topic": "Algebra",
-    "type": "MCQ",
-    "difficulty": "Hard",
-    "content": {
-      "en": {
-        "question": "Expand: \\( (x-3)(x+3)(x^2+9) \\).",
-        "options": [
-          "\\( x^4-81 \\)",
-          "\\( x^4-9 \\)",
-          "\\( x^4+81 \\)",
-          "\\( x^4-9x^2 \\)"
-        ],
-        "hint": "First: \\( (x-3)(x+3) = x^2-9 \\). Then \\( (x^2-9)(x^2+9) \\).",
-        "explanation": "\\( x^4-81 \\)."
-      },
-      "ar": {
-        "question": "وسّع: \\( (x-3)(x+3)(x^2+9) \\).",
-        "options": [
-          "\\( x^4-81 \\)",
-          "\\( x^4-9 \\)",
-          "\\( x^4+81 \\)",
-          "\\( x^4-9x^2 \\)"
-        ],
-        "hint": "أولاً: \\( x^2-9 \\). ثم \\( (x^2-9)(x^2+9) \\).",
-        "explanation": "\\( x^4-81 \\)."
-      }
-    },
-    "correct_index": "0",
     "original_difficulty": "hard"
   },
   {
@@ -23086,40 +20128,6 @@
     "original_difficulty": "hard"
   },
   {
-    "id": "NAFES-9-212",
-    "track": "nafes",
-    "level": "Grade 9",
-    "topic": "Systems of Equations",
-    "type": "MCQ",
-    "difficulty": "Hard",
-    "content": {
-      "en": {
-        "question": "Solve: \\( x + 2y = 10 \\) and \\( 2x - y = 5 \\).",
-        "options": [
-          "\\( x=4, y=3 \\)",
-          "\\( x=3, y=4 \\)",
-          "\\( x=4, y=4 \\)",
-          "\\( x=5, y=3 \\)"
-        ],
-        "hint": "From eq1: \\( x = 10-2y \\). Substitute.",
-        "explanation": "\\( 2(10-2y)-y=5 \\Rightarrow 20-5y=5 \\Rightarrow y=3 \\), \\( x=4 \\)."
-      },
-      "ar": {
-        "question": "حلّ: \\( x + 2y = 10 \\) و\\( 2x - y = 5 \\).",
-        "options": [
-          "\\( x=4, y=3 \\)",
-          "\\( x=3, y=4 \\)",
-          "\\( x=4, y=4 \\)",
-          "\\( x=5, y=3 \\)"
-        ],
-        "hint": "من المعادلة الأولى: \\( x = 10-2y \\).",
-        "explanation": "\\( y=3 \\), \\( x=4 \\)."
-      }
-    },
-    "correct_index": "0",
-    "original_difficulty": "hard"
-  },
-  {
     "id": "NAFES-9-213",
     "track": "nafes",
     "level": "Grade 9",
@@ -23324,74 +20332,6 @@
     "original_difficulty": "hard"
   },
   {
-    "id": "NAFES-9-219",
-    "track": "nafes",
-    "level": "Grade 9",
-    "topic": "Algebra",
-    "type": "MCQ",
-    "difficulty": "Hard",
-    "content": {
-      "en": {
-        "question": "Solve: \\( 9^x = 27 \\).",
-        "options": [
-          "\\( x = \\dfrac{2}{3} \\)",
-          "\\( x = \\dfrac{3}{2} \\)",
-          "\\( x = 3 \\)",
-          "\\( x = 2 \\)"
-        ],
-        "hint": "Express both as powers of 3: \\( 3^{2x} = 3^3 \\).",
-        "explanation": "\\( 2x=3 \\Rightarrow x = \\dfrac{3}{2} \\)."
-      },
-      "ar": {
-        "question": "حلّ: \\( 9^x = 27 \\).",
-        "options": [
-          "\\( x = \\dfrac{2}{3} \\)",
-          "\\( x = \\dfrac{3}{2} \\)",
-          "\\( x = 3 \\)",
-          "\\( x = 2 \\)"
-        ],
-        "hint": "عبّر كلاهما بقوى 3.",
-        "explanation": "\\( 2x=3 \\Rightarrow x = \\dfrac{3}{2} \\)."
-      }
-    },
-    "correct_index": "1",
-    "original_difficulty": "hard"
-  },
-  {
-    "id": "NAFES-9-220",
-    "track": "nafes",
-    "level": "Grade 9",
-    "topic": "Functions",
-    "type": "MCQ",
-    "difficulty": "Hard",
-    "content": {
-      "en": {
-        "question": "If \\( f(x) = 2x+1 \\) and \\( g(x) = x^2 \\), what is \\( g(f(2)) \\)?",
-        "options": [
-          "\\( 10 \\)",
-          "\\( 25 \\)",
-          "\\( 20 \\)",
-          "\\( 9 \\)"
-        ],
-        "hint": "Find \\( f(2) \\) first, then apply \\( g \\).",
-        "explanation": "\\( f(2)=5 \\). \\( g(5)=25 \\)."
-      },
-      "ar": {
-        "question": "إذا \\( f(x) = 2x+1 \\) و\\( g(x) = x^2 \\)، فما \\( g(f(2)) \\)؟",
-        "options": [
-          "\\( 10 \\)",
-          "\\( 25 \\)",
-          "\\( 20 \\)",
-          "\\( 9 \\)"
-        ],
-        "hint": "أوجد \\( f(2) \\) أولاً.",
-        "explanation": "\\( f(2)=5 \\). \\( g(5)=25 \\)."
-      }
-    },
-    "correct_index": "1",
-    "original_difficulty": "hard"
-  },
-  {
     "id": "NAFES-9-221",
     "track": "nafes",
     "level": "Grade 9",
@@ -23457,40 +20397,6 @@
       }
     },
     "correct_index": "2",
-    "original_difficulty": "hard"
-  },
-  {
-    "id": "NAFES-9-223",
-    "track": "nafes",
-    "level": "Grade 9",
-    "topic": "Algebra",
-    "type": "MCQ",
-    "difficulty": "Hard",
-    "content": {
-      "en": {
-        "question": "Solve: \\( \\log_2(x+1) = 3 \\).",
-        "options": [
-          "\\( x=6 \\)",
-          "\\( x=7 \\)",
-          "\\( x=8 \\)",
-          "\\( x=9 \\)"
-        ],
-        "hint": "\\( x+1 = 2^3 \\).",
-        "explanation": "\\( x+1=8 \\Rightarrow x=7 \\)."
-      },
-      "ar": {
-        "question": "حلّ: \\( \\log_2(x+1) = 3 \\).",
-        "options": [
-          "\\( x=6 \\)",
-          "\\( x=7 \\)",
-          "\\( x=8 \\)",
-          "\\( x=9 \\)"
-        ],
-        "hint": "\\( x+1 = 2^3 \\).",
-        "explanation": "\\( x=7 \\)."
-      }
-    },
-    "correct_index": "1",
     "original_difficulty": "hard"
   },
   {
@@ -23664,40 +20570,6 @@
     "original_difficulty": "hard"
   },
   {
-    "id": "NAFES-9-229",
-    "track": "nafes",
-    "level": "Grade 9",
-    "topic": "Algebra",
-    "type": "MCQ",
-    "difficulty": "Hard",
-    "content": {
-      "en": {
-        "question": "Solve: \\( 2^{x+1} = 32 \\).",
-        "options": [
-          "\\( x=3 \\)",
-          "\\( x=4 \\)",
-          "\\( x=5 \\)",
-          "\\( x=6 \\)"
-        ],
-        "hint": "\\( 32 = 2^5 \\). So \\( x+1=5 \\).",
-        "explanation": "\\( x=4 \\)."
-      },
-      "ar": {
-        "question": "حلّ: \\( 2^{x+1} = 32 \\).",
-        "options": [
-          "\\( x=3 \\)",
-          "\\( x=4 \\)",
-          "\\( x=5 \\)",
-          "\\( x=6 \\)"
-        ],
-        "hint": "\\( 32 = 2^5 \\Rightarrow x+1=5 \\).",
-        "explanation": "\\( x=4 \\)."
-      }
-    },
-    "correct_index": "1",
-    "original_difficulty": "hard"
-  },
-  {
     "id": "NAFES-9-230",
     "track": "nafes",
     "level": "Grade 9",
@@ -23834,40 +20706,6 @@
     "original_difficulty": "hard"
   },
   {
-    "id": "NAFES-9-234",
-    "track": "nafes",
-    "level": "Grade 9",
-    "topic": "Algebra",
-    "type": "MCQ",
-    "difficulty": "Hard",
-    "content": {
-      "en": {
-        "question": "What is \\( \\log_{10}(100) + \\log_{10}(10) \\)?",
-        "options": [
-          "\\( 2 \\)",
-          "\\( 3 \\)",
-          "\\( 10 \\)",
-          "\\( 20 \\)"
-        ],
-        "hint": "\\( \\log_{10}(100)=2 \\), \\( \\log_{10}(10)=1 \\).",
-        "explanation": "\\( 2+1=3 \\)."
-      },
-      "ar": {
-        "question": "ما ناتج \\( \\log_{10}(100) + \\log_{10}(10) \\)؟",
-        "options": [
-          "\\( 2 \\)",
-          "\\( 3 \\)",
-          "\\( 10 \\)",
-          "\\( 20 \\)"
-        ],
-        "hint": "\\( \\log_{10}(100)=2 \\)، \\( \\log_{10}(10)=1 \\).",
-        "explanation": "\\( 3 \\)."
-      }
-    },
-    "correct_index": "1",
-    "original_difficulty": "hard"
-  },
-  {
     "id": "NAFES-9-235",
     "track": "nafes",
     "level": "Grade 9",
@@ -23896,40 +20734,6 @@
         ],
         "hint": "\\( \\sin(\\theta) = \\dfrac{12}{13} \\).",
         "explanation": "\\( \\theta = \\sin^{-1}(\\dfrac{12}{13}) \\)."
-      }
-    },
-    "correct_index": "0",
-    "original_difficulty": "hard"
-  },
-  {
-    "id": "NAFES-9-236",
-    "track": "nafes",
-    "level": "Grade 9",
-    "topic": "Algebra",
-    "type": "MCQ",
-    "difficulty": "Hard",
-    "content": {
-      "en": {
-        "question": "Simplify: \\( \\dfrac{a^3 b^2}{a b^4} \\).",
-        "options": [
-          "\\( \\dfrac{a^2}{b^2} \\)",
-          "\\( a^2 b^2 \\)",
-          "\\( \\dfrac{a^4}{b^6} \\)",
-          "\\( \\dfrac{b^2}{a^2} \\)"
-        ],
-        "hint": "Subtract exponents for same base.",
-        "explanation": "\\( a^{3-1} \\cdot b^{2-4} = a^2 b^{-2} = \\dfrac{a^2}{b^2} \\)."
-      },
-      "ar": {
-        "question": "بسّط: \\( \\dfrac{a^3 b^2}{a b^4} \\).",
-        "options": [
-          "\\( \\dfrac{a^2}{b^2} \\)",
-          "\\( a^2 b^2 \\)",
-          "\\( \\dfrac{a^4}{b^6} \\)",
-          "\\( \\dfrac{b^2}{a^2} \\)"
-        ],
-        "hint": "اطرح الأسس للقواعد المتساوية.",
-        "explanation": "\\( \\dfrac{a^2}{b^2} \\)."
       }
     },
     "correct_index": "0",
@@ -24072,40 +20876,6 @@
     "original_difficulty": "hard"
   },
   {
-    "id": "NAFES-9-241",
-    "track": "nafes",
-    "level": "Grade 9",
-    "topic": "Algebra",
-    "type": "MCQ",
-    "difficulty": "Hard",
-    "content": {
-      "en": {
-        "question": "What is \\( (-8)^{\\frac{1}{3}} \\)?",
-        "options": [
-          "\\( 2 \\)",
-          "\\( -2 \\)",
-          "\\( 4 \\)",
-          "\\( -4 \\)"
-        ],
-        "hint": "Cube root of \\( -8 \\).",
-        "explanation": "\\( (-8)^{\\frac{1}{3}} = -2 \\) since \\( (-2)^3 = -8 \\)."
-      },
-      "ar": {
-        "question": "ما قيمة \\( (-8)^{\\frac{1}{3}} \\)؟",
-        "options": [
-          "\\( 2 \\)",
-          "\\( -2 \\)",
-          "\\( 4 \\)",
-          "\\( -4 \\)"
-        ],
-        "hint": "الجذر التكعيبي لـ\\( -8 \\).",
-        "explanation": "\\( (-2)^3 = -8 \\)."
-      }
-    },
-    "correct_index": "1",
-    "original_difficulty": "hard"
-  },
-  {
     "id": "NAFES-9-242",
     "track": "nafes",
     "level": "Grade 9",
@@ -24137,40 +20907,6 @@
       }
     },
     "correct_index": "0",
-    "original_difficulty": "hard"
-  },
-  {
-    "id": "NAFES-9-243",
-    "track": "nafes",
-    "level": "Grade 9",
-    "topic": "Algebra",
-    "type": "MCQ",
-    "difficulty": "Hard",
-    "content": {
-      "en": {
-        "question": "What is \\( \\log_a a^5 \\)?",
-        "options": [
-          "\\( 1 \\)",
-          "\\( a \\)",
-          "\\( 5 \\)",
-          "\\( 5a \\)"
-        ],
-        "hint": "\\( \\log_a a^n = n \\).",
-        "explanation": "\\( \\log_a a^5 = 5 \\)."
-      },
-      "ar": {
-        "question": "ما قيمة \\( \\log_a a^5 \\)؟",
-        "options": [
-          "\\( 1 \\)",
-          "\\( a \\)",
-          "\\( 5 \\)",
-          "\\( 5a \\)"
-        ],
-        "hint": "\\( \\log_a a^n = n \\).",
-        "explanation": "\\( 5 \\)."
-      }
-    },
-    "correct_index": "2",
     "original_difficulty": "hard"
   },
   {
@@ -24239,40 +20975,6 @@
       }
     },
     "correct_index": "3",
-    "original_difficulty": "hard"
-  },
-  {
-    "id": "NAFES-9-246",
-    "track": "nafes",
-    "level": "Grade 9",
-    "topic": "Algebra",
-    "type": "MCQ",
-    "difficulty": "Hard",
-    "content": {
-      "en": {
-        "question": "Simplify: \\( (2^3)^2 \\div 2^4 \\).",
-        "options": [
-          "\\( 4 \\)",
-          "\\( 8 \\)",
-          "\\( 16 \\)",
-          "\\( 32 \\)"
-        ],
-        "hint": "\\( (2^3)^2 = 2^6 \\). \\( 2^6 \\div 2^4 = 2^2 \\).",
-        "explanation": "\\( 2^2 = 4 \\)."
-      },
-      "ar": {
-        "question": "بسّط: \\( (2^3)^2 \\div 2^4 \\).",
-        "options": [
-          "\\( 4 \\)",
-          "\\( 8 \\)",
-          "\\( 16 \\)",
-          "\\( 32 \\)"
-        ],
-        "hint": "\\( 2^6 \\div 2^4 = 2^2 \\).",
-        "explanation": "\\( 4 \\)."
-      }
-    },
-    "correct_index": "0",
     "original_difficulty": "hard"
   },
   {
@@ -24476,72 +21178,6 @@
       }
     },
     "correct_index": "2"
-  },
-  {
-    "id": "NAFES-6-180",
-    "track": "nafes",
-    "level": "Grade 6",
-    "topic": "Algebra",
-    "type": "MCQ",
-    "difficulty": "hard",
-    "content": {
-      "en": {
-        "question": "What is the value of \\( (-2)^5 \\)?",
-        "options": [
-          "\\( 32 \\)",
-          "\\( -32 \\)",
-          "\\( 10 \\)",
-          "\\( -10 \\)"
-        ],
-        "hint": "Odd power of negative = negative.",
-        "explanation": "\\( (-2)^5 = -32 \\)."
-      },
-      "ar": {
-        "question": "ما قيمة \\( (-2)^5 \\)؟",
-        "options": [
-          "\\( 32 \\)",
-          "\\( -32 \\)",
-          "\\( 10 \\)",
-          "\\( -10 \\)"
-        ],
-        "hint": "قوة فردية لعدد سالب تعطي ناتجاً سالباً.",
-        "explanation": "\\( (-2)^5 = -32 \\)."
-      }
-    },
-    "correct_index": "1"
-  },
-  {
-    "id": "NAFES-6-206",
-    "track": "nafes",
-    "level": "Grade 6",
-    "topic": "Algebra",
-    "type": "MCQ",
-    "difficulty": "hard",
-    "content": {
-      "en": {
-        "question": "What is the value of \\( 2^3 + 3^2 - 4^1 \\)?",
-        "options": [
-          "\\( 13 \\)",
-          "\\( 14 \\)",
-          "\\( 15 \\)",
-          "\\( 17 \\)"
-        ],
-        "hint": "Calculate each power first.",
-        "explanation": "\\( 8 + 9 - 4 = 13 \\)."
-      },
-      "ar": {
-        "question": "ما قيمة \\( 2^3 + 3^2 - 4^1 \\)؟",
-        "options": [
-          "\\( 13 \\)",
-          "\\( 14 \\)",
-          "\\( 15 \\)",
-          "\\( 17 \\)"
-        ],
-        "hint": "احسب كل قوة أولاً.",
-        "explanation": "\\( 8 + 9 - 4 = 13 \\)."
-      }
-    },
-    "correct_index": "0"
   },
   {
     "id": "NAFES-6-208",

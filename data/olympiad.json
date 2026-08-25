@@ -4899,28 +4899,6 @@
     "original_difficulty": "easy"
   },
   {
-    "id": "OLYMPIAD-218",
-    "track": "olympiad",
-    "level": "High School",
-    "topic": "Algebra",
-    "type": "FRQ",
-    "difficulty": "Easy",
-    "content": {
-      "en": {
-        "question": "Find the value of \\( (\\tan 20^\\circ \\tan 40^\\circ \\tan 80^\\circ)^2 \\).",
-        "hint": "Use the trigonometric identity \\( \\tan x \\tan(60^\\circ - x) \\tan(60^\\circ + x) = \\tan 3x \\).",
-        "explanation": "Using the trigonometric identity \\( \\tan x \\tan(60^\\circ - x) \\tan(60^\\circ + x) = \\tan 3x \\) with \\( x = 20^\\circ \\), we get \\( \\tan 20^\\circ \\tan 40^\\circ \\tan 80^\\circ = \\tan 60^\\circ = \\sqrt{3} \\). Squaring both sides yields \\( (\\sqrt{3})^2 = 3 \\)."
-      },
-      "ar": {
-        "question": "أوجد قيمة \\( (\\tan 20^\\circ \\tan 40^\\circ \\tan 80^\\circ)^2 \\).",
-        "hint": "استخدم المتطابقة المثلثية \\( \\tan x \\tan(60^\\circ - x) \\tan(60^\\circ + x) = \\tan 3x \\).",
-        "explanation": "باستخدام المتطابقة المثلثية مع \\( x = 20^\\circ \\)، نحصل على \\( \\tan 20^\\circ \\tan 40^\\circ \\tan 80^\\circ = \\tan 60^\\circ = \\sqrt{3} \\). برفع الناتج للقوة الثانية نحصل على \\( (\\sqrt{3})^2 = 3 \\)."
-      }
-    },
-    "correct_index": "3",
-    "original_difficulty": "easy"
-  },
-  {
     "id": "OLYMPIAD-219",
     "track": "olympiad",
     "level": "High School",

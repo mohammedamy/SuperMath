@@ -7416,42 +7416,6 @@
     "original_difficulty": "hard"
   },
   {
-    "id": "KANGAROO-207",
-    "track": "kangaroo",
-    "level": "Cadet",
-    "topic": "Algebra",
-    "type": "MCQ",
-    "difficulty": "Medium",
-    "content": {
-      "en": {
-        "question": "If \\( a + b + c = 0 \\) and \\( a^2 + b^2 + c^2 = 12 \\), what is the value of \\( a^4 + b^4 + c^4 \\)?",
-        "options": [
-          "\\( 36 \\)",
-          "\\( 72 \\)",
-          "\\( 108 \\)",
-          "\\( 144 \\)",
-          "\\( 288 \\)"
-        ],
-        "hint": "Square both equations to find ab + bc + ca and then a^4 + b^4 + c^4.",
-        "explanation": "Square \\( a + b + c = 0 \\): \\( (a+b+c)^2 = a^2 + b^2 + c^2 + 2(ab + bc + ca) = 0 \\). Substituting \\( a^2 + b^2 + c^2 = 12 \\) gives \\( 12 + 2(ab + bc + ca) = 0 \\implies ab + bc + ca = -6 \\). Now square \\( ab + bc + ca = -6 \\): \\( (ab + bc + ca)^2 = a^2 b^2 + b^2 c^2 + c^2 a^2 + 2abc(a + b + c) = 36 \\). Since \\( a + b + c = 0 \\), \\( a^2 b^2 + b^2 c^2 + c^2 a^2 = 36 \\). Finally, square \\( a^2 + b^2 + c^2 = 12 \\): \\( (a^2 + b^2 + c^2)^2 = a^4 + b^4 + c^4 + 2(a^2 b^2 + b^2 c^2 + c^2 a^2) = 144 \\). Substituting \\( a^2 b^2 + b^2 c^2 + c^2 a^2 = 36 \\) gives \\( a^4 + b^4 + c^4 + 2(36) = 144 \\implies a^4 + b^4 + c^4 = 72 \\)."
-      },
-      "ar": {
-        "question": "إذا كان \\( a + b + c = 0 \\) وكان \\( a^2 + b^2 + c^2 = 12 \\)، فما قيمة \\( a^4 + b^4 + c^4 \\)؟",
-        "options": [
-          "\\( 36 \\)",
-          "\\( 72 \\)",
-          "\\( 108 \\)",
-          "\\( 144 \\)",
-          "\\( 288 \\)"
-        ],
-        "hint": "ربّع المعادلتين لإيجاد ab + bc + ca ثم a^4 + b^4 + c^4.",
-        "explanation": "بتربيع \\( a + b + c = 0 \\): نجد \\( (a+b+c)^2 = a^2 + b^2 + c^2 + 2(ab + bc + ca) = 0 \\). بالتعويض عما نعلمه: \\( 12 + 2(ab + bc + ca) = 0 \\implies ab + bc + ca = -6 \\). الآن نربع \\( ab + bc + ca = -6 \\): نحصل على \\( a^2 b^2 + b^2 c^2 + c^2 a^2 + 2abc(a + b + c) = 36 \\). وبما أن \\( a + b + c = 0 \\)، فإن \\( a^2 b^2 + b^2 c^2 + c^2 a^2 = 36 \\). أخيراً بتربيع \\( a^2 + b^2 + c^2 = 12 \\): نجد \\( a^4 + b^4 + c^4 + 2(36) = 144 \\implies a^4 + b^4 + c^4 = 72 \\)."
-      }
-    },
-    "correct_index": "1",
-    "original_difficulty": "medium"
-  },
-  {
     "id": "KANGAROO-208",
     "track": "kangaroo",
     "level": "Cadet",
@@ -9288,78 +9252,6 @@
     "original_difficulty": "hard"
   },
   {
-    "id": "KANG-ECO-001",
-    "track": "kangaroo",
-    "level": "Ecolier",
-    "topic": "Arithmetic",
-    "type": "MCQ",
-    "difficulty": "Easy",
-    "content": {
-      "en": {
-        "question": "What is \\( 24 + 37 \\)?",
-        "options": [
-          "\\( 51 \\)",
-          "\\( 61 \\)",
-          "\\( 71 \\)",
-          "\\( 60 \\)",
-          "\\\\( 64 \\\\)"
-        ],
-        "hint": "Add tens, then ones.",
-        "explanation": "\\( 24+37=61 \\)."
-      },
-      "ar": {
-        "question": "ما ناتج \\( 24 + 37 \\)؟",
-        "options": [
-          "\\( 51 \\)",
-          "\\( 61 \\)",
-          "\\( 71 \\)",
-          "\\( 60 \\)",
-          "\\\\( 64 \\\\)"
-        ],
-        "hint": "اجمع العشرات ثم الآحاد.",
-        "explanation": "\\( 61 \\)."
-      }
-    },
-    "correct_index": "1",
-    "original_difficulty": "easy"
-  },
-  {
-    "id": "KANG-ECO-002",
-    "track": "kangaroo",
-    "level": "Ecolier",
-    "topic": "Arithmetic",
-    "type": "MCQ",
-    "difficulty": "Easy",
-    "content": {
-      "en": {
-        "question": "What is \\( 100 - 43 \\)?",
-        "options": [
-          "\\( 57 \\)",
-          "\\( 63 \\)",
-          "\\( 47 \\)",
-          "\\( 67 \\)",
-          "\\\\( 60 \\\\)"
-        ],
-        "hint": "Borrow from hundreds.",
-        "explanation": "\\( 100-43=57 \\)."
-      },
-      "ar": {
-        "question": "ما ناتج \\( 100 - 43 \\)؟",
-        "options": [
-          "\\( 57 \\)",
-          "\\( 63 \\)",
-          "\\( 47 \\)",
-          "\\( 67 \\)",
-          "\\\\( 60 \\\\)"
-        ],
-        "hint": "احترس من الاستعارة.",
-        "explanation": "\\( 57 \\)."
-      }
-    },
-    "correct_index": "0",
-    "original_difficulty": "easy"
-  },
-  {
     "id": "KANG-ECO-003",
     "track": "kangaroo",
     "level": "Ecolier",
@@ -9462,42 +9354,6 @@
         ],
         "hint": "اطرح ما أعطته.",
         "explanation": "\\( 5-2=3 \\)."
-      }
-    },
-    "correct_index": "1",
-    "original_difficulty": "easy"
-  },
-  {
-    "id": "KANG-ECO-006",
-    "track": "kangaroo",
-    "level": "Ecolier",
-    "topic": "Arithmetic",
-    "type": "MCQ",
-    "difficulty": "Easy",
-    "content": {
-      "en": {
-        "question": "What is \\( 6 \\times 7 \\)?",
-        "options": [
-          "\\( 36 \\)",
-          "\\( 42 \\)",
-          "\\( 48 \\)",
-          "\\( 56 \\)",
-          "\\\\( 45 \\\\)"
-        ],
-        "hint": "6 sevens.",
-        "explanation": "\\( 6 \\times 7 = 42 \\)."
-      },
-      "ar": {
-        "question": "ما ناتج \\( 6 \\times 7 \\)؟",
-        "options": [
-          "\\( 36 \\)",
-          "\\( 42 \\)",
-          "\\( 48 \\)",
-          "\\( 56 \\)",
-          "\\\\( 45 \\\\)"
-        ],
-        "hint": "ستة سبعات.",
-        "explanation": "\\( 42 \\)."
       }
     },
     "correct_index": "1",
@@ -9792,42 +9648,6 @@
     "original_difficulty": "easy"
   },
   {
-    "id": "KANG-ECO-015",
-    "track": "kangaroo",
-    "level": "Ecolier",
-    "topic": "Arithmetic",
-    "type": "MCQ",
-    "difficulty": "Easy",
-    "content": {
-      "en": {
-        "question": "What is \\( 9 \\times 9 \\)?",
-        "options": [
-          "\\( 72 \\)",
-          "\\( 81 \\)",
-          "\\( 90 \\)",
-          "\\( 99 \\)",
-          "\\\\( 84 \\\\)"
-        ],
-        "hint": "9 nines.",
-        "explanation": "\\( 9 \\times 9=81 \\)."
-      },
-      "ar": {
-        "question": "ما ناتج \\( 9 \\times 9 \\)؟",
-        "options": [
-          "\\( 72 \\)",
-          "\\( 81 \\)",
-          "\\( 90 \\)",
-          "\\( 99 \\)",
-          "\\\\( 84 \\\\)"
-        ],
-        "hint": "تسعة تسعات.",
-        "explanation": "\\( 81 \\)."
-      }
-    },
-    "correct_index": "1",
-    "original_difficulty": "easy"
-  },
-  {
     "id": "KANG-ECO-016",
     "track": "kangaroo",
     "level": "Ecolier",
@@ -9861,42 +9681,6 @@
       }
     },
     "correct_index": "2",
-    "original_difficulty": "easy"
-  },
-  {
-    "id": "KANG-ECO-017",
-    "track": "kangaroo",
-    "level": "Ecolier",
-    "topic": "Arithmetic",
-    "type": "MCQ",
-    "difficulty": "Easy",
-    "content": {
-      "en": {
-        "question": "What is \\( 50 + 50 \\)?",
-        "options": [
-          "\\( 55 \\)",
-          "\\( 100 \\)",
-          "\\( 105 \\)",
-          "\\( 110 \\)",
-          "\\\\( 103 \\\\)"
-        ],
-        "hint": "Two fifties.",
-        "explanation": "\\( 50+50=100 \\)."
-      },
-      "ar": {
-        "question": "ما ناتج \\( 50 + 50 \\)؟",
-        "options": [
-          "\\( 55 \\)",
-          "\\( 100 \\)",
-          "\\( 105 \\)",
-          "\\( 110 \\)",
-          "\\\\( 103 \\\\)"
-        ],
-        "hint": "خمسون زائد خمسون.",
-        "explanation": "\\( 100 \\)."
-      }
-    },
-    "correct_index": "1",
     "original_difficulty": "easy"
   },
   {
@@ -10008,42 +9792,6 @@
     "original_difficulty": "easy"
   },
   {
-    "id": "KANG-ECO-021",
-    "track": "kangaroo",
-    "level": "Ecolier",
-    "topic": "Arithmetic",
-    "type": "MCQ",
-    "difficulty": "Medium",
-    "content": {
-      "en": {
-        "question": "What is \\( 3 \\times 4 + 2 \\)?",
-        "options": [
-          "\\( 12 \\)",
-          "\\( 14 \\)",
-          "\\( 16 \\)",
-          "\\( 18 \\)",
-          "\\\\( 17 \\\\)"
-        ],
-        "hint": "Multiply first, then add.",
-        "explanation": "\\( 12+2=14 \\)."
-      },
-      "ar": {
-        "question": "ما ناتج \\( 3 \\times 4 + 2 \\)؟",
-        "options": [
-          "\\( 12 \\)",
-          "\\( 14 \\)",
-          "\\( 16 \\)",
-          "\\( 18 \\)",
-          "\\\\( 17 \\\\)"
-        ],
-        "hint": "اضرب أولاً ثم اجمع.",
-        "explanation": "\\( 14 \\)."
-      }
-    },
-    "correct_index": "1",
-    "original_difficulty": "medium"
-  },
-  {
     "id": "KANG-ECO-022",
     "track": "kangaroo",
     "level": "Ecolier",
@@ -10116,42 +9864,6 @@
     "original_difficulty": "easy"
   },
   {
-    "id": "KANG-ECO-024",
-    "track": "kangaroo",
-    "level": "Ecolier",
-    "topic": "Arithmetic",
-    "type": "MCQ",
-    "difficulty": "Medium",
-    "content": {
-      "en": {
-        "question": "What is \\( 72 \\div 9 \\)?",
-        "options": [
-          "\\( 7 \\)",
-          "\\( 8 \\)",
-          "\\( 9 \\)",
-          "\\( 6 \\)",
-          "\\\\( 11 \\\\)"
-        ],
-        "hint": "9 × ? = 72.",
-        "explanation": "\\( 9 \\times 8=72 \\)."
-      },
-      "ar": {
-        "question": "ما ناتج \\( 72 \\div 9 \\)؟",
-        "options": [
-          "\\( 7 \\)",
-          "\\( 8 \\)",
-          "\\( 9 \\)",
-          "\\( 6 \\)",
-          "\\\\( 11 \\\\)"
-        ],
-        "hint": "9 × ؟ = 72.",
-        "explanation": "\\( 8 \\)."
-      }
-    },
-    "correct_index": "1",
-    "original_difficulty": "medium"
-  },
-  {
     "id": "KANG-ECO-025",
     "track": "kangaroo",
     "level": "Ecolier",
@@ -10185,42 +9897,6 @@
       }
     },
     "correct_index": "1",
-    "original_difficulty": "medium"
-  },
-  {
-    "id": "KANG-ECO-026",
-    "track": "kangaroo",
-    "level": "Ecolier",
-    "topic": "Arithmetic",
-    "type": "MCQ",
-    "difficulty": "Medium",
-    "content": {
-      "en": {
-        "question": "What is \\( 25 + 25 + 25 + 25 \\)?",
-        "options": [
-          "\\( 75 \\)",
-          "\\( 80 \\)",
-          "\\( 100 \\)",
-          "\\( 125 \\)",
-          "\\\\( 103 \\\\)"
-        ],
-        "hint": "4 × 25.",
-        "explanation": "\\( 4 \\times 25=100 \\)."
-      },
-      "ar": {
-        "question": "ما ناتج \\( 25 + 25 + 25 + 25 \\)؟",
-        "options": [
-          "\\( 75 \\)",
-          "\\( 80 \\)",
-          "\\( 100 \\)",
-          "\\( 125 \\)",
-          "\\\\( 103 \\\\)"
-        ],
-        "hint": "4 × 25.",
-        "explanation": "\\( 100 \\)."
-      }
-    },
-    "correct_index": "2",
     "original_difficulty": "medium"
   },
   {
@@ -10440,42 +10116,6 @@
     "original_difficulty": "medium"
   },
   {
-    "id": "KANG-ECO-033",
-    "track": "kangaroo",
-    "level": "Ecolier",
-    "topic": "Arithmetic",
-    "type": "MCQ",
-    "difficulty": "Medium",
-    "content": {
-      "en": {
-        "question": "What is \\( 12 \\times 5 \\)?",
-        "options": [
-          "\\( 50 \\)",
-          "\\( 55 \\)",
-          "\\( 60 \\)",
-          "\\( 65 \\)",
-          "\\\\( 63 \\\\)"
-        ],
-        "hint": "10×5 + 2×5.",
-        "explanation": "\\( 60 \\)."
-      },
-      "ar": {
-        "question": "ما ناتج \\( 12 \\times 5 \\)؟",
-        "options": [
-          "\\( 50 \\)",
-          "\\( 55 \\)",
-          "\\( 60 \\)",
-          "\\( 65 \\)",
-          "\\\\( 63 \\\\)"
-        ],
-        "hint": "10×5 + 2×5.",
-        "explanation": "\\( 60 \\)."
-      }
-    },
-    "correct_index": "2",
-    "original_difficulty": "medium"
-  },
-  {
     "id": "KANG-ECO-034",
     "track": "kangaroo",
     "level": "Ecolier",
@@ -10548,42 +10188,6 @@
     "original_difficulty": "medium"
   },
   {
-    "id": "KANG-ECO-036",
-    "track": "kangaroo",
-    "level": "Ecolier",
-    "topic": "Arithmetic",
-    "type": "MCQ",
-    "difficulty": "Medium",
-    "content": {
-      "en": {
-        "question": "What is \\( 200 - 75 \\)?",
-        "options": [
-          "\\( 115 \\)",
-          "\\( 120 \\)",
-          "\\( 125 \\)",
-          "\\( 130 \\)",
-          "\\\\( 128 \\\\)"
-        ],
-        "hint": "200 - 75: borrow carefully.",
-        "explanation": "\\( 125 \\)."
-      },
-      "ar": {
-        "question": "ما ناتج \\( 200 - 75 \\)؟",
-        "options": [
-          "\\( 115 \\)",
-          "\\( 120 \\)",
-          "\\( 125 \\)",
-          "\\( 130 \\)",
-          "\\\\( 128 \\\\)"
-        ],
-        "hint": "احترس من الاستعارة.",
-        "explanation": "\\( 125 \\)."
-      }
-    },
-    "correct_index": "2",
-    "original_difficulty": "medium"
-  },
-  {
     "id": "KANG-ECO-037",
     "track": "kangaroo",
     "level": "Ecolier",
@@ -10617,42 +10221,6 @@
       }
     },
     "correct_index": "1",
-    "original_difficulty": "medium"
-  },
-  {
-    "id": "KANG-ECO-038",
-    "track": "kangaroo",
-    "level": "Ecolier",
-    "topic": "Patterns",
-    "type": "MCQ",
-    "difficulty": "Medium",
-    "content": {
-      "en": {
-        "question": "100, 90, 80, 70, __. What comes next?",
-        "options": [
-          "\\( 50 \\)",
-          "\\( 55 \\)",
-          "\\( 60 \\)",
-          "\\( 65 \\)",
-          "\\\\( 63 \\\\)"
-        ],
-        "hint": "Subtract 10 each time.",
-        "explanation": "\\( 70-10=60 \\)."
-      },
-      "ar": {
-        "question": "100, 90, 80, 70, __. ما التالي؟",
-        "options": [
-          "\\( 50 \\)",
-          "\\( 55 \\)",
-          "\\( 60 \\)",
-          "\\( 65 \\)",
-          "\\\\( 63 \\\\)"
-        ],
-        "hint": "اطرح 10 في كل مرة.",
-        "explanation": "\\( 60 \\)."
-      }
-    },
-    "correct_index": "2",
     "original_difficulty": "medium"
   },
   {
@@ -10761,42 +10329,6 @@
       }
     },
     "correct_index": "1",
-    "original_difficulty": "hard"
-  },
-  {
-    "id": "KANG-ECO-042",
-    "track": "kangaroo",
-    "level": "Ecolier",
-    "topic": "Arithmetic",
-    "type": "MCQ",
-    "difficulty": "Hard",
-    "content": {
-      "en": {
-        "question": "What is \\( 1 + 2 + 3 + 4 + 5 + 6 + 7 + 8 + 9 + 10 \\)?",
-        "options": [
-          "\\( 45 \\)",
-          "\\( 50 \\)",
-          "\\( 55 \\)",
-          "\\( 60 \\)",
-          "\\\\( 58 \\\\)"
-        ],
-        "hint": "Pair numbers: (1+10), (2+9)...",
-        "explanation": "5 pairs × 11 = 55."
-      },
-      "ar": {
-        "question": "ما مجموع \\( 1 + 2 + ... + 10 \\)؟",
-        "options": [
-          "\\( 45 \\)",
-          "\\( 50 \\)",
-          "\\( 55 \\)",
-          "\\( 60 \\)",
-          "\\\\( 58 \\\\)"
-        ],
-        "hint": "رتّبها أزواجاً: (1+10), (2+9)...",
-        "explanation": "5 أزواج × 11 = 55."
-      }
-    },
-    "correct_index": "2",
     "original_difficulty": "hard"
   },
   {
@@ -11052,42 +10584,6 @@
     "original_difficulty": "hard"
   },
   {
-    "id": "KANG-ECO-051",
-    "track": "kangaroo",
-    "level": "Ecolier",
-    "topic": "Arithmetic",
-    "type": "MCQ",
-    "difficulty": "Medium",
-    "content": {
-      "en": {
-        "question": "What is \\( 7^2 \\)?",
-        "options": [
-          "\\( 14 \\)",
-          "\\( 42 \\)",
-          "\\( 49 \\)",
-          "\\( 56 \\)",
-          "\\\\( 52 \\\\)"
-        ],
-        "hint": "7 × 7.",
-        "explanation": "\\( 49 \\)."
-      },
-      "ar": {
-        "question": "ما قيمة \\( 7^2 \\)؟",
-        "options": [
-          "\\( 14 \\)",
-          "\\( 42 \\)",
-          "\\( 49 \\)",
-          "\\( 56 \\)",
-          "\\\\( 52 \\\\)"
-        ],
-        "hint": "7 × 7.",
-        "explanation": "\\( 49 \\)."
-      }
-    },
-    "correct_index": "2",
-    "original_difficulty": "medium"
-  },
-  {
     "id": "KANG-ECO-052",
     "track": "kangaroo",
     "level": "Ecolier",
@@ -11232,42 +10728,6 @@
     "original_difficulty": "medium"
   },
   {
-    "id": "KANG-ECO-056",
-    "track": "kangaroo",
-    "level": "Ecolier",
-    "topic": "Arithmetic",
-    "type": "MCQ",
-    "difficulty": "Medium",
-    "content": {
-      "en": {
-        "question": "What is \\( 3^3 \\)?",
-        "options": [
-          "\\( 6 \\)",
-          "\\( 9 \\)",
-          "\\( 18 \\)",
-          "\\( 27 \\)",
-          "\\\\( 30 \\\\)"
-        ],
-        "hint": "3 × 3 × 3.",
-        "explanation": "\\( 27 \\)."
-      },
-      "ar": {
-        "question": "ما قيمة \\( 3^3 \\)؟",
-        "options": [
-          "\\( 6 \\)",
-          "\\( 9 \\)",
-          "\\( 18 \\)",
-          "\\( 27 \\)",
-          "\\\\( 30 \\\\)"
-        ],
-        "hint": "3 × 3 × 3.",
-        "explanation": "\\( 27 \\)."
-      }
-    },
-    "correct_index": "3",
-    "original_difficulty": "medium"
-  },
-  {
     "id": "KANG-ECO-057",
     "track": "kangaroo",
     "level": "Ecolier",
@@ -11340,42 +10800,6 @@
     "original_difficulty": "medium"
   },
   {
-    "id": "KANG-ECO-059",
-    "track": "kangaroo",
-    "level": "Ecolier",
-    "topic": "Arithmetic",
-    "type": "MCQ",
-    "difficulty": "Medium",
-    "content": {
-      "en": {
-        "question": "What is \\( \\dfrac{1}{2} + \\dfrac{1}{4} \\)?",
-        "options": [
-          "\\( \\dfrac{2}{6} \\)",
-          "\\( \\dfrac{2}{4} \\)",
-          "\\( \\dfrac{3}{4} \\)",
-          "\\( \\dfrac{1}{4} \\)",
-          "\\\\( 6 \\\\)"
-        ],
-        "hint": "Convert to quarters: 2/4 + 1/4.",
-        "explanation": "\\( \\dfrac{3}{4} \\)."
-      },
-      "ar": {
-        "question": "ما ناتج \\( \\dfrac{1}{2} + \\dfrac{1}{4} \\)؟",
-        "options": [
-          "\\( \\dfrac{2}{6} \\)",
-          "\\( \\dfrac{2}{4} \\)",
-          "\\( \\dfrac{3}{4} \\)",
-          "\\( \\dfrac{1}{4} \\)",
-          "\\\\( 6 \\\\)"
-        ],
-        "hint": "حوّل لأرباع: 2/4 + 1/4.",
-        "explanation": "\\( \\dfrac{3}{4} \\)."
-      }
-    },
-    "correct_index": "2",
-    "original_difficulty": "medium"
-  },
-  {
     "id": "KANG-ECO-060",
     "track": "kangaroo",
     "level": "Ecolier",
@@ -11406,42 +10830,6 @@
         ],
         "hint": "الأشكال ثلاثية الأبعاد لها حجم.",
         "explanation": "الكرة."
-      }
-    },
-    "correct_index": "2",
-    "original_difficulty": "medium"
-  },
-  {
-    "id": "KANG-ECO-061",
-    "track": "kangaroo",
-    "level": "Ecolier",
-    "topic": "Arithmetic",
-    "type": "MCQ",
-    "difficulty": "Medium",
-    "content": {
-      "en": {
-        "question": "What is \\( 15\\% \\) of \\( 200 \\)?",
-        "options": [
-          "\\( 20 \\)",
-          "\\( 25 \\)",
-          "\\( 30 \\)",
-          "\\( 35 \\)",
-          "\\\\( 33 \\\\)"
-        ],
-        "hint": "\\( \\dfrac{15}{100} \\times 200 \\).",
-        "explanation": "\\( 30 \\)."
-      },
-      "ar": {
-        "question": "ما \\( 15\\% \\) من \\( 200 \\)؟",
-        "options": [
-          "\\( 20 \\)",
-          "\\( 25 \\)",
-          "\\( 30 \\)",
-          "\\( 35 \\)",
-          "\\\\( 33 \\\\)"
-        ],
-        "hint": "\\( \\dfrac{15}{100} \\times 200 \\).",
-        "explanation": "\\( 30 \\)."
       }
     },
     "correct_index": "2",
@@ -11556,42 +10944,6 @@
     "original_difficulty": "hard"
   },
   {
-    "id": "KANG-ECO-065",
-    "track": "kangaroo",
-    "level": "Ecolier",
-    "topic": "Arithmetic",
-    "type": "MCQ",
-    "difficulty": "Hard",
-    "content": {
-      "en": {
-        "question": "What is \\( 999 + 999 \\)?",
-        "options": [
-          "\\( 1{,}899 \\)",
-          "\\( 1{,}998 \\)",
-          "\\( 2{,}000 \\)",
-          "\\( 1{,}900 \\)",
-          "\\\\( 4 \\\\)"
-        ],
-        "hint": "\\( 1000+1000-2 \\).",
-        "explanation": "\\( 1{,}998 \\)."
-      },
-      "ar": {
-        "question": "ما ناتج \\( 999 + 999 \\)؟",
-        "options": [
-          "\\( 1{,}899 \\)",
-          "\\( 1{,}998 \\)",
-          "\\( 2{,}000 \\)",
-          "\\( 1{,}900 \\)",
-          "\\\\( 4 \\\\)"
-        ],
-        "hint": "\\( 1000+1000-2 \\).",
-        "explanation": "\\( 1{,}998 \\)."
-      }
-    },
-    "correct_index": "1",
-    "original_difficulty": "hard"
-  },
-  {
     "id": "KANG-ECO-066",
     "track": "kangaroo",
     "level": "Ecolier",
@@ -11661,42 +11013,6 @@
       }
     },
     "correct_index": "2",
-    "original_difficulty": "hard"
-  },
-  {
-    "id": "KANG-ECO-068",
-    "track": "kangaroo",
-    "level": "Ecolier",
-    "topic": "Arithmetic",
-    "type": "MCQ",
-    "difficulty": "Hard",
-    "content": {
-      "en": {
-        "question": "What is \\( 2 + 4 + 6 + 8 + \\ldots + 20 \\)?",
-        "options": [
-          "\\( 100 \\)",
-          "\\( 110 \\)",
-          "\\( 90 \\)",
-          "\\( 120 \\)",
-          "\\\\( 113 \\\\)"
-        ],
-        "hint": "10 even numbers. Average = 11. Sum = 10 × 11.",
-        "explanation": "\\( 110 \\)."
-      },
-      "ar": {
-        "question": "ما مجموع \\( 2 + 4 + 6 + \\ldots + 20 \\)؟",
-        "options": [
-          "\\( 100 \\)",
-          "\\( 110 \\)",
-          "\\( 90 \\)",
-          "\\( 120 \\)",
-          "\\\\( 113 \\\\)"
-        ],
-        "hint": "10 أعداد زوجية. المتوسط = 11.",
-        "explanation": "\\( 110 \\)."
-      }
-    },
-    "correct_index": "1",
     "original_difficulty": "hard"
   },
   {
@@ -11772,42 +11088,6 @@
     "original_difficulty": "hard"
   },
   {
-    "id": "KANG-ECO-071",
-    "track": "kangaroo",
-    "level": "Ecolier",
-    "topic": "Arithmetic",
-    "type": "MCQ",
-    "difficulty": "Easy",
-    "content": {
-      "en": {
-        "question": "What is \\( 8 + 9 + 7 \\)?",
-        "options": [
-          "\\( 22 \\)",
-          "\\( 23 \\)",
-          "\\( 24 \\)",
-          "\\( 25 \\)",
-          "\\\\( 27 \\\\)"
-        ],
-        "hint": "Add step by step.",
-        "explanation": "\\( 8+9=17, 17+7=24 \\)."
-      },
-      "ar": {
-        "question": "ما ناتج \\( 8 + 9 + 7 \\)؟",
-        "options": [
-          "\\( 22 \\)",
-          "\\( 23 \\)",
-          "\\( 24 \\)",
-          "\\( 25 \\)",
-          "\\\\( 27 \\\\)"
-        ],
-        "hint": "اجمع خطوةً بخطوة.",
-        "explanation": "\\( 24 \\)."
-      }
-    },
-    "correct_index": "2",
-    "original_difficulty": "easy"
-  },
-  {
     "id": "KANG-ECO-072",
     "track": "kangaroo",
     "level": "Ecolier",
@@ -11874,42 +11154,6 @@
         ],
         "hint": "السداسي = ستة.",
         "explanation": "6 أضلاع."
-      }
-    },
-    "correct_index": "2",
-    "original_difficulty": "easy"
-  },
-  {
-    "id": "KANG-ECO-074",
-    "track": "kangaroo",
-    "level": "Ecolier",
-    "topic": "Arithmetic",
-    "type": "MCQ",
-    "difficulty": "Easy",
-    "content": {
-      "en": {
-        "question": "What is \\( 45 - 18 \\)?",
-        "options": [
-          "\\( 25 \\)",
-          "\\( 26 \\)",
-          "\\( 27 \\)",
-          "\\( 28 \\)",
-          "\\\\( 30 \\\\)"
-        ],
-        "hint": "Borrow from the tens.",
-        "explanation": "\\( 27 \\)."
-      },
-      "ar": {
-        "question": "ما ناتج \\( 45 - 18 \\)؟",
-        "options": [
-          "\\( 25 \\)",
-          "\\( 26 \\)",
-          "\\( 27 \\)",
-          "\\( 28 \\)",
-          "\\\\( 30 \\\\)"
-        ],
-        "hint": "استعر من العشرات.",
-        "explanation": "\\( 27 \\)."
       }
     },
     "correct_index": "2",
@@ -12096,78 +11340,6 @@
     "original_difficulty": "easy"
   },
   {
-    "id": "KANG-ECO-080",
-    "track": "kangaroo",
-    "level": "Ecolier",
-    "topic": "Arithmetic",
-    "type": "MCQ",
-    "difficulty": "Easy",
-    "content": {
-      "en": {
-        "question": "What is \\( 4 + 4 + 4 + 4 \\)?",
-        "options": [
-          "\\( 12 \\)",
-          "\\( 14 \\)",
-          "\\( 16 \\)",
-          "\\( 20 \\)",
-          "\\\\( 19 \\\\)"
-        ],
-        "hint": "4 × 4.",
-        "explanation": "\\( 16 \\)."
-      },
-      "ar": {
-        "question": "ما ناتج \\( 4 + 4 + 4 + 4 \\)؟",
-        "options": [
-          "\\( 12 \\)",
-          "\\( 14 \\)",
-          "\\( 16 \\)",
-          "\\( 20 \\)",
-          "\\\\( 19 \\\\)"
-        ],
-        "hint": "4 × 4.",
-        "explanation": "\\( 16 \\)."
-      }
-    },
-    "correct_index": "2",
-    "original_difficulty": "easy"
-  },
-  {
-    "id": "KANG-ECO-081",
-    "track": "kangaroo",
-    "level": "Ecolier",
-    "topic": "Arithmetic",
-    "type": "MCQ",
-    "difficulty": "Easy",
-    "content": {
-      "en": {
-        "question": "What is \\( 11 \\times 11 \\)?",
-        "options": [
-          "\\(111\\)",
-          "\\(121\\)",
-          "\\(131\\)",
-          "\\(141\\)",
-          "\\\\( 124 \\\\)"
-        ],
-        "hint": "11 elevens.",
-        "explanation": "\\(121\\)."
-      },
-      "ar": {
-        "question": "ما ناتج \\( 11 \\times 11 \\)؟",
-        "options": [
-          "\\(111\\)",
-          "\\(121\\)",
-          "\\(131\\)",
-          "\\(141\\)",
-          "\\\\( 124 \\\\)"
-        ],
-        "hint": "أحد عشر مرات أحد عشر.",
-        "explanation": "\\(121\\)."
-      }
-    },
-    "correct_index": "1",
-    "original_difficulty": "easy"
-  },
-  {
     "id": "KANG-ECO-082",
     "track": "kangaroo",
     "level": "Ecolier",
@@ -12348,42 +11520,6 @@
     "original_difficulty": "easy"
   },
   {
-    "id": "KANG-ECO-087",
-    "track": "kangaroo",
-    "level": "Ecolier",
-    "topic": "Arithmetic",
-    "type": "MCQ",
-    "difficulty": "Easy",
-    "content": {
-      "en": {
-        "question": "What is \\( 5 + 5 + 5 + 5 + 5 \\)?",
-        "options": [
-          "\\(20\\)",
-          "\\(25\\)",
-          "\\(30\\)",
-          "\\(35\\)",
-          "\\\\( 28 \\\\)"
-        ],
-        "hint": "5 × 5.",
-        "explanation": "\\(25\\)."
-      },
-      "ar": {
-        "question": "ما ناتج \\( 5 + 5 + 5 + 5 + 5 \\)؟",
-        "options": [
-          "\\(20\\)",
-          "\\(25\\)",
-          "\\(30\\)",
-          "\\(35\\)",
-          "\\\\( 28 \\\\)"
-        ],
-        "hint": "5 × 5.",
-        "explanation": "\\(25\\)."
-      }
-    },
-    "correct_index": "1",
-    "original_difficulty": "easy"
-  },
-  {
     "id": "KANG-ECO-088",
     "track": "kangaroo",
     "level": "Ecolier",
@@ -12450,42 +11586,6 @@
         ],
         "hint": "ثماني = ثمانية.",
         "explanation": "ثماني."
-      }
-    },
-    "correct_index": "2",
-    "original_difficulty": "easy"
-  },
-  {
-    "id": "KANG-ECO-090",
-    "track": "kangaroo",
-    "level": "Ecolier",
-    "topic": "Arithmetic",
-    "type": "MCQ",
-    "difficulty": "Easy",
-    "content": {
-      "en": {
-        "question": "What is \\( 300 + 250 + 50 \\)?",
-        "options": [
-          "\\(550\\)",
-          "\\(580\\)",
-          "\\(600\\)",
-          "\\(650\\)",
-          "\\\\( 603 \\\\)"
-        ],
-        "hint": "Add hundreds first.",
-        "explanation": "\\(600\\)."
-      },
-      "ar": {
-        "question": "ما ناتج \\( 300 + 250 + 50 \\)؟",
-        "options": [
-          "\\(550\\)",
-          "\\(580\\)",
-          "\\(600\\)",
-          "\\(650\\)",
-          "\\\\( 603 \\\\)"
-        ],
-        "hint": "اجمع المئات أولاً.",
-        "explanation": "\\(600\\)."
       }
     },
     "correct_index": "2",
@@ -13032,42 +12132,6 @@
     "original_difficulty": "medium"
   },
   {
-    "id": "KANG-ECO-106",
-    "track": "kangaroo",
-    "level": "Ecolier",
-    "topic": "Arithmetic",
-    "type": "MCQ",
-    "difficulty": "Medium",
-    "content": {
-      "en": {
-        "question": "\\(\\dfrac{2}{3} + \\dfrac{1}{3} = \\)?",
-        "options": [
-          "\\(\\dfrac{1}{3}\\)",
-          "\\(\\dfrac{2}{6}\\)",
-          "\\(1\\)",
-          "\\(2\\)",
-          "\\\\( 4 \\\\)"
-        ],
-        "hint": "Same denominator, add numerators.",
-        "explanation": "\\(\\dfrac{3}{3}=1\\)."
-      },
-      "ar": {
-        "question": "\\(\\dfrac{2}{3} + \\dfrac{1}{3} = \\)؟",
-        "options": [
-          "\\(\\dfrac{1}{3}\\)",
-          "\\(\\dfrac{2}{6}\\)",
-          "\\(1\\)",
-          "\\(2\\)",
-          "\\\\( 4 \\\\)"
-        ],
-        "hint": "المقام واحد، اجمع البسطين.",
-        "explanation": "\\(1\\)."
-      }
-    },
-    "correct_index": "2",
-    "original_difficulty": "medium"
-  },
-  {
     "id": "KANG-ECO-107",
     "track": "kangaroo",
     "level": "Ecolier",
@@ -13134,42 +12198,6 @@
         ],
         "hint": "6 × 3.",
         "explanation": "\\(18\\) سم."
-      }
-    },
-    "correct_index": "2",
-    "original_difficulty": "medium"
-  },
-  {
-    "id": "KANG-ECO-109",
-    "track": "kangaroo",
-    "level": "Ecolier",
-    "topic": "Arithmetic",
-    "type": "MCQ",
-    "difficulty": "Medium",
-    "content": {
-      "en": {
-        "question": "What is \\(125 \\div 5 \\)?",
-        "options": [
-          "\\(20\\)",
-          "\\(22\\)",
-          "\\(25\\)",
-          "\\(30\\)",
-          "\\\\( 28 \\\\)"
-        ],
-        "hint": "100÷5=20, 25÷5=5. Total=25.",
-        "explanation": "\\(25\\)."
-      },
-      "ar": {
-        "question": "ما ناتج \\(125 \\div 5\\)؟",
-        "options": [
-          "\\(20\\)",
-          "\\(22\\)",
-          "\\(25\\)",
-          "\\(30\\)",
-          "\\\\( 28 \\\\)"
-        ],
-        "hint": "100÷5=20، 25÷5=5.",
-        "explanation": "\\(25\\)."
       }
     },
     "correct_index": "2",
@@ -13428,42 +12456,6 @@
     "original_difficulty": "hard"
   },
   {
-    "id": "KANG-ECO-117",
-    "track": "kangaroo",
-    "level": "Ecolier",
-    "topic": "Arithmetic",
-    "type": "MCQ",
-    "difficulty": "Hard",
-    "content": {
-      "en": {
-        "question": "What is \\(\\sqrt{144}\\)?",
-        "options": [
-          "\\(11\\)",
-          "\\(12\\)",
-          "\\(13\\)",
-          "\\(14\\)",
-          "\\\\( 15 \\\\)"
-        ],
-        "hint": "12 × 12 = 144.",
-        "explanation": "\\(12\\)."
-      },
-      "ar": {
-        "question": "ما قيمة \\(\\sqrt{144}\\)؟",
-        "options": [
-          "\\(11\\)",
-          "\\(12\\)",
-          "\\(13\\)",
-          "\\(14\\)",
-          "\\\\( 15 \\\\)"
-        ],
-        "hint": "12 × 12 = 144.",
-        "explanation": "\\(12\\)."
-      }
-    },
-    "correct_index": "1",
-    "original_difficulty": "hard"
-  },
-  {
     "id": "KANG-ECO-118",
     "track": "kangaroo",
     "level": "Ecolier",
@@ -13572,42 +12564,6 @@
     "original_difficulty": "hard"
   },
   {
-    "id": "KANG-ECO-121",
-    "track": "kangaroo",
-    "level": "Ecolier",
-    "topic": "Arithmetic",
-    "type": "MCQ",
-    "difficulty": "Easy",
-    "content": {
-      "en": {
-        "question": "What is \\(13 \\times 4\\)?",
-        "options": [
-          "\\(42\\)",
-          "\\(48\\)",
-          "\\(52\\)",
-          "\\(56\\)",
-          "\\\\( 55 \\\\)"
-        ],
-        "hint": "10×4 + 3×4.",
-        "explanation": "\\(52\\)."
-      },
-      "ar": {
-        "question": "ما ناتج \\(13 \\times 4\\)؟",
-        "options": [
-          "\\(42\\)",
-          "\\(48\\)",
-          "\\(52\\)",
-          "\\(56\\)",
-          "\\\\( 55 \\\\)"
-        ],
-        "hint": "10×4 + 3×4.",
-        "explanation": "\\(52\\)."
-      }
-    },
-    "correct_index": "2",
-    "original_difficulty": "easy"
-  },
-  {
     "id": "KANG-ECO-122",
     "track": "kangaroo",
     "level": "Ecolier",
@@ -13680,42 +12636,6 @@
     "original_difficulty": "easy"
   },
   {
-    "id": "KANG-ECO-124",
-    "track": "kangaroo",
-    "level": "Ecolier",
-    "topic": "Arithmetic",
-    "type": "MCQ",
-    "difficulty": "Easy",
-    "content": {
-      "en": {
-        "question": "What is \\(1000 - 1\\)?",
-        "options": [
-          "\\(998\\)",
-          "\\(999\\)",
-          "\\(1000\\)",
-          "\\(997\\)",
-          "\\\\( 1002 \\\\)"
-        ],
-        "hint": "Straightforward.",
-        "explanation": "\\(999\\)."
-      },
-      "ar": {
-        "question": "ما ناتج \\(1000 - 1\\)؟",
-        "options": [
-          "\\(998\\)",
-          "\\(999\\)",
-          "\\(1000\\)",
-          "\\(997\\)",
-          "\\\\( 1002 \\\\)"
-        ],
-        "hint": "مباشرة.",
-        "explanation": "\\(999\\)."
-      }
-    },
-    "correct_index": "1",
-    "original_difficulty": "easy"
-  },
-  {
     "id": "KANG-ECO-125",
     "track": "kangaroo",
     "level": "Ecolier",
@@ -13746,42 +12666,6 @@
         ],
         "hint": "الدقيقة = 60 ثانية.",
         "explanation": "\\(120\\) ثانية."
-      }
-    },
-    "correct_index": "2",
-    "original_difficulty": "easy"
-  },
-  {
-    "id": "KANG-ECO-126",
-    "track": "kangaroo",
-    "level": "Ecolier",
-    "topic": "Arithmetic",
-    "type": "MCQ",
-    "difficulty": "Easy",
-    "content": {
-      "en": {
-        "question": "What is \\(9 + 8 + 7 + 6\\)?",
-        "options": [
-          "\\(28\\)",
-          "\\(29\\)",
-          "\\(30\\)",
-          "\\(31\\)",
-          "\\\\( 33 \\\\)"
-        ],
-        "hint": "Add step by step.",
-        "explanation": "\\(30\\)."
-      },
-      "ar": {
-        "question": "ما ناتج \\(9 + 8 + 7 + 6\\)؟",
-        "options": [
-          "\\(28\\)",
-          "\\(29\\)",
-          "\\(30\\)",
-          "\\(31\\)",
-          "\\\\( 33 \\\\)"
-        ],
-        "hint": "اجمع تدريجياً.",
-        "explanation": "\\(30\\)."
       }
     },
     "correct_index": "2",
@@ -13824,42 +12708,6 @@
     "original_difficulty": "easy"
   },
   {
-    "id": "KANG-ECO-129",
-    "track": "kangaroo",
-    "level": "Ecolier",
-    "topic": "Arithmetic",
-    "type": "MCQ",
-    "difficulty": "Easy",
-    "content": {
-      "en": {
-        "question": "What is \\(7 \\times 8\\)?",
-        "options": [
-          "\\(54\\)",
-          "\\(56\\)",
-          "\\(58\\)",
-          "\\(60\\)",
-          "\\\\( 59 \\\\)"
-        ],
-        "hint": "7 eights.",
-        "explanation": "\\(56\\)."
-      },
-      "ar": {
-        "question": "ما ناتج \\(7 \\times 8\\)؟",
-        "options": [
-          "\\(54\\)",
-          "\\(56\\)",
-          "\\(58\\)",
-          "\\(60\\)",
-          "\\\\( 59 \\\\)"
-        ],
-        "hint": "سبعة ثمانيات.",
-        "explanation": "\\(56\\)."
-      }
-    },
-    "correct_index": "1",
-    "original_difficulty": "easy"
-  },
-  {
     "id": "KANG-ECO-130",
     "track": "kangaroo",
     "level": "Ecolier",
@@ -13894,42 +12742,6 @@
     },
     "correct_index": "2",
     "original_difficulty": "easy"
-  },
-  {
-    "id": "KANG-ECO-131",
-    "track": "kangaroo",
-    "level": "Ecolier",
-    "topic": "Arithmetic",
-    "type": "MCQ",
-    "difficulty": "Medium",
-    "content": {
-      "en": {
-        "question": "What is \\(0.5 + 0.25\\)?",
-        "options": [
-          "\\(0.60\\)",
-          "\\(0.70\\)",
-          "\\(0.75\\)",
-          "\\(0.80\\)",
-          "\\\\( 3.75 \\\\)"
-        ],
-        "hint": "Convert: 1/2 + 1/4 = 3/4.",
-        "explanation": "\\(0.75\\)."
-      },
-      "ar": {
-        "question": "ما ناتج \\(0.5 + 0.25\\)؟",
-        "options": [
-          "\\(0.60\\)",
-          "\\(0.70\\)",
-          "\\(0.75\\)",
-          "\\(0.80\\)",
-          "\\\\( 3.75 \\\\)"
-        ],
-        "hint": "1/2 + 1/4 = 3/4.",
-        "explanation": "\\(0.75\\)."
-      }
-    },
-    "correct_index": "2",
-    "original_difficulty": "medium"
   },
   {
     "id": "KANG-ECO-132",
@@ -14112,42 +12924,6 @@
     "original_difficulty": "medium"
   },
   {
-    "id": "KANG-ECO-137",
-    "track": "kangaroo",
-    "level": "Ecolier",
-    "topic": "Arithmetic",
-    "type": "MCQ",
-    "difficulty": "Medium",
-    "content": {
-      "en": {
-        "question": "What is \\(\\dfrac{5}{8} - \\dfrac{1}{8}\\)?",
-        "options": [
-          "\\(\\dfrac{4}{8}\\)",
-          "\\(\\dfrac{5}{16}\\)",
-          "\\(\\dfrac{4}{16}\\)",
-          "\\(\\dfrac{6}{8}\\)",
-          "\\\\( 7 \\\\)"
-        ],
-        "hint": "Same denominator.",
-        "explanation": "\\(\\dfrac{4}{8} = \\dfrac{1}{2}\\)."
-      },
-      "ar": {
-        "question": "ما ناتج \\(\\dfrac{5}{8} - \\dfrac{1}{8}\\)؟",
-        "options": [
-          "\\(\\dfrac{4}{8}\\)",
-          "\\(\\dfrac{5}{16}\\)",
-          "\\(\\dfrac{4}{16}\\)",
-          "\\(\\dfrac{6}{8}\\)",
-          "\\\\( 7 \\\\)"
-        ],
-        "hint": "المقام واحد.",
-        "explanation": "\\(\\dfrac{4}{8} = \\dfrac{1}{2}\\)."
-      }
-    },
-    "correct_index": "0",
-    "original_difficulty": "medium"
-  },
-  {
     "id": "KANG-ECO-138",
     "track": "kangaroo",
     "level": "Ecolier",
@@ -14254,42 +13030,6 @@
     },
     "correct_index": "1",
     "original_difficulty": "medium"
-  },
-  {
-    "id": "KANG-ECO-141",
-    "track": "kangaroo",
-    "level": "Ecolier",
-    "topic": "Arithmetic",
-    "type": "MCQ",
-    "difficulty": "Hard",
-    "content": {
-      "en": {
-        "question": "If \\(2^{10} = 1024\\), what is \\(2^{11}\\)?",
-        "options": [
-          "\\(1024\\)",
-          "\\(2048\\)",
-          "\\(4096\\)",
-          "\\(512\\)",
-          "\\\\( 2051 \\\\)"
-        ],
-        "hint": "Double it.",
-        "explanation": "\\(2048\\)."
-      },
-      "ar": {
-        "question": "إذا \\(2^{10} = 1024\\)، ما \\(2^{11}\\)؟",
-        "options": [
-          "\\(1024\\)",
-          "\\(2048\\)",
-          "\\(4096\\)",
-          "\\(512\\)",
-          "\\\\( 2051 \\\\)"
-        ],
-        "hint": "ضاعفها.",
-        "explanation": "\\(2048\\)."
-      }
-    },
-    "correct_index": "1",
-    "original_difficulty": "hard"
   },
   {
     "id": "KANG-ECO-142",
@@ -14508,42 +13248,6 @@
     "original_difficulty": "hard"
   },
   {
-    "id": "KANG-ECO-148",
-    "track": "kangaroo",
-    "level": "Ecolier",
-    "topic": "Arithmetic",
-    "type": "MCQ",
-    "difficulty": "Hard",
-    "content": {
-      "en": {
-        "question": "What is \\(17^2 - 16^2\\)?",
-        "options": [
-          "\\(31\\)",
-          "\\(32\\)",
-          "\\(33\\)",
-          "\\(34\\)",
-          "\\\\( 36 \\\\)"
-        ],
-        "hint": "Difference of squares: (17+16)(17-16) = 33×1.",
-        "explanation": "\\(33\\)."
-      },
-      "ar": {
-        "question": "ما قيمة \\(17^2 - 16^2\\)؟",
-        "options": [
-          "\\(31\\)",
-          "\\(32\\)",
-          "\\(33\\)",
-          "\\(34\\)",
-          "\\\\( 36 \\\\)"
-        ],
-        "hint": "فرق المربعات: (17+16)(17-16) = 33.",
-        "explanation": "\\(33\\)."
-      }
-    },
-    "correct_index": "2",
-    "original_difficulty": "hard"
-  },
-  {
     "id": "KANG-ECO-149",
     "track": "kangaroo",
     "level": "Ecolier",
@@ -14616,42 +13320,6 @@
     "original_difficulty": "hard"
   },
   {
-    "id": "KANG-ECO-151",
-    "track": "kangaroo",
-    "level": "Ecolier",
-    "topic": "Arithmetic",
-    "type": "MCQ",
-    "difficulty": "Easy",
-    "content": {
-      "en": {
-        "question": "What is \\(4 \\times 25\\)?",
-        "options": [
-          "\\(80\\)",
-          "\\(90\\)",
-          "\\(100\\)",
-          "\\(110\\)",
-          "\\\\( 103 \\\\)"
-        ],
-        "hint": "4 × 25 = 100.",
-        "explanation": "\\(100\\)."
-      },
-      "ar": {
-        "question": "ما ناتج \\(4 \\times 25\\)؟",
-        "options": [
-          "\\(80\\)",
-          "\\(90\\)",
-          "\\(100\\)",
-          "\\(110\\)",
-          "\\\\( 103 \\\\)"
-        ],
-        "hint": "4 × 25 = 100.",
-        "explanation": "\\(100\\)."
-      }
-    },
-    "correct_index": "2",
-    "original_difficulty": "easy"
-  },
-  {
     "id": "KANG-ECO-152",
     "track": "kangaroo",
     "level": "Ecolier",
@@ -14685,42 +13353,6 @@
       }
     },
     "correct_index": "2",
-    "original_difficulty": "easy"
-  },
-  {
-    "id": "KANG-ECO-153",
-    "track": "kangaroo",
-    "level": "Ecolier",
-    "topic": "Arithmetic",
-    "type": "MCQ",
-    "difficulty": "Easy",
-    "content": {
-      "en": {
-        "question": "\\(1000 \\div 10 = \\)?",
-        "options": [
-          "\\(10\\)",
-          "\\(100\\)",
-          "\\(200\\)",
-          "\\(50\\)",
-          "\\\\( 103 \\\\)"
-        ],
-        "hint": "Move decimal point.",
-        "explanation": "\\(100\\)."
-      },
-      "ar": {
-        "question": "\\(1000 \\div 10 = \\)؟",
-        "options": [
-          "\\(10\\)",
-          "\\(100\\)",
-          "\\(200\\)",
-          "\\(50\\)",
-          "\\\\( 103 \\\\)"
-        ],
-        "hint": "انقل الفاصلة.",
-        "explanation": "\\(100\\)."
-      }
-    },
-    "correct_index": "1",
     "original_difficulty": "easy"
   },
   {
@@ -14796,42 +13428,6 @@
     "original_difficulty": "easy"
   },
   {
-    "id": "KANG-ECO-156",
-    "track": "kangaroo",
-    "level": "Ecolier",
-    "topic": "Arithmetic",
-    "type": "MCQ",
-    "difficulty": "Easy",
-    "content": {
-      "en": {
-        "question": "What is \\(90 \\div 9\\)?",
-        "options": [
-          "\\(9\\)",
-          "\\(10\\)",
-          "\\(11\\)",
-          "\\(12\\)",
-          "\\\\( 13 \\\\)"
-        ],
-        "hint": "9 × 10 = 90.",
-        "explanation": "\\(10\\)."
-      },
-      "ar": {
-        "question": "ما ناتج \\(90 \\div 9\\)؟",
-        "options": [
-          "\\(9\\)",
-          "\\(10\\)",
-          "\\(11\\)",
-          "\\(12\\)",
-          "\\\\( 13 \\\\)"
-        ],
-        "hint": "9 × 10 = 90.",
-        "explanation": "\\(10\\)."
-      }
-    },
-    "correct_index": "1",
-    "original_difficulty": "easy"
-  },
-  {
     "id": "KANG-ECO-157",
     "track": "kangaroo",
     "level": "Ecolier",
@@ -14904,42 +13500,6 @@
     "original_difficulty": "easy"
   },
   {
-    "id": "KANG-ECO-159",
-    "track": "kangaroo",
-    "level": "Ecolier",
-    "topic": "Arithmetic",
-    "type": "MCQ",
-    "difficulty": "Easy",
-    "content": {
-      "en": {
-        "question": "What is \\(6 \\times 9\\)?",
-        "options": [
-          "\\(48\\)",
-          "\\(52\\)",
-          "\\(54\\)",
-          "\\(56\\)",
-          "\\\\( 57 \\\\)"
-        ],
-        "hint": "6 nines.",
-        "explanation": "\\(54\\)."
-      },
-      "ar": {
-        "question": "ما ناتج \\(6 \\times 9\\)؟",
-        "options": [
-          "\\(48\\)",
-          "\\(52\\)",
-          "\\(54\\)",
-          "\\(56\\)",
-          "\\\\( 57 \\\\)"
-        ],
-        "hint": "ستة تسعات.",
-        "explanation": "\\(54\\)."
-      }
-    },
-    "correct_index": "2",
-    "original_difficulty": "easy"
-  },
-  {
     "id": "KANG-ECO-160",
     "track": "kangaroo",
     "level": "Ecolier",
@@ -14970,42 +13530,6 @@
         ],
         "hint": "4 × 7.",
         "explanation": "\\(28\\) سم."
-      }
-    },
-    "correct_index": "2",
-    "original_difficulty": "easy"
-  },
-  {
-    "id": "KANG-ECO-161",
-    "track": "kangaroo",
-    "level": "Ecolier",
-    "topic": "Arithmetic",
-    "type": "MCQ",
-    "difficulty": "Easy",
-    "content": {
-      "en": {
-        "question": "What is \\( 14 + 28 \\)?",
-        "options": [
-          "\\( 38 \\)",
-          "\\( 40 \\)",
-          "\\( 42 \\)",
-          "\\( 44 \\)",
-          "\\\\( 45 \\\\)"
-        ],
-        "hint": "10+20 + 4+8",
-        "explanation": "\\( 42 \\)."
-      },
-      "ar": {
-        "question": "ما ناتج \\( 14 + 28 \\)؟",
-        "options": [
-          "\\( 38 \\)",
-          "\\( 40 \\)",
-          "\\( 42 \\)",
-          "\\( 44 \\)",
-          "\\\\( 45 \\\\)"
-        ],
-        "hint": "اجمع العشرات ثم الآحاد.",
-        "explanation": "\\( 42 \\)."
       }
     },
     "correct_index": "2",
@@ -15120,42 +13644,6 @@
     "original_difficulty": "easy"
   },
   {
-    "id": "KANG-ECO-165",
-    "track": "kangaroo",
-    "level": "Ecolier",
-    "topic": "Arithmetic",
-    "type": "MCQ",
-    "difficulty": "Easy",
-    "content": {
-      "en": {
-        "question": "What is \\( 81 \\div 9 \\)?",
-        "options": [
-          "\\( 7 \\)",
-          "\\( 8 \\)",
-          "\\( 9 \\)",
-          "\\( 10 \\)",
-          "\\\\( 12 \\\\)"
-        ],
-        "hint": "9 times 9 equals 81.",
-        "explanation": "\\( 9 \\)."
-      },
-      "ar": {
-        "question": "ما ناتج \\( 81 \\div 9 \\)؟",
-        "options": [
-          "\\( 7 \\)",
-          "\\( 8 \\)",
-          "\\( 9 \\)",
-          "\\( 10 \\)",
-          "\\\\( 12 \\\\)"
-        ],
-        "hint": "9 × 9 = 81",
-        "explanation": "\\( 9 \\)."
-      }
-    },
-    "correct_index": "2",
-    "original_difficulty": "easy"
-  },
-  {
     "id": "KANG-ECO-166",
     "track": "kangaroo",
     "level": "Ecolier",
@@ -15189,42 +13677,6 @@
       }
     },
     "correct_index": "1",
-    "original_difficulty": "easy"
-  },
-  {
-    "id": "KANG-ECO-167",
-    "track": "kangaroo",
-    "level": "Ecolier",
-    "topic": "Arithmetic",
-    "type": "MCQ",
-    "difficulty": "Easy",
-    "content": {
-      "en": {
-        "question": "What is \\( 15 \\times 3 \\)?",
-        "options": [
-          "\\( 35 \\)",
-          "\\( 40 \\)",
-          "\\( 45 \\)",
-          "\\( 50 \\)",
-          "\\\\( 48 \\\\)"
-        ],
-        "hint": "15 + 15 + 15",
-        "explanation": "\\( 45 \\)."
-      },
-      "ar": {
-        "question": "ما ناتج \\( 15 \\times 3 \\)؟",
-        "options": [
-          "\\( 35 \\)",
-          "\\( 40 \\)",
-          "\\( 45 \\)",
-          "\\( 50 \\)",
-          "\\\\( 48 \\\\)"
-        ],
-        "hint": "15 + 15 + 15",
-        "explanation": "\\( 45 \\)."
-      }
-    },
-    "correct_index": "2",
     "original_difficulty": "easy"
   },
   {
@@ -15297,78 +13749,6 @@
       }
     },
     "correct_index": "2",
-    "original_difficulty": "easy"
-  },
-  {
-    "id": "KANG-ECO-170",
-    "track": "kangaroo",
-    "level": "Ecolier",
-    "topic": "Arithmetic",
-    "type": "MCQ",
-    "difficulty": "Easy",
-    "content": {
-      "en": {
-        "question": "What is \\( 100 - 64 \\)?",
-        "options": [
-          "\\( 34 \\)",
-          "\\( 36 \\)",
-          "\\( 44 \\)",
-          "\\( 46 \\)",
-          "\\\\( 39 \\\\)"
-        ],
-        "hint": "100 - 60 - 4",
-        "explanation": "\\( 36 \\)."
-      },
-      "ar": {
-        "question": "ما ناتج \\( 100 - 64 \\)؟",
-        "options": [
-          "\\( 34 \\)",
-          "\\( 36 \\)",
-          "\\( 44 \\)",
-          "\\( 46 \\)",
-          "\\\\( 39 \\\\)"
-        ],
-        "hint": "100 - 60 - 4",
-        "explanation": "\\( 36 \\)."
-      }
-    },
-    "correct_index": "1",
-    "original_difficulty": "easy"
-  },
-  {
-    "id": "KANG-ECO-171",
-    "track": "kangaroo",
-    "level": "Ecolier",
-    "topic": "Arithmetic",
-    "type": "MCQ",
-    "difficulty": "Easy",
-    "content": {
-      "en": {
-        "question": "What is \\( 25 \\times 30 \\)?",
-        "options": [
-          "740",
-          "750",
-          "760",
-          "755",
-          "\\\\( 753 \\\\)"
-        ],
-        "hint": "Multiply step by step.",
-        "explanation": "\\( 25 \\times 30 = 750 \\)."
-      },
-      "ar": {
-        "question": "ما ناتج \\( 25 \\times 30 \\)؟",
-        "options": [
-          "740",
-          "750",
-          "760",
-          "755",
-          "\\\\( 753 \\\\)"
-        ],
-        "hint": "اضرب الخطوات بانتظام.",
-        "explanation": "الناتج هو \\( 750 \\)."
-      }
-    },
-    "correct_index": "1",
     "original_difficulty": "easy"
   },
   {
@@ -15480,546 +13860,6 @@
     "original_difficulty": "medium"
   },
   {
-    "id": "KANG-ECO-176",
-    "track": "kangaroo",
-    "level": "Ecolier",
-    "topic": "Arithmetic",
-    "type": "MCQ",
-    "difficulty": "Hard",
-    "content": {
-      "en": {
-        "question": "What is \\( 40 \\times 40 \\)?",
-        "options": [
-          "1590",
-          "1600",
-          "1610",
-          "1605",
-          "\\\\( 1603 \\\\)"
-        ],
-        "hint": "Multiply step by step.",
-        "explanation": "\\( 40 \\times 40 = 1600 \\)."
-      },
-      "ar": {
-        "question": "ما ناتج \\( 40 \\times 40 \\)؟",
-        "options": [
-          "1590",
-          "1600",
-          "1610",
-          "1605",
-          "\\\\( 1603 \\\\)"
-        ],
-        "hint": "اضرب الخطوات بانتظام.",
-        "explanation": "الناتج هو \\( 1600 \\)."
-      }
-    },
-    "correct_index": "1",
-    "original_difficulty": "hard"
-  },
-  {
-    "id": "KANG-ECO-181",
-    "track": "kangaroo",
-    "level": "Ecolier",
-    "topic": "Arithmetic",
-    "type": "MCQ",
-    "difficulty": "Medium",
-    "content": {
-      "en": {
-        "question": "What is \\( 5 \\times 10 \\)?",
-        "options": [
-          "40",
-          "50",
-          "60",
-          "55",
-          "\\\\( 53 \\\\)"
-        ],
-        "hint": "Multiply step by step.",
-        "explanation": "\\( 5 \\times 10 = 50 \\)."
-      },
-      "ar": {
-        "question": "ما ناتج \\( 5 \\times 10 \\)؟",
-        "options": [
-          "40",
-          "50",
-          "60",
-          "55",
-          "\\\\( 53 \\\\)"
-        ],
-        "hint": "اضرب الخطوات بانتظام.",
-        "explanation": "الناتج هو \\( 50 \\)."
-      }
-    },
-    "correct_index": "1",
-    "original_difficulty": "medium"
-  },
-  {
-    "id": "KANG-ECO-186",
-    "track": "kangaroo",
-    "level": "Ecolier",
-    "topic": "Arithmetic",
-    "type": "MCQ",
-    "difficulty": "Easy",
-    "content": {
-      "en": {
-        "question": "What is \\( 20 \\times 20 \\)?",
-        "options": [
-          "390",
-          "400",
-          "410",
-          "405",
-          "\\\\( 403 \\\\)"
-        ],
-        "hint": "Multiply step by step.",
-        "explanation": "\\( 20 \\times 20 = 400 \\)."
-      },
-      "ar": {
-        "question": "ما ناتج \\( 20 \\times 20 \\)؟",
-        "options": [
-          "390",
-          "400",
-          "410",
-          "405",
-          "\\\\( 403 \\\\)"
-        ],
-        "hint": "اضرب الخطوات بانتظام.",
-        "explanation": "الناتج هو \\( 400 \\)."
-      }
-    },
-    "correct_index": "1",
-    "original_difficulty": "easy"
-  },
-  {
-    "id": "KANG-ECO-191",
-    "track": "kangaroo",
-    "level": "Ecolier",
-    "topic": "Arithmetic",
-    "type": "MCQ",
-    "difficulty": "Hard",
-    "content": {
-      "en": {
-        "question": "What is \\( 35 \\times 30 \\)?",
-        "options": [
-          "1040",
-          "1050",
-          "1060",
-          "1055",
-          "\\\\( 1053 \\\\)"
-        ],
-        "hint": "Multiply step by step.",
-        "explanation": "\\( 35 \\times 30 = 1050 \\)."
-      },
-      "ar": {
-        "question": "ما ناتج \\( 35 \\times 30 \\)؟",
-        "options": [
-          "1040",
-          "1050",
-          "1060",
-          "1055",
-          "\\\\( 1053 \\\\)"
-        ],
-        "hint": "اضرب الخطوات بانتظام.",
-        "explanation": "الناتج هو \\( 1050 \\)."
-      }
-    },
-    "correct_index": "1",
-    "original_difficulty": "hard"
-  },
-  {
-    "id": "KANG-ECO-196",
-    "track": "kangaroo",
-    "level": "Ecolier",
-    "topic": "Arithmetic",
-    "type": "MCQ",
-    "difficulty": "Medium",
-    "content": {
-      "en": {
-        "question": "What is \\( 50 \\times 40 \\)?",
-        "options": [
-          "1990",
-          "2000",
-          "2010",
-          "2005",
-          "\\\\( 2003 \\\\)"
-        ],
-        "hint": "Multiply step by step.",
-        "explanation": "\\( 50 \\times 40 = 2000 \\)."
-      },
-      "ar": {
-        "question": "ما ناتج \\( 50 \\times 40 \\)؟",
-        "options": [
-          "1990",
-          "2000",
-          "2010",
-          "2005",
-          "\\\\( 2003 \\\\)"
-        ],
-        "hint": "اضرب الخطوات بانتظام.",
-        "explanation": "الناتج هو \\( 2000 \\)."
-      }
-    },
-    "correct_index": "1",
-    "original_difficulty": "medium"
-  },
-  {
-    "id": "KANG-ECO-201",
-    "track": "kangaroo",
-    "level": "Ecolier",
-    "topic": "Arithmetic",
-    "type": "MCQ",
-    "difficulty": "Easy",
-    "content": {
-      "en": {
-        "question": "What is \\( 15 \\times 10 \\)?",
-        "options": [
-          "140",
-          "150",
-          "160",
-          "155",
-          "\\\\( 153 \\\\)"
-        ],
-        "hint": "Multiply step by step.",
-        "explanation": "\\( 15 \\times 10 = 150 \\)."
-      },
-      "ar": {
-        "question": "ما ناتج \\( 15 \\times 10 \\)؟",
-        "options": [
-          "140",
-          "150",
-          "160",
-          "155",
-          "\\\\( 153 \\\\)"
-        ],
-        "hint": "اضرب الخطوات بانتظام.",
-        "explanation": "الناتج هو \\( 150 \\)."
-      }
-    },
-    "correct_index": "1",
-    "original_difficulty": "easy"
-  },
-  {
-    "id": "KANG-ECO-206",
-    "track": "kangaroo",
-    "level": "Ecolier",
-    "topic": "Arithmetic",
-    "type": "MCQ",
-    "difficulty": "Hard",
-    "content": {
-      "en": {
-        "question": "What is \\( 30 \\times 20 \\)?",
-        "options": [
-          "590",
-          "600",
-          "610",
-          "605",
-          "\\\\( 603 \\\\)"
-        ],
-        "hint": "Multiply step by step.",
-        "explanation": "\\( 30 \\times 20 = 600 \\)."
-      },
-      "ar": {
-        "question": "ما ناتج \\( 30 \\times 20 \\)؟",
-        "options": [
-          "590",
-          "600",
-          "610",
-          "605",
-          "\\\\( 603 \\\\)"
-        ],
-        "hint": "اضرب الخطوات بانتظام.",
-        "explanation": "الناتج هو \\( 600 \\)."
-      }
-    },
-    "correct_index": "1",
-    "original_difficulty": "hard"
-  },
-  {
-    "id": "KANG-ECO-211",
-    "track": "kangaroo",
-    "level": "Ecolier",
-    "topic": "Arithmetic",
-    "type": "MCQ",
-    "difficulty": "Medium",
-    "content": {
-      "en": {
-        "question": "What is \\( 45 \\times 30 \\)?",
-        "options": [
-          "1340",
-          "1350",
-          "1360",
-          "1355",
-          "\\\\( 1353 \\\\)"
-        ],
-        "hint": "Multiply step by step.",
-        "explanation": "\\( 45 \\times 30 = 1350 \\)."
-      },
-      "ar": {
-        "question": "ما ناتج \\( 45 \\times 30 \\)؟",
-        "options": [
-          "1340",
-          "1350",
-          "1360",
-          "1355",
-          "\\\\( 1353 \\\\)"
-        ],
-        "hint": "اضرب الخطوات بانتظام.",
-        "explanation": "الناتج هو \\( 1350 \\)."
-      }
-    },
-    "correct_index": "1",
-    "original_difficulty": "medium"
-  },
-  {
-    "id": "KANG-ECO-216",
-    "track": "kangaroo",
-    "level": "Ecolier",
-    "topic": "Arithmetic",
-    "type": "MCQ",
-    "difficulty": "Easy",
-    "content": {
-      "en": {
-        "question": "What is \\( 10 \\times 40 \\)?",
-        "options": [
-          "390",
-          "400",
-          "410",
-          "405",
-          "\\\\( 403 \\\\)"
-        ],
-        "hint": "Multiply step by step.",
-        "explanation": "\\( 10 \\times 40 = 400 \\)."
-      },
-      "ar": {
-        "question": "ما ناتج \\( 10 \\times 40 \\)؟",
-        "options": [
-          "390",
-          "400",
-          "410",
-          "405",
-          "\\\\( 403 \\\\)"
-        ],
-        "hint": "اضرب الخطوات بانتظام.",
-        "explanation": "الناتج هو \\( 400 \\)."
-      }
-    },
-    "correct_index": "1",
-    "original_difficulty": "easy"
-  },
-  {
-    "id": "KANG-ECO-221",
-    "track": "kangaroo",
-    "level": "Ecolier",
-    "topic": "Arithmetic",
-    "type": "MCQ",
-    "difficulty": "Hard",
-    "content": {
-      "en": {
-        "question": "What is \\( 25 \\times 10 \\)?",
-        "options": [
-          "240",
-          "250",
-          "260",
-          "255",
-          "\\\\( 253 \\\\)"
-        ],
-        "hint": "Multiply step by step.",
-        "explanation": "\\( 25 \\times 10 = 250 \\)."
-      },
-      "ar": {
-        "question": "ما ناتج \\( 25 \\times 10 \\)؟",
-        "options": [
-          "240",
-          "250",
-          "260",
-          "255",
-          "\\\\( 253 \\\\)"
-        ],
-        "hint": "اضرب الخطوات بانتظام.",
-        "explanation": "الناتج هو \\( 250 \\)."
-      }
-    },
-    "correct_index": "1",
-    "original_difficulty": "hard"
-  },
-  {
-    "id": "KANG-ECO-226",
-    "track": "kangaroo",
-    "level": "Ecolier",
-    "topic": "Arithmetic",
-    "type": "MCQ",
-    "difficulty": "Medium",
-    "content": {
-      "en": {
-        "question": "What is \\( 40 \\times 20 \\)?",
-        "options": [
-          "790",
-          "800",
-          "810",
-          "805",
-          "\\\\( 803 \\\\)"
-        ],
-        "hint": "Multiply step by step.",
-        "explanation": "\\( 40 \\times 20 = 800 \\)."
-      },
-      "ar": {
-        "question": "ما ناتج \\( 40 \\times 20 \\)؟",
-        "options": [
-          "790",
-          "800",
-          "810",
-          "805",
-          "\\\\( 803 \\\\)"
-        ],
-        "hint": "اضرب الخطوات بانتظام.",
-        "explanation": "الناتج هو \\( 800 \\)."
-      }
-    },
-    "correct_index": "1",
-    "original_difficulty": "medium"
-  },
-  {
-    "id": "KANG-ECO-231",
-    "track": "kangaroo",
-    "level": "Ecolier",
-    "topic": "Arithmetic",
-    "type": "MCQ",
-    "difficulty": "Easy",
-    "content": {
-      "en": {
-        "question": "What is \\( 5 \\times 30 \\)?",
-        "options": [
-          "140",
-          "150",
-          "160",
-          "155",
-          "\\\\( 153 \\\\)"
-        ],
-        "hint": "Multiply step by step.",
-        "explanation": "\\( 5 \\times 30 = 150 \\)."
-      },
-      "ar": {
-        "question": "ما ناتج \\( 5 \\times 30 \\)؟",
-        "options": [
-          "140",
-          "150",
-          "160",
-          "155",
-          "\\\\( 153 \\\\)"
-        ],
-        "hint": "اضرب الخطوات بانتظام.",
-        "explanation": "الناتج هو \\( 150 \\)."
-      }
-    },
-    "correct_index": "1",
-    "original_difficulty": "easy"
-  },
-  {
-    "id": "KANG-ECO-236",
-    "track": "kangaroo",
-    "level": "Ecolier",
-    "topic": "Arithmetic",
-    "type": "MCQ",
-    "difficulty": "Hard",
-    "content": {
-      "en": {
-        "question": "What is \\( 20 \\times 40 \\)?",
-        "options": [
-          "790",
-          "800",
-          "810",
-          "805",
-          "\\\\( 803 \\\\)"
-        ],
-        "hint": "Multiply step by step.",
-        "explanation": "\\( 20 \\times 40 = 800 \\)."
-      },
-      "ar": {
-        "question": "ما ناتج \\( 20 \\times 40 \\)؟",
-        "options": [
-          "790",
-          "800",
-          "810",
-          "805",
-          "\\\\( 803 \\\\)"
-        ],
-        "hint": "اضرب الخطوات بانتظام.",
-        "explanation": "الناتج هو \\( 800 \\)."
-      }
-    },
-    "correct_index": "1",
-    "original_difficulty": "hard"
-  },
-  {
-    "id": "KANG-ECO-241",
-    "track": "kangaroo",
-    "level": "Ecolier",
-    "topic": "Arithmetic",
-    "type": "MCQ",
-    "difficulty": "Medium",
-    "content": {
-      "en": {
-        "question": "What is \\( 35 \\times 10 \\)?",
-        "options": [
-          "340",
-          "350",
-          "360",
-          "355",
-          "\\\\( 353 \\\\)"
-        ],
-        "hint": "Multiply step by step.",
-        "explanation": "\\( 35 \\times 10 = 350 \\)."
-      },
-      "ar": {
-        "question": "ما ناتج \\( 35 \\times 10 \\)؟",
-        "options": [
-          "340",
-          "350",
-          "360",
-          "355",
-          "\\\\( 353 \\\\)"
-        ],
-        "hint": "اضرب الخطوات بانتظام.",
-        "explanation": "الناتج هو \\( 350 \\)."
-      }
-    },
-    "correct_index": "1",
-    "original_difficulty": "medium"
-  },
-  {
-    "id": "KANG-ECO-246",
-    "track": "kangaroo",
-    "level": "Ecolier",
-    "topic": "Arithmetic",
-    "type": "MCQ",
-    "difficulty": "Easy",
-    "content": {
-      "en": {
-        "question": "What is \\( 50 \\times 20 \\)?",
-        "options": [
-          "990",
-          "1000",
-          "1010",
-          "1005",
-          "\\\\( 1003 \\\\)"
-        ],
-        "hint": "Multiply step by step.",
-        "explanation": "\\( 50 \\times 20 = 1000 \\)."
-      },
-      "ar": {
-        "question": "ما ناتج \\( 50 \\times 20 \\)؟",
-        "options": [
-          "990",
-          "1000",
-          "1010",
-          "1005",
-          "\\\\( 1003 \\\\)"
-        ],
-        "hint": "اضرب الخطوات بانتظام.",
-        "explanation": "الناتج هو \\( 1000 \\)."
-      }
-    },
-    "correct_index": "1",
-    "original_difficulty": "easy"
-  },
-  {
     "id": "KANG-BEN-001",
     "track": "kangaroo",
     "level": "Benjamin",
@@ -16120,40 +13960,6 @@
     },
     "correct_index": "1",
     "original_difficulty": "easy"
-  },
-  {
-    "id": "KANG-BEN-005",
-    "track": "kangaroo",
-    "level": "Benjamin",
-    "topic": "Algebraic Thinking",
-    "type": "MCQ",
-    "difficulty": "Medium",
-    "content": {
-      "en": {
-        "question": "If \\( 3x + 6 = 27 \\), what is the value of \\( x \\)?",
-        "options": [
-          "\\( 6 \\)",
-          "\\( 7 \\)",
-          "\\( 8 \\)",
-          "\\( 9 \\)"
-        ],
-        "hint": "Subtract constant first, then divide by coefficient.",
-        "explanation": "\\( 3x = 21 \\implies x = 7 \\)."
-      },
-      "ar": {
-        "question": "إذا كان \\( 3x + 6 = 27 \\)، فما قيمة \\( x \\)؟",
-        "options": [
-          "\\( 6 \\)",
-          "\\( 7 \\)",
-          "\\( 8 \\)",
-          "\\( 9 \\)"
-        ],
-        "hint": "اطرح الثابت أولاً، ثم اقسم على معامل س.",
-        "explanation": "\\( 3x = 21 \\implies x = 7 \\)."
-      }
-    },
-    "correct_index": "1",
-    "original_difficulty": "medium"
   },
   {
     "id": "KANG-BEN-006",

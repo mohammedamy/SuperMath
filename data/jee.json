@@ -4148,40 +4148,6 @@
     "original_difficulty": "medium"
   },
   {
-    "id": "JEE-136",
-    "track": "jee",
-    "level": "Grade 12",
-    "topic": "Differential Equations",
-    "type": "MCQ",
-    "difficulty": "Medium",
-    "content": {
-      "en": {
-        "question": "Solve the differential equation \\( \\frac{dy}{dx} + y \\tan(x) = \\sec(x) \\) with initial condition \\( y(0) = 1 \\). Find the value of \\( y\\left(\\frac{\\pi}{3}\\right) \\).",
-        "options": [
-          "\\( \\frac{\\sqrt{3}+1}{2} \\)",
-          "\\( \\frac{\\sqrt{3}-1}{2} \\)",
-          "\\( \\sqrt{3} \\)",
-          "\\( 2 \\)"
-        ],
-        "hint": "Find the integrating factor \\( IF = e^{\\int \\tan(x) dx} = \\sec(x) \\).",
-        "explanation": "This is a first-order linear differential equation. Integrating factor \\( IF = e^{\\int \\tan x dx} = \\sec x \\). General solution is \\( y \\sec x = \\int \\sec^2 x dx = \\tan x + C \\). Using \\( y(0) = 1 \\): \\( 1 \\cdot 1 = 0 + C \\implies C = 1 \\). Thus \\( y \\sec x = \\tan x + 1 \\implies y = \\sin x + \\cos x \\). For \\( x = \\frac{\\pi}{3} \\), \\( y = \\sin\\left(\\frac{\\pi}{3}\\right) + \\cos\\left(\\frac{\\pi}{3}\\right) = \\frac{\\sqrt{3}}{2} + \\frac{1}{2} = \\frac{\\sqrt{3}+1}{2} \\)."
-      },
-      "ar": {
-        "question": "حل المعادلة التفاضلية \\( \\frac{dy}{dx} + y \\tan(x) = \\sec(x) \\) بالشرط الابتدائي \\( y(0) = 1 \\). أوجد قيمة \\( y\\left(\\frac{\\pi}{3}\\right) \\).",
-        "options": [
-          "\\( \\frac{\\sqrt{3}+1}{2} \\)",
-          "\\( \\frac{\\sqrt{3}-1}{2} \\)",
-          "\\( \\sqrt{3} \\)",
-          "\\( 2 \\)"
-        ],
-        "hint": "أوجد عامل التكامل \\( IF = e^{\\int \\tan(x) dx} = \\sec(x) \\).",
-        "explanation": "هذه معادلة تفاضلية خطية من الرتبة الأولى. عامل التكامل \\( IF = \\sec x \\). الحل العام هو \\( y \\sec x = \\tan x + C \\). باستخدام \\( y(0) = 1 \\) نجد أن \\( C = 1 \\). وبالتالي \\( y = \\sin x + \\cos x \\). عند \\( x = \\frac{\\pi}{3} \\)، \\( y = \\frac{\\sqrt{3}+1}{2} \\)."
-      }
-    },
-    "correct_index": "0",
-    "original_difficulty": "medium"
-  },
-  {
     "id": "JEE-137",
     "track": "jee",
     "level": "Grade 12",
