@@ -24410,5 +24410,170 @@
     },
     "correct_index": "2",
     "original_difficulty": "hard"
+  },
+  {
+    "id": "NAFES-6-176",
+    "track": "nafes",
+    "level": "Grade 6",
+    "topic": "Fractions",
+    "type": "MCQ",
+    "difficulty": "medium",
+    "content": {
+      "en": {
+        "question": "Which fraction is equivalent to \\( \\dfrac{12}{16} \\)?",
+        "options": [
+          "\\( \\dfrac{2}{3} \\)",
+          "\\( \\dfrac{3}{4} \\)",
+          "\\( \\dfrac{4}{5} \\)",
+          "\\( \\dfrac{5}{8} \\)"
+        ],
+        "hint": "Simplify by dividing by GCF(12,16)=4.",
+        "explanation": "\\( \\dfrac{12}{16} = \\dfrac{3}{4} \\)."
+      },
+      "ar": {
+        "question": "أيّ الكسور مكافئ لـ\\( \\dfrac{12}{16} \\)؟",
+        "options": [
+          "\\( \\dfrac{2}{3} \\)",
+          "\\( \\dfrac{3}{4} \\)",
+          "\\( \\dfrac{4}{5} \\)",
+          "\\( \\dfrac{5}{8} \\)"
+        ],
+        "hint": "بسّط بقسمة ق.م.أ(12,16)=4.",
+        "explanation": "\\( \\dfrac{12}{16} = \\dfrac{3}{4} \\)."
+      }
+    },
+    "correct_index": "1"
+  },
+  {
+    "id": "NAFES-6-178",
+    "track": "nafes",
+    "level": "Grade 6",
+    "topic": "LCM and HCF",
+    "type": "MCQ",
+    "difficulty": "medium",
+    "content": {
+      "en": {
+        "question": "What is the HCF of \\( 72 \\) and \\( 90 \\)?",
+        "options": [
+          "\\( 9 \\)",
+          "\\( 12 \\)",
+          "\\( 18 \\)",
+          "\\( 36 \\)"
+        ],
+        "hint": "Prime factorize both and find the common factors.",
+        "explanation": "72=8×9, 90=10×9. HCF=18."
+      },
+      "ar": {
+        "question": "ما القاسم المشترك الأكبر لـ\\( 72 \\) و\\( 90 \\)؟",
+        "options": [
+          "\\( 9 \\)",
+          "\\( 12 \\)",
+          "\\( 18 \\)",
+          "\\( 36 \\)"
+        ],
+        "hint": "حلّل العددين وأوجد العوامل المشتركة.",
+        "explanation": "ق.م.أ(72,90)=18."
+      }
+    },
+    "correct_index": "2"
+  },
+  {
+    "id": "NAFES-6-180",
+    "track": "nafes",
+    "level": "Grade 6",
+    "topic": "Algebra",
+    "type": "MCQ",
+    "difficulty": "hard",
+    "content": {
+      "en": {
+        "question": "What is the value of \\( (-2)^5 \\)?",
+        "options": [
+          "\\( 32 \\)",
+          "\\( -32 \\)",
+          "\\( 10 \\)",
+          "\\( -10 \\)"
+        ],
+        "hint": "Odd power of negative = negative.",
+        "explanation": "\\( (-2)^5 = -32 \\)."
+      },
+      "ar": {
+        "question": "ما قيمة \\( (-2)^5 \\)؟",
+        "options": [
+          "\\( 32 \\)",
+          "\\( -32 \\)",
+          "\\( 10 \\)",
+          "\\( -10 \\)"
+        ],
+        "hint": "قوة فردية لعدد سالب تعطي ناتجاً سالباً.",
+        "explanation": "\\( (-2)^5 = -32 \\)."
+      }
+    },
+    "correct_index": "1"
+  },
+  {
+    "id": "NAFES-6-206",
+    "track": "nafes",
+    "level": "Grade 6",
+    "topic": "Algebra",
+    "type": "MCQ",
+    "difficulty": "hard",
+    "content": {
+      "en": {
+        "question": "What is the value of \\( 2^3 + 3^2 - 4^1 \\)?",
+        "options": [
+          "\\( 13 \\)",
+          "\\( 14 \\)",
+          "\\( 15 \\)",
+          "\\( 17 \\)"
+        ],
+        "hint": "Calculate each power first.",
+        "explanation": "\\( 8 + 9 - 4 = 13 \\)."
+      },
+      "ar": {
+        "question": "ما قيمة \\( 2^3 + 3^2 - 4^1 \\)؟",
+        "options": [
+          "\\( 13 \\)",
+          "\\( 14 \\)",
+          "\\( 15 \\)",
+          "\\( 17 \\)"
+        ],
+        "hint": "احسب كل قوة أولاً.",
+        "explanation": "\\( 8 + 9 - 4 = 13 \\)."
+      }
+    },
+    "correct_index": "0"
+  },
+  {
+    "id": "NAFES-6-208",
+    "track": "nafes",
+    "level": "Grade 6",
+    "topic": "Geometry",
+    "type": "MCQ",
+    "difficulty": "medium",
+    "content": {
+      "en": {
+        "question": "The volume of a cube with side \\( 5 \\) cm is:",
+        "options": [
+          "\\( 25 \\) cm³",
+          "\\( 75 \\) cm³",
+          "\\( 100 \\) cm³",
+          "\\( 125 \\) cm³"
+        ],
+        "hint": "V = s³.",
+        "explanation": "\\( 5^3 = 125 \\) cm³."
+      },
+      "ar": {
+        "question": "حجم مكعب طول ضلعه \\( 5 \\) سم هو:",
+        "options": [
+          "\\( 25 \\) سم³",
+          "\\( 75 \\) سم³",
+          "\\( 100 \\) سم³",
+          "\\( 125 \\) سم³"
+        ],
+        "hint": "V = s³.",
+        "explanation": "\\( 5^3 = 125 \\) سم³."
+      }
+    },
+    "correct_index": "3"
   }
 ]
