@@ -14198,5 +14198,2018 @@
     },
     "correct_index": "1",
     "original_difficulty": "hard"
+  },
+  {
+    "id": "KANG-4131-fde6",
+    "track": "kang",
+    "level": "Level 2",
+    "topic": "Geometry",
+    "type": "MCQ",
+    "difficulty": "hard",
+    "content": {
+      "en": {
+        "question": "What is the sum of the interior angles of a convex hendecagon?",
+        "options": [
+          "\\( 1440^\\circ \\)",
+          "\\( 1620^\\circ \\)",
+          "\\( 1800^\\circ \\)",
+          "\\( 1710^\\circ \\)"
+        ],
+        "hint": "Use the formula \\( (n-2) \\times 180^\\circ \\).",
+        "explanation": "For 11 sides: \\( (11-2) \\times 180 = 1620^\\circ \\)."
+      },
+      "ar": {
+        "question": "ما مجموع الزوايا الداخلية لمضلع أحد عشر ضلعاً محدب؟",
+        "options": [
+          "\\( 1440^\\circ \\)",
+          "\\( 1620^\\circ \\)",
+          "\\( 1800^\\circ \\)",
+          "\\( 1710^\\circ \\)"
+        ],
+        "hint": "استخدم القاعدة \\( (n-2) \\times 180^\\circ \\).",
+        "explanation": "لـ 11 أضلاع: \\( (11-2) \\times 180 = 1620^\\circ \\)."
+      }
+    },
+    "correct_index": "1"
+  },
+  {
+    "id": "KANG-7029-b4e0",
+    "track": "kang",
+    "level": "Grade 12",
+    "topic": "Geometry",
+    "type": "MCQ",
+    "difficulty": "hard",
+    "content": {
+      "en": {
+        "question": "What is the sum of the interior angles of a convex pentagon?",
+        "options": [
+          "\\( 630^\\circ \\)",
+          "\\( 540^\\circ \\)",
+          "\\( 720^\\circ \\)",
+          "\\( 360^\\circ \\)"
+        ],
+        "hint": "Use the formula \\( (n-2) \\times 180^\\circ \\).",
+        "explanation": "For 5 sides: \\( (5-2) \\times 180 = 540^\\circ \\)."
+      },
+      "ar": {
+        "question": "ما مجموع الزوايا الداخلية لمضلع خماسي محدب؟",
+        "options": [
+          "\\( 630^\\circ \\)",
+          "\\( 540^\\circ \\)",
+          "\\( 720^\\circ \\)",
+          "\\( 360^\\circ \\)"
+        ],
+        "hint": "استخدم القاعدة \\( (n-2) \\times 180^\\circ \\).",
+        "explanation": "لـ 5 أضلاع: \\( (5-2) \\times 180 = 540^\\circ \\)."
+      }
+    },
+    "correct_index": "1"
+  },
+  {
+    "id": "KANG-9129-60eb",
+    "track": "kang",
+    "level": "Level 1",
+    "topic": "Logic",
+    "type": "MCQ",
+    "difficulty": "hard",
+    "content": {
+      "en": {
+        "question": "There are socks of 6 different colors in a drawer. What is the minimum number of socks you must pull out in the dark to guarantee you have a matching pair?",
+        "options": [
+          "\\( 12 \\)",
+          "\\( 7 \\)",
+          "\\( 6 \\)",
+          "\\( 8 \\)"
+        ],
+        "hint": "Think about the worst-case scenario (getting one of each color first).",
+        "explanation": "Worst case: you pick 6 socks and they are all different. The next one guarantees a match, so 7."
+      },
+      "ar": {
+        "question": "يوجد في درج جوارب بـ 6 ألوان مختلفة. ما أقل عدد من الجوارب يجب سحبه في الظلام لضمان الحصول على زوج متطابق؟",
+        "options": [
+          "\\( 12 \\)",
+          "\\( 7 \\)",
+          "\\( 6 \\)",
+          "\\( 8 \\)"
+        ],
+        "hint": "فكر في أسوأ حالة (سحب جورب من كل لون أولاً).",
+        "explanation": "أسوأ حالة: تسحب 6 جوارب مختلفة. الجورب التالي يضمن التطابق، إذن 7."
+      }
+    },
+    "correct_index": "1"
+  },
+  {
+    "id": "KANG-2293-24f4",
+    "track": "kang",
+    "level": "Grade 12",
+    "topic": "Logic",
+    "type": "MCQ",
+    "difficulty": "hard",
+    "content": {
+      "en": {
+        "question": "There are socks of 5 different colors in a drawer. What is the minimum number of socks you must pull out in the dark to guarantee you have a matching pair?",
+        "options": [
+          "\\( 7 \\)",
+          "\\( 5 \\)",
+          "\\( 10 \\)",
+          "\\( 6 \\)"
+        ],
+        "hint": "Think about the worst-case scenario (getting one of each color first).",
+        "explanation": "Worst case: you pick 5 socks and they are all different. The next one guarantees a match, so 6."
+      },
+      "ar": {
+        "question": "يوجد في درج جوارب بـ 5 ألوان مختلفة. ما أقل عدد من الجوارب يجب سحبه في الظلام لضمان الحصول على زوج متطابق؟",
+        "options": [
+          "\\( 7 \\)",
+          "\\( 5 \\)",
+          "\\( 10 \\)",
+          "\\( 6 \\)"
+        ],
+        "hint": "فكر في أسوأ حالة (سحب جورب من كل لون أولاً).",
+        "explanation": "أسوأ حالة: تسحب 5 جوارب مختلفة. الجورب التالي يضمن التطابق، إذن 6."
+      }
+    },
+    "correct_index": "3"
+  },
+  {
+    "id": "KANG-2311-ac57",
+    "track": "kang",
+    "level": "Level 2",
+    "topic": "Logic",
+    "type": "MCQ",
+    "difficulty": "hard",
+    "content": {
+      "en": {
+        "question": "There are socks of 4 different colors in a drawer. What is the minimum number of socks you must pull out in the dark to guarantee you have a matching pair?",
+        "options": [
+          "\\( 6 \\)",
+          "\\( 5 \\)",
+          "\\( 4 \\)",
+          "\\( 8 \\)"
+        ],
+        "hint": "Think about the worst-case scenario (getting one of each color first).",
+        "explanation": "Worst case: you pick 4 socks and they are all different. The next one guarantees a match, so 5."
+      },
+      "ar": {
+        "question": "يوجد في درج جوارب بـ 4 ألوان مختلفة. ما أقل عدد من الجوارب يجب سحبه في الظلام لضمان الحصول على زوج متطابق؟",
+        "options": [
+          "\\( 6 \\)",
+          "\\( 5 \\)",
+          "\\( 4 \\)",
+          "\\( 8 \\)"
+        ],
+        "hint": "فكر في أسوأ حالة (سحب جورب من كل لون أولاً).",
+        "explanation": "أسوأ حالة: تسحب 4 جوارب مختلفة. الجورب التالي يضمن التطابق، إذن 5."
+      }
+    },
+    "correct_index": "1"
+  },
+  {
+    "id": "KANG-3730-77b6",
+    "track": "kang",
+    "level": "Grade 12",
+    "topic": "Geometry",
+    "type": "MCQ",
+    "difficulty": "hard",
+    "content": {
+      "en": {
+        "question": "What is the sum of the interior angles of a convex nonagon?",
+        "options": [
+          "\\( 1260^\\circ \\)",
+          "\\( 1440^\\circ \\)",
+          "\\( 1080^\\circ \\)",
+          "\\( 1350^\\circ \\)"
+        ],
+        "hint": "Use the formula \\( (n-2) \\times 180^\\circ \\).",
+        "explanation": "For 9 sides: \\( (9-2) \\times 180 = 1260^\\circ \\)."
+      },
+      "ar": {
+        "question": "ما مجموع الزوايا الداخلية لمضلع تساعي محدب؟",
+        "options": [
+          "\\( 1260^\\circ \\)",
+          "\\( 1440^\\circ \\)",
+          "\\( 1080^\\circ \\)",
+          "\\( 1350^\\circ \\)"
+        ],
+        "hint": "استخدم القاعدة \\( (n-2) \\times 180^\\circ \\).",
+        "explanation": "لـ 9 أضلاع: \\( (9-2) \\times 180 = 1260^\\circ \\)."
+      }
+    },
+    "correct_index": "0"
+  },
+  {
+    "id": "KANG-8126-ddf6",
+    "track": "kang",
+    "level": "Grade 12",
+    "topic": "Logic",
+    "type": "MCQ",
+    "difficulty": "hard",
+    "content": {
+      "en": {
+        "question": "There are socks of 6 different colors in a drawer. What is the minimum number of socks you must pull out in the dark to guarantee you have a matching pair?",
+        "options": [
+          "\\( 8 \\)",
+          "\\( 6 \\)",
+          "\\( 12 \\)",
+          "\\( 7 \\)"
+        ],
+        "hint": "Think about the worst-case scenario (getting one of each color first).",
+        "explanation": "Worst case: you pick 6 socks and they are all different. The next one guarantees a match, so 7."
+      },
+      "ar": {
+        "question": "يوجد في درج جوارب بـ 6 ألوان مختلفة. ما أقل عدد من الجوارب يجب سحبه في الظلام لضمان الحصول على زوج متطابق؟",
+        "options": [
+          "\\( 8 \\)",
+          "\\( 6 \\)",
+          "\\( 12 \\)",
+          "\\( 7 \\)"
+        ],
+        "hint": "فكر في أسوأ حالة (سحب جورب من كل لون أولاً).",
+        "explanation": "أسوأ حالة: تسحب 6 جوارب مختلفة. الجورب التالي يضمن التطابق، إذن 7."
+      }
+    },
+    "correct_index": "3"
+  },
+  {
+    "id": "KANG-1510-1930",
+    "track": "kang",
+    "level": "Grade 6",
+    "topic": "Geometry",
+    "type": "MCQ",
+    "difficulty": "hard",
+    "content": {
+      "en": {
+        "question": "What is the sum of the interior angles of a convex hexagon?",
+        "options": [
+          "\\( 540^\\circ \\)",
+          "\\( 720^\\circ \\)",
+          "\\( 900^\\circ \\)",
+          "\\( 810^\\circ \\)"
+        ],
+        "hint": "Use the formula \\( (n-2) \\times 180^\\circ \\).",
+        "explanation": "For 6 sides: \\( (6-2) \\times 180 = 720^\\circ \\)."
+      },
+      "ar": {
+        "question": "ما مجموع الزوايا الداخلية لمضلع سداسي محدب؟",
+        "options": [
+          "\\( 540^\\circ \\)",
+          "\\( 720^\\circ \\)",
+          "\\( 900^\\circ \\)",
+          "\\( 810^\\circ \\)"
+        ],
+        "hint": "استخدم القاعدة \\( (n-2) \\times 180^\\circ \\).",
+        "explanation": "لـ 6 أضلاع: \\( (6-2) \\times 180 = 720^\\circ \\)."
+      }
+    },
+    "correct_index": "1"
+  },
+  {
+    "id": "KANG-6933-af99",
+    "track": "kang",
+    "level": "Level 2",
+    "topic": "Algebra",
+    "type": "MCQ",
+    "difficulty": "medium",
+    "content": {
+      "en": {
+        "question": "Solve for \\( x \\): \\( 6x + 9 = 1x + 24 \\).",
+        "options": [
+          "\\( 3 \\)",
+          "\\( 5 \\)",
+          "\\( 2 \\)",
+          "\\( 4 \\)"
+        ],
+        "hint": "Collect the x terms on one side.",
+        "explanation": "\\( 5x = 15 \\Rightarrow x = 3 \\)."
+      },
+      "ar": {
+        "question": "أوجد قيمة \\( x \\): \\( 6x + 9 = 1x + 24 \\).",
+        "options": [
+          "\\( 3 \\)",
+          "\\( 5 \\)",
+          "\\( 2 \\)",
+          "\\( 4 \\)"
+        ],
+        "hint": "اجمع حدود x في طرف واحد.",
+        "explanation": "\\( 5x = 15 \\Rightarrow x = 3 \\)."
+      }
+    },
+    "correct_index": "0"
+  },
+  {
+    "id": "KANG-7077-03a1",
+    "track": "kang",
+    "level": "Level 2",
+    "topic": "Logic",
+    "type": "MCQ",
+    "difficulty": "hard",
+    "content": {
+      "en": {
+        "question": "There are socks of 3 different colors in a drawer. What is the minimum number of socks you must pull out in the dark to guarantee you have a matching pair?",
+        "options": [
+          "\\( 4 \\)",
+          "\\( 5 \\)",
+          "\\( 6 \\)",
+          "\\( 3 \\)"
+        ],
+        "hint": "Think about the worst-case scenario (getting one of each color first).",
+        "explanation": "Worst case: you pick 3 socks and they are all different. The next one guarantees a match, so 4."
+      },
+      "ar": {
+        "question": "يوجد في درج جوارب بـ 3 ألوان مختلفة. ما أقل عدد من الجوارب يجب سحبه في الظلام لضمان الحصول على زوج متطابق؟",
+        "options": [
+          "\\( 4 \\)",
+          "\\( 5 \\)",
+          "\\( 6 \\)",
+          "\\( 3 \\)"
+        ],
+        "hint": "فكر في أسوأ حالة (سحب جورب من كل لون أولاً).",
+        "explanation": "أسوأ حالة: تسحب 3 جوارب مختلفة. الجورب التالي يضمن التطابق، إذن 4."
+      }
+    },
+    "correct_index": "0"
+  },
+  {
+    "id": "KANG-7521-9548",
+    "track": "kang",
+    "level": "Level 1",
+    "topic": "Geometry",
+    "type": "MCQ",
+    "difficulty": "hard",
+    "content": {
+      "en": {
+        "question": "What is the sum of the interior angles of a convex hexagon?",
+        "options": [
+          "\\( 720^\\circ \\)",
+          "\\( 810^\\circ \\)",
+          "\\( 540^\\circ \\)",
+          "\\( 900^\\circ \\)"
+        ],
+        "hint": "Use the formula \\( (n-2) \\times 180^\\circ \\).",
+        "explanation": "For 6 sides: \\( (6-2) \\times 180 = 720^\\circ \\)."
+      },
+      "ar": {
+        "question": "ما مجموع الزوايا الداخلية لمضلع سداسي محدب؟",
+        "options": [
+          "\\( 720^\\circ \\)",
+          "\\( 810^\\circ \\)",
+          "\\( 540^\\circ \\)",
+          "\\( 900^\\circ \\)"
+        ],
+        "hint": "استخدم القاعدة \\( (n-2) \\times 180^\\circ \\).",
+        "explanation": "لـ 6 أضلاع: \\( (6-2) \\times 180 = 720^\\circ \\)."
+      }
+    },
+    "correct_index": "0"
+  },
+  {
+    "id": "KANG-9176-93b6",
+    "track": "kang",
+    "level": "Grade 12",
+    "topic": "Geometry",
+    "type": "MCQ",
+    "difficulty": "hard",
+    "content": {
+      "en": {
+        "question": "What is the sum of the interior angles of a convex octagon?",
+        "options": [
+          "\\( 1260^\\circ \\)",
+          "\\( 900^\\circ \\)",
+          "\\( 1170^\\circ \\)",
+          "\\( 1080^\\circ \\)"
+        ],
+        "hint": "Use the formula \\( (n-2) \\times 180^\\circ \\).",
+        "explanation": "For 8 sides: \\( (8-2) \\times 180 = 1080^\\circ \\)."
+      },
+      "ar": {
+        "question": "ما مجموع الزوايا الداخلية لمضلع ثماني محدب؟",
+        "options": [
+          "\\( 1260^\\circ \\)",
+          "\\( 900^\\circ \\)",
+          "\\( 1170^\\circ \\)",
+          "\\( 1080^\\circ \\)"
+        ],
+        "hint": "استخدم القاعدة \\( (n-2) \\times 180^\\circ \\).",
+        "explanation": "لـ 8 أضلاع: \\( (8-2) \\times 180 = 1080^\\circ \\)."
+      }
+    },
+    "correct_index": "3"
+  },
+  {
+    "id": "KANG-4515-1f52",
+    "track": "kang",
+    "level": "Level 1",
+    "topic": "Word Problems",
+    "type": "MCQ",
+    "difficulty": "medium",
+    "content": {
+      "en": {
+        "question": "Two cars leave the same city traveling in opposite directions. One travels at \\( 57 \\) km/h and the other at \\( 63 \\) km/h. How far apart are they after \\( 4 \\) hours?",
+        "options": [
+          "\\( 480 \\) km",
+          "\\( 24 \\) km",
+          "\\( 252 \\) km",
+          "\\( 228 \\) km"
+        ],
+        "hint": "Add their speeds to find the rate of separation.",
+        "explanation": "Relative speed is \\( 57 + 63 = 120 \\) km/h. Distance = \\( 120 \\times 4 = 480 \\) km."
+      },
+      "ar": {
+        "question": "تغادر سيارتان نفس المدينة في اتجاهين متعاكسين. تسير الأولى بسرعة \\( 57 \\) كم/س والثانية بسرعة \\( 63 \\) كم/س. كم المسافة بينهما بعد \\( 4 \\) ساعات؟",
+        "options": [
+          "\\( 480 \\) km",
+          "\\( 24 \\) km",
+          "\\( 252 \\) km",
+          "\\( 228 \\) km"
+        ],
+        "hint": "اجمع سرعتيهما لإيجاد معدل الابتعاد.",
+        "explanation": "السرعة النسبية \\( 57 + 63 = 120 \\) كم/س. المسافة = \\( 120 \\times 4 = 480 \\) كم."
+      }
+    },
+    "correct_index": "0"
+  },
+  {
+    "id": "KANG-3828-4e28",
+    "track": "kang",
+    "level": "Grade 12",
+    "topic": "Word Problems",
+    "type": "MCQ",
+    "difficulty": "medium",
+    "content": {
+      "en": {
+        "question": "Two cars leave the same city traveling in opposite directions. One travels at \\( 55 \\) km/h and the other at \\( 66 \\) km/h. How far apart are they after \\( 2 \\) hours?",
+        "options": [
+          "\\( 110 \\) km",
+          "\\( 132 \\) km",
+          "\\( 242 \\) km",
+          "\\( 22 \\) km"
+        ],
+        "hint": "Add their speeds to find the rate of separation.",
+        "explanation": "Relative speed is \\( 55 + 66 = 121 \\) km/h. Distance = \\( 121 \\times 2 = 242 \\) km."
+      },
+      "ar": {
+        "question": "تغادر سيارتان نفس المدينة في اتجاهين متعاكسين. تسير الأولى بسرعة \\( 55 \\) كم/س والثانية بسرعة \\( 66 \\) كم/س. كم المسافة بينهما بعد \\( 2 \\) ساعات؟",
+        "options": [
+          "\\( 110 \\) km",
+          "\\( 132 \\) km",
+          "\\( 242 \\) km",
+          "\\( 22 \\) km"
+        ],
+        "hint": "اجمع سرعتيهما لإيجاد معدل الابتعاد.",
+        "explanation": "السرعة النسبية \\( 55 + 66 = 121 \\) كم/س. المسافة = \\( 121 \\times 2 = 242 \\) كم."
+      }
+    },
+    "correct_index": "2"
+  },
+  {
+    "id": "KANG-9882-94c1",
+    "track": "kang",
+    "level": "Grade 6",
+    "topic": "Logic",
+    "type": "MCQ",
+    "difficulty": "hard",
+    "content": {
+      "en": {
+        "question": "There are socks of 5 different colors in a drawer. What is the minimum number of socks you must pull out in the dark to guarantee you have a matching pair?",
+        "options": [
+          "\\( 5 \\)",
+          "\\( 6 \\)",
+          "\\( 7 \\)",
+          "\\( 10 \\)"
+        ],
+        "hint": "Think about the worst-case scenario (getting one of each color first).",
+        "explanation": "Worst case: you pick 5 socks and they are all different. The next one guarantees a match, so 6."
+      },
+      "ar": {
+        "question": "يوجد في درج جوارب بـ 5 ألوان مختلفة. ما أقل عدد من الجوارب يجب سحبه في الظلام لضمان الحصول على زوج متطابق؟",
+        "options": [
+          "\\( 5 \\)",
+          "\\( 6 \\)",
+          "\\( 7 \\)",
+          "\\( 10 \\)"
+        ],
+        "hint": "فكر في أسوأ حالة (سحب جورب من كل لون أولاً).",
+        "explanation": "أسوأ حالة: تسحب 5 جوارب مختلفة. الجورب التالي يضمن التطابق، إذن 6."
+      }
+    },
+    "correct_index": "1"
+  },
+  {
+    "id": "KANG-2988-fd20",
+    "track": "kang",
+    "level": "Grade 12",
+    "topic": "Geometry",
+    "type": "MCQ",
+    "difficulty": "hard",
+    "content": {
+      "en": {
+        "question": "What is the sum of the interior angles of a convex heptagon?",
+        "options": [
+          "\\( 720^\\circ \\)",
+          "\\( 900^\\circ \\)",
+          "\\( 990^\\circ \\)",
+          "\\( 1080^\\circ \\)"
+        ],
+        "hint": "Use the formula \\( (n-2) \\times 180^\\circ \\).",
+        "explanation": "For 7 sides: \\( (7-2) \\times 180 = 900^\\circ \\)."
+      },
+      "ar": {
+        "question": "ما مجموع الزوايا الداخلية لمضلع سباعي محدب؟",
+        "options": [
+          "\\( 720^\\circ \\)",
+          "\\( 900^\\circ \\)",
+          "\\( 990^\\circ \\)",
+          "\\( 1080^\\circ \\)"
+        ],
+        "hint": "استخدم القاعدة \\( (n-2) \\times 180^\\circ \\).",
+        "explanation": "لـ 7 أضلاع: \\( (7-2) \\times 180 = 900^\\circ \\)."
+      }
+    },
+    "correct_index": "1"
+  },
+  {
+    "id": "KANG-2412-5e77",
+    "track": "kang",
+    "level": "Grade 9",
+    "topic": "Algebra",
+    "type": "MCQ",
+    "difficulty": "medium",
+    "content": {
+      "en": {
+        "question": "Solve for \\( x \\): \\( 8x + 5 = 4x + 13 \\).",
+        "options": [
+          "\\( 4 \\)",
+          "\\( 2 \\)",
+          "\\( 3 \\)",
+          "\\( 1 \\)"
+        ],
+        "hint": "Collect the x terms on one side.",
+        "explanation": "\\( 4x = 8 \\Rightarrow x = 2 \\)."
+      },
+      "ar": {
+        "question": "أوجد قيمة \\( x \\): \\( 8x + 5 = 4x + 13 \\).",
+        "options": [
+          "\\( 4 \\)",
+          "\\( 2 \\)",
+          "\\( 3 \\)",
+          "\\( 1 \\)"
+        ],
+        "hint": "اجمع حدود x في طرف واحد.",
+        "explanation": "\\( 4x = 8 \\Rightarrow x = 2 \\)."
+      }
+    },
+    "correct_index": "1"
+  },
+  {
+    "id": "KANG-8372-c8a7",
+    "track": "kang",
+    "level": "Grade 12",
+    "topic": "Fractions",
+    "type": "MCQ",
+    "difficulty": "medium",
+    "content": {
+      "en": {
+        "question": "If \\( \\frac{2}{5} \\) of a number is \\( 12 \\), what is \\( \\frac{1}{2} \\) of that number?",
+        "options": [
+          "\\( 17 \\)",
+          "\\( 15 \\)",
+          "\\( 30 \\)",
+          "\\( 13 \\)"
+        ],
+        "hint": "First find the number: \\( 12 \\times \\frac{5}{2} \\).",
+        "explanation": "The number is \\( 30 \\). Then \\( \\frac{1}{2} \\times 30 = 15 \\)."
+      },
+      "ar": {
+        "question": "إذا كان \\( \\frac{2}{5} \\) من عدد يساوي \\( 12 \\)، فما هو \\( \\frac{1}{2} \\) من هذا العدد؟",
+        "options": [
+          "\\( 17 \\)",
+          "\\( 15 \\)",
+          "\\( 30 \\)",
+          "\\( 13 \\)"
+        ],
+        "hint": "أوجد العدد أولاً: \\( 12 \\times \\frac{5}{2} \\).",
+        "explanation": "العدد هو \\( 30 \\). ثم \\( \\frac{1}{2} \\times 30 = 15 \\)."
+      }
+    },
+    "correct_index": "1"
+  },
+  {
+    "id": "KANG-3114-a4fa",
+    "track": "kang",
+    "level": "Level 2",
+    "topic": "Logic",
+    "type": "MCQ",
+    "difficulty": "hard",
+    "content": {
+      "en": {
+        "question": "There are socks of 5 different colors in a drawer. What is the minimum number of socks you must pull out in the dark to guarantee you have a matching pair?",
+        "options": [
+          "\\( 7 \\)",
+          "\\( 6 \\)",
+          "\\( 10 \\)",
+          "\\( 5 \\)"
+        ],
+        "hint": "Think about the worst-case scenario (getting one of each color first).",
+        "explanation": "Worst case: you pick 5 socks and they are all different. The next one guarantees a match, so 6."
+      },
+      "ar": {
+        "question": "يوجد في درج جوارب بـ 5 ألوان مختلفة. ما أقل عدد من الجوارب يجب سحبه في الظلام لضمان الحصول على زوج متطابق؟",
+        "options": [
+          "\\( 7 \\)",
+          "\\( 6 \\)",
+          "\\( 10 \\)",
+          "\\( 5 \\)"
+        ],
+        "hint": "فكر في أسوأ حالة (سحب جورب من كل لون أولاً).",
+        "explanation": "أسوأ حالة: تسحب 5 جوارب مختلفة. الجورب التالي يضمن التطابق، إذن 6."
+      }
+    },
+    "correct_index": "1"
+  },
+  {
+    "id": "KANG-5982-cdfb",
+    "track": "kang",
+    "level": "Level 2",
+    "topic": "Logic",
+    "type": "MCQ",
+    "difficulty": "hard",
+    "content": {
+      "en": {
+        "question": "There are socks of 3 different colors in a drawer. What is the minimum number of socks you must pull out in the dark to guarantee you have a matching pair?",
+        "options": [
+          "\\( 3 \\)",
+          "\\( 5 \\)",
+          "\\( 6 \\)",
+          "\\( 4 \\)"
+        ],
+        "hint": "Think about the worst-case scenario (getting one of each color first).",
+        "explanation": "Worst case: you pick 3 socks and they are all different. The next one guarantees a match, so 4."
+      },
+      "ar": {
+        "question": "يوجد في درج جوارب بـ 3 ألوان مختلفة. ما أقل عدد من الجوارب يجب سحبه في الظلام لضمان الحصول على زوج متطابق؟",
+        "options": [
+          "\\( 3 \\)",
+          "\\( 5 \\)",
+          "\\( 6 \\)",
+          "\\( 4 \\)"
+        ],
+        "hint": "فكر في أسوأ حالة (سحب جورب من كل لون أولاً).",
+        "explanation": "أسوأ حالة: تسحب 3 جوارب مختلفة. الجورب التالي يضمن التطابق، إذن 4."
+      }
+    },
+    "correct_index": "3"
+  },
+  {
+    "id": "KANG-4216-a82c",
+    "track": "kang",
+    "level": "Grade 9",
+    "topic": "Algebra",
+    "type": "MCQ",
+    "difficulty": "medium",
+    "content": {
+      "en": {
+        "question": "Solve for \\( x \\): \\( 10x + 7 = 2x + 39 \\).",
+        "options": [
+          "\\( 6 \\)",
+          "\\( 5 \\)",
+          "\\( 4 \\)",
+          "\\( 3 \\)"
+        ],
+        "hint": "Collect the x terms on one side.",
+        "explanation": "\\( 8x = 32 \\Rightarrow x = 4 \\)."
+      },
+      "ar": {
+        "question": "أوجد قيمة \\( x \\): \\( 10x + 7 = 2x + 39 \\).",
+        "options": [
+          "\\( 6 \\)",
+          "\\( 5 \\)",
+          "\\( 4 \\)",
+          "\\( 3 \\)"
+        ],
+        "hint": "اجمع حدود x في طرف واحد.",
+        "explanation": "\\( 8x = 32 \\Rightarrow x = 4 \\)."
+      }
+    },
+    "correct_index": "2"
+  },
+  {
+    "id": "KANG-3526-12d6",
+    "track": "kang",
+    "level": "Grade 12",
+    "topic": "Word Problems",
+    "type": "MCQ",
+    "difficulty": "medium",
+    "content": {
+      "en": {
+        "question": "Two cars leave the same city traveling in opposite directions. One travels at \\( 44 \\) km/h and the other at \\( 80 \\) km/h. How far apart are they after \\( 4 \\) hours?",
+        "options": [
+          "\\( 144 \\) km",
+          "\\( 320 \\) km",
+          "\\( 176 \\) km",
+          "\\( 496 \\) km"
+        ],
+        "hint": "Add their speeds to find the rate of separation.",
+        "explanation": "Relative speed is \\( 44 + 80 = 124 \\) km/h. Distance = \\( 124 \\times 4 = 496 \\) km."
+      },
+      "ar": {
+        "question": "تغادر سيارتان نفس المدينة في اتجاهين متعاكسين. تسير الأولى بسرعة \\( 44 \\) كم/س والثانية بسرعة \\( 80 \\) كم/س. كم المسافة بينهما بعد \\( 4 \\) ساعات؟",
+        "options": [
+          "\\( 144 \\) km",
+          "\\( 320 \\) km",
+          "\\( 176 \\) km",
+          "\\( 496 \\) km"
+        ],
+        "hint": "اجمع سرعتيهما لإيجاد معدل الابتعاد.",
+        "explanation": "السرعة النسبية \\( 44 + 80 = 124 \\) كم/س. المسافة = \\( 124 \\times 4 = 496 \\) كم."
+      }
+    },
+    "correct_index": "3"
+  },
+  {
+    "id": "KANG-5336-29e7",
+    "track": "kang",
+    "level": "Level 2",
+    "topic": "Algebra",
+    "type": "MCQ",
+    "difficulty": "medium",
+    "content": {
+      "en": {
+        "question": "Solve for \\( x \\): \\( 12x + 7 = 5x + 21 \\).",
+        "options": [
+          "\\( 3 \\)",
+          "\\( 1 \\)",
+          "\\( 4 \\)",
+          "\\( 2 \\)"
+        ],
+        "hint": "Collect the x terms on one side.",
+        "explanation": "\\( 7x = 14 \\Rightarrow x = 2 \\)."
+      },
+      "ar": {
+        "question": "أوجد قيمة \\( x \\): \\( 12x + 7 = 5x + 21 \\).",
+        "options": [
+          "\\( 3 \\)",
+          "\\( 1 \\)",
+          "\\( 4 \\)",
+          "\\( 2 \\)"
+        ],
+        "hint": "اجمع حدود x في طرف واحد.",
+        "explanation": "\\( 7x = 14 \\Rightarrow x = 2 \\)."
+      }
+    },
+    "correct_index": "3"
+  },
+  {
+    "id": "KANG-5949-16ad",
+    "track": "kang",
+    "level": "Level 2",
+    "topic": "Algebra",
+    "type": "MCQ",
+    "difficulty": "medium",
+    "content": {
+      "en": {
+        "question": "Solve for \\( x \\): \\( 6x + 8 = 5x + 15 \\).",
+        "options": [
+          "\\( 7 \\)",
+          "\\( 8 \\)",
+          "\\( 6 \\)",
+          "\\( 9 \\)"
+        ],
+        "hint": "Collect the x terms on one side.",
+        "explanation": "\\( 1x = 7 \\Rightarrow x = 7 \\)."
+      },
+      "ar": {
+        "question": "أوجد قيمة \\( x \\): \\( 6x + 8 = 5x + 15 \\).",
+        "options": [
+          "\\( 7 \\)",
+          "\\( 8 \\)",
+          "\\( 6 \\)",
+          "\\( 9 \\)"
+        ],
+        "hint": "اجمع حدود x في طرف واحد.",
+        "explanation": "\\( 1x = 7 \\Rightarrow x = 7 \\)."
+      }
+    },
+    "correct_index": "0"
+  },
+  {
+    "id": "KANG-1981-7962",
+    "track": "kang",
+    "level": "Grade 9",
+    "topic": "Logic",
+    "type": "MCQ",
+    "difficulty": "hard",
+    "content": {
+      "en": {
+        "question": "There are socks of 6 different colors in a drawer. What is the minimum number of socks you must pull out in the dark to guarantee you have a matching pair?",
+        "options": [
+          "\\( 8 \\)",
+          "\\( 7 \\)",
+          "\\( 6 \\)",
+          "\\( 12 \\)"
+        ],
+        "hint": "Think about the worst-case scenario (getting one of each color first).",
+        "explanation": "Worst case: you pick 6 socks and they are all different. The next one guarantees a match, so 7."
+      },
+      "ar": {
+        "question": "يوجد في درج جوارب بـ 6 ألوان مختلفة. ما أقل عدد من الجوارب يجب سحبه في الظلام لضمان الحصول على زوج متطابق؟",
+        "options": [
+          "\\( 8 \\)",
+          "\\( 7 \\)",
+          "\\( 6 \\)",
+          "\\( 12 \\)"
+        ],
+        "hint": "فكر في أسوأ حالة (سحب جورب من كل لون أولاً).",
+        "explanation": "أسوأ حالة: تسحب 6 جوارب مختلفة. الجورب التالي يضمن التطابق، إذن 7."
+      }
+    },
+    "correct_index": "1"
+  },
+  {
+    "id": "KANG-6121-7ef9",
+    "track": "kang",
+    "level": "Level 1",
+    "topic": "Algebra",
+    "type": "MCQ",
+    "difficulty": "medium",
+    "content": {
+      "en": {
+        "question": "Solve for \\( x \\): \\( 7x + 8 = 4x + 23 \\).",
+        "options": [
+          "\\( 6 \\)",
+          "\\( 5 \\)",
+          "\\( 7 \\)",
+          "\\( 4 \\)"
+        ],
+        "hint": "Collect the x terms on one side.",
+        "explanation": "\\( 3x = 15 \\Rightarrow x = 5 \\)."
+      },
+      "ar": {
+        "question": "أوجد قيمة \\( x \\): \\( 7x + 8 = 4x + 23 \\).",
+        "options": [
+          "\\( 6 \\)",
+          "\\( 5 \\)",
+          "\\( 7 \\)",
+          "\\( 4 \\)"
+        ],
+        "hint": "اجمع حدود x في طرف واحد.",
+        "explanation": "\\( 3x = 15 \\Rightarrow x = 5 \\)."
+      }
+    },
+    "correct_index": "1"
+  },
+  {
+    "id": "KANG-6228-cb59",
+    "track": "kang",
+    "level": "Grade 12",
+    "topic": "Geometry",
+    "type": "MCQ",
+    "difficulty": "hard",
+    "content": {
+      "en": {
+        "question": "What is the sum of the interior angles of a convex hendecagon?",
+        "options": [
+          "\\( 1440^\\circ \\)",
+          "\\( 1620^\\circ \\)",
+          "\\( 1710^\\circ \\)",
+          "\\( 1800^\\circ \\)"
+        ],
+        "hint": "Use the formula \\( (n-2) \\times 180^\\circ \\).",
+        "explanation": "For 11 sides: \\( (11-2) \\times 180 = 1620^\\circ \\)."
+      },
+      "ar": {
+        "question": "ما مجموع الزوايا الداخلية لمضلع أحد عشر ضلعاً محدب؟",
+        "options": [
+          "\\( 1440^\\circ \\)",
+          "\\( 1620^\\circ \\)",
+          "\\( 1710^\\circ \\)",
+          "\\( 1800^\\circ \\)"
+        ],
+        "hint": "استخدم القاعدة \\( (n-2) \\times 180^\\circ \\).",
+        "explanation": "لـ 11 أضلاع: \\( (11-2) \\times 180 = 1620^\\circ \\)."
+      }
+    },
+    "correct_index": "1"
+  },
+  {
+    "id": "KANG-5754-024c",
+    "track": "kang",
+    "level": "Level 1",
+    "topic": "Algebra",
+    "type": "MCQ",
+    "difficulty": "medium",
+    "content": {
+      "en": {
+        "question": "Solve for \\( x \\): \\( 7x + 3 = 3x + 23 \\).",
+        "options": [
+          "\\( 7 \\)",
+          "\\( 4 \\)",
+          "\\( 5 \\)",
+          "\\( 6 \\)"
+        ],
+        "hint": "Collect the x terms on one side.",
+        "explanation": "\\( 4x = 20 \\Rightarrow x = 5 \\)."
+      },
+      "ar": {
+        "question": "أوجد قيمة \\( x \\): \\( 7x + 3 = 3x + 23 \\).",
+        "options": [
+          "\\( 7 \\)",
+          "\\( 4 \\)",
+          "\\( 5 \\)",
+          "\\( 6 \\)"
+        ],
+        "hint": "اجمع حدود x في طرف واحد.",
+        "explanation": "\\( 4x = 20 \\Rightarrow x = 5 \\)."
+      }
+    },
+    "correct_index": "2"
+  },
+  {
+    "id": "KANG-6123-4675",
+    "track": "kang",
+    "level": "Level 2",
+    "topic": "Logic",
+    "type": "MCQ",
+    "difficulty": "hard",
+    "content": {
+      "en": {
+        "question": "There are socks of 6 different colors in a drawer. What is the minimum number of socks you must pull out in the dark to guarantee you have a matching pair?",
+        "options": [
+          "\\( 12 \\)",
+          "\\( 8 \\)",
+          "\\( 7 \\)",
+          "\\( 6 \\)"
+        ],
+        "hint": "Think about the worst-case scenario (getting one of each color first).",
+        "explanation": "Worst case: you pick 6 socks and they are all different. The next one guarantees a match, so 7."
+      },
+      "ar": {
+        "question": "يوجد في درج جوارب بـ 6 ألوان مختلفة. ما أقل عدد من الجوارب يجب سحبه في الظلام لضمان الحصول على زوج متطابق؟",
+        "options": [
+          "\\( 12 \\)",
+          "\\( 8 \\)",
+          "\\( 7 \\)",
+          "\\( 6 \\)"
+        ],
+        "hint": "فكر في أسوأ حالة (سحب جورب من كل لون أولاً).",
+        "explanation": "أسوأ حالة: تسحب 6 جوارب مختلفة. الجورب التالي يضمن التطابق، إذن 7."
+      }
+    },
+    "correct_index": "2"
+  },
+  {
+    "id": "KANG-2475-228f",
+    "track": "kang",
+    "level": "Grade 9",
+    "topic": "Algebra",
+    "type": "MCQ",
+    "difficulty": "medium",
+    "content": {
+      "en": {
+        "question": "Solve for \\( x \\): \\( 9x + 9 = 5x + 29 \\).",
+        "options": [
+          "\\( 7 \\)",
+          "\\( 5 \\)",
+          "\\( 6 \\)",
+          "\\( 4 \\)"
+        ],
+        "hint": "Collect the x terms on one side.",
+        "explanation": "\\( 4x = 20 \\Rightarrow x = 5 \\)."
+      },
+      "ar": {
+        "question": "أوجد قيمة \\( x \\): \\( 9x + 9 = 5x + 29 \\).",
+        "options": [
+          "\\( 7 \\)",
+          "\\( 5 \\)",
+          "\\( 6 \\)",
+          "\\( 4 \\)"
+        ],
+        "hint": "اجمع حدود x في طرف واحد.",
+        "explanation": "\\( 4x = 20 \\Rightarrow x = 5 \\)."
+      }
+    },
+    "correct_index": "1"
+  },
+  {
+    "id": "KANG-1797-2ec8",
+    "track": "kang",
+    "level": "Level 2",
+    "topic": "Logic",
+    "type": "MCQ",
+    "difficulty": "hard",
+    "content": {
+      "en": {
+        "question": "There are socks of 6 different colors in a drawer. What is the minimum number of socks you must pull out in the dark to guarantee you have a matching pair?",
+        "options": [
+          "\\( 12 \\)",
+          "\\( 8 \\)",
+          "\\( 7 \\)",
+          "\\( 6 \\)"
+        ],
+        "hint": "Think about the worst-case scenario (getting one of each color first).",
+        "explanation": "Worst case: you pick 6 socks and they are all different. The next one guarantees a match, so 7."
+      },
+      "ar": {
+        "question": "يوجد في درج جوارب بـ 6 ألوان مختلفة. ما أقل عدد من الجوارب يجب سحبه في الظلام لضمان الحصول على زوج متطابق؟",
+        "options": [
+          "\\( 12 \\)",
+          "\\( 8 \\)",
+          "\\( 7 \\)",
+          "\\( 6 \\)"
+        ],
+        "hint": "فكر في أسوأ حالة (سحب جورب من كل لون أولاً).",
+        "explanation": "أسوأ حالة: تسحب 6 جوارب مختلفة. الجورب التالي يضمن التطابق، إذن 7."
+      }
+    },
+    "correct_index": "2"
+  },
+  {
+    "id": "KANG-3194-1d57",
+    "track": "kang",
+    "level": "Grade 12",
+    "topic": "Fractions",
+    "type": "MCQ",
+    "difficulty": "medium",
+    "content": {
+      "en": {
+        "question": "If \\( \\frac{2}{5} \\) of a number is \\( 48 \\), what is \\( \\frac{1}{4} \\) of that number?",
+        "options": [
+          "\\( 26 \\)",
+          "\\( 34 \\)",
+          "\\( 60 \\)",
+          "\\( 30 \\)"
+        ],
+        "hint": "First find the number: \\( 48 \\times \\frac{5}{2} \\).",
+        "explanation": "The number is \\( 120 \\). Then \\( \\frac{1}{4} \\times 120 = 30 \\)."
+      },
+      "ar": {
+        "question": "إذا كان \\( \\frac{2}{5} \\) من عدد يساوي \\( 48 \\)، فما هو \\( \\frac{1}{4} \\) من هذا العدد؟",
+        "options": [
+          "\\( 26 \\)",
+          "\\( 34 \\)",
+          "\\( 60 \\)",
+          "\\( 30 \\)"
+        ],
+        "hint": "أوجد العدد أولاً: \\( 48 \\times \\frac{5}{2} \\).",
+        "explanation": "العدد هو \\( 120 \\). ثم \\( \\frac{1}{4} \\times 120 = 30 \\)."
+      }
+    },
+    "correct_index": "3"
+  },
+  {
+    "id": "KANG-1838-a4df",
+    "track": "kang",
+    "level": "Grade 12",
+    "topic": "Geometry",
+    "type": "MCQ",
+    "difficulty": "hard",
+    "content": {
+      "en": {
+        "question": "What is the sum of the interior angles of a convex hendecagon?",
+        "options": [
+          "\\( 1710^\\circ \\)",
+          "\\( 1800^\\circ \\)",
+          "\\( 1620^\\circ \\)",
+          "\\( 1440^\\circ \\)"
+        ],
+        "hint": "Use the formula \\( (n-2) \\times 180^\\circ \\).",
+        "explanation": "For 11 sides: \\( (11-2) \\times 180 = 1620^\\circ \\)."
+      },
+      "ar": {
+        "question": "ما مجموع الزوايا الداخلية لمضلع أحد عشر ضلعاً محدب؟",
+        "options": [
+          "\\( 1710^\\circ \\)",
+          "\\( 1800^\\circ \\)",
+          "\\( 1620^\\circ \\)",
+          "\\( 1440^\\circ \\)"
+        ],
+        "hint": "استخدم القاعدة \\( (n-2) \\times 180^\\circ \\).",
+        "explanation": "لـ 11 أضلاع: \\( (11-2) \\times 180 = 1620^\\circ \\)."
+      }
+    },
+    "correct_index": "2"
+  },
+  {
+    "id": "KANG-5582-f8f9",
+    "track": "kang",
+    "level": "Level 2",
+    "topic": "Word Problems",
+    "type": "MCQ",
+    "difficulty": "medium",
+    "content": {
+      "en": {
+        "question": "Two cars leave the same city traveling in opposite directions. One travels at \\( 46 \\) km/h and the other at \\( 71 \\) km/h. How far apart are they after \\( 4 \\) hours?",
+        "options": [
+          "\\( 284 \\) km",
+          "\\( 184 \\) km",
+          "\\( 100 \\) km",
+          "\\( 468 \\) km"
+        ],
+        "hint": "Add their speeds to find the rate of separation.",
+        "explanation": "Relative speed is \\( 46 + 71 = 117 \\) km/h. Distance = \\( 117 \\times 4 = 468 \\) km."
+      },
+      "ar": {
+        "question": "تغادر سيارتان نفس المدينة في اتجاهين متعاكسين. تسير الأولى بسرعة \\( 46 \\) كم/س والثانية بسرعة \\( 71 \\) كم/س. كم المسافة بينهما بعد \\( 4 \\) ساعات؟",
+        "options": [
+          "\\( 284 \\) km",
+          "\\( 184 \\) km",
+          "\\( 100 \\) km",
+          "\\( 468 \\) km"
+        ],
+        "hint": "اجمع سرعتيهما لإيجاد معدل الابتعاد.",
+        "explanation": "السرعة النسبية \\( 46 + 71 = 117 \\) كم/س. المسافة = \\( 117 \\times 4 = 468 \\) كم."
+      }
+    },
+    "correct_index": "3"
+  },
+  {
+    "id": "KANG-6990-d440",
+    "track": "kang",
+    "level": "Level 2",
+    "topic": "Word Problems",
+    "type": "MCQ",
+    "difficulty": "medium",
+    "content": {
+      "en": {
+        "question": "Two cars leave the same city traveling in opposite directions. One travels at \\( 43 \\) km/h and the other at \\( 64 \\) km/h. How far apart are they after \\( 2 \\) hours?",
+        "options": [
+          "\\( 214 \\) km",
+          "\\( 86 \\) km",
+          "\\( 42 \\) km",
+          "\\( 128 \\) km"
+        ],
+        "hint": "Add their speeds to find the rate of separation.",
+        "explanation": "Relative speed is \\( 43 + 64 = 107 \\) km/h. Distance = \\( 107 \\times 2 = 214 \\) km."
+      },
+      "ar": {
+        "question": "تغادر سيارتان نفس المدينة في اتجاهين متعاكسين. تسير الأولى بسرعة \\( 43 \\) كم/س والثانية بسرعة \\( 64 \\) كم/س. كم المسافة بينهما بعد \\( 2 \\) ساعات؟",
+        "options": [
+          "\\( 214 \\) km",
+          "\\( 86 \\) km",
+          "\\( 42 \\) km",
+          "\\( 128 \\) km"
+        ],
+        "hint": "اجمع سرعتيهما لإيجاد معدل الابتعاد.",
+        "explanation": "السرعة النسبية \\( 43 + 64 = 107 \\) كم/س. المسافة = \\( 107 \\times 2 = 214 \\) كم."
+      }
+    },
+    "correct_index": "0"
+  },
+  {
+    "id": "KANG-6456-6cb2",
+    "track": "kang",
+    "level": "Grade 9",
+    "topic": "Algebra",
+    "type": "MCQ",
+    "difficulty": "medium",
+    "content": {
+      "en": {
+        "question": "Solve for \\( x \\): \\( 6x + 10 = 4x + 22 \\).",
+        "options": [
+          "\\( 7 \\)",
+          "\\( 5 \\)",
+          "\\( 8 \\)",
+          "\\( 6 \\)"
+        ],
+        "hint": "Collect the x terms on one side.",
+        "explanation": "\\( 2x = 12 \\Rightarrow x = 6 \\)."
+      },
+      "ar": {
+        "question": "أوجد قيمة \\( x \\): \\( 6x + 10 = 4x + 22 \\).",
+        "options": [
+          "\\( 7 \\)",
+          "\\( 5 \\)",
+          "\\( 8 \\)",
+          "\\( 6 \\)"
+        ],
+        "hint": "اجمع حدود x في طرف واحد.",
+        "explanation": "\\( 2x = 12 \\Rightarrow x = 6 \\)."
+      }
+    },
+    "correct_index": "3"
+  },
+  {
+    "id": "KANG-6373-c87a",
+    "track": "kang",
+    "level": "Level 2",
+    "topic": "Logic",
+    "type": "MCQ",
+    "difficulty": "hard",
+    "content": {
+      "en": {
+        "question": "There are socks of 6 different colors in a drawer. What is the minimum number of socks you must pull out in the dark to guarantee you have a matching pair?",
+        "options": [
+          "\\( 8 \\)",
+          "\\( 7 \\)",
+          "\\( 12 \\)",
+          "\\( 6 \\)"
+        ],
+        "hint": "Think about the worst-case scenario (getting one of each color first).",
+        "explanation": "Worst case: you pick 6 socks and they are all different. The next one guarantees a match, so 7."
+      },
+      "ar": {
+        "question": "يوجد في درج جوارب بـ 6 ألوان مختلفة. ما أقل عدد من الجوارب يجب سحبه في الظلام لضمان الحصول على زوج متطابق؟",
+        "options": [
+          "\\( 8 \\)",
+          "\\( 7 \\)",
+          "\\( 12 \\)",
+          "\\( 6 \\)"
+        ],
+        "hint": "فكر في أسوأ حالة (سحب جورب من كل لون أولاً).",
+        "explanation": "أسوأ حالة: تسحب 6 جوارب مختلفة. الجورب التالي يضمن التطابق، إذن 7."
+      }
+    },
+    "correct_index": "1"
+  },
+  {
+    "id": "KANG-5911-5ffc",
+    "track": "kang",
+    "level": "Grade 12",
+    "topic": "Word Problems",
+    "type": "MCQ",
+    "difficulty": "medium",
+    "content": {
+      "en": {
+        "question": "Two cars leave the same city traveling in opposite directions. One travels at \\( 45 \\) km/h and the other at \\( 72 \\) km/h. How far apart are they after \\( 4 \\) hours?",
+        "options": [
+          "\\( 468 \\) km",
+          "\\( 108 \\) km",
+          "\\( 288 \\) km",
+          "\\( 180 \\) km"
+        ],
+        "hint": "Add their speeds to find the rate of separation.",
+        "explanation": "Relative speed is \\( 45 + 72 = 117 \\) km/h. Distance = \\( 117 \\times 4 = 468 \\) km."
+      },
+      "ar": {
+        "question": "تغادر سيارتان نفس المدينة في اتجاهين متعاكسين. تسير الأولى بسرعة \\( 45 \\) كم/س والثانية بسرعة \\( 72 \\) كم/س. كم المسافة بينهما بعد \\( 4 \\) ساعات؟",
+        "options": [
+          "\\( 468 \\) km",
+          "\\( 108 \\) km",
+          "\\( 288 \\) km",
+          "\\( 180 \\) km"
+        ],
+        "hint": "اجمع سرعتيهما لإيجاد معدل الابتعاد.",
+        "explanation": "السرعة النسبية \\( 45 + 72 = 117 \\) كم/س. المسافة = \\( 117 \\times 4 = 468 \\) كم."
+      }
+    },
+    "correct_index": "0"
+  },
+  {
+    "id": "KANG-7824-411e",
+    "track": "kang",
+    "level": "Grade 6",
+    "topic": "Logic",
+    "type": "MCQ",
+    "difficulty": "hard",
+    "content": {
+      "en": {
+        "question": "There are socks of 5 different colors in a drawer. What is the minimum number of socks you must pull out in the dark to guarantee you have a matching pair?",
+        "options": [
+          "\\( 5 \\)",
+          "\\( 6 \\)",
+          "\\( 7 \\)",
+          "\\( 10 \\)"
+        ],
+        "hint": "Think about the worst-case scenario (getting one of each color first).",
+        "explanation": "Worst case: you pick 5 socks and they are all different. The next one guarantees a match, so 6."
+      },
+      "ar": {
+        "question": "يوجد في درج جوارب بـ 5 ألوان مختلفة. ما أقل عدد من الجوارب يجب سحبه في الظلام لضمان الحصول على زوج متطابق؟",
+        "options": [
+          "\\( 5 \\)",
+          "\\( 6 \\)",
+          "\\( 7 \\)",
+          "\\( 10 \\)"
+        ],
+        "hint": "فكر في أسوأ حالة (سحب جورب من كل لون أولاً).",
+        "explanation": "أسوأ حالة: تسحب 5 جوارب مختلفة. الجورب التالي يضمن التطابق، إذن 6."
+      }
+    },
+    "correct_index": "1"
+  },
+  {
+    "id": "KANG-1841-94a3",
+    "track": "kang",
+    "level": "Grade 12",
+    "topic": "Word Problems",
+    "type": "MCQ",
+    "difficulty": "medium",
+    "content": {
+      "en": {
+        "question": "Two cars leave the same city traveling in opposite directions. One travels at \\( 60 \\) km/h and the other at \\( 60 \\) km/h. How far apart are they after \\( 5 \\) hours?",
+        "options": [
+          "\\( 0 \\) km",
+          "\\( 600 \\) km",
+          "\\( 300 \\) km",
+          "\\( 300 \\) km"
+        ],
+        "hint": "Add their speeds to find the rate of separation.",
+        "explanation": "Relative speed is \\( 60 + 60 = 120 \\) km/h. Distance = \\( 120 \\times 5 = 600 \\) km."
+      },
+      "ar": {
+        "question": "تغادر سيارتان نفس المدينة في اتجاهين متعاكسين. تسير الأولى بسرعة \\( 60 \\) كم/س والثانية بسرعة \\( 60 \\) كم/س. كم المسافة بينهما بعد \\( 5 \\) ساعات؟",
+        "options": [
+          "\\( 0 \\) km",
+          "\\( 600 \\) km",
+          "\\( 300 \\) km",
+          "\\( 300 \\) km"
+        ],
+        "hint": "اجمع سرعتيهما لإيجاد معدل الابتعاد.",
+        "explanation": "السرعة النسبية \\( 60 + 60 = 120 \\) كم/س. المسافة = \\( 120 \\times 5 = 600 \\) كم."
+      }
+    },
+    "correct_index": "1"
+  },
+  {
+    "id": "KANG-1517-e31a",
+    "track": "kang",
+    "level": "Level 1",
+    "topic": "Word Problems",
+    "type": "MCQ",
+    "difficulty": "medium",
+    "content": {
+      "en": {
+        "question": "Two cars leave the same city traveling in opposite directions. One travels at \\( 45 \\) km/h and the other at \\( 76 \\) km/h. How far apart are they after \\( 5 \\) hours?",
+        "options": [
+          "\\( 380 \\) km",
+          "\\( 605 \\) km",
+          "\\( 225 \\) km",
+          "\\( 155 \\) km"
+        ],
+        "hint": "Add their speeds to find the rate of separation.",
+        "explanation": "Relative speed is \\( 45 + 76 = 121 \\) km/h. Distance = \\( 121 \\times 5 = 605 \\) km."
+      },
+      "ar": {
+        "question": "تغادر سيارتان نفس المدينة في اتجاهين متعاكسين. تسير الأولى بسرعة \\( 45 \\) كم/س والثانية بسرعة \\( 76 \\) كم/س. كم المسافة بينهما بعد \\( 5 \\) ساعات؟",
+        "options": [
+          "\\( 380 \\) km",
+          "\\( 605 \\) km",
+          "\\( 225 \\) km",
+          "\\( 155 \\) km"
+        ],
+        "hint": "اجمع سرعتيهما لإيجاد معدل الابتعاد.",
+        "explanation": "السرعة النسبية \\( 45 + 76 = 121 \\) كم/س. المسافة = \\( 121 \\times 5 = 605 \\) كم."
+      }
+    },
+    "correct_index": "1"
+  },
+  {
+    "id": "KANG-7765-799b",
+    "track": "kang",
+    "level": "Grade 6",
+    "topic": "Word Problems",
+    "type": "MCQ",
+    "difficulty": "medium",
+    "content": {
+      "en": {
+        "question": "Two cars leave the same city traveling in opposite directions. One travels at \\( 46 \\) km/h and the other at \\( 60 \\) km/h. How far apart are they after \\( 5 \\) hours?",
+        "options": [
+          "\\( 300 \\) km",
+          "\\( 530 \\) km",
+          "\\( 70 \\) km",
+          "\\( 230 \\) km"
+        ],
+        "hint": "Add their speeds to find the rate of separation.",
+        "explanation": "Relative speed is \\( 46 + 60 = 106 \\) km/h. Distance = \\( 106 \\times 5 = 530 \\) km."
+      },
+      "ar": {
+        "question": "تغادر سيارتان نفس المدينة في اتجاهين متعاكسين. تسير الأولى بسرعة \\( 46 \\) كم/س والثانية بسرعة \\( 60 \\) كم/س. كم المسافة بينهما بعد \\( 5 \\) ساعات؟",
+        "options": [
+          "\\( 300 \\) km",
+          "\\( 530 \\) km",
+          "\\( 70 \\) km",
+          "\\( 230 \\) km"
+        ],
+        "hint": "اجمع سرعتيهما لإيجاد معدل الابتعاد.",
+        "explanation": "السرعة النسبية \\( 46 + 60 = 106 \\) كم/س. المسافة = \\( 106 \\times 5 = 530 \\) كم."
+      }
+    },
+    "correct_index": "1"
+  },
+  {
+    "id": "KANG-9498-7302",
+    "track": "kang",
+    "level": "Level 1",
+    "topic": "Algebra",
+    "type": "MCQ",
+    "difficulty": "medium",
+    "content": {
+      "en": {
+        "question": "Solve for \\( x \\): \\( 12x + 10 = 5x + 45 \\).",
+        "options": [
+          "\\( 6 \\)",
+          "\\( 7 \\)",
+          "\\( 4 \\)",
+          "\\( 5 \\)"
+        ],
+        "hint": "Collect the x terms on one side.",
+        "explanation": "\\( 7x = 35 \\Rightarrow x = 5 \\)."
+      },
+      "ar": {
+        "question": "أوجد قيمة \\( x \\): \\( 12x + 10 = 5x + 45 \\).",
+        "options": [
+          "\\( 6 \\)",
+          "\\( 7 \\)",
+          "\\( 4 \\)",
+          "\\( 5 \\)"
+        ],
+        "hint": "اجمع حدود x في طرف واحد.",
+        "explanation": "\\( 7x = 35 \\Rightarrow x = 5 \\)."
+      }
+    },
+    "correct_index": "3"
+  },
+  {
+    "id": "KANG-9734-a1d1",
+    "track": "kang",
+    "level": "Level 2",
+    "topic": "Algebra",
+    "type": "MCQ",
+    "difficulty": "medium",
+    "content": {
+      "en": {
+        "question": "Solve for \\( x \\): \\( 9x + 7 = 4x + 37 \\).",
+        "options": [
+          "\\( 8 \\)",
+          "\\( 7 \\)",
+          "\\( 6 \\)",
+          "\\( 5 \\)"
+        ],
+        "hint": "Collect the x terms on one side.",
+        "explanation": "\\( 5x = 30 \\Rightarrow x = 6 \\)."
+      },
+      "ar": {
+        "question": "أوجد قيمة \\( x \\): \\( 9x + 7 = 4x + 37 \\).",
+        "options": [
+          "\\( 8 \\)",
+          "\\( 7 \\)",
+          "\\( 6 \\)",
+          "\\( 5 \\)"
+        ],
+        "hint": "اجمع حدود x في طرف واحد.",
+        "explanation": "\\( 5x = 30 \\Rightarrow x = 6 \\)."
+      }
+    },
+    "correct_index": "2"
+  },
+  {
+    "id": "KANG-4150-1b98",
+    "track": "kang",
+    "level": "Level 2",
+    "topic": "Geometry",
+    "type": "MCQ",
+    "difficulty": "hard",
+    "content": {
+      "en": {
+        "question": "What is the sum of the interior angles of a convex decagon?",
+        "options": [
+          "\\( 1440^\\circ \\)",
+          "\\( 1620^\\circ \\)",
+          "\\( 1530^\\circ \\)",
+          "\\( 1260^\\circ \\)"
+        ],
+        "hint": "Use the formula \\( (n-2) \\times 180^\\circ \\).",
+        "explanation": "For 10 sides: \\( (10-2) \\times 180 = 1440^\\circ \\)."
+      },
+      "ar": {
+        "question": "ما مجموع الزوايا الداخلية لمضلع عشاري محدب؟",
+        "options": [
+          "\\( 1440^\\circ \\)",
+          "\\( 1620^\\circ \\)",
+          "\\( 1530^\\circ \\)",
+          "\\( 1260^\\circ \\)"
+        ],
+        "hint": "استخدم القاعدة \\( (n-2) \\times 180^\\circ \\).",
+        "explanation": "لـ 10 أضلاع: \\( (10-2) \\times 180 = 1440^\\circ \\)."
+      }
+    },
+    "correct_index": "0"
+  },
+  {
+    "id": "KANG-9011-efe6",
+    "track": "kang",
+    "level": "Grade 12",
+    "topic": "Algebra",
+    "type": "MCQ",
+    "difficulty": "medium",
+    "content": {
+      "en": {
+        "question": "Solve for \\( x \\): \\( 8x + 10 = 3x + 25 \\).",
+        "options": [
+          "\\( 4 \\)",
+          "\\( 3 \\)",
+          "\\( 5 \\)",
+          "\\( 2 \\)"
+        ],
+        "hint": "Collect the x terms on one side.",
+        "explanation": "\\( 5x = 15 \\Rightarrow x = 3 \\)."
+      },
+      "ar": {
+        "question": "أوجد قيمة \\( x \\): \\( 8x + 10 = 3x + 25 \\).",
+        "options": [
+          "\\( 4 \\)",
+          "\\( 3 \\)",
+          "\\( 5 \\)",
+          "\\( 2 \\)"
+        ],
+        "hint": "اجمع حدود x في طرف واحد.",
+        "explanation": "\\( 5x = 15 \\Rightarrow x = 3 \\)."
+      }
+    },
+    "correct_index": "1"
+  },
+  {
+    "id": "KANG-9899-017e",
+    "track": "kang",
+    "level": "Level 1",
+    "topic": "Geometry",
+    "type": "MCQ",
+    "difficulty": "hard",
+    "content": {
+      "en": {
+        "question": "What is the sum of the interior angles of a convex decagon?",
+        "options": [
+          "\\( 1530^\\circ \\)",
+          "\\( 1440^\\circ \\)",
+          "\\( 1620^\\circ \\)",
+          "\\( 1260^\\circ \\)"
+        ],
+        "hint": "Use the formula \\( (n-2) \\times 180^\\circ \\).",
+        "explanation": "For 10 sides: \\( (10-2) \\times 180 = 1440^\\circ \\)."
+      },
+      "ar": {
+        "question": "ما مجموع الزوايا الداخلية لمضلع عشاري محدب؟",
+        "options": [
+          "\\( 1530^\\circ \\)",
+          "\\( 1440^\\circ \\)",
+          "\\( 1620^\\circ \\)",
+          "\\( 1260^\\circ \\)"
+        ],
+        "hint": "استخدم القاعدة \\( (n-2) \\times 180^\\circ \\).",
+        "explanation": "لـ 10 أضلاع: \\( (10-2) \\times 180 = 1440^\\circ \\)."
+      }
+    },
+    "correct_index": "1"
+  },
+  {
+    "id": "KANG-5712-a92c",
+    "track": "kang",
+    "level": "Level 1",
+    "topic": "Logic",
+    "type": "MCQ",
+    "difficulty": "hard",
+    "content": {
+      "en": {
+        "question": "There are socks of 5 different colors in a drawer. What is the minimum number of socks you must pull out in the dark to guarantee you have a matching pair?",
+        "options": [
+          "\\( 10 \\)",
+          "\\( 6 \\)",
+          "\\( 7 \\)",
+          "\\( 5 \\)"
+        ],
+        "hint": "Think about the worst-case scenario (getting one of each color first).",
+        "explanation": "Worst case: you pick 5 socks and they are all different. The next one guarantees a match, so 6."
+      },
+      "ar": {
+        "question": "يوجد في درج جوارب بـ 5 ألوان مختلفة. ما أقل عدد من الجوارب يجب سحبه في الظلام لضمان الحصول على زوج متطابق؟",
+        "options": [
+          "\\( 10 \\)",
+          "\\( 6 \\)",
+          "\\( 7 \\)",
+          "\\( 5 \\)"
+        ],
+        "hint": "فكر في أسوأ حالة (سحب جورب من كل لون أولاً).",
+        "explanation": "أسوأ حالة: تسحب 5 جوارب مختلفة. الجورب التالي يضمن التطابق، إذن 6."
+      }
+    },
+    "correct_index": "1"
+  },
+  {
+    "id": "KANG-5450-8144",
+    "track": "kang",
+    "level": "Grade 12",
+    "topic": "Fractions",
+    "type": "MCQ",
+    "difficulty": "medium",
+    "content": {
+      "en": {
+        "question": "If \\( \\frac{2}{5} \\) of a number is \\( 40 \\), what is \\( \\frac{1}{4} \\) of that number?",
+        "options": [
+          "\\( 21 \\)",
+          "\\( 50 \\)",
+          "\\( 25 \\)",
+          "\\( 29 \\)"
+        ],
+        "hint": "First find the number: \\( 40 \\times \\frac{5}{2} \\).",
+        "explanation": "The number is \\( 100 \\). Then \\( \\frac{1}{4} \\times 100 = 25 \\)."
+      },
+      "ar": {
+        "question": "إذا كان \\( \\frac{2}{5} \\) من عدد يساوي \\( 40 \\)، فما هو \\( \\frac{1}{4} \\) من هذا العدد؟",
+        "options": [
+          "\\( 21 \\)",
+          "\\( 50 \\)",
+          "\\( 25 \\)",
+          "\\( 29 \\)"
+        ],
+        "hint": "أوجد العدد أولاً: \\( 40 \\times \\frac{5}{2} \\).",
+        "explanation": "العدد هو \\( 100 \\). ثم \\( \\frac{1}{4} \\times 100 = 25 \\)."
+      }
+    },
+    "correct_index": "2"
+  },
+  {
+    "id": "KANG-1860-720b",
+    "track": "kang",
+    "level": "Grade 6",
+    "topic": "Algebra",
+    "type": "MCQ",
+    "difficulty": "medium",
+    "content": {
+      "en": {
+        "question": "Solve for \\( x \\): \\( 11x + 5 = 2x + 23 \\).",
+        "options": [
+          "\\( 4 \\)",
+          "\\( 2 \\)",
+          "\\( 1 \\)",
+          "\\( 3 \\)"
+        ],
+        "hint": "Collect the x terms on one side.",
+        "explanation": "\\( 9x = 18 \\Rightarrow x = 2 \\)."
+      },
+      "ar": {
+        "question": "أوجد قيمة \\( x \\): \\( 11x + 5 = 2x + 23 \\).",
+        "options": [
+          "\\( 4 \\)",
+          "\\( 2 \\)",
+          "\\( 1 \\)",
+          "\\( 3 \\)"
+        ],
+        "hint": "اجمع حدود x في طرف واحد.",
+        "explanation": "\\( 9x = 18 \\Rightarrow x = 2 \\)."
+      }
+    },
+    "correct_index": "1"
+  },
+  {
+    "id": "KANG-7666-a23d",
+    "track": "kang",
+    "level": "Level 1",
+    "topic": "Fractions",
+    "type": "MCQ",
+    "difficulty": "medium",
+    "content": {
+      "en": {
+        "question": "If \\( \\frac{3}{4} \\) of a number is \\( 30 \\), what is \\( \\frac{1}{5} \\) of that number?",
+        "options": [
+          "\\( 16 \\)",
+          "\\( 3 \\)",
+          "\\( 8 \\)",
+          "\\( 13 \\)"
+        ],
+        "hint": "First find the number: \\( 30 \\times \\frac{4}{3} \\).",
+        "explanation": "The number is \\( 40 \\). Then \\( \\frac{1}{5} \\times 40 = 8 \\)."
+      },
+      "ar": {
+        "question": "إذا كان \\( \\frac{3}{4} \\) من عدد يساوي \\( 30 \\)، فما هو \\( \\frac{1}{5} \\) من هذا العدد؟",
+        "options": [
+          "\\( 16 \\)",
+          "\\( 3 \\)",
+          "\\( 8 \\)",
+          "\\( 13 \\)"
+        ],
+        "hint": "أوجد العدد أولاً: \\( 30 \\times \\frac{4}{3} \\).",
+        "explanation": "العدد هو \\( 40 \\). ثم \\( \\frac{1}{5} \\times 40 = 8 \\)."
+      }
+    },
+    "correct_index": "2"
+  },
+  {
+    "id": "KANG-1969-051d",
+    "track": "kang",
+    "level": "Level 1",
+    "topic": "Logic",
+    "type": "MCQ",
+    "difficulty": "hard",
+    "content": {
+      "en": {
+        "question": "There are socks of 4 different colors in a drawer. What is the minimum number of socks you must pull out in the dark to guarantee you have a matching pair?",
+        "options": [
+          "\\( 5 \\)",
+          "\\( 6 \\)",
+          "\\( 4 \\)",
+          "\\( 8 \\)"
+        ],
+        "hint": "Think about the worst-case scenario (getting one of each color first).",
+        "explanation": "Worst case: you pick 4 socks and they are all different. The next one guarantees a match, so 5."
+      },
+      "ar": {
+        "question": "يوجد في درج جوارب بـ 4 ألوان مختلفة. ما أقل عدد من الجوارب يجب سحبه في الظلام لضمان الحصول على زوج متطابق؟",
+        "options": [
+          "\\( 5 \\)",
+          "\\( 6 \\)",
+          "\\( 4 \\)",
+          "\\( 8 \\)"
+        ],
+        "hint": "فكر في أسوأ حالة (سحب جورب من كل لون أولاً).",
+        "explanation": "أسوأ حالة: تسحب 4 جوارب مختلفة. الجورب التالي يضمن التطابق، إذن 5."
+      }
+    },
+    "correct_index": "0"
+  },
+  {
+    "id": "KANG-7504-f307",
+    "track": "kang",
+    "level": "Level 2",
+    "topic": "Fractions",
+    "type": "MCQ",
+    "difficulty": "medium",
+    "content": {
+      "en": {
+        "question": "If \\( \\frac{2}{3} \\) of a number is \\( 12 \\), what is \\( \\frac{1}{2} \\) of that number?",
+        "options": [
+          "\\( 11 \\)",
+          "\\( 7 \\)",
+          "\\( 9 \\)",
+          "\\( 18 \\)"
+        ],
+        "hint": "First find the number: \\( 12 \\times \\frac{3}{2} \\).",
+        "explanation": "The number is \\( 18 \\). Then \\( \\frac{1}{2} \\times 18 = 9 \\)."
+      },
+      "ar": {
+        "question": "إذا كان \\( \\frac{2}{3} \\) من عدد يساوي \\( 12 \\)، فما هو \\( \\frac{1}{2} \\) من هذا العدد؟",
+        "options": [
+          "\\( 11 \\)",
+          "\\( 7 \\)",
+          "\\( 9 \\)",
+          "\\( 18 \\)"
+        ],
+        "hint": "أوجد العدد أولاً: \\( 12 \\times \\frac{3}{2} \\).",
+        "explanation": "العدد هو \\( 18 \\). ثم \\( \\frac{1}{2} \\times 18 = 9 \\)."
+      }
+    },
+    "correct_index": "2"
+  },
+  {
+    "id": "KANG-2758-f680",
+    "track": "kang",
+    "level": "Grade 9",
+    "topic": "Logic",
+    "type": "MCQ",
+    "difficulty": "hard",
+    "content": {
+      "en": {
+        "question": "There are socks of 5 different colors in a drawer. What is the minimum number of socks you must pull out in the dark to guarantee you have a matching pair?",
+        "options": [
+          "\\( 10 \\)",
+          "\\( 5 \\)",
+          "\\( 7 \\)",
+          "\\( 6 \\)"
+        ],
+        "hint": "Think about the worst-case scenario (getting one of each color first).",
+        "explanation": "Worst case: you pick 5 socks and they are all different. The next one guarantees a match, so 6."
+      },
+      "ar": {
+        "question": "يوجد في درج جوارب بـ 5 ألوان مختلفة. ما أقل عدد من الجوارب يجب سحبه في الظلام لضمان الحصول على زوج متطابق؟",
+        "options": [
+          "\\( 10 \\)",
+          "\\( 5 \\)",
+          "\\( 7 \\)",
+          "\\( 6 \\)"
+        ],
+        "hint": "فكر في أسوأ حالة (سحب جورب من كل لون أولاً).",
+        "explanation": "أسوأ حالة: تسحب 5 جوارب مختلفة. الجورب التالي يضمن التطابق، إذن 6."
+      }
+    },
+    "correct_index": "3"
+  },
+  {
+    "id": "KANG-5470-5340",
+    "track": "kang",
+    "level": "Grade 12",
+    "topic": "Geometry",
+    "type": "MCQ",
+    "difficulty": "hard",
+    "content": {
+      "en": {
+        "question": "What is the sum of the interior angles of a convex dodecagon?",
+        "options": [
+          "\\( 1620^\\circ \\)",
+          "\\( 1980^\\circ \\)",
+          "\\( 1800^\\circ \\)",
+          "\\( 1890^\\circ \\)"
+        ],
+        "hint": "Use the formula \\( (n-2) \\times 180^\\circ \\).",
+        "explanation": "For 12 sides: \\( (12-2) \\times 180 = 1800^\\circ \\)."
+      },
+      "ar": {
+        "question": "ما مجموع الزوايا الداخلية لمضلع اثني عشري محدب؟",
+        "options": [
+          "\\( 1620^\\circ \\)",
+          "\\( 1980^\\circ \\)",
+          "\\( 1800^\\circ \\)",
+          "\\( 1890^\\circ \\)"
+        ],
+        "hint": "استخدم القاعدة \\( (n-2) \\times 180^\\circ \\).",
+        "explanation": "لـ 12 أضلاع: \\( (12-2) \\times 180 = 1800^\\circ \\)."
+      }
+    },
+    "correct_index": "2"
+  },
+  {
+    "id": "KANG-1230-9afb",
+    "track": "kang",
+    "level": "Grade 6",
+    "topic": "Algebra",
+    "type": "MCQ",
+    "difficulty": "medium",
+    "content": {
+      "en": {
+        "question": "Solve for \\( x \\): \\( 9x + 7 = 2x + 56 \\).",
+        "options": [
+          "\\( 8 \\)",
+          "\\( 7 \\)",
+          "\\( 9 \\)",
+          "\\( 6 \\)"
+        ],
+        "hint": "Collect the x terms on one side.",
+        "explanation": "\\( 7x = 49 \\Rightarrow x = 7 \\)."
+      },
+      "ar": {
+        "question": "أوجد قيمة \\( x \\): \\( 9x + 7 = 2x + 56 \\).",
+        "options": [
+          "\\( 8 \\)",
+          "\\( 7 \\)",
+          "\\( 9 \\)",
+          "\\( 6 \\)"
+        ],
+        "hint": "اجمع حدود x في طرف واحد.",
+        "explanation": "\\( 7x = 49 \\Rightarrow x = 7 \\)."
+      }
+    },
+    "correct_index": "1"
+  },
+  {
+    "id": "KANG-8007-502b",
+    "track": "kang",
+    "level": "Grade 12",
+    "topic": "Geometry",
+    "type": "MCQ",
+    "difficulty": "hard",
+    "content": {
+      "en": {
+        "question": "What is the sum of the interior angles of a convex octagon?",
+        "options": [
+          "\\( 1080^\\circ \\)",
+          "\\( 1170^\\circ \\)",
+          "\\( 900^\\circ \\)",
+          "\\( 1260^\\circ \\)"
+        ],
+        "hint": "Use the formula \\( (n-2) \\times 180^\\circ \\).",
+        "explanation": "For 8 sides: \\( (8-2) \\times 180 = 1080^\\circ \\)."
+      },
+      "ar": {
+        "question": "ما مجموع الزوايا الداخلية لمضلع ثماني محدب؟",
+        "options": [
+          "\\( 1080^\\circ \\)",
+          "\\( 1170^\\circ \\)",
+          "\\( 900^\\circ \\)",
+          "\\( 1260^\\circ \\)"
+        ],
+        "hint": "استخدم القاعدة \\( (n-2) \\times 180^\\circ \\).",
+        "explanation": "لـ 8 أضلاع: \\( (8-2) \\times 180 = 1080^\\circ \\)."
+      }
+    },
+    "correct_index": "0"
+  },
+  {
+    "id": "KANG-6301-40a8",
+    "track": "kang",
+    "level": "Grade 12",
+    "topic": "Word Problems",
+    "type": "MCQ",
+    "difficulty": "medium",
+    "content": {
+      "en": {
+        "question": "Two cars leave the same city traveling in opposite directions. One travels at \\( 42 \\) km/h and the other at \\( 72 \\) km/h. How far apart are they after \\( 2 \\) hours?",
+        "options": [
+          "\\( 84 \\) km",
+          "\\( 144 \\) km",
+          "\\( 228 \\) km",
+          "\\( 60 \\) km"
+        ],
+        "hint": "Add their speeds to find the rate of separation.",
+        "explanation": "Relative speed is \\( 42 + 72 = 114 \\) km/h. Distance = \\( 114 \\times 2 = 228 \\) km."
+      },
+      "ar": {
+        "question": "تغادر سيارتان نفس المدينة في اتجاهين متعاكسين. تسير الأولى بسرعة \\( 42 \\) كم/س والثانية بسرعة \\( 72 \\) كم/س. كم المسافة بينهما بعد \\( 2 \\) ساعات؟",
+        "options": [
+          "\\( 84 \\) km",
+          "\\( 144 \\) km",
+          "\\( 228 \\) km",
+          "\\( 60 \\) km"
+        ],
+        "hint": "اجمع سرعتيهما لإيجاد معدل الابتعاد.",
+        "explanation": "السرعة النسبية \\( 42 + 72 = 114 \\) كم/س. المسافة = \\( 114 \\times 2 = 228 \\) كم."
+      }
+    },
+    "correct_index": "2"
+  },
+  {
+    "id": "KANG-1187-1378",
+    "track": "kang",
+    "level": "Grade 6",
+    "topic": "Algebra",
+    "type": "MCQ",
+    "difficulty": "medium",
+    "content": {
+      "en": {
+        "question": "Solve for \\( x \\): \\( 9x + 6 = 4x + 21 \\).",
+        "options": [
+          "\\( 3 \\)",
+          "\\( 5 \\)",
+          "\\( 4 \\)",
+          "\\( 2 \\)"
+        ],
+        "hint": "Collect the x terms on one side.",
+        "explanation": "\\( 5x = 15 \\Rightarrow x = 3 \\)."
+      },
+      "ar": {
+        "question": "أوجد قيمة \\( x \\): \\( 9x + 6 = 4x + 21 \\).",
+        "options": [
+          "\\( 3 \\)",
+          "\\( 5 \\)",
+          "\\( 4 \\)",
+          "\\( 2 \\)"
+        ],
+        "hint": "اجمع حدود x في طرف واحد.",
+        "explanation": "\\( 5x = 15 \\Rightarrow x = 3 \\)."
+      }
+    },
+    "correct_index": "0"
+  },
+  {
+    "id": "KANG-8625-0076",
+    "track": "kang",
+    "level": "Grade 12",
+    "topic": "Geometry",
+    "type": "MCQ",
+    "difficulty": "hard",
+    "content": {
+      "en": {
+        "question": "What is the sum of the interior angles of a convex octagon?",
+        "options": [
+          "\\( 1260^\\circ \\)",
+          "\\( 1170^\\circ \\)",
+          "\\( 900^\\circ \\)",
+          "\\( 1080^\\circ \\)"
+        ],
+        "hint": "Use the formula \\( (n-2) \\times 180^\\circ \\).",
+        "explanation": "For 8 sides: \\( (8-2) \\times 180 = 1080^\\circ \\)."
+      },
+      "ar": {
+        "question": "ما مجموع الزوايا الداخلية لمضلع ثماني محدب؟",
+        "options": [
+          "\\( 1260^\\circ \\)",
+          "\\( 1170^\\circ \\)",
+          "\\( 900^\\circ \\)",
+          "\\( 1080^\\circ \\)"
+        ],
+        "hint": "استخدم القاعدة \\( (n-2) \\times 180^\\circ \\).",
+        "explanation": "لـ 8 أضلاع: \\( (8-2) \\times 180 = 1080^\\circ \\)."
+      }
+    },
+    "correct_index": "3"
+  },
+  {
+    "id": "KANG-5833-2ad3",
+    "track": "kang",
+    "level": "Grade 9",
+    "topic": "Geometry",
+    "type": "MCQ",
+    "difficulty": "hard",
+    "content": {
+      "en": {
+        "question": "What is the sum of the interior angles of a convex hendecagon?",
+        "options": [
+          "\\( 1800^\\circ \\)",
+          "\\( 1620^\\circ \\)",
+          "\\( 1710^\\circ \\)",
+          "\\( 1440^\\circ \\)"
+        ],
+        "hint": "Use the formula \\( (n-2) \\times 180^\\circ \\).",
+        "explanation": "For 11 sides: \\( (11-2) \\times 180 = 1620^\\circ \\)."
+      },
+      "ar": {
+        "question": "ما مجموع الزوايا الداخلية لمضلع أحد عشر ضلعاً محدب؟",
+        "options": [
+          "\\( 1800^\\circ \\)",
+          "\\( 1620^\\circ \\)",
+          "\\( 1710^\\circ \\)",
+          "\\( 1440^\\circ \\)"
+        ],
+        "hint": "استخدم القاعدة \\( (n-2) \\times 180^\\circ \\).",
+        "explanation": "لـ 11 أضلاع: \\( (11-2) \\times 180 = 1620^\\circ \\)."
+      }
+    },
+    "correct_index": "1"
   }
 ]

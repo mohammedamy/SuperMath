@@ -8104,5 +8104,71 @@
     },
     "correct_index": "0",
     "original_difficulty": "hard"
+  },
+  {
+    "id": "JEE-6580-1199",
+    "track": "jee",
+    "level": "Grade 6",
+    "topic": "Algebra",
+    "type": "MCQ",
+    "difficulty": "medium",
+    "content": {
+      "en": {
+        "question": "Solve for \\( x \\): \\( 6x + 10 = 3x + 16 \\).",
+        "options": [
+          "\\( 3 \\)",
+          "\\( 1 \\)",
+          "\\( 2 \\)",
+          "\\( 4 \\)"
+        ],
+        "hint": "Collect the x terms on one side.",
+        "explanation": "\\( 3x = 6 \\Rightarrow x = 2 \\)."
+      },
+      "ar": {
+        "question": "أوجد قيمة \\( x \\): \\( 6x + 10 = 3x + 16 \\).",
+        "options": [
+          "\\( 3 \\)",
+          "\\( 1 \\)",
+          "\\( 2 \\)",
+          "\\( 4 \\)"
+        ],
+        "hint": "اجمع حدود x في طرف واحد.",
+        "explanation": "\\( 3x = 6 \\Rightarrow x = 2 \\)."
+      }
+    },
+    "correct_index": "2"
+  },
+  {
+    "id": "JEE-8381-d07e",
+    "track": "jee",
+    "level": "Level 2",
+    "topic": "Word Problems",
+    "type": "MCQ",
+    "difficulty": "medium",
+    "content": {
+      "en": {
+        "question": "Two cars leave the same city traveling in opposite directions. One travels at \\( 59 \\) km/h and the other at \\( 72 \\) km/h. How far apart are they after \\( 4 \\) hours?",
+        "options": [
+          "\\( 288 \\) km",
+          "\\( 52 \\) km",
+          "\\( 236 \\) km",
+          "\\( 524 \\) km"
+        ],
+        "hint": "Add their speeds to find the rate of separation.",
+        "explanation": "Relative speed is \\( 59 + 72 = 131 \\) km/h. Distance = \\( 131 \\times 4 = 524 \\) km."
+      },
+      "ar": {
+        "question": "تغادر سيارتان نفس المدينة في اتجاهين متعاكسين. تسير الأولى بسرعة \\( 59 \\) كم/س والثانية بسرعة \\( 72 \\) كم/س. كم المسافة بينهما بعد \\( 4 \\) ساعات؟",
+        "options": [
+          "\\( 288 \\) km",
+          "\\( 52 \\) km",
+          "\\( 236 \\) km",
+          "\\( 524 \\) km"
+        ],
+        "hint": "اجمع سرعتيهما لإيجاد معدل الابتعاد.",
+        "explanation": "السرعة النسبية \\( 59 + 72 = 131 \\) كم/س. المسافة = \\( 131 \\times 4 = 524 \\) كم."
+      }
+    },
+    "correct_index": "3"
   }
 ]
