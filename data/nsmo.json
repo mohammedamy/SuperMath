@@ -12783,5 +12783,665 @@
       }
     },
     "correct_index": "1"
+  },
+  {
+    "id": "NSMO-S3-01",
+    "track": "nsmo",
+    "level": "Phase 3: Senior National Olympiad (Grades 10-12)",
+    "topic": "AM-GM Inequality",
+    "type": "MCQ",
+    "difficulty": "medium",
+    "content": {
+      "en": {
+        "question": "Let \\( x, y, z \\) be positive real numbers such that \\( x + y + z = 3 \\). What is the minimum possible value of the expression \\( \\frac{1}{x} + \\frac{1}{y} + \\frac{1}{z} \\)?",
+        "options": [
+          "\\( 1 \\)",
+          "\\( 3 \\)",
+          "\\( 6 \\)",
+          "\\( 9 \\)"
+        ],
+        "hint": "Apply the AM-HM (Arithmetic Mean - Harmonic Mean) inequality or Cauchy-Schwarz inequality.",
+        "explanation": "Using the relationship between the Arithmetic Mean and Harmonic Mean for three positive numbers:\n\\[ \\frac{x + y + z}{3} \\ge \\frac{3}{\\frac{1}{x} + \\frac{1}{y} + \\frac{1}{z}} \\]\nSubstitute \\( x + y + z = 3 \\):\n\\[ \\frac{3}{3} \\ge \\frac{3}{\\frac{1}{x} + \\frac{1}{y} + \\frac{1}{z}} \\implies 1 \\ge \\frac{3}{\\frac{1}{x} + \\frac{1}{y} + \\frac{1}{z}} \\]\nMultiplying both sides by \\( \\left(\\frac{1}{x} + \\frac{1}{y} + \\frac{1}{z}\\right) \\) gives:\n\\[ \\frac{1}{x} + \\frac{1}{y} + \\frac{1}{z} \\ge 3 \\]\nAlternatively, using Cauchy-Schwarz inequality: \\( (x + y + z)\\left(\\frac{1}{x} + \\frac{1}{y} + \\frac{1}{z}\\right) \\ge (1 + 1 + 1)^2 = 9 \\). Since \\( x+y+z=3 \\), the sum is \\( \\ge 3 \\).\nEquality holds when \\( x = y = z = 1 \\)."
+      },
+      "ar": {
+        "question": "لتكن \\( x, y, z \\) أعداداً حقيقية موجبة بحيث \\( x + y + z = 3 \\). ما هي القيمة الصغرى الممكنة للمقدار \\( \\frac{1}{x} + \\frac{1}{y} + \\frac{1}{z} \\)؟",
+        "options": [
+          "\\( 1 \\)",
+          "\\( 3 \\)",
+          "\\( 6 \\)",
+          "\\( 9 \\)"
+        ],
+        "hint": "طبق متراجحة الوسط الحسابي والوسط التوافقي (AM-HM) أو متراجحة كوشي-شفارتز.",
+        "explanation": "باستخدام العلاقة بين الوسط الحسابي والوسط التوافقي لثلاثة أعداد موجبة:\n\\[ \\frac{x + y + z}{3} \\ge \\frac{3}{\\frac{1}{x} + \\frac{1}{y} + \\frac{1}{z}} \\]\nنعوض بـ \\( x + y + z = 3 \\):\n\\[ \\frac{3}{3} \\ge \\frac{3}{\\frac{1}{x} + \\frac{1}{y} + \\frac{1}{z}} \\implies 1 \\ge \\frac{3}{\\frac{1}{x} + \\frac{1}{y} + \\frac{1}{z}} \\]\nبضرب كلا الطرفين في \\( \\left(\\frac{1}{x} + \\frac{1}{y} + \\frac{1}{z}\\right) \\) نحصل على:\n\\[ \\frac{1}{x} + \\frac{1}{y} + \\frac{1}{z} \\ge 3 \\]\nطريقة بديلة باستخدام متراجحة كوشي-شفارتز: \\( (x + y + z)\\left(\\frac{1}{x} + \\frac{1}{y} + \\frac{1}{z}\\right) \\ge (1 + 1 + 1)^2 = 9 \\). بما أن \\( x+y+z=3 \\)، فإن المجموع يكون \\( \\ge 3 \\).\nتتحقق المساواة عندما \\( x = y = z = 1 \\)."
+      }
+    },
+    "correct_index": "1"
+  },
+  {
+    "id": "NSMO-S3-02",
+    "track": "nsmo",
+    "level": "Phase 3: Senior National Olympiad (Grades 10-12)",
+    "topic": "Legendre's Formula",
+    "type": "MCQ",
+    "difficulty": "medium",
+    "content": {
+      "en": {
+        "question": "What is the exponent of the highest power of \\( 7 \\) that perfectly divides \\( 1000! \\) (1000 factorial)?",
+        "options": [
+          "\\( 162 \\)",
+          "\\( 163 \\)",
+          "\\( 164 \\)",
+          "\\( 165 \\)"
+        ],
+        "hint": "Use Legendre's Formula: compute the sum of \\( \\lfloor \\frac{1000}{7^k} \\rfloor \\) for all integers \\( k \\ge 1 \\).",
+        "explanation": "According to Legendre's Formula, the highest power of a prime \\( p \\) dividing \\( n! \\) is given by \\( v_p(n!) = \\sum_{k=1}^{\\infty} \\lfloor \\frac{n}{p^k} \\rfloor \\).\nFor \\( n = 1000 \\) and \\( p = 7 \\):\n- \\( \\lfloor 1000 / 7 \\rfloor = 142 \\)\n- \\( \\lfloor 1000 / 49 \\rfloor = 20 \\)\n- \\( \\lfloor 1000 / 343 \\rfloor = 2 \\)\n- \\( \\lfloor 1000 / 2401 \\rfloor = 0 \\) (We stop here).\nAdding these quotients gives: \\( 142 + 20 + 2 = 164 \\).\nTherefore, \\( 7^{164} \\) is the highest power dividing \\( 1000! \\)."
+      },
+      "ar": {
+        "question": "ما هو أس أعلى قوة للعدد \\( 7 \\) تقسم \\( 1000! \\) (مضروب 1000) قسمة تامة؟",
+        "options": [
+          "\\( 162 \\)",
+          "\\( 163 \\)",
+          "\\( 164 \\)",
+          "\\( 165 \\)"
+        ],
+        "hint": "استخدم صيغة ليجاندر: احسب مجموع \\( \\lfloor \\frac{1000}{7^k} \\rfloor \\) لجميع الأعداد الصحيحة \\( k \\ge 1 \\).",
+        "explanation": "وفقاً لصيغة ليجاندر، فإن أعلى قوة لعدد أولي \\( p \\) تقسم \\( n! \\) تُعطى بالصيغة \\( v_p(n!) = \\sum_{k=1}^{\\infty} \\lfloor \\frac{n}{p^k} \\rfloor \\).\nبالنسبة لـ \\( n = 1000 \\) و \\( p = 7 \\):\n- \\( \\lfloor 1000 / 7 \\rfloor = 142 \\)\n- \\( \\lfloor 1000 / 49 \\rfloor = 20 \\)\n- \\( \\lfloor 1000 / 343 \\rfloor = 2 \\)\n- \\( \\lfloor 1000 / 2401 \\rfloor = 0 \\) (نتوقف هنا).\nبجمع نواتج القسمة هذه نحصل على: \\( 142 + 20 + 2 = 164 \\).\nوبالتالي، \\( 7^{164} \\) هي أعلى قوة تقسم \\( 1000! \\)."
+      }
+    },
+    "correct_index": "2"
+  },
+  {
+    "id": "NSMO-S3-03",
+    "track": "nsmo",
+    "level": "Phase 3: Senior National Olympiad (Grades 10-12)",
+    "topic": "Ptolemy's Theorem",
+    "type": "MCQ",
+    "difficulty": "hard",
+    "content": {
+      "en": {
+        "question": "A cyclic quadrilateral \\( ABCD \\) has side lengths \\( AB = 3 \\), \\( BC = 4 \\), \\( CD = 5 \\), and \\( DA = 6 \\). If the length of the diagonal \\( AC = 7 \\), what is the exact length of the other diagonal \\( BD \\)?<br/><svg viewBox='0 0 200 200' class='w-full max-w-xs mx-auto bg-slate-900/60 rounded-xl p-2 border border-slate-700 shadow-md my-2'><circle cx='100' cy='100' r='80' fill='none' stroke='#475569' stroke-width='2'/><polygon points='40,40 160,40 180,140 60,160' fill='none' stroke='#38bdf8' stroke-width='2'/><line x1='40' y1='40' x2='180' y2='140' stroke='#10b981' stroke-width='2'/><line x1='160' y1='40' x2='60' y2='160' stroke='#10b981' stroke-width='2'/><text x='30' y='30' fill='#e2e8f0' font-size='12'>A</text><text x='170' y='30' fill='#e2e8f0' font-size='12'>B</text><text x='190' y='150' fill='#e2e8f0' font-size='12'>C</text><text x='50' y='175' fill='#e2e8f0' font-size='12'>D</text></svg>",
+        "options": [
+          "\\( \\frac{35}{6} \\)",
+          "\\( \\frac{39}{7} \\)",
+          "\\( \\frac{41}{7} \\)",
+          "\\( 6 \\)"
+        ],
+        "hint": "Apply Ptolemy's theorem for cyclic quadrilaterals: the product of the diagonals equals the sum of the products of the opposite sides.",
+        "explanation": "Ptolemy's Theorem states that for a cyclic quadrilateral \\( ABCD \\), the sum of the products of opposite sides is equal to the product of its diagonals:\n\\[ AC \\cdot BD = AB \\cdot CD + BC \\cdot DA \\]\nSubstitute the known values into the equation:\n\\[ 7 \\cdot BD = (3)(5) + (4)(6) \\]\n\\[ 7 \\cdot BD = 15 + 24 \\]\n\\[ 7 \\cdot BD = 39 \\implies BD = \\frac{39}{7} \\]."
+      },
+      "ar": {
+        "question": "شكل رباعي دائري \\( ABCD \\) أطوال أضلاعه \\( AB = 3 \\) و \\( BC = 4 \\) و \\( CD = 5 \\) و \\( DA = 6 \\). إذا كان طول القطر \\( AC = 7 \\)، فما هو الطول الدقيق للقطر الآخر \\( BD \\)؟<br/><svg viewBox='0 0 200 200' class='w-full max-w-xs mx-auto bg-slate-900/60 rounded-xl p-2 border border-slate-700 shadow-md my-2'><circle cx='100' cy='100' r='80' fill='none' stroke='#475569' stroke-width='2'/><polygon points='40,40 160,40 180,140 60,160' fill='none' stroke='#38bdf8' stroke-width='2'/><line x1='40' y1='40' x2='180' y2='140' stroke='#10b981' stroke-width='2'/><line x1='160' y1='40' x2='60' y2='160' stroke='#10b981' stroke-width='2'/><text x='30' y='30' fill='#e2e8f0' font-size='12'>A</text><text x='170' y='30' fill='#e2e8f0' font-size='12'>B</text><text x='190' y='150' fill='#e2e8f0' font-size='12'>C</text><text x='50' y='175' fill='#e2e8f0' font-size='12'>D</text></svg>",
+        "options": [
+          "\\( \\frac{35}{6} \\)",
+          "\\( \\frac{39}{7} \\)",
+          "\\( \\frac{41}{7} \\)",
+          "\\( 6 \\)"
+        ],
+        "hint": "طبق مبرهنة بطليموس للأشكال الرباعية الدائرية: حاصل ضرب القطرين يساوي مجموع حواصل ضرب الأضلاع المتقابلة.",
+        "explanation": "تنص مبرهنة بطليموس على أنه في الشكل الرباعي الدائري \\( ABCD \\)، مجموع حواصل ضرب الأضلاع المتقابلة يساوي حاصل ضرب قطريه:\n\\[ AC \\cdot BD = AB \\cdot CD + BC \\cdot DA \\]\nنعوض بالقيم المعروفة في المعادلة:\n\\[ 7 \\cdot BD = (3)(5) + (4)(6) \\]\n\\[ 7 \\cdot BD = 15 + 24 \\]\n\\[ 7 \\cdot BD = 39 \\implies BD = \\frac{39}{7} \\]."
+      }
+    },
+    "correct_index": "1"
+  },
+  {
+    "id": "NSMO-S3-04",
+    "track": "nsmo",
+    "level": "Phase 3: Senior National Olympiad (Grades 10-12)",
+    "topic": "Diophantine Equations",
+    "type": "MCQ",
+    "difficulty": "medium",
+    "content": {
+      "en": {
+        "question": "How many pairs of positive integers \\( (x, y) \\) satisfy the linear Diophantine equation \\( 3x + 5y = 100 \\)?",
+        "options": [
+          "\\( 4 \\)",
+          "\\( 5 \\)",
+          "\\( 6 \\)",
+          "\\( 7 \\)"
+        ],
+        "hint": "Analyze the equation modulo 3 to find a constraint on \\( y \\). What must \\( y \\) be congruent to?",
+        "explanation": "We are looking for positive integer solutions to \\( 3x + 5y = 100 \\).\nTaking modulo 3 on both sides:\n\\[ 5y \\equiv 100 \\pmod 3 \\]\nSince \\( 5 \\equiv 2 \\pmod 3 \\) and \\( 100 \\equiv 1 \\pmod 3 \\):\n\\[ 2y \\equiv 1 \\pmod 3 \\]\nMultiply by 2:\n\\[ 4y \\equiv 2 \\pmod 3 \\implies y \\equiv 2 \\pmod 3 \\].\nSo, \\( y \\) must be of the form \\( y = 3k + 2 \\) for an integer \\( k \\ge 0 \\).\nSince \\( x \\) must be positive (\\( x > 0 \\)), we also have \\( 5y < 100 \\implies y < 20 \\).\nThe possible values for \\( y \\) are:\n\\( k = 0 \\implies y = 2 \\)\n\\( k = 1 \\implies y = 5 \\)\n\\( k = 2 \\implies y = 8 \\)\n\\( k = 3 \\implies y = 11 \\)\n\\( k = 4 \\implies y = 14 \\)\n\\( k = 5 \\implies y = 17 \\)\nFor each of these 6 values of \\( y \\), there exists a corresponding positive integer \\( x \\) (e.g., if \\( y=2, x=30 \\)). Thus, there are exactly \\( 6 \\) solutions."
+      },
+      "ar": {
+        "question": "كم عدد أزواج الأعداد الصحيحة الموجبة \\( (x, y) \\) التي تحقق المعادلة الدايوفانتية الخطية \\( 3x + 5y = 100 \\)؟",
+        "options": [
+          "\\( 4 \\)",
+          "\\( 5 \\)",
+          "\\( 6 \\)",
+          "\\( 7 \\)"
+        ],
+        "hint": "حلل المعادلة باستخدام الحساب المعياري (modulo) قياس 3 لإيجاد شرط لـ \\( y \\). ما الذي يجب أن يتطابق معه \\( y \\)؟",
+        "explanation": "نبحث عن حلول صحيحة موجبة للمعادلة \\( 3x + 5y = 100 \\).\nبأخذ باقي القسمة على 3 للطرفين (modulo 3):\n\\[ 5y \\equiv 100 \\pmod 3 \\]\nبما أن \\( 5 \\equiv 2 \\pmod 3 \\) و \\( 100 \\equiv 1 \\pmod 3 \\):\n\\[ 2y \\equiv 1 \\pmod 3 \\]\nنضرب في 2:\n\\[ 4y \\equiv 2 \\pmod 3 \\implies y \\equiv 2 \\pmod 3 \\].\nإذن، يجب أن يكون \\( y \\) على الصورة \\( y = 3k + 2 \\) حيث \\( k \\ge 0 \\) عدد صحيح.\nبما أن \\( x \\) يجب أن يكون موجباً (\\( x > 0 \\))، فلدينا أيضاً \\( 5y < 100 \\implies y < 20 \\).\nالقيم الممكنة لـ \\( y \\) هي:\n\\( k = 0 \\implies y = 2 \\)\n\\( k = 1 \\implies y = 5 \\)\n\\( k = 2 \\implies y = 8 \\)\n\\( k = 3 \\implies y = 11 \\)\n\\( k = 4 \\implies y = 14 \\)\n\\( k = 5 \\implies y = 17 \\)\nلكل قيمة من هذه القيم الـ 6 لـ \\( y \\)، يوجد عدد صحيح موجب مقابل لـ \\( x \\) (مثلاً، إذا كان \\( y=2 \\) فإن \\( x=30 \\)). وبالتالي، يوجد \\( 6 \\) حلول بالضبط."
+      }
+    },
+    "correct_index": "2"
+  },
+  {
+    "id": "NSMO-S3-05",
+    "track": "nsmo",
+    "level": "Phase 3: Senior National Olympiad (Grades 10-12)",
+    "topic": "AM-GM Inequality",
+    "type": "MCQ",
+    "difficulty": "medium",
+    "content": {
+      "en": {
+        "question": "For a positive real number \\( x \\), what is the minimum value of the function \\( f(x) = 4x + \\frac{9}{x} \\)?",
+        "options": [
+          "\\( 6 \\)",
+          "\\( 12 \\)",
+          "\\( 18 \\)",
+          "\\( 36 \\)"
+        ],
+        "hint": "Apply the AM-GM inequality directly to the two positive terms \\( 4x \\) and \\( \\frac{9}{x} \\).",
+        "explanation": "Since \\( x > 0 \\), both \\( 4x \\) and \\( \\frac{9}{x} \\) are strictly positive real numbers. We can apply the Arithmetic Mean - Geometric Mean (AM-GM) inequality:\n\\[ A + B \\ge 2\\sqrt{AB} \\]\nSubstitute \\( A = 4x \\) and \\( B = \\frac{9}{x} \\):\n\\[ 4x + \\frac{9}{x} \\ge 2\\sqrt{4x \\cdot \\frac{9}{x}} \\]\nThe \\( x \\) terms cancel out perfectly under the square root:\n\\[ 4x + \\frac{9}{x} \\ge 2\\sqrt{36} \\]\n\\[ 4x + \\frac{9}{x} \\ge 2(6) = 12 \\]\nEquality holds when \\( 4x = \\frac{9}{x} \\implies 4x^2 = 9 \\implies x = \\frac{3}{2} \\).\nThe minimum value is exactly \\( 12 \\)."
+      },
+      "ar": {
+        "question": "لعدد حقيقي موجب \\( x \\)، ما هي القيمة الصغرى للدالة \\( f(x) = 4x + \\frac{9}{x} \\)؟",
+        "options": [
+          "\\( 6 \\)",
+          "\\( 12 \\)",
+          "\\( 18 \\)",
+          "\\( 36 \\)"
+        ],
+        "hint": "طبق متراجحة الوسط الحسابي والهندسي (AM-GM) مباشرة على الحدين الموجبين \\( 4x \\) و \\( \\frac{9}{x} \\).",
+        "explanation": "بما أن \\( x > 0 \\)، فإن كلا الحدين \\( 4x \\) و \\( \\frac{9}{x} \\) أعداد حقيقية موجبة تماماً. يمكننا تطبيق متراجحة الوسط الحسابي والهندسي (AM-GM):\n\\[ A + B \\ge 2\\sqrt{AB} \\]\nنعوض بـ \\( A = 4x \\) و \\( B = \\frac{9}{x} \\):\n\\[ 4x + \\frac{9}{x} \\ge 2\\sqrt{4x \\cdot \\frac{9}{x}} \\]\nتُحذف حدود \\( x \\) تماماً تحت الجذر التربيعي:\n\\[ 4x + \\frac{9}{x} \\ge 2\\sqrt{36} \\]\n\\[ 4x + \\frac{9}{x} \\ge 2(6) = 12 \\]\nتتحقق المساواة عندما \\( 4x = \\frac{9}{x} \\implies 4x^2 = 9 \\implies x = \\frac{3}{2} \\).\nالقيمة الصغرى هي \\( 12 \\) بالضبط."
+      }
+    },
+    "correct_index": "1"
+  },
+  {
+    "id": "NSMO-S3-06",
+    "track": "nsmo",
+    "level": "Phase 3: Senior National Olympiad (Grades 10-12)",
+    "topic": "Legendre's Formula",
+    "type": "MCQ",
+    "difficulty": "medium",
+    "content": {
+      "en": {
+        "question": "How many trailing zeros are at the end of the base-10 representation of \\( 2026! \\) (2026 factorial)?",
+        "options": [
+          "\\( 504 \\)",
+          "\\( 505 \\)",
+          "\\( 506 \\)",
+          "\\( 507 \\)"
+        ],
+        "hint": "The number of trailing zeros is determined by the number of factors of 5 in the prime factorization of \\( 2026! \\). Apply Legendre's formula.",
+        "explanation": "Each trailing zero is produced by a factor of 10, which requires a pair of prime factors 2 and 5. Since factorials always contain more 2s than 5s, we only need to count the total exponent of 5 dividing \\( 2026! \\).\nBy Legendre's Formula, the exponent of 5 is:\n\\[ v_5(2026!) = \\sum_{k=1}^{\\infty} \\left\\lfloor \\frac{2026}{5^k} \\right\\rfloor \\]\nCalculate the successive quotients:\n- \\( \\lfloor 2026 / 5 \\rfloor = 405 \\)\n- \\( \\lfloor 405 / 5 \\rfloor = 81 \\)\n- \\( \\lfloor 81 / 5 \\rfloor = 16 \\)\n- \\( \\lfloor 16 / 5 \\rfloor = 3 \\)\n- \\( \\lfloor 3 / 5 \\rfloor = 0 \\)\nThe total sum is \\( 405 + 81 + 16 + 3 = 505 \\).\nThe number ends with exactly \\( 505 \\) trailing zeros."
+      },
+      "ar": {
+        "question": "كم عدد الأصفار المتتالية الموجودة في نهاية التمثيل العشري (الأساس 10) للعدد \\( 2026! \\) (مضروب 2026)؟",
+        "options": [
+          "\\( 504 \\)",
+          "\\( 505 \\)",
+          "\\( 506 \\)",
+          "\\( 507 \\)"
+        ],
+        "hint": "يتم تحديد عدد الأصفار المتتالية من خلال عدد عوامل الرقم 5 في التحليل الأولي لـ \\( 2026! \\). طبق صيغة ليجاندر.",
+        "explanation": "كل صفر متتالٍ ينتج من عامل 10، والذي يتطلب زوجاً من العوامل الأولية 2 و 5. نظراً لأن المضروب يحتوي دائماً على أعداد 2 أكثر من 5، نحتاج فقط إلى حساب الأس الإجمالي للعدد 5 الذي يقسم \\( 2026! \\).\nحسب صيغة ليجاندر، أس العدد 5 هو:\n\\[ v_5(2026!) = \\sum_{k=1}^{\\infty} \\left\\lfloor \\frac{2026}{5^k} \\right\\rfloor \\]\nنحسب نواتج القسمة المتتالية:\n- \\( \\lfloor 2026 / 5 \\rfloor = 405 \\)\n- \\( \\lfloor 405 / 5 \\rfloor = 81 \\)\n- \\( \\lfloor 81 / 5 \\rfloor = 16 \\)\n- \\( \\lfloor 16 / 5 \\rfloor = 3 \\)\n- \\( \\lfloor 3 / 5 \\rfloor = 0 \\)\nالمجموع الكلي هو \\( 405 + 81 + 16 + 3 = 505 \\).\nينتهي العدد بـ \\( 505 \\) أصفار متتالية بالضبط."
+      }
+    },
+    "correct_index": "1"
+  },
+  {
+    "id": "NSMO-S3-07",
+    "track": "nsmo",
+    "level": "Phase 3: Senior National Olympiad (Grades 10-12)",
+    "topic": "Ptolemy's Theorem",
+    "type": "MCQ",
+    "difficulty": "hard",
+    "content": {
+      "en": {
+        "question": "Let \\( ABC \\) be an equilateral triangle inscribed in a circle. Let \\( P \\) be an arbitrary point on the minor arc \\( BC \\). If the lengths of the segments are \\( PB = 3 \\) and \\( PC = 4 \\), what is the exact length of the segment \\( PA \\)?<br/><svg viewBox='0 0 200 200' class='w-full max-w-xs mx-auto bg-slate-900/60 rounded-xl p-2 border border-slate-700 shadow-md my-2'><circle cx='100' cy='100' r='80' fill='none' stroke='#475569' stroke-width='2'/><polygon points='100,20 30,140 170,140' fill='none' stroke='#38bdf8' stroke-width='2'/><circle cx='140' cy='169' r='3' fill='#f59e0b'/><line x1='100' y1='20' x2='140' y2='169' stroke='#10b981' stroke-width='2'/><line x1='30' y1='140' x2='140' y2='169' stroke='#f59e0b' stroke-width='2'/><line x1='170' y1='140' x2='140' y2='169' stroke='#f59e0b' stroke-width='2'/><text x='100' y='10' fill='#e2e8f0' font-size='12'>A</text><text x='15' y='145' fill='#e2e8f0' font-size='12'>B</text><text x='180' y='145' fill='#e2e8f0' font-size='12'>C</text><text x='150' y='180' fill='#e2e8f0' font-size='12'>P</text></svg>",
+        "options": [
+          "\\( 5 \\)",
+          "\\( 6 \\)",
+          "\\( 7 \\)",
+          "\\( 12 \\)"
+        ],
+        "hint": "The points \\( A, B, P, C \\) form a cyclic quadrilateral. Apply Ptolemy's Theorem to \\( ABPC \\) and remember that \\( ABC \\) is equilateral.",
+        "explanation": "Since all four points lie on the circle, \\( ABPC \\) forms a cyclic quadrilateral.\nWe can apply Ptolemy's Theorem to this cyclic quadrilateral:\n\\[ AB \\cdot PC + AC \\cdot PB = BC \\cdot PA \\]\nBecause \\( \\triangle ABC \\) is an equilateral triangle, all its side lengths are equal. Let the side length be \\( s \\), so \\( AB = BC = AC = s \\).\nSubstituting this into Ptolemy's equation yields:\n\\[ s \\cdot PC + s \\cdot PB = s \\cdot PA \\]\nSince \\( s \\neq 0 \\), we can divide the entire equation by \\( s \\):\n\\[ PC + PB = PA \\]\nWe are given \\( PB = 3 \\) and \\( PC = 4 \\). Therefore:\n\\[ PA = 4 + 3 = 7 \\]."
+      },
+      "ar": {
+        "question": "ليكن \\( ABC \\) مثلثاً متطابق الأضلاع مرسوماً داخل دائرة (محاطاً بها). ولتكن \\( P \\) نقطة اختيارية تقع على القوس الأصغر \\( BC \\). إذا كانت أطوال القطع المستقيمة هي \\( PB = 3 \\) و \\( PC = 4 \\)، فما هو الطول الدقيق للقطعة المستقيمة \\( PA \\)؟<br/><svg viewBox='0 0 200 200' class='w-full max-w-xs mx-auto bg-slate-900/60 rounded-xl p-2 border border-slate-700 shadow-md my-2'><circle cx='100' cy='100' r='80' fill='none' stroke='#475569' stroke-width='2'/><polygon points='100,20 30,140 170,140' fill='none' stroke='#38bdf8' stroke-width='2'/><circle cx='140' cy='169' r='3' fill='#f59e0b'/><line x1='100' y1='20' x2='140' y2='169' stroke='#10b981' stroke-width='2'/><line x1='30' y1='140' x2='140' y2='169' stroke='#f59e0b' stroke-width='2'/><line x1='170' y1='140' x2='140' y2='169' stroke='#f59e0b' stroke-width='2'/><text x='100' y='10' fill='#e2e8f0' font-size='12'>A</text><text x='15' y='145' fill='#e2e8f0' font-size='12'>B</text><text x='180' y='145' fill='#e2e8f0' font-size='12'>C</text><text x='150' y='180' fill='#e2e8f0' font-size='12'>P</text></svg>",
+        "options": [
+          "\\( 5 \\)",
+          "\\( 6 \\)",
+          "\\( 7 \\)",
+          "\\( 12 \\)"
+        ],
+        "hint": "النقاط \\( A, B, P, C \\) تشكل شكلاً رباعياً دائرياً. طبق مبرهنة بطليموس على الشكل \\( ABPC \\) وتذكر أن المثلث \\( ABC \\) متطابق الأضلاع.",
+        "explanation": "بما أن النقاط الأربع تقع على الدائرة، فإن \\( ABPC \\) يشكل شكلاً رباعياً دائرياً.\nيمكننا تطبيق مبرهنة بطليموس على هذا الشكل الرباعي الدائري:\n\\[ AB \\cdot PC + AC \\cdot PB = BC \\cdot PA \\]\nولأن المثلث \\( \\triangle ABC \\) متطابق الأضلاع، فإن جميع أطوال أضلاعه متساوية. ليكن طول الضلع \\( s \\)، إذن \\( AB = BC = AC = s \\).\nبالتعويض في معادلة بطليموس نحصل على:\n\\[ s \\cdot PC + s \\cdot PB = s \\cdot PA \\]\nبما أن \\( s \\neq 0 \\)، يمكننا قسمة المعادلة بالكامل على \\( s \\):\n\\[ PC + PB = PA \\]\nأُعطينا أن \\( PB = 3 \\) و \\( PC = 4 \\). بالتالي:\n\\[ PA = 4 + 3 = 7 \\]."
+      }
+    },
+    "correct_index": "2"
+  },
+  {
+    "id": "NSMO-S3-08",
+    "track": "nsmo",
+    "level": "Phase 3: Senior National Olympiad (Grades 10-12)",
+    "topic": "Diophantine Equations",
+    "type": "MCQ",
+    "difficulty": "hard",
+    "content": {
+      "en": {
+        "question": "Find the total number of integer solutions \\( (x, y) \\) (both positive and negative) to the non-linear Diophantine equation \\( xy - 2x - 3y = 5 \\).",
+        "options": [
+          "\\( 2 \\)",
+          "\\( 4 \\)",
+          "\\( 6 \\)",
+          "\\( 8 \\)"
+        ],
+        "hint": "Use Simon's Favorite Factoring Trick. Add a specific constant to both sides so the left side factors into \\( (x - A)(y - B) = C \\).",
+        "explanation": "We can factor equations of the form \\( xy + ax + by \\) by completing the rectangle (Simon's Favorite Factoring Trick).\nThe equation is: \\( xy - 2x - 3y = 5 \\).\nLet's factor the left side: \\( (x - 3)(y - 2) \\).\nIf we expand \\( (x - 3)(y - 2) \\), we get \\( xy - 2x - 3y + 6 \\).\nTo make our original equation match this, we add 6 to both sides:\n\\[ xy - 2x - 3y + 6 = 5 + 6 \\]\n\\[ (x - 3)(y - 2) = 11 \\]\nSince \\( x \\) and \\( y \\) are integers, \\( (x - 3) \\) and \\( (y - 2) \\) must be integer factors of \\( 11 \\).\nThe integer divisors of the prime number 11 are \\( 1, 11, -1, \\) and \\( -11 \\).\nThis yields 4 pairs of factors:\n1) \\( x - 3 = 1 \\implies x=4 \\), \\( y - 2 = 11 \\implies y=13 \\)\n2) \\( x - 3 = 11 \\implies x=14 \\), \\( y - 2 = 1 \\implies y=3 \\)\n3) \\( x - 3 = -1 \\implies x=2 \\), \\( y - 2 = -11 \\implies y=-9 \\)\n4) \\( x - 3 = -11 \\implies x=-8 \\), \\( y - 2 = -1 \\implies y=1 \\)\nThere are exactly \\( 4 \\) integer solutions."
+      },
+      "ar": {
+        "question": "أوجد العدد الإجمالي للحلول الصحيحة \\( (x, y) \\) (سواء كانت موجبة أو سالبة) للمعادلة الدايوفانتية غير الخطية \\( xy - 2x - 3y = 5 \\).",
+        "options": [
+          "\\( 2 \\)",
+          "\\( 4 \\)",
+          "\\( 6 \\)",
+          "\\( 8 \\)"
+        ],
+        "hint": "استخدم 'خدعة سايمون المفضلة للتحليل'. أضف ثابتاً محدداً لكلا الطرفين بحيث يتحلل الطرف الأيسر إلى \\( (x - A)(y - B) = C \\).",
+        "explanation": "يمكننا تحليل المعادلات التي على الصورة \\( xy + ax + by \\) بإكمال المستطيل (خدعة سايمون المفضلة للتحليل).\nالمعادلة هي: \\( xy - 2x - 3y = 5 \\).\nلنحاول تحليل الطرف الأيسر: \\( (x - 3)(y - 2) \\).\nإذا قمنا بفك \\( (x - 3)(y - 2) \\)، نحصل على \\( xy - 2x - 3y + 6 \\).\nلجعل معادلتنا الأصلية تتطابق مع هذا، نضيف 6 لكلا الطرفين:\n\\[ xy - 2x - 3y + 6 = 5 + 6 \\]\n\\[ (x - 3)(y - 2) = 11 \\]\nبما أن \\( x \\) و \\( y \\) أعداد صحيحة، يجب أن يكون القوسان \\( (x - 3) \\) و \\( (y - 2) \\) من قواسم العدد \\( 11 \\) الصحيحة.\nالقواسم الصحيحة للعدد الأولي 11 هي \\( 1, 11, -1, \\) و \\( -11 \\).\nهذا ينتج 4 أزواج من العوامل:\n1) \\( x - 3 = 1 \\implies x=4 \\) ، \\( y - 2 = 11 \\implies y=13 \\)\n2) \\( x - 3 = 11 \\implies x=14 \\) ، \\( y - 2 = 1 \\implies y=3 \\)\n3) \\( x - 3 = -1 \\implies x=2 \\) ، \\( y - 2 = -11 \\implies y=-9 \\)\n4) \\( x - 3 = -11 \\implies x=-8 \\) ، \\( y - 2 = -1 \\implies y=1 \\)\nيوجد \\( 4 \\) حلول صحيحة بالضبط."
+      }
+    },
+    "correct_index": "1"
+  },
+  {
+    "id": "NSMO-S3-09",
+    "track": "nsmo",
+    "level": "Phase 3: Senior National Olympiad (Grades 10-12)",
+    "topic": "AM-GM Inequality",
+    "type": "MCQ",
+    "difficulty": "hard",
+    "content": {
+      "en": {
+        "question": "Let \\( a, b, c \\) be positive real numbers such that their product \\( abc = 8 \\). What is the absolute minimum value of the sum \\( a^2 + b^2 + c^2 \\)?",
+        "options": [
+          "\\( 8 \\)",
+          "\\( 12 \\)",
+          "\\( 16 \\)",
+          "\\( 24 \\)"
+        ],
+        "hint": "Apply the AM-GM inequality to the three terms \\( a^2, b^2, \\) and \\( c^2 \\).",
+        "explanation": "Since \\( a^2, b^2, \\) and \\( c^2 \\) are strictly positive real numbers, we can apply the Arithmetic Mean - Geometric Mean (AM-GM) inequality for three variables:\n\\[ \\frac{a^2 + b^2 + c^2}{3} \\ge \\sqrt[3]{a^2 \\cdot b^2 \\cdot c^2} \\]\n\\[ a^2 + b^2 + c^2 \\ge 3 \\sqrt[3]{(abc)^2} \\]\nWe are given that the product \\( abc = 8 \\). Substitute this into the inequality:\n\\[ a^2 + b^2 + c^2 \\ge 3 \\sqrt[3]{8^2} \\]\n\\[ a^2 + b^2 + c^2 \\ge 3 \\sqrt[3]{64} \\]\nSince the cube root of 64 is 4 (because \\( 4^3 = 64 \\)):\n\\[ a^2 + b^2 + c^2 \\ge 3(4) = 12 \\]\nEquality holds when \\( a^2 = b^2 = c^2 \\), meaning \\( a = b = c = 2 \\). The minimum value is exactly \\( 12 \\)."
+      },
+      "ar": {
+        "question": "لتكن \\( a, b, c \\) أعداداً حقيقية موجبة بحيث يكون حاصل ضربها \\( abc = 8 \\). ما هي القيمة الصغرى المطلقة للمجموع \\( a^2 + b^2 + c^2 \\)؟",
+        "options": [
+          "\\( 8 \\)",
+          "\\( 12 \\)",
+          "\\( 16 \\)",
+          "\\( 24 \\)"
+        ],
+        "hint": "طبق متراجحة الوسط الحسابي والهندسي (AM-GM) على الحدود الثلاثة \\( a^2, b^2, \\) و \\( c^2 \\).",
+        "explanation": "بما أن \\( a^2, b^2, \\) و \\( c^2 \\) أعداد حقيقية موجبة تماماً، يمكننا تطبيق متراجحة الوسط الحسابي والهندسي لثلاثة متغيرات:\n\\[ \\frac{a^2 + b^2 + c^2}{3} \\ge \\sqrt[3]{a^2 \\cdot b^2 \\cdot c^2} \\]\n\\[ a^2 + b^2 + c^2 \\ge 3 \\sqrt[3]{(abc)^2} \\]\nأُعطينا أن حاصل الضرب \\( abc = 8 \\). نعوض بهذا في المتراجحة:\n\\[ a^2 + b^2 + c^2 \\ge 3 \\sqrt[3]{8^2} \\]\n\\[ a^2 + b^2 + c^2 \\ge 3 \\sqrt[3]{64} \\]\nبما أن الجذر التكعيبي للعدد 64 هو 4 (لأن \\( 4^3 = 64 \\)):\n\\[ a^2 + b^2 + c^2 \\ge 3(4) = 12 \\]\nتتحقق المساواة عندما \\( a^2 = b^2 = c^2 \\)، مما يعني أن \\( a = b = c = 2 \\). القيمة الصغرى هي \\( 12 \\) بالضبط."
+      }
+    },
+    "correct_index": "1"
+  },
+  {
+    "id": "NSMO-S3-10",
+    "track": "nsmo",
+    "level": "Phase 3: Senior National Olympiad (Grades 10-12)",
+    "topic": "Legendre's Formula",
+    "type": "MCQ",
+    "difficulty": "hard",
+    "content": {
+      "en": {
+        "question": "What is the exponent of the highest power of \\( 2 \\) that perfectly divides the binomial coefficient \\( \\binom{100}{50} \\)?",
+        "options": [
+          "\\( 2 \\)",
+          "\\( 3 \\)",
+          "\\( 4 \\)",
+          "\\( 5 \\)"
+        ],
+        "hint": "Use Legendre's formula to find \\( v_2(100!) - 2v_2(50!) \\), or alternatively use Kummer's Theorem (counting binary carries).",
+        "explanation": "The binomial coefficient is \\( \\binom{100}{50} = \\frac{100!}{50! 50!} \\).\nThe highest power of 2 dividing it is \\( v_2(\\binom{100}{50}) = v_2(100!) - 2v_2(50!) \\).\nFirst, calculate \\( v_2(100!) \\) using Legendre's Formula:\n\\( 100/2 = 50 \\)\n\\( 50/2 = 25 \\)\n\\( 25/2 = 12 \\)\n\\( 12/2 = 6 \\)\n\\( 6/2 = 3 \\)\n\\( 3/2 = 1 \\)\nSum = \\( 50 + 25 + 12 + 6 + 3 + 1 = 97 \\).\nNext, calculate \\( v_2(50!) \\):\nIt is simply the sequence from 25 downwards: \\( 25 + 12 + 6 + 3 + 1 = 47 \\).\nFinally, calculate the difference:\n\\[ v_2\\left(\\binom{100}{50}\\right) = 97 - 2(47) = 97 - 94 = 3 \\].\nThe highest power is \\( 2^3 \\), so the exponent is \\( 3 \\)."
+      },
+      "ar": {
+        "question": "ما هو أس أعلى قوة للعدد \\( 2 \\) تقسم المعامل الثنائي (التوافيق) \\( \\binom{100}{50} \\) قسمة تامة؟",
+        "options": [
+          "\\( 2 \\)",
+          "\\( 3 \\)",
+          "\\( 4 \\)",
+          "\\( 5 \\)"
+        ],
+        "hint": "استخدم صيغة ليجاندر لإيجاد \\( v_2(100!) - 2v_2(50!) \\)، أو كطريقة بديلة استخدم مبرهنة كومر (Kummer) التي تعتمد على عدّ الحمول (carries) في النظام الثنائي.",
+        "explanation": "المعامل الثنائي (التوافيق) هو \\( \\binom{100}{50} = \\frac{100!}{50! 50!} \\).\nأعلى قوة للعدد 2 تقسمه هي \\( v_2(\\binom{100}{50}) = v_2(100!) - 2v_2(50!) \\).\nأولاً، نحسب \\( v_2(100!) \\) باستخدام صيغة ليجاندر:\n\\( 100/2 = 50 \\)\n\\( 50/2 = 25 \\)\n\\( 25/2 = 12 \\)\n\\( 12/2 = 6 \\)\n\\( 6/2 = 3 \\)\n\\( 3/2 = 1 \\)\nالمجموع = \\( 50 + 25 + 12 + 6 + 3 + 1 = 97 \\).\nثانياً، نحسب \\( v_2(50!) \\):\nوهو ببساطة نفس التسلسل بدءاً من 25 نزولاً: \\( 25 + 12 + 6 + 3 + 1 = 47 \\).\nأخيراً، نحسب الفرق:\n\\[ v_2\\left(\\binom{100}{50}\\right) = 97 - 2(47) = 97 - 94 = 3 \\].\nأعلى قوة هي \\( 2^3 \\)، لذا الأس هو \\( 3 \\)."
+      }
+    },
+    "correct_index": "1"
+  },
+  {
+    "id": "NSMO-S3-11",
+    "track": "nsmo",
+    "level": "Phase 3: Senior National Olympiad (Grades 10-12)",
+    "topic": "Ptolemy's Theorem",
+    "type": "MCQ",
+    "difficulty": "hard",
+    "content": {
+      "en": {
+        "question": "Let \\( ABCDE \\) be a regular pentagon with side length equal to \\( 1 \\). Let \\( d \\) be the length of its diagonal (e.g., \\( AC \\)). Which of the following is the exact value of \\( d \\)?<br/><svg viewBox='0 0 200 200' class='w-full max-w-xs mx-auto bg-slate-900/60 rounded-xl p-2 border border-slate-700 shadow-md my-2'><circle cx='100' cy='100' r='80' fill='none' stroke='#475569' stroke-width='2'/><polygon points='100,20 176,75 147,165 53,165 24,75' fill='none' stroke='#38bdf8' stroke-width='2'/><line x1='100' y1='20' x2='147' y2='165' stroke='#10b981' stroke-width='2'/><line x1='176' y1='75' x2='53' y2='165' stroke='#10b981' stroke-width='2'/><text x='100' y='10' fill='#e2e8f0' font-size='12'>A</text><text x='185' y='75' fill='#e2e8f0' font-size='12'>B</text><text x='155' y='180' fill='#e2e8f0' font-size='12'>C</text><text x='45' y='180' fill='#e2e8f0' font-size='12'>D</text><text x='10' y='75' fill='#e2e8f0' font-size='12'>E</text></svg>",
+        "options": [
+          "\\( \\sqrt{2} \\)",
+          "\\( \\frac{1+\\sqrt{5}}{2} \\)",
+          "\\( \\frac{1+\\sqrt{3}}{2} \\)",
+          "\\( \\sqrt{3} \\)"
+        ],
+        "hint": "Consider the cyclic quadrilateral \\( ABCD \\) formed by four vertices of the pentagon. Apply Ptolemy's Theorem to it.",
+        "explanation": "Any regular polygon is cyclic, so the vertices \\( A, B, C, D \\) lie on a circle, forming a cyclic quadrilateral \\( ABCD \\) (an isosceles trapezoid).\nThe side lengths of the pentagon are all equal to 1, so \\( AB = BC = CD = 1 \\).\nThe diagonals of this quadrilateral are \\( AC = d \\) and \\( BD = d \\).\nThe fourth side is \\( AD \\), which is also a diagonal of the pentagon, so \\( AD = d \\).\nApplying Ptolemy's Theorem to \\( ABCD \\):\n\\[ AC \\cdot BD = AB \\cdot CD + BC \\cdot AD \\]\nSubstitute the lengths:\n\\[ d \\cdot d = (1)(1) + (1)(d) \\]\n\\[ d^2 = 1 + d \\]\n\\[ d^2 - d - 1 = 0 \\]\nSolve this quadratic equation for positive \\( d \\) using the quadratic formula:\n\\[ d = \\frac{1 + \\sqrt{(-1)^2 - 4(1)(-1)}}{2} = \\frac{1 + \\sqrt{5}}{2} \\].\nThis value is famously known as the Golden Ratio, \\( \\phi \\)."
+      },
+      "ar": {
+        "question": "ليكن \\( ABCDE \\) خماسياً منتظماً طول ضلعه يساوي \\( 1 \\). وليكن \\( d \\) هو طول قطره (مثل \\( AC \\)). أي مما يلي يمثل القيمة الدقيقة لـ \\( d \\)؟<br/><svg viewBox='0 0 200 200' class='w-full max-w-xs mx-auto bg-slate-900/60 rounded-xl p-2 border border-slate-700 shadow-md my-2'><circle cx='100' cy='100' r='80' fill='none' stroke='#475569' stroke-width='2'/><polygon points='100,20 176,75 147,165 53,165 24,75' fill='none' stroke='#38bdf8' stroke-width='2'/><line x1='100' y1='20' x2='147' y2='165' stroke='#10b981' stroke-width='2'/><line x1='176' y1='75' x2='53' y2='165' stroke='#10b981' stroke-width='2'/><text x='100' y='10' fill='#e2e8f0' font-size='12'>A</text><text x='185' y='75' fill='#e2e8f0' font-size='12'>B</text><text x='155' y='180' fill='#e2e8f0' font-size='12'>C</text><text x='45' y='180' fill='#e2e8f0' font-size='12'>D</text><text x='10' y='75' fill='#e2e8f0' font-size='12'>E</text></svg>",
+        "options": [
+          "\\( \\sqrt{2} \\)",
+          "\\( \\frac{1+\\sqrt{5}}{2} \\)",
+          "\\( \\frac{1+\\sqrt{3}}{2} \\)",
+          "\\( \\sqrt{3} \\)"
+        ],
+        "hint": "تأمل الشكل الرباعي الدائري \\( ABCD \\) المتكون من أربعة رؤوس للخماسي. طبق مبرهنة بطليموس عليه.",
+        "explanation": "أي مضلع منتظم هو مضلع دائري، لذا فالرؤوس \\( A, B, C, D \\) تقع على دائرة، وتشكل شكلاً رباعياً دائرياً \\( ABCD \\) (وهو شبه منحرف متطابق الساقين).\nأطوال أضلاع الخماسي كلها تساوي 1، إذن \\( AB = BC = CD = 1 \\).\nأقطار هذا الشكل الرباعي هي \\( AC = d \\) و \\( BD = d \\).\nالضلع الرابع هو \\( AD \\)، وهو أيضاً قطر للخماسي، لذا \\( AD = d \\).\nبتطبيق مبرهنة بطليموس على \\( ABCD \\):\n\\[ AC \\cdot BD = AB \\cdot CD + BC \\cdot AD \\]\nنعوض بالأطوال:\n\\[ d \\cdot d = (1)(1) + (1)(d) \\]\n\\[ d^2 = 1 + d \\]\n\\[ d^2 - d - 1 = 0 \\]\nنحل هذه المعادلة التربيعية لإيجاد \\( d \\) الموجب باستخدام القانون العام:\n\\[ d = \\frac{1 + \\sqrt{(-1)^2 - 4(1)(-1)}}{2} = \\frac{1 + \\sqrt{5}}{2} \\].\nهذه القيمة تُعرف مشهورةً باسم النسبة الذهبية، \\( \\phi \\)."
+      }
+    },
+    "correct_index": "1"
+  },
+  {
+    "id": "NSMO-S3-12",
+    "track": "nsmo",
+    "level": "Phase 3: Senior National Olympiad (Grades 10-12)",
+    "topic": "Diophantine Equations",
+    "type": "MCQ",
+    "difficulty": "hard",
+    "content": {
+      "en": {
+        "question": "What is the sum of all positive integers \\( n \\) such that the expression \\( n^2 + 2n + 13 \\) is a perfect square?",
+        "options": [
+          "\\( 1 \\)",
+          "\\( 2 \\)",
+          "\\( 3 \\)",
+          "\\( 4 \\)"
+        ],
+        "hint": "Complete the square for \\( n^2 + 2n + 13 \\) and set it equal to \\( k^2 \\). Then use the difference of squares factorization.",
+        "explanation": "We are looking for positive integers \\( n \\) such that:\n\\[ n^2 + 2n + 13 = k^2 \\] for some integer \\( k > 0 \\).\nLet's complete the square on the left side:\n\\[ (n^2 + 2n + 1) + 12 = k^2 \\]\n\\[ (n + 1)^2 + 12 = k^2 \\]\nRearrange to form a difference of squares:\n\\[ k^2 - (n + 1)^2 = 12 \\]\n\\[ (k - n - 1)(k + n + 1) = 12 \\]\nLet \\( A = k - n - 1 \\) and \\( B = k + n + 1 \\). Notice that \\( B > A \\) because \\( n \\ge 1 \\).\nAlso, \\( A \\) and \\( B \\) must have the same parity (either both odd or both even) because their difference is \\( 2n + 2 \\), which is even. Since their product is 12, they must both be even.\nThe only even factors of 12 are \\( 2 \\) and \\( 6 \\).\nSo, we must have \\( A = 2 \\) and \\( B = 6 \\).\n\\[ k - n - 1 = 2 \\implies k - n = 3 \\]\n\\[ k + n + 1 = 6 \\implies k + n = 5 \\]\nSubtract the first equation from the second:\n\\[ (k + n) - (k - n) = 5 - 3 \\implies 2n = 2 \\implies n = 1 \\].\nThe only positive integer satisfying the condition is \\( n = 1 \\). Therefore, the sum of all such integers is just \\( 1 \\)."
+      },
+      "ar": {
+        "question": "ما هو مجموع كل الأعداد الصحيحة الموجبة \\( n \\) التي تجعل المقدار \\( n^2 + 2n + 13 \\) مربعاً كاملاً؟",
+        "options": [
+          "\\( 1 \\)",
+          "\\( 2 \\)",
+          "\\( 3 \\)",
+          "\\( 4 \\)"
+        ],
+        "hint": "أكمل المربع للمقدار \\( n^2 + 2n + 13 \\) وساوه بـ \\( k^2 \\). ثم استخدم تحليل الفرق بين مربعين.",
+        "explanation": "نبحث عن أعداد صحيحة موجبة \\( n \\) بحيث:\n\\[ n^2 + 2n + 13 = k^2 \\] لعدد صحيح ما \\( k > 0 \\).\nلنكمل المربع في الطرف الأيسر:\n\\[ (n^2 + 2n + 1) + 12 = k^2 \\]\n\\[ (n + 1)^2 + 12 = k^2 \\]\nنعيد الترتيب لتكوين فرق بين مربعين:\n\\[ k^2 - (n + 1)^2 = 12 \\]\n\\[ (k - n - 1)(k + n + 1) = 12 \\]\nليكن \\( A = k - n - 1 \\) و \\( B = k + n + 1 \\). لاحظ أن \\( B > A \\) لأن \\( n \\ge 1 \\).\nكذلك، يجب أن يكون لـ \\( A \\) و \\( B \\) نفس التكافؤ (إما كلاهما فردي أو كلاهما زوجي) لأن الفرق بينهما هو \\( 2n + 2 \\)، وهو عدد زوجي. وبما أن حاصل ضربهما هو 12، فيجب أن يكون كلاهما زوجياً.\nالعوامل الزوجية الوحيدة للعدد 12 هي \\( 2 \\) و \\( 6 \\).\nلذا، يجب أن يكون \\( A = 2 \\) و \\( B = 6 \\).\n\\[ k - n - 1 = 2 \\implies k - n = 3 \\]\n\\[ k + n + 1 = 6 \\implies k + n = 5 \\]\nنطرح المعادلة الأولى من الثانية:\n\\[ (k + n) - (k - n) = 5 - 3 \\implies 2n = 2 \\implies n = 1 \\].\nالعدد الصحيح الموجب الوحيد الذي يحقق الشرط هو \\( n = 1 \\). وبالتالي، مجموع كل هذه الأعداد هو ببساطة \\( 1 \\)."
+      }
+    },
+    "correct_index": "0"
+  },
+  {
+    "id": "NSMO-S3-13",
+    "track": "nsmo",
+    "level": "Phase 3: Senior National Olympiad (Grades 10-12)",
+    "topic": "AM-GM Inequality",
+    "type": "MCQ",
+    "difficulty": "hard",
+    "content": {
+      "en": {
+        "question": "Let \\( x, y, z \\) be positive real numbers such that \\( x + y + z = 1 \\). What is the minimum possible value of the product \\( \\left(\\frac{1}{x} - 1\\right)\\left(\\frac{1}{y} - 1\\right)\\left(\\frac{1}{z} - 1\\right) \\)?",
+        "options": [
+          "\\( 1 \\)",
+          "\\( 6 \\)",
+          "\\( 8 \\)",
+          "\\( 9 \\)"
+        ],
+        "hint": "Replace the 1s in the numerators with \\( x+y+z \\). For example, \\( \\frac{1}{x} - 1 = \\frac{1-x}{x} = \\frac{y+z}{x} \\). Then apply AM-GM.",
+        "explanation": "Since \\( x + y + z = 1 \\), we can rewrite each term as follows:\n\\[ \\frac{1}{x} - 1 = \\frac{1 - x}{x} = \\frac{(x+y+z) - x}{x} = \\frac{y + z}{x} \\]\nDoing this for all three terms transforms the product into:\n\\[ P = \\left(\\frac{y + z}{x}\\right) \\left(\\frac{x + z}{y}\\right) \\left(\\frac{x + y}{z}\\right) \\]\nNow, apply the AM-GM inequality to each numerator:\n\\( y + z \\ge 2\\sqrt{yz} \\)\n\\( x + z \\ge 2\\sqrt{xz} \\)\n\\( x + y \\ge 2\\sqrt{xy} \\)\nMultiply these inequalities together:\n\\[ (y + z)(x + z)(x + y) \\ge 2\\sqrt{yz} \\cdot 2\\sqrt{xz} \\cdot 2\\sqrt{xy} = 8\\sqrt{x^2 y^2 z^2} = 8xyz \\]\nNow divide by the denominator \\( xyz \\):\n\\[ P = \\frac{(y + z)(x + z)(x + y)}{xyz} \\ge \\frac{8xyz}{xyz} = 8 \\]\nThe minimum value is exactly \\( 8 \\), which occurs when \\( x = y = z = \\frac{1}{3} \\)."
+      },
+      "ar": {
+        "question": "لتكن \\( x, y, z \\) أعداداً حقيقية موجبة بحيث \\( x + y + z = 1 \\). ما هي القيمة الصغرى الممكنة لحاصل الضرب \\( \\left(\\frac{1}{x} - 1\\right)\\left(\\frac{1}{y} - 1\\right)\\left(\\frac{1}{z} - 1\\right) \\)؟",
+        "options": [
+          "\\( 1 \\)",
+          "\\( 6 \\)",
+          "\\( 8 \\)",
+          "\\( 9 \\)"
+        ],
+        "hint": "استبدل رقم 1 في البسط بـ \\( x+y+z \\). على سبيل المثال، \\( \\frac{1}{x} - 1 = \\frac{1-x}{x} = \\frac{y+z}{x} \\). ثم طبق متراجحة AM-GM.",
+        "explanation": "بما أن \\( x + y + z = 1 \\)، يمكننا إعادة كتابة كل حد كالتالي:\n\\[ \\frac{1}{x} - 1 = \\frac{1 - x}{x} = \\frac{(x+y+z) - x}{x} = \\frac{y + z}{x} \\]\nبتطبيق هذا على الحدود الثلاثة يتحول حاصل الضرب إلى:\n\\[ P = \\left(\\frac{y + z}{x}\\right) \\left(\\frac{x + z}{y}\\right) \\left(\\frac{x + y}{z}\\right) \\]\nالآن، طبق متراجحة الوسط الحسابي والهندسي (AM-GM) على كل بسط:\n\\( y + z \\ge 2\\sqrt{yz} \\)\n\\( x + z \\ge 2\\sqrt{xz} \\)\n\\( x + y \\ge 2\\sqrt{xy} \\)\nنضرب هذه المتراجحات في بعضها:\n\\[ (y + z)(x + z)(x + y) \\ge 2\\sqrt{yz} \\cdot 2\\sqrt{xz} \\cdot 2\\sqrt{xy} = 8\\sqrt{x^2 y^2 z^2} = 8xyz \\]\nالآن نقسم على المقام \\( xyz \\):\n\\[ P = \\frac{(y + z)(x + z)(x + y)}{xyz} \\ge \\frac{8xyz}{xyz} = 8 \\]\nالقيمة الصغرى هي \\( 8 \\) بالضبط، وتحدث عندما \\( x = y = z = \\frac{1}{3} \\)."
+      }
+    },
+    "correct_index": "2"
+  },
+  {
+    "id": "NSMO-S3-14",
+    "track": "nsmo",
+    "level": "Phase 3: Senior National Olympiad (Grades 10-12)",
+    "topic": "Legendre's Formula",
+    "type": "MCQ",
+    "difficulty": "hard",
+    "content": {
+      "en": {
+        "question": "Let \\( N = 300! \\) (300 factorial). What is the highest power of \\( 12 \\) that divides \\( N \\)?",
+        "options": [
+          "\\( 146 \\)",
+          "\\( 147 \\)",
+          "\\( 148 \\)",
+          "\\( 149 \\)"
+        ],
+        "hint": "Prime factorize 12 as \\( 2^2 \\times 3 \\). Use Legendre's formula to find the exponents of 2 and 3 in \\( 300! \\). The answer is \\( \\min(\\lfloor v_2 / 2 \\rfloor, v_3) \\).",
+        "explanation": "Since \\( 12 = 2^2 \\times 3 \\), we need to find how many groups of \\( 2^2 \\) and \\( 3 \\) can be formed from the prime factors of \\( 300! \\).\nFirst, find \\( v_3(300!) \\) using Legendre's Formula:\n\\[ \\lfloor 300/3 \\rfloor = 100 \\]\n\\[ \\lfloor 100/3 \\rfloor = 33 \\]\n\\[ \\lfloor 33/3 \\rfloor = 11 \\]\n\\[ \\lfloor 11/3 \\rfloor = 3 \\]\n\\[ \\lfloor 3/3 \\rfloor = 1 \\]\nSum \\( v_3 = 100 + 33 + 11 + 3 + 1 = 148 \\).\nNext, find \\( v_2(300!) \\):\n\\[ \\lfloor 300/2 \\rfloor = 150 \\]\n\\[ \\lfloor 150/2 \\rfloor = 75 \\]\n\\[ \\lfloor 75/2 \\rfloor = 37 \\]\n\\[ \\lfloor 37/2 \\rfloor = 18 \\]\n\\[ \\lfloor 18/2 \\rfloor = 9 \\]\n\\[ \\lfloor 9/2 \\rfloor = 4 \\]\n\\[ \\lfloor 4/2 \\rfloor = 2 \\]\n\\[ \\lfloor 2/2 \\rfloor = 1 \\]\nSum \\( v_2 = 150 + 75 + 37 + 18 + 9 + 4 + 2 + 1 = 296 \\).\nSince each 12 requires two 2s, we have \\( \\lfloor 296 / 2 \\rfloor = 148 \\) pairs of 2s available.\nWe compare the available components: we have 148 groups of \\( 2^2 \\), and 148 groups of \\( 3 \\).\nThe limiting component is \\( \\min(148, 148) = 148 \\).\nThus, the highest power of 12 dividing 300! is \\( 12^{148} \\)."
+      },
+      "ar": {
+        "question": "ليكن \\( N = 300! \\) (مضروب 300). ما هي أعلى قوة للعدد \\( 12 \\) تقسم \\( N \\)؟",
+        "options": [
+          "\\( 146 \\)",
+          "\\( 147 \\)",
+          "\\( 148 \\)",
+          "\\( 149 \\)"
+        ],
+        "hint": "حلل العدد 12 إلى عوامله الأولية كالتالي \\( 2^2 \\times 3 \\). استخدم صيغة ليجاندر لإيجاد أسس 2 و 3 في \\( 300! \\). الجواب هو \\( \\min(\\lfloor v_2 / 2 \\rfloor, v_3) \\).",
+        "explanation": "بما أن \\( 12 = 2^2 \\times 3 \\)، نحتاج إلى معرفة عدد المجموعات من \\( 2^2 \\) و \\( 3 \\) التي يمكن تكوينها من العوامل الأولية لـ \\( 300! \\).\nأولاً، نوجد \\( v_3(300!) \\) باستخدام صيغة ليجاندر:\n\\[ \\lfloor 300/3 \\rfloor = 100 \\]\n\\[ \\lfloor 100/3 \\rfloor = 33 \\]\n\\[ \\lfloor 33/3 \\rfloor = 11 \\]\n\\[ \\lfloor 11/3 \\rfloor = 3 \\]\n\\[ \\lfloor 3/3 \\rfloor = 1 \\]\nالمجموع \\( v_3 = 100 + 33 + 11 + 3 + 1 = 148 \\).\nثانياً، نوجد \\( v_2(300!) \\):\n\\[ \\lfloor 300/2 \\rfloor = 150 \\]\n\\[ \\lfloor 150/2 \\rfloor = 75 \\]\n\\[ \\lfloor 75/2 \\rfloor = 37 \\]\n\\[ \\lfloor 37/2 \\rfloor = 18 \\]\n\\[ \\lfloor 18/2 \\rfloor = 9 \\]\n\\[ \\lfloor 9/2 \\rfloor = 4 \\]\n\\[ \\lfloor 4/2 \\rfloor = 2 \\]\n\\[ \\lfloor 2/2 \\rfloor = 1 \\]\nالمجموع \\( v_2 = 150 + 75 + 37 + 18 + 9 + 4 + 2 + 1 = 296 \\).\nبما أن كل عدد 12 يحتاج إلى عددين من 2، فلدينا \\( \\lfloor 296 / 2 \\rfloor = 148 \\) زوجاً متاحاً من 2.\nنقارن المكونات المتاحة: لدينا 148 مجموعة من \\( 2^2 \\)، و 148 مجموعة من \\( 3 \\).\nالمكون المُحِد (الأقل) هو \\( \\min(148, 148) = 148 \\).\nوبالتالي، أعلى قوة للعدد 12 تقسم 300! هي \\( 12^{148} \\)."
+      }
+    },
+    "correct_index": "2"
+  },
+  {
+    "id": "NSMO-S3-15",
+    "track": "nsmo",
+    "level": "Phase 3: Senior National Olympiad (Grades 10-12)",
+    "topic": "Ptolemy's Theorem",
+    "type": "MCQ",
+    "difficulty": "hard",
+    "content": {
+      "en": {
+        "question": "An isosceles trapezoid is perfectly inscribed in a circle. Its parallel bases have lengths of \\( 4 \\) and \\( 10 \\), and its two non-parallel legs each have a length of \\( 5 \\). What is the exact length of the trapezoid's diagonal?<br/><svg viewBox='0 0 200 160' class='w-full max-w-xs mx-auto bg-slate-900/60 rounded-xl p-2 border border-slate-700 shadow-md my-2'><circle cx='100' cy='80' r='70' fill='none' stroke='#475569' stroke-width='2'/><polygon points='60,30 140,30 165,115 35,115' fill='none' stroke='#38bdf8' stroke-width='2'/><line x1='60' y1='30' x2='165' y2='115' stroke='#10b981' stroke-width='2' stroke-dasharray='4,4'/><line x1='140' y1='30' x2='35' y2='115' stroke='#10b981' stroke-width='2' stroke-dasharray='4,4'/><text x='100' y='20' fill='#e2e8f0' font-size='12'>4</text><text x='100' y='135' fill='#e2e8f0' font-size='12'>10</text><text x='35' y='75' fill='#e2e8f0' font-size='12'>5</text><text x='160' y='75' fill='#e2e8f0' font-size='12'>5</text></svg>",
+        "options": [
+          "\\( 8 \\)",
+          "\\( \\sqrt{65} \\)",
+          "\\( \\sqrt{68} \\)",
+          "\\( 9 \\)"
+        ],
+        "hint": "Any trapezoid inscribed in a circle is cyclic. Apply Ptolemy's Theorem to the four vertices. The two diagonals of an isosceles trapezoid are equal in length.",
+        "explanation": "Let the vertices of the cyclic isosceles trapezoid be \\( A, B, C, D \\) in order. \nThe parallel bases are \\( AB = 4 \\) and \\( CD = 10 \\). The equal legs are \\( BC = 5 \\) and \\( DA = 5 \\).\nThe diagonals of an isosceles trapezoid are equal in length, so let \\( AC = BD = d \\).\nApplying Ptolemy's Theorem to the cyclic quadrilateral \\( ABCD \\):\n\\[ AC \\cdot BD = AB \\cdot CD + BC \\cdot DA \\]\nSubstitute the known lengths:\n\\[ d \\cdot d = (4)(10) + (5)(5) \\]\n\\[ d^2 = 40 + 25 \\]\n\\[ d^2 = 65 \\]\n\\[ d = \\sqrt{65} \\].\n(You can also verify this by dropping an altitude: the altitude \\( h \\) forms a right triangle with base \\( \\frac{10-4}{2} = 3 \\) and hypotenuse 5, so \\( h = 4 \\). The diagonal forms a right triangle with legs 4 and \\( 10-3=7 \\). \\( d = \\sqrt{4^2 + 7^2} = \\sqrt{16+49} = \\sqrt{65} \\).)"
+      },
+      "ar": {
+        "question": "شبه منحرف متطابق الساقين مرسوم بالكامل داخل دائرة (محاط بها). قاعدتاه المتوازيتان طولاهما \\( 4 \\) و \\( 10 \\)، وساقاه غير المتوازيتين طول كل منهما \\( 5 \\). ما هو الطول الدقيق لقطر شبه المنحرف؟<br/><svg viewBox='0 0 200 160' class='w-full max-w-xs mx-auto bg-slate-900/60 rounded-xl p-2 border border-slate-700 shadow-md my-2'><circle cx='100' cy='80' r='70' fill='none' stroke='#475569' stroke-width='2'/><polygon points='60,30 140,30 165,115 35,115' fill='none' stroke='#38bdf8' stroke-width='2'/><line x1='60' y1='30' x2='165' y2='115' stroke='#10b981' stroke-width='2' stroke-dasharray='4,4'/><line x1='140' y1='30' x2='35' y2='115' stroke='#10b981' stroke-width='2' stroke-dasharray='4,4'/><text x='100' y='20' fill='#e2e8f0' font-size='12'>4</text><text x='100' y='135' fill='#e2e8f0' font-size='12'>10</text><text x='35' y='75' fill='#e2e8f0' font-size='12'>5</text><text x='160' y='75' fill='#e2e8f0' font-size='12'>5</text></svg>",
+        "options": [
+          "\\( 8 \\)",
+          "\\( \\sqrt{65} \\)",
+          "\\( \\sqrt{68} \\)",
+          "\\( 9 \\)"
+        ],
+        "hint": "أي شبه منحرف محاط بدائرة هو شكل رباعي دائري. طبق مبرهنة بطليموس على رؤوسه الأربعة. قطرا شبه المنحرف متطابق الساقين متساويان في الطول.",
+        "explanation": "لتكن رؤوس شبه المنحرف الدائري المتطابق الساقين هي \\( A, B, C, D \\) بالترتيب.\nالقاعدتان المتوازيتان هما \\( AB = 4 \\) و \\( CD = 10 \\). الساقان المتساويان هما \\( BC = 5 \\) و \\( DA = 5 \\).\nقطرا شبه المنحرف متطابق الساقين متساويان في الطول، لذا نفرض أن \\( AC = BD = d \\).\nبتطبيق مبرهنة بطليموس على الشكل الرباعي الدائري \\( ABCD \\):\n\\[ AC \\cdot BD = AB \\cdot CD + BC \\cdot DA \\]\nنعوض بالأطوال المعروفة:\n\\[ d \\cdot d = (4)(10) + (5)(5) \\]\n\\[ d^2 = 40 + 25 \\]\n\\[ d^2 = 65 \\]\n\\[ d = \\sqrt{65} \\].\n(يمكنك أيضاً التحقق من ذلك بإسقاط عمود: يشكل الارتفاع \\( h \\) مثلثاً قائماً قاعدته \\( \\frac{10-4}{2} = 3 \\) ووتره 5، إذن \\( h = 4 \\). يشكل القطر مثلثاً قائماً ضلعي قائمته 4 و \\( 10-3=7 \\). \\( d = \\sqrt{4^2 + 7^2} = \\sqrt{16+49} = \\sqrt{65} \\).)"
+      }
+    },
+    "correct_index": "1"
+  },
+  {
+    "id": "NSMO-S3-16",
+    "track": "nsmo",
+    "level": "Phase 3: Senior National Olympiad (Grades 10-12)",
+    "topic": "Linear Diophantine Equations",
+    "type": "MCQ",
+    "difficulty": "medium",
+    "content": {
+      "en": {
+        "question": "A group of students ordered pizzas and sodas. Pizzas cost $\\$11$ each, and sodas cost $\\$4$ each. Their total bill was exactly $\\$83$. If they ordered exactly $12$ items in total, how many pizzas did they order?",
+        "options": [
+          "\\( 3 \\)",
+          "\\( 4 \\)",
+          "\\( 5 \\)",
+          "\\( 7 \\)"
+        ],
+        "hint": "Set up a system of equations: \\( 11p + 4s = 83 \\) and \\( p + s = 12 \\), then solve for \\( p \\).",
+        "explanation": "Let \\( p \\) be the number of pizzas and \\( s \\) be the number of sodas.\nWe have a system of two equations:\n1) Cost equation: \\( 11p + 4s = 83 \\)\n2) Quantity equation: \\( p + s = 12 \\)\nFrom equation (2), we can express \\( s \\) as \\( s = 12 - p \\).\nSubstitute this into equation (1):\n\\[ 11p + 4(12 - p) = 83 \\]\n\\[ 11p + 48 - 4p = 83 \\]\n\\[ 7p + 48 = 83 \\]\n\\[ 7p = 83 - 48 = 35 \\]\n\\[ p = 5 \\]\nThe number of pizzas ordered is \\( 5 \\). (And \\( s = 7 \\) sodas, which checks out since \\( 55 + 28 = 83 \\))."
+      },
+      "ar": {
+        "question": "طلبت مجموعة من الطلاب بيتزا ومشروبات غازية. تكلفة البيتزا الواحدة 11 دولاراً، وتكلفة المشروب 4 دولارات. كانت فاتورتهم الإجمالية 83 دولاراً بالضبط. إذا طلبوا 12 عنصراً (بيتزا ومشروبات) في المجموع، فكم عدد البيتزا التي طلبوها؟",
+        "options": [
+          "\\( 3 \\)",
+          "\\( 4 \\)",
+          "\\( 5 \\)",
+          "\\( 7 \\)"
+        ],
+        "hint": "كوّن نظام معادلات: \\( 11p + 4s = 83 \\) و \\( p + s = 12 \\)، ثم حل المعادلة لإيجاد قيمة \\( p \\).",
+        "explanation": "ليكن \\( p \\) هو عدد البيتزا و \\( s \\) هو عدد المشروبات الغازية.\nلدينا نظام من معادلتين:\n1) معادلة التكلفة: \\( 11p + 4s = 83 \\)\n2) معادلة الكمية: \\( p + s = 12 \\)\nمن المعادلة (2)، يمكننا التعبير عن \\( s \\) كالتالي \\( s = 12 - p \\).\nنعوض بذلك في المعادلة (1):\n\\[ 11p + 4(12 - p) = 83 \\]\n\\[ 11p + 48 - 4p = 83 \\]\n\\[ 7p + 48 = 83 \\]\n\\[ 7p = 83 - 48 = 35 \\]\n\\[ p = 5 \\]\nعدد البيتزا المطلوبة هو \\( 5 \\). (وعدد المشروبات هو \\( s = 7 \\)، ويمكن التحقق من ذلك: \\( 55 + 28 = 83 \\))."
+      }
+    },
+    "correct_index": "2"
+  },
+  {
+    "id": "NSMO-S3-17",
+    "track": "nsmo",
+    "level": "Phase 3: Senior National Olympiad (Grades 10-12)",
+    "topic": "AM-GM Inequality",
+    "type": "MCQ",
+    "difficulty": "hard",
+    "content": {
+      "en": {
+        "question": "Let \\( x \\) and \\( y \\) be positive real numbers such that \\( x + y = 2 \\). What is the absolute minimum value of the expression \\( \\left(x + \\frac{1}{x}\\right)^2 + \\left(y + \\frac{1}{y}\\right)^2 \\)?",
+        "options": [
+          "\\( 4 \\)",
+          "\\( 6 \\)",
+          "\\( 8 \\)",
+          "\\( 10 \\)"
+        ],
+        "hint": "Use the Cauchy-Schwarz inequality or the inequality \\( A^2 + B^2 \\ge \\frac{(A+B)^2}{2} \\) to combine the terms, then analyze the minimum of \\( xy \\).",
+        "explanation": "Let \\( A = x + \\frac{1}{x} \\) and \\( B = y + \\frac{1}{y} \\). We want to minimize \\( A^2 + B^2 \\).\nBy the quadratic mean-arithmetic mean inequality (or Cauchy-Schwarz), we know that:\n\\[ A^2 + B^2 \\ge \\frac{(A + B)^2}{2} \\]\nLet's evaluate \\( A + B \\):\n\\[ A + B = x + \\frac{1}{x} + y + \\frac{1}{y} = (x + y) + \\left(\\frac{1}{x} + \\frac{1}{y}\\right) = 2 + \\frac{x + y}{xy} = 2 + \\frac{2}{xy} \\]\nSince \\( x, y > 0 \\) and \\( x + y = 2 \\), by AM-GM we have \\( \\frac{x+y}{2} \\ge \\sqrt{xy} \\implies 1 \\ge \\sqrt{xy} \\implies xy \\le 1 \\).\nBecause \\( xy \\le 1 \\), its reciprocal is \\( \\frac{1}{xy} \\ge 1 \\), so \\( \\frac{2}{xy} \\ge 2 \\).\nThus, \\( A + B = 2 + \\frac{2}{xy} \\ge 2 + 2 = 4 \\).\nReturning to our original inequality:\n\\[ A^2 + B^2 \\ge \\frac{(A + B)^2}{2} \\ge \\frac{4^2}{2} = \\frac{16}{2} = 8 \\].\nThe minimum value is exactly \\( 8 \\), achieved when \\( x = y = 1 \\)."
+      },
+      "ar": {
+        "question": "ليكن \\( x \\) و \\( y \\) عددين حقيقيين موجبين بحيث \\( x + y = 2 \\). ما هي القيمة الصغرى المطلقة للمقدار \\( \\left(x + \\frac{1}{x}\\right)^2 + \\left(y + \\frac{1}{y}\\right)^2 \\)؟",
+        "options": [
+          "\\( 4 \\)",
+          "\\( 6 \\)",
+          "\\( 8 \\)",
+          "\\( 10 \\)"
+        ],
+        "hint": "استخدم متراجحة كوشي-شفارتز أو المتراجحة \\( A^2 + B^2 \\ge \\frac{(A+B)^2}{2} \\) لدمج الحدود، ثم حلل القيمة الصغرى لـ \\( xy \\).",
+        "explanation": "نفرض أن \\( A = x + \\frac{1}{x} \\) و \\( B = y + \\frac{1}{y} \\). نريد تقليل المقدار \\( A^2 + B^2 \\) للحد الأدنى.\nبواسطة متراجحة المتوسط التربيعي والمتوسط الحسابي (أو كوشي-شفارتز)، نعلم أن:\n\\[ A^2 + B^2 \\ge \\frac{(A + B)^2}{2} \\]\nدعونا نحسب \\( A + B \\):\n\\[ A + B = x + \\frac{1}{x} + y + \\frac{1}{y} = (x + y) + \\left(\\frac{1}{x} + \\frac{1}{y}\\right) = 2 + \\frac{x + y}{xy} = 2 + \\frac{2}{xy} \\]\nبما أن \\( x, y > 0 \\) و \\( x + y = 2 \\)، وفقاً لمتراجحة AM-GM لدينا \\( \\frac{x+y}{2} \\ge \\sqrt{xy} \\implies 1 \\ge \\sqrt{xy} \\implies xy \\le 1 \\).\nولأن \\( xy \\le 1 \\)، فإن مقلوبه \\( \\frac{1}{xy} \\ge 1 \\)، وبالتالي \\( \\frac{2}{xy} \\ge 2 \\).\nإذن، \\( A + B = 2 + \\frac{2}{xy} \\ge 2 + 2 = 4 \\).\nبالعودة إلى متراجحتنا الأصلية:\n\\[ A^2 + B^2 \\ge \\frac{(A + B)^2}{2} \\ge \\frac{4^2}{2} = \\frac{16}{2} = 8 \\].\nالقيمة الصغرى هي \\( 8 \\) بالضبط، وتتحقق عندما \\( x = y = 1 \\)."
+      }
+    },
+    "correct_index": "2"
+  },
+  {
+    "id": "NSMO-S3-18",
+    "track": "nsmo",
+    "level": "Phase 3: Senior National Olympiad (Grades 10-12)",
+    "topic": "Legendre's Formula",
+    "type": "MCQ",
+    "difficulty": "medium",
+    "content": {
+      "en": {
+        "question": "Let \\( P = 1 \\times 2 \\times 3 \\times \\dots \\times 50 \\). What is the largest integer \\( k \\) such that \\( 10^k \\) perfectly divides \\( P \\)?",
+        "options": [
+          "\\( 10 \\)",
+          "\\( 11 \\)",
+          "\\( 12 \\)",
+          "\\( 13 \\)"
+        ],
+        "hint": "You are essentially finding the number of trailing zeros in \\( 50! \\). Count the number of times the prime factor 5 appears.",
+        "explanation": "The product \\( P \\) is simply \\( 50! \\) (50 factorial).\nThe highest power of \\( 10 \\) dividing a factorial is determined by the number of pairs of prime factors \\( 2 \\) and \\( 5 \\).\nSince there are always more factors of \\( 2 \\) than \\( 5 \\), the limiting factor is the number of \\( 5 \\)s.\nWe use Legendre's Formula to find \\( v_5(50!) \\):\n\\[ \\sum_{i=1}^{\\infty} \\left\\lfloor \\frac{50}{5^i} \\right\\rfloor = \\left\\lfloor \\frac{50}{5} \\right\\rfloor + \\left\\lfloor \\frac{50}{25} \\right\\rfloor \\]\n\\[ = 10 + 2 = 12 \\].\nSince there are exactly 12 factors of 5, there will be exactly 12 factors of 10. Thus, \\( k = 12 \\)."
+      },
+      "ar": {
+        "question": "ليكن \\( P = 1 \\times 2 \\times 3 \\times \\dots \\times 50 \\). ما هو أكبر عدد صحيح \\( k \\) بحيث يقسم \\( 10^k \\) المقدار \\( P \\) قسمة تامة؟",
+        "options": [
+          "\\( 10 \\)",
+          "\\( 11 \\)",
+          "\\( 12 \\)",
+          "\\( 13 \\)"
+        ],
+        "hint": "أنت في الواقع تبحث عن عدد الأصفار المتتالية في \\( 50! \\). احسب عدد المرات التي يظهر فيها العامل الأولي 5.",
+        "explanation": "حاصل الضرب \\( P \\) هو ببساطة \\( 50! \\) (مضروب 50).\nأعلى قوة للعدد \\( 10 \\) تقسم مضروباً يتم تحديدها بواسطة عدد أزواج العوامل الأولية \\( 2 \\) و \\( 5 \\).\nنظراً لأن عدد العوامل \\( 2 \\) يكون دائماً أكبر من العوامل \\( 5 \\)، فإن العامل المُحِد (الأقل) هو عدد الخمسات.\nنستخدم صيغة ليجاندر لإيجاد \\( v_5(50!) \\):\n\\[ \\sum_{i=1}^{\\infty} \\left\\lfloor \\frac{50}{5^i} \\right\\rfloor = \\left\\lfloor \\frac{50}{5} \\right\\rfloor + \\left\\lfloor \\frac{50}{25} \\right\\rfloor \\]\n\\[ = 10 + 2 = 12 \\].\nبما أن هناك 12 عاملاً من الرقم 5، فسيكون هناك 12 عاملاً من الرقم 10. وبالتالي، \\( k = 12 \\)."
+      }
+    },
+    "correct_index": "2"
+  },
+  {
+    "id": "NSMO-S3-19",
+    "track": "nsmo",
+    "level": "Phase 3: Senior National Olympiad (Grades 10-12)",
+    "topic": "Ptolemy's Theorem",
+    "type": "MCQ",
+    "difficulty": "hard",
+    "content": {
+      "en": {
+        "question": "A cyclic quadrilateral \\( ABCD \\) has consecutive side lengths \\( AB = 1 \\), \\( BC = 2 \\), \\( CD = 3 \\), and \\( DA = 4 \\). Which of the following expresses the exact ratio of its diagonals, \\( \\frac{AC}{BD} \\)?<br/><svg viewBox='0 0 200 200' class='w-full max-w-xs mx-auto bg-slate-900/60 rounded-xl p-2 border border-slate-700 shadow-md my-2'><circle cx='100' cy='100' r='80' fill='none' stroke='#475569' stroke-width='2'/><polygon points='40,50 140,30 170,130 60,160' fill='none' stroke='#38bdf8' stroke-width='2'/><line x1='40' y1='50' x2='170' y2='130' stroke='#10b981' stroke-width='2'/><line x1='140' y1='30' x2='60' y2='160' stroke='#10b981' stroke-width='2'/><text x='25' y='40' fill='#e2e8f0' font-size='12'>A</text><text x='150' y='20' fill='#e2e8f0' font-size='12'>B</text><text x='185' y='145' fill='#e2e8f0' font-size='12'>C</text><text x='45' y='175' fill='#e2e8f0' font-size='12'>D</text></svg>",
+        "options": [
+          "\\( \\frac{3}{5} \\)",
+          "\\( \\frac{5}{7} \\)",
+          "\\( \\frac{5}{8} \\)",
+          "\\( \\frac{7}{5} \\)"
+        ],
+        "hint": "Use the Ratio of Diagonals Theorem for cyclic quadrilaterals: \\( \\frac{AC}{BD} = \\frac{AB \\cdot AD + BC \\cdot CD}{AB \\cdot BC + AD \\cdot CD} \\).",
+        "explanation": "For any cyclic quadrilateral \\( ABCD \\), the ratio of its diagonals is given by the specific formula:\n\\[ \\frac{AC}{BD} = \\frac{AB \\cdot AD + BC \\cdot CD}{AB \\cdot BC + AD \\cdot CD} \\]\nSubstitute the given side lengths \\( AB = 1, BC = 2, CD = 3, \\) and \\( DA = 4 \\):\nNumerator: \\( AB \\cdot AD + BC \\cdot CD = (1 \\times 4) + (2 \\times 3) = 4 + 6 = 10 \\).\nDenominator: \\( AB \\cdot BC + AD \\cdot CD = (1 \\times 2) + (4 \\times 3) = 2 + 12 = 14 \\).\nRatio:\n\\[ \\frac{AC}{BD} = \\frac{10}{14} = \\frac{5}{7} \\]."
+      },
+      "ar": {
+        "question": "شكل رباعي دائري \\( ABCD \\) أطوال أضلاعه المتتالية هي \\( AB = 1 \\) و \\( BC = 2 \\) و \\( CD = 3 \\) و \\( DA = 4 \\). أي مما يلي يعبر عن النسبة الدقيقة لقطريه \\( \\frac{AC}{BD} \\)؟<br/><svg viewBox='0 0 200 200' class='w-full max-w-xs mx-auto bg-slate-900/60 rounded-xl p-2 border border-slate-700 shadow-md my-2'><circle cx='100' cy='100' r='80' fill='none' stroke='#475569' stroke-width='2'/><polygon points='40,50 140,30 170,130 60,160' fill='none' stroke='#38bdf8' stroke-width='2'/><line x1='40' y1='50' x2='170' y2='130' stroke='#10b981' stroke-width='2'/><line x1='140' y1='30' x2='60' y2='160' stroke='#10b981' stroke-width='2'/><text x='25' y='40' fill='#e2e8f0' font-size='12'>A</text><text x='150' y='20' fill='#e2e8f0' font-size='12'>B</text><text x='185' y='145' fill='#e2e8f0' font-size='12'>C</text><text x='45' y='175' fill='#e2e8f0' font-size='12'>D</text></svg>",
+        "options": [
+          "\\( \\frac{3}{5} \\)",
+          "\\( \\frac{5}{7} \\)",
+          "\\( \\frac{5}{8} \\)",
+          "\\( \\frac{7}{5} \\)"
+        ],
+        "hint": "استخدم نظرية نسبة الأقطار للأشكال الرباعية الدائرية: \\( \\frac{AC}{BD} = \\frac{AB \\cdot AD + BC \\cdot CD}{AB \\cdot BC + AD \\cdot CD} \\).",
+        "explanation": "لأي شكل رباعي دائري \\( ABCD \\)، تُعطى نسبة أقطاره بالصيغة المحددة التالية:\n\\[ \\frac{AC}{BD} = \\frac{AB \\cdot AD + BC \\cdot CD}{AB \\cdot BC + AD \\cdot CD} \\]\nنعوض بأطوال الأضلاع المعطاة \\( AB = 1, BC = 2, CD = 3, \\) و \\( DA = 4 \\):\nالبسط: \\( AB \\cdot AD + BC \\cdot CD = (1 \\times 4) + (2 \\times 3) = 4 + 6 = 10 \\).\nالمقام: \\( AB \\cdot BC + AD \\cdot CD = (1 \\times 2) + (4 \\times 3) = 2 + 12 = 14 \\).\nالنسبة:\n\\[ \\frac{AC}{BD} = \\frac{10}{14} = \\frac{5}{7} \\]."
+      }
+    },
+    "correct_index": "1"
+  },
+  {
+    "id": "NSMO-S3-20",
+    "track": "nsmo",
+    "level": "Phase 3: Senior National Olympiad (Grades 10-12)",
+    "topic": "Diophantine Equations",
+    "type": "MCQ",
+    "difficulty": "hard",
+    "content": {
+      "en": {
+        "question": "Determine the number of distinct integer pairs \\( (x, y) \\) that satisfy the equation \\( \\frac{1}{x} + \\frac{1}{y} = \\frac{1}{4} \\).",
+        "options": [
+          "\\( 8 \\)",
+          "\\( 9 \\)",
+          "\\( 10 \\)",
+          "\\( 11 \\)"
+        ],
+        "hint": "Clear the denominators to get \\( 4x + 4y = xy \\), then use Simon's Favorite Factoring Trick to rewrite it as \\( (x-4)(y-4) = 16 \\).",
+        "explanation": "Given the equation: \\( \\frac{1}{x} + \\frac{1}{y} = \\frac{1}{4} \\).\nMultiply by \\( 4xy \\) to clear the denominators (assuming \\( x \\neq 0 \\) and \\( y \\neq 0 \\)):\n\\[ 4y + 4x = xy \\]\nRearrange the terms:\n\\[ xy - 4x - 4y = 0 \\]\nAdd 16 to both sides to complete the rectangle:\n\\[ xy - 4x - 4y + 16 = 16 \\]\n\\[ (x - 4)(y - 4) = 16 \\]\nWe look for pairs of integer factors of 16. The divisors of 16 are: \\( \\pm 1, \\pm 2, \\pm 4, \\pm 8, \\pm 16 \\). \nThere are 5 positive divisors and 5 negative divisors, making 10 pairs of factors in total.\nEach pair \\( (d_1, d_2) \\) corresponds to a solution: \\( x - 4 = d_1 \\implies x = d_1 + 4 \\) and \\( y = d_2 + 4 \\).\nHowever, we must ensure that neither \\( x \\) nor \\( y \\) equals \\( 0 \\).\nIf \\( d_1 = -4 \\), then \\( x = 0 \\). Since \\( d_1 d_2 = 16 \\), this means \\( d_2 = -4 \\), leading to \\( y = 0 \\).\nThis pair \\( (-4, -4) \\) produces an invalid solution \\( (0, 0) \\).\nRemoving this 1 invalid case from the 10 total cases leaves us with exactly \\( 9 \\) valid integer pairs."
+      },
+      "ar": {
+        "question": "حدد عدد الأزواج الصحيحة المختلفة \\( (x, y) \\) التي تحقق المعادلة \\( \\frac{1}{x} + \\frac{1}{y} = \\frac{1}{4} \\).",
+        "options": [
+          "\\( 8 \\)",
+          "\\( 9 \\)",
+          "\\( 10 \\)",
+          "\\( 11 \\)"
+        ],
+        "hint": "تخلص من المقامات لتصبح المعادلة \\( 4x + 4y = xy \\)، ثم استخدم 'خدعة سايمون للتحليل' لإعادة كتابتها بصيغة \\( (x-4)(y-4) = 16 \\).",
+        "explanation": "بناءً على المعادلة: \\( \\frac{1}{x} + \\frac{1}{y} = \\frac{1}{4} \\).\nنضرب في \\( 4xy \\) للتخلص من المقامات (بافتراض \\( x \\neq 0 \\) و \\( y \\neq 0 \\)):\n\\[ 4y + 4x = xy \\]\nنعيد ترتيب الحدود:\n\\[ xy - 4x - 4y = 0 \\]\nنضيف 16 لكلا الطرفين لإكمال المستطيل:\n\\[ xy - 4x - 4y + 16 = 16 \\]\n\\[ (x - 4)(y - 4) = 16 \\]\nنبحث عن أزواج من العوامل الصحيحة للعدد 16. قواسم العدد 16 هي: \\( \\pm 1, \\pm 2, \\pm 4, \\pm 8, \\pm 16 \\).\nهناك 5 قواسم موجبة و 5 قواسم سالبة، مما يعطي 10 أزواج من العوامل إجمالاً.\nكل زوج \\( (d_1, d_2) \\) يقابله حل: \\( x - 4 = d_1 \\implies x = d_1 + 4 \\) و \\( y = d_2 + 4 \\).\nمع ذلك، يجب أن نضمن ألا يساوي أي من \\( x \\) أو \\( y \\) صفراً.\nإذا كان \\( d_1 = -4 \\)، فإن \\( x = 0 \\). وبما أن \\( d_1 d_2 = 16 \\)، فهذا يعني أن \\( d_2 = -4 \\)، مما يؤدي إلى \\( y = 0 \\).\nهذا الزوج \\( (-4, -4) \\) ينتج حلاً غير صالح \\( (0, 0) \\).\nبإزالة هذه الحالة الواحدة غير الصالحة من إجمالي الحالات الـ 10، يتبقى لدينا \\( 9 \\) أزواج صحيحة صالحة بالضبط."
+      }
+    },
+    "correct_index": "1"
   }
 ]
