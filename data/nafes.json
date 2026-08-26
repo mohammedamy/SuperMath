@@ -22531,5 +22531,665 @@
       }
     },
     "correct_index": "0"
+  },
+  {
+    "id": "NAF-G06-01",
+    "track": "nafes",
+    "level": "Grade 6",
+    "topic": "Data Plots",
+    "type": "MCQ",
+    "difficulty": "easy",
+    "content": {
+      "en": {
+        "question": "The bar chart below shows the number of points scored by four students in a game. What is the exact difference in points between the student with the highest score and the student with the lowest score?<br/><svg viewBox='0 0 240 160' class='w-full max-w-xs mx-auto bg-slate-900/60 rounded-xl p-2 border border-slate-700 shadow-md my-2'><g stroke='#475569' stroke-width='1' stroke-dasharray='2,2'><line x1='30' y1='90' x2='220' y2='90'/><line x1='30' y1='50' x2='220' y2='50'/><line x1='30' y1='10' x2='220' y2='10'/></g><line x1='30' y1='130' x2='220' y2='130' stroke='#94a3b8' stroke-width='2'/><line x1='30' y1='10' x2='30' y2='130' stroke='#94a3b8' stroke-width='2'/><g fill='#e2e8f0' font-size='10' text-anchor='end'><text x='25' y='133'>0</text><text x='25' y='93'>10</text><text x='25' y='53'>20</text><text x='25' y='13'>30</text></g><rect x='45' y='70' width='25' height='60' fill='#38bdf8'/><rect x='90' y='30' width='25' height='100' fill='#10b981'/><rect x='135' y='90' width='25' height='40' fill='#f59e0b'/><rect x='180' y='50' width='25' height='80' fill='#a855f7'/><g fill='#e2e8f0' font-size='10' text-anchor='middle'><text x='57.5' y='145'>Ali</text><text x='102.5' y='145'>Badr</text><text x='147.5' y='145'>Saad</text><text x='192.5' y='145'>Fahad</text></g></svg>",
+        "options": [
+          "\\( 10 \\)",
+          "\\( 15 \\)",
+          "\\( 20 \\)",
+          "\\( 25 \\)"
+        ],
+        "hint": "Identify the tallest bar and the shortest bar, read their corresponding values on the y-axis, and subtract the smaller from the larger.",
+        "explanation": "Looking at the y-axis (where every grid line represents 10 units):\nThe highest score is Badr, whose bar reaches halfway between 20 and 30, meaning his score is \\( 25 \\).\nThe lowest score is Saad, whose bar reaches exactly the 10-line, meaning his score is \\( 10 \\).\nThe difference is \\( 25 - 10 = 15 \\)."
+      },
+      "ar": {
+        "question": "يوضح التمثيل البياني بالأعمدة أدناه عدد النقاط التي سجلها أربعة طلاب في إحدى الألعاب. ما هو الفرق الدقيق في النقاط بين الطالب صاحب أعلى نتيجة والطالب صاحب أقل نتيجة؟<br/><svg viewBox='0 0 240 160' class='w-full max-w-xs mx-auto bg-slate-900/60 rounded-xl p-2 border border-slate-700 shadow-md my-2'><g stroke='#475569' stroke-width='1' stroke-dasharray='2,2'><line x1='30' y1='90' x2='220' y2='90'/><line x1='30' y1='50' x2='220' y2='50'/><line x1='30' y1='10' x2='220' y2='10'/></g><line x1='30' y1='130' x2='220' y2='130' stroke='#94a3b8' stroke-width='2'/><line x1='30' y1='10' x2='30' y2='130' stroke='#94a3b8' stroke-width='2'/><g fill='#e2e8f0' font-size='10' text-anchor='end'><text x='25' y='133'>0</text><text x='25' y='93'>10</text><text x='25' y='53'>20</text><text x='25' y='13'>30</text></g><rect x='45' y='70' width='25' height='60' fill='#38bdf8'/><rect x='90' y='30' width='25' height='100' fill='#10b981'/><rect x='135' y='90' width='25' height='40' fill='#f59e0b'/><rect x='180' y='50' width='25' height='80' fill='#a855f7'/><g fill='#e2e8f0' font-size='10' text-anchor='middle'><text x='57.5' y='145'>علي</text><text x='102.5' y='145'>بدر</text><text x='147.5' y='145'>سعد</text><text x='192.5' y='145'>فهد</text></g></svg>",
+        "options": [
+          "\\( 10 \\)",
+          "\\( 15 \\)",
+          "\\( 20 \\)",
+          "\\( 25 \\)"
+        ],
+        "hint": "حدد العمود الأطول والعمود الأقصر، واقرأ القيم المقابلة لهما على المحور الصادي، ثم اطرح القيمة الصغرى من الكبرى.",
+        "explanation": "بالنظر إلى المحور الصادي (حيث يمثل كل خط شبكة 10 وحدات):\nأعلى نتيجة هي لبدر، حيث يصل عموده إلى منتصف المسافة بين 20 و 30، مما يعني أن نتيجته هي \\( 25 \\).\nأقل نتيجة هي لسعد، حيث يصل عموده تماماً إلى خط الـ 10، مما يعني أن نتيجته هي \\( 10 \\).\nالفرق هو \\( 25 - 10 = 15 \\)."
+      }
+    },
+    "correct_index": "1"
+  },
+  {
+    "id": "NAF-G06-02",
+    "track": "nafes",
+    "level": "Grade 6",
+    "topic": "Arithmetic",
+    "type": "MCQ",
+    "difficulty": "medium",
+    "content": {
+      "en": {
+        "question": "Evaluate the following mathematical expression according to the order of operations:\n\\[ 36 - 6 \\times (8 - 3) \\div 2 \\]",
+        "options": [
+          "\\( 15 \\)",
+          "\\( 21 \\)",
+          "\\( 30 \\)",
+          "\\( 45 \\)"
+        ],
+        "hint": "Follow the order of operations (BODMAS/PEMDAS): calculate inside the parentheses first, then multiplication and division from left to right, and finally subtraction.",
+        "explanation": "1. Parentheses: \\( (8 - 3) = 5 \\).\n   The expression becomes: \\( 36 - 6 \\times 5 \\div 2 \\).\n2. Multiplication (going left to right): \\( 6 \\times 5 = 30 \\).\n   The expression becomes: \\( 36 - 30 \\div 2 \\).\n3. Division: \\( 30 \\div 2 = 15 \\).\n   The expression becomes: \\( 36 - 15 \\).\n4. Subtraction: \\( 36 - 15 = 21 \\).\nThe correct final value is \\( 21 \\)."
+      },
+      "ar": {
+        "question": "احسب قيمة العبارة الرياضية التالية وفقاً لأولويات العمليات الحسابية:\n\\[ 36 - 6 \\times (8 - 3) \\div 2 \\]",
+        "options": [
+          "\\( 15 \\)",
+          "\\( 21 \\)",
+          "\\( 30 \\)",
+          "\\( 45 \\)"
+        ],
+        "hint": "اتبع ترتيب العمليات الحسابية: احسب ما بداخل الأقواس أولاً، ثم الضرب والقسمة من اليسار إلى اليمين، وأخيراً الطرح.",
+        "explanation": "1. الأقواس: \\( (8 - 3) = 5 \\).\n   تصبح العبارة: \\( 36 - 6 \\times 5 \\div 2 \\).\n2. الضرب (من اليسار لليمين): \\( 6 \\times 5 = 30 \\).\n   تصبح العبارة: \\( 36 - 30 \\div 2 \\).\n3. القسمة: \\( 30 \\div 2 = 15 \\).\n   تصبح العبارة: \\( 36 - 15 \\).\n4. الطرح: \\( 36 - 15 = 21 \\).\nالقيمة النهائية الصحيحة هي \\( 21 \\)."
+      }
+    },
+    "correct_index": "1"
+  },
+  {
+    "id": "NAF-G06-03",
+    "track": "nafes",
+    "level": "Grade 6",
+    "topic": "Fractions",
+    "type": "MCQ",
+    "difficulty": "hard",
+    "content": {
+      "en": {
+        "question": "A farmer sold \\( 2\\frac{1}{4} \\) tons of dates on Monday and \\( 1\\frac{2}{3} \\) tons on Tuesday. How many tons of dates did he sell in total over the two days?",
+        "options": [
+          "\\( 3\\frac{3}{7} \\)",
+          "\\( 3\\frac{11}{12} \\)",
+          "\\( 4\\frac{1}{12} \\)",
+          "\\( 4\\frac{5}{12} \\)"
+        ],
+        "hint": "Add the whole numbers together, then find a common denominator for the fractions \\( \\frac{1}{4} \\) and \\( \\frac{2}{3} \\) before adding them.",
+        "explanation": "To add \\( 2\\frac{1}{4} \\) and \\( 1\\frac{2}{3} \\):\nFirst, sum the whole numbers: \\( 2 + 1 = 3 \\).\nNext, find a common denominator for \\( 4 \\) and \\( 3 \\), which is \\( 12 \\).\nConvert the fractions: \\( \\frac{1}{4} = \\frac{3}{12} \\) and \\( \\frac{2}{3} = \\frac{8}{12} \\).\nAdd the fractions: \\( \\frac{3}{12} + \\frac{8}{12} = \\frac{11}{12} \\).\nCombine the whole number and the fraction: \\( 3 + \\frac{11}{12} = 3\\frac{11}{12} \\) tons."
+      },
+      "ar": {
+        "question": "باع مزارع \\( 2\\frac{1}{4} \\) طن من التمر يوم الإثنين و \\( 1\\frac{2}{3} \\) طن يوم الثلاثاء. كم طناً من التمر باع إجمالاً خلال اليومين؟",
+        "options": [
+          "\\( 3\\frac{3}{7} \\)",
+          "\\( 3\\frac{11}{12} \\)",
+          "\\( 4\\frac{1}{12} \\)",
+          "\\( 4\\frac{5}{12} \\)"
+        ],
+        "hint": "اجمع الأعداد الصحيحة معاً، ثم أوجد مقاماً مشتركاً للكسرين \\( \\frac{1}{4} \\) و \\( \\frac{2}{3} \\) قبل جمعهما.",
+        "explanation": "لجمع \\( 2\\frac{1}{4} \\) و \\( 1\\frac{2}{3} \\):\nأولاً، نجمع الأعداد الصحيحة: \\( 2 + 1 = 3 \\).\nثانياً، نجد مقاماً مشتركاً للعددين \\( 4 \\) و \\( 3 \\)، وهو \\( 12 \\).\nنحوّل الكسور: \\( \\frac{1}{4} = \\frac{3}{12} \\) و \\( \\frac{2}{3} = \\frac{8}{12} \\).\nنجمع الكسور: \\( \\frac{3}{12} + \\frac{8}{12} = \\frac{11}{12} \\).\nندمج العدد الصحيح مع الكسر: \\( 3 + \\frac{11}{12} = 3\\frac{11}{12} \\) طناً."
+      }
+    },
+    "correct_index": "1"
+  },
+  {
+    "id": "NAF-G06-04",
+    "track": "nafes",
+    "level": "Grade 6",
+    "topic": "Fractions",
+    "type": "MCQ",
+    "difficulty": "hard",
+    "content": {
+      "en": {
+        "question": "A large bottle contains exactly \\( \\frac{7}{8} \\) liters of fresh juice. How many glasses with a capacity of \\( \\frac{1}{4} \\) liter can be completely filled from this bottle?",
+        "options": [
+          "\\( 2 \\)",
+          "\\( 3 \\)",
+          "\\( 4 \\)",
+          "\\( 5 \\)"
+        ],
+        "hint": "Divide the total amount of juice by the capacity of one glass. The whole number part of the result is the number of completely filled glasses.",
+        "explanation": "We need to perform the division: \\( \\frac{7}{8} \\div \\frac{1}{4} \\).\nTo divide by a fraction, we multiply by its reciprocal:\n\\( \\frac{7}{8} \\times \\frac{4}{1} = \\frac{28}{8} \\).\nSimplify the fraction: \\( \\frac{28}{8} = \\frac{7}{2} = 3.5 \\).\nThis means we can fill exactly \\( 3 \\) full glasses, and half of a fourth glass will be filled. Therefore, the number of glasses that can be completely filled is \\( 3 \\)."
+      },
+      "ar": {
+        "question": "زجاجة كبيرة تحتوي بالضبط على \\( \\frac{7}{8} \\) لتر من العصير الطازج. كم كوباً سعة \\( \\frac{1}{4} \\) لتر يمكن ملؤه بالكامل من هذه الزجاجة؟",
+        "options": [
+          "\\( 2 \\)",
+          "\\( 3 \\)",
+          "\\( 4 \\)",
+          "\\( 5 \\)"
+        ],
+        "hint": "اقسم الكمية الإجمالية للعصير على سعة الكوب الواحد. الجزء الصحيح من الناتج هو عدد الأكواب التي يمكن ملؤها بالكامل.",
+        "explanation": "نحتاج إلى إجراء عملية القسمة: \\( \\frac{7}{8} \\div \\frac{1}{4} \\).\nللقسمة على كسر، نضرب في مقلوبه:\n\\( \\frac{7}{8} \\times \\frac{4}{1} = \\frac{28}{8} \\).\nنبسط الكسر: \\( \\frac{28}{8} = \\frac{7}{2} = 3.5 \\).\nهذا يعني أنه يمكننا ملء \\( 3 \\) أكواب كاملة، وسيتم ملء نصف الكوب الرابع. وبالتالي، فإن عدد الأكواب التي يمكن ملؤها بالكامل هو \\( 3 \\)."
+      }
+    },
+    "correct_index": "1"
+  },
+  {
+    "id": "NAF-G06-05",
+    "track": "nafes",
+    "level": "Grade 6",
+    "topic": "Ratios",
+    "type": "MCQ",
+    "difficulty": "medium",
+    "content": {
+      "en": {
+        "question": "A dessert recipe requires sugar and flour in the ratio \\( 2 : 5 \\). If a baker uses exactly \\( 350 \\text{ grams} \\) of flour, how many grams of sugar does he need to maintain the correct recipe?",
+        "options": [
+          "\\( 140 \\text{ grams} \\)",
+          "\\( 200 \\text{ grams} \\)",
+          "\\( 210 \\text{ grams} \\)",
+          "\\( 250 \\text{ grams} \\)"
+        ],
+        "hint": "Set up a proportion. The flour represents 5 parts of the ratio, which equals 350 grams. Find the value of 1 part.",
+        "explanation": "The ratio of sugar to flour is \\( 2:5 \\).\nThis means for every \\( 5 \\) parts of flour, there are \\( 2 \\) parts of sugar.\nWe are given that the flour part corresponds to \\( 350 \\text{ g} \\).\nValue of \\( 1 \\) part = \\( 350 \\div 5 = 70 \\text{ g} \\).\nThe sugar corresponds to \\( 2 \\) parts.\nAmount of sugar needed = \\( 2 \\times 70 = 140 \\text{ grams} \\)."
+      },
+      "ar": {
+        "question": "تتطلب وصفة حلى استخدام السكر والدقيق بنسبة \\( 2 : 5 \\). إذا استخدم خباز \\( 350 \\text{ جراماً} \\) بالضبط من الدقيق، فكم جراماً من السكر يحتاج للحفاظ على الوصفة الصحيحة؟",
+        "options": [
+          "\\( 140 \\text{ جراماً} \\)",
+          "\\( 200 \\text{ جراماً} \\)",
+          "\\( 210 \\text{ جراماً} \\)",
+          "\\( 250 \\text{ جراماً} \\)"
+        ],
+        "hint": "أعد تناسباً. الدقيق يمثل 5 أجزاء من النسبة، وهو ما يعادل 350 جراماً. أوجد قيمة الجزء الواحد.",
+        "explanation": "نسبة السكر إلى الدقيق هي \\( 2:5 \\).\nهذا يعني أنه مقابل كل \\( 5 \\) أجزاء من الدقيق، هناك جزءان (2) من السكر.\nأُعطينا أن جزء الدقيق يعادل \\( 350 \\text{ جم} \\).\nقيمة الجزء الواحد = \\( 350 \\div 5 = 70 \\text{ جم} \\).\nالسكر يمثل جزأين (2).\nكمية السكر المطلوبة = \\( 2 \\times 70 = 140 \\text{ جراماً} \\)."
+      }
+    },
+    "correct_index": "0"
+  },
+  {
+    "id": "NAF-G06-06",
+    "track": "nafes",
+    "level": "Grade 6",
+    "topic": "Rates",
+    "type": "MCQ",
+    "difficulty": "medium",
+    "content": {
+      "en": {
+        "question": "A car travels \\( 240 \\text{ km} \\) in \\( 3 \\text{ hours} \\) at a steady speed. If it maintains this exact same speed, how many hours will it take to travel a total distance of \\( 400 \\text{ km} \\)?",
+        "options": [
+          "\\( 4 \\text{ hours} \\)",
+          "\\( 4.5 \\text{ hours} \\)",
+          "\\( 5 \\text{ hours} \\)",
+          "\\( 6 \\text{ hours} \\)"
+        ],
+        "hint": "First, calculate the unit rate (speed in km per hour) by dividing 240 by 3. Then divide 400 by that speed.",
+        "explanation": "Speed = Distance \\( \\div \\) Time.\nSpeed = \\( 240 \\text{ km} \\div 3 \\text{ hours} = 80 \\text{ km/h} \\).\nTo find the time needed for 400 km, we use the formula: Time = Distance \\( \\div \\) Speed.\nTime = \\( 400 \\div 80 = 5 \\text{ hours} \\)."
+      },
+      "ar": {
+        "question": "تقطع سيارة مسافة \\( 240 \\text{ كم} \\) في \\( 3 \\text{ ساعات} \\) بسرعة ثابتة. إذا حافظت على هذه السرعة نفسها تماماً، فكم ساعة ستستغرق لقطع مسافة إجمالية قدرها \\( 400 \\text{ كم} \\)؟",
+        "options": [
+          "\\( 4 \\text{ ساعات} \\)",
+          "\\( 4.5 \\text{ ساعات} \\)",
+          "\\( 5 \\text{ ساعات} \\)",
+          "\\( 6 \\text{ ساعات} \\)"
+        ],
+        "hint": "أولاً، احسب معدل الوحدة (السرعة بوحدة كم/ساعة) بقسمة 240 على 3. ثم اقسم 400 على تلك السرعة.",
+        "explanation": "السرعة = المسافة \\( \\div \\) الزمن.\nالسرعة = \\( 240 \\text{ كم} \\div 3 \\text{ ساعات} = 80 \\text{ كم/ساعة} \\).\nلإيجاد الزمن اللازم لقطع 400 كم، نستخدم الصيغة: الزمن = المسافة \\( \\div \\) السرعة.\nالزمن = \\( 400 \\div 80 = 5 \\text{ ساعات} \\)."
+      }
+    },
+    "correct_index": "2"
+  },
+  {
+    "id": "NAF-G06-07",
+    "track": "nafes",
+    "level": "Grade 6",
+    "topic": "Percentages",
+    "type": "MCQ",
+    "difficulty": "medium",
+    "content": {
+      "en": {
+        "question": "A new tablet is originally priced at \\( 800 \\text{ SAR} \\). During a weekend sale, it is offered at a \\( 15\\% \\) discount. What is the final price of the tablet?",
+        "options": [
+          "\\( 650 \\text{ SAR} \\)",
+          "\\( 680 \\text{ SAR} \\)",
+          "\\( 720 \\text{ SAR} \\)",
+          "\\( 785 \\text{ SAR} \\)"
+        ],
+        "hint": "Calculate 15% of 800 (which is 15 multiplied by 8), and then subtract that discount amount from the original price.",
+        "explanation": "To find the discount amount, calculate \\( 15\\% \\) of \\( 800 \\).\nDiscount = \\( 0.15 \\times 800 = 15 \\times 8 = 120 \\text{ SAR} \\).\nThe final price is the original price minus the discount.\nFinal price = \\( 800 - 120 = 680 \\text{ SAR} \\)."
+      },
+      "ar": {
+        "question": "يبلغ السعر الأصلي لجهاز لوحي جديد \\( 800 \\text{ ريال} \\). خلال تخفيضات نهاية الأسبوع، عُرض بخصم قدره \\( 15\\% \\). ما هو السعر النهائي للجهاز اللوحي؟",
+        "options": [
+          "\\( 650 \\text{ ريالاً} \\)",
+          "\\( 680 \\text{ ريالاً} \\)",
+          "\\( 720 \\text{ ريالاً} \\)",
+          "\\( 785 \\text{ ريالاً} \\)"
+        ],
+        "hint": "احسب نسبة 15% من 800 (وهي 15 مضروبة في 8)، ثم اطرح مبلغ الخصم هذا من السعر الأصلي.",
+        "explanation": "لإيجاد مبلغ الخصم، احسب \\( 15\\% \\) من \\( 800 \\).\nالخصم = \\( 0.15 \\times 800 = 15 \\times 8 = 120 \\text{ ريالاً} \\).\nالسعر النهائي هو السعر الأصلي ناقص مبلغ الخصم.\nالسعر النهائي = \\( 800 - 120 = 680 \\text{ ريالاً} \\)."
+      }
+    },
+    "correct_index": "1"
+  },
+  {
+    "id": "NAF-G06-08",
+    "track": "nafes",
+    "level": "Grade 6",
+    "topic": "Decimals",
+    "type": "MCQ",
+    "difficulty": "medium",
+    "content": {
+      "en": {
+        "question": "A box of premium pens costs \\( 12.75 \\text{ SAR} \\). A teacher decides to buy exactly \\( 6 \\) boxes. How much does she pay in total?",
+        "options": [
+          "\\( 72.5 \\text{ SAR} \\)",
+          "\\( 75.5 \\text{ SAR} \\)",
+          "\\( 76.5 \\text{ SAR} \\)",
+          "\\( 78.5 \\text{ SAR} \\)"
+        ],
+        "hint": "Multiply the whole number part (12) by 6, and the decimal part (0.75) by 6, then add them together.",
+        "explanation": "Total Cost = \\( 12.75 \\times 6 \\).\nWe can split the multiplication to make it easier:\n\\( 12 \\times 6 = 72 \\).\n\\( 0.75 \\times 6 = 4.50 \\).\nTotal = \\( 72 + 4.50 = 76.5 \\text{ SAR} \\)."
+      },
+      "ar": {
+        "question": "تبلغ تكلفة علبة من الأقلام الفاخرة \\( 12.75 \\text{ ريالاً} \\). قررت معلمة شراء \\( 6 \\) علب بالضبط. كم ستدفع إجمالاً؟",
+        "options": [
+          "\\( 72.5 \\text{ ريالاً} \\)",
+          "\\( 75.5 \\text{ ريالاً} \\)",
+          "\\( 76.5 \\text{ ريالاً} \\)",
+          "\\( 78.5 \\text{ ريالاً} \\)"
+        ],
+        "hint": "اضرب الجزء الصحيح (12) في 6، والجزء العشري (0.75) في 6، ثم اجمعهما.",
+        "explanation": "التكلفة الإجمالية = \\( 12.75 \\times 6 \\).\nيمكننا تفكيك عملية الضرب لتسهيلها:\n\\( 12 \\times 6 = 72 \\).\n\\( 0.75 \\times 6 = 4.50 \\).\nالإجمالي = \\( 72 + 4.50 = 76.5 \\text{ ريالاً} \\)."
+      }
+    },
+    "correct_index": "2"
+  },
+  {
+    "id": "NAF-G06-09",
+    "track": "nafes",
+    "level": "Grade 6",
+    "topic": "Angles",
+    "type": "MCQ",
+    "difficulty": "medium",
+    "content": {
+      "en": {
+        "question": "Three adjacent angles lie on a straight horizontal line. Their measures are given algebraically as \\( 2x \\), \\( 3x \\), and \\( 40^\\circ \\). What is the exact value of \\( x \\)?<br/><svg viewBox='0 0 200 100' class='w-full max-w-xs mx-auto bg-slate-900/60 rounded-xl p-2 border border-slate-700 shadow-md my-2'><line x1='20' y1='80' x2='180' y2='80' stroke='#94a3b8' stroke-width='3'/><line x1='100' y1='80' x2='150' y2='20' stroke='#38bdf8' stroke-width='2'/><line x1='100' y1='80' x2='50' y2='20' stroke='#10b981' stroke-width='2'/><path d='M 125 80 A 25 25 0 0 0 119 57' fill='none' stroke='#f59e0b' stroke-width='2'/><text x='140' y='75' fill='#e2e8f0' font-size='12'>40°</text><path d='M 119 57 A 25 25 0 0 0 79 55' fill='none' stroke='#f59e0b' stroke-width='2'/><text x='95' y='50' fill='#e2e8f0' font-size='12'>3x</text><path d='M 79 55 A 25 25 0 0 0 75 80' fill='none' stroke='#f59e0b' stroke-width='2'/><text x='65' y='75' fill='#e2e8f0' font-size='12'>2x</text></svg>",
+        "options": [
+          "\\( 28 \\)",
+          "\\( 30 \\)",
+          "\\( 32 \\)",
+          "\\( 35 \\)"
+        ],
+        "hint": "The sum of adjacent angles on a straight line equals \\( 180^\\circ \\). Write an equation to solve for x.",
+        "explanation": "Because the three angles lie on a straight line, they are supplementary, meaning their sum is \\( 180^\\circ \\).\nWe set up the equation: \\( 2x + 3x + 40 = 180 \\).\nCombine the \\( x \\) terms: \\( 5x + 40 = 180 \\).\nSubtract 40 from both sides: \\( 5x = 140 \\).\nDivide by 5: \\( x = 140 \\div 5 = 28 \\)."
+      },
+      "ar": {
+        "question": "ثلاث زوايا متجاورة تقع على خط أفقي مستقيم. قُدّرت قياساتها جبرياً كالتالي: \\( 2x \\) و \\( 3x \\) و \\( 40^\\circ \\). ما هي القيمة الدقيقة لـ \\( x \\)؟<br/><svg viewBox='0 0 200 100' class='w-full max-w-xs mx-auto bg-slate-900/60 rounded-xl p-2 border border-slate-700 shadow-md my-2'><line x1='20' y1='80' x2='180' y2='80' stroke='#94a3b8' stroke-width='3'/><line x1='100' y1='80' x2='150' y2='20' stroke='#38bdf8' stroke-width='2'/><line x1='100' y1='80' x2='50' y2='20' stroke='#10b981' stroke-width='2'/><path d='M 125 80 A 25 25 0 0 0 119 57' fill='none' stroke='#f59e0b' stroke-width='2'/><text x='140' y='75' fill='#e2e8f0' font-size='12'>40°</text><path d='M 119 57 A 25 25 0 0 0 79 55' fill='none' stroke='#f59e0b' stroke-width='2'/><text x='95' y='50' fill='#e2e8f0' font-size='12'>3x</text><path d='M 79 55 A 25 25 0 0 0 75 80' fill='none' stroke='#f59e0b' stroke-width='2'/><text x='65' y='75' fill='#e2e8f0' font-size='12'>2x</text></svg>",
+        "options": [
+          "\\( 28 \\)",
+          "\\( 30 \\)",
+          "\\( 32 \\)",
+          "\\( 35 \\)"
+        ],
+        "hint": "مجموع الزوايا المتجاورة على خط مستقيم يساوي \\( 180^\\circ \\). اكتب معادلة وحلها لإيجاد قيمة x.",
+        "explanation": "لأن الزوايا الثلاث تقع على خط مستقيم، فهي متكاملة، مما يعني أن مجموعها يساوي \\( 180^\\circ \\).\nنكتب المعادلة: \\( 2x + 3x + 40 = 180 \\).\nنجمع حدود \\( x \\): \\( 5x + 40 = 180 \\).\nنطرح 40 من كلا الطرفين: \\( 5x = 140 \\).\nنقسم على 5: \\( x = 140 \\div 5 = 28 \\)."
+      }
+    },
+    "correct_index": "0"
+  },
+  {
+    "id": "NAF-G06-10",
+    "track": "nafes",
+    "level": "Grade 6",
+    "topic": "Angles",
+    "type": "MCQ",
+    "difficulty": "medium",
+    "content": {
+      "en": {
+        "question": "In an isosceles triangle, the angle at the vertex (between the two equal sides) is exactly \\( 50^\\circ \\). What is the measure of one of the base angles?<br/><svg viewBox='0 0 200 140' class='w-full max-w-xs mx-auto bg-slate-900/60 rounded-xl p-2 border border-slate-700 shadow-md my-2'><polygon points='100,20 40,110 160,110' fill='none' stroke='#38bdf8' stroke-width='2'/><line x1='65' y1='65' x2='75' y2='60' stroke='#10b981' stroke-width='2'/><line x1='125' y1='60' x2='135' y2='65' stroke='#10b981' stroke-width='2'/><path d='M 93 30 A 15 15 0 0 0 107 30' fill='none' stroke='#f59e0b' stroke-width='2'/><text x='100' y='50' fill='#e2e8f0' font-size='12' text-anchor='middle'>50°</text><text x='55' y='105' fill='#e2e8f0' font-size='12'>x</text></svg>",
+        "options": [
+          "\\( 50^\\circ \\)",
+          "\\( 60^\\circ \\)",
+          "\\( 65^\\circ \\)",
+          "\\( 75^\\circ \\)"
+        ],
+        "hint": "The sum of interior angles in a triangle is 180 degrees, and the two base angles of an isosceles triangle are equal.",
+        "explanation": "Let each base angle be \\( x \\).\nSince the triangle is isosceles, the two base angles are equal.\nThe sum of the angles is \\( x + x + 50^\\circ = 180^\\circ \\).\n\\( 2x + 50 = 180 \\).\nSubtract 50 from both sides: \\( 2x = 130 \\).\nDivide by 2: \\( x = 65^\\circ \\).\nTherefore, the measure of one base angle is \\( 65^\\circ \\)."
+      },
+      "ar": {
+        "question": "في مثلث متطابق الضلعين، زاوية الرأس (بين الضلعين المتساويين) تبلغ \\( 50^\\circ \\) تماماً. ما هو قياس إحدى زاويتي القاعدة؟<br/><svg viewBox='0 0 200 140' class='w-full max-w-xs mx-auto bg-slate-900/60 rounded-xl p-2 border border-slate-700 shadow-md my-2'><polygon points='100,20 40,110 160,110' fill='none' stroke='#38bdf8' stroke-width='2'/><line x1='65' y1='65' x2='75' y2='60' stroke='#10b981' stroke-width='2'/><line x1='125' y1='60' x2='135' y2='65' stroke='#10b981' stroke-width='2'/><path d='M 93 30 A 15 15 0 0 0 107 30' fill='none' stroke='#f59e0b' stroke-width='2'/><text x='100' y='50' fill='#e2e8f0' font-size='12' text-anchor='middle'>50°</text><text x='55' y='105' fill='#e2e8f0' font-size='12'>x</text></svg>",
+        "options": [
+          "\\( 50^\\circ \\)",
+          "\\( 60^\\circ \\)",
+          "\\( 65^\\circ \\)",
+          "\\( 75^\\circ \\)"
+        ],
+        "hint": "مجموع الزوايا الداخلية للمثلث هو 180 درجة، وزاويتا القاعدة في المثلث متطابق الضلعين متساويتان.",
+        "explanation": "لنفرض أن كل زاوية من زاويتي القاعدة تساوي \\( x \\).\nبما أن المثلث متطابق الضلعين، فإن زاويتي القاعدة متساويتان.\nمجموع الزوايا هو \\( x + x + 50^\\circ = 180^\\circ \\).\n\\( 2x + 50 = 180 \\).\nنطرح 50 من الطرفين: \\( 2x = 130 \\).\nنقسم على 2: \\( x = 65^\\circ \\).\nلذلك، قياس زاوية القاعدة الواحدة هو \\( 65^\\circ \\)."
+      }
+    },
+    "correct_index": "2"
+  },
+  {
+    "id": "NAF-G06-11",
+    "track": "nafes",
+    "level": "Grade 6",
+    "topic": "Angles",
+    "type": "MCQ",
+    "difficulty": "medium",
+    "content": {
+      "en": {
+        "question": "Three of the interior angles of a quadrilateral are \\( 85^\\circ, 105^\\circ, \\) and \\( 70^\\circ \\). What is the exact measure of the fourth angle \\( x \\)?<br/><svg viewBox='0 0 200 140' class='w-full max-w-xs mx-auto bg-slate-900/60 rounded-xl p-2 border border-slate-700 shadow-md my-2'><polygon points='40,110 160,110 140,30 60,50' fill='none' stroke='#10b981' stroke-width='2'/><text x='60' y='100' fill='#e2e8f0' font-size='12'>85°</text><text x='130' y='100' fill='#e2e8f0' font-size='12'>105°</text><text x='115' y='55' fill='#e2e8f0' font-size='12'>70°</text><text x='70' y='75' fill='#f59e0b' font-size='14'>x</text></svg>",
+        "options": [
+          "\\( 80^\\circ \\)",
+          "\\( 90^\\circ \\)",
+          "\\( 100^\\circ \\)",
+          "\\( 110^\\circ \\)"
+        ],
+        "hint": "The sum of all four interior angles in any quadrilateral is exactly 360 degrees.",
+        "explanation": "The sum of the interior angles of a quadrilateral is \\( 360^\\circ \\).\nFirst, find the sum of the three known angles:\n\\( 85^\\circ + 105^\\circ + 70^\\circ = 260^\\circ \\).\nTo find the fourth angle \\( x \\), subtract this sum from \\( 360^\\circ \\):\n\\( x = 360^\\circ - 260^\\circ = 100^\\circ \\)."
+      },
+      "ar": {
+        "question": "ثلاث زوايا في شكل رباعي قياساتها \\( 85^\\circ, 105^\\circ, \\) و \\( 70^\\circ \\). ما هو القياس الدقيق للزاوية الرابعة \\( x \\)؟<br/><svg viewBox='0 0 200 140' class='w-full max-w-xs mx-auto bg-slate-900/60 rounded-xl p-2 border border-slate-700 shadow-md my-2'><polygon points='40,110 160,110 140,30 60,50' fill='none' stroke='#10b981' stroke-width='2'/><text x='60' y='100' fill='#e2e8f0' font-size='12'>85°</text><text x='130' y='100' fill='#e2e8f0' font-size='12'>105°</text><text x='115' y='55' fill='#e2e8f0' font-size='12'>70°</text><text x='70' y='75' fill='#f59e0b' font-size='14'>x</text></svg>",
+        "options": [
+          "\\( 80^\\circ \\)",
+          "\\( 90^\\circ \\)",
+          "\\( 100^\\circ \\)",
+          "\\( 110^\\circ \\)"
+        ],
+        "hint": "مجموع الزوايا الداخلية الأربع لأي شكل رباعي يساوي تماماً 360 درجة.",
+        "explanation": "مجموع الزوايا الداخلية للشكل الرباعي هو \\( 360^\\circ \\).\nأولاً، نوجد مجموع الزوايا الثلاث المعروفة:\n\\( 85^\\circ + 105^\\circ + 70^\\circ = 260^\\circ \\).\nلإيجاد الزاوية الرابعة \\( x \\)، نطرح هذا المجموع من \\( 360^\\circ \\):\n\\( x = 360^\\circ - 260^\\circ = 100^\\circ \\)."
+      }
+    },
+    "correct_index": "2"
+  },
+  {
+    "id": "NAF-G06-12",
+    "track": "nafes",
+    "level": "Grade 6",
+    "topic": "Area",
+    "type": "MCQ",
+    "difficulty": "medium",
+    "content": {
+      "en": {
+        "question": "Find the area of the parallelogram shown below. The base is \\( 14 \\text{ cm} \\), the perpendicular height is \\( 9 \\text{ cm} \\), and the slanted side length is \\( 11 \\text{ cm} \\).<br/><svg viewBox='0 0 200 140' class='w-full max-w-xs mx-auto bg-slate-900/60 rounded-xl p-2 border border-slate-700 shadow-md my-2'><polygon points='50,110 160,110 140,40 30,40' fill='none' stroke='#38bdf8' stroke-width='2'/><line x1='50' y1='40' x2='50' y2='110' stroke='#f59e0b' stroke-width='2' stroke-dasharray='4,4'/><rect x='50' y='100' width='10' height='10' fill='none' stroke='#f59e0b' stroke-width='1'/><text x='105' y='125' fill='#e2e8f0' font-size='12' text-anchor='middle'>14 cm</text><text x='25' y='80' fill='#94a3b8' font-size='12'>11 cm</text><text x='60' y='80' fill='#f59e0b' font-size='12'>9 cm</text></svg>",
+        "options": [
+          "\\( 99 \\text{ cm}^2 \\)",
+          "\\( 126 \\text{ cm}^2 \\)",
+          "\\( 154 \\text{ cm}^2 \\)",
+          "\\( 252 \\text{ cm}^2 \\)"
+        ],
+        "hint": "The area of a parallelogram is calculated by multiplying its base by its perpendicular height. Ignore the slanted side length.",
+        "explanation": "The formula for the area of a parallelogram is Area = base \\( \\times \\) perpendicular height.\nBase = \\( 14 \\text{ cm} \\).\nPerpendicular height = \\( 9 \\text{ cm} \\).\nThe slanted side (\\( 11 \\text{ cm} \\)) is not used for area calculation; it is only used if calculating perimeter.\nArea = \\( 14 \\times 9 = 126 \\text{ cm}^2 \\)."
+      },
+      "ar": {
+        "question": "أوجد مساحة متوازي الأضلاع الموضح أدناه. طول قاعدته \\( 14 \\text{ سم} \\)، وارتفاعه العمودي \\( 9 \\text{ سم} \\)، وطول ضلعه المائل \\( 11 \\text{ سم} \\).<br/><svg viewBox='0 0 200 140' class='w-full max-w-xs mx-auto bg-slate-900/60 rounded-xl p-2 border border-slate-700 shadow-md my-2'><polygon points='50,110 160,110 140,40 30,40' fill='none' stroke='#38bdf8' stroke-width='2'/><line x1='50' y1='40' x2='50' y2='110' stroke='#f59e0b' stroke-width='2' stroke-dasharray='4,4'/><rect x='50' y='100' width='10' height='10' fill='none' stroke='#f59e0b' stroke-width='1'/><text x='105' y='125' fill='#e2e8f0' font-size='12' text-anchor='middle'>14 سم</text><text x='25' y='80' fill='#94a3b8' font-size='12'>11 سم</text><text x='60' y='80' fill='#f59e0b' font-size='12'>9 سم</text></svg>",
+        "options": [
+          "\\( 99 \\text{ سم}^2 \\)",
+          "\\( 126 \\text{ سم}^2 \\)",
+          "\\( 154 \\text{ سم}^2 \\)",
+          "\\( 252 \\text{ سم}^2 \\)"
+        ],
+        "hint": "تُحسب مساحة متوازي الأضلاع بضرب قاعدته في ارتفاعه العمودي. تجاهل طول الضلع المائل.",
+        "explanation": "صيغة مساحة متوازي الأضلاع هي المساحة = القاعدة \\( \\times \\) الارتفاع العمودي.\nالقاعدة = \\( 14 \\text{ سم} \\).\nالارتفاع العمودي = \\( 9 \\text{ سم} \\).\nالضلع المائل (\\( 11 \\text{ سم} \\)) لا يُستخدم في حساب المساحة؛ بل يُستخدم فقط لحساب المحيط.\nالمساحة = \\( 14 \\times 9 = 126 \\text{ سم}^2 \\)."
+      }
+    },
+    "correct_index": "1"
+  },
+  {
+    "id": "NAF-G06-13",
+    "track": "nafes",
+    "level": "Grade 6",
+    "topic": "Perimeter",
+    "type": "MCQ",
+    "difficulty": "hard",
+    "content": {
+      "en": {
+        "question": "Find the total perimeter of the L-shaped polygon shown below. Assume all adjacent sides meet at right angles.<br/><svg viewBox='0 0 200 150' class='w-full max-w-xs mx-auto bg-slate-900/60 rounded-xl p-2 border border-slate-700 shadow-md my-2'><polygon points='50,20 100,20 100,80 170,80 170,120 50,120' fill='#10b981' fill-opacity='0.2' stroke='#10b981' stroke-width='2'/><text x='75' y='15' fill='#e2e8f0' font-size='12' text-anchor='middle'>5</text><text x='135' y='75' fill='#e2e8f0' font-size='12' text-anchor='middle'>7</text><text x='110' y='135' fill='#e2e8f0' font-size='12' text-anchor='middle'>12</text><text x='40' y='70' fill='#e2e8f0' font-size='12' text-anchor='end'>10</text><text x='180' y='105' fill='#e2e8f0' font-size='12' text-anchor='start'>4</text><text x='95' y='55' fill='#e2e8f0' font-size='12' text-anchor='end'>6</text></svg>",
+        "options": [
+          "\\( 34 \\)",
+          "\\( 40 \\)",
+          "\\( 44 \\)",
+          "\\( 48 \\)"
+        ],
+        "hint": "The perimeter is the sum of the lengths of all outer boundary sides. Simply add all the numbers given around the shape.",
+        "explanation": "The perimeter is the total distance around the outside of the shape.\nThe side lengths are given as: \\( 10, 12, 4, 7, 6, \\) and \\( 5 \\).\nPerimeter = \\( 10 + 12 + 4 + 7 + 6 + 5 \\).\nLet's add them up: \\( 10 + 12 = 22 \\).\n\\( 22 + 4 = 26 \\).\n\\( 26 + 7 = 33 \\).\n\\( 33 + 6 = 39 \\).\n\\( 39 + 5 = 44 \\).\nAlso note that horizontally: \\( 5 + 7 = 12 \\), and vertically: \\( 6 + 4 = 10 \\). The dimensions match perfectly. The perimeter is \\( 44 \\)."
+      },
+      "ar": {
+        "question": "أوجد المحيط الكلي للمضلع المصمم على شكل حرف L والموضح أدناه. افترض أن جميع الأضلاع المتجاورة تلتقي بزوايا قائمة.<br/><svg viewBox='0 0 200 150' class='w-full max-w-xs mx-auto bg-slate-900/60 rounded-xl p-2 border border-slate-700 shadow-md my-2'><polygon points='50,20 100,20 100,80 170,80 170,120 50,120' fill='#10b981' fill-opacity='0.2' stroke='#10b981' stroke-width='2'/><text x='75' y='15' fill='#e2e8f0' font-size='12' text-anchor='middle'>5</text><text x='135' y='75' fill='#e2e8f0' font-size='12' text-anchor='middle'>7</text><text x='110' y='135' fill='#e2e8f0' font-size='12' text-anchor='middle'>12</text><text x='40' y='70' fill='#e2e8f0' font-size='12' text-anchor='end'>10</text><text x='180' y='105' fill='#e2e8f0' font-size='12' text-anchor='start'>4</text><text x='95' y='55' fill='#e2e8f0' font-size='12' text-anchor='end'>6</text></svg>",
+        "options": [
+          "\\( 34 \\)",
+          "\\( 40 \\)",
+          "\\( 44 \\)",
+          "\\( 48 \\)"
+        ],
+        "hint": "المحيط هو مجموع أطوال جميع الأضلاع الحدودية الخارجية. ببساطة، اجمع كل الأرقام المعطاة حول الشكل.",
+        "explanation": "المحيط هو المسافة الكلية حول الإطار الخارجي للشكل.\nأطوال الأضلاع المعطاة هي: \\( 10, 12, 4, 7, 6, \\) و \\( 5 \\).\nالمحيط = \\( 10 + 12 + 4 + 7 + 6 + 5 \\).\nلنجمعها: \\( 10 + 12 = 22 \\).\n\\( 22 + 4 = 26 \\).\n\\( 26 + 7 = 33 \\).\n\\( 33 + 6 = 39 \\).\n\\( 39 + 5 = 44 \\).\nلاحظ أيضاً أن الأطوال الأفقية: \\( 5 + 7 = 12 \\)، والعمودية: \\( 6 + 4 = 10 \\). الأبعاد متطابقة تماماً. إذن المحيط هو \\( 44 \\)."
+      }
+    },
+    "correct_index": "2"
+  },
+  {
+    "id": "NAF-G06-14",
+    "track": "nafes",
+    "level": "Grade 6",
+    "topic": "Volume",
+    "type": "MCQ",
+    "difficulty": "medium",
+    "content": {
+      "en": {
+        "question": "A rectangular swimming pool is \\( 12 \\text{ m} \\) long, \\( 5 \\text{ m} \\) wide, and exactly \\( 2 \\text{ m} \\) deep. What is the total volume of this swimming pool in cubic meters?",
+        "options": [
+          "\\( 38 \\text{ m}^3 \\)",
+          "\\( 60 \\text{ m}^3 \\)",
+          "\\( 100 \\text{ m}^3 \\)",
+          "\\( 120 \\text{ m}^3 \\)"
+        ],
+        "hint": "The volume of a rectangular shape is found by multiplying its length by its width and by its depth.",
+        "explanation": "To find the volume of a rectangular pool, use the formula:\nVolume = Length \\( \\times \\) Width \\( \\times \\) Depth.\nVolume = \\( 12 \\times 5 \\times 2 \\).\nFirst, multiply \\( 12 \\times 5 = 60 \\).\nNext, multiply \\( 60 \\times 2 = 120 \\).\nThe total volume is \\( 120 \\text{ m}^3 \\)."
+      },
+      "ar": {
+        "question": "مسبح مستطيل الشكل طوله \\( 12 \\text{ م} \\)، وعرضه \\( 5 \\text{ م} \\)، وعمقه \\( 2 \\text{ م} \\) بالضبط. ما هو الحجم الكلي لهذا المسبح بالأمتار المكعبة؟",
+        "options": [
+          "\\( 38 \\text{ م}^3 \\)",
+          "\\( 60 \\text{ م}^3 \\)",
+          "\\( 100 \\text{ م}^3 \\)",
+          "\\( 120 \\text{ م}^3 \\)"
+        ],
+        "hint": "يتم إيجاد حجم الشكل المستطيل بضرب طوله في عرضه في عمقه.",
+        "explanation": "لإيجاد حجم المسبح المستطيل، نستخدم الصيغة:\nالحجم = الطول \\( \\times \\) العرض \\( \\times \\) العمق.\nالحجم = \\( 12 \\times 5 \\times 2 \\).\nأولاً، نضرب \\( 12 \\times 5 = 60 \\).\nثانياً، نضرب \\( 60 \\times 2 = 120 \\).\nالحجم الكلي هو \\( 120 \\text{ م}^3 \\)."
+      }
+    },
+    "correct_index": "3"
+  },
+  {
+    "id": "NAF-G06-15",
+    "track": "nafes",
+    "level": "Grade 6",
+    "topic": "Data Plots",
+    "type": "MCQ",
+    "difficulty": "medium",
+    "content": {
+      "en": {
+        "question": "A pie chart displays the favorite subjects of \\( 120 \\) students. The sector labeled 'Science' has a central angle of \\( 108^\\circ \\). How many students chose Science as their favorite subject?<br/><svg viewBox='0 0 200 200' class='w-full max-w-xs mx-auto bg-slate-900/60 rounded-xl p-2 border border-slate-700 shadow-md my-2'><circle cx='100' cy='100' r='80' fill='#475569'/><path d='M 100 100 L 100 20 A 80 80 0 0 1 176.08 124.72 Z' fill='#38bdf8'/><text x='140' y='80' fill='#0f172a' font-size='12' font-weight='bold'>108°</text><text x='140' y='95' fill='#0f172a' font-size='10'>Science</text></svg>",
+        "options": [
+          "\\( 30 \\)",
+          "\\( 36 \\)",
+          "\\( 40 \\)",
+          "\\( 45 \\)"
+        ],
+        "hint": "A full circle has 360 degrees. Find out what fraction 108 represents by dividing it by 360, then multiply that fraction by the total number of students.",
+        "explanation": "A complete pie chart is \\( 360^\\circ \\).\nThe fraction of the students who chose Science is \\( \\frac{108}{360} \\).\nLet's simplify this fraction:\nDivide numerator and denominator by 36: \\( 108 \\div 36 = 3 \\), and \\( 360 \\div 36 = 10 \\).\nSo the fraction is \\( \\frac{3}{10} \\).\nMultiply this fraction by the total number of students (120):\nNumber of students = \\( \\frac{3}{10} \\times 120 = 3 \\times 12 = 36 \\) students."
+      },
+      "ar": {
+        "question": "يعرض تمثيل بالقطاعات الدائرية المواد المفضلة لـ \\( 120 \\) طالباً. القطاع المسمى 'العلوم' له زاوية مركزية قياسها \\( 108^\\circ \\). كم عدد الطلاب الذين اختاروا العلوم كمادة مفضلة لديهم؟<br/><svg viewBox='0 0 200 200' class='w-full max-w-xs mx-auto bg-slate-900/60 rounded-xl p-2 border border-slate-700 shadow-md my-2'><circle cx='100' cy='100' r='80' fill='#475569'/><path d='M 100 100 L 100 20 A 80 80 0 0 1 176.08 124.72 Z' fill='#38bdf8'/><text x='140' y='80' fill='#0f172a' font-size='12' font-weight='bold'>108°</text><text x='140' y='95' fill='#0f172a' font-size='10'>العلوم</text></svg>",
+        "options": [
+          "\\( 30 \\)",
+          "\\( 36 \\)",
+          "\\( 40 \\)",
+          "\\( 45 \\)"
+        ],
+        "hint": "الدائرة الكاملة تحوي 360 درجة. اكتشف الكسر الذي تمثله الزاوية 108 بقسمتها على 360، ثم اضرب هذا الكسر في العدد الإجمالي للطلاب.",
+        "explanation": "التمثيل الدائري الكامل هو \\( 360^\\circ \\).\nالكسر الذي يمثل الطلاب الذين اختاروا العلوم هو \\( \\frac{108}{360} \\).\nلنبسط هذا الكسر:\nبقسمة البسط والمقام على 36: \\( 108 \\div 36 = 3 \\)، و \\( 360 \\div 36 = 10 \\).\nإذن الكسر هو \\( \\frac{3}{10} \\).\nنضرب هذا الكسر في العدد الكلي للطلاب (120):\nعدد الطلاب = \\( \\frac{3}{10} \\times 120 = 3 \\times 12 = 36 \\) طالباً."
+      }
+    },
+    "correct_index": "1"
+  },
+  {
+    "id": "NAF-G06-16",
+    "track": "nafes",
+    "level": "Grade 6",
+    "topic": "Data Plots",
+    "type": "MCQ",
+    "difficulty": "medium",
+    "content": {
+      "en": {
+        "question": "The line graph below shows the daily high temperatures over \\( 5 \\) consecutive days. What is the mean (average) temperature over these \\( 5 \\) days?<br/><svg viewBox='0 0 240 160' class='w-full max-w-xs mx-auto bg-slate-900/60 rounded-xl p-2 border border-slate-700 shadow-md my-2'><g stroke='#475569' stroke-width='1' stroke-dasharray='2,2'><line x1='30' y1='110' x2='220' y2='110'/><line x1='30' y1='90' x2='220' y2='90'/><line x1='30' y1='70' x2='220' y2='70'/><line x1='30' y1='50' x2='220' y2='50'/><line x1='30' y1='30' x2='220' y2='30'/></g><line x1='30' y1='10' x2='30' y2='130' stroke='#94a3b8' stroke-width='2'/><line x1='30' y1='130' x2='220' y2='130' stroke='#94a3b8' stroke-width='2'/><g fill='#e2e8f0' font-size='10' text-anchor='end'><text x='25' y='133'>30</text><text x='25' y='113'>31</text><text x='25' y='93'>32</text><text x='25' y='73'>33</text><text x='25' y='53'>34</text><text x='25' y='33'>35</text></g><g fill='#e2e8f0' font-size='10' text-anchor='middle'><text x='50' y='145'>Sun</text><text x='85' y='145'>Mon</text><text x='120' y='145'>Tue</text><text x='155' y='145'>Wed</text><text x='190' y='145'>Thu</text></g><polyline points='50,110 85,30 120,130 155,50 190,30' fill='none' stroke='#38bdf8' stroke-width='2'/><circle cx='50' cy='110' r='3' fill='#f59e0b'/><circle cx='85' cy='30' r='3' fill='#f59e0b'/><circle cx='120' cy='130' r='3' fill='#f59e0b'/><circle cx='155' cy='50' r='3' fill='#f59e0b'/><circle cx='190' cy='30' r='3' fill='#f59e0b'/></svg>",
+        "options": [
+          "\\( 32^\\circ \\)",
+          "\\( 33^\\circ \\)",
+          "\\( 34^\\circ \\)",
+          "\\( 35^\\circ \\)"
+        ],
+        "hint": "Read each day's temperature from the graph, add them all up, and divide by 5.",
+        "explanation": "Let's read the values from the graph for the 5 days:\nSun = 31, Mon = 35, Tue = 30, Wed = 34, Thu = 35.\nSum of temperatures = \\( 31 + 35 + 30 + 34 + 35 \\).\nLet's add them: \\( 31 + 35 = 66 \\); \\( 66 + 30 = 96 \\); \\( 96 + 34 = 130 \\); \\( 130 + 35 = 165 \\).\nMean (average) = \\( 165 \\div 5 = 33 \\).\nThe mean temperature is \\( 33^\\circ \\)."
+      },
+      "ar": {
+        "question": "يوضح التمثيل بالخطوط أدناه درجات الحرارة العظمى اليومية على مدار \\( 5 \\) أيام متتالية. ما هو المتوسط الحسابي لدرجات الحرارة خلال هذه الأيام الـ \\( 5 \\)؟<br/><svg viewBox='0 0 240 160' class='w-full max-w-xs mx-auto bg-slate-900/60 rounded-xl p-2 border border-slate-700 shadow-md my-2'><g stroke='#475569' stroke-width='1' stroke-dasharray='2,2'><line x1='30' y1='110' x2='220' y2='110'/><line x1='30' y1='90' x2='220' y2='90'/><line x1='30' y1='70' x2='220' y2='70'/><line x1='30' y1='50' x2='220' y2='50'/><line x1='30' y1='30' x2='220' y2='30'/></g><line x1='30' y1='10' x2='30' y2='130' stroke='#94a3b8' stroke-width='2'/><line x1='30' y1='130' x2='220' y2='130' stroke='#94a3b8' stroke-width='2'/><g fill='#e2e8f0' font-size='10' text-anchor='end'><text x='25' y='133'>30</text><text x='25' y='113'>31</text><text x='25' y='93'>32</text><text x='25' y='73'>33</text><text x='25' y='53'>34</text><text x='25' y='33'>35</text></g><g fill='#e2e8f0' font-size='10' text-anchor='middle'><text x='50' y='145'>الأحد</text><text x='85' y='145'>الإثنين</text><text x='120' y='145'>الثلاثاء</text><text x='155' y='145'>الأربعاء</text><text x='190' y='145'>الخميس</text></g><polyline points='50,110 85,30 120,130 155,50 190,30' fill='none' stroke='#38bdf8' stroke-width='2'/><circle cx='50' cy='110' r='3' fill='#f59e0b'/><circle cx='85' cy='30' r='3' fill='#f59e0b'/><circle cx='120' cy='130' r='3' fill='#f59e0b'/><circle cx='155' cy='50' r='3' fill='#f59e0b'/><circle cx='190' cy='30' r='3' fill='#f59e0b'/></svg>",
+        "options": [
+          "\\( 32^\\circ \\)",
+          "\\( 33^\\circ \\)",
+          "\\( 34^\\circ \\)",
+          "\\( 35^\\circ \\)"
+        ],
+        "hint": "اقرأ درجة حرارة كل يوم من الرسم البياني، واجمعها كلها معاً، ثم اقسم المجموع على 5.",
+        "explanation": "لنقرأ القيم من الرسم البياني للأيام الـ 5:\nالأحد = 31، الإثنين = 35، الثلاثاء = 30، الأربعاء = 34، الخميس = 35.\nمجموع درجات الحرارة = \\( 31 + 35 + 30 + 34 + 35 \\).\nلنجمعها: \\( 31 + 35 = 66 \\) ؛ \\( 66 + 30 = 96 \\) ؛ \\( 96 + 34 = 130 \\) ؛ \\( 130 + 35 = 165 \\).\nالمتوسط الحسابي = \\( 165 \\div 5 = 33 \\).\nإذن متوسط درجة الحرارة هو \\( 33^\\circ \\)."
+      }
+    },
+    "correct_index": "1"
+  },
+  {
+    "id": "NAF-G06-17",
+    "track": "nafes",
+    "level": "Grade 6",
+    "topic": "Statistics",
+    "type": "MCQ",
+    "difficulty": "hard",
+    "content": {
+      "en": {
+        "question": "The mean (average) score of \\( 4 \\) students in a science quiz is \\( 85 \\). If a \\( 5^{\\text{th}} \\) student joins the group with a score of \\( 95 \\), what is the new mean score of all \\( 5 \\) students?",
+        "options": [
+          "\\( 87 \\)",
+          "\\( 88 \\)",
+          "\\( 90 \\)",
+          "\\( 92 \\)"
+        ],
+        "hint": "Multiply the original mean by 4 to find the total sum of the first 4 scores. Then add the 5th score and divide by 5.",
+        "explanation": "Mean = Sum of scores \\( \\div \\) Number of students.\nThe sum of the original 4 students' scores = \\( 4 \\times 85 = 340 \\).\nThe 5th student scores 95. The new total sum = \\( 340 + 95 = 435 \\).\nTo find the new mean, divide the new sum by 5 students.\nNew Mean = \\( 435 \\div 5 = 87 \\)."
+      },
+      "ar": {
+        "question": "المتوسط الحسابي (المعدل) لدرجات \\( 4 \\) طلاب في اختبار العلوم هو \\( 85 \\). إذا انضم طالب خامس إلى المجموعة وحصل على درجة \\( 95 \\), فما هو المتوسط الحسابي الجديد للطلاب الـ \\( 5 \\)؟",
+        "options": [
+          "\\( 87 \\)",
+          "\\( 88 \\)",
+          "\\( 90 \\)",
+          "\\( 92 \\)"
+        ],
+        "hint": "اضرب المتوسط الأصلي في 4 لإيجاد المجموع الكلي لأول 4 درجات. ثم أضف الدرجة الخامسة واقسم الناتج على 5.",
+        "explanation": "المتوسط = مجموع الدرجات \\( \\div \\) عدد الطلاب.\nمجموع درجات الطلاب الأربعة الأوائل = \\( 4 \\times 85 = 340 \\).\nالطالب الخامس سجل 95. المجموع الكلي الجديد = \\( 340 + 95 = 435 \\).\nلإيجاد المتوسط الجديد، نقسم المجموع الجديد على 5 طلاب.\nالمتوسط الجديد = \\( 435 \\div 5 = 87 \\)."
+      }
+    },
+    "correct_index": "0"
+  },
+  {
+    "id": "NAF-G06-18",
+    "track": "nafes",
+    "level": "Grade 6",
+    "topic": "Statistics",
+    "type": "MCQ",
+    "difficulty": "hard",
+    "content": {
+      "en": {
+        "question": "Consider the following dataset of numbers: \\( 12, 15, 12, 18, 20, 13 \\). What is the total sum of the mean, the median, and the mode of this dataset?",
+        "options": [
+          "\\( 39 \\)",
+          "\\( 41 \\)",
+          "\\( 43 \\)",
+          "\\( 45 \\)"
+        ],
+        "hint": "Find the three measures separately: Mean is the average. Mode is the most frequent number. Median is the middle number when sorted.",
+        "explanation": "First, find the Mean:\nSum = \\( 12 + 15 + 12 + 18 + 20 + 13 = 90 \\).\nMean = \\( 90 \\div 6 = 15 \\).\nSecond, find the Mode:\nThe number 12 appears most frequently (twice). Mode = \\( 12 \\).\nThird, find the Median:\nSort the data: \\( 12, 12, 13, 15, 18, 20 \\).\nSince there are 6 numbers, the median is the average of the 3rd and 4th numbers: \\( (13 + 15) \\div 2 = 14 \\).\nFinally, add them all together: Mean + Median + Mode = \\( 15 + 14 + 12 = 41 \\)."
+      },
+      "ar": {
+        "question": "تأمل مجموعة البيانات الرقمية التالية: \\( 12, 15, 12, 18, 20, 13 \\). ما هو المجموع الكلي للمتوسط الحسابي، والوسيط، والمنوال لهذه المجموعة؟",
+        "options": [
+          "\\( 39 \\)",
+          "\\( 41 \\)",
+          "\\( 43 \\)",
+          "\\( 45 \\)"
+        ],
+        "hint": "أوجد المقاييس الثلاثة كلاً على حدة: المتوسط هو المعدل. المنوال هو الرقم الأكثر تكراراً. والوسيط هو الرقم الأوسط عند الترتيب.",
+        "explanation": "أولاً، نوجد المتوسط الحسابي:\nالمجموع = \\( 12 + 15 + 12 + 18 + 20 + 13 = 90 \\).\nالمتوسط = \\( 90 \\div 6 = 15 \\).\nثانياً، نوجد المنوال:\nالرقم 12 هو الأكثر تكراراً (مرتين). المنوال = \\( 12 \\).\nثالثاً، نوجد الوسيط:\nنرتب البيانات: \\( 12, 12, 13, 15, 18, 20 \\).\nبما أن هناك 6 أرقام، فالوسيط هو متوسط الرقمين الثالث والرابع: \\( (13 + 15) \\div 2 = 14 \\).\nأخيراً، نجمعها كلها معاً: المتوسط + الوسيط + المنوال = \\( 15 + 14 + 12 = 41 \\)."
+      }
+    },
+    "correct_index": "1"
+  },
+  {
+    "id": "NAF-G06-19",
+    "track": "nafes",
+    "level": "Grade 6",
+    "topic": "Coordinate Geometry",
+    "type": "MCQ",
+    "difficulty": "medium",
+    "content": {
+      "en": {
+        "question": "A rectangle is drawn on a coordinate plane with its four vertices located at \\( (2, 2) \\), \\( (2, 7) \\), \\( (8, 7) \\), and \\( (8, 2) \\). What is the perimeter of this rectangle in units?<br/><svg viewBox='0 0 200 160' class='w-full max-w-xs mx-auto bg-slate-900/60 rounded-xl p-2 border border-slate-700 shadow-md my-2'><g stroke='#475569' stroke-width='1'><line x1='30' y1='140' x2='180' y2='140'/><line x1='30' y1='10' x2='30' y2='140'/></g><rect x='60' y='50' width='90' height='75' fill='#f59e0b' fill-opacity='0.3' stroke='#f59e0b' stroke-width='2'/><circle cx='60' cy='125' r='3' fill='#38bdf8'/><circle cx='150' cy='125' r='3' fill='#38bdf8'/><circle cx='150' cy='50' r='3' fill='#38bdf8'/><circle cx='60' cy='50' r='3' fill='#38bdf8'/><text x='60' y='155' fill='#e2e8f0' font-size='10' text-anchor='middle'>2</text><text x='150' y='155' fill='#e2e8f0' font-size='10' text-anchor='middle'>8</text><text x='20' y='130' fill='#e2e8f0' font-size='10' text-anchor='end'>2</text><text x='20' y='55' fill='#e2e8f0' font-size='10' text-anchor='end'>7</text></svg>",
+        "options": [
+          "\\( 11 \\)",
+          "\\( 22 \\)",
+          "\\( 30 \\)",
+          "\\( 44 \\)"
+        ],
+        "hint": "First, calculate the length and width of the rectangle by finding the differences between the x and y coordinates. Then use the formula Perimeter = 2(L + W).",
+        "explanation": "To find the dimensions of the rectangle, calculate the distances between the coordinates.\nLength (horizontal distance) = difference in x-coordinates = \\( 8 - 2 = 6 \\) units.\nWidth (vertical distance) = difference in y-coordinates = \\( 7 - 2 = 5 \\) units.\nThe perimeter of a rectangle is \\( 2 \\times (\\text{Length} + \\text{Width}) \\).\nPerimeter = \\( 2 \\times (6 + 5) = 2 \\times 11 = 22 \\) units."
+      },
+      "ar": {
+        "question": "رُسم مستطيل على المستوى الإحداثي بحيث تقع رؤوسه الأربعة عند النقاط \\( (2, 2) \\) و \\( (2, 7) \\) و \\( (8, 7) \\) و \\( (8, 2) \\). ما هو محيط هذا المستطيل بالوحدات؟<br/><svg viewBox='0 0 200 160' class='w-full max-w-xs mx-auto bg-slate-900/60 rounded-xl p-2 border border-slate-700 shadow-md my-2'><g stroke='#475569' stroke-width='1'><line x1='30' y1='140' x2='180' y2='140'/><line x1='30' y1='10' x2='30' y2='140'/></g><rect x='60' y='50' width='90' height='75' fill='#f59e0b' fill-opacity='0.3' stroke='#f59e0b' stroke-width='2'/><circle cx='60' cy='125' r='3' fill='#38bdf8'/><circle cx='150' cy='125' r='3' fill='#38bdf8'/><circle cx='150' cy='50' r='3' fill='#38bdf8'/><circle cx='60' cy='50' r='3' fill='#38bdf8'/><text x='60' y='155' fill='#e2e8f0' font-size='10' text-anchor='middle'>2</text><text x='150' y='155' fill='#e2e8f0' font-size='10' text-anchor='middle'>8</text><text x='20' y='130' fill='#e2e8f0' font-size='10' text-anchor='end'>2</text><text x='20' y='55' fill='#e2e8f0' font-size='10' text-anchor='end'>7</text></svg>",
+        "options": [
+          "\\( 11 \\)",
+          "\\( 22 \\)",
+          "\\( 30 \\)",
+          "\\( 44 \\)"
+        ],
+        "hint": "أولاً، احسب طول وعرض المستطيل بإيجاد الفروق بين الإحداثيات السينية (x) والصادية (y). ثم استخدم قانون المحيط = 2 × (الطول + العرض).",
+        "explanation": "لإيجاد أبعاد المستطيل، نحسب المسافات بين الإحداثيات.\nالطول (المسافة الأفقية) = الفرق في الإحداثيات السينية = \\( 8 - 2 = 6 \\) وحدات.\nالعرض (المسافة العمودية) = الفرق في الإحداثيات الصادية = \\( 7 - 2 = 5 \\) وحدات.\nمحيط المستطيل يساوي \\( 2 \\times (\\text{الطول} + \\text{العرض}) \\).\nالمحيط = \\( 2 \\times (6 + 5) = 2 \\times 11 = 22 \\) وحدة."
+      }
+    },
+    "correct_index": "1"
+  },
+  {
+    "id": "NAF-G06-20",
+    "track": "nafes",
+    "level": "Grade 6",
+    "topic": "LCM",
+    "type": "MCQ",
+    "difficulty": "medium",
+    "content": {
+      "en": {
+        "question": "Two decorative warning lights start blinking at the exact same time. One light blinks every \\( 12 \\) seconds, and the other light blinks every \\( 18 \\) seconds. In how many seconds will they blink together again for the first time?",
+        "options": [
+          "\\( 24 \\text{ seconds} \\)",
+          "\\( 30 \\text{ seconds} \\)",
+          "\\( 36 \\text{ seconds} \\)",
+          "\\( 72 \\text{ seconds} \\)"
+        ],
+        "hint": "Find the Least Common Multiple (LCM) of 12 and 18.",
+        "explanation": "To determine when both lights will blink together again, we need to find the Least Common Multiple (LCM) of their blinking intervals.\nThe multiples of \\( 12 \\) are: \\( 12, 24, 36, 48, 60, \\dots \\)\nThe multiples of \\( 18 \\) are: \\( 18, 36, 54, 72, \\dots \\)\nThe smallest common multiple in both lists is \\( 36 \\).\nTherefore, the lights will blink together again in exactly \\( 36 \\) seconds."
+      },
+      "ar": {
+        "question": "مصباحان تحذيريان مزخرفان يبدآن بالوميض في نفس الوقت تماماً. يومض المصباح الأول كل \\( 12 \\) ثانية، بينما يومض المصباح الثاني كل \\( 18 \\) ثانية. بعد كم ثانية سيومضان معاً مرة أخرى للمرة الأولى؟",
+        "options": [
+          "\\( 24 \\text{ ثانية} \\)",
+          "\\( 30 \\text{ ثانية} \\)",
+          "\\( 36 \\text{ ثانية} \\)",
+          "\\( 72 \\text{ ثانية} \\)"
+        ],
+        "hint": "أوجد المضاعف المشترك الأصغر (م.م.أ) للعددين 12 و 18.",
+        "explanation": "لتحديد متى سيومض المصباحان معاً مرة أخرى، نحتاج إلى إيجاد المضاعف المشترك الأصغر لفترات وميضهما.\nمضاعفات الـ \\( 12 \\) هي: \\( 12, 24, 36, 48, 60, \\dots \\)\nمضاعفات الـ \\( 18 \\) هي: \\( 18, 36, 54, 72, \\dots \\)\nأصغر مضاعف مشترك في كلتا القائمتين هو \\( 36 \\).\nلذلك، سيومض المصباحان معاً مرة أخرى بعد \\( 36 \\) ثانية بالضبط."
+      }
+    },
+    "correct_index": "2"
   }
 ]
