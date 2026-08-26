@@ -13984,5 +13984,665 @@
       }
     },
     "correct_index": "0"
+  },
+  {
+    "id": "KAUST-F-01",
+    "track": "kaust",
+    "level": "Phase 1: Foundation Research",
+    "topic": "Limits",
+    "type": "MCQ",
+    "difficulty": "medium",
+    "content": {
+      "en": {
+        "question": "Evaluate the following limit analytically:\n\\[ \\lim_{x \\to 0} \\frac{\\sin(5x) - \\sin(3x)}{x} \\]",
+        "options": [
+          "\\( 1 \\)",
+          "\\( 2 \\)",
+          "\\( 5 \\)",
+          "\\( 8 \\)"
+        ],
+        "hint": "Split the fraction into two separate terms, or use the standard limit definition \\( \\lim_{x \\to 0} \\frac{\\sin(kx)}{x} = k \\).",
+        "explanation": "We can rewrite the limit by splitting the fraction:\n\\[ \\lim_{x \\to 0} \\left( \\frac{\\sin(5x)}{x} - \\frac{\\sin(3x)}{x} \\right) \\]\nUsing the standard trigonometric limit \\( \\lim_{u \\to 0} \\frac{\\sin(u)}{u} = 1 \\):\nFor the first term: \\( \\lim_{x \\to 0} \\frac{5 \\sin(5x)}{5x} = 5 \\).\nFor the second term: \\( \\lim_{x \\to 0} \\frac{3 \\sin(3x)}{3x} = 3 \\).\nSubtracting them: \\( 5 - 3 = 2 \\)."
+      },
+      "ar": {
+        "question": "احسب النهاية التالية تحليلياً:\n\\[ \\lim_{x \\to 0} \\frac{\\sin(5x) - \\sin(3x)}{x} \\]",
+        "options": [
+          "\\( 1 \\)",
+          "\\( 2 \\)",
+          "\\( 5 \\)",
+          "\\( 8 \\)"
+        ],
+        "hint": "قسّم الكسر إلى حدين منفصلين، أو استخدم تعريف النهاية القياسي \\( \\lim_{x \\to 0} \\frac{\\sin(kx)}{x} = k \\).",
+        "explanation": "يمكننا إعادة كتابة النهاية بتقسيم الكسر:\n\\[ \\lim_{x \\to 0} \\left( \\frac{\\sin(5x)}{x} - \\frac{\\sin(3x)}{x} \\right) \\]\nباستخدام النهاية المثلثية القياسية \\( \\lim_{u \\to 0} \\frac{\\sin(u)}{u} = 1 \\):\nللحد الأول: \\( \\lim_{x \\to 0} \\frac{5 \\sin(5x)}{5x} = 5 \\).\nللحد الثاني: \\( \\lim_{x \\to 0} \\frac{3 \\sin(3x)}{3x} = 3 \\).\nبطرحهما: \\( 5 - 3 = 2 \\)."
+      }
+    },
+    "correct_index": "1"
+  },
+  {
+    "id": "KAUST-F-02",
+    "track": "kaust",
+    "level": "Phase 1: Foundation Research",
+    "topic": "3D Vectors",
+    "type": "MCQ",
+    "difficulty": "medium",
+    "content": {
+      "en": {
+        "question": "Find the exact dot product \\( \\mathbf{u} \\cdot \\mathbf{v} \\) of the two 3D vectors \\( \\mathbf{u} = \\langle 1, 2, 3 \\rangle \\) and \\( \\mathbf{v} = \\langle 2, -1, 1 \\rangle \\).",
+        "options": [
+          "\\( 1 \\)",
+          "\\( 3 \\)",
+          "\\( 5 \\)",
+          "\\( 7 \\)"
+        ],
+        "hint": "Multiply the corresponding components of the vectors together and sum the products: \\( u_1v_1 + u_2v_2 + u_3v_3 \\).",
+        "explanation": "The dot product of two vectors \\( \\mathbf{u} = \\langle u_1, u_2, u_3 \\rangle \\) and \\( \\mathbf{v} = \\langle v_1, v_2, v_3 \\rangle \\) is calculated as:\n\\[ \\mathbf{u} \\cdot \\mathbf{v} = (u_1 \\times v_1) + (u_2 \\times v_2) + (u_3 \\times v_3) \\]\nSubstitute the given values:\n\\[ \\mathbf{u} \\cdot \\mathbf{v} = (1 \\times 2) + (2 \\times -1) + (3 \\times 1) = 2 - 2 + 3 = 3 \\]."
+      },
+      "ar": {
+        "question": "أوجد الضرب القياسي الدقيق \\( \\mathbf{u} \\cdot \\mathbf{v} \\) للمتجهين في الفضاء الثلاثي \\( \\mathbf{u} = \\langle 1, 2, 3 \\rangle \\) و \\( \\mathbf{v} = \\langle 2, -1, 1 \\rangle \\).",
+        "options": [
+          "\\( 1 \\)",
+          "\\( 3 \\)",
+          "\\( 5 \\)",
+          "\\( 7 \\)"
+        ],
+        "hint": "اضرب المركبات المتناظرة للمتجهين معاً واجمع النواتج.",
+        "explanation": "الضرب القياسي لمتجهين \\( \\mathbf{u} = \\langle u_1, u_2, u_3 \\rangle \\) و \\( \\mathbf{v} = \\langle v_1, v_2, v_3 \\rangle \\) يُحسب كالتالي:\n\\[ \\mathbf{u} \\cdot \\mathbf{v} = (u_1 v_1) + (u_2 v_2) + (u_3 v_3) \\]\nبالتعويض بالقيم المعطاة:\n\\[ \\mathbf{u} \\cdot \\mathbf{v} = (1 \\times 2) + (2 \\times -1) + (3 \\times 1) = 2 - 2 + 3 = 3 \\]."
+      }
+    },
+    "correct_index": "1"
+  },
+  {
+    "id": "KAUST-F-03",
+    "track": "kaust",
+    "level": "Phase 1: Foundation Research",
+    "topic": "Matrix Algebra",
+    "type": "MCQ",
+    "difficulty": "medium",
+    "content": {
+      "en": {
+        "question": "Calculate the determinant of the \\( 2 \\times 2 \\) matrix \\( A = \\begin{pmatrix} 3 & 5 \\\\ 2 & 7 \\end{pmatrix} \\).",
+        "options": [
+          "\\( 9 \\)",
+          "\\( 11 \\)",
+          "\\( 13 \\)",
+          "\\( 15 \\)"
+        ],
+        "hint": "For a 2x2 matrix \\( \\begin{pmatrix} a & b \\\\ c & d \\end{pmatrix} \\), the determinant is \\( ad - bc \\).",
+        "explanation": "The determinant of matrix \\( A \\) is given by \\( \\det(A) = (3 \\times 7) - (5 \\times 2) \\).\n\\( 21 - 10 = 11 \\).\nTherefore, the determinant is \\( 11 \\)."
+      },
+      "ar": {
+        "question": "احسب محددة المصفوفة من الدرجة \\( 2 \\times 2 \\) التالية: \\( A = \\begin{pmatrix} 3 & 5 \\\\ 2 & 7 \\end{pmatrix} \\).",
+        "options": [
+          "\\( 9 \\)",
+          "\\( 11 \\)",
+          "\\( 13 \\)",
+          "\\( 15 \\)"
+        ],
+        "hint": "لأي مصفوفة 2×2 على الصورة \\( \\begin{pmatrix} a & b \\\\ c & d \\end{pmatrix} \\)، المحدد هو \\( ad - bc \\).",
+        "explanation": "محددات المصفوفة \\( A \\) تُعطى بالعلاقة \\( \\det(A) = (3 \\times 7) - (5 \\times 2) \\).\n\\( 21 - 10 = 11 \\).\nإذن، المحدد هو \\( 11 \\)."
+      }
+    },
+    "correct_index": "1"
+  },
+  {
+    "id": "KAUST-F-04",
+    "track": "kaust",
+    "level": "Phase 1: Foundation Research",
+    "topic": "Complex Modulus",
+    "type": "MCQ",
+    "difficulty": "easy",
+    "content": {
+      "en": {
+        "question": "What is the exact modulus (absolute value) of the complex number \\( z = 3 - 4i \\)?",
+        "options": [
+          "\\( 3 \\)",
+          "\\( 4 \\)",
+          "\\( 5 \\)",
+          "\\( 7 \\)"
+        ],
+        "hint": "The modulus of a complex number \\( z = x + iy \\) is given by \\( |z| = \\sqrt{x^2 + y^2} \\).",
+        "explanation": "For the complex number \\( z = 3 - 4i \\), the real part is \\( x = 3 \\) and the imaginary part is \\( y = -4 \\).\nUsing the modulus formula:\n\\[ |z| = \\sqrt{3^2 + (-4)^2} = \\sqrt{9 + 16} = \\sqrt{25} = 5 \\]."
+      },
+      "ar": {
+        "question": "ما هو المقياس (القيمة المطلقة) الدقيق للعدد المركب \\( z = 3 - 4i \\)؟",
+        "options": [
+          "\\( 3 \\)",
+          "\\( 4 \\)",
+          "\\( 5 \\)",
+          "\\( 7 \\)"
+        ],
+        "hint": "مقياس العدد المركب \\( z = x + iy \\) يُعطى بالصيغة \\( |z| = \\sqrt{x^2 + y^2} \\).",
+        "explanation": "للعدد المركب \\( z = 3 - 4i \\)، الجزء الحقيقي هو \\( x = 3 \\) والجزء التخيلي هو \\( y = -4 \\).\nباستخدام صيغة المقياس:\n\\[ |z| = \\sqrt{3^2 + (-4)^2} = \\sqrt{9 + 16} = \\sqrt{25} = 5 \\]."
+      }
+    },
+    "correct_index": "2"
+  },
+  {
+    "id": "KAUST-F-05",
+    "track": "kaust",
+    "level": "Phase 1: Foundation Research",
+    "topic": "Probability",
+    "type": "MCQ",
+    "difficulty": "medium",
+    "content": {
+      "en": {
+        "question": "A fair six-sided die is rolled twice in succession. What is the exact probability that the sum of the two rolls equals \\( 8 \\)?",
+        "options": [
+          "\\( \\frac{1}{9} \\)",
+          "\\( \\frac{5}{36} \\)",
+          "\\( \\frac{1}{6} \\)",
+          "\\( \\frac{7}{36} \\)"
+        ],
+        "hint": "List out all the successful pairs (a, b) whose sum is 8, and divide by the total number of outcomes (36).",
+        "explanation": "When rolling two standard dice, the total number of equally likely outcomes is \\( 6 \\times 6 = 36 \\).\nWe want the sum of the two outcomes to be 8. Let's list the successful pairs \\( (a, b) \\):\n- \\( (2, 6) \\)\n- \\( (3, 5) \\)\n- \\( (4, 4) \\)\n- \\( (5, 3) \\)\n- \\( (6, 2) \\)\nThere are exactly \\( 5 \\) successful outcomes.\nTherefore, the probability is \\( \\frac{5}{36} \\)."
+      },
+      "ar": {
+        "question": "رُمي حجر نرد منتظم ذو ستة وجوه مرتين على التوالي. ما هي الاحتمالية الدقيقة أن يكون مجموع الرُميتين مساوياً لـ \\( 8 \\)؟",
+        "options": [
+          "\\( \\frac{1}{9} \\)",
+          "\\( \\frac{5}{36} \\)",
+          "\\( \\frac{1}{6} \\)",
+          "\\( \\frac{7}{36} \\)"
+        ],
+        "hint": "اكتب كل الأزواج الناجحة (a, b) التي مجموعها 8، واقسمها على العدد الإجمالي للنتائج الممكنة (36).",
+        "explanation": "عند رمي حجري نرد قياسيين، العدد الإجمالي للنتائج متساوية الاحتمال هو \\( 6 \\times 6 = 36 \\).\nنريد أن يكون مجموع النتيجتين مساوياً لـ 8. لنكتب الأزواج الناجحة \\( (a, b) \\):\n- \\( (2, 6) \\)\n- \\( (3, 5) \\)\n- \\( (4, 4) \\)\n- \\( (5, 3) \\)\n- \\( (6, 2) \\)\nيوجد بالضبط \\( 5 \\) نتائج ناجحة.\nلذلك، الاحتمال هو \\( \\frac{5}{36} \\)."
+      }
+    },
+    "correct_index": "1"
+  },
+  {
+    "id": "KAUST-F-06",
+    "track": "kaust",
+    "level": "Phase 1: Foundation Research",
+    "topic": "Limits",
+    "type": "MCQ",
+    "difficulty": "medium",
+    "content": {
+      "en": {
+        "question": "Evaluate the limit at infinity:\n\\[ \\lim_{x \\to \\infty} \\frac{4x^2 - 5x + 1}{2x^2 + 3} \\]",
+        "options": [
+          "\\( 1 \\)",
+          "\\( 2 \\)",
+          "\\( 4 \\)",
+          "\\( \\infty \\)"
+        ],
+        "hint": "Divide every term in the numerator and denominator by the highest power of x in the denominator, which is \\( x^2 \\).",
+        "explanation": "To evaluate the limit of a rational function as \\( x \\to \\infty \\), we divide all terms by the highest power of \\( x \\) in the denominator (which is \\( x^2 \\)):\n\\[ \\lim_{x \\to \\infty} \\frac{\\frac{4x^2}{x^2} - \\frac{5x}{x^2} + \\frac{1}{x^2}}{\\frac{2x^2}{x^2} + \\frac{3}{x^2}} = \\lim_{x \\to \\infty} \\frac{4 - \\frac{5}{x} + \\frac{1}{x^2}}{2 + \\frac{3}{x^2}} \\]\nAs \\( x \\to \\infty \\), all terms with \\( x \\) in the denominator approach \\( 0 \\):\n\\[ = \\frac{4 - 0 + 0}{2 + 0} = \\frac{4}{2} = 2 \\]."
+      },
+      "ar": {
+        "question": "احسب النهاية عند ما لا نهاية:\n\\[ \\lim_{x \\to \\infty} \\frac{4x^2 - 5x + 1}{2x^2 + 3} \\]",
+        "options": [
+          "\\( 1 \\)",
+          "\\( 2 \\)",
+          "\\( 4 \\)",
+          "\\( \\infty \\)"
+        ],
+        "hint": "اقسم كل حد في البسط والمقام على أعلى قوة لـ x في المقام، وهي \\( x^2 \\).",
+        "explanation": "لحساب نهاية دالة كسرية عندما \\( x \\to \\infty \\)، نقسم جميع الحدود على أعلى قوة لـ \\( x \\) في المقام (وهي \\( x^2 \\)):\n\\[ \\lim_{x \\to \\infty} \\frac{\\frac{4x^2}{x^2} - \\frac{5x}{x^2} + \\frac{1}{x^2}}{\\frac{2x^2}{x^2} + \\frac{3}{x^2}} = \\lim_{x \\to \\infty} \\frac{4 - \\frac{5}{x} + \\frac{1}{x^2}}{2 + \\frac{3}{x^2}} \\]\nعندما \\( x \\to \\infty \\)، تقترب جميع الحدود التي تحتوي على \\( x \\) في المقام من الصفر:\n\\[ = \\frac{4 - 0 + 0}{2 + 0} = \\frac{4}{2} = 2 \\]."
+      }
+    },
+    "correct_index": "1"
+  },
+  {
+    "id": "KAUST-F-07",
+    "track": "kaust",
+    "level": "Phase 1: Foundation Research",
+    "topic": "3D Vectors",
+    "type": "MCQ",
+    "difficulty": "hard",
+    "content": {
+      "en": {
+        "question": "Find the exact cross product \\( \\mathbf{u} \\times \\mathbf{v} \\) of the vectors \\( \\mathbf{u} = \\langle 1, 0, -1 \\rangle \\) and \\( \\mathbf{v} = \\langle 0, 1, 1 \\rangle \\).",
+        "options": [
+          "\\( \\langle 1, -1, 1 \\rangle \\)",
+          "\\( \\langle 1, 1, 1 \\rangle \\)",
+          "\\( \\langle -1, -1, 1 \\rangle \\)",
+          "\\( \\langle 0, 0, 1 \\rangle \\)"
+        ],
+        "hint": "Compute the determinant of the 3x3 matrix with rows i, j, k and the components of u and v.",
+        "explanation": "The cross product is computed by evaluating the determinant:\n\\[ \\mathbf{u} \\times \\mathbf{v} = \\begin{vmatrix} \\mathbf{i} & \\mathbf{j} & \\mathbf{k} \\\\ 1 & 0 & -1 \\\\ 0 & 1 & 1 \\end{vmatrix} \\]\n\\[ = \\mathbf{i}(0(1) - (-1)(1)) - \\mathbf{j}(1(1) - (-1)(0)) + \\mathbf{k}(1(1) - 0(0)) \\]\n\\[ = \\mathbf{i}(1) - \\mathbf{j}(1) + \\mathbf{k}(1) = \\langle 1, -1, 1 \\rangle \\]."
+      },
+      "ar": {
+        "question": "أوجد الضرب الاتجاهي (التقاطعي) الدقيق \\( \\mathbf{u} \\times \\mathbf{v} \\) للمتجهين \\( \\mathbf{u} = \\langle 1, 0, -1 \\rangle \\) و \\( \\mathbf{v} = \\langle 0, 1, 1 \\rangle \\).",
+        "options": [
+          "\\( \\langle 1, -1, 1 \\rangle \\)",
+          "\\( \\langle 1, 1, 1 \\rangle \\)",
+          "\\( \\langle -1, -1, 1 \\rangle \\)",
+          "\\( \\langle 0, 0, 1 \\rangle \\)"
+        ],
+        "hint": "احسب محددة المصفوفة 3×3 التي صفوفها متجهات الوحدة i, j, k ومركبات u و v.",
+        "explanation": "يُحسب الضرب الاتجاهي بفك المحدد:\n\\[ \\mathbf{u} \\times \\mathbf{v} = \\begin{vmatrix} \\mathbf{i} & \\mathbf{j} & \\mathbf{k} \\\\ 1 & 0 & -1 \\\\ 0 & 1 & 1 \\end{vmatrix} \\]\n\\[ = \\mathbf{i}(0(1) - (-1)(1)) - \\mathbf{j}(1(1) - (-1)(0)) + \\mathbf{k}(1(1) - 0(0)) \\]\n\\[ = \\mathbf{i}(1) - \\mathbf{j}(1) + \\mathbf{k}(1) = \\langle 1, -1, 1 \\rangle \\]."
+      }
+    },
+    "correct_index": "0"
+  },
+  {
+    "id": "KAUST-F-08",
+    "track": "kaust",
+    "level": "Phase 1: Foundation Research",
+    "topic": "Complex Numbers",
+    "type": "MCQ",
+    "difficulty": "medium",
+    "content": {
+      "en": {
+        "question": "Simplify the complex number division into standard form \\( a + bi \\):\n\\[ \\frac{5}{1 - 2i} \\]",
+        "options": [
+          "\\( 1 + 2i \\)",
+          "\\( 1 - 2i \\)",
+          "\\( 2 + i \\)",
+          "\\( 2 - i \\)"
+        ],
+        "hint": "Multiply both the numerator and the denominator by the complex conjugate of the denominator, which is \\( 1 + 2i \\).",
+        "explanation": "To divide complex numbers, multiply numerator and denominator by the conjugate of the denominator \\( (1 + 2i) \\):\n\\[ \\frac{5}{1 - 2i} \\times \\frac{1 + 2i}{1 + 2i} = \\frac{5(1 + 2i)}{1^2 - (2i)^2} \\]\nSince \\( i^2 = -1 \\), the denominator becomes \\( 1 - (-4) = 1 + 4 = 5 \\).\n\\[ \\frac{5(1 + 2i)}{5} = 1 + 2i \\]."
+      },
+      "ar": {
+        "question": "بسط عملية قسمة العدد المركب التالية إلى صورتها القياسية \\( a + bi \\):\n\\[ \\frac{5}{1 - 2i} \\]",
+        "options": [
+          "\\( 1 + 2i \\)",
+          "\\( 1 - 2i \\)",
+          "\\( 2 + i \\)",
+          "\\( 2 - i \\)"
+        ],
+        "hint": "اضرب كل من البسط والمقام في المرافق المركب للمقام، وهو \\( 1 + 2i \\).",
+        "explanation": "لقسمة الأعداد المركبة، نضرب البسط والمقام في مرافق المقام \\( (1 + 2i) \\):\n\\[ \\frac{5}{1 - 2i} \\times \\frac{1 + 2i}{1 + 2i} = \\frac{5(1 + 2i)}{1^2 - (2i)^2} \\]\nبما أن \\( i^2 = -1 \\)، يصبح المقام \\( 1 - (-4) = 1 + 4 = 5 \\).\n\\[ \\frac{5(1 + 2i)}{5} = 1 + 2i \\]."
+      }
+    },
+    "correct_index": "0"
+  },
+  {
+    "id": "KAUST-F-09",
+    "track": "kaust",
+    "level": "Phase 1: Foundation Research",
+    "topic": "Probability",
+    "type": "MCQ",
+    "difficulty": "medium",
+    "content": {
+      "en": {
+        "question": "An urn contains exactly \\( 4 \\) red marbles and \\( 6 \\) blue marbles. If two marbles are drawn at random simultaneously without replacement, what is the exact probability that both marbles are red?",
+        "options": [
+          "\\( \\frac{2}{15} \\)",
+          "\\( \\frac{4}{25} \\)",
+          "\\( \\frac{1}{5} \\)",
+          "\\( \\frac{3}{10} \\)"
+        ],
+        "hint": "Calculate the probability of drawing a red marble first, and then multiply by the probability of drawing a second red marble from the remaining ones.",
+        "explanation": "Total marbles = \\( 4 + 6 = 10 \\).\n- Probability that the first marble is red = \\( \\frac{4}{10} = \\frac{2}{5} \\).\n- Once one red marble is removed, \\( 3 \\) red marbles and \\( 9 \\) total marbles remain.\n- Probability that the second marble is red = \\( \\frac{3}{9} = \\frac{1}{3} \\).\nMultiply the probabilities:\n\\[ \\frac{2}{5} \\times \\frac{1}{3} = \\frac{2}{15} \\]."
+      },
+      "ar": {
+        "question": "يحتوي صندوق على \\( 4 \\) كرات حمراء و \\( 6 \\) كرات زرقاء. إذا سُحبت كرتان عشوائياً في نفس الوقت ودون إرجاع، فما هو الاحتمال الدقيق أن تكون الكرتان حمراوين؟",
+        "options": [
+          "\\( \\frac{2}{15} \\)",
+          "\\( \\frac{4}{25} \\)",
+          "\\( \\frac{1}{5} \\)",
+          "\\( \\frac{3}{10} \\)"
+        ],
+        "hint": "احسب احتمال سحب كرة حمراء أولاً، ثم اضرب في احتمال سحب كرة حمراء ثانية من الكرات المتبقية.",
+        "explanation": "إجمالي الكرات = \\( 4 + 6 = 10 \\).\n- احتمال أن تكون الكرة الأولى حمراء = \\( \\frac{4}{10} = \\frac{2}{5} \\).\n- بمجرد إزالة كرة حمراء واحدة، يتبقى \\( 3 \\) كرات حمراء و \\( 9 \\) كرات إجمالاً.\n- احتمال أن تكون الكرة الثانية حمراء = \\( \\frac{3}{9} = \\frac{1}{3} \\).\nنضرب الاحتمالات:\n\\[ \\frac{2}{5} \\times \\frac{1}{3} = \\frac{2}{15} \\]."
+      }
+    },
+    "correct_index": "0"
+  },
+  {
+    "id": "KAUST-F-10",
+    "track": "kaust",
+    "level": "Phase 1: Foundation Research",
+    "topic": "Matrix Algebra",
+    "type": "MCQ",
+    "difficulty": "medium",
+    "content": {
+      "en": {
+        "question": "Find the inverse matrix \\( A^{-1} \\) of the \\( 2 \\times 2 \\) matrix \\( A = \\begin{pmatrix} 2 & 1 \\\\ 5 & 3 \\end{pmatrix} \\).",
+        "options": [
+          "\\( \\begin{pmatrix} 3 & -1 \\\\ -5 & 2 \\end{pmatrix} \\)",
+          "\\( \\begin{pmatrix} 2 & -1 \\\\ -5 & 3 \\end{pmatrix} \\)",
+          "\\( \\begin{pmatrix} 3 & 1 \\\\ 5 & 2 \\end{pmatrix} \\)",
+          "\\( \\begin{pmatrix} -3 & 1 \\\\ 5 & -2 \\end{pmatrix} \\)"
+        ],
+        "hint": "The inverse of a 2x2 matrix \\( \\begin{pmatrix} a & b \\\\ c & d \\end{pmatrix} \\) is \\( \\frac{1}{ad-bc} \\begin{pmatrix} d & -b \\\\ -c & a \\end{pmatrix} \\).",
+        "explanation": "1) Calculate the determinant: \\( \\det(A) = (2 \\times 3) - (1 \\times 5) = 6 - 5 = 1 \\).\n2) Apply the inverse formula for 2x2 matrices: swap the main diagonal elements (2 and 3), and negate the off-diagonal elements (1 and 5).\n\\[ A^{-1} = \\frac{1}{1} \\begin{pmatrix} 3 & -1 \\\\ -5 & 2 \\end{pmatrix} = \\begin{pmatrix} 3 & -1 \\\\ -5 & 2 \\end{pmatrix} \\]."
+      },
+      "ar": {
+        "question": "أوجد المصفوفة المعكوسة \\( A^{-1} \\) للمصفوفة من الدرجة \\( 2 \\times 2 \\): \\( A = \\begin{pmatrix} 2 & 1 \\\\ 5 & 3 \\end{pmatrix} \\).",
+        "options": [
+          "\\( \\begin{pmatrix} 3 & -1 \\\\ -5 & 2 \\end{pmatrix} \\)",
+          "\\( \\begin{pmatrix} 2 & -1 \\\\ -5 & 3 \\end{pmatrix} \\)",
+          "\\( \\begin{pmatrix} 3 & 1 \\\\ 5 & 2 \\end{pmatrix} \\)",
+          "\\( \\begin{pmatrix} -3 & 1 \\\\ 5 & -2 \\end{pmatrix} \\)"
+        ],
+        "hint": "معكوس المصفوفة 2×2 \\( \\begin{pmatrix} a & b \\\\ c & d \\end{pmatrix} \\) هو \\( \\frac{1}{ad-bc} \\begin{pmatrix} d & -b \\\\ -c & a \\end{pmatrix} \\).",
+        "explanation": "1) احسب المحدد: \\( \\det(A) = (2 \\times 3) - (1 \\times 5) = 6 - 5 = 1 \\).\n2) طبق صيغة المعكوس للمصفوفات 2×2: بتبديل عنصري القطر الرئيسي (2 و 3)، وعكس إشارتي عنصري القطر الثانوي (1 و 5).\n\\[ A^{-1} = \\frac{1}{1} \\begin{pmatrix} 3 & -1 \\\\ -5 & 2 \\end{pmatrix} = \\begin{pmatrix} 3 & -1 \\\\ -5 & 2 \\end{pmatrix} \\]."
+      }
+    },
+    "correct_index": "0"
+  },
+  {
+    "id": "KAUST-F-11",
+    "track": "kaust",
+    "level": "Phase 1: Foundation Research",
+    "topic": "Limits",
+    "type": "MCQ",
+    "difficulty": "medium",
+    "content": {
+      "en": {
+        "question": "Evaluate the limit using algebraic simplification (factoring):\n\\[ \\lim_{x \\to 3} \\frac{x^2 - 9}{x - 3} \\]",
+        "options": [
+          "\\( 0 \\)",
+          "\\( 3 \\)",
+          "\\( 6 \\)",
+          "\\( 9 \\)"
+        ],
+        "hint": "Factor the numerator as a difference of squares before evaluating the limit.",
+        "explanation": "Direct substitution gives the indeterminate form \\( \\frac{0}{0} \\).\nFactor the numerator: \\( x^2 - 9 = (x - 3)(x + 3) \\).\nSimplify the fraction:\n\\[ \\lim_{x \\to 3} \\frac{(x - 3)(x + 3)}{x - 3} = \\lim_{x \\to 3} (x + 3) \\]\nSubstitute \\( x = 3 \\):\n\\[ 3 + 3 = 6 \\]."
+      },
+      "ar": {
+        "question": "احسب النهاية باستخدام التبسيط الجبري (التحليل إلى عوامل):\n\\[ \\lim_{x \\to 3} \\frac{x^2 - 9}{x - 3} \\]",
+        "options": [
+          "\\( 0 \\)",
+          "\\( 3 \\)",
+          "\\( 6 \\)",
+          "\\( 9 \\)"
+        ],
+        "hint": "حلل البسط كفرق بين مربعين قبل حساب النهاية.",
+        "explanation": "التعويض المباشر يعطي الصيغة غير المعينة \\( \\frac{0}{0} \\).\nحلل البسط: \\( x^2 - 9 = (x - 3)(x + 3) \\).\nبسط الكسر:\n\\[ \\lim_{x \\to 3} \\frac{(x - 3)(x + 3)}{x - 3} = \\lim_{x \\to 3} (x + 3) \\]\nعوض بـ \\( x = 3 \\):\n\\[ 3 + 3 = 6 \\]."
+      }
+    },
+    "correct_index": "2"
+  },
+  {
+    "id": "KAUST-F-12",
+    "track": "kaust",
+    "level": "Phase 1: Foundation Research",
+    "topic": "3D Vectors",
+    "type": "MCQ",
+    "difficulty": "medium",
+    "content": {
+      "en": {
+        "question": "Find the exact magnitude of the 3D vector \\( \\mathbf{v} = \\langle 2, -3, 6 \\rangle \\).",
+        "options": [
+          "\\( 5 \\)",
+          "\\( 6 \\)",
+          "\\( 7 \\)",
+          "\\( \\sqrt{35} \\)"
+        ],
+        "hint": "The magnitude of a vector \\( \\langle x, y, z \\rangle \\) is given by \\( \\sqrt{x^2 + y^2 + z^2} \\).",
+        "explanation": "Using the magnitude formula for 3D vectors:\n\\[ \\|\\mathbf{v}\\| = \\sqrt{2^2 + (-3)^2 + 6^2} \\]\n\\[ = \\sqrt{4 + 9 + 36} = \\sqrt{49} = 7 \\]."
+      },
+      "ar": {
+        "question": "أوجد المعيار (الطول) الدقيق للمتجه الثلاثي الأبعاد \\( \\mathbf{v} = \\langle 2, -3, 6 \\rangle \\).",
+        "options": [
+          "\\( 5 \\)",
+          "\\( 6 \\)",
+          "\\( 7 \\)",
+          "\\( \\sqrt{35} \\)"
+        ],
+        "hint": "معيار المتجه \\( \\langle x, y, z \\rangle \\) يُعطى بالصيغة \\( \\sqrt{x^2 + y^2 + z^2} \\).",
+        "explanation": "باستخدام صيغة المعيار للمتجه في الفضاء الثلاثي:\n\\[ \\|\\mathbf{v}\\| = \\sqrt{2^2 + (-3)^2 + 6^2} \\]\n\\[ = \\sqrt{4 + 9 + 36} = \\sqrt{49} = 7 \\]."
+      }
+    },
+    "correct_index": "2"
+  },
+  {
+    "id": "KAUST-F-13",
+    "track": "kaust",
+    "level": "Phase 1: Foundation Research",
+    "topic": "Complex Numbers",
+    "type": "MCQ",
+    "difficulty": "easy",
+    "content": {
+      "en": {
+        "question": "What is the exact value of the imaginary unit raised to the power of \\( 2026 \\), i.e., \\( i^{2026} \\)?",
+        "options": [
+          "\\( 1 \\)",
+          "\\( i \\)",
+          "\\( -1 \\)",
+          "\\( -i \\)"
+        ],
+        "hint": "The powers of \\( i \\) cycle every 4 terms: \\( i^1 = i, i^2 = -1, i^3 = -i, i^4 = 1 \\). Divide 2026 by 4 and look at the remainder.",
+        "explanation": "The powers of \\( i \\) repeat in a cycle of 4: \\( i^1 = i, i^2 = -1, i^3 = -i, i^4 = 1 \\).\nTo find \\( i^{2026} \\), divide the exponent 2026 by 4:\n\\( 2026 \\div 4 = 506 \\) with a remainder of \\( 2 \\) (since \\( 506 \\times 4 = 2024 \\)).\nTherefore, \\( i^{2026} = (i^4)^{506} \\times i^2 = (1)^{506} \\times (-1) = -1 \\)."
+      },
+      "ar": {
+        "question": "ما هي القيمة الدقيقة للوحدة التخيلية مرفوعة للقوة \\( 2026 \\)، أي \\( i^{2026} \\)؟",
+        "options": [
+          "\\( 1 \\)",
+          "\\( i \\)",
+          "\\( -1 \\)",
+          "\\( -i \\)"
+        ],
+        "hint": "قوى i تتكرر كل 4 حدود: \\( i^1 = i, i^2 = -1, i^3 = -i, i^4 = 1 \\). اقسم 2026 على 4 وانظر إلى الباقي.",
+        "explanation": "تتكرر قوى \\( i \\) في دورة من 4: \\( i^1 = i, i^2 = -1, i^3 = -i, i^4 = 1 \\).\nلإيجاد \\( i^{2026} \\)، اقسم الأس 2026 على 4:\n\\( 2026 \\div 4 = 506 \\) والباقي \\( 2 \\) (لأن \\( 506 \\times 4 = 2024 \\)).\nلذلك، \\( i^{2026} = (i^4)^{506} \\times i^2 = (1)^{506} \\times (-1) = -1 \\)."
+      }
+    },
+    "correct_index": "2"
+  },
+  {
+    "id": "KAUST-F-14",
+    "track": "kaust",
+    "level": "Phase 1: Foundation Research",
+    "topic": "Probability",
+    "type": "MCQ",
+    "difficulty": "medium",
+    "content": {
+      "en": {
+        "question": "Two independent events \\( A \\) and \\( B \\) have probabilities \\( P(A) = 0.4 \\) and \\( P(B) = 0.5 \\). What is the exact probability of the union of the two events, \\( P(A \\cup B) \\)?",
+        "options": [
+          "\\( 0.2 \\)",
+          "\\( 0.7 \\)",
+          "\\( 0.9 \\)",
+          "\\( 0.95 \\)"
+        ],
+        "hint": "Use the general addition rule for probabilities: \\( P(A \\cup B) = P(A) + P(B) - P(A \\cap B) \\). For independent events, \\( P(A \\cap B) = P(A) \\times P(B) \\).",
+        "explanation": "1) Calculate the intersection for independent events:\n\\[ P(A \\cap B) = P(A) \\times P(B) = 0.4 \\times 0.5 = 0.2 \\]\n2) Apply the addition rule:\n\\[ P(A \\cup B) = P(A) + P(B) - P(A \\cap B) \\]\n\\[ = 0.4 + 0.5 - 0.2 = 0.9 - 0.2 = 0.7 \\]."
+      },
+      "ar": {
+        "question": "حدثان مستقلان \\( A \\) و \\( B \\) احتماليهما هما \\( P(A) = 0.4 \\) و \\( P(B) = 0.5 \\). ما هو الاحتمال الدقيق لاتحاد الحدثين \\( P(A \\cup B) \\)؟",
+        "options": [
+          "\\( 0.2 \\)",
+          "\\( 0.7 \\)",
+          "\\( 0.9 \\)",
+          "\\( 0.95 \\)"
+        ],
+        "hint": "استخدم قاعدة الجمع العامة للاحتمالات: \\( P(A \\cup B) = P(A) + P(B) - P(A \\cap B) \\). للحدثين المستقلين، \\( P(A \\cap B) = P(A) \\times P(B) \\).",
+        "explanation": "1) احسب التقاطع للحدثين المستقلين:\n\\[ P(A \\cap B) = P(A) \\times P(B) = 0.4 \\times 0.5 = 0.2 \\]\n2) طبق قاعدة الجمع:\n\\[ P(A \\cup B) = P(A) + P(B) - P(A \\cap B) \\]\n\\[ = 0.4 + 0.5 - 0.2 = 0.9 - 0.2 = 0.7 \\]."
+      }
+    },
+    "correct_index": "1"
+  },
+  {
+    "id": "KAUST-F-15",
+    "track": "kaust",
+    "level": "Phase 1: Foundation Research",
+    "topic": "Matrix Algebra",
+    "type": "MCQ",
+    "difficulty": "medium",
+    "content": {
+      "en": {
+        "question": "Multiply the two \\( 2 \\times 2 \\) matrices \\( A = \\begin{pmatrix} 1 & 2 \\\\ 3 & 4 \\end{pmatrix} \\) and \\( B = \\begin{pmatrix} 2 & 0 \\\\ 1 & 2 \\end{pmatrix} \\). What is the top-left element of the product matrix \\( AB \\)?",
+        "options": [
+          "\\( 2 \\)",
+          "\\( 4 \\)",
+          "\\( 6 \\)",
+          "\\( 10 \\)"
+        ],
+        "hint": "The top-left element of matrix AB is computed by taking the dot product of the first row of A and the first column of B.",
+        "explanation": "To find the top-left element (row 1, column 1) of \\( AB \\), we multiply the first row of \\( A \\) by the first column of \\( B \\):\nRow 1 of A = \\( [1, 2] \\)\nColumn 1 of B = \\( \\begin{pmatrix} 2 \\\\ 1 \\end{pmatrix} \\)\nProduct = \\( (1 \\times 2) + (2 \\times 1) = 2 + 2 = 4 \\)."
+      },
+      "ar": {
+        "question": "اضرب المصفوفتين من الدرجة \\( 2 \\times 2 \\) التاليتين: \\( A = \\begin{pmatrix} 1 & 2 \\\\ 3 & 4 \\end{pmatrix} \\) و \\( B = \\begin{pmatrix} 2 & 0 \\\\ 1 & 2 \\end{pmatrix} \\). ما هو العنصر الموجود في أعلى اليسار لمصفوفة الناتج \\( AB \\)؟",
+        "options": [
+          "\\( 2 \\)",
+          "\\( 4 \\)",
+          "\\( 6 \\)",
+          "\\( 10 \\)"
+        ],
+        "hint": "يتم حساب العنصر العلوي الأيسر للمصفوفة AB بأخذ الضرب القياسي للصف الأول من A والعمود الأول من B.",
+        "explanation": "لإيجاد العنصر العلوي الأيسر (الصف 1، العمود 1) لـ \\( AB \\)، نضرب الصف الأول من \\( A \\) في العمود الأول من \\( B \\):\nالصف الأول من A = \\( [1, 2] \\)\nالعمود الأول من B = \\( \\begin{pmatrix} 2 \\\\ 1 \\end{pmatrix} \\)\nالناتج = \\( (1 \\times 2) + (2 \\times 1) = 2 + 2 = 4 \\)."
+      }
+    },
+    "correct_index": "1"
+  },
+  {
+    "id": "KAUST-F-16",
+    "track": "kaust",
+    "level": "Phase 1: Foundation Research",
+    "topic": "Limits",
+    "type": "MCQ",
+    "difficulty": "medium",
+    "content": {
+      "en": {
+        "question": "Evaluate the following limit using rationalization:\n\\[ \\lim_{x \\to 0} \\frac{\\sqrt{x + 4} - 2}{x} \\]",
+        "options": [
+          "\\( 0 \\)",
+          "\\( \\frac{1}{4} \\)",
+          "\\( \\frac{1}{2} \\)",
+          "\\( 1 \\)"
+        ],
+        "hint": "Multiply both the numerator and the denominator by the conjugate of the numerator, which is \\( \\sqrt{x + 4} + 2 \\).",
+        "explanation": "Direct substitution gives \\( \\frac{0}{0} \\).\nMultiply numerator and denominator by the conjugate \\( (\\sqrt{x + 4} + 2) \\):\n\\[ \\lim_{x \\to 0} \\frac{(\\sqrt{x + 4} - 2)(\\sqrt{x + 4} + 2)}{x(\\sqrt{x + 4} + 2)} = \\lim_{x \\to 0} \\frac{(x + 4) - 4}{x(\\sqrt{x + 4} + 2)} \\]\n\\[ = \\lim_{x \\to 0} \\frac{x}{x(\\sqrt{x + 4} + 2)} = \\lim_{x \\to 0} \\frac{1}{\\sqrt{x + 4} + 2} \\]\nSubstitute \\( x = 0 \\):\n\\[ \\frac{1}{\\sqrt{0 + 4} + 2} = \\frac{1}{2 + 2} = \\frac{1}{4} \\]."
+      },
+      "ar": {
+        "question": "احسب النهاية التالية باستخدام الإنطاق (ضرب المرافق):\n\\[ \\lim_{x \\to 0} \\frac{\\sqrt{x + 4} - 2}{x} \\]",
+        "options": [
+          "\\( 0 \\)",
+          "\\( \\frac{1}{4} \\)",
+          "\\( \\frac{1}{2} \\)",
+          "\\( 1 \\)"
+        ],
+        "hint": "اضرب كل من البسط والمقام في مرافق البسط، وهو \\( \\sqrt{x + 4} + 2 \\).",
+        "explanation": "التعويض المباشر يعطي \\( \\frac{0}{0} \\).\nنضرب البسط والمقام في المرافق \\( (\\sqrt{x + 4} + 2) \\):\n\\[ \\lim_{x \\to 0} \\frac{(\\sqrt{x + 4} - 2)(\\sqrt{x + 4} + 2)}{x(\\sqrt{x + 4} + 2)} = \\lim_{x \\to 0} \\frac{(x + 4) - 4}{x(\\sqrt{x + 4} + 2)} \\]\n\\[ = \\lim_{x \\to 0} \\frac{x}{x(\\sqrt{x + 4} + 2)} = \\lim_{x \\to 0} \\frac{1}{\\sqrt{x + 4} + 2} \\]\nنعوض بـ \\( x = 0 \\):\n\\[ \\frac{1}{\\sqrt{0 + 4} + 2} = \\frac{1}{2 + 2} = \\frac{1}{4} \\]."
+      }
+    },
+    "correct_index": "1"
+  },
+  {
+    "id": "KAUST-F-17",
+    "track": "kaust",
+    "level": "Phase 1: Foundation Research",
+    "topic": "3D Vectors",
+    "type": "MCQ",
+    "difficulty": "hard",
+    "content": {
+      "en": {
+        "question": "Find the exact cosine of the angle \\( \\theta \\) between the two vectors \\( \\mathbf{u} = \\langle 1, 0, 1 \\rangle \\) and \\( \\mathbf{v} = \\langle 0, 1, 1 \\rangle \\).",
+        "options": [
+          "\\( 0 \\)",
+          "\\( \\frac{1}{2} \\)",
+          "\\( \\frac{\\sqrt{2}}{2} \\)",
+          "\\( \\frac{\\sqrt{3}}{2} \\)"
+        ],
+        "hint": "Use the dot product formula: \\( \\cos(\\theta) = \\frac{\\mathbf{u} \\cdot \\mathbf{v}}{\\|\\mathbf{u}\\| \\|\\mathbf{v}\\|} \\).",
+        "explanation": "1) Calculate the dot product: \\( \\mathbf{u} \\cdot \\mathbf{v} = (1)(0) + (0)(1) + (1)(1) = 1 \\).\n2) Calculate the magnitude of \\( \\mathbf{u} \\): \\( \\|\\mathbf{u}\\| = \\sqrt{1^2 + 0^2 + 1^2} = \\sqrt{2} \\).\n3) Calculate the magnitude of \\( \\mathbf{v} \\): \\( \\|\\mathbf{v}\\| = \\sqrt{0^2 + 1^2 + 1^2} = \\sqrt{2} \\).\n4) Apply the formula:\n\\[ \\cos(\\theta) = \\frac{1}{\\sqrt{2} \\times \\sqrt{2}} = \\frac{1}{2} \\]."
+      },
+      "ar": {
+        "question": "أوجد جيب تمام الزاوية الدقيق \\( \\theta \\) بين المتجهين \\( \\mathbf{u} = \\langle 1, 0, 1 \\rangle \\) و \\( \\mathbf{v} = \\langle 0, 1, 1 \\rangle \\).",
+        "options": [
+          "\\( 0 \\)",
+          "\\( \\frac{1}{2} \\)",
+          "\\( \\frac{\\sqrt{2}}{2} \\)",
+          "\\( \\frac{\\sqrt{3}}{2} \\)"
+        ],
+        "hint": "استخدم صيغة الضرب القياسي: \\( \\cos(\\theta) = \\frac{\\mathbf{u} \\cdot \\mathbf{v}}{\\|\\mathbf{u}\\| \\|\\mathbf{v}\\|} \\).",
+        "explanation": "1) احسب الضرب القياسي: \\( \\mathbf{u} \\cdot \\mathbf{v} = (1)(0) + (0)(1) + (1)(1) = 1 \\).\n2) احسب معيار المتجه \\( \\mathbf{u} \\): \\( \\|\\mathbf{u}\\| = \\sqrt{1^2 + 0^2 + 1^2} = \\sqrt{2} \\).\n3) احسب معيار المتجه \\( \\mathbf{v} \\): \\( \\|\\mathbf{v}\\| = \\sqrt{0^2 + 1^2 + 1^2} = \\sqrt{2} \\).\n4) طبق الصيغة:\n\\[ \\cos(\\theta) = \\frac{1}{\\sqrt{2} \\times \\sqrt{2}} = \\frac{1}{2} \\]."
+      }
+    },
+    "correct_index": "1"
+  },
+  {
+    "id": "KAUST-F-18",
+    "track": "kaust",
+    "level": "Phase 1: Foundation Research",
+    "topic": "Complex Numbers",
+    "type": "MCQ",
+    "difficulty": "medium",
+    "content": {
+      "en": {
+        "question": "What is the exact polar form argument \\( \\theta \\) (in radians) of the complex number \\( z = -1 + i \\)?",
+        "options": [
+          "\\( \\frac{\\pi}{4} \\)",
+          "\\( \\frac{3\\pi}{4} \\)",
+          "\\( \\frac{5\\pi}{4} \\)",
+          "\\( \\frac{7\\pi}{4} \\)"
+        ],
+        "hint": "Plot the point (-1, 1) in the complex plane. It lies in the second quadrant. Use arctan and adjust for the quadrant.",
+        "explanation": "For \\( z = -1 + i \\), the real part is \\( x = -1 \\) and the imaginary part is \\( y = 1 \\).\nThe point \\( (-1, 1) \\) lies in the second quadrant.\nThe reference angle is \\( \\arctan\\left(\\left|\\frac{1}{-1}\\right|\\right) = \\frac{\\pi}{4} \\).\nSince it is in the second quadrant, the argument (principal angle) is:\n\\[ \\theta = \\pi - \\frac{\\pi}{4} = \\frac{3\\pi}{4} \\]."
+      },
+      "ar": {
+        "question": "ما هي سعة الصورة القطبية الدقيقة \\( \\theta \\) (بالراديان) للعدد المركب \\( z = -1 + i \\)؟",
+        "options": [
+          "\\( \\frac{\\pi}{4} \\)",
+          "\\( \\frac{3\\pi}{4} \\)",
+          "\\( \\frac{5\\pi}{4} \\)",
+          "\\( \\frac{7\\pi}{4} \\)"
+        ],
+        "hint": "مثل النقطة (-1, 1) في المستوى المركب. تقع في الربع الثاني. استخدم دالة الظل العكسية واضبطها حسب الربع.",
+        "explanation": "للعدد \\( z = -1 + i \\)، الجزء الحقيقي هو \\( x = -1 \\) والجزء التخيلي هو \\( y = 1 \\).\nتقع النقطة \\( (-1, 1) \\) في الربع الثاني.\nزاوية الإسناد هي \\( \\arctan\\left(\\left|\\frac{1}{-1}\\right|\\right) = \\frac{\\pi}{4} \\).\nبما أنها في الربع الثاني، فإن السعة (الزاوية الأساسية) هي:\n\\[ \\theta = \\pi - \\frac{\\pi}{4} = \\frac{3\\pi}{4} \\]."
+      }
+    },
+    "correct_index": "1"
+  },
+  {
+    "id": "KAUST-F-19",
+    "track": "kaust",
+    "level": "Phase 1: Foundation Research",
+    "topic": "Probability",
+    "type": "MCQ",
+    "difficulty": "medium",
+    "content": {
+      "en": {
+        "question": "A coin is biased such that the probability of getting Heads is \\( \\frac{2}{3} \\). If the coin is tossed \\( 3 \\) times, what is the exact probability of getting EXACTLY \\( 2 \\) Heads?",
+        "options": [
+          "\\( \\frac{2}{9} \\)",
+          "\\( \\frac{4}{9} \\)",
+          "\\( \\frac{2}{27} \\)",
+          "\\( \\frac{8}{27} \\)"
+        ],
+        "hint": "Use the binomial probability formula: \\( P(X = k) = \\binom{n}{k} p^k (1-p)^{n-k} \\).",
+        "explanation": "Here, \\( n = 3 \\) (total tosses), \\( k = 2 \\) (number of heads), \\( p = \\frac{2}{3} \\) (probability of heads), and \\( 1-p = \\frac{1}{3} \\) (probability of tails).\nUsing the binomial formula:\n\\[ P(X = 2) = \\binom{3}{2} \\left(\\frac{2}{3}\\right)^2 \\left(\\frac{1}{3}\\right)^1 \\]\n\\[ = 3 \\times \\frac{4}{9} \\times \\frac{1}{3} = \\frac{4}{9} \\]."
+      },
+      "ar": {
+        "question": "قطعة نقود متحيزة بحيث يكون احتمال الحصول على وجه 'الصورة' هو \\( \\frac{2}{3} \\). إذا رُميت القطعة \\( 3 \\) مرات، فما هو الاحتمال الدقيق للحصول على وجهين (صورة) بالضبط؟",
+        "options": [
+          "\\( \\frac{2}{9} \\)",
+          "\\( \\frac{4}{9} \\)",
+          "\\( \\frac{2}{27} \\)",
+          "\\( \\frac{8}{27} \\)"
+        ],
+        "hint": "استخدم صيغة الاحتمال الثنائي (ذات الحدين): \\( P(X = k) = \\binom{n}{k} p^k (1-p)^{n-k} \\).",
+        "explanation": "هنا، \\( n = 3 \\) (إجمالي الرميات)، \\( k = 2 \\) (عدد الصور)، \\( p = \\frac{2}{3} \\) (احتمال الصورة)، و \\( 1-p = \\frac{1}{3} \\) (احتمال الكتابة).\nباستخدام صيغة ذات الحدين:\n\\[ P(X = 2) = \\binom{3}{2} \\left(\\frac{2}{3}\\right)^2 \\left(\\frac{1}{3}\\right)^1 \\]\n\\[ = 3 \\times \\frac{4}{9} \\times \\frac{1}{3} = \\frac{4}{9} \\]."
+      }
+    },
+    "correct_index": "1"
+  },
+  {
+    "id": "KAUST-F-20",
+    "track": "kaust",
+    "level": "Phase 1: Foundation Research",
+    "topic": "Matrix Algebra",
+    "type": "MCQ",
+    "difficulty": "medium",
+    "content": {
+      "en": {
+        "question": "What is the trace (the sum of the main diagonal elements) of the \\( 3 \\times 3 \\) matrix \\( A = \\begin{pmatrix} 2 & -1 & 4 \\\\ 3 & 5 & -2 \\\\ 0 & 7 & -3 \\end{pmatrix} \\)?",
+        "options": [
+          "\\( 2 \\)",
+          "\\( 4 \\)",
+          "\\( 6 \\)",
+          "\\( 10 \\)"
+        ],
+        "hint": "Sum the elements along the main diagonal from top-left to bottom-right.",
+        "explanation": "The trace of a square matrix is the sum of the entries on its main diagonal.\nFor matrix \\( A \\), the main diagonal elements are \\( 2 \\), \\( 5 \\), and \\( -3 \\).\nTrace = \\( 2 + 5 + (-3) = 7 - 3 = 4 \\)."
+      },
+      "ar": {
+        "question": "ما هو الأثر (مجموع عناصر القطر الرئيسي) للمصفوفة من الدرجة \\( 3 \\times 3 \\) التالية: \\( A = \\begin{pmatrix} 2 & -1 & 4 \\\\ 3 & 5 & -2 \\\\ 0 & 7 & -3 \\end{pmatrix} \\)؟",
+        "options": [
+          "\\( 2 \\)",
+          "\\( 4 \\)",
+          "\\( 6 \\)",
+          "\\( 10 \\)"
+        ],
+        "hint": "اجمع العناصر على طول القطر الرئيسي من أعلى اليسار إلى أسفل اليمين.",
+        "explanation": "أثر المصفوفة المربعة هو مجموع المدخلات على قطرها الرئيسي.\nللمصفوفة \\( A \\)، عناصر القطر الرئيسي هي \\( 2 \\) و \\( 5 \\) و \\( -3 \\).\nالأثر = \\( 2 + 5 + (-3) = 7 - 3 = 4 \\)."
+      }
+    },
+    "correct_index": "1"
   }
 ]
