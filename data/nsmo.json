@@ -12123,5 +12123,665 @@
       }
     },
     "correct_index": "0"
+  },
+  {
+    "id": "NSMO-J1-01",
+    "track": "nsmo",
+    "level": "Phase 1: Junior Olympiad (Grades 5-7)",
+    "topic": "Angle Chase",
+    "type": "MCQ",
+    "difficulty": "medium",
+    "content": {
+      "en": {
+        "question": "Two parallel lines are intersected by a transversal line. The interior angles on the SAME side of the transversal are bisected by two line segments that meet at a point. What is the exact measure of the angle formed at that intersection point?<br/><svg viewBox='0 0 200 140' class='w-full max-w-xs mx-auto bg-slate-900/60 rounded-xl p-2 border border-slate-700 shadow-md my-2'><line x1='20' y1='30' x2='180' y2='30' stroke='#38bdf8' stroke-width='2'/><line x1='20' y1='110' x2='180' y2='110' stroke='#38bdf8' stroke-width='2'/><line x1='60' y1='10' x2='120' y2='130' stroke='#10b981' stroke-width='2'/><line x1='70' y1='30' x2='130' y2='70' stroke='#f59e0b' stroke-width='2'/><line x1='110' y1='110' x2='130' y2='70' stroke='#f59e0b' stroke-width='2'/><path d='M 120 65 A 10 10 0 0 1 120 75' fill='none' stroke='#e2e8f0' stroke-width='2'/><text x='140' y='75' fill='#e2e8f0' font-size='14'>?</text></svg>",
+        "options": [
+          "\\( 45^\\circ \\)",
+          "\\( 60^\\circ \\)",
+          "\\( 90^\\circ \\)",
+          "\\( 120^\\circ \\)"
+        ],
+        "hint": "The two interior angles on the same side of a transversal are supplementary (they sum to 180 degrees). What happens when you sum half of each?",
+        "explanation": "Let the two consecutive interior angles on the same side of the transversal be \\( 2x \\) and \\( 2y \\).\nSince the lines are parallel, these consecutive interior angles are supplementary, so \\( 2x + 2y = 180^\\circ \\).\nDividing the entire equation by 2 gives \\( x + y = 90^\\circ \\).\nThe angle bisectors form a triangle with the transversal segment. Inside this triangle, two of the angles are \\( x \\) and \\( y \\).\nThe sum of angles in any triangle is \\( 180^\\circ \\).\nTherefore, the third angle (at the intersection point) must be \\( 180^\\circ - (x + y) = 180^\\circ - 90^\\circ = 90^\\circ \\)."
+      },
+      "ar": {
+        "question": "يتقاطع قاطع مع خطين متوازيين. تم تنصيف الزاويتين الداخليتين الواقعتين على نفس الجهة من القاطع بقطعتين مستقيمتين تلتقيان في نقطة واحدة. ما هو القياس الدقيق للزاوية المتكونة عند نقطة التقاطع تلك؟<br/><svg viewBox='0 0 200 140' class='w-full max-w-xs mx-auto bg-slate-900/60 rounded-xl p-2 border border-slate-700 shadow-md my-2'><line x1='20' y1='30' x2='180' y2='30' stroke='#38bdf8' stroke-width='2'/><line x1='20' y1='110' x2='180' y2='110' stroke='#38bdf8' stroke-width='2'/><line x1='60' y1='10' x2='120' y2='130' stroke='#10b981' stroke-width='2'/><line x1='70' y1='30' x2='130' y2='70' stroke='#f59e0b' stroke-width='2'/><line x1='110' y1='110' x2='130' y2='70' stroke='#f59e0b' stroke-width='2'/><path d='M 120 65 A 10 10 0 0 1 120 75' fill='none' stroke='#e2e8f0' stroke-width='2'/><text x='140' y='75' fill='#e2e8f0' font-size='14'>؟</text></svg>",
+        "options": [
+          "\\( 45^\\circ \\)",
+          "\\( 60^\\circ \\)",
+          "\\( 90^\\circ \\)",
+          "\\( 120^\\circ \\)"
+        ],
+        "hint": "الزاويتان الداخليتان على نفس الجهة من القاطع متكاملتان (مجموعهما 180 درجة). ماذا يحدث عندما تجمع نصف كل منهما؟",
+        "explanation": "لتكن الزاويتان الداخليتان المتتاليتان على نفس الجهة من القاطع هما \\( 2x \\) و \\( 2y \\).\nبما أن الخطين متوازيان، فإن هذه الزوايا الداخلية المتتالية متكاملة، إذن \\( 2x + 2y = 180^\\circ \\).\nبقسمة المعادلة كاملة على 2 نحصل على \\( x + y = 90^\\circ \\).\nيشكل منصفا الزاويتين مع قطعة القاطع مثلثاً. داخل هذا المثلث، زاويتان هما \\( x \\) و \\( y \\).\nمجموع زوايا أي مثلث هو \\( 180^\\circ \\).\nوبالتالي، الزاوية الثالثة (عند نقطة التقاطع) يجب أن تكون \\( 180^\\circ - (x + y) = 180^\\circ - 90^\\circ = 90^\\circ \\)."
+      }
+    },
+    "correct_index": "2"
+  },
+  {
+    "id": "NSMO-J1-02",
+    "track": "nsmo",
+    "level": "Phase 1: Junior Olympiad (Grades 5-7)",
+    "topic": "Divisibility",
+    "type": "MCQ",
+    "difficulty": "hard",
+    "content": {
+      "en": {
+        "question": "A massive number is formed by writing the integers from \\( 1 \\) to \\( 20 \\) consecutively: \\( 123456789101112\\dots1920 \\). What is the exact remainder when this large number is divided by \\( 9 \\)?",
+        "options": [
+          "\\( 0 \\)",
+          "\\( 3 \\)",
+          "\\( 6 \\)",
+          "\\( 8 \\)"
+        ],
+        "hint": "A number leaves the exact same remainder when divided by 9 as the sum of all its digits. Simply find the sum of all individual digits from 1 to 20.",
+        "explanation": "To find the remainder modulo 9, we only need to calculate the sum of all the individual digits.\nLet's break the numbers down:\n- Digits from \\( 1 \\) to \\( 9 \\): The sum is \\( 1 + 2 + \\dots + 9 = 45 \\).\n- Numbers from \\( 10 \\) to \\( 19 \\): Each number starts with a '1' (ten times), and the second digits go from 0 to 9. \n  Sum of tens digits = \\( 10 \\times 1 = 10 \\).\n  Sum of ones digits = \\( 0 + 1 + \\dots + 9 = 45 \\).\n  So, sum for 10 to 19 = \\( 10 + 45 = 55 \\).\n- The number \\( 20 \\): The sum of its digits is \\( 2 + 0 = 2 \\).\nNow add them all up: Total sum = \\( 45 + 55 + 2 = 102 \\).\nTo find the remainder when 102 is divided by 9, we can just sum its digits again: \\( 1 + 0 + 2 = 3 \\).\nThus, the remainder is \\( 3 \\)."
+      },
+      "ar": {
+        "question": "تم تكوين عدد ضخم بكتابة الأعداد الصحيحة من \\( 1 \\) إلى \\( 20 \\) بشكل متتالي: \\( 123456789101112\\dots1920 \\). ما هو الباقي الدقيق عند قسمة هذا العدد الضخم على \\( 9 \\)؟",
+        "options": [
+          "\\( 0 \\)",
+          "\\( 3 \\)",
+          "\\( 6 \\)",
+          "\\( 8 \\)"
+        ],
+        "hint": "يترك أي عدد نفس باقي القسمة على 9 تماماً كما يتركه مجموع أرقامه. ببساطة، أوجد مجموع كل الأرقام الفردية من 1 إلى 20.",
+        "explanation": "لإيجاد باقي القسمة على 9 (الحساب المعياري)، نحتاج فقط لحساب مجموع كل الأرقام الفردية.\nلنفصل الأعداد:\n- الأرقام من \\( 1 \\) إلى \\( 9 \\): المجموع هو \\( 1 + 2 + \\dots + 9 = 45 \\).\n- الأعداد من \\( 10 \\) إلى \\( 19 \\): يبدأ كل عدد بالرقم '1' (عشر مرات)، والأرقام الثانية من 0 إلى 9.\n  مجموع أرقام العشرات = \\( 10 \\times 1 = 10 \\).\n  مجموع أرقام الآحاد = \\( 0 + 1 + \\dots + 9 = 45 \\).\n  إذن، مجموع الأعداد من 10 إلى 19 = \\( 10 + 45 = 55 \\).\n- العدد \\( 20 \\): مجموع أرقامه هو \\( 2 + 0 = 2 \\).\nالآن نجمعها كلها: المجموع الكلي = \\( 45 + 55 + 2 = 102 \\).\nلإيجاد باقي قسمة 102 على 9، يمكننا جمع أرقامه مرة أخرى: \\( 1 + 0 + 2 = 3 \\).\nوبالتالي، الباقي هو \\( 3 \\)."
+      }
+    },
+    "correct_index": "1"
+  },
+  {
+    "id": "NSMO-J1-03",
+    "track": "nsmo",
+    "level": "Phase 1: Junior Olympiad (Grades 5-7)",
+    "topic": "Parity",
+    "type": "MCQ",
+    "difficulty": "hard",
+    "content": {
+      "en": {
+        "question": "A magic frog sits on an infinite 2D grid, starting at the origin \\( (0,0) \\). In a single jump, it must change its x-coordinate by exactly \\( 1 \\) unit (either +1 or -1) AND simultaneously change its y-coordinate by exactly \\( 1 \\) unit (either +1 or -1). After exactly \\( 15 \\) jumps, which of the following points is mathematically possible for the frog to reach?",
+        "options": [
+          "\\( (8, 6) \\)",
+          "\\( (7, 4) \\)",
+          "\\( (5, 5) \\)",
+          "\\( (10, 5) \\)"
+        ],
+        "hint": "Analyze the parity of the coordinates. How does the parity of x and y change after an odd number of jumps? What is the parity of their sum x + y?",
+        "explanation": "Let's analyze the properties of the frog's jumps.\nIn every jump, the x-coordinate changes by +1 or -1, meaning its parity switches (from even to odd, or odd to even). Since the frog makes 15 jumps (an odd number), the final x-coordinate MUST be odd.\nSimilarly, the y-coordinate changes by +1 or -1 in every jump, so the final y-coordinate MUST also be odd.\nFurthermore, look at the sum \\( x + y \\). In a single jump, the changes are (+1,+1), (+1,-1), (-1,+1), or (-1,-1). \nThe sum of the coordinates changes by +2, 0, or -2. In all cases, the sum \\( x + y \\) changes by an EVEN amount. Since the frog starts at (0,0) where the sum is 0, the sum \\( x + y \\) must ALWAYS be even.\nLet's check the options:\nA) \\( (8, 6) \\): x and y are even. Impossible.\nB) \\( (7, 4) \\): x is odd, y is even. Impossible.\nC) \\( (5, 5) \\): x is odd, y is odd. Sum \\( 5+5=10 \\) is even. Possible!\nD) \\( (10, 5) \\): x is even, y is odd. Impossible.\nThe only valid coordinate is \\( (5, 5) \\)."
+      },
+      "ar": {
+        "question": "يجلس ضفدع سحري على شبكة لا نهائية ثنائية الأبعاد، منطلقاً من نقطة الأصل \\( (0,0) \\). في القفزة الواحدة، يجب أن يغير إحداثيه السيني بمقدار وحدة واحدة بالضبط (+1 أو -1) ويغير في نفس الوقت إحداثيه الصادي بمقدار وحدة واحدة بالضبط (+1 أو -1). بعد \\( 15 \\) قفزة بالضبط، أي النقاط التالية يمكن رياضياً للضفدع أن يصل إليها؟",
+        "options": [
+          "\\( (8, 6) \\)",
+          "\\( (7, 4) \\)",
+          "\\( (5, 5) \\)",
+          "\\( (10, 5) \\)"
+        ],
+        "hint": "حلل التكافؤ (الزوجية والفردية) للإحداثيات. كيف تتغير زوجية x و y بعد عدد فردي من القفزات؟ ما هو تكافؤ مجموعهما x + y؟",
+        "explanation": "دعونا نحلل خصائص قفزات الضفدع.\nفي كل قفزة، يتغير الإحداثي السيني x بمقدار +1 أو -1، مما يعني أن حالته الزوجية/الفردية تتبدل (من زوجي إلى فردي، أو العكس). بما أن الضفدع يقوم بـ 15 قفزة (عدد فردي)، فيجب أن يكون الإحداثي السيني النهائي فردياً.\nوبالمثل، يتغير الإحداثي الصادي y بمقدار +1 أو -1 في كل قفزة، لذا يجب أن يكون الإحداثي الصادي النهائي فردياً أيضاً.\nعلاوة على ذلك، انظر إلى المجموع \\( x + y \\). في القفزة الواحدة، تكون التغيرات إما (+1,+1) أو (+1,-1) أو (-1,+1) أو (-1,-1).\nيتغير مجموع الإحداثيات بمقدار +2 أو 0 أو -2. في جميع الحالات، يتغير المجموع \\( x + y \\) بمقدار زوجي. بما أن الضفدع يبدأ من (0,0) حيث المجموع 0، فيجب أن يظل المجموع \\( x + y \\) زوجياً دائماً.\nدعونا نتحقق من الخيارات:\nأ) \\( (8, 6) \\): x و y زوجيان. مستحيل.\nب) \\( (7, 4) \\): x فردي، y زوجي. مستحيل.\nج) \\( (5, 5) \\): x فردي، y فردي. المجموع \\( 5+5=10 \\) زوجي. ممكن!\nد) \\( (10, 5) \\): x زوجي، y فردي. مستحيل.\nالإحداثي الوحيد الصحيح هو \\( (5, 5) \\)."
+      }
+    },
+    "correct_index": "2"
+  },
+  {
+    "id": "NSMO-J1-04",
+    "track": "nsmo",
+    "level": "Phase 1: Junior Olympiad (Grades 5-7)",
+    "topic": "Angle Chase",
+    "type": "MCQ",
+    "difficulty": "medium",
+    "content": {
+      "en": {
+        "question": "A regular pentagon and a square perfectly share a common side and are positioned completely outside each other. What is the measure of the angle formed between their non-shared adjacent sides?<br/><svg viewBox='0 0 200 180' class='w-full max-w-xs mx-auto bg-slate-900/60 rounded-xl p-2 border border-slate-700 shadow-md my-2'><rect x='70' y='90' width='60' height='60' fill='none' stroke='#38bdf8' stroke-width='2'/><polygon points='70,90 130,90 148.5,33 100,0 51.5,33' fill='none' stroke='#10b981' stroke-width='2'/><path d='M 130 110 A 20 20 0 0 0 140 75' fill='none' stroke='#f59e0b' stroke-width='2'/><text x='150' y='100' fill='#e2e8f0' font-size='14'>?</text></svg>",
+        "options": [
+          "\\( 150^\\circ \\)",
+          "\\( 162^\\circ \\)",
+          "\\( 168^\\circ \\)",
+          "\\( 198^\\circ \\)"
+        ],
+        "hint": "A full circle around the vertex where the sides meet is 360 degrees. Find the interior angle of a square and the interior angle of a regular pentagon, then subtract them from 360.",
+        "explanation": "Let's analyze the shared vertex on the right side of the base.\nThe sum of angles around a single point forms a complete circle, which is \\( 360^\\circ \\).\nThe interior angle of a square is \\( 90^\\circ \\).\nThe sum of interior angles in a pentagon is \\( (5-2) \\times 180^\\circ = 540^\\circ \\). Since it is a regular pentagon, each interior angle is \\( 540^\\circ \\div 5 = 108^\\circ \\).\nThe angle formed between their non-shared adjacent sides makes up the rest of the \\( 360^\\circ \\) circle.\nTherefore, Angle = \\( 360^\\circ - 108^\\circ - 90^\\circ = 162^\\circ \\)."
+      },
+      "ar": {
+        "question": "خماسي منتظم ومربع يشتركان تماماً في ضلع واحد ويقعان بالكامل خارج بعضهما البعض. ما هو قياس الزاوية المتكونة بين ضلعيهما المتجاورين غير المشتركين؟<br/><svg viewBox='0 0 200 180' class='w-full max-w-xs mx-auto bg-slate-900/60 rounded-xl p-2 border border-slate-700 shadow-md my-2'><rect x='70' y='90' width='60' height='60' fill='none' stroke='#38bdf8' stroke-width='2'/><polygon points='70,90 130,90 148.5,33 100,0 51.5,33' fill='none' stroke='#10b981' stroke-width='2'/><path d='M 130 110 A 20 20 0 0 0 140 75' fill='none' stroke='#f59e0b' stroke-width='2'/><text x='150' y='100' fill='#e2e8f0' font-size='14'>؟</text></svg>",
+        "options": [
+          "\\( 150^\\circ \\)",
+          "\\( 162^\\circ \\)",
+          "\\( 168^\\circ \\)",
+          "\\( 198^\\circ \\)"
+        ],
+        "hint": "الدائرة الكاملة حول الرأس الذي تلتقي فيه الأضلاع هي 360 درجة. أوجد الزاوية الداخلية للمربع والزاوية الداخلية للخماسي المنتظم، ثم اطرحهما من 360.",
+        "explanation": "لنحلل الرأس المشترك على الجانب الأيمن من القاعدة.\nمجموع الزوايا حول نقطة واحدة يشكل دائرة كاملة، وهي \\( 360^\\circ \\).\nالزاوية الداخلية للمربع هي \\( 90^\\circ \\).\nمجموع الزوايا الداخلية في الخماسي هو \\( (5-2) \\times 180^\\circ = 540^\\circ \\). وبما أنه خماسي منتظم، فإن كل زاوية داخلية تساوي \\( 540^\\circ \\div 5 = 108^\\circ \\).\nالزاوية المتكونة بين ضلعيهما المتجاورين غير المشتركين تكمل الدائرة التي تبلغ \\( 360^\\circ \\).\nوبالتالي، الزاوية = \\( 360^\\circ - 108^\\circ - 90^\\circ = 162^\\circ \\)."
+      }
+    },
+    "correct_index": "1"
+  },
+  {
+    "id": "NSMO-J1-05",
+    "track": "nsmo",
+    "level": "Phase 1: Junior Olympiad (Grades 5-7)",
+    "topic": "Divisibility",
+    "type": "MCQ",
+    "difficulty": "medium",
+    "content": {
+      "en": {
+        "question": "The product of all positive integers from \\( 1 \\) to \\( 30 \\) inclusive is denoted as \\( 30! \\) (30 factorial). How many consecutive zeros does this massive number end with?",
+        "options": [
+          "\\( 5 \\)",
+          "\\( 6 \\)",
+          "\\( 7 \\)",
+          "\\( 8 \\)"
+        ],
+        "hint": "A trailing zero is created by the product of the prime factors 2 and 5. Since 2s are abundant, count the total number of times the prime factor 5 appears in the product.",
+        "explanation": "To find the number of trailing zeros in a factorial, we only need to count the number of times the prime factor \\( 5 \\) appears in the prime factorization of \\( 30! \\) (because there are always plenty of \\( 2 \\)s to pair with the \\( 5 \\)s).\nWe use Legendre's formula:\n1) Count the multiples of \\( 5 \\) up to \\( 30 \\): \\( \\lfloor 30 \\div 5 \\rfloor = 6 \\).\n2) Count the multiples of \\( 25 \\) (since \\( 25 = 5^2 \\), it contributes an extra factor of 5): \\( \\lfloor 30 \\div 25 \\rfloor = 1 \\).\nAdd them together: \\( 6 + 1 = 7 \\).\nTherefore, \\( 30! \\) ends with exactly \\( 7 \\) consecutive zeros."
+      },
+      "ar": {
+        "question": "يُرمز لحاصل ضرب جميع الأعداد الصحيحة الموجبة من \\( 1 \\) إلى \\( 30 \\) بـ \\( 30! \\) (مضروب 30). بكم صفر متتالٍ ينتهي هذا العدد الضخم؟",
+        "options": [
+          "\\( 5 \\)",
+          "\\( 6 \\)",
+          "\\( 7 \\)",
+          "\\( 8 \\)"
+        ],
+        "hint": "يتم إنشاء الصفر في نهاية العدد من خلال ضرب العوامل الأولية 2 و 5. نظراً لأن العدد 2 متوفر بكثرة، احسب العدد الإجمالي لمرات ظهور العامل الأولي 5 في حاصل الضرب.",
+        "explanation": "لإيجاد عدد الأصفار المتتالية في نهاية مضروب، نحتاج فقط لإحصاء عدد المرات التي يظهر فيها العامل الأولي \\( 5 \\) في التحليل الأولي لـ \\( 30! \\) (لأنه يوجد دائماً الكثير من عوامل الـ \\( 2 \\) للاقتران مع الـ \\( 5 \\)).\nنستخدم صيغة ليجاندر:\n1) نحسب مضاعفات الـ \\( 5 \\) حتى \\( 30 \\): \\( \\lfloor 30 \\div 5 \\rfloor = 6 \\).\n2) نحسب مضاعفات الـ \\( 25 \\) (بما أن \\( 25 = 5^2 \\)، فإنه يساهم بعامل إضافي من 5): \\( \\lfloor 30 \\div 25 \\rfloor = 1 \\).\nنجمعهما معاً: \\( 6 + 1 = 7 \\).\nوبالتالي، ينتهي العدد \\( 30! \\) بـ \\( 7 \\) أصفار متتالية بالضبط."
+      }
+    },
+    "correct_index": "2"
+  },
+  {
+    "id": "NSMO-J1-06",
+    "track": "nsmo",
+    "level": "Phase 1: Junior Olympiad (Grades 5-7)",
+    "topic": "Parity",
+    "type": "MCQ",
+    "difficulty": "hard",
+    "content": {
+      "en": {
+        "question": "There are \\( 10 \\) coins laid out on a table, all showing Heads. In one move, you are required to choose exactly \\( 3 \\) different coins and flip them over. Is it possible to reach a state where all \\( 10 \\) coins show Tails? If so, what is the minimum number of moves required?",
+        "options": [
+          "Yes, exactly 4 moves",
+          "Yes, exactly 5 moves",
+          "Yes, exactly 6 moves",
+          "No, it is mathematically impossible"
+        ],
+        "hint": "Think about the parity of flips. For a coin to end up as Tails, it must be flipped an odd number of times. Total flips for all coins must be even. Each move contributes 3 flips.",
+        "explanation": "We want to change all 10 coins from Heads to Tails. This means every individual coin must be flipped an ODD number of times (e.g., 1, 3, 5 times).\nThe total number of flips for all 10 coins is the sum of 10 odd numbers. The sum of an even amount of odd numbers is ALWAYS an EVEN number.\nIn each move, we make exactly 3 flips. After \\( k \\) moves, the total number of flips is \\( 3k \\).\nSince the total flips must be EVEN, \\( k \\) MUST be an EVEN number. Let's try \\( k = 2 \\) and \\( k = 4 \\).\nIf \\( k = 2 \\) moves: Total flips = 6. We cannot flip all 10 coins at least once. Impossible.\nIf \\( k = 4 \\) moves: Total flips = 12. We can flip 9 coins exactly 1 time, and 1 coin exactly 3 times. The sum is \\( 9 \\times 1 + 1 \\times 3 = 12 \\).\nCan we schedule this? Let the coins be C1 to C10.\nMove 1: (C1, C2, C3)\nMove 2: (C1, C4, C5)\nMove 3: (C1, C6, C7)\nMove 4: (C8, C9, C10)\nCoin C1 is flipped 3 times (net 1 flip). Coins C2-C10 are flipped 1 time each. \nAll 10 coins are now Tails! The minimum is exactly 4 moves."
+      },
+      "ar": {
+        "question": "يوجد \\( 10 \\) عملات معدنية موضوعة على طاولة، وجميعها تظهر وجه 'الصورة' (Heads). في الخطوة الواحدة، يُطلب منك اختيار \\( 3 \\) عملات مختلفة بالضبط وقلبها. هل من الممكن الوصول إلى حالة تظهر فيها جميع العملات الـ \\( 10 \\) وجه 'الكتابة' (Tails)؟ إذا كان الأمر كذلك، فما هو الحد الأدنى لعدد الخطوات المطلوبة؟",
+        "options": [
+          "نعم، 4 خطوات بالضبط",
+          "نعم، 5 خطوات بالضبط",
+          "نعم، 6 خطوات بالضبط",
+          "لا، هذا مستحيل رياضياً"
+        ],
+        "hint": "فكر في زوجية (تكافؤ) عدد القلبات. لكي تنتهي العملة بوجه الكتابة، يجب أن تُقلب عدداً فردياً من المرات. العدد الإجمالي للقلبات لجميع العملات يجب أن يكون زوجياً. كل خطوة تساهم بـ 3 قلبات.",
+        "explanation": "نريد تغيير جميع العملات الـ 10 من 'صورة' إلى 'كتابة'. هذا يعني أن كل عملة فردية يجب أن تُقلب عدداً فردياً من المرات (مثلاً، مرة واحدة، 3، أو 5 مرات).\nإجمالي عدد القلبات لجميع العملات الـ 10 هو مجموع 10 أعداد فردية. مجموع عدد زوجي من الأعداد الفردية هو دائماً عدد زوجي.\nفي كل خطوة، نقوم بـ 3 قلبات بالضبط. بعد \\( k \\) خطوة، يكون إجمالي عدد القلبات هو \\( 3k \\).\nبما أن إجمالي القلبات يجب أن يكون زوجياً، فيجب أن يكون \\( k \\) عدداً زوجياً. لنجرب \\( k = 2 \\) و \\( k = 4 \\).\nإذا كانت \\( k = 2 \\) خطوات: إجمالي القلبات = 6. لا يمكننا قلب جميع العملات الـ 10 مرة واحدة على الأقل. مستحيل.\nإذا كانت \\( k = 4 \\) خطوات: إجمالي القلبات = 12. يمكننا قلب 9 عملات مرة واحدة بالضبط، وعملة واحدة 3 مرات بالضبط. المجموع هو \\( 9 \\times 1 + 1 \\times 3 = 12 \\).\nهل يمكننا ترتيب ذلك؟ لتكن العملات من C1 إلى C10.\nالخطوة 1: (C1, C2, C3)\nالخطوة 2: (C1, C4, C5)\nالخطوة 3: (C1, C6, C7)\nالخطوة 4: (C8, C9, C10)\nتُقلب العملة C1 ثلاث مرات (النتيجة الصافية هي قلبة واحدة). وتُقلب العملات من C2 إلى C10 مرة واحدة لكل منها.\nجميع العملات الـ 10 أصبحت الآن 'كتابة'! الحد الأدنى هو 4 خطوات بالضبط."
+      }
+    },
+    "correct_index": "0"
+  },
+  {
+    "id": "NSMO-J1-07",
+    "track": "nsmo",
+    "level": "Phase 1: Junior Olympiad (Grades 5-7)",
+    "topic": "Angle Chase",
+    "type": "MCQ",
+    "difficulty": "medium",
+    "content": {
+      "en": {
+        "question": "In triangle \\( ABC \\), the angle bisectors of \\( \\angle B \\) and \\( \\angle C \\) intersect at the incenter \\( I \\). If the measure of \\( \\angle BIC \\) is \\( 115^\\circ \\), what is the exact measure of \\( \\angle A \\)?<br/><svg viewBox='0 0 200 160' class='w-full max-w-xs mx-auto bg-slate-900/60 rounded-xl p-2 border border-slate-700 shadow-md my-2'><polygon points='100,20 40,120 160,120' fill='none' stroke='#38bdf8' stroke-width='2'/><line x1='40' y1='120' x2='100' y2='80' stroke='#10b981' stroke-width='2' stroke-dasharray='4,4'/><line x1='160' y1='120' x2='100' y2='80' stroke='#10b981' stroke-width='2' stroke-dasharray='4,4'/><text x='100' y='15' fill='#e2e8f0' font-size='12' text-anchor='middle'>A</text><text x='25' y='130' fill='#e2e8f0' font-size='12'>B</text><text x='165' y='130' fill='#e2e8f0' font-size='12'>C</text><text x='100' y='70' fill='#f59e0b' font-size='12' text-anchor='middle'>I</text><path d='M 85 92 A 15 15 0 0 0 115 92' fill='none' stroke='#f59e0b' stroke-width='2'/><text x='100' y='110' fill='#f59e0b' font-size='10' text-anchor='middle'>115°</text></svg>",
+        "options": [
+          "\\( 40^\\circ \\)",
+          "\\( 50^\\circ \\)",
+          "\\( 60^\\circ \\)",
+          "\\( 70^\\circ \\)"
+        ],
+        "hint": "In triangle BIC, the sum of the base angles is half the sum of angle B and angle C. Use the triangle angle sum theorem.",
+        "explanation": "In \\( \\triangle BIC \\), the angles are \\( \\frac{1}{2}\\angle B \\), \\( \\frac{1}{2}\\angle C \\), and \\( \\angle BIC \\).\nThe sum of angles in \\( \\triangle BIC \\) is \\( 180^\\circ \\):\n\\( \\frac{1}{2}\\angle B + \\frac{1}{2}\\angle C + 115^\\circ = 180^\\circ \\).\n\\( \\frac{1}{2}(\\angle B + \\angle C) = 180^\\circ - 115^\\circ = 65^\\circ \\).\nMultiply by 2:\n\\( \\angle B + \\angle C = 130^\\circ \\).\nNow look at the large triangle \\( ABC \\). The sum of all its angles is \\( 180^\\circ \\):\n\\( \\angle A + (\\angle B + \\angle C) = 180^\\circ \\).\n\\( \\angle A + 130^\\circ = 180^\\circ \\implies \\angle A = 50^\\circ \\).\n(A known formula for the incenter is \\( \\angle BIC = 90^\\circ + \\frac{\\angle A}{2} \\). Plugging in \\( 115^\\circ = 90^\\circ + \\frac{\\angle A}{2} \\) also yields \\( \\angle A = 50^\\circ \\))."
+      },
+      "ar": {
+        "question": "في المثلث \\( ABC \\)، يتقاطع منصفا الزاويتين \\( \\angle B \\) و \\( \\angle C \\) في مركز الدائرة الداخلية \\( I \\). إذا كان قياس الزاوية \\( \\angle BIC \\) هو \\( 115^\\circ \\)، فما هو القياس الدقيق للزاوية \\( \\angle A \\)؟<br/><svg viewBox='0 0 200 160' class='w-full max-w-xs mx-auto bg-slate-900/60 rounded-xl p-2 border border-slate-700 shadow-md my-2'><polygon points='100,20 40,120 160,120' fill='none' stroke='#38bdf8' stroke-width='2'/><line x1='40' y1='120' x2='100' y2='80' stroke='#10b981' stroke-width='2' stroke-dasharray='4,4'/><line x1='160' y1='120' x2='100' y2='80' stroke='#10b981' stroke-width='2' stroke-dasharray='4,4'/><text x='100' y='15' fill='#e2e8f0' font-size='12' text-anchor='middle'>A</text><text x='25' y='130' fill='#e2e8f0' font-size='12'>B</text><text x='165' y='130' fill='#e2e8f0' font-size='12'>C</text><text x='100' y='70' fill='#f59e0b' font-size='12' text-anchor='middle'>I</text><path d='M 85 92 A 15 15 0 0 0 115 92' fill='none' stroke='#f59e0b' stroke-width='2'/><text x='100' y='110' fill='#f59e0b' font-size='10' text-anchor='middle'>115°</text></svg>",
+        "options": [
+          "\\( 40^\\circ \\)",
+          "\\( 50^\\circ \\)",
+          "\\( 60^\\circ \\)",
+          "\\( 70^\\circ \\)"
+        ],
+        "hint": "في المثلث BIC، مجموع زاويتي القاعدة هو نصف مجموع الزاوية B والزاوية C. استخدم نظرية مجموع زوايا المثلث.",
+        "explanation": "في المثلث \\( \\triangle BIC \\)، الزوايا هي \\( \\frac{1}{2}\\angle B \\) و \\( \\frac{1}{2}\\angle C \\) و \\( \\angle BIC \\).\nمجموع الزوايا في \\( \\triangle BIC \\) هو \\( 180^\\circ \\):\n\\( \\frac{1}{2}\\angle B + \\frac{1}{2}\\angle C + 115^\\circ = 180^\\circ \\).\n\\( \\frac{1}{2}(\\angle B + \\angle C) = 180^\\circ - 115^\\circ = 65^\\circ \\).\nبالضرب في 2:\n\\( \\angle B + \\angle C = 130^\\circ \\).\nالآن انظر إلى المثلث الكبير \\( ABC \\). مجموع جميع زواياه هو \\( 180^\\circ \\):\n\\( \\angle A + (\\angle B + \\angle C) = 180^\\circ \\).\n\\( \\angle A + 130^\\circ = 180^\\circ \\implies \\angle A = 50^\\circ \\).\n(هناك صيغة معروفة لمركز الدائرة الداخلية وهي \\( \\angle BIC = 90^\\circ + \\frac{\\angle A}{2} \\). بالتعويض بـ \\( 115^\\circ = 90^\\circ + \\frac{\\angle A}{2} \\) نحصل أيضاً على \\( \\angle A = 50^\\circ \\))."
+      }
+    },
+    "correct_index": "1"
+  },
+  {
+    "id": "NSMO-J1-08",
+    "track": "nsmo",
+    "level": "Phase 1: Junior Olympiad (Grades 5-7)",
+    "topic": "Divisibility",
+    "type": "MCQ",
+    "difficulty": "medium",
+    "content": {
+      "en": {
+        "question": "What is the smallest positive integer that consists ONLY of the digit \\( 8 \\) and is completely divisible by \\( 9 \\)?",
+        "options": [
+          "\\( 888 \\)",
+          "\\( 888,888 \\)",
+          "\\( 888,888,888 \\)",
+          "\\( 88,888,888,888 \\)"
+        ],
+        "hint": "A number is divisible by 9 if the sum of its digits is a multiple of 9. How many 8s do you need to add together to reach a multiple of 9?",
+        "explanation": "According to the divisibility rule for 9, a number is divisible by 9 if and only if the sum of its digits is a multiple of 9.\nLet our number consist of \\( n \\) digits of \\( 8 \\).\nThe sum of the digits will be \\( 8 \\times n \\).\nWe want \\( 8n \\) to be a multiple of 9.\nSince 8 and 9 share no common factors (they are relatively prime), \\( n \\) itself must be a multiple of 9.\nThe smallest positive multiple of 9 is \\( 9 \\).\nTherefore, the number must have exactly 9 digits, all of which are 8s.\nThe smallest such number is \\( 888,888,888 \\)."
+      },
+      "ar": {
+        "question": "ما هو أصغر عدد صحيح موجب يتكون فقط من الرقم \\( 8 \\) ويقبل القسمة تماماً على \\( 9 \\)؟",
+        "options": [
+          "\\( 888 \\)",
+          "\\( 888,888 \\)",
+          "\\( 888,888,888 \\)",
+          "\\( 88,888,888,888 \\)"
+        ],
+        "hint": "يقبل العدد القسمة على 9 إذا كان مجموع أرقامه من مضاعفات الـ 9. كم عدد الثمانيات التي تحتاج إلى جمعها معاً للوصول إلى مضاعف للـ 9؟",
+        "explanation": "وفقاً لقاعدة قابلية القسمة على 9، يكون العدد قابلاً للقسمة على 9 إذا وفقط إذا كان مجموع أرقامه من مضاعفات الـ 9.\nليكن عددنا مكوناً من \\( n \\) خانة من الرقم \\( 8 \\).\nسيكون مجموع الأرقام هو \\( 8 \\times n \\).\nنريد أن يكون \\( 8n \\) من مضاعفات الـ 9.\nبما أن 8 و 9 ليس بينهما عوامل مشتركة (أوليان فيما بينهما)، فإن \\( n \\) نفسه يجب أن يكون من مضاعفات الـ 9.\nأصغر مضاعف موجب للرقم 9 هو \\( 9 \\).\nلذلك، يجب أن يحتوي العدد على 9 خانات بالضبط، جميعها 8.\nأصغر عدد من هذا القبيل هو \\( 888,888,888 \\)."
+      }
+    },
+    "correct_index": "2"
+  },
+  {
+    "id": "NSMO-J1-09",
+    "track": "nsmo",
+    "level": "Phase 1: Junior Olympiad (Grades 5-7)",
+    "topic": "Parity",
+    "type": "MCQ",
+    "difficulty": "medium",
+    "content": {
+      "en": {
+        "question": "The sum of \\( 11 \\) consecutive integers is \\( 110 \\). How many of these \\( 11 \\) integers are odd numbers?",
+        "options": [
+          "\\( 4 \\)",
+          "\\( 5 \\)",
+          "\\( 6 \\)",
+          "\\( 7 \\)"
+        ],
+        "hint": "Find the middle integer of the sequence by dividing the total sum by 11. Then write out the sequence.",
+        "explanation": "When summing an odd number of consecutive integers, the middle integer is exactly the average of the sequence.\nThe average is \\( 110 \\div 11 = 10 \\).\nSo, the middle (the 6th integer) is \\( 10 \\).\nThis means there are 5 integers before it and 5 integers after it.\nThe sequence is: \\( 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15 \\).\nLet's count the odd numbers in this sequence: \\( 5, 7, 9, 11, 13, \\) and \\( 15 \\).\nThere are exactly \\( 6 \\) odd numbers."
+      },
+      "ar": {
+        "question": "مجموع \\( 11 \\) عدداً صحيحاً متتالياً هو \\( 110 \\). كم عدد الأرقام الفردية من ضمن هذه الأعداد الـ \\( 11 \\)؟",
+        "options": [
+          "\\( 4 \\)",
+          "\\( 5 \\)",
+          "\\( 6 \\)",
+          "\\( 7 \\)"
+        ],
+        "hint": "أوجد العدد الأوسط في التسلسل بقسمة المجموع الإجمالي على 11. ثم اكتب التسلسل.",
+        "explanation": "عند جمع عدد فردي من الأعداد الصحيحة المتتالية، يكون العدد الأوسط هو متوسط التسلسل بالضبط.\nالمتوسط هو \\( 110 \\div 11 = 10 \\).\nإذن، العدد الأوسط (الرقم السادس) هو \\( 10 \\).\nهذا يعني أن هناك 5 أعداد قبله و 5 أعداد بعده.\nالتسلسل هو: \\( 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15 \\).\nلنحصي الأعداد الفردية في هذا التسلسل: \\( 5, 7, 9, 11, 13, \\) و \\( 15 \\).\nيوجد بالضبط \\( 6 \\) أعداد فردية."
+      }
+    },
+    "correct_index": "2"
+  },
+  {
+    "id": "NSMO-J1-10",
+    "track": "nsmo",
+    "level": "Phase 1: Junior Olympiad (Grades 5-7)",
+    "topic": "Angle Chase",
+    "type": "MCQ",
+    "difficulty": "medium",
+    "content": {
+      "en": {
+        "question": "A hexagram is a standard 6-pointed star formed by perfectly overlapping two identical equilateral triangles. What is the total sum of the angles at the \\( 6 \\) outer tips of this star?<br/><svg viewBox='0 0 200 200' class='w-full max-w-xs mx-auto bg-slate-900/60 rounded-xl p-2 border border-slate-700 shadow-md my-2'><polygon points='100,10 178,145 22,145' fill='none' stroke='#38bdf8' stroke-width='2'/><polygon points='100,190 22,55 178,55' fill='none' stroke='#10b981' stroke-width='2'/><path d='M 100 35 A 15 15 0 0 0 100 10' fill='none' stroke='#f59e0b' stroke-width='2'/><text x='100' y='45' fill='#f59e0b' font-size='12' text-anchor='middle'>?</text></svg>",
+        "options": [
+          "\\( 180^\\circ \\)",
+          "\\( 360^\\circ \\)",
+          "\\( 540^\\circ \\)",
+          "\\( 720^\\circ \\)"
+        ],
+        "hint": "Consider the shapes that make up the star. How many triangles form the tips?",
+        "explanation": "A hexagram (6-pointed star) is constructed by drawing two overlapping equilateral triangles.\nThe sum of the angles inside a single triangle is \\( 180^\\circ \\).\nSince there are two full equilateral triangles forming the 6 points of the star, the sum of all their angles is simply \\( 2 \\times 180^\\circ = 360^\\circ \\).\nAlternatively, each tip of the star is the vertex of an equilateral triangle, measuring \\( 60^\\circ \\). With 6 tips, the total sum is \\( 6 \\times 60^\\circ = 360^\\circ \\)."
+      },
+      "ar": {
+        "question": "النجمة السداسية (الهكساغرام) هي نجمة قياسية ذات 6 رؤوس تتكون من تداخل مثلثين متطابقي الأضلاع ومتماثلين تماماً. ما هو المجموع الكلي للزوايا عند الأطراف الخارجية الـ \\( 6 \\) لهذه النجمة؟<br/><svg viewBox='0 0 200 200' class='w-full max-w-xs mx-auto bg-slate-900/60 rounded-xl p-2 border border-slate-700 shadow-md my-2'><polygon points='100,10 178,145 22,145' fill='none' stroke='#38bdf8' stroke-width='2'/><polygon points='100,190 22,55 178,55' fill='none' stroke='#10b981' stroke-width='2'/><path d='M 100 35 A 15 15 0 0 0 100 10' fill='none' stroke='#f59e0b' stroke-width='2'/><text x='100' y='45' fill='#f59e0b' font-size='12' text-anchor='middle'>؟</text></svg>",
+        "options": [
+          "\\( 180^\\circ \\)",
+          "\\( 360^\\circ \\)",
+          "\\( 540^\\circ \\)",
+          "\\( 720^\\circ \\)"
+        ],
+        "hint": "تأمل الأشكال التي تتكون منها النجمة. كم عدد المثلثات التي تشكل الأطراف؟",
+        "explanation": "يتم رسم النجمة السداسية (ذات 6 رؤوس) عن طريق رسم مثلثين متطابقي الأضلاع متداخلين.\nمجموع الزوايا داخل مثلث واحد هو \\( 180^\\circ \\).\nبما أن هناك مثلثين كاملين متطابقي الأضلاع يشكلان رؤوس النجمة الـ 6، فإن مجموع كل زواياهما هو ببساطة \\( 2 \\times 180^\\circ = 360^\\circ \\).\nطريقة أخرى: كل طرف من أطراف النجمة هو رأس لمثلث متطابق الأضلاع، وقياسه \\( 60^\\circ \\). بوجود 6 أطراف، يكون المجموع الكلي \\( 6 \\times 60^\\circ = 360^\\circ \\)."
+      }
+    },
+    "correct_index": "1"
+  },
+  {
+    "id": "NSMO-J1-11",
+    "track": "nsmo",
+    "level": "Phase 1: Junior Olympiad (Grades 5-7)",
+    "topic": "Divisibility",
+    "type": "MCQ",
+    "difficulty": "medium",
+    "content": {
+      "en": {
+        "question": "What is the largest \\( 3 \\)-digit number that is a common multiple of \\( 12, 15, \\) and \\( 20 \\)?",
+        "options": [
+          "\\( 900 \\)",
+          "\\( 960 \\)",
+          "\\( 980 \\)",
+          "\\( 990 \\)"
+        ],
+        "hint": "First, find the Least Common Multiple (LCM) of 12, 15, and 20. Then find the largest multiple of that LCM strictly under 1000.",
+        "explanation": "To be a multiple of \\( 12, 15, \\) and \\( 20 \\), a number must be a multiple of their Least Common Multiple (LCM).\nLet's find the LCM of 12, 15, and 20 by prime factorization:\n\\( 12 = 2^2 \\times 3 \\)\n\\( 15 = 3 \\times 5 \\)\n\\( 20 = 2^2 \\times 5 \\)\nLCM = \\( 2^2 \\times 3 \\times 5 = 4 \\times 3 \\times 5 = 60 \\).\nWe need the largest 3-digit multiple of 60. The largest 3-digit number is 999.\nLet's divide 999 by 60: \\( 999 \\div 60 = 16.65 \\).\nSo, the highest integer multiplier is \\( 16 \\).\n\\( 16 \\times 60 = 960 \\).\nThe largest 3-digit common multiple is \\( 960 \\)."
+      },
+      "ar": {
+        "question": "ما هو أكبر عدد مكون من \\( 3 \\) خانات ويعتبر مضاعفاً مشتركاً للأعداد \\( 12, 15, \\) و \\( 20 \\)؟",
+        "options": [
+          "\\( 900 \\)",
+          "\\( 960 \\)",
+          "\\( 980 \\)",
+          "\\( 990 \\)"
+        ],
+        "hint": "أولاً، أوجد المضاعف المشترك الأصغر (LCM) للأعداد 12 و 15 و 20. ثم أوجد أكبر مضاعف لذلك العدد (LCM) بحيث يكون أقل تماماً من 1000.",
+        "explanation": "لكي يكون العدد مضاعفاً للأعداد \\( 12, 15, \\) و \\( 20 \\)، يجب أن يكون مضاعفاً لمضاعفها المشترك الأصغر (LCM).\nلنجد المضاعف المشترك الأصغر بالتحليل إلى العوامل الأولية:\n\\( 12 = 2^2 \\times 3 \\)\n\\( 15 = 3 \\times 5 \\)\n\\( 20 = 2^2 \\times 5 \\)\nالمضاعف المشترك الأصغر = \\( 2^2 \\times 3 \\times 5 = 4 \\times 3 \\times 5 = 60 \\).\nنحتاج إلى أكبر مضاعف للعدد 60 مكون من 3 خانات. أكبر عدد من 3 خانات هو 999.\nنقسم 999 على 60: \\( 999 \\div 60 = 16.65 \\).\nإذن، أعلى مضاعف صحيح هو \\( 16 \\).\n\\( 16 \\times 60 = 960 \\).\nأكبر مضاعف مشترك من 3 خانات هو \\( 960 \\)."
+      }
+    },
+    "correct_index": "1"
+  },
+  {
+    "id": "NSMO-J1-12",
+    "track": "nsmo",
+    "level": "Phase 1: Junior Olympiad (Grades 5-7)",
+    "topic": "Parity",
+    "type": "MCQ",
+    "difficulty": "medium",
+    "content": {
+      "en": {
+        "question": "In a classroom of exactly \\( 13 \\) students, is it mathematically possible for every single student to be friends with exactly \\( 3 \\) other students in the room? (Assume friendship is always mutual).",
+        "options": [
+          "Yes, if they are arranged in a circular group",
+          "Yes, if they are split into two groups",
+          "No, because the total number of friendships would be a fraction",
+          "No, because the total number of friendships must be an even number"
+        ],
+        "hint": "This is an application of the Handshaking Lemma from graph theory. If you multiply the number of people by the number of friends, it must be an even number.",
+        "explanation": "In graph theory, this is modeled by nodes (students) and edges (friendships). The Handshaking Lemma states that the sum of the degrees of all nodes in a graph must be an EVEN number, because every edge connects two nodes and is therefore counted twice.\nIf every student has exactly 3 friends, the sum of all degrees would be \\( 13 \\times 3 = 39 \\).\nHowever, 39 is an ODD number, which contradicts the lemma. Therefore, such an arrangement is mathematically impossible."
+      },
+      "ar": {
+        "question": "في فصل دراسي يضم \\( 13 \\) طالباً بالضبط، هل من الممكن رياضياً أن يكون كل طالب صديقاً لـ \\( 3 \\) طلاب آخرين بالضبط في الفصل؟ (بافتراض أن الصداقة متبادلة دائماً).",
+        "options": [
+          "نعم، إذا تم ترتيبهم في مجموعة دائرية",
+          "نعم، إذا تم تقسيمهم إلى مجموعتين",
+          "لا، لأن العدد الإجمالي للصداقات سيكون كسراً",
+          "لا، لأن العدد الإجمالي للصداقات يجب أن يكون عدداً زوجياً"
+        ],
+        "hint": "هذا تطبيق لمبرهنة المصافحات من نظرية المخططات (البيانات). إذا ضربت عدد الأشخاص في عدد الأصدقاء، فيجب أن يكون الناتج عدداً زوجياً.",
+        "explanation": "في نظرية المخططات، تُمثل هذه الحالة بنقاط (طلاب) وحواف (صداقات). تنص مبرهنة المصافحات على أن مجموع درجات جميع النقاط في أي مخطط يجب أن يكون عدداً زوجياً، لأن كل حافة تربط بين نقطتين وبالتالي تُحسب مرتين.\nإذا كان لكل طالب 3 أصدقاء بالضبط، فسيكون مجموع جميع الدرجات هو \\( 13 \\times 3 = 39 \\).\nومع ذلك، 39 هو عدد فردي، مما يتناقض مع المبرهنة. لذلك، مثل هذا الترتيب مستحيل رياضياً."
+      }
+    },
+    "correct_index": "3"
+  },
+  {
+    "id": "NSMO-J1-13",
+    "track": "nsmo",
+    "level": "Phase 1: Junior Olympiad (Grades 5-7)",
+    "topic": "Angle Chase",
+    "type": "MCQ",
+    "difficulty": "hard",
+    "content": {
+      "en": {
+        "question": "In a regular octagon \\( ABCDEFGH \\), the diagonal \\( AD \\) is drawn. What is the exact measure of the angle \\( \\angle DAB \\)?<br/><svg viewBox='0 0 200 200' class='w-full max-w-xs mx-auto bg-slate-900/60 rounded-xl p-2 border border-slate-700 shadow-md my-2'><polygon points='100,20 156,43 180,100 156,157 100,180 44,157 20,100 44,43' fill='none' stroke='#38bdf8' stroke-width='2'/><line x1='100' y1='20' x2='156' y2='157' stroke='#10b981' stroke-width='2'/><text x='100' y='15' fill='#e2e8f0' font-size='12' text-anchor='middle'>A</text><text x='165' y='40' fill='#e2e8f0' font-size='12'>B</text><text x='190' y='105' fill='#e2e8f0' font-size='12'>C</text><text x='165' y='170' fill='#e2e8f0' font-size='12'>D</text><path d='M 115 26 A 20 20 0 0 0 110 35' fill='none' stroke='#f59e0b' stroke-width='2'/><text x='125' y='40' fill='#f59e0b' font-size='12'>?</text></svg>",
+        "options": [
+          "\\( 30^\\circ \\)",
+          "\\( 45^\\circ \\)",
+          "\\( 60^\\circ \\)",
+          "\\( 67.5^\\circ \\)"
+        ],
+        "hint": "Every regular polygon can be inscribed in a circle. The octagon divides the circle into 8 equal arcs. What is the inscribed angle that intercepts arc BCD?",
+        "explanation": "A regular octagon can be perfectly inscribed in a circle. Since it has 8 sides, it divides the circle into 8 equal arcs. \nThe measure of each arc is \\( 360^\\circ \\div 8 = 45^\\circ \\).\nThe angle \\( \\angle DAB \\) is an inscribed angle whose vertices lie on the circle. It intercepts the arc from \\( B \\) to \\( D \\), passing through \\( C \\).\nThis intercepted arc consists of exactly two sides of the octagon (arc \\( BC \\) and arc \\( CD \\)).\nThe total measure of the intercepted arc is \\( 45^\\circ + 45^\\circ = 90^\\circ \\).\nA fundamental circle theorem states that an inscribed angle is exactly half the measure of its intercepted arc.\nTherefore, \\( \\angle DAB = 90^\\circ \\div 2 = 45^\\circ \\)."
+      },
+      "ar": {
+        "question": "في المثمن المنتظم \\( ABCDEFGH \\)، رُسم القطر \\( AD \\). ما هو القياس الدقيق للزاوية \\( \\angle DAB \\)؟<br/><svg viewBox='0 0 200 200' class='w-full max-w-xs mx-auto bg-slate-900/60 rounded-xl p-2 border border-slate-700 shadow-md my-2'><polygon points='100,20 156,43 180,100 156,157 100,180 44,157 20,100 44,43' fill='none' stroke='#38bdf8' stroke-width='2'/><line x1='100' y1='20' x2='156' y2='157' stroke='#10b981' stroke-width='2'/><text x='100' y='15' fill='#e2e8f0' font-size='12' text-anchor='middle'>A</text><text x='165' y='40' fill='#e2e8f0' font-size='12'>B</text><text x='190' y='105' fill='#e2e8f0' font-size='12'>C</text><text x='165' y='170' fill='#e2e8f0' font-size='12'>D</text><path d='M 115 26 A 20 20 0 0 0 110 35' fill='none' stroke='#f59e0b' stroke-width='2'/><text x='125' y='40' fill='#f59e0b' font-size='12'>؟</text></svg>",
+        "options": [
+          "\\( 30^\\circ \\)",
+          "\\( 45^\\circ \\)",
+          "\\( 60^\\circ \\)",
+          "\\( 67.5^\\circ \\)"
+        ],
+        "hint": "يمكن رسم دائرة محيطة بأي مضلع منتظم. يقسم المثمن الدائرة إلى 8 أقواس متساوية. ما هي الزاوية المحيطية التي تحصر القوس BCD؟",
+        "explanation": "يمكن رسم دائرة محيطة تمر بجميع رؤوس المثمن المنتظم. بما أن له 8 أضلاع، فإنه يقسم الدائرة إلى 8 أقواس متساوية.\nقياس كل قوس هو \\( 360^\\circ \\div 8 = 45^\\circ \\).\nالزاوية \\( \\angle DAB \\) هي زاوية محيطية تقع رؤوسها على الدائرة. إنها تحصر القوس من \\( B \\) إلى \\( D \\)، مروراً بالنقطة \\( C \\).\nيتكون هذا القوس المحصور من ضلعين بالضبط للمثمن (القوس \\( BC \\) والقوس \\( CD \\)).\nالقياس الإجمالي للقوس المحصور هو \\( 45^\\circ + 45^\\circ = 90^\\circ \\).\nتنص نظرية أساسية في الدائرة على أن الزاوية المحيطية تساوي بالضبط نصف قياس القوس الذي تحصره.\nلذلك، \\( \\angle DAB = 90^\\circ \\div 2 = 45^\\circ \\)."
+      }
+    },
+    "correct_index": "1"
+  },
+  {
+    "id": "NSMO-J1-14",
+    "track": "nsmo",
+    "level": "Phase 1: Junior Olympiad (Grades 5-7)",
+    "topic": "Divisibility",
+    "type": "MCQ",
+    "difficulty": "hard",
+    "content": {
+      "en": {
+        "question": "A massive number is given by its prime factorization: \\( N = 2^3 \\times 3^2 \\times 5^4 \\). How many of the positive divisors of \\( N \\) are perfect squares?",
+        "options": [
+          "\\( 4 \\)",
+          "\\( 6 \\)",
+          "\\( 8 \\)",
+          "\\( 12 \\)"
+        ],
+        "hint": "For a divisor to be a perfect square, all the exponents in its prime factorization must be even numbers. Choose the valid even exponents for 2, 3, and 5.",
+        "explanation": "Any divisor of \\( N \\) will have the form \\( 2^a \\times 3^b \\times 5^c \\), where:\n\\( 0 \\le a \\le 3 \\)\n\\( 0 \\le b \\le 2 \\)\n\\( 0 \\le c \\le 4 \\)\nFor the divisor to be a perfect square, the exponents \\( a, b, \\) and \\( c \\) must all be EVEN numbers (including 0).\n- Possible even values for \\( a \\) (from 0 to 3): {0, 2} (2 options).\n- Possible even values for \\( b \\) (from 0 to 2): {0, 2} (2 options).\n- Possible even values for \\( c \\) (from 0 to 4): {0, 2, 4} (3 options).\nThe total number of perfect square divisors is the product of the number of options for each exponent:\nTotal = \\( 2 \\times 2 \\times 3 = 12 \\)."
+      },
+      "ar": {
+        "question": "تم إعطاء عدد ضخم من خلال تحليله إلى العوامل الأولية: \\( N = 2^3 \\times 3^2 \\times 5^4 \\). كم عدد القواسم الموجبة للعدد \\( N \\) التي تمثل مربعات كاملة؟",
+        "options": [
+          "\\( 4 \\)",
+          "\\( 6 \\)",
+          "\\( 8 \\)",
+          "\\( 12 \\)"
+        ],
+        "hint": "لكي يكون القاسم مربعاً كاملاً، يجب أن تكون جميع الأسس في تحليله الأولي أعداداً زوجية. اختر الأسس الزوجية الصالحة للأعداد 2 و 3 و 5.",
+        "explanation": "أي قاسم للعدد \\( N \\) سيكون على الصورة \\( 2^a \\times 3^b \\times 5^c \\)، حيث:\n\\( 0 \\le a \\le 3 \\)\n\\( 0 \\le b \\le 2 \\)\n\\( 0 \\le c \\le 4 \\)\nلكي يكون القاسم مربعاً كاملاً، يجب أن تكون الأسس \\( a, b, \\) و \\( c \\) جميعها أعداداً زوجية (بما في ذلك الصفر).\n- القيم الزوجية الممكنة لـ \\( a \\) (من 0 إلى 3): {0, 2} (خياران).\n- القيم الزوجية الممكنة لـ \\( b \\) (من 0 إلى 2): {0, 2} (خياران).\n- القيم الزوجية الممكنة لـ \\( c \\) (من 0 إلى 4): {0, 2, 4} (3 خيارات).\nإجمالي عدد القواسم التي تمثل مربعات كاملة هو حاصل ضرب عدد الخيارات لكل أس:\nالإجمالي = \\( 2 \\times 2 \\times 3 = 12 \\)."
+      }
+    },
+    "correct_index": "3"
+  },
+  {
+    "id": "NSMO-J1-15",
+    "track": "nsmo",
+    "level": "Phase 1: Junior Olympiad (Grades 5-7)",
+    "topic": "Parity",
+    "type": "MCQ",
+    "difficulty": "hard",
+    "content": {
+      "en": {
+        "question": "A box contains exactly \\( 12 \\) white balls and \\( 15 \\) black balls. You blindly reach in and draw two balls at a time. \n- If they are the same color, you discard them and put a white ball back into the box.\n- If they are different colors, you discard them and put a black ball back into the box.\n(Assume you have an infinite supply of spare balls). This process is repeated until only one ball remains. What can you definitively say about the color of the last remaining ball?",
+        "options": [
+          "It must be white.",
+          "It must be black.",
+          "It depends on the order they were drawn.",
+          "It can be either color."
+        ],
+        "hint": "Analyze how the number of black balls changes in each of the three possible draw scenarios (WW, BB, WB). Look for a parity invariant.",
+        "explanation": "Let's analyze the change in the number of Black (B) balls for every possible pair drawn:\n1) Draw White-White (WW): We put back a White. Net change to Black balls is 0.\n2) Draw Black-Black (BB): We put back a White. Net change to Black balls is -2.\n3) Draw White-Black (WB): We put back a Black. Net change to Black balls is -1 (drawn) + 1 (put back) = 0.\nNotice that in all three possible scenarios, the number of Black balls decreases by either 0 or 2.\nThis means the PARITY (odd/even status) of the number of Black balls is an invariant. It never changes!\nInitially, there are 15 Black balls, which is an ODD number. Therefore, the number of Black balls in the box will ALWAYS be an odd number.\nWhen only 1 ball is left in the box, it cannot be 0 Black balls (because 0 is an even number). It must be exactly 1 Black ball.\nThus, the last ball MUST be black."
+      },
+      "ar": {
+        "question": "صندوق يحتوي على \\( 12 \\) كرة بيضاء و \\( 15 \\) كرة سوداء بالضبط. تقوم بمد يدك وأنت معصوب العينين لسحب كرتين في كل مرة.\n- إذا كانتا من نفس اللون، تستبعدهما وتعيد كرة بيضاء إلى الصندوق.\n- إذا كانتا من لونين مختلفين، تستبعدهما وتعيد كرة سوداء إلى الصندوق.\n(افترض أن لديك إمداداً لا نهائياً من الكرات الاحتياطية). تتكرر هذه العملية حتى تتبقى كرة واحدة فقط في الصندوق. ماذا يمكنك القول بشكل قاطع عن لون الكرة الأخيرة المتبقية؟",
+        "options": [
+          "يجب أن تكون بيضاء.",
+          "يجب أن تكون سوداء.",
+          "يعتمد ذلك على الترتيب الذي تم سحبها به.",
+          "يمكن أن تكون من أي من اللونين."
+        ],
+        "hint": "حلل كيف يتغير عدد الكرات السوداء في كل سيناريو من السيناريوهات الثلاثة المحتملة للسحب (أبيض-أبيض، أسود-أسود، أبيض-أسود). ابحث عن ثابت في التكافؤ (الزوجية والفردية).",
+        "explanation": "دعونا نحلل التغيير في عدد الكرات السوداء (B) لكل زوج محتمل يتم سحبه:\n1) سحب أبيض-أبيض (WW): نعيد كرة بيضاء. التغير الصافي للكرات السوداء هو 0.\n2) سحب أسود-أسود (BB): نعيد كرة بيضاء. التغير الصافي للكرات السوداء هو -2.\n3) سحب أبيض-أسود (WB): نعيد كرة سوداء. التغير الصافي للكرات السوداء هو -1 (مسحوبة) + 1 (معادة) = 0.\nلاحظ أنه في جميع السيناريوهات الثلاثة المحتملة، ينخفض عدد الكرات السوداء إما بمقدار 0 أو 2.\nهذا يعني أن حالة التكافؤ (فردي/زوجي) لعدد الكرات السوداء هي كمية ثابتة لا تتغير أبداً!\nفي البداية، كان هناك 15 كرة سوداء، وهو عدد فردي. لذلك، سيكون عدد الكرات السوداء في الصندوق دائماً عدداً فردياً.\nعندما تتبقى كرة واحدة فقط في الصندوق، لا يمكن أن يكون عدد الكرات السوداء 0 (لأن الصفر عدد زوجي). يجب أن تكون هناك كرة سوداء واحدة بالضبط.\nوبالتالي، الكرة الأخيرة يجب أن تكون سوداء."
+      }
+    },
+    "correct_index": "1"
+  },
+  {
+    "id": "NSMO-J1-16",
+    "track": "nsmo",
+    "level": "Phase 1: Junior Olympiad (Grades 5-7)",
+    "topic": "Angle Chase",
+    "type": "MCQ",
+    "difficulty": "hard",
+    "content": {
+      "en": {
+        "question": "In a rectangle \\( ABCD \\), the diagonal \\( AC \\) is drawn, and the angle \\( \\angle CAB = 20^\\circ \\). An equilateral triangle \\( ACE \\) is drawn sharing the diagonal \\( AC \\), such that point \\( E \\) is on the same side of \\( AC \\) as point \\( D \\). What is the exact measure of the angle \\( \\angle EAD \\)?<br/><svg viewBox='0 0 200 160' class='w-full max-w-xs mx-auto bg-slate-900/60 rounded-xl p-2 border border-slate-700 shadow-md my-2'><rect x='40' y='40' width='120' height='80' fill='none' stroke='#38bdf8' stroke-width='2'/><line x1='40' y1='120' x2='160' y2='40' stroke='#10b981' stroke-width='2'/><polygon points='40,120 160,40 140,150' fill='none' stroke='#f59e0b' stroke-width='2'/><text x='30' y='130' fill='#e2e8f0' font-size='12'>A</text><text x='30' y='35' fill='#e2e8f0' font-size='12'>B</text><text x='170' y='35' fill='#e2e8f0' font-size='12'>C</text><text x='170' y='130' fill='#e2e8f0' font-size='12'>D</text><text x='140' y='165' fill='#e2e8f0' font-size='12'>E</text><path d='M 60 120 A 20 20 0 0 1 55 125' fill='none' stroke='#10b981' stroke-width='2'/><text x='70' y='125' fill='#e2e8f0' font-size='10'>?</text></svg>",
+        "options": [
+          "\\( 10^\\circ \\)",
+          "\\( 20^\\circ \\)",
+          "\\( 30^\\circ \\)",
+          "\\( 40^\\circ \\)"
+        ],
+        "hint": "Find angle CAD first by subtracting 20 from the rectangle's 90-degree corner. Then use the 60-degree angle from the equilateral triangle.",
+        "explanation": "In the rectangle \\( ABCD \\), the corner angle at \\( A \\) is exactly \\( 90^\\circ \\). Therefore, \\( \\angle DAB = 90^\\circ \\).\nThe diagonal \\( AC \\) splits this corner into two angles: \\( \\angle CAD \\) and \\( \\angle CAB \\).\nSince \\( \\angle CAB = 20^\\circ \\), we have \\( \\angle CAD = 90^\\circ - 20^\\circ = 70^\\circ \\).\nThe triangle \\( ACE \\) is an equilateral triangle, which means all its interior angles are exactly \\( 60^\\circ \\). So, \\( \\angle CAE = 60^\\circ \\).\nBecause point \\( E \\) is positioned on the same side of the diagonal \\( AC \\) as point \\( D \\), the angle \\( \\angle CAE \\) is located entirely within the angle \\( \\angle CAD \\).\nTherefore, the small remaining angle \\( \\angle EAD \\) is the difference between them:\n\\( \\angle EAD = \\angle CAD - \\angle CAE = 70^\\circ - 60^\\circ = 10^\\circ \\)."
+      },
+      "ar": {
+        "question": "في المستطيل \\( ABCD \\)، رُسم القطر \\( AC \\)، والزاوية \\( \\angle CAB = 20^\\circ \\). تم رسم مثلث متطابق الأضلاع \\( ACE \\) يشترك في القطر \\( AC \\)، بحيث تقع النقطة \\( E \\) في نفس الجهة من \\( AC \\) التي تقع فيها النقطة \\( D \\). ما هو القياس الدقيق للزاوية \\( \\angle EAD \\)؟<br/><svg viewBox='0 0 200 160' class='w-full max-w-xs mx-auto bg-slate-900/60 rounded-xl p-2 border border-slate-700 shadow-md my-2'><rect x='40' y='40' width='120' height='80' fill='none' stroke='#38bdf8' stroke-width='2'/><line x1='40' y1='120' x2='160' y2='40' stroke='#10b981' stroke-width='2'/><polygon points='40,120 160,40 140,150' fill='none' stroke='#f59e0b' stroke-width='2'/><text x='30' y='130' fill='#e2e8f0' font-size='12'>A</text><text x='30' y='35' fill='#e2e8f0' font-size='12'>B</text><text x='170' y='35' fill='#e2e8f0' font-size='12'>C</text><text x='170' y='130' fill='#e2e8f0' font-size='12'>D</text><text x='140' y='165' fill='#e2e8f0' font-size='12'>E</text><path d='M 60 120 A 20 20 0 0 1 55 125' fill='none' stroke='#10b981' stroke-width='2'/><text x='70' y='125' fill='#e2e8f0' font-size='10'>؟</text></svg>",
+        "options": [
+          "\\( 10^\\circ \\)",
+          "\\( 20^\\circ \\)",
+          "\\( 30^\\circ \\)",
+          "\\( 40^\\circ \\)"
+        ],
+        "hint": "أوجد الزاوية CAD أولاً بطرح 20 من زاوية المستطيل القائمة 90 درجة. ثم استخدم الزاوية 60 درجة من المثلث متطابق الأضلاع.",
+        "explanation": "في المستطيل \\( ABCD \\)، الزاوية عند الركن \\( A \\) هي زاوية قائمة تماماً \\( 90^\\circ \\). لذلك، \\( \\angle DAB = 90^\\circ \\).\nيقسم القطر \\( AC \\) هذه الزاوية إلى زاويتين: \\( \\angle CAD \\) و \\( \\angle CAB \\).\nبما أن \\( \\angle CAB = 20^\\circ \\)، فلدينا \\( \\angle CAD = 90^\\circ - 20^\\circ = 70^\\circ \\).\nالمثلث \\( ACE \\) هو مثلث متطابق الأضلاع، مما يعني أن جميع زواياه الداخلية تساوي \\( 60^\\circ \\) تماماً. إذن، \\( \\angle CAE = 60^\\circ \\).\nلأن النقطة \\( E \\) تقع على نفس الجانب من القطر \\( AC \\) مثل النقطة \\( D \\)، فإن الزاوية \\( \\angle CAE \\) تقع بالكامل داخل الزاوية \\( \\angle CAD \\).\nوبالتالي، الزاوية الصغيرة المتبقية \\( \\angle EAD \\) هي الفرق بينهما:\n\\( \\angle EAD = \\angle CAD - \\angle CAE = 70^\\circ - 60^\\circ = 10^\\circ \\)."
+      }
+    },
+    "correct_index": "0"
+  },
+  {
+    "id": "NSMO-J1-17",
+    "track": "nsmo",
+    "level": "Phase 1: Junior Olympiad (Grades 5-7)",
+    "topic": "Divisibility",
+    "type": "MCQ",
+    "difficulty": "medium",
+    "content": {
+      "en": {
+        "question": "A teacher wants to divide her class of exactly \\( 36 \\) students into equal-sized teams. If each team must have at least \\( 3 \\) students and at most \\( 10 \\) students, how many different valid team sizes are possible?",
+        "options": [
+          "\\( 3 \\)",
+          "\\( 4 \\)",
+          "\\( 5 \\)",
+          "\\( 6 \\)"
+        ],
+        "hint": "Since the teams must be equal in size, the number of students per team must be a factor (divisor) of 36. List the divisors of 36 between 3 and 10.",
+        "explanation": "For the 36 students to be divided into equal-sized teams, the number of students per team must perfectly divide 36 (i.e., it must be a factor or divisor of 36).\nThe positive divisors of 36 are: \\( 1, 2, 3, 4, 6, 9, 12, 18, 36 \\).\nThe condition states that the team size must be between 3 and 10 (inclusive).\nLet's check our list of divisors for those that fall into the range \\( [3, 10] \\):\nThe valid sizes are: \\( 3, 4, 6, \\) and \\( 9 \\).\nThere are exactly \\( 4 \\) different possible team sizes."
+      },
+      "ar": {
+        "question": "تريد معلمة تقسيم فصلها المكون من \\( 36 \\) طالباً بالضبط إلى فِرَق متساوية الحجم. إذا كان يجب أن يضم كل فريق \\( 3 \\) طلاب على الأقل و \\( 10 \\) طلاب على الأكثر، فكم عدد أحجام الفِرَق المختلفة والممكنة؟",
+        "options": [
+          "\\( 3 \\)",
+          "\\( 4 \\)",
+          "\\( 5 \\)",
+          "\\( 6 \\)"
+        ],
+        "hint": "بما أن الفرق يجب أن تكون متساوية الحجم، يجب أن يكون عدد الطلاب في الفريق الواحد من قواسم (عوامل) العدد 36. اذكر قواسم 36 بين 3 و 10.",
+        "explanation": "لكي يتم تقسيم الطلاب الـ 36 إلى فِرَق متساوية الحجم، يجب أن يكون عدد الطلاب في كل فريق قابلاً للقسمة تماماً على 36 (أي يجب أن يكون عاملاً أو قاسماً للعدد 36).\nالقواسم الموجبة للعدد 36 هي: \\( 1, 2, 3, 4, 6, 9, 12, 18, 36 \\).\nينص الشرط على أن حجم الفريق يجب أن يكون بين 3 و 10 (بما في ذلك 3 و 10).\nدعونا نتحقق من قائمة القواسم للأرقام التي تقع في النطاق \\( [3, 10] \\):\nالأحجام الصالحة هي: \\( 3, 4, 6, \\) و \\( 9 \\).\nيوجد بالضبط \\( 4 \\) أحجام مختلفة وممكنة للفِرَق."
+      }
+    },
+    "correct_index": "1"
+  },
+  {
+    "id": "NSMO-J1-18",
+    "track": "nsmo",
+    "level": "Phase 1: Junior Olympiad (Grades 5-7)",
+    "topic": "Parity",
+    "type": "MCQ",
+    "difficulty": "medium",
+    "content": {
+      "en": {
+        "question": "Consider the sum of the squares of the first \\( 10 \\) positive integers:\n\\[ S = 1^2 + 2^2 + 3^2 + 4^2 + \\dots + 10^2 \\]\nWhat is the parity (even/odd property) of this total sum \\( S \\)?",
+        "options": [
+          "It is an EVEN number",
+          "It is an ODD number",
+          "It is a multiple of 10",
+          "Cannot be determined without full calculation"
+        ],
+        "hint": "The square of an even number is even, and the square of an odd number is odd. Count how many odd numbers are being added together.",
+        "explanation": "To determine the parity of a sum, we only need to look at the parity of the individual terms.\nThere is a fundamental rule for squares: \\( \\text{Even}^2 = \\text{Even} \\), and \\( \\text{Odd}^2 = \\text{Odd} \\).\nIn the sequence from 1 to 10, there are exactly 5 odd numbers (1, 3, 5, 7, 9) and exactly 5 even numbers (2, 4, 6, 8, 10).\nWhen we square them, we get 5 odd squares and 5 even squares.\nAdding even numbers together always gives an even result.\nAdding odd numbers together is like adding 1s. The sum of 5 odd numbers is ODD (because 5 is an odd quantity).\nFinally, adding the sum of the even squares to the sum of the odd squares gives: \\( \\text{Even} + \\text{Odd} = \\text{Odd} \\).\nThe final sum \\( S \\) must be an ODD number.\n*(For verification: the actual sum is 385, which is indeed odd).*."
+      },
+      "ar": {
+        "question": "تأمل مجموع مربعات الأعداد الصحيحة الموجبة الـ \\( 10 \\) الأولى:\n\\[ S = 1^2 + 2^2 + 3^2 + 4^2 + \\dots + 10^2 \\]\nما هي خاصية التكافؤ (زوجي/فردي) لهذا المجموع الكلي \\( S \\)؟",
+        "options": [
+          "إنه عدد زوجي",
+          "إنه عدد فردي",
+          "إنه من مضاعفات الـ 10",
+          "لا يمكن التحديد بدون حساب كامل"
+        ],
+        "hint": "مربع العدد الزوجي هو عدد زوجي، ومربع العدد الفردي هو عدد فردي. احسب كم عدد الأعداد الفردية التي يتم جمعها معاً.",
+        "explanation": "لتحديد تكافؤ المجموع، نحتاج فقط إلى النظر في تكافؤ الحدود الفردية.\nهناك قاعدة أساسية للمربعات: \\( \\text{زوجي}^2 = \\text{زوجي} \\)، و \\( \\text{فردي}^2 = \\text{فردي} \\).\nفي التسلسل من 1 إلى 10، يوجد بالضبط 5 أعداد فردية (1، 3، 5، 7، 9) و 5 أعداد زوجية (2، 4، 6، 8، 10).\nعند تربيعها، نحصل على 5 مربعات فردية و 5 مربعات زوجية.\nجمع الأعداد الزوجية معاً يعطي دائماً نتيجة زوجية.\nجمع الأعداد الفردية معاً يشبه جمع الآحاد. مجموع 5 أعداد فردية هو عدد فردي (لأن 5 هو كمية فردية).\nأخيراً، إضافة مجموع المربعات الزوجية إلى مجموع المربعات الفردية يعطي: \\( \\text{زوجي} + \\text{فردي} = \\text{فردي} \\).\nيجب أن يكون المجموع النهائي \\( S \\) عدداً فردياً.\n*(للتحقق: المجموع الفعلي هو 385، وهو بالفعل فردي).*."
+      }
+    },
+    "correct_index": "1"
+  },
+  {
+    "id": "NSMO-J1-19",
+    "track": "nsmo",
+    "level": "Phase 1: Junior Olympiad (Grades 5-7)",
+    "topic": "Angle Chase",
+    "type": "MCQ",
+    "difficulty": "medium",
+    "content": {
+      "en": {
+        "question": "In an isosceles triangle \\( ABC \\) where \\( AB = AC \\), a line segment is drawn from vertex \\( B \\) to a point \\( D \\) on the side \\( AC \\) such that \\( BD = BC \\). If the vertex angle \\( \\angle A = 40^\\circ \\), what is the exact measure of the angle \\( \\angle ABD \\)?<br/><svg viewBox='0 0 200 160' class='w-full max-w-xs mx-auto bg-slate-900/60 rounded-xl p-2 border border-slate-700 shadow-md my-2'><polygon points='100,20 40,140 160,140' fill='none' stroke='#38bdf8' stroke-width='2'/><line x1='40' y1='140' x2='120' y2='80' stroke='#10b981' stroke-width='2'/><text x='100' y='15' fill='#e2e8f0' font-size='12' text-anchor='middle'>A</text><text x='25' y='145' fill='#e2e8f0' font-size='12'>B</text><text x='165' y='145' fill='#e2e8f0' font-size='12'>C</text><text x='130' y='75' fill='#e2e8f0' font-size='12'>D</text><path d='M 95 35 A 15 15 0 0 0 105 35' fill='none' stroke='#f59e0b' stroke-width='2'/><text x='100' y='50' fill='#f59e0b' font-size='10' text-anchor='middle'>40°</text><path d='M 50 120 A 15 15 0 0 1 55 130' fill='none' stroke='#f59e0b' stroke-width='2'/><text x='65' y='125' fill='#f59e0b' font-size='10'>?</text></svg>",
+        "options": [
+          "\\( 20^\\circ \\)",
+          "\\( 30^\\circ \\)",
+          "\\( 40^\\circ \\)",
+          "\\( 50^\\circ \\)"
+        ],
+        "hint": "Find the large base angles of ABC first. Then analyze the smaller isosceles triangle BDC to find its angles.",
+        "explanation": "Since \\( AB = AC \\), the large triangle \\( ABC \\) is an isosceles triangle. Therefore, its base angles at \\( B \\) and \\( C \\) are equal.\nThe sum of angles in a triangle is \\( 180^\\circ \\).\n\\( \\angle ABC = \\angle C = (180^\\circ - \\angle A) \\div 2 = (180^\\circ - 40^\\circ) \\div 2 = 140^\\circ \\div 2 = 70^\\circ \\).\nWe are given that the segment \\( BD = BC \\). This makes the smaller triangle \\( BDC \\) an isosceles triangle as well.\nIts base angles are \\( \\angle BDC \\) and \\( \\angle C \\). Thus, \\( \\angle BDC = \\angle C = 70^\\circ \\).\nThe sum of angles in \\( \\triangle BDC \\) is \\( 180^\\circ \\), so the top angle of this small triangle is \\( \\angle DBC = 180^\\circ - (70^\\circ + 70^\\circ) = 40^\\circ \\).\nThe full angle at \\( B \\) is \\( \\angle ABC = 70^\\circ \\).\nThe angle we want to find is \\( \\angle ABD \\), which is the remaining part of angle \\( B \\).\n\\( \\angle ABD = \\angle ABC - \\angle DBC = 70^\\circ - 40^\\circ = 30^\\circ \\)."
+      },
+      "ar": {
+        "question": "في المثلث متطابق الضلعين \\( ABC \\) حيث \\( AB = AC \\)، رُسمت قطعة مستقيمة من الرأس \\( B \\) إلى النقطة \\( D \\) على الضلع \\( AC \\) بحيث كان \\( BD = BC \\). إذا كانت زاوية الرأس \\( \\angle A = 40^\\circ \\)، فما هو القياس الدقيق للزاوية \\( \\angle ABD \\)؟<br/><svg viewBox='0 0 200 160' class='w-full max-w-xs mx-auto bg-slate-900/60 rounded-xl p-2 border border-slate-700 shadow-md my-2'><polygon points='100,20 40,140 160,140' fill='none' stroke='#38bdf8' stroke-width='2'/><line x1='40' y1='140' x2='120' y2='80' stroke='#10b981' stroke-width='2'/><text x='100' y='15' fill='#e2e8f0' font-size='12' text-anchor='middle'>A</text><text x='25' y='145' fill='#e2e8f0' font-size='12'>B</text><text x='165' y='145' fill='#e2e8f0' font-size='12'>C</text><text x='130' y='75' fill='#e2e8f0' font-size='12'>D</text><path d='M 95 35 A 15 15 0 0 0 105 35' fill='none' stroke='#f59e0b' stroke-width='2'/><text x='100' y='50' fill='#f59e0b' font-size='10' text-anchor='middle'>40°</text><path d='M 50 120 A 15 15 0 0 1 55 130' fill='none' stroke='#f59e0b' stroke-width='2'/><text x='65' y='125' fill='#f59e0b' font-size='10'>؟</text></svg>",
+        "options": [
+          "\\( 20^\\circ \\)",
+          "\\( 30^\\circ \\)",
+          "\\( 40^\\circ \\)",
+          "\\( 50^\\circ \\)"
+        ],
+        "hint": "أوجد زاويتي القاعدة الكبيرتين للمثلث ABC أولاً. ثم حلل المثلث الأصغر متطابق الضلعين BDC لإيجاد زواياه.",
+        "explanation": "بما أن \\( AB = AC \\)، فإن المثلث الكبير \\( ABC \\) هو مثلث متطابق الضلعين. ولذلك، فإن زاويتي قاعدته عند \\( B \\) و \\( C \\) متساويتان.\nمجموع زوايا المثلث هو \\( 180^\\circ \\).\n\\( \\angle ABC = \\angle C = (180^\\circ - \\angle A) \\div 2 = (180^\\circ - 40^\\circ) \\div 2 = 140^\\circ \\div 2 = 70^\\circ \\).\nلقد أُعطينا أن القطعة \\( BD = BC \\). هذا يجعل المثلث الأصغر \\( BDC \\) مثلثاً متطابق الضلعين أيضاً.\nزاويتا قاعدته هما \\( \\angle BDC \\) و \\( \\angle C \\). بالتالي، \\( \\angle BDC = \\angle C = 70^\\circ \\).\nمجموع زوايا المثلث \\( \\triangle BDC \\) هو \\( 180^\\circ \\)، لذا الزاوية العلوية لهذا المثلث الصغير هي \\( \\angle DBC = 180^\\circ - (70^\\circ + 70^\\circ) = 40^\\circ \\).\nالزاوية الكاملة عند \\( B \\) هي \\( \\angle ABC = 70^\\circ \\).\nالزاوية التي نريد إيجادها هي \\( \\angle ABD \\)، وهي الجزء المتبقي من الزاوية \\( B \\).\n\\( \\angle ABD = \\angle ABC - \\angle DBC = 70^\\circ - 40^\\circ = 30^\\circ \\)."
+      }
+    },
+    "correct_index": "1"
+  },
+  {
+    "id": "NSMO-J1-20",
+    "track": "nsmo",
+    "level": "Phase 1: Junior Olympiad (Grades 5-7)",
+    "topic": "Divisibility",
+    "type": "MCQ",
+    "difficulty": "hard",
+    "content": {
+      "en": {
+        "question": "A palindrome is a number that reads exactly the same forwards and backwards (e.g., \\( 1221 \\) or \\( 535 \\)). What is the SMALLEST \\( 4 \\)-digit palindrome that is perfectly divisible by \\( 6 \\)?",
+        "options": [
+          "\\( 2002 \\)",
+          "\\( 2112 \\)",
+          "\\( 2222 \\)",
+          "\\( 2442 \\)"
+        ],
+        "hint": "To be divisible by 6, the palindrome must be even (divisible by 2) and its digits must sum to a multiple of 3. What is the smallest even digit you can use for the first/last place?",
+        "explanation": "Let the 4-digit palindrome be represented algebraically as \\( abba \\).\nFor the number to be divisible by \\( 6 \\), it must be divisible by both \\( 2 \\) and \\( 3 \\).\n1) Divisibility by 2: The number must be even. This means the last digit \\( a \\) must be even. Since it's a 4-digit number, \\( a \\) cannot be \\( 0 \\). To make the number as small as possible, we should choose the smallest non-zero even digit, so \\( a = 2 \\). The number is now \\( 2bb2 \\).\n2) Divisibility by 3: The sum of the digits must be a multiple of 3.\nSum = \\( 2 + b + b + 2 = 4 + 2b \\).\nWe want to find the smallest digit \\( b \\) (from 0 to 9) that makes \\( 4 + 2b \\) a multiple of 3.\n- If \\( b = 0 \\): Sum = \\( 4 + 0 = 4 \\) (Not a multiple of 3).\n- If \\( b = 1 \\): Sum = \\( 4 + 2 = 6 \\) (Yes! This is a multiple of 3).\nSo, \\( b = 1 \\) satisfies all conditions and creates the smallest possible number.\nThe palindrome is \\( 2112 \\)."
+      },
+      "ar": {
+        "question": "العدد المتناظر (البلايندروم) هو عدد يُقرأ من الأمام إلى الخلف تماماً كما يُقرأ من الخلف إلى الأمام (مثل \\( 1221 \\) أو \\( 535 \\)). ما هو أصغر عدد متناظر مكون من \\( 4 \\) أرقام ويقبل القسمة تماماً على \\( 6 \\)؟",
+        "options": [
+          "\\( 2002 \\)",
+          "\\( 2112 \\)",
+          "\\( 2222 \\)",
+          "\\( 2442 \\)"
+        ],
+        "hint": "لكي يقبل العدد المتناظر القسمة على 6، يجب أن يكون زوجياً (يقبل القسمة على 2) وأن يكون مجموع أرقامه من مضاعفات الـ 3. ما هو أصغر رقم زوجي يمكنك استخدامه في الخانة الأولى/الأخيرة؟",
+        "explanation": "ليكن العدد المتناظر المكون من 4 أرقام ممثلاً جبرياً كـ \\( abba \\).\nلكي يكون العدد قابلاً للقسمة على \\( 6 \\)، يجب أن يقبل القسمة على كل من \\( 2 \\) و \\( 3 \\).\n1) قابلية القسمة على 2: يجب أن يكون العدد زوجياً. هذا يعني أن الرقم الأخير \\( a \\) يجب أن يكون زوجياً. وبما أنه عدد من 4 أرقام، فلا يمكن أن يكون \\( a \\) مساوياً لـ \\( 0 \\). لجعل العدد صغيراً قدر الإمكان، يجب أن نختار أصغر رقم زوجي غير صفري، إذن \\( a = 2 \\). أصبح العدد الآن \\( 2bb2 \\).\n2) قابلية القسمة على 3: يجب أن يكون مجموع الأرقام من مضاعفات الـ 3.\nالمجموع = \\( 2 + b + b + 2 = 4 + 2b \\).\nنريد إيجاد أصغر رقم لـ \\( b \\) (من 0 إلى 9) يجعل \\( 4 + 2b \\) من مضاعفات الـ 3.\n- إذا كان \\( b = 0 \\): المجموع = \\( 4 + 0 = 4 \\) (ليس من مضاعفات 3).\n- إذا كان \\( b = 1 \\): المجموع = \\( 4 + 2 = 6 \\) (نعم! هذا من مضاعفات 3).\nإذن، \\( b = 1 \\) يلبي جميع الشروط ويصنع أصغر عدد ممكن.\nالعدد المتناظر هو \\( 2112 \\)."
+      }
+    },
+    "correct_index": "1"
   }
 ]
