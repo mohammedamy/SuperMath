@@ -21198,5 +21198,705 @@
       }
     },
     "correct_index": "0"
+  },
+  {
+    "id": "KAN-BEN-01",
+    "track": "kangaroo",
+    "level": "Benjamin",
+    "topic": "Balance Scales",
+    "type": "MCQ",
+    "difficulty": "medium",
+    "content": {
+      "en": {
+        "question": "Two balance scales are perfectly balanced. The first scale balances \\( 2 \\) squares with \\( 3 \\) triangles and \\( 1 \\) circle. The second scale balances \\( 1 \\) square with \\( 1 \\) triangle and \\( 2 \\) circles. How many circles are needed to perfectly balance exactly \\( 1 \\) triangle?<br/><svg viewBox='0 0 300 120' class='w-full max-w-xs mx-auto bg-slate-900/60 rounded-xl p-2 border border-slate-700 shadow-md my-2'><polygon points='30,100 70,100 50,80' fill='#475569'/><line x1='10' y1='80' x2='90' y2='80' stroke='#94a3b8' stroke-width='3'/><rect x='19' y='68' width='12' height='12' fill='#38bdf8'/><rect x='19' y='55' width='12' height='12' fill='#38bdf8'/><polygon points='75,68 69,80 81,80' fill='#10b981'/><polygon points='85,68 79,80 91,80' fill='#10b981'/><polygon points='65,68 59,80 71,80' fill='#10b981'/><circle cx='75' cy='62' r='6' fill='#f59e0b'/><polygon points='230,100 270,100 250,80' fill='#475569'/><line x1='210' y1='80' x2='290' y2='80' stroke='#94a3b8' stroke-width='3'/><rect x='219' y='68' width='12' height='12' fill='#38bdf8'/><polygon points='275,68 269,80 281,80' fill='#10b981'/><circle cx='265' cy='74' r='6' fill='#f59e0b'/><circle cx='285' cy='74' r='6' fill='#f59e0b'/></svg>",
+        "options": [
+          "\\( 1 \\)",
+          "\\( 2 \\)",
+          "\\( 3 \\)",
+          "\\( 4 \\)",
+          "\\( 5 \\)"
+        ],
+        "hint": "Translate the scales into algebraic equations and substitute the value of a square from the second scale into the first one.",
+        "explanation": "Let \\( S \\) be Square, \\( T \\) be Triangle, and \\( C \\) be Circle.\nScale 1: \\( 2S = 3T + 1C \\)\nScale 2: \\( 1S = 1T + 2C \\)\nSubstitute \\( S \\) in the first equation: \\( 2(1T + 2C) = 3T + 1C \\).\nExpand: \\( 2T + 4C = 3T + 1C \\).\nSubtract \\( 2T \\) and \\( 1C \\) from both sides: \\( 3C = 1T \\).\nTherefore, \\( 3 \\) circles perfectly balance \\( 1 \\) triangle."
+      },
+      "ar": {
+        "question": "ميزانان في حالة توازن تام. الميزان الأول يعادل مربعين مع \\( 3 \\) مثلثات ودائرة واحدة. الميزان الثاني يعادل مربعاً واحداً مع مثلث واحد ودائرتين. كم عدد الدوائر اللازمة لمعادلة مثلث واحد تماماً؟<br/><svg viewBox='0 0 300 120' class='w-full max-w-xs mx-auto bg-slate-900/60 rounded-xl p-2 border border-slate-700 shadow-md my-2'><polygon points='30,100 70,100 50,80' fill='#475569'/><line x1='10' y1='80' x2='90' y2='80' stroke='#94a3b8' stroke-width='3'/><rect x='19' y='68' width='12' height='12' fill='#38bdf8'/><rect x='19' y='55' width='12' height='12' fill='#38bdf8'/><polygon points='75,68 69,80 81,80' fill='#10b981'/><polygon points='85,68 79,80 91,80' fill='#10b981'/><polygon points='65,68 59,80 71,80' fill='#10b981'/><circle cx='75' cy='62' r='6' fill='#f59e0b'/><polygon points='230,100 270,100 250,80' fill='#475569'/><line x1='210' y1='80' x2='290' y2='80' stroke='#94a3b8' stroke-width='3'/><rect x='219' y='68' width='12' height='12' fill='#38bdf8'/><polygon points='275,68 269,80 281,80' fill='#10b981'/><circle cx='265' cy='74' r='6' fill='#f59e0b'/><circle cx='285' cy='74' r='6' fill='#f59e0b'/></svg>",
+        "options": [
+          "\\( 1 \\)",
+          "\\( 2 \\)",
+          "\\( 3 \\)",
+          "\\( 4 \\)",
+          "\\( 5 \\)"
+        ],
+        "hint": "حول الموازين إلى معادلات جبرية وعوّض بقيمة المربع من الميزان الثاني في الميزان الأول.",
+        "explanation": "ليكن \\( S \\) هو المربع، و \\( T \\) المثلث، و \\( C \\) الدائرة.\nالميزان 1: \\( 2S = 3T + 1C \\)\nالميزان 2: \\( 1S = 1T + 2C \\)\nنعوض بـ \\( S \\) في المعادلة الأولى: \\( 2(1T + 2C) = 3T + 1C \\).\nنفك الأقواس: \\( 2T + 4C = 3T + 1C \\).\nنطرح \\( 2T \\) و \\( 1C \\) من الطرفين: \\( 3C = 1T \\).\nلذلك، \\( 3 \\) دوائر تعادل تماماً مثلثاً واحداً."
+      }
+    },
+    "correct_index": "2"
+  },
+  {
+    "id": "KAN-BEN-02",
+    "track": "kangaroo",
+    "level": "Benjamin",
+    "topic": "Spatial 3D Nets",
+    "type": "MCQ",
+    "difficulty": "medium",
+    "content": {
+      "en": {
+        "question": "The figure below shows a net that can be folded to form a cube. Which number will be on the face exactly opposite to the face with the number \\( 6 \\)?<br/><svg viewBox='0 0 200 140' class='w-full max-w-xs mx-auto bg-slate-900/60 rounded-xl p-2 border border-slate-700 shadow-md my-2'><g fill='none' stroke='#38bdf8' stroke-width='2'><rect x='85' y='20' width='30' height='30'/><rect x='85' y='50' width='30' height='30'/><rect x='85' y='80' width='30' height='30'/><rect x='85' y='110' width='30' height='30'/><rect x='55' y='50' width='30' height='30'/><rect x='115' y='50' width='30' height='30'/></g><g fill='#e2e8f0' font-size='16' text-anchor='middle'><text x='100' y='41'>1</text><text x='100' y='71'>2</text><text x='100' y='101'>3</text><text x='100' y='131'>4</text><text x='70' y='71'>5</text><text x='130' y='71'>6</text></g></svg>",
+        "options": [
+          "\\( 1 \\)",
+          "\\( 2 \\)",
+          "\\( 3 \\)",
+          "\\( 4 \\)",
+          "\\( 5 \\)"
+        ],
+        "hint": "When folding a cross-shaped net, faces that are adjacent to the central square fold up to become opposite side walls.",
+        "explanation": "Let's fold the cube mentally. If we take face 2 as the front face, face 1 folds to be the top, and face 3 folds to be the bottom. The side faces 5 and 6 fold backwards to form the left and right walls. Therefore, face 5 and face 6 end up exactly opposite each other. (Similarly, 1 opposes 3, and 2 opposes 4)."
+      },
+      "ar": {
+        "question": "يوضح الشكل أدناه شبكة يمكن طيها لتشكيل مكعب. ما الرقم الذي سيكون على الوجه المقابل تماماً للوجه الذي يحمل الرقم \\( 6 \\)؟<br/><svg viewBox='0 0 200 140' class='w-full max-w-xs mx-auto bg-slate-900/60 rounded-xl p-2 border border-slate-700 shadow-md my-2'><g fill='none' stroke='#38bdf8' stroke-width='2'><rect x='85' y='20' width='30' height='30'/><rect x='85' y='50' width='30' height='30'/><rect x='85' y='80' width='30' height='30'/><rect x='85' y='110' width='30' height='30'/><rect x='55' y='50' width='30' height='30'/><rect x='115' y='50' width='30' height='30'/></g><g fill='#e2e8f0' font-size='16' text-anchor='middle'><text x='100' y='41'>1</text><text x='100' y='71'>2</text><text x='100' y='101'>3</text><text x='100' y='131'>4</text><text x='70' y='71'>5</text><text x='130' y='71'>6</text></g></svg>",
+        "options": [
+          "\\( 1 \\)",
+          "\\( 2 \\)",
+          "\\( 3 \\)",
+          "\\( 4 \\)",
+          "\\( 5 \\)"
+        ],
+        "hint": "عند طي شبكة على شكل صليب، تُطوى الأوجه المجاورة للمربع المركزي لتصبح الجدران الجانبية المتقابلة.",
+        "explanation": "لنتخيل طي المكعب. إذا اعتبرنا الوجه 2 هو الوجه الأمامي، يُطوى الوجه 1 ليصبح السقف، ويُطوى الوجه 3 ليصبح القاعدة. أما الأوجه الجانبية 5 و 6 فتُطوى للخلف لتشكل الجدارين الأيسر والأيمن. بالتالي، ينتهي المطاف بالوجه 5 والوجه 6 ليقابلا بعضهما البعض تماماً. (وبالمثل، 1 يقابل 3، و 2 يقابل 4)."
+      }
+    },
+    "correct_index": "4"
+  },
+  {
+    "id": "KAN-BEN-03",
+    "track": "kangaroo",
+    "level": "Benjamin",
+    "topic": "Perimeter Puzzles",
+    "type": "MCQ",
+    "difficulty": "hard",
+    "content": {
+      "en": {
+        "question": "A large rectangle is perfectly constructed using \\( 3 \\) identical smaller rectangles. Two are placed vertically, and one is placed horizontally on top of them. If the perimeter of one small rectangle is \\( 30 \\text{ cm} \\), what is the total perimeter of the large rectangle?<br/><svg viewBox='0 0 200 140' class='w-full max-w-xs mx-auto bg-slate-900/60 rounded-xl p-2 border border-slate-700 shadow-md my-2'><g fill='none' stroke='#10b981' stroke-width='2'><rect x='60' y='50' width='40' height='70'/><rect x='100' y='50' width='40' height='70'/><rect x='60' y='10' width='80' height='40'/></g></svg>",
+        "options": [
+          "\\( 40 \\text{ cm} \\)",
+          "\\( 45 \\text{ cm} \\)",
+          "\\( 50 \\text{ cm} \\)",
+          "\\( 55 \\text{ cm} \\)",
+          "\\( 60 \\text{ cm} \\)"
+        ],
+        "hint": "Look at the alignment: the length of one small rectangle spans exactly twice its width.",
+        "explanation": "Let the width of a small rectangle be \\( W \\) and its length be \\( L \\).\nBecause the horizontal rectangle exactly covers the tops of the two vertical rectangles, its length is equal to twice its width: \\( L = 2W \\).\nThe perimeter of a small rectangle is \\( 2L + 2W = 30 \\).\nSubstitute \\( L = 2W \\): \\( 2(2W) + 2W = 30 \\implies 4W + 2W = 30 \\implies 6W = 30 \\implies W = 5 \\text{ cm} \\).\nThis means \\( L = 10 \\text{ cm} \\).\nThe large rectangle has a total width of \\( L = 10 \\text{ cm} \\) and a total height of \\( L + W = 10 + 5 = 15 \\text{ cm} \\).\nThe perimeter of the large rectangle is \\( 2(10 + 15) = 2(25) = 50 \\text{ cm} \\)."
+      },
+      "ar": {
+        "question": "تم بناء مستطيل كبير بإحكام باستخدام \\( 3 \\) مستطيلات صغيرة متطابقة. وُضع اثنان منها عمودياً، ووُضع الثالث أفقياً فوقهما. إذا كان محيط المستطيل الصغير الواحد هو \\( 30 \\text{ سم} \\)، فما هو المحيط الإجمالي للمستطيل الكبير؟<br/><svg viewBox='0 0 200 140' class='w-full max-w-xs mx-auto bg-slate-900/60 rounded-xl p-2 border border-slate-700 shadow-md my-2'><g fill='none' stroke='#10b981' stroke-width='2'><rect x='60' y='50' width='40' height='70'/><rect x='100' y='50' width='40' height='70'/><rect x='60' y='10' width='80' height='40'/></g></svg>",
+        "options": [
+          "\\( 40 \\text{ سم} \\)",
+          "\\( 45 \\text{ سم} \\)",
+          "\\( 50 \\text{ سم} \\)",
+          "\\( 55 \\text{ سم} \\)",
+          "\\( 60 \\text{ سم} \\)"
+        ],
+        "hint": "انظر إلى المحاذاة: طول المستطيل الصغير يمتد ليساوي ضعف عرضه تماماً.",
+        "explanation": "ليكن عرض المستطيل الصغير \\( W \\) وطوله \\( L \\).\nنظراً لأن المستطيل الأفقي يغطي تماماً قمتي المستطيلين العموديين، فإن طوله يساوي ضعف عرضه: \\( L = 2W \\).\nمحيط المستطيل الصغير هو \\( 2L + 2W = 30 \\).\nبالتعويض بـ \\( L = 2W \\): \\( 2(2W) + 2W = 30 \\implies 4W + 2W = 30 \\implies 6W = 30 \\implies W = 5 \\text{ سم} \\).\nهذا يعني أن \\( L = 10 \\text{ سم} \\).\nالمستطيل الكبير له عرض كلي قدره \\( L = 10 \\text{ سم} \\) وارتفاع كلي \\( L + W = 10 + 5 = 15 \\text{ سم} \\).\nمحيط المستطيل الكبير هو \\( 2(10 + 15) = 2(25) = 50 \\text{ سم} \\)."
+      }
+    },
+    "correct_index": "2"
+  },
+  {
+    "id": "KAN-BEN-04",
+    "track": "kangaroo",
+    "level": "Benjamin",
+    "topic": "Area Puzzles",
+    "type": "MCQ",
+    "difficulty": "medium",
+    "content": {
+      "en": {
+        "question": "Two squares with side lengths of \\( 8 \\) cm and \\( 10 \\) cm overlap to form a combined shape. The area of the overlapping region is \\( 16 \\) cm\\(^2\\). What is the difference between the areas of their non-overlapping regions?<br/><svg viewBox='0 0 200 140' class='w-full max-w-xs mx-auto bg-slate-900/60 rounded-xl p-2 border border-slate-700 shadow-md my-2'><rect x='40' y='20' width='64' height='64' fill='none' stroke='#38bdf8' stroke-width='2'/><rect x='80' y='44' width='80' height='80' fill='none' stroke='#10b981' stroke-width='2'/><rect x='80' y='44' width='24' height='40' fill='#f59e0b' fill-opacity='0.4'/></svg>",
+        "options": [
+          "\\( 16 \\text{ cm}^2 \\)",
+          "\\( 24 \\text{ cm}^2 \\)",
+          "\\( 36 \\text{ cm}^2 \\)",
+          "\\( 48 \\text{ cm}^2 \\)",
+          "\\( 64 \\text{ cm}^2 \\)"
+        ],
+        "hint": "Calculate the total area of each square. Subtract the overlap from both to find their respective non-overlapping parts, then subtract them.",
+        "explanation": "Area of the small square = \\( 8 \\times 8 = 64 \\text{ cm}^2 \\).\nArea of the large square = \\( 10 \\times 10 = 100 \\text{ cm}^2 \\).\nNon-overlapping area of the small square = \\( 64 - 16 = 48 \\text{ cm}^2 \\).\nNon-overlapping area of the large square = \\( 100 - 16 = 84 \\text{ cm}^2 \\).\nThe difference between these non-overlapping regions is \\( 84 - 48 = 36 \\text{ cm}^2 \\).\n(Notice that subtracting the overlap from both sides mathematically cancels it out: \\( 100 - 64 = 36 \\)!)"
+      },
+      "ar": {
+        "question": "مربعان طول ضلعيها \\( 8 \\) سم و \\( 10 \\) سم يتداخلان لتشكيل شكل مركب. مساحة منطقة التداخل هي \\( 16 \\) سم\\(^2\\). ما هو الفرق بين مساحتي المناطق غير المتداخلة لكلا المربعين؟<br/><svg viewBox='0 0 200 140' class='w-full max-w-xs mx-auto bg-slate-900/60 rounded-xl p-2 border border-slate-700 shadow-md my-2'><rect x='40' y='20' width='64' height='64' fill='none' stroke='#38bdf8' stroke-width='2'/><rect x='80' y='44' width='80' height='80' fill='none' stroke='#10b981' stroke-width='2'/><rect x='80' y='44' width='24' height='40' fill='#f59e0b' fill-opacity='0.4'/></svg>",
+        "options": [
+          "\\( 16 \\text{ سم}^2 \\)",
+          "\\( 24 \\text{ سم}^2 \\)",
+          "\\( 36 \\text{ سم}^2 \\)",
+          "\\( 48 \\text{ سم}^2 \\)",
+          "\\( 64 \\text{ سم}^2 \\)"
+        ],
+        "hint": "احسب المساحة الكلية لكل مربع. اطرح مساحة التداخل منهما لإيجاد أجزائهما غير المتداخلة، ثم احسب الفرق بينهما.",
+        "explanation": "مساحة المربع الصغير = \\( 8 \\times 8 = 64 \\text{ سم}^2 \\).\nمساحة المربع الكبير = \\( 10 \\times 10 = 100 \\text{ سم}^2 \\).\nالمساحة غير المتداخلة للمربع الصغير = \\( 64 - 16 = 48 \\text{ سم}^2 \\).\nالمساحة غير المتداخلة للمربع الكبير = \\( 100 - 16 = 84 \\text{ سم}^2 \\).\nالفرق بين هذه المناطق غير المتداخلة هو \\( 84 - 48 = 36 \\text{ سم}^2 \\).\n(لاحظ أن طرح منطقة التداخل من الجانبين يُلغيها رياضياً: \\( 100 - 64 = 36 \\)!)"
+      }
+    },
+    "correct_index": "2"
+  },
+  {
+    "id": "KAN-BEN-05",
+    "track": "kangaroo",
+    "level": "Benjamin",
+    "topic": "Visual Logic",
+    "type": "MCQ",
+    "difficulty": "medium",
+    "content": {
+      "en": {
+        "question": "Three interconnected gears A, B, and C are arranged in a row. Gear A has \\( 12 \\) teeth, Gear B has \\( 24 \\) teeth, and Gear C has \\( 18 \\) teeth. If Gear A rotates exactly \\( 6 \\) full times clockwise, how many times will Gear C rotate and in which direction?<br/><svg viewBox='0 0 240 120' class='w-full max-w-xs mx-auto bg-slate-900/60 rounded-xl p-2 border border-slate-700 shadow-md my-2'><circle cx='50' cy='60' r='20' fill='none' stroke='#38bdf8' stroke-width='3' stroke-dasharray='6,4'/><text x='50' y='65' fill='#e2e8f0' font-size='14' text-anchor='middle'>12</text><circle cx='105' cy='60' r='35' fill='none' stroke='#10b981' stroke-width='3' stroke-dasharray='8,5'/><text x='105' y='65' fill='#e2e8f0' font-size='14' text-anchor='middle'>24</text><circle cx='170' cy='60' r='30' fill='none' stroke='#f59e0b' stroke-width='3' stroke-dasharray='7,4'/><text x='170' y='65' fill='#e2e8f0' font-size='14' text-anchor='middle'>18</text></svg>",
+        "options": [
+          "\\( 3 \\) times counter-clockwise",
+          "\\( 4 \\) times clockwise",
+          "\\( 4 \\) times counter-clockwise",
+          "\\( 6 \\) times clockwise",
+          "\\( 8 \\) times counter-clockwise"
+        ],
+        "hint": "Adjacent gears rotate in opposite directions. The total number of teeth passing the contact point is the same for all interconnected gears.",
+        "explanation": "First, establish the direction: Gear A turns Clockwise (CW). Gear B must turn Counter-Clockwise (CCW). Therefore, Gear C will turn Clockwise (CW).\nNext, calculate the total number of teeth moved. Gear A makes 6 turns, passing a total of \\( 6 \\times 12 = 72 \\) teeth.\nThis means 72 teeth of Gear C must also pass the contact point. Since Gear C has 18 teeth, it will complete \\( 72 \\div 18 = 4 \\) full rotations.\nThus, Gear C rotates \\( 4 \\) times clockwise."
+      },
+      "ar": {
+        "question": "رُتبت ثلاثة تروس متشابكة A و B و C في صف واحد. يحتوي الترس A على \\( 12 \\) سناً، والترس B على \\( 24 \\) سناً، والترس C على \\( 18 \\) سناً. إذا دار الترس A بالضبط \\( 6 \\) دورات كاملة في اتجاه عقارب الساعة، فكم مرة سيدور الترس C وفي أي اتجاه؟<br/><svg viewBox='0 0 240 120' class='w-full max-w-xs mx-auto bg-slate-900/60 rounded-xl p-2 border border-slate-700 shadow-md my-2'><circle cx='50' cy='60' r='20' fill='none' stroke='#38bdf8' stroke-width='3' stroke-dasharray='6,4'/><text x='50' y='65' fill='#e2e8f0' font-size='14' text-anchor='middle'>12</text><circle cx='105' cy='60' r='35' fill='none' stroke='#10b981' stroke-width='3' stroke-dasharray='8,5'/><text x='105' y='65' fill='#e2e8f0' font-size='14' text-anchor='middle'>24</text><circle cx='170' cy='60' r='30' fill='none' stroke='#f59e0b' stroke-width='3' stroke-dasharray='7,4'/><text x='170' y='65' fill='#e2e8f0' font-size='14' text-anchor='middle'>18</text></svg>",
+        "options": [
+          "\\( 3 \\) مرات عكس اتجاه عقارب الساعة",
+          "\\( 4 \\) مرات في اتجاه عقارب الساعة",
+          "\\( 4 \\) مرات عكس اتجاه عقارب الساعة",
+          "\\( 6 \\) مرات في اتجاه عقارب الساعة",
+          "\\( 8 \\) مرات عكس اتجاه عقارب الساعة"
+        ],
+        "hint": "التروس المتجاورة تدور في اتجاهات متعاكسة. إجمالي عدد الأسنان التي تعبر نقطة التلامس متساوٍ لجميع التروس المتشابكة.",
+        "explanation": "أولاً، نحدد الاتجاه: يدور الترس A مع عقارب الساعة (CW). بالتالي يجب أن يدور الترس B عكس عقارب الساعة (CCW). وعليه، سيدور الترس C مع عقارب الساعة (CW).\nثانياً، نحسب العدد الإجمالي للأسنان المتحركة. الترس A يدور 6 دورات، ممرراً إجمالي \\( 6 \\times 12 = 72 \\) سناً.\nهذا يعني أن 72 سناً من الترس C يجب أن تمر أيضاً عبر نقطة التلامس. وبما أن الترس C يحتوي على 18 سناً، فإنه سيكمل \\( 72 \\div 18 = 4 \\) دورات كاملة.\nلذلك، يدور الترس C مقدار \\( 4 \\) مرات في اتجاه عقارب الساعة."
+      }
+    },
+    "correct_index": "1"
+  },
+  {
+    "id": "KAN-BEN-06",
+    "track": "kangaroo",
+    "level": "Benjamin",
+    "topic": "Pattern Sequences",
+    "type": "MCQ",
+    "difficulty": "medium",
+    "content": {
+      "en": {
+        "question": "A pattern of houses is built using matchsticks. The \\( 1^{\\text{st}} \\) house uses \\( 6 \\) matchsticks. The \\( 2^{\\text{nd}} \\) step (two connected houses) uses \\( 11 \\) matchsticks. The \\( 3^{\\text{rd}} \\) step uses \\( 16 \\) matchsticks. How many matchsticks are needed to build a connected row of \\( 15 \\) houses?<br/><svg viewBox='0 0 220 120' class='w-full max-w-xs mx-auto bg-slate-900/60 rounded-xl p-2 border border-slate-700 shadow-md my-2'><g stroke='#f59e0b' stroke-width='3' stroke-linecap='round'><polygon points='20,60 30,45 40,60' fill='none'/><rect x='20' y='60' width='20' height='20' fill='none'/><polygon points='70,60 80,45 90,60' fill='none'/><rect x='70' y='60' width='20' height='20' fill='none'/><polygon points='90,60 100,45 110,60' fill='none'/><rect x='90' y='60' width='20' height='20' fill='none'/><polygon points='140,60 150,45 160,60' fill='none'/><rect x='140' y='60' width='20' height='20' fill='none'/><polygon points='160,60 170,45 180,60' fill='none'/><rect x='160' y='60' width='20' height='20' fill='none'/><polygon points='180,60 190,45 200,60' fill='none'/><rect x='180' y='60' width='20' height='20' fill='none'/></g><text x='30' y='105' fill='#e2e8f0' font-size='14' text-anchor='middle'>1</text><text x='90' y='105' fill='#e2e8f0' font-size='14' text-anchor='middle'>2</text><text x='170' y='105' fill='#e2e8f0' font-size='14' text-anchor='middle'>3</text></svg>",
+        "options": [
+          "\\( 71 \\)",
+          "\\( 76 \\)",
+          "\\( 81 \\)",
+          "\\( 86 \\)",
+          "\\( 90 \\)"
+        ],
+        "hint": "The first house requires 6 matches. Because adjacent houses share a vertical wall, each additional house only needs 5 matches.",
+        "explanation": "To build the 1st house, we need \\( 6 \\) matches (a square base and a triangular roof). For every new house added to the row, we share one vertical side with the previous house, so we only need to add \\( 5 \\) more matches (top roof, bottom roof, top wall, bottom wall, right wall). \nThe formula for the number of matches for \\( n \\) houses is \\( 6 + 5(n - 1) \\), which simplifies to \\( 5n + 1 \\).\nFor \\( 15 \\) houses, the number of matches is \\( 5(15) + 1 = 75 + 1 = 76 \\)."
+      },
+      "ar": {
+        "question": "يُبنى نمط من المنازل باستخدام أعواد الثقاب. يستخدم المنزل الأول \\( 6 \\) أعواد. الخطوة الثانية (منزلان متصلان) تستخدم \\( 11 \\) عوداً. الخطوة الثالثة تستخدم \\( 16 \\) عوداً. كم عدد الأعواد اللازمة لبناء صف متصل يتكون من \\( 15 \\) منزلاً؟<br/><svg viewBox='0 0 220 120' class='w-full max-w-xs mx-auto bg-slate-900/60 rounded-xl p-2 border border-slate-700 shadow-md my-2'><g stroke='#f59e0b' stroke-width='3' stroke-linecap='round'><polygon points='20,60 30,45 40,60' fill='none'/><rect x='20' y='60' width='20' height='20' fill='none'/><polygon points='70,60 80,45 90,60' fill='none'/><rect x='70' y='60' width='20' height='20' fill='none'/><polygon points='90,60 100,45 110,60' fill='none'/><rect x='90' y='60' width='20' height='20' fill='none'/><polygon points='140,60 150,45 160,60' fill='none'/><rect x='140' y='60' width='20' height='20' fill='none'/><polygon points='160,60 170,45 180,60' fill='none'/><rect x='160' y='60' width='20' height='20' fill='none'/><polygon points='180,60 190,45 200,60' fill='none'/><rect x='180' y='60' width='20' height='20' fill='none'/></g><text x='30' y='105' fill='#e2e8f0' font-size='14' text-anchor='middle'>1</text><text x='90' y='105' fill='#e2e8f0' font-size='14' text-anchor='middle'>2</text><text x='170' y='105' fill='#e2e8f0' font-size='14' text-anchor='middle'>3</text></svg>",
+        "options": [
+          "\\( 71 \\)",
+          "\\( 76 \\)",
+          "\\( 81 \\)",
+          "\\( 86 \\)",
+          "\\( 90 \\)"
+        ],
+        "hint": "المنزل الأول يحتاج 6 أعواد. ولأن المنازل المتجاورة تشترك في جدار عمودي، فإن كل منزل إضافي يتطلب 5 أعواد فقط.",
+        "explanation": "لبناء المنزل الأول، نحتاج \\( 6 \\) أعواد (قاعدة مربعة وسقف مثلث). لكل منزل جديد يضاف للصف، نتشارك في ضلع عمودي واحد مع المنزل السابق، لذا نحتاج فقط لإضافة \\( 5 \\) أعواد (سقفان و 3 جدران).\nصيغة حساب عدد الأعواد لـ \\( n \\) من المنازل هي \\( 6 + 5(n - 1) \\)، والتي تبسط إلى \\( 5n + 1 \\).\nبالنسبة لـ \\( 15 \\) منزلاً، عدد الأعواد هو \\( 5(15) + 1 = 75 + 1 = 76 \\)."
+      }
+    },
+    "correct_index": "1"
+  },
+  {
+    "id": "KAN-BEN-07",
+    "track": "kangaroo",
+    "level": "Benjamin",
+    "topic": "Spatial Reasoning",
+    "type": "MCQ",
+    "difficulty": "hard",
+    "content": {
+      "en": {
+        "question": "A solid wooden cube of dimensions \\( 3 \\times 3 \\times 3 \\) is painted red completely on the outside. It is then cut into \\( 27 \\) smaller \\( 1 \\times 1 \\times 1 \\) unit cubes. How many of these small unit cubes have exactly TWO red faces?",
+        "options": [
+          "\\( 6 \\)",
+          "\\( 8 \\)",
+          "\\( 12 \\)",
+          "\\( 16 \\)",
+          "\\( 24 \\)"
+        ],
+        "hint": "Cubes with exactly two red faces are located along the edges of the large cube, but not at the corners.",
+        "explanation": "Let's classify the 27 small cubes by their positions in the large \\( 3 \\times 3 \\times 3 \\) cube:\n- The 8 corner cubes have 3 painted faces.\n- The cubes on the edges (between the corners) have 2 painted faces. A cube has 12 edges, and there is exactly 1 such cube per edge. So, \\( 12 \\times 1 = 12 \\) cubes have 2 painted faces.\n- The cubes in the center of the large faces have 1 painted face (6 cubes).\n- The cube completely in the middle has 0 painted faces (1 cube).\nThus, there are \\( 12 \\) cubes with exactly two painted faces."
+      },
+      "ar": {
+        "question": "مكعب خشبي صلب أبعاده \\( 3 \\times 3 \\times 3 \\) طُلي بالكامل باللون الأحمر من الخارج. ثم تم تقطيعه إلى \\( 27 \\) مكعباً صغيراً بأبعاد \\( 1 \\times 1 \\times 1 \\). كم عدد هذه المكعبات الصغيرة التي تحتوي على وجهين أحمرين بالضبط؟",
+        "options": [
+          "\\( 6 \\)",
+          "\\( 8 \\)",
+          "\\( 12 \\)",
+          "\\( 16 \\)",
+          "\\( 24 \\)"
+        ],
+        "hint": "المكعبات التي تحتوي على وجهين أحمرين بالضبط تقع على حواف المكعب الكبير، ولكن ليس في الزوايا.",
+        "explanation": "لنقم بتصنيف المكعبات الصغيرة الـ 27 حسب موقعها في المكعب الكبير ذي الأبعاد \\( 3 \\times 3 \\times 3 \\):\n- المكعبات الثمانية (8) في الزوايا لها 3 أوجه مطلية.\n- المكعبات الموجودة على الحواف (بين الزوايا) لها وجهان مطليان. المكعب له 12 حافة، ويوجد مكعب واحد بالضبط من هذا النوع على كل حافة. إذن، \\( 12 \\times 1 = 12 \\) مكعباً لها وجهان مطليان.\n- المكعبات الموجودة في مركز الأوجه الكبيرة لها وجه مطلي واحد (6 مكعبات).\n- المكعب الموجود بالكامل في الداخل ليس له أي وجه مطلي (مكعب واحد).\nوبالتالي، هناك \\( 12 \\) مكعباً بوجهين مطليين بالضبط."
+      }
+    },
+    "correct_index": "2"
+  },
+  {
+    "id": "KAN-BEN-08",
+    "track": "kangaroo",
+    "level": "Benjamin",
+    "topic": "Age Puzzles",
+    "type": "MCQ",
+    "difficulty": "medium",
+    "content": {
+      "en": {
+        "question": "A father is currently \\( 35 \\) years old. In exactly \\( 4 \\) years, the father will be exactly \\( 3 \\) times as old as his son. How old is the son right now?",
+        "options": [
+          "\\( 8 \\)",
+          "\\( 9 \\)",
+          "\\( 10 \\)",
+          "\\( 11 \\)",
+          "\\( 13 \\)"
+        ],
+        "hint": "First, find out how old the father will be in 4 years. Then divide that by 3 to find the son's future age.",
+        "explanation": "The father's current age is 35.\nIn 4 years, the father's age will be \\( 35 + 4 = 39 \\).\nThe problem states that in 4 years, the father is 3 times as old as his son. Let the son's age in 4 years be \\( S_{future} \\).\nSo, \\( 39 = 3 \\times S_{future} \\), which means \\( S_{future} = 13 \\).\nSince the son will be 13 in 4 years, his current age is \\( 13 - 4 = 9 \\) years old."
+      },
+      "ar": {
+        "question": "يبلغ عمر الأب حالياً \\( 35 \\) عاماً. بعد \\( 4 \\) سنوات بالضبط، سيكون عمر الأب \\( 3 \\) أضعاف عمر ابنه تماماً. كم يبلغ عمر الابن الآن؟",
+        "options": [
+          "\\( 8 \\)",
+          "\\( 9 \\)",
+          "\\( 10 \\)",
+          "\\( 11 \\)",
+          "\\( 13 \\)"
+        ],
+        "hint": "أولاً، اكتشف كم سيكون عمر الأب بعد 4 سنوات. ثم اقسم ذلك على 3 لمعرفة عمر الابن المستقبلي.",
+        "explanation": "عمر الأب الحالي هو 35.\nبعد 4 سنوات، سيكون عمر الأب \\( 35 + 4 = 39 \\).\nتنص المسألة على أنه بعد 4 سنوات، سيكون عمر الأب 3 أضعاف عمر ابنه. ليكن عمر الابن بعد 4 سنوات هو \\( S_{future} \\).\nإذن، \\( 39 = 3 \\times S_{future} \\)، مما يعني أن \\( S_{future} = 13 \\).\nبما أن الابن سيبلغ 13 عاماً بعد 4 سنوات، فإن عمره الحالي هو \\( 13 - 4 = 9 \\) سنوات."
+      }
+    },
+    "correct_index": "1"
+  },
+  {
+    "id": "KAN-BEN-09",
+    "track": "kangaroo",
+    "level": "Benjamin",
+    "topic": "Angles and Time",
+    "type": "MCQ",
+    "difficulty": "hard",
+    "content": {
+      "en": {
+        "question": "What is the degree measure of the smaller angle between the hour and minute hands of a standard clock at exactly 4:30?<br/><svg viewBox='0 0 200 140' class='w-full max-w-xs mx-auto bg-slate-900/60 rounded-xl p-2 border border-slate-700 shadow-md my-2'><circle cx='100' cy='70' r='50' fill='none' stroke='#94a3b8' stroke-width='2'/><line x1='100' y1='70' x2='100' y2='20' stroke='#475569' stroke-width='2' stroke-dasharray='3,3'/><line x1='100' y1='70' x2='100' y2='110' stroke='#38bdf8' stroke-width='3' stroke-linecap='round'/><line x1='100' y1='70' x2='121' y2='91' stroke='#f59e0b' stroke-width='4' stroke-linecap='round'/><circle cx='100' cy='70' r='3' fill='#e2e8f0'/><text x='100' y='15' fill='#94a3b8' font-size='12' text-anchor='middle'>12</text><text x='160' y='74' fill='#94a3b8' font-size='12' text-anchor='middle'>3</text><text x='100' y='135' fill='#94a3b8' font-size='12' text-anchor='middle'>6</text></svg>",
+        "options": [
+          "\\( 30^\\circ \\)",
+          "\\( 45^\\circ \\)",
+          "\\( 60^\\circ \\)",
+          "\\( 75^\\circ \\)",
+          "\\( 90^\\circ \\)"
+        ],
+        "hint": "The minute hand points exactly at 6. The hour hand has moved exactly halfway between 4 and 5.",
+        "explanation": "A full clock circle is \\( 360^\\circ \\), and each of the 12 hour marks is separated by \\( 360^\\circ \\div 12 = 30^\\circ \\).\nAt 4:30, the minute hand points exactly at 6, which is \\( 180^\\circ \\) from the 12 position.\nThe hour hand was exactly at 4 at 4:00 (which is \\( 4 \\times 30^\\circ = 120^\\circ \\)). In 30 minutes, it moves exactly half of the way toward the 5.\nHalf of the \\( 30^\\circ \\) gap is \\( 15^\\circ \\). So, the hour hand is at \\( 120^\\circ + 15^\\circ = 135^\\circ \\).\nThe angle between the two hands is \\( 180^\\circ - 135^\\circ = 45^\\circ \\)."
+      },
+      "ar": {
+        "question": "ما هو قياس الزاوية الصغرى بالدرجات بين عقرب الساعات وعقرب الدقائق في ساعة حائط قياسية عند الساعة 4:30 تماماً؟<br/><svg viewBox='0 0 200 140' class='w-full max-w-xs mx-auto bg-slate-900/60 rounded-xl p-2 border border-slate-700 shadow-md my-2'><circle cx='100' cy='70' r='50' fill='none' stroke='#94a3b8' stroke-width='2'/><line x1='100' y1='70' x2='100' y2='20' stroke='#475569' stroke-width='2' stroke-dasharray='3,3'/><line x1='100' y1='70' x2='100' y2='110' stroke='#38bdf8' stroke-width='3' stroke-linecap='round'/><line x1='100' y1='70' x2='121' y2='91' stroke='#f59e0b' stroke-width='4' stroke-linecap='round'/><circle cx='100' cy='70' r='3' fill='#e2e8f0'/><text x='100' y='15' fill='#94a3b8' font-size='12' text-anchor='middle'>12</text><text x='160' y='74' fill='#94a3b8' font-size='12' text-anchor='middle'>3</text><text x='100' y='135' fill='#94a3b8' font-size='12' text-anchor='middle'>6</text></svg>",
+        "options": [
+          "\\( 30^\\circ \\)",
+          "\\( 45^\\circ \\)",
+          "\\( 60^\\circ \\)",
+          "\\( 75^\\circ \\)",
+          "\\( 90^\\circ \\)"
+        ],
+        "hint": "عقرب الدقائق يشير تماماً إلى الرقم 6. وعقرب الساعات تحرك ليصبح في منتصف المسافة تماماً بين الرقمين 4 و 5.",
+        "explanation": "الدائرة الكاملة للساعة هي \\( 360^\\circ \\)، وكل علامة ساعة تبعد عن الأخرى بمقدار \\( 360^\\circ \\div 12 = 30^\\circ \\).\nفي الساعة 4:30، يشير عقرب الدقائق تماماً إلى 6، أي عند زاوية \\( 180^\\circ \\) من وضع الرقم 12.\nكان عقرب الساعات تماماً على الرقم 4 في الساعة 4:00 (أي عند \\( 4 \\times 30^\\circ = 120^\\circ \\)). في غضون 30 دقيقة، يتحرك لمسافة تعادل نصف الطريق نحو الرقم 5.\nنصف المسافة البالغة \\( 30^\\circ \\) هي \\( 15^\\circ \\). إذن، عقرب الساعات يقع عند الزاوية \\( 120^\\circ + 15^\\circ = 135^\\circ \\).\nالزاوية بين العقربين هي \\( 180^\\circ - 135^\\circ = 45^\\circ \\)."
+      }
+    },
+    "correct_index": "1"
+  },
+  {
+    "id": "KAN-BEN-10",
+    "track": "kangaroo",
+    "level": "Benjamin",
+    "topic": "Polygons and Angles",
+    "type": "MCQ",
+    "difficulty": "hard",
+    "content": {
+      "en": {
+        "question": "A regular hexagon and an equilateral triangle share a common base, with the triangle drawn entirely inside the hexagon. What is the measure of the angle formed between the left side of the triangle and the adjacent side of the hexagon?<br/><svg viewBox='0 0 200 140' class='w-full max-w-xs mx-auto bg-slate-900/60 rounded-xl p-2 border border-slate-700 shadow-md my-2'><polygon points='60,70 80,35.3 120,35.3 140,70 120,104.6 80,104.6' fill='none' stroke='#38bdf8' stroke-width='2'/><polygon points='80,104.6 120,104.6 100,70' fill='none' stroke='#10b981' stroke-width='2'/></svg>",
+        "options": [
+          "\\( 30^\\circ \\)",
+          "\\( 45^\\circ \\)",
+          "\\( 60^\\circ \\)",
+          "\\( 75^\\circ \\)",
+          "\\( 90^\\circ \\)"
+        ],
+        "hint": "Find the interior angle of the regular hexagon and subtract the interior angle of the equilateral triangle.",
+        "explanation": "The sum of interior angles of an \\( n \\)-sided polygon is \\( (n-2) \\times 180^\\circ \\). For a regular hexagon (\\( n=6 \\)), the sum is \\( 4 \\times 180^\\circ = 720^\\circ \\). Each interior angle is \\( 720^\\circ \\div 6 = 120^\\circ \\).\nThe interior angle of any equilateral triangle is \\( 60^\\circ \\).\nSince the triangle shares the base with the hexagon and lies inside it, they share the same vertex. The angle formed between their adjacent sides is the difference of their interior angles at that vertex: \\( 120^\\circ - 60^\\circ = 60^\\circ \\)."
+      },
+      "ar": {
+        "question": "سداسي منتظم ومثلث متطابق الأضلاع يشتركان في قاعدة عامة، بحيث رُسم المثلث بالكامل داخل السداسي. ما هو قياس الزاوية المتكونة بين الجانب الأيسر للمثلث والضلع المجاور للسداسي؟<br/><svg viewBox='0 0 200 140' class='w-full max-w-xs mx-auto bg-slate-900/60 rounded-xl p-2 border border-slate-700 shadow-md my-2'><polygon points='60,70 80,35.3 120,35.3 140,70 120,104.6 80,104.6' fill='none' stroke='#38bdf8' stroke-width='2'/><polygon points='80,104.6 120,104.6 100,70' fill='none' stroke='#10b981' stroke-width='2'/></svg>",
+        "options": [
+          "\\( 30^\\circ \\)",
+          "\\( 45^\\circ \\)",
+          "\\( 60^\\circ \\)",
+          "\\( 75^\\circ \\)",
+          "\\( 90^\\circ \\)"
+        ],
+        "hint": "أوجد الزاوية الداخلية للسداسي المنتظم واطرح منها الزاوية الداخلية للمثلث متطابق الأضلاع.",
+        "explanation": "مجموع الزوايا الداخلية لمضلع ذي \\( n \\) أضلاع هو \\( (n-2) \\times 180^\\circ \\). بالنسبة للسداسي المنتظم (\\( n=6 \\))، المجموع هو \\( 4 \\times 180^\\circ = 720^\\circ \\). كل زاوية داخلية تساوي \\( 720^\\circ \\div 6 = 120^\\circ \\).\nالزاوية الداخلية لأي مثلث متطابق الأضلاع هي \\( 60^\\circ \\).\nنظراً لأن المثلث يشترك في القاعدة مع السداسي ويقع داخله، فإنهما يشتركان في نفس الرأس. الزاوية المتكونة بين أضلاعهما المجاورة هي الفرق بين زواياهما الداخلية عند ذلك الرأس: \\( 120^\\circ - 60^\\circ = 60^\\circ \\)."
+      }
+    },
+    "correct_index": "2"
+  },
+  {
+    "id": "KAN-BEN-11",
+    "track": "kangaroo",
+    "level": "Benjamin",
+    "topic": "Combinatorics",
+    "type": "MCQ",
+    "difficulty": "hard",
+    "content": {
+      "en": {
+        "question": "A ladybug wants to travel along the grid lines from the top-left green dot to the bottom-right orange dot. It can only move Right or Down. How many different shortest paths can the ladybug take?<br/><svg viewBox='0 0 200 140' class='w-full max-w-xs mx-auto bg-slate-900/60 rounded-xl p-2 border border-slate-700 shadow-md my-2'><g stroke='#475569' stroke-width='2'><line x1='40' y1='30' x2='160' y2='30'/><line x1='40' y1='70' x2='160' y2='70'/><line x1='40' y1='110' x2='160' y2='110'/><line x1='40' y1='30' x2='40' y2='110'/><line x1='80' y1='30' x2='80' y2='110'/><line x1='120' y1='30' x2='120' y2='110'/><line x1='160' y1='30' x2='160' y2='110'/></g><circle cx='40' cy='30' r='6' fill='#10b981'/><circle cx='160' cy='110' r='6' fill='#f59e0b'/></svg>",
+        "options": [
+          "\\( 5 \\)",
+          "\\( 8 \\)",
+          "\\( 10 \\)",
+          "\\( 12 \\)",
+          "\\( 15 \\)"
+        ],
+        "hint": "Any shortest path requires exactly 3 steps to the Right and 2 steps Down. The number of paths is the number of ways to arrange this sequence.",
+        "explanation": "The grid has a width of 3 blocks and a height of 2 blocks. Thus, every shortest path requires exactly 5 moves in total: 3 to the Right (R) and 2 Down (D). The number of unique paths is equivalent to the number of ways to arrange the sequence RRRDD.\nThis is calculated using combinations: choosing 2 positions for the Down moves out of 5 total moves, which is \\( \\binom{5}{2} = \\frac{5 \\times 4}{2 \\times 1} = 10 \\). There are 10 distinct paths."
+      },
+      "ar": {
+        "question": "تريد دعسوقة الانتقال على طول خطوط الشبكة من النقطة الخضراء العلوية اليسرى إلى النقطة البرتقالية السفلية اليمنى. يمكنها التحرك فقط لليمين أو للأسفل. كم عدد المسارات القصيرة المختلفة التي يمكن للدعسوقة أن تسلكها؟<br/><svg viewBox='0 0 200 140' class='w-full max-w-xs mx-auto bg-slate-900/60 rounded-xl p-2 border border-slate-700 shadow-md my-2'><g stroke='#475569' stroke-width='2'><line x1='40' y1='30' x2='160' y2='30'/><line x1='40' y1='70' x2='160' y2='70'/><line x1='40' y1='110' x2='160' y2='110'/><line x1='40' y1='30' x2='40' y2='110'/><line x1='80' y1='30' x2='80' y2='110'/><line x1='120' y1='30' x2='120' y2='110'/><line x1='160' y1='30' x2='160' y2='110'/></g><circle cx='40' cy='30' r='6' fill='#10b981'/><circle cx='160' cy='110' r='6' fill='#f59e0b'/></svg>",
+        "options": [
+          "\\( 5 \\)",
+          "\\( 8 \\)",
+          "\\( 10 \\)",
+          "\\( 12 \\)",
+          "\\( 15 \\)"
+        ],
+        "hint": "أي مسار قصير يتطلب بالضبط 3 خطوات لليمين وخطوتين للأسفل. عدد المسارات هو عدد طرق ترتيب هذا التسلسل.",
+        "explanation": "عرض الشبكة 3 وحدات وارتفاعها وحدتان. وبالتالي، كل مسار قصير يتطلب 5 حركات إجمالاً: 3 لليمين (R) و 2 للأسفل (D). عدد المسارات الفريدة يعادل عدد الطرق لترتيب التسلسل RRRDD.\nيُحسب هذا باستخدام التوافيق: اختيار موضعين لحركات الأسفل من أصل 5 حركات إجمالية، وهو \\( \\binom{5}{2} = \\frac{5 \\times 4}{2 \\times 1} = 10 \\). يوجد 10 مسارات مختلفة."
+      }
+    },
+    "correct_index": "2"
+  },
+  {
+    "id": "KAN-BEN-12",
+    "track": "kangaroo",
+    "level": "Benjamin",
+    "topic": "Fractions",
+    "type": "MCQ",
+    "difficulty": "medium",
+    "content": {
+      "en": {
+        "question": "A large water tank is currently exactly \\( \\frac{1}{5} \\) full. After adding exactly \\( 30 \\) liters of water to the tank, it becomes \\( \\frac{1}{2} \\) full. What is the total maximum capacity of the tank?",
+        "options": [
+          "\\( 50 \\text{ liters} \\)",
+          "\\( 75 \\text{ liters} \\)",
+          "\\( 100 \\text{ liters} \\)",
+          "\\( 120 \\text{ liters} \\)",
+          "\\( 150 \\text{ liters} \\)"
+        ],
+        "hint": "Calculate the difference between the two fractions to find out what fraction of the tank the 30 liters represents.",
+        "explanation": "Let \\( C \\) be the total capacity of the tank. The difference in the water level is \\( \\frac{1}{2} - \\frac{1}{5} \\).\nTo subtract these fractions, find a common denominator (10): \\( \\frac{5}{10} - \\frac{2}{10} = \\frac{3}{10} \\).\nWe are told that this added amount of water is exactly 30 liters. So, \\( \\frac{3}{10} \\times C = 30 \\).\nTo find \\( C \\), we multiply both sides by \\( \\frac{10}{3} \\): \\( C = 30 \\times \\frac{10}{3} = 100 \\).\nThe total capacity of the tank is 100 liters."
+      },
+      "ar": {
+        "question": "خزان مياه كبير ممتلئ حالياً بمقدار \\( \\frac{1}{5} \\) من سعته. بعد إضافة \\( 30 \\) لتراً بالضبط من الماء إلى الخزان، أصبح ممتلئاً بمقدار \\( \\frac{1}{2} \\). ما هي السعة القصوى الإجمالية للخزان؟",
+        "options": [
+          "\\( 50 \\text{ لتراً} \\)",
+          "\\( 75 \\text{ لتراً} \\)",
+          "\\( 100 \\text{ لتراً} \\)",
+          "\\( 120 \\text{ لتراً} \\)",
+          "\\( 150 \\text{ لتراً} \\)"
+        ],
+        "hint": "احسب الفرق بين الكسرين لمعرفة الكسر الذي تمثله الـ 30 لتراً من سعة الخزان.",
+        "explanation": "لتكن \\( C \\) هي السعة الكلية للخزان. الفرق في مستوى الماء هو \\( \\frac{1}{2} - \\frac{1}{5} \\).\nلطرح هذه الكسور، نوحد المقامات (10): \\( \\frac{5}{10} - \\frac{2}{10} = \\frac{3}{10} \\).\nأُخبرنا أن هذه الكمية المضافة من الماء تساوي 30 لتراً. إذن، \\( \\frac{3}{10} \\times C = 30 \\).\nلإيجاد \\( C \\)، نضرب كلا الطرفين في \\( \\frac{10}{3} \\): \\( C = 30 \\times \\frac{10}{3} = 100 \\).\nالسعة الكلية للخزان هي 100 لتر."
+      }
+    },
+    "correct_index": "2"
+  },
+  {
+    "id": "KAN-BEN-13",
+    "track": "kangaroo",
+    "level": "Benjamin",
+    "topic": "Sets and Logic",
+    "type": "MCQ",
+    "difficulty": "medium",
+    "content": {
+      "en": {
+        "question": "In a class of exactly \\( 30 \\) students, \\( 20 \\) students say they like apples, and \\( 15 \\) students say they like bananas. If exactly \\( 3 \\) students like neither apples nor bananas, how many students like BOTH fruits?",
+        "options": [
+          "\\( 5 \\)",
+          "\\( 6 \\)",
+          "\\( 7 \\)",
+          "\\( 8 \\)",
+          "\\( 10 \\)"
+        ],
+        "hint": "Subtract the students who like neither from the total to find how many like at least one fruit. Then, add the apple and banana lovers to see the overlap.",
+        "explanation": "First, find the number of students who like at least one of the fruits:\nTotal students = 30. Students who like neither = 3.\nStudents who like at least one fruit = \\( 30 - 3 = 27 \\).\nNext, add the number of apple lovers and banana lovers: \\( 20 + 15 = 35 \\).\nSince there are only 27 students who like fruit, the overlap represents the students counted twice because they like both.\nNumber of students who like both = \\( 35 - 27 = 8 \\)."
+      },
+      "ar": {
+        "question": "في فصل يضم \\( 30 \\) طالباً بالضبط، قال \\( 20 \\) طالباً إنهم يحبون التفاح، وقال \\( 15 \\) طالباً إنهم يحبون الموز. إذا كان هناك \\( 3 \\) طلاب لا يحبون التفاح ولا الموز، فكم عدد الطلاب الذين يحبون كلا الفاكهتين؟",
+        "options": [
+          "\\( 5 \\)",
+          "\\( 6 \\)",
+          "\\( 7 \\)",
+          "\\( 8 \\)",
+          "\\( 10 \\)"
+        ],
+        "hint": "اطرح الطلاب الذين لا يحبون أي فاكهة من الإجمالي لمعرفة عدد الذين يحبون فاكهة واحدة على الأقل. ثم اجمع محبي التفاح والموز لمعرفة التقاطع.",
+        "explanation": "أولاً، نجد عدد الطلاب الذين يحبون فاكهة واحدة على الأقل:\nإجمالي الطلاب = 30. الطلاب الذين لا يحبون أياً منهما = 3.\nالطلاب الذين يحبون فاكهة واحدة على الأقل = \\( 30 - 3 = 27 \\).\nبعد ذلك، نجمع محبي التفاح مع محبي الموز: \\( 20 + 15 = 35 \\).\nبما أن هناك 27 طالباً فقط يحبون الفاكهة، فإن التقاطع يمثل الطلاب الذين تم عدهم مرتين لأنهم يحبون كلا النوعين.\nعدد الطلاب الذين يحبون كلاهما = \\( 35 - 27 = 8 \\)."
+      }
+    },
+    "correct_index": "3"
+  },
+  {
+    "id": "KAN-BEN-14",
+    "track": "kangaroo",
+    "level": "Benjamin",
+    "topic": "Calendar Logic",
+    "type": "MCQ",
+    "difficulty": "medium",
+    "content": {
+      "en": {
+        "question": "Today is Wednesday. What day of the week will it be exactly \\( 100 \\) days from today?",
+        "options": [
+          "Thursday",
+          "Friday",
+          "Saturday",
+          "Sunday",
+          "Monday"
+        ],
+        "hint": "The days of the week repeat every 7 days. Divide 100 by 7 and find the remainder.",
+        "explanation": "Since there are 7 days in a week, the sequence of days repeats every 7 days. \nIf we divide 100 by 7, we get: \\( 100 \\div 7 = 14 \\) with a remainder of \\( 2 \\) (since \\( 14 \\times 7 = 98 \\)).\nThis means exactly 14 full weeks will pass, bringing us back to Wednesday. \nThen, we advance by the remainder of 2 days: Wednesday + 1 day = Thursday, Wednesday + 2 days = Friday. \nTherefore, it will be Friday."
+      },
+      "ar": {
+        "question": "اليوم هو الأربعاء. ما هو يوم الأسبوع الذي سيكون بعد \\( 100 \\) يوم بالضبط من اليوم؟",
+        "options": [
+          "الخميس",
+          "الجمعة",
+          "السبت",
+          "الأحد",
+          "الإثنين"
+        ],
+        "hint": "أيام الأسبوع تتكرر كل 7 أيام. اقسم 100 على 7 وأوجد الباقي.",
+        "explanation": "بما أن الأسبوع يتكون من 7 أيام، فإن تسلسل الأيام يتكرر كل 7 أيام. \nإذا قسمنا 100 على 7، نحصل على: \\( 100 \\div 7 = 14 \\) والباقي \\( 2 \\) (لأن \\( 14 \\times 7 = 98 \\)).\nهذا يعني أنه ستمر 14 أسبوعاً كاملاً، مما يعيدنا إلى يوم الأربعاء.\nثم نتقدم بمقدار يومين إضافيين (الباقي): الأربعاء + يوم واحد = الخميس، الأربعاء + يومان = الجمعة.\nلذلك، سيكون اليوم هو الجمعة."
+      }
+    },
+    "correct_index": "1"
+  },
+  {
+    "id": "KAN-BEN-15",
+    "track": "kangaroo",
+    "level": "Benjamin",
+    "topic": "Number Theory",
+    "type": "MCQ",
+    "difficulty": "hard",
+    "content": {
+      "en": {
+        "question": "The sum of the two digits of a certain two-digit number is \\( 10 \\). If you reverse the order of its digits, the new number is \\( 36 \\) more than the original number. What is the original number?",
+        "options": [
+          "\\( 28 \\)",
+          "\\( 37 \\)",
+          "\\( 46 \\)",
+          "\\( 64 \\)",
+          "\\( 73 \\)"
+        ],
+        "hint": "Express the two-digit number algebraically as 10A + B. The difference between a number and its reverse is always a multiple of 9.",
+        "explanation": "Let the original two-digit number be represented as \\( 10A + B \\), where \\( A \\) and \\( B \\) are digits.\nWe are given that the sum of the digits is \\( 10 \\), so \\( A + B = 10 \\).\nThe reversed number is \\( 10B + A \\). The problem states that the reversed number is \\( 36 \\) more than the original:\n\\( (10B + A) - (10A + B) = 36 \\)\nThis simplifies to \\( 9B - 9A = 36 \\). Dividing by 9 gives \\( B - A = 4 \\).\nNow we have a system of two simple equations: \\( B + A = 10 \\) and \\( B - A = 4 \\).\nAdding them together gives \\( 2B = 14 \\), so \\( B = 7 \\).\nSubstitute \\( B \\) back to find \\( A \\): \\( A = 10 - 7 = 3 \\).\nThe original number is \\( 37 \\)."
+      },
+      "ar": {
+        "question": "مجموع رقمي عدد معين مكون من منزلتين هو \\( 10 \\). إذا قمت بعكس ترتيب أرقامه، فإن العدد الجديد يزيد بمقدار \\( 36 \\) عن العدد الأصلي. ما هو العدد الأصلي؟",
+        "options": [
+          "\\( 28 \\)",
+          "\\( 37 \\)",
+          "\\( 46 \\)",
+          "\\( 64 \\)",
+          "\\( 73 \\)"
+        ],
+        "hint": "عبّر عن العدد المكون من رقمين جبرياً كـ 10A + B. الفرق بين عدد ومعكوسه دائماً من مضاعفات الـ 9.",
+        "explanation": "ليكن العدد الأصلي المكون من رقمين ممثلاً بـ \\( 10A + B \\)، حيث \\( A \\) و \\( B \\) أرقام.\nنعلم أن مجموع الأرقام هو \\( 10 \\)، إذن \\( A + B = 10 \\).\nالعدد المعكوس هو \\( 10B + A \\). تنص المسألة على أن العدد المعكوس يزيد عن الأصلي بمقدار \\( 36 \\):\n\\( (10B + A) - (10A + B) = 36 \\)\nيُبسط هذا إلى \\( 9B - 9A = 36 \\). بالقسمة على 9 نحصل على \\( B - A = 4 \\).\nالآن لدينا نظام من معادلتين بسيطتين: \\( B + A = 10 \\) و \\( B - A = 4 \\).\nبجمعهما معاً نحصل على \\( 2B = 14 \\)، إذن \\( B = 7 \\).\nنعوض بـ \\( B \\) لإيجاد \\( A \\): \\( A = 10 - 7 = 3 \\).\nالعدد الأصلي هو \\( 37 \\)."
+      }
+    },
+    "correct_index": "1"
+  },
+  {
+    "id": "KAN-BEN-16",
+    "track": "kangaroo",
+    "level": "Benjamin",
+    "topic": "Rates and Real-world logic",
+    "type": "MCQ",
+    "difficulty": "easy",
+    "content": {
+      "en": {
+        "question": "A fast office printer can print exactly \\( 120 \\) pages in \\( 3 \\) minutes. If the printer continues working at this exact constant speed, how many pages will it print in \\( 8 \\) minutes?",
+        "options": [
+          "\\( 240 \\)",
+          "\\( 280 \\)",
+          "\\( 320 \\)",
+          "\\( 360 \\)",
+          "\\( 400 \\)"
+        ],
+        "hint": "Find the unit rate first. How many pages does it print in just 1 minute?",
+        "explanation": "To find out how many pages the printer produces in one minute, divide the total pages by the total minutes: \\( 120 \\div 3 = 40 \\) pages per minute.\nTo find out how many pages it will print in 8 minutes, multiply this rate by 8: \\( 40 \\times 8 = 320 \\) pages."
+      },
+      "ar": {
+        "question": "يمكن لطابعة مكتبية سريعة طباعة \\( 120 \\) صفحة بالضبط في \\( 3 \\) دقائق. إذا استمرت الطابعة في العمل بهذه السرعة الثابتة تماماً، فكم عدد الصفحات التي ستطبعها في \\( 8 \\) دقائق؟",
+        "options": [
+          "\\( 240 \\)",
+          "\\( 280 \\)",
+          "\\( 320 \\)",
+          "\\( 360 \\)",
+          "\\( 400 \\)"
+        ],
+        "hint": "أوجد معدل الوحدة أولاً. كم عدد الصفحات التي تطبعها في دقيقة واحدة فقط؟",
+        "explanation": "لمعرفة عدد الصفحات التي تنتجها الطابعة في الدقيقة الواحدة، اقسم إجمالي الصفحات على إجمالي الدقائق: \\( 120 \\div 3 = 40 \\) صفحة في الدقيقة.\nلمعرفة عدد الصفحات التي ستطبعها في 8 دقائق، اضرب هذا المعدل في 8: \\( 40 \\times 8 = 320 \\) صفحة."
+      }
+    },
+    "correct_index": "2"
+  },
+  {
+    "id": "KAN-BEN-17",
+    "track": "kangaroo",
+    "level": "Benjamin",
+    "topic": "Combinatorics",
+    "type": "MCQ",
+    "difficulty": "medium",
+    "content": {
+      "en": {
+        "question": "How many different \\( 3 \\)-digit numbers can be formed using only the digits \\( 1, 2, 3, 4 \\) if no digit is allowed to be repeated in the same number?",
+        "options": [
+          "\\( 12 \\)",
+          "\\( 16 \\)",
+          "\\( 24 \\)",
+          "\\( 48 \\)",
+          "\\( 64 \\)"
+        ],
+        "hint": "Count the number of choices you have for the first digit, the second digit, and the third digit, then multiply them together.",
+        "explanation": "To form a 3-digit number without repeating digits, we make a sequence of 3 choices.\nFor the first digit (hundreds place), we can choose any of the 4 available digits (1, 2, 3, 4). So there are 4 choices.\nFor the second digit (tens place), we cannot use the digit we just chose. Thus, 3 choices remain.\nFor the third digit (ones place), we cannot use the two digits already chosen, leaving 2 choices.\nBy the fundamental counting principle, the total number of unique 3-digit numbers is \\( 4 \\times 3 \\times 2 = 24 \\)."
+      },
+      "ar": {
+        "question": "كم عدد الأرقام المختلفة المكونة من \\( 3 \\) خانات والتي يمكن تشكيلها باستخدام الأرقام \\( 1, 2, 3, 4 \\) فقط إذا لم يُسمح بتكرار أي رقم في نفس العدد؟",
+        "options": [
+          "\\( 12 \\)",
+          "\\( 16 \\)",
+          "\\( 24 \\)",
+          "\\( 48 \\)",
+          "\\( 64 \\)"
+        ],
+        "hint": "احسب عدد الخيارات المتاحة لك للرقم الأول، ثم الرقم الثاني، والرقم الثالث، ثم اضربها معاً.",
+        "explanation": "لتكوين عدد من 3 خانات دون تكرار الأرقام، نقوم بسلسلة من 3 خيارات.\nبالنسبة للرقم الأول (منزلة المئات)، يمكننا اختيار أي من الأرقام الأربعة المتاحة (1، 2، 3، 4). لذا هناك 4 خيارات.\nبالنسبة للرقم الثاني (منزلة العشرات)، لا يمكننا استخدام الرقم الذي اخترناه للتو. وبالتالي يتبقى 3 خيارات.\nبالنسبة للرقم الثالث (منزلة الآحاد)، لا يمكننا استخدام الرقمين اللذين تم اختيارهما بالفعل، مما يترك خيارين.\nحسب مبدأ العد الأساسي، فإن العدد الإجمالي للأرقام الفريدة المكونة من 3 خانات هو \\( 4 \\times 3 \\times 2 = 24 \\)."
+      }
+    },
+    "correct_index": "2"
+  },
+  {
+    "id": "KAN-BEN-18",
+    "track": "kangaroo",
+    "level": "Benjamin",
+    "topic": "Area Puzzles",
+    "type": "MCQ",
+    "difficulty": "medium",
+    "content": {
+      "en": {
+        "question": "A large square is perfectly divided into \\( 4 \\) identical smaller squares. If the perimeter of the large square is \\( 40 \\text{ cm} \\), what is the area of exactly ONE of the small squares?",
+        "options": [
+          "\\( 10 \\text{ cm}^2 \\)",
+          "\\( 20 \\text{ cm}^2 \\)",
+          "\\( 25 \\text{ cm}^2 \\)",
+          "\\( 50 \\text{ cm}^2 \\)",
+          "\\( 100 \\text{ cm}^2 \\)"
+        ],
+        "hint": "Use the perimeter of the large square to find its side length. Then determine the side length of a small square.",
+        "explanation": "The perimeter of the large square is \\( 40 \\text{ cm} \\). Since a square has 4 equal sides, the side length of the large square is \\( 40 \\div 4 = 10 \\text{ cm} \\).\nThe large square is divided into 4 identical smaller squares (forming a \\( 2 \\times 2 \\) grid). This means the side length of each small square is exactly half of the large square's side length, which is \\( 10 \\div 2 = 5 \\text{ cm} \\).\nThe area of ONE small square is \\( 5 \\times 5 = 25 \\text{ cm}^2 \\)."
+      },
+      "ar": {
+        "question": "تم تقسيم مربع كبير تماماً إلى \\( 4 \\) مربعات صغيرة متطابقة. إذا كان محيط المربع الكبير هو \\( 40 \\text{ سم} \\)، فما هي مساحة مربع صغير واحد بالضبط؟",
+        "options": [
+          "\\( 10 \\text{ سم}^2 \\)",
+          "\\( 20 \\text{ سم}^2 \\)",
+          "\\( 25 \\text{ سم}^2 \\)",
+          "\\( 50 \\text{ سم}^2 \\)",
+          "\\( 100 \\text{ سم}^2 \\)"
+        ],
+        "hint": "استخدم محيط المربع الكبير لإيجاد طول ضلعه. ثم حدد طول ضلع المربع الصغير.",
+        "explanation": "محيط المربع الكبير هو \\( 40 \\text{ سم} \\). بما أن للمربع 4 أضلاع متساوية، فإن طول ضلع المربع الكبير هو \\( 40 \\div 4 = 10 \\text{ سم} \\).\nيُقسم المربع الكبير إلى 4 مربعات صغيرة متطابقة (مكونة شبكة \\( 2 \\times 2 \\)). هذا يعني أن طول ضلع كل مربع صغير يساوي بالضبط نصف طول ضلع المربع الكبير، أي \\( 10 \\div 2 = 5 \\text{ سم} \\).\nمساحة المربع الصغير الواحد هي \\( 5 \\times 5 = 25 \\text{ سم}^2 \\)."
+      }
+    },
+    "correct_index": "2"
+  },
+  {
+    "id": "KAN-BEN-19",
+    "track": "kangaroo",
+    "level": "Benjamin",
+    "topic": "Distance on a Line",
+    "type": "MCQ",
+    "difficulty": "medium",
+    "content": {
+      "en": {
+        "question": "Points A, B, C, and D are marked on a straight line in that exact order. The total distance from A to D is \\( 50 \\text{ cm} \\). The distance from A to C is \\( 30 \\text{ cm} \\), and the distance from B to D is \\( 35 \\text{ cm} \\). What is the exact distance between B and C?<br/><svg viewBox='0 0 200 80' class='w-full max-w-xs mx-auto bg-slate-900/60 rounded-xl p-2 border border-slate-700 shadow-md my-2'><line x1='20' y1='60' x2='180' y2='60' stroke='#94a3b8' stroke-width='2'/><circle cx='30' cy='60' r='4' fill='#38bdf8'/><circle cx='70' cy='60' r='4' fill='#38bdf8'/><circle cx='130' cy='60' r='4' fill='#38bdf8'/><circle cx='170' cy='60' r='4' fill='#38bdf8'/><text x='30' y='45' fill='#e2e8f0' font-size='14' text-anchor='middle'>A</text><text x='70' y='45' fill='#e2e8f0' font-size='14' text-anchor='middle'>B</text><text x='130' y='45' fill='#e2e8f0' font-size='14' text-anchor='middle'>C</text><text x='170' y='45' fill='#e2e8f0' font-size='14' text-anchor='middle'>D</text></svg>",
+        "options": [
+          "\\( 10 \\text{ cm} \\)",
+          "\\( 15 \\text{ cm} \\)",
+          "\\( 20 \\text{ cm} \\)",
+          "\\( 25 \\text{ cm} \\)",
+          "\\( 30 \\text{ cm} \\)"
+        ],
+        "hint": "The full segment AD is made of AC and CD. First, figure out the length of CD.",
+        "explanation": "We are given the total length \\( AD = 50 \\).\nSince the points are placed in order, \\( AD = AC + CD \\).\nWe know \\( AC = 30 \\), so we can find \\( CD \\): \\( CD = AD - AC = 50 - 30 = 20 \\text{ cm} \\).\nWe are also given that \\( BD = 35 \\).\nSince \\( BD \\) is composed of segments \\( BC \\) and \\( CD \\), we write \\( BD = BC + CD \\).\nSubstituting the known values: \\( 35 = BC + 20 \\).\nTherefore, the distance \\( BC = 35 - 20 = 15 \\text{ cm} \\)."
+      },
+      "ar": {
+        "question": "تم تحديد النقاط A و B و C و D على خط مستقيم بهذا الترتيب الدقيق. المسافة الكلية من A إلى D هي \\( 50 \\text{ سم} \\). والمسافة من A إلى C هي \\( 30 \\text{ سم} \\)، والمسافة من B إلى D هي \\( 35 \\text{ سم} \\). ما هي المسافة الدقيقة بين B و C؟<br/><svg viewBox='0 0 200 80' class='w-full max-w-xs mx-auto bg-slate-900/60 rounded-xl p-2 border border-slate-700 shadow-md my-2'><line x1='20' y1='60' x2='180' y2='60' stroke='#94a3b8' stroke-width='2'/><circle cx='30' cy='60' r='4' fill='#38bdf8'/><circle cx='70' cy='60' r='4' fill='#38bdf8'/><circle cx='130' cy='60' r='4' fill='#38bdf8'/><circle cx='170' cy='60' r='4' fill='#38bdf8'/><text x='30' y='45' fill='#e2e8f0' font-size='14' text-anchor='middle'>A</text><text x='70' y='45' fill='#e2e8f0' font-size='14' text-anchor='middle'>B</text><text x='130' y='45' fill='#e2e8f0' font-size='14' text-anchor='middle'>C</text><text x='170' y='45' fill='#e2e8f0' font-size='14' text-anchor='middle'>D</text></svg>",
+        "options": [
+          "\\( 10 \\text{ سم} \\)",
+          "\\( 15 \\text{ سم} \\)",
+          "\\( 20 \\text{ سم} \\)",
+          "\\( 25 \\text{ سم} \\)",
+          "\\( 30 \\text{ سم} \\)"
+        ],
+        "hint": "القطعة الكاملة AD تتكون من AC و CD. أولاً، اكتشف طول CD.",
+        "explanation": "أعطيت لنا المسافة الكلية \\( AD = 50 \\).\nبما أن النقاط مرتبة بالترتيب، فإن \\( AD = AC + CD \\).\nنعلم أن \\( AC = 30 \\)، لذا يمكننا إيجاد \\( CD \\): \\( CD = AD - AC = 50 - 30 = 20 \\text{ سم} \\).\nوأعطينا أيضاً أن \\( BD = 35 \\).\nوبما أن \\( BD \\) تتكون من القطعتين \\( BC \\) و \\( CD \\)، نكتب \\( BD = BC + CD \\).\nبالتعويض بالقيم المعروفة: \\( 35 = BC + 20 \\).\nلذلك، المسافة \\( BC = 35 - 20 = 15 \\text{ سم} \\)."
+      }
+    },
+    "correct_index": "1"
+  },
+  {
+    "id": "KAN-BEN-20",
+    "track": "kangaroo",
+    "level": "Benjamin",
+    "topic": "Spatial Folding",
+    "type": "MCQ",
+    "difficulty": "hard",
+    "content": {
+      "en": {
+        "question": "A perfectly square piece of paper is folded in half horizontally to form a rectangle. Then it is folded in half vertically to form a smaller square. Finally, a single hole is punched exactly in the center of this folded smaller square, piercing through all layers. When the paper is completely unfolded, how many holes will be visible on the paper?",
+        "options": [
+          "\\( 1 \\)",
+          "\\( 2 \\)",
+          "\\( 3 \\)",
+          "\\( 4 \\)",
+          "\\( 8 \\)"
+        ],
+        "hint": "Folding the paper twice means the stack is 4 layers thick. A hole punched in the center of the folded square avoids all edges and corners.",
+        "explanation": "The original square piece of paper is folded in half horizontally (creating 2 layers) and then folded in half vertically (creating a total of \\( 2 \\times 2 = 4 \\) layers). The folded shape is a smaller square, exactly one-quarter the size of the original. \nWhen a hole is punched right in the middle of this folded square, it pierces through all 4 layers of paper. Since the punch is in the center of the quadrant, it does not lie on any fold lines or edges. Therefore, when the paper is unfolded completely, exactly one hole will appear in the center of each of the four quadrants. The total number of holes will be \\( 4 \\)."
+      },
+      "ar": {
+        "question": "طُويت قطعة ورق مربعة تماماً من المنتصف أفقياً لتشكل مستطيلاً. ثم طُويت من المنتصف عمودياً لتشكل مربعاً أصغر. أخيراً، تم إحداث ثقب واحد بالضبط في مركز هذا المربع الصغير المطوي، ليخترق جميع الطبقات. عند فرد الورقة بالكامل، كم عدد الثقوب التي ستكون مرئية على الورقة؟",
+        "options": [
+          "\\( 1 \\)",
+          "\\( 2 \\)",
+          "\\( 3 \\)",
+          "\\( 4 \\)",
+          "\\( 8 \\)"
+        ],
+        "hint": "طي الورقة مرتين يعني أن السماكة أصبحت 4 طبقات. إحداث ثقب في مركز المربع المطوي يتجنب جميع الحواف والزوايا.",
+        "explanation": "طُويت قطعة الورق المربعة الأصلية من المنتصف أفقياً (مكونة طبقتين) ثم طُويت من المنتصف عمودياً (مكونة إجمالي \\( 2 \\times 2 = 4 \\) طبقات). الشكل المطوي هو مربع أصغر، حجمه ربع حجم المربع الأصلي تماماً.\nعندما يتم إحداث ثقب في منتصف هذا المربع المطوي، فإنه يخترق جميع طبقات الورق الأربع. وبما أن الثقب يقع في مركز الربع، فإنه لا يقع على أي من خطوط الطي أو الحواف. لذلك، عند فرد الورقة بالكامل، سيظهر ثقب واحد بالضبط في مركز كل ربع من الأرباع الأربعة. سيكون العدد الإجمالي للثقوب \\( 4 \\)."
+      }
+    },
+    "correct_index": "3"
   }
 ]
