@@ -23191,5 +23191,665 @@
       }
     },
     "correct_index": "2"
+  },
+  {
+    "id": "NAF-G09-01",
+    "track": "nafes",
+    "level": "Grade 9",
+    "topic": "Linear Systems",
+    "type": "MCQ",
+    "difficulty": "medium",
+    "content": {
+      "en": {
+        "question": "Solve the following system of linear equations. What is the exact value of \\( x + y \\)?\n\\[ 2x + 3y = 12 \\]\n\\[ x - y = 1 \\]",
+        "options": [
+          "\\( 3 \\)",
+          "\\( 4 \\)",
+          "\\( 5 \\)",
+          "\\( 6 \\)"
+        ],
+        "hint": "Use substitution. From the second equation, express \\( x \\) as \\( y + 1 \\), and substitute it into the first equation.",
+        "explanation": "From the second equation, we have \\( x = y + 1 \\).\nSubstitute this into the first equation:\n\\[ 2(y + 1) + 3y = 12 \\]\n\\[ 2y + 2 + 3y = 12 \\]\n\\[ 5y + 2 = 12 \\implies 5y = 10 \\implies y = 2 \\]\nNow, substitute \\( y = 2 \\) back to find \\( x \\):\n\\[ x = 2 + 1 = 3 \\]\nThe problem asks for the sum \\( x + y \\):\n\\[ x + y = 3 + 2 = 5 \\]."
+      },
+      "ar": {
+        "question": "حل نظام المعادلات الخطية التالي. ما هي القيمة الدقيقة لـ \\( x + y \\)؟\n\\[ 2x + 3y = 12 \\]\n\\[ x - y = 1 \\]",
+        "options": [
+          "\\( 3 \\)",
+          "\\( 4 \\)",
+          "\\( 5 \\)",
+          "\\( 6 \\)"
+        ],
+        "hint": "استخدم طريقة التعويض. من المعادلة الثانية، عَبِّر عن \\( x \\) كـ \\( y + 1 \\)، وعوض بها في المعادلة الأولى.",
+        "explanation": "من المعادلة الثانية، لدينا \\( x = y + 1 \\).\nنعوض بذلك في المعادلة الأولى:\n\\[ 2(y + 1) + 3y = 12 \\]\n\\[ 2y + 2 + 3y = 12 \\]\n\\[ 5y + 2 = 12 \\implies 5y = 10 \\implies y = 2 \\]\nالآن، نعوض بـ \\( y = 2 \\) لإيجاد \\( x \\):\n\\[ x = 2 + 1 = 3 \\]\nالمطلوب في المسألة هو المجموع \\( x + y \\):\n\\[ x + y = 3 + 2 = 5 \\]."
+      }
+    },
+    "correct_index": "2"
+  },
+  {
+    "id": "NAF-G09-02",
+    "track": "nafes",
+    "level": "Grade 9",
+    "topic": "Quadratic Equations",
+    "type": "MCQ",
+    "difficulty": "medium",
+    "content": {
+      "en": {
+        "question": "Find the positive solution for \\( x \\) in the given quadratic equation:\n\\[ x^2 - 5x - 14 = 0 \\]",
+        "options": [
+          "\\( 2 \\)",
+          "\\( 5 \\)",
+          "\\( 7 \\)",
+          "\\( 14 \\)"
+        ],
+        "hint": "Factor the quadratic trinomial. Find two numbers that multiply to -14 and add to -5.",
+        "explanation": "To factor \\( x^2 - 5x - 14 = 0 \\), we look for two numbers whose product is \\( -14 \\) and whose sum is \\( -5 \\).\nThese numbers are \\( -7 \\) and \\( +2 \\).\nSo, the factored form is:\n\\[ (x - 7)(x + 2) = 0 \\]\nThis gives two solutions:\n\\[ x - 7 = 0 \\implies x = 7 \\]\n\\[ x + 2 = 0 \\implies x = -2 \\]\nThe question asks for the positive solution, which is \\( 7 \\)."
+      },
+      "ar": {
+        "question": "أوجد الحل الموجب لـ \\( x \\) في المعادلة التربيعية التالية:\n\\[ x^2 - 5x - 14 = 0 \\]",
+        "options": [
+          "\\( 2 \\)",
+          "\\( 5 \\)",
+          "\\( 7 \\)",
+          "\\( 14 \\)"
+        ],
+        "hint": "حلل ثلاثية الحدود التربيعية. ابحث عن عددين حاصل ضربهما -14 ومجموعهما -5.",
+        "explanation": "لتحليل \\( x^2 - 5x - 14 = 0 \\)، نبحث عن عددين حاصل ضربهما \\( -14 \\) ومجموعهما \\( -5 \\).\nهذان العددان هما \\( -7 \\) و \\( +2 \\).\nإذن، الصيغة المحللة هي:\n\\[ (x - 7)(x + 2) = 0 \\]\nهذا يعطي حلين:\n\\[ x - 7 = 0 \\implies x = 7 \\]\n\\[ x + 2 = 0 \\implies x = -2 \\]\nيطلب السؤال الحل الموجب، وهو \\( 7 \\)."
+      }
+    },
+    "correct_index": "2"
+  },
+  {
+    "id": "NAF-G09-03",
+    "track": "nafes",
+    "level": "Grade 9",
+    "topic": "Pythagorean Word Problems",
+    "type": "MCQ",
+    "difficulty": "easy",
+    "content": {
+      "en": {
+        "question": "A ladder measuring \\( 13 \\text{ m} \\) leans against a vertical building. The base of the ladder is placed exactly \\( 5 \\text{ m} \\) away from the bottom of the building. How high up the building does the ladder reach?<br/><svg viewBox='0 0 200 160' class='w-full max-w-xs mx-auto bg-slate-900/60 rounded-xl p-2 border border-slate-700 shadow-md my-2'><line x1='30' y1='140' x2='170' y2='140' stroke='#94a3b8' stroke-width='4'/><line x1='50' y1='140' x2='50' y2='20' stroke='#10b981' stroke-width='6'/><line x1='120' y1='140' x2='50' y2='30' stroke='#f59e0b' stroke-width='4'/><rect x='50' y='130' width='10' height='10' fill='none' stroke='#38bdf8' stroke-width='1'/><text x='95' y='80' fill='#e2e8f0' font-size='12' transform='rotate(-57, 95, 80)'>13 m</text><text x='85' y='155' fill='#e2e8f0' font-size='12'>5 m</text><text x='30' y='85' fill='#e2e8f0' font-size='12'>h</text></svg>",
+        "options": [
+          "\\( 8 \\text{ m} \\)",
+          "\\( 10 \\text{ m} \\)",
+          "\\( 12 \\text{ m} \\)",
+          "\\( 14 \\text{ m} \\)"
+        ],
+        "hint": "The ladder, the wall, and the ground form a right-angled triangle. Apply the Pythagorean theorem: \\( a^2 + b^2 = c^2 \\), where the ladder is the hypotenuse.",
+        "explanation": "This scenario forms a right triangle where the ladder is the hypotenuse \\( (c = 13) \\), the distance from the wall is one leg \\( (a = 5) \\), and the height up the wall is the other leg \\( (b = h) \\).\nUsing the Pythagorean theorem:\n\\[ a^2 + h^2 = c^2 \\]\n\\[ 5^2 + h^2 = 13^2 \\]\n\\[ 25 + h^2 = 169 \\]\n\\[ h^2 = 169 - 25 = 144 \\]\n\\[ h = \\sqrt{144} = 12 \\text{ m} \\]."
+      },
+      "ar": {
+        "question": "يستند سلم طوله \\( 13 \\text{ م} \\) على مبنى عمودي. تقع قاعدة السلم على بُعد \\( 5 \\text{ م} \\) بالضبط من أسفل المبنى. إلى أي ارتفاع يصل السلم على المبنى؟<br/><svg viewBox='0 0 200 160' class='w-full max-w-xs mx-auto bg-slate-900/60 rounded-xl p-2 border border-slate-700 shadow-md my-2'><line x1='30' y1='140' x2='170' y2='140' stroke='#94a3b8' stroke-width='4'/><line x1='50' y1='140' x2='50' y2='20' stroke='#10b981' stroke-width='6'/><line x1='120' y1='140' x2='50' y2='30' stroke='#f59e0b' stroke-width='4'/><rect x='50' y='130' width='10' height='10' fill='none' stroke='#38bdf8' stroke-width='1'/><text x='95' y='80' fill='#e2e8f0' font-size='12' transform='rotate(-57, 95, 80)'>13 م</text><text x='85' y='155' fill='#e2e8f0' font-size='12'>5 م</text><text x='30' y='85' fill='#e2e8f0' font-size='12'>h</text></svg>",
+        "options": [
+          "\\( 8 \\text{ م} \\)",
+          "\\( 10 \\text{ م} \\)",
+          "\\( 12 \\text{ م} \\)",
+          "\\( 14 \\text{ م} \\)"
+        ],
+        "hint": "يشكل السلم والجدار والأرض مثلثاً قائم الزاوية. طبق نظرية فيثاغورس: \\( a^2 + b^2 = c^2 \\)، حيث السلم هو الوتر.",
+        "explanation": "يشكل هذا السيناريو مثلثاً قائم الزاوية حيث السلم هو الوتر \\( (c = 13) \\)، والمسافة من الجدار هي أحد ضلعي القائمة \\( (a = 5) \\)، والارتفاع على الجدار هو الضلع الآخر \\( (b = h) \\).\nباستخدام نظرية فيثاغورس:\n\\[ a^2 + h^2 = c^2 \\]\n\\[ 5^2 + h^2 = 13^2 \\]\n\\[ 25 + h^2 = 169 \\]\n\\[ h^2 = 169 - 25 = 144 \\]\n\\[ h = \\sqrt{144} = 12 \\text{ م} \\]."
+      }
+    },
+    "correct_index": "2"
+  },
+  {
+    "id": "NAF-G09-04",
+    "track": "nafes",
+    "level": "Grade 9",
+    "topic": "Statistics",
+    "type": "MCQ",
+    "difficulty": "medium",
+    "content": {
+      "en": {
+        "question": "A student scored \\( 80, 85, 90, \\) and \\( 95 \\) on four mathematics tests. What exact score must they achieve on the \\( 5^{\\text{th}} \\) test to have an overall mean (average) of \\( 90 \\)?",
+        "options": [
+          "\\( 90 \\)",
+          "\\( 95 \\)",
+          "\\( 98 \\)",
+          "\\( 100 \\)"
+        ],
+        "hint": "To average 90 over 5 tests, the total sum of all 5 tests must be \\( 5 \\times 90 \\). Subtract the sum of the first four tests from this total.",
+        "explanation": "The formula for the mean is \\( \\text{Sum of scores} \\div \\text{Number of tests} \\).\nWe want the mean to be 90 for 5 tests, so the required total sum is:\n\\[ 5 \\times 90 = 450 \\]\nThe sum of the first 4 tests is:\n\\[ 80 + 85 + 90 + 95 = 350 \\]\nTo find the required score for the 5th test, subtract the current sum from the required total:\n\\[ 450 - 350 = 100 \\]."
+      },
+      "ar": {
+        "question": "حصل طالب على الدرجات \\( 80, 85, 90, \\) و \\( 95 \\) في أربعة اختبارات للرياضيات. ما هي الدرجة الدقيقة التي يجب أن يحصل عليها في الاختبار الخامس ليكون متوسطه الحسابي (معدله) العام \\( 90 \\)؟",
+        "options": [
+          "\\( 90 \\)",
+          "\\( 95 \\)",
+          "\\( 98 \\)",
+          "\\( 100 \\)"
+        ],
+        "hint": "لكي يكون المتوسط 90 في 5 اختبارات، يجب أن يكون المجموع الكلي للاختبارات الخمسة \\( 5 \\times 90 \\). اطرح مجموع الاختبارات الأربعة الأولى من هذا الإجمالي.",
+        "explanation": "صيغة المتوسط الحسابي هي \\( \\text{مجموع الدرجات} \\div \\text{عدد الاختبارات} \\).\nنريد أن يكون المتوسط 90 لـ 5 اختبارات، لذا المجموع الكلي المطلوب هو:\n\\[ 5 \\times 90 = 450 \\]\nمجموع الاختبارات الأربعة الأولى هو:\n\\[ 80 + 85 + 90 + 95 = 350 \\]\nلإيجاد الدرجة المطلوبة في الاختبار الخامس، نطرح المجموع الحالي من الإجمالي المطلوب:\n\\[ 450 - 350 = 100 \\]."
+      }
+    },
+    "correct_index": "3"
+  },
+  {
+    "id": "NAF-G09-05",
+    "track": "nafes",
+    "level": "Grade 9",
+    "topic": "Linear Systems",
+    "type": "MCQ",
+    "difficulty": "medium",
+    "content": {
+      "en": {
+        "question": "A customer buys \\( 3 \\) apples and \\( 2 \\) bananas for \\( 12 \\text{ SAR} \\). Another customer buys \\( 1 \\) apple and \\( 2 \\) bananas for \\( 8 \\text{ SAR} \\). What is the exact price of one apple?",
+        "options": [
+          "\\( 2 \\text{ SAR} \\)",
+          "\\( 3 \\text{ SAR} \\)",
+          "\\( 4 \\text{ SAR} \\)",
+          "\\( 6 \\text{ SAR} \\)"
+        ],
+        "hint": "Set up a system of equations: \\( 3A + 2B = 12 \\) and \\( 1A + 2B = 8 \\). Subtract the second equation from the first to eliminate \\( B \\).",
+        "explanation": "Let \\( A \\) be the price of an apple and \\( B \\) be the price of a banana.\nWe have the following system of equations:\n\\[ 3A + 2B = 12 \\quad \\text{--- (1)} \\]\n\\[ 1A + 2B = 8 \\quad \\text{--- (2)} \\]\nSince the coefficient for \\( B \\) is the same in both equations, we can simply subtract equation (2) from equation (1):\n\\[ (3A + 2B) - (1A + 2B) = 12 - 8 \\]\n\\[ 2A = 4 \\implies A = 2 \\]\nThe price of one apple is \\( 2 \\text{ SAR} \\)."
+      },
+      "ar": {
+        "question": "اشترى زبون \\( 3 \\) تفاحات وموزتين مقابل \\( 12 \\text{ ريال} \\). واشترى زبون آخر تفاحة واحدة وموزتين مقابل \\( 8 \\text{ ريالات} \\). ما هو السعر الدقيق للتفاحة الواحدة؟",
+        "options": [
+          "\\( 2 \\text{ ريال} \\)",
+          "\\( 3 \\text{ ريالات} \\)",
+          "\\( 4 \\text{ ريالات} \\)",
+          "\\( 6 \\text{ ريالات} \\)"
+        ],
+        "hint": "أعد نظاماً من المعادلات: \\( 3A + 2B = 12 \\) و \\( 1A + 2B = 8 \\). اطرح المعادلة الثانية من الأولى لحذف المتغير \\( B \\).",
+        "explanation": "ليكن \\( A \\) هو سعر التفاحة و \\( B \\) سعر الموزة.\nلدينا نظام المعادلات التالي:\n\\[ 3A + 2B = 12 \\quad \\text{--- (1)} \\]\n\\[ 1A + 2B = 8 \\quad \\text{--- (2)} \\]\nبما أن معامل \\( B \\) متساوٍ في كلتا المعادلتين، يمكننا ببساطة طرح المعادلة (2) من المعادلة (1):\n\\[ (3A + 2B) - (1A + 2B) = 12 - 8 \\]\n\\[ 2A = 4 \\implies A = 2 \\]\nسعر التفاحة الواحدة هو \\( 2 \\text{ ريال} \\)."
+      }
+    },
+    "correct_index": "0"
+  },
+  {
+    "id": "NAF-G09-06",
+    "track": "nafes",
+    "level": "Grade 9",
+    "topic": "Quadratic Equations",
+    "type": "MCQ",
+    "difficulty": "medium",
+    "content": {
+      "en": {
+        "question": "What is the exact product of the roots of the quadratic equation \\( 2x^2 - 8x + 6 = 0 \\)?",
+        "options": [
+          "\\( -4 \\)",
+          "\\( 3 \\)",
+          "\\( 4 \\)",
+          "\\( 6 \\)"
+        ],
+        "hint": "For a quadratic equation \\( ax^2 + bx + c = 0 \\), the product of the roots is given by the formula \\( \\frac{c}{a} \\).",
+        "explanation": "For any quadratic equation in the standard form \\( ax^2 + bx + c = 0 \\), Vieta's formulas state that the product of its roots \\( r_1 \\times r_2 = \\frac{c}{a} \\).\nIn our equation \\( 2x^2 - 8x + 6 = 0 \\):\n\\( a = 2 \\), \\( b = -8 \\), \\( c = 6 \\).\nThe product of the roots is \\( \\frac{6}{2} = 3 \\).\n(Alternatively, divide by 2: \\( x^2 - 4x + 3 = 0 \\implies (x-3)(x-1)=0 \\). Roots are 3 and 1, product is 3)."
+      },
+      "ar": {
+        "question": "ما هو حاصل الضرب الدقيق لجذري المعادلة التربيعية \\( 2x^2 - 8x + 6 = 0 \\)؟",
+        "options": [
+          "\\( -4 \\)",
+          "\\( 3 \\)",
+          "\\( 4 \\)",
+          "\\( 6 \\)"
+        ],
+        "hint": "في المعادلة التربيعية \\( ax^2 + bx + c = 0 \\), حاصل ضرب الجذور يُعطى بالصيغة \\( \\frac{c}{a} \\).",
+        "explanation": "لأي معادلة تربيعية بالصيغة القياسية \\( ax^2 + bx + c = 0 \\)، تنص صيغ فييتا على أن حاصل ضرب جذورها هو \\( r_1 \\times r_2 = \\frac{c}{a} \\).\nفي معادلتنا \\( 2x^2 - 8x + 6 = 0 \\):\n\\( a = 2 \\)، \\( b = -8 \\)، \\( c = 6 \\).\nحاصل ضرب الجذور هو \\( \\frac{6}{2} = 3 \\).\n(طريقة بديلة، بالقسمة على 2: \\( x^2 - 4x + 3 = 0 \\implies (x-3)(x-1)=0 \\). الجذور هي 3 و 1، وحاصل ضربها هو 3)."
+      }
+    },
+    "correct_index": "1"
+  },
+  {
+    "id": "NAF-G09-07",
+    "track": "nafes",
+    "level": "Grade 9",
+    "topic": "Pythagorean Word Problems",
+    "type": "MCQ",
+    "difficulty": "medium",
+    "content": {
+      "en": {
+        "question": "What is the exact straight-line distance between the points \\( A(1, 2) \\) and \\( B(4, 6) \\) on a standard Cartesian coordinate plane?<br/><svg viewBox='0 0 200 160' class='w-full max-w-xs mx-auto bg-slate-900/60 rounded-xl p-2 border border-slate-700 shadow-md my-2'><g stroke='#475569' stroke-width='1'><line x1='30' y1='130' x2='170' y2='130'/><line x1='30' y1='10' x2='30' y2='130'/></g><line x1='50' y1='110' x2='110' y2='30' stroke='#38bdf8' stroke-width='3'/><line x1='50' y1='110' x2='110' y2='110' stroke='#f59e0b' stroke-width='2' stroke-dasharray='4,4'/><line x1='110' y1='110' x2='110' y2='30' stroke='#f59e0b' stroke-width='2' stroke-dasharray='4,4'/><circle cx='50' cy='110' r='4' fill='#10b981'/><circle cx='110' cy='30' r='4' fill='#10b981'/><text x='35' y='125' fill='#e2e8f0' font-size='10'>A(1,2)</text><text x='115' y='25' fill='#e2e8f0' font-size='10'>B(4,6)</text></svg>",
+        "options": [
+          "\\( 3 \\)",
+          "\\( 4 \\)",
+          "\\( 5 \\)",
+          "\\( 7 \\)"
+        ],
+        "hint": "Use the distance formula derived from the Pythagorean theorem: \\( d = \\sqrt{(x_2 - x_1)^2 + (y_2 - y_1)^2} \\).",
+        "explanation": "The distance \\( d \\) between two points \\( (x_1, y_1) \\) and \\( (x_2, y_2) \\) is found using the distance formula:\n\\[ d = \\sqrt{(x_2 - x_1)^2 + (y_2 - y_1)^2} \\]\nSubstitute the coordinates \\( (1, 2) \\) and \\( (4, 6) \\):\n\\[ d = \\sqrt{(4 - 1)^2 + (6 - 2)^2} \\]\n\\[ d = \\sqrt{3^2 + 4^2} \\]\n\\[ d = \\sqrt{9 + 16} = \\sqrt{25} = 5 \\]."
+      },
+      "ar": {
+        "question": "ما هي مسافة الخط المستقيم الدقيقة بين النقطتين \\( A(1, 2) \\) و \\( B(4, 6) \\) على مستوى الإحداثيات الديكارتية القياسي؟<br/><svg viewBox='0 0 200 160' class='w-full max-w-xs mx-auto bg-slate-900/60 rounded-xl p-2 border border-slate-700 shadow-md my-2'><g stroke='#475569' stroke-width='1'><line x1='30' y1='130' x2='170' y2='130'/><line x1='30' y1='10' x2='30' y2='130'/></g><line x1='50' y1='110' x2='110' y2='30' stroke='#38bdf8' stroke-width='3'/><line x1='50' y1='110' x2='110' y2='110' stroke='#f59e0b' stroke-width='2' stroke-dasharray='4,4'/><line x1='110' y1='110' x2='110' y2='30' stroke='#f59e0b' stroke-width='2' stroke-dasharray='4,4'/><circle cx='50' cy='110' r='4' fill='#10b981'/><circle cx='110' cy='30' r='4' fill='#10b981'/><text x='35' y='125' fill='#e2e8f0' font-size='10'>A(1,2)</text><text x='115' y='25' fill='#e2e8f0' font-size='10'>B(4,6)</text></svg>",
+        "options": [
+          "\\( 3 \\)",
+          "\\( 4 \\)",
+          "\\( 5 \\)",
+          "\\( 7 \\)"
+        ],
+        "hint": "استخدم قانون المسافة المشتق من نظرية فيثاغورس: \\( d = \\sqrt{(x_2 - x_1)^2 + (y_2 - y_1)^2} \\).",
+        "explanation": "المسافة \\( d \\) بين نقطتين \\( (x_1, y_1) \\) و \\( (x_2, y_2) \\) يتم إيجادها باستخدام قانون المسافة:\n\\[ d = \\sqrt{(x_2 - x_1)^2 + (y_2 - y_1)^2} \\]\nنعوض بالإحداثيات \\( (1, 2) \\) و \\( (4, 6) \\):\n\\[ d = \\sqrt{(4 - 1)^2 + (6 - 2)^2} \\]\n\\[ d = \\sqrt{3^2 + 4^2} \\]\n\\[ d = \\sqrt{9 + 16} = \\sqrt{25} = 5 \\]."
+      }
+    },
+    "correct_index": "2"
+  },
+  {
+    "id": "NAF-G09-08",
+    "track": "nafes",
+    "level": "Grade 9",
+    "topic": "Statistics",
+    "type": "MCQ",
+    "difficulty": "medium",
+    "content": {
+      "en": {
+        "question": "Consider the dataset: \\( 4, 7, 2, 7, 9, 2, 7 \\). What is the exact sum of the Mode and the Range of this dataset?",
+        "options": [
+          "\\( 10 \\)",
+          "\\( 12 \\)",
+          "\\( 14 \\)",
+          "\\( 16 \\)"
+        ],
+        "hint": "The Mode is the most frequent number. The Range is the difference between the maximum and minimum values in the dataset.",
+        "explanation": "First, sort the dataset to make it easier to analyze:\n\\[ 2, 2, 4, 7, 7, 7, 9 \\]\n- The **Mode** is the number that appears most often. The number \\( 7 \\) appears three times, which is more than any other number. Thus, Mode = \\( 7 \\).\n- The **Range** is the highest value minus the lowest value. \n  Maximum = \\( 9 \\), Minimum = \\( 2 \\).\n  Range = \\( 9 - 2 = 7 \\).\nWe are asked for the sum of the Mode and Range:\n\\[ \\text{Sum} = 7 + 7 = 14 \\]."
+      },
+      "ar": {
+        "question": "تأمل مجموعة البيانات التالية: \\( 4, 7, 2, 7, 9, 2, 7 \\). ما هو المجموع الدقيق للمنوال والمدى لهذه المجموعة؟",
+        "options": [
+          "\\( 10 \\)",
+          "\\( 12 \\)",
+          "\\( 14 \\)",
+          "\\( 16 \\)"
+        ],
+        "hint": "المنوال هو الرقم الأكثر تكراراً. المدى هو الفرق بين أكبر وأصغر قيمة في مجموعة البيانات.",
+        "explanation": "أولاً، نرتب مجموعة البيانات لتسهيل تحليلها:\n\\[ 2, 2, 4, 7, 7, 7, 9 \\]\n- **المنوال** هو الرقم الذي يظهر أكثر من غيره. الرقم \\( 7 \\) يظهر ثلاث مرات، وهو أكثر من أي رقم آخر. إذن، المنوال = \\( 7 \\).\n- **المدى** هو أكبر قيمة ناقص أصغر قيمة.\n  القيمة الكبرى = \\( 9 \\)، القيمة الصغرى = \\( 2 \\).\n  المدى = \\( 9 - 2 = 7 \\).\nالمطلوب هو مجموع المنوال والمدى:\n\\[ \\text{المجموع} = 7 + 7 = 14 \\]."
+      }
+    },
+    "correct_index": "2"
+  },
+  {
+    "id": "NAF-G09-09",
+    "track": "nafes",
+    "level": "Grade 9",
+    "topic": "Linear Systems",
+    "type": "MCQ",
+    "difficulty": "hard",
+    "content": {
+      "en": {
+        "question": "At what exact \\( (x, y) \\) coordinate point do the lines \\( y = 2x - 1 \\) and \\( y = -x + 5 \\) intersect?<br/><svg viewBox='0 0 200 160' class='w-full max-w-xs mx-auto bg-slate-900/60 rounded-xl p-2 border border-slate-700 shadow-md my-2'><g stroke='#475569' stroke-width='1'><line x1='20' y1='130' x2='180' y2='130'/><line x1='100' y1='10' x2='100' y2='150'/></g><line x1='60' y1='150' x2='120' y2='30' stroke='#38bdf8' stroke-width='2'/><line x1='40' y1='50' x2='160' y2='170' stroke='#10b981' stroke-width='2'/><circle cx='100' cy='110' r='4' fill='#f59e0b'/><text x='115' y='115' fill='#e2e8f0' font-size='10'>(x, y)</text></svg>",
+        "options": [
+          "\\( (1, 1) \\)",
+          "\\( (2, 3) \\)",
+          "\\( (3, 5) \\)",
+          "\\( (4, 1) \\)"
+        ],
+        "hint": "Set the two right-hand sides of the equations equal to each other (\\( 2x - 1 = -x + 5 \\)) to solve for \\( x \\), then plug \\( x \\) back in to find \\( y \\).",
+        "explanation": "Since both equations are already solved for \\( y \\), we can set them equal to each other to find the intersection point:\n\\[ 2x - 1 = -x + 5 \\]\nAdd \\( x \\) to both sides:\n\\[ 3x - 1 = 5 \\]\nAdd \\( 1 \\) to both sides:\n\\[ 3x = 6 \\implies x = 2 \\]\nNow substitute \\( x = 2 \\) back into either of the original equations to find \\( y \\):\nUsing the first equation: \\( y = 2(2) - 1 = 4 - 1 = 3 \\).\n(Check with the second: \\( y = -2 + 5 = 3 \\)).\nThe intersection point is \\( (2, 3) \\)."
+      },
+      "ar": {
+        "question": "عند أي نقطة إحداثية \\( (x, y) \\) تتقاطع الخطوط المستقيمة \\( y = 2x - 1 \\) و \\( y = -x + 5 \\) بالضبط؟<br/><svg viewBox='0 0 200 160' class='w-full max-w-xs mx-auto bg-slate-900/60 rounded-xl p-2 border border-slate-700 shadow-md my-2'><g stroke='#475569' stroke-width='1'><line x1='20' y1='130' x2='180' y2='130'/><line x1='100' y1='10' x2='100' y2='150'/></g><line x1='60' y1='150' x2='120' y2='30' stroke='#38bdf8' stroke-width='2'/><line x1='40' y1='50' x2='160' y2='170' stroke='#10b981' stroke-width='2'/><circle cx='100' cy='110' r='4' fill='#f59e0b'/><text x='115' y='115' fill='#e2e8f0' font-size='10'>(x, y)</text></svg>",
+        "options": [
+          "\\( (1, 1) \\)",
+          "\\( (2, 3) \\)",
+          "\\( (3, 5) \\)",
+          "\\( (4, 1) \\)"
+        ],
+        "hint": "ساوِ الطرفين الأيمنين للمعادلتين ببعضهما (\\( 2x - 1 = -x + 5 \\)) لحل قيمة \\( x \\)، ثم عوض بـ \\( x \\) لإيجاد \\( y \\).",
+        "explanation": "بما أن كلتا المعادلتين مصاغتان لإيجاد \\( y \\)، يمكننا مساواتهما لإيجاد نقطة التقاطع:\n\\[ 2x - 1 = -x + 5 \\]\nنجمع \\( x \\) لكلا الطرفين:\n\\[ 3x - 1 = 5 \\]\nنجمع \\( 1 \\) لكلا الطرفين:\n\\[ 3x = 6 \\implies x = 2 \\]\nالآن نعوض بـ \\( x = 2 \\) في أي من المعادلتين الأصليتين لإيجاد \\( y \\):\nباستخدام المعادلة الأولى: \\( y = 2(2) - 1 = 4 - 1 = 3 \\).\n(نتحقق بالثانية: \\( y = -2 + 5 = 3 \\)).\nإذن، نقطة التقاطع هي \\( (2, 3) \\)."
+      }
+    },
+    "correct_index": "1"
+  },
+  {
+    "id": "NAF-G09-10",
+    "track": "nafes",
+    "level": "Grade 9",
+    "topic": "Quadratic Equations",
+    "type": "MCQ",
+    "difficulty": "hard",
+    "content": {
+      "en": {
+        "question": "The length of a rectangle is algebraically given as \\( (x + 3) \\text{ cm} \\) and its width is \\( (x - 2) \\text{ cm} \\). If the total area of the rectangle is \\( 14 \\text{ cm}^2 \\), what is the value of \\( x \\) (assuming \\( x > 2 \\))?",
+        "options": [
+          "\\( 3 \\)",
+          "\\( 4 \\)",
+          "\\( 5 \\)",
+          "\\( 6 \\)"
+        ],
+        "hint": "Area equals length times width. Multiply the expressions to form a quadratic equation, set it equal to 14, and solve for x.",
+        "explanation": "The formula for the area of a rectangle is Area = Length \\( \\times \\) Width.\n\\[ (x + 3)(x - 2) = 14 \\]\nExpand the binomials using FOIL (First, Outer, Inner, Last):\n\\[ x^2 - 2x + 3x - 6 = 14 \\]\n\\[ x^2 + x - 6 = 14 \\]\nSubtract 14 from both sides to set the quadratic equation to zero:\n\\[ x^2 + x - 20 = 0 \\]\nFactor the quadratic equation. We need two numbers that multiply to \\( -20 \\) and add to \\( +1 \\). Those numbers are \\( +5 \\) and \\( -4 \\).\n\\[ (x + 5)(x - 4) = 0 \\]\nThis gives \\( x = -5 \\) and \\( x = 4 \\).\nSince a dimension like width \\( (x-2) \\) must be positive, \\( x \\) must be greater than 2. Therefore, \\( x = 4 \\)."
+      },
+      "ar": {
+        "question": "طول مستطيل معطى جبرياً بالصيغة \\( (x + 3) \\text{ سم} \\) وعرضه \\( (x - 2) \\text{ سم} \\). إذا كانت المساحة الإجمالية للمستطيل هي \\( 14 \\text{ سم}^2 \\)، فما هي قيمة \\( x \\) (بافتراض أن \\( x > 2 \\))؟",
+        "options": [
+          "\\( 3 \\)",
+          "\\( 4 \\)",
+          "\\( 5 \\)",
+          "\\( 6 \\)"
+        ],
+        "hint": "المساحة تساوي الطول ضرب العرض. اضرب المقدارين لتكوين معادلة تربيعية، وساوها بـ 14، ثم حل لإيجاد x.",
+        "explanation": "صيغة مساحة المستطيل هي المساحة = الطول \\( \\times \\) العرض.\n\\[ (x + 3)(x - 2) = 14 \\]\nفك الأقواس بضرب ثنائيات الحدود:\n\\[ x^2 - 2x + 3x - 6 = 14 \\]\n\\[ x^2 + x - 6 = 14 \\]\nاطرح 14 من كلا الطرفين لجعل المعادلة التربيعية تساوي صفراً:\n\\[ x^2 + x - 20 = 0 \\]\nحلل المعادلة التربيعية. نحتاج إلى عددين حاصل ضربهما \\( -20 \\) ومجموعهما \\( +1 \\). هذان العددان هما \\( +5 \\) و \\( -4 \\).\n\\[ (x + 5)(x - 4) = 0 \\]\nهذا يعطي \\( x = -5 \\) و \\( x = 4 \\).\nبما أن بُعداً كالعرض \\( (x-2) \\) يجب أن يكون موجباً، فيجب أن يكون \\( x \\) أكبر من 2. لذلك، \\( x = 4 \\)."
+      }
+    },
+    "correct_index": "1"
+  },
+  {
+    "id": "NAF-G09-11",
+    "track": "nafes",
+    "level": "Grade 9",
+    "topic": "Pythagorean Word Problems",
+    "type": "MCQ",
+    "difficulty": "medium",
+    "content": {
+      "en": {
+        "question": "A rectangular open field is \\( 15 \\text{ m} \\) wide and \\( 20 \\text{ m} \\) long. By walking directly across the diagonal of the field instead of walking along the two outer edges, exactly how many meters shorter is your path?<br/><svg viewBox='0 0 200 140' class='w-full max-w-xs mx-auto bg-slate-900/60 rounded-xl p-2 border border-slate-700 shadow-md my-2'><rect x='40' y='30' width='120' height='80' fill='none' stroke='#38bdf8' stroke-width='2'/><line x1='40' y1='110' x2='160' y2='30' stroke='#f59e0b' stroke-width='2' stroke-dasharray='4,4'/><text x='100' y='125' fill='#e2e8f0' font-size='10' text-anchor='middle'>20 m</text><text x='25' y='75' fill='#e2e8f0' font-size='10'>15 m</text></svg>",
+        "options": [
+          "\\( 5 \\text{ m} \\)",
+          "\\( 10 \\text{ m} \\)",
+          "\\( 15 \\text{ m} \\)",
+          "\\( 20 \\text{ m} \\)"
+        ],
+        "hint": "Calculate the sum of the two edges, then calculate the diagonal using the Pythagorean theorem, and finally subtract the diagonal from the sum of the edges.",
+        "explanation": "Path 1: Walking along the two outer edges (width + length).\n\\[ \\text{Distance} = 15 + 20 = 35 \\text{ m} \\].\nPath 2: Walking diagonally across the field. We use the Pythagorean theorem (\\( c = \\sqrt{a^2 + b^2} \\)):\n\\[ \\text{Diagonal} = \\sqrt{15^2 + 20^2} = \\sqrt{225 + 400} = \\sqrt{625} \\]\n\\[ \\text{Diagonal} = 25 \\text{ m} \\].\nThe question asks how much shorter the diagonal path is:\n\\[ \\text{Difference} = 35 - 25 = 10 \\text{ m} \\]."
+      },
+      "ar": {
+        "question": "حقل مستطيل مكشوف عرضه \\( 15 \\text{ م} \\) وطوله \\( 20 \\text{ م} \\). بالسير مباشرة عبر القطر القطري للحقل بدلاً من المشي على طول الحافتين الخارجيتين، كم متراً سيكون مسارك أقصر بالضبط؟<br/><svg viewBox='0 0 200 140' class='w-full max-w-xs mx-auto bg-slate-900/60 rounded-xl p-2 border border-slate-700 shadow-md my-2'><rect x='40' y='30' width='120' height='80' fill='none' stroke='#38bdf8' stroke-width='2'/><line x1='40' y1='110' x2='160' y2='30' stroke='#f59e0b' stroke-width='2' stroke-dasharray='4,4'/><text x='100' y='125' fill='#e2e8f0' font-size='10' text-anchor='middle'>20 م</text><text x='25' y='75' fill='#e2e8f0' font-size='10'>15 م</text></svg>",
+        "options": [
+          "\\( 5 \\text{ م} \\)",
+          "\\( 10 \\text{ م} \\)",
+          "\\( 15 \\text{ م} \\)",
+          "\\( 20 \\text{ م} \\)"
+        ],
+        "hint": "احسب مجموع الحافتين، ثم احسب القطر باستخدام نظرية فيثاغورس، وأخيراً اطرح القطر من مجموع الحافتين.",
+        "explanation": "المسار الأول: المشي على طول الحافتين الخارجيتين (العرض + الطول).\n\\[ \\text{المسافة} = 15 + 20 = 35 \\text{ م} \\].\nالمسار الثاني: المشي قطرياً عبر الحقل. نستخدم نظرية فيثاغورس (\\( c = \\sqrt{a^2 + b^2} \\)):\n\\[ \\text{القطر} = \\sqrt{15^2 + 20^2} = \\sqrt{225 + 400} = \\sqrt{625} \\]\n\\[ \\text{القطر} = 25 \\text{ م} \\].\nيسأل السؤال عن مقدار قِصر المسار القطري:\n\\[ \\text{الفرق} = 35 - 25 = 10 \\text{ م} \\]."
+      }
+    },
+    "correct_index": "1"
+  },
+  {
+    "id": "NAF-G09-12",
+    "track": "nafes",
+    "level": "Grade 9",
+    "topic": "Statistics",
+    "type": "MCQ",
+    "difficulty": "medium",
+    "content": {
+      "en": {
+        "question": "A dataset contains exactly five positive integers sorted in ascending order: \\( 12, 15, x, 22, 28 \\). If the median of this dataset is \\( 18 \\), what is the value of \\( x \\)?",
+        "options": [
+          "\\( 16 \\)",
+          "\\( 17 \\)",
+          "\\( 18 \\)",
+          "\\( 19 \\)"
+        ],
+        "hint": "In an ordered dataset with an odd number of elements, the median is exactly the middle value.",
+        "explanation": "The median of a dataset is the middle number when the data is sorted in ascending (or descending) order.\nThere are exactly \\( 5 \\) numbers in this dataset: \\( 12, 15, x, 22, 28 \\).\nThe middle number is the \\( 3^{\\text{rd}} \\) number, which is \\( x \\).\nWe are given that the median is \\( 18 \\).\nTherefore, the middle number must be \\( 18 \\).\n\\[ x = 18 \\]."
+      },
+      "ar": {
+        "question": "مجموعة بيانات تحتوي بالضبط على خمسة أعداد صحيحة موجبة مرتبة تصاعدياً: \\( 12, 15, x, 22, 28 \\). إذا كان الوسيط لهذه المجموعة هو \\( 18 \\)، فما هي قيمة \\( x \\)؟",
+        "options": [
+          "\\( 16 \\)",
+          "\\( 17 \\)",
+          "\\( 18 \\)",
+          "\\( 19 \\)"
+        ],
+        "hint": "في مجموعة بيانات مرتبة بعدد فردي من العناصر، الوسيط هو القيمة الوسطى تماماً.",
+        "explanation": "الوسيط لمجموعة بيانات هو الرقم الأوسط عندما تكون البيانات مرتبة تصاعدياً (أو تنازلياً).\nيوجد بالضبط \\( 5 \\) أعداد في هذه المجموعة: \\( 12, 15, x, 22, 28 \\).\nالرقم الأوسط هو الرقم الثالث، وهو \\( x \\).\nأُعطينا أن الوسيط هو \\( 18 \\).\nلذلك، يجب أن يكون الرقم الأوسط هو \\( 18 \\).\n\\[ x = 18 \\]."
+      }
+    },
+    "correct_index": "2"
+  },
+  {
+    "id": "NAF-G09-13",
+    "track": "nafes",
+    "level": "Grade 9",
+    "topic": "Linear Systems",
+    "type": "MCQ",
+    "difficulty": "hard",
+    "content": {
+      "en": {
+        "question": "A father is currently \\( 4 \\) times as old as his son. In exactly \\( 5 \\) years, the father will be \\( 3 \\) times as old as his son. How old is the father right now?",
+        "options": [
+          "\\( 30 \\)",
+          "\\( 36 \\)",
+          "\\( 40 \\)",
+          "\\( 45 \\)"
+        ],
+        "hint": "Let the son's current age be S and the father's be F. Build two equations: \\( F = 4S \\) and \\( F + 5 = 3(S + 5) \\).",
+        "explanation": "Let \\( F \\) be the father's current age and \\( S \\) be the son's current age.\nFrom the first sentence, we can write the first equation:\n\\[ F = 4S \\quad \\text{--- (1)} \\]\nIn 5 years, the father will be \\( F + 5 \\) and the son will be \\( S + 5 \\). We write the second equation:\n\\[ F + 5 = 3(S + 5) \\quad \\text{--- (2)} \\]\nSubstitute \\( F = 4S \\) into equation (2):\n\\[ 4S + 5 = 3(S + 5) \\]\n\\[ 4S + 5 = 3S + 15 \\]\nSubtract \\( 3S \\) from both sides:\n\\[ S + 5 = 15 \\implies S = 10 \\]\nThe son is currently 10 years old. To find the father's age, substitute \\( S = 10 \\) back into equation (1):\n\\[ F = 4(10) = 40 \\]\nThe father is currently 40 years old."
+      },
+      "ar": {
+        "question": "يبلغ عمر الأب حالياً \\( 4 \\) أضعاف عمر ابنه. بعد \\( 5 \\) سنوات بالضبط، سيكون عمر الأب \\( 3 \\) أضعاف عمر ابنه. كم يبلغ عمر الأب الآن؟",
+        "options": [
+          "\\( 30 \\)",
+          "\\( 36 \\)",
+          "\\( 40 \\)",
+          "\\( 45 \\)"
+        ],
+        "hint": "ليكن عمر الابن الحالي S وعمر الأب F. كوّن معادلتين: \\( F = 4S \\) و \\( F + 5 = 3(S + 5) \\).",
+        "explanation": "ليكن \\( F \\) هو عمر الأب الحالي و \\( S \\) عمر الابن الحالي.\nمن الجملة الأولى، يمكننا كتابة المعادلة الأولى:\n\\[ F = 4S \\quad \\text{--- (1)} \\]\nبعد 5 سنوات، سيكون عمر الأب \\( F + 5 \\) وعمر الابن \\( S + 5 \\). نكتب المعادلة الثانية:\n\\[ F + 5 = 3(S + 5) \\quad \\text{--- (2)} \\]\nنعوض عن \\( F = 4S \\) في المعادلة (2):\n\\[ 4S + 5 = 3(S + 5) \\]\n\\[ 4S + 5 = 3S + 15 \\]\nنطرح \\( 3S \\) من كلا الطرفين:\n\\[ S + 5 = 15 \\implies S = 10 \\]\nعمر الابن حالياً هو 10 سنوات. لإيجاد عمر الأب، نعوض عن \\( S = 10 \\) في المعادلة (1):\n\\[ F = 4(10) = 40 \\]\nعمر الأب حالياً هو 40 عاماً."
+      }
+    },
+    "correct_index": "2"
+  },
+  {
+    "id": "NAF-G09-14",
+    "track": "nafes",
+    "level": "Grade 9",
+    "topic": "Quadratic Equations",
+    "type": "MCQ",
+    "difficulty": "hard",
+    "content": {
+      "en": {
+        "question": "For what positive value of \\( k \\) does the quadratic equation \\( x^2 + kx + 16 = 0 \\) have exactly one real root (a repeated double root)?",
+        "options": [
+          "\\( 4 \\)",
+          "\\( 8 \\)",
+          "\\( 16 \\)",
+          "\\( 32 \\)"
+        ],
+        "hint": "A quadratic equation has exactly one real root if its discriminant (\\( b^2 - 4ac \\)) is strictly equal to zero.",
+        "explanation": "For the quadratic equation \\( ax^2 + bx + c = 0 \\) to have exactly one real root, the discriminant must be zero:\n\\[ \\Delta = b^2 - 4ac = 0 \\]\nIn our equation \\( x^2 + kx + 16 = 0 \\), the coefficients are \\( a = 1 \\), \\( b = k \\), and \\( c = 16 \\).\nSet the discriminant to zero:\n\\[ k^2 - 4(1)(16) = 0 \\]\n\\[ k^2 - 64 = 0 \\]\n\\[ k^2 = 64 \\]\nTaking the square root gives \\( k = 8 \\) or \\( k = -8 \\).\nThe question specifies that \\( k \\) is a positive value, so \\( k = 8 \\)."
+      },
+      "ar": {
+        "question": "لأي قيمة موجبة لـ \\( k \\) يكون للمعادلة التربيعية \\( x^2 + kx + 16 = 0 \\) جذر حقيقي واحد فقط (جذر مزدوج مكرر)؟",
+        "options": [
+          "\\( 4 \\)",
+          "\\( 8 \\)",
+          "\\( 16 \\)",
+          "\\( 32 \\)"
+        ],
+        "hint": "يكون للمعادلة التربيعية جذر حقيقي واحد فقط إذا كان مميزها (\\( b^2 - 4ac \\)) يساوي صفراً تماماً.",
+        "explanation": "لكي يكون للمعادلة التربيعية \\( ax^2 + bx + c = 0 \\) جذر حقيقي واحد فقط، يجب أن يكون المميز صفراً:\n\\[ \\Delta = b^2 - 4ac = 0 \\]\nفي معادلتنا \\( x^2 + kx + 16 = 0 \\)، المعاملات هي \\( a = 1 \\)، و \\( b = k \\)، و \\( c = 16 \\).\nنساوي المميز بالصفر:\n\\[ k^2 - 4(1)(16) = 0 \\]\n\\[ k^2 - 64 = 0 \\]\n\\[ k^2 = 64 \\]\nبأخذ الجذر التربيعي نحصل على \\( k = 8 \\) أو \\( k = -8 \\).\nيحدد السؤال أن \\( k \\) قيمة موجبة، إذن \\( k = 8 \\)."
+      }
+    },
+    "correct_index": "1"
+  },
+  {
+    "id": "NAF-G09-15",
+    "track": "nafes",
+    "level": "Grade 9",
+    "topic": "Pythagorean Word Problems",
+    "type": "MCQ",
+    "difficulty": "hard",
+    "content": {
+      "en": {
+        "question": "What is the exact length of the longest space diagonal inside a solid rectangular box with dimensions \\( 3 \\text{ cm} \\) by \\( 4 \\text{ cm} \\) by \\( 12 \\text{ cm} \\)?<br/><svg viewBox='0 0 200 160' class='w-full max-w-xs mx-auto bg-slate-900/60 rounded-xl p-2 border border-slate-700 shadow-md my-2'><rect x='30' y='50' width='100' height='80' fill='none' stroke='#38bdf8' stroke-width='2'/><polygon points='30,50 60,20 160,20 130,50' fill='none' stroke='#38bdf8' stroke-width='2'/><polygon points='130,50 160,20 160,100 130,130' fill='none' stroke='#38bdf8' stroke-width='2'/><line x1='30' y1='130' x2='60' y2='100' stroke='#94a3b8' stroke-width='2' stroke-dasharray='4,4'/><line x1='60' y1='100' x2='160' y2='100' stroke='#94a3b8' stroke-width='2' stroke-dasharray='4,4'/><line x1='60' y1='100' x2='60' y2='20' stroke='#94a3b8' stroke-width='2' stroke-dasharray='4,4'/><line x1='30' y1='130' x2='160' y2='20' stroke='#f59e0b' stroke-width='3'/><text x='80' y='145' fill='#e2e8f0' font-size='10'>12 cm</text><text x='150' y='125' fill='#e2e8f0' font-size='10'>3 cm</text><text x='15' y='95' fill='#e2e8f0' font-size='10'>4 cm</text></svg>",
+        "options": [
+          "\\( 13 \\text{ cm} \\)",
+          "\\( 14 \\text{ cm} \\)",
+          "\\( 15 \\text{ cm} \\)",
+          "\\( 17 \\text{ cm} \\)"
+        ],
+        "hint": "Use the 3D Pythagorean theorem to find the length of the space diagonal: \\( d = \\sqrt{l^2 + w^2 + h^2} \\).",
+        "explanation": "The length of the space diagonal \\( d \\) of a rectangular prism (box) can be calculated by applying the Pythagorean theorem twice, which simplifies to the 3D formula:\n\\[ d = \\sqrt{l^2 + w^2 + h^2} \\]\nSubstitute the dimensions of the box \\( (3, 4, \\text{ and } 12) \\):\n\\[ d = \\sqrt{3^2 + 4^2 + 12^2} \\]\n\\[ d = \\sqrt{9 + 16 + 144} \\]\n\\[ d = \\sqrt{25 + 144} = \\sqrt{169} \\]\n\\[ d = 13 \\text{ cm} \\]."
+      },
+      "ar": {
+        "question": "ما هو الطول الدقيق لأطول قطر فضائي (يمر عبر الفراغ) داخل صندوق مستطيل صلب أبعاده \\( 3 \\text{ سم} \\) و \\( 4 \\text{ سم} \\) و \\( 12 \\text{ سم} \\)؟<br/><svg viewBox='0 0 200 160' class='w-full max-w-xs mx-auto bg-slate-900/60 rounded-xl p-2 border border-slate-700 shadow-md my-2'><rect x='30' y='50' width='100' height='80' fill='none' stroke='#38bdf8' stroke-width='2'/><polygon points='30,50 60,20 160,20 130,50' fill='none' stroke='#38bdf8' stroke-width='2'/><polygon points='130,50 160,20 160,100 130,130' fill='none' stroke='#38bdf8' stroke-width='2'/><line x1='30' y1='130' x2='60' y2='100' stroke='#94a3b8' stroke-width='2' stroke-dasharray='4,4'/><line x1='60' y1='100' x2='160' y2='100' stroke='#94a3b8' stroke-width='2' stroke-dasharray='4,4'/><line x1='60' y1='100' x2='60' y2='20' stroke='#94a3b8' stroke-width='2' stroke-dasharray='4,4'/><line x1='30' y1='130' x2='160' y2='20' stroke='#f59e0b' stroke-width='3'/><text x='80' y='145' fill='#e2e8f0' font-size='10'>12 سم</text><text x='150' y='125' fill='#e2e8f0' font-size='10'>3 سم</text><text x='15' y='95' fill='#e2e8f0' font-size='10'>4 سم</text></svg>",
+        "options": [
+          "\\( 13 \\text{ سم} \\)",
+          "\\( 14 \\text{ سم} \\)",
+          "\\( 15 \\text{ سم} \\)",
+          "\\( 17 \\text{ سم} \\)"
+        ],
+        "hint": "استخدم نظرية فيثاغورس ثلاثية الأبعاد لإيجاد طول القطر الفضائي: \\( d = \\sqrt{l^2 + w^2 + h^2} \\).",
+        "explanation": "طول القطر الفضائي \\( d \\) لمنشور مستطيل (صندوق) يمكن حسابه بتطبيق نظرية فيثاغورس مرتين، والتي تتبسط إلى الصيغة ثلاثية الأبعاد:\n\\[ d = \\sqrt{l^2 + w^2 + h^2} \\]\nنعوض بأبعاد الصندوق \\( (3, 4, \\text{ و } 12) \\):\n\\[ d = \\sqrt{3^2 + 4^2 + 12^2} \\]\n\\[ d = \\sqrt{9 + 16 + 144} \\]\n\\[ d = \\sqrt{25 + 144} = \\sqrt{169} \\]\n\\[ d = 13 \\text{ سم} \\]."
+      }
+    },
+    "correct_index": "0"
+  },
+  {
+    "id": "NAF-G09-16",
+    "track": "nafes",
+    "level": "Grade 9",
+    "topic": "Statistics",
+    "type": "MCQ",
+    "difficulty": "medium",
+    "content": {
+      "en": {
+        "question": "In a statistical dataset, the calculated quartiles are \\( Q_1 = 20 \\), \\( Q_2 = 35 \\), and \\( Q_3 = 50 \\). What is the exact value of the Interquartile Range (IQR)?",
+        "options": [
+          "\\( 15 \\)",
+          "\\( 20 \\)",
+          "\\( 30 \\)",
+          "\\( 35 \\)"
+        ],
+        "hint": "The Interquartile Range (IQR) measures the spread of the middle 50% of the data and is found by subtracting the first quartile from the third quartile.",
+        "explanation": "The Interquartile Range (IQR) is the difference between the third quartile (\\( Q_3 \\), the upper quartile) and the first quartile (\\( Q_1 \\), the lower quartile).\nIt represents the range of the middle \\( 50\\% \\) of the scores.\n\\[ \\text{IQR} = Q_3 - Q_1 \\]\nSubstitute the given values:\n\\[ \\text{IQR} = 50 - 20 = 30 \\].\nThe median (\\( Q_2 \\)) is not needed for this specific calculation."
+      },
+      "ar": {
+        "question": "في مجموعة بيانات إحصائية، الربيعات المحسوبة هي \\( Q_1 = 20 \\)، \\( Q_2 = 35 \\)، و \\( Q_3 = 50 \\). ما هي القيمة الدقيقة للمدى الربيعي (IQR)؟",
+        "options": [
+          "\\( 15 \\)",
+          "\\( 20 \\)",
+          "\\( 30 \\)",
+          "\\( 35 \\)"
+        ],
+        "hint": "يقيس المدى الربيعي (IQR) تشتت الـ 50% الوسطى من البيانات، ويتم إيجاده بطرح الربيع الأول من الربيع الثالث.",
+        "explanation": "المدى الربيعي (IQR) هو الفرق بين الربيع الثالث (\\( Q_3 \\)، الربيع الأعلى) والربيع الأول (\\( Q_1 \\)، الربيع الأدنى).\nوهو يمثل مدى النصف الأوسط (\\( 50\\% \\)) من الدرجات.\n\\[ \\text{IQR} = Q_3 - Q_1 \\]\nنعوض بالقيم المعطاة:\n\\[ \\text{IQR} = 50 - 20 = 30 \\].\nالوسيط (\\( Q_2 \\)) غير مطلوب لهذا الحساب تحديداً."
+      }
+    },
+    "correct_index": "2"
+  },
+  {
+    "id": "NAF-G09-17",
+    "track": "nafes",
+    "level": "Grade 9",
+    "topic": "Linear Systems",
+    "type": "MCQ",
+    "difficulty": "hard",
+    "content": {
+      "en": {
+        "question": "Solve the following system of equations involving fractions. What is the value of \\( y \\)?\n\\[ \\frac{x}{2} + \\frac{y}{3} = 4 \\]\n\\[ x - y = 3 \\]",
+        "options": [
+          "\\( 2 \\)",
+          "\\( 3 \\)",
+          "\\( 4 \\)",
+          "\\( 5 \\)"
+        ],
+        "hint": "First, clear the fractions from the top equation by multiplying the entire equation by the common denominator (6). Then solve the resulting simple linear system.",
+        "explanation": "Let's eliminate the fractions in the first equation by multiplying everything by \\( 6 \\) (the least common multiple of 2 and 3):\n\\[ 6 \\left(\\frac{x}{2} + \\frac{y}{3}\\right) = 6(4) \\implies 3x + 2y = 24 \\quad \\text{--- (1)} \\]\nThe second equation is:\n\\[ x - y = 3 \\quad \\text{--- (2)} \\]\nFrom equation (2), isolate \\( x \\): \\( x = y + 3 \\).\nSubstitute this expression into equation (1):\n\\[ 3(y + 3) + 2y = 24 \\]\n\\[ 3y + 9 + 2y = 24 \\]\n\\[ 5y + 9 = 24 \\]\n\\[ 5y = 15 \\implies y = 3 \\]\nThe value of \\( y \\) is \\( 3 \\)."
+      },
+      "ar": {
+        "question": "حل نظام المعادلات التالي الذي يحتوي على كسور. ما هي قيمة \\( y \\)؟\n\\[ \\frac{x}{2} + \\frac{y}{3} = 4 \\]\n\\[ x - y = 3 \\]",
+        "options": [
+          "\\( 2 \\)",
+          "\\( 3 \\)",
+          "\\( 4 \\)",
+          "\\( 5 \\)"
+        ],
+        "hint": "أولاً، تخلص من الكسور في المعادلة العلوية بضرب المعادلة بأكملها في المقام المشترك (6). ثم حل النظام الخطي البسيط الناتج.",
+        "explanation": "لنتخلص من الكسور في المعادلة الأولى بضرب كل الحدود في \\( 6 \\) (المضاعف المشترك الأصغر لـ 2 و 3):\n\\[ 6 \\left(\\frac{x}{2} + \\frac{y}{3}\\right) = 6(4) \\implies 3x + 2y = 24 \\quad \\text{--- (1)} \\]\nالمعادلة الثانية هي:\n\\[ x - y = 3 \\quad \\text{--- (2)} \\]\nمن المعادلة (2)، نعزل \\( x \\): \\( x = y + 3 \\).\nنعوض بهذا التعبير في المعادلة (1):\n\\[ 3(y + 3) + 2y = 24 \\]\n\\[ 3y + 9 + 2y = 24 \\]\n\\[ 5y + 9 = 24 \\]\n\\[ 5y = 15 \\implies y = 3 \\]\nقيمة \\( y \\) هي \\( 3 \\)."
+      }
+    },
+    "correct_index": "1"
+  },
+  {
+    "id": "NAF-G09-18",
+    "track": "nafes",
+    "level": "Grade 9",
+    "topic": "Quadratic Equations",
+    "type": "MCQ",
+    "difficulty": "hard",
+    "content": {
+      "en": {
+        "question": "A right-angled triangle has a base of \\( x \\text{ cm} \\) and a height of \\( (x + 2) \\text{ cm} \\). If the total area of the triangle is \\( 24 \\text{ cm}^2 \\), what is the exact length of the base?",
+        "options": [
+          "\\( 4 \\text{ cm} \\)",
+          "\\( 6 \\text{ cm} \\)",
+          "\\( 8 \\text{ cm} \\)",
+          "\\( 12 \\text{ cm} \\)"
+        ],
+        "hint": "The area of a triangle is \\( \\frac{1}{2} \\times \\text{base} \\times \\text{height} \\). Set up the equation, multiply by 2 to remove the fraction, and solve the quadratic equation.",
+        "explanation": "The formula for the area of a right triangle is:\n\\[ \\text{Area} = \\frac{1}{2} \\times \\text{base} \\times \\text{height} \\]\nSubstitute the known values:\n\\[ 24 = \\frac{1}{2} \\times x \\times (x + 2) \\]\nMultiply both sides by 2 to clear the fraction:\n\\[ 48 = x(x + 2) \\]\nExpand the right side:\n\\[ 48 = x^2 + 2x \\]\nRearrange into a standard quadratic form:\n\\[ x^2 + 2x - 48 = 0 \\]\nFactor the quadratic. We need two numbers that multiply to \\( -48 \\) and add to \\( 2 \\). These are \\( +8 \\) and \\( -6 \\).\n\\[ (x + 8)(x - 6) = 0 \\]\nThis gives \\( x = -8 \\) or \\( x = 6 \\). Since a base length must be positive, the base is \\( 6 \\text{ cm} \\)."
+      },
+      "ar": {
+        "question": "مثلث قائم الزاوية طول قاعدته \\( x \\text{ سم} \\) وارتفاعه \\( (x + 2) \\text{ سم} \\). إذا كانت المساحة الإجمالية للمثلث هي \\( 24 \\text{ سم}^2 \\)، فما هو الطول الدقيق للقاعدة؟",
+        "options": [
+          "\\( 4 \\text{ سم} \\)",
+          "\\( 6 \\text{ سم} \\)",
+          "\\( 8 \\text{ سم} \\)",
+          "\\( 12 \\text{ سم} \\)"
+        ],
+        "hint": "مساحة المثلث هي \\( \\frac{1}{2} \\times \\text{القاعدة} \\times \\text{الارتفاع} \\). اكتب المعادلة، اضرب في 2 للتخلص من الكسر، وحل المعادلة التربيعية.",
+        "explanation": "صيغة مساحة المثلث القائم هي:\n\\[ \\text{المساحة} = \\frac{1}{2} \\times \\text{القاعدة} \\times \\text{الارتفاع} \\]\nنعوض بالقيم المعروفة:\n\\[ 24 = \\frac{1}{2} \\times x \\times (x + 2) \\]\nنضرب كلا الطرفين في 2 للتخلص من الكسر:\n\\[ 48 = x(x + 2) \\]\nنفك الأقواس في الطرف الأيمن:\n\\[ 48 = x^2 + 2x \\]\nنعيد ترتيبها إلى الصيغة التربيعية القياسية:\n\\[ x^2 + 2x - 48 = 0 \\]\nنحلل المعادلة التربيعية. نحتاج إلى عددين حاصل ضربهما \\( -48 \\) ومجموعهما \\( 2 \\). هما \\( +8 \\) و \\( -6 \\).\n\\[ (x + 8)(x - 6) = 0 \\]\nهذا يعطي \\( x = -8 \\) أو \\( x = 6 \\). وبما أن طول القاعدة يجب أن يكون موجباً، فإن القاعدة هي \\( 6 \\text{ سم} \\)."
+      }
+    },
+    "correct_index": "1"
+  },
+  {
+    "id": "NAF-G09-19",
+    "track": "nafes",
+    "level": "Grade 9",
+    "topic": "Pythagorean Word Problems",
+    "type": "MCQ",
+    "difficulty": "hard",
+    "content": {
+      "en": {
+        "question": "The two diagonals of a geometric rhombus measure \\( 10 \\text{ cm} \\) and \\( 24 \\text{ cm} \\) respectively. What is the exact perimeter of this rhombus?<br/><svg viewBox='0 0 200 160' class='w-full max-w-xs mx-auto bg-slate-900/60 rounded-xl p-2 border border-slate-700 shadow-md my-2'><polygon points='100,20 160,80 100,140 40,80' fill='none' stroke='#38bdf8' stroke-width='2'/><line x1='100' y1='20' x2='100' y2='140' stroke='#10b981' stroke-width='2' stroke-dasharray='4,4'/><line x1='40' y1='80' x2='160' y2='80' stroke='#10b981' stroke-width='2' stroke-dasharray='4,4'/><rect x='100' y='80' width='10' height='10' fill='none' stroke='#f59e0b' stroke-width='1'/><text x='110' y='45' fill='#e2e8f0' font-size='10'>12</text><text x='75' y='95' fill='#e2e8f0' font-size='10'>5</text></svg>",
+        "options": [
+          "\\( 34 \\text{ cm} \\)",
+          "\\( 48 \\text{ cm} \\)",
+          "\\( 52 \\text{ cm} \\)",
+          "\\( 60 \\text{ cm} \\)"
+        ],
+        "hint": "The diagonals of a rhombus bisect each other at perfect right angles. Use the Pythagorean theorem to find the length of one outer side.",
+        "explanation": "A key property of a rhombus is that its diagonals bisect each other at \\( 90^\\circ \\) (right angles).\nThis divides the rhombus into 4 identical right-angled triangles.\nThe legs of each right triangle are exactly half the lengths of the diagonals:\n\\[ a = 10 \\div 2 = 5 \\text{ cm} \\]\n\\[ b = 24 \\div 2 = 12 \\text{ cm} \\]\nWe can find the hypotenuse \\( c \\) (which is the outer side length of the rhombus) using the Pythagorean theorem:\n\\[ c = \\sqrt{5^2 + 12^2} = \\sqrt{25 + 144} = \\sqrt{169} = 13 \\text{ cm} \\].\nSince a rhombus has 4 equal outer sides, the total perimeter is:\n\\[ \\text{Perimeter} = 4 \\times 13 = 52 \\text{ cm} \\]."
+      },
+      "ar": {
+        "question": "قطرا معين هندسي قياسهما \\( 10 \\text{ سم} \\) و \\( 24 \\text{ سم} \\) على التوالي. ما هو المحيط الدقيق لهذا المعين؟<br/><svg viewBox='0 0 200 160' class='w-full max-w-xs mx-auto bg-slate-900/60 rounded-xl p-2 border border-slate-700 shadow-md my-2'><polygon points='100,20 160,80 100,140 40,80' fill='none' stroke='#38bdf8' stroke-width='2'/><line x1='100' y1='20' x2='100' y2='140' stroke='#10b981' stroke-width='2' stroke-dasharray='4,4'/><line x1='40' y1='80' x2='160' y2='80' stroke='#10b981' stroke-width='2' stroke-dasharray='4,4'/><rect x='100' y='80' width='10' height='10' fill='none' stroke='#f59e0b' stroke-width='1'/><text x='110' y='45' fill='#e2e8f0' font-size='10'>12</text><text x='75' y='95' fill='#e2e8f0' font-size='10'>5</text></svg>",
+        "options": [
+          "\\( 34 \\text{ سم} \\)",
+          "\\( 48 \\text{ سم} \\)",
+          "\\( 52 \\text{ سم} \\)",
+          "\\( 60 \\text{ سم} \\)"
+        ],
+        "hint": "أقطار المعين ينصف كل منهما الآخر بزوايا قائمة تماماً. استخدم نظرية فيثاغورس لإيجاد طول أحد الأضلاع الخارجية.",
+        "explanation": "من الخصائص الأساسية للمعين أن أقطاره ينصف كل منهما الآخر بزاوية \\( 90^\\circ \\) (زوايا قائمة).\nهذا يقسم المعين إلى 4 مثلثات قائمة الزاوية متطابقة.\nأضلاع القائمة لكل مثلث هي بالضبط نصف أطوال الأقطار:\n\\[ a = 10 \\div 2 = 5 \\text{ سم} \\]\n\\[ b = 24 \\div 2 = 12 \\text{ سم} \\]\nيمكننا إيجاد الوتر \\( c \\) (وهو طول الضلع الخارجي للمعين) باستخدام نظرية فيثاغورس:\n\\[ c = \\sqrt{5^2 + 12^2} = \\sqrt{25 + 144} = \\sqrt{169} = 13 \\text{ سم} \\].\nبما أن للمعين 4 أضلاع خارجية متساوية، فإن المحيط الكلي هو:\n\\[ \\text{المحيط} = 4 \\times 13 = 52 \\text{ سم} \\]."
+      }
+    },
+    "correct_index": "2"
+  },
+  {
+    "id": "NAF-G09-20",
+    "track": "nafes",
+    "level": "Grade 9",
+    "topic": "Statistics",
+    "type": "MCQ",
+    "difficulty": "hard",
+    "content": {
+      "en": {
+        "question": "A mystery bag contains \\( 5 \\) red marbles, \\( x \\) blue marbles, and \\( 3 \\) green marbles. If the mathematical probability of randomly drawing a single blue marble is exactly \\( \\frac{1}{3} \\), what is the value of \\( x \\)?",
+        "options": [
+          "\\( 2 \\)",
+          "\\( 3 \\)",
+          "\\( 4 \\)",
+          "\\( 6 \\)"
+        ],
+        "hint": "The probability of drawing a blue marble is the number of blue marbles divided by the total number of marbles. Set up the equation: \\( \\frac{x}{5 + x + 3} = \\frac{1}{3} \\).",
+        "explanation": "The probability of an event is the number of favorable outcomes divided by the total number of outcomes.\nThe number of blue marbles is \\( x \\).\nThe total number of marbles in the bag is \\( 5 \\text{ (red)} + x \\text{ (blue)} + 3 \\text{ (green)} = 8 + x \\).\nThe probability of drawing a blue marble is given as \\( \\frac{1}{3} \\).\nWe set up the equation:\n\\[ \\frac{x}{8 + x} = \\frac{1}{3} \\]\nCross-multiply to solve for \\( x \\):\n\\[ 3x = 1(8 + x) \\]\n\\[ 3x = 8 + x \\]\nSubtract \\( x \\) from both sides:\n\\[ 2x = 8 \\implies x = 4 \\].\nThere are exactly \\( 4 \\) blue marbles in the bag."
+      },
+      "ar": {
+        "question": "يحتوي كيس غامض على \\( 5 \\) كرات حمراء، و \\( x \\) كرة زرقاء، و \\( 3 \\) كرات خضراء. إذا كان الاحتمال الرياضي لسحب كرة زرقاء واحدة عشوائياً هو \\( \\frac{1}{3} \\) بالضبط، فما هي قيمة \\( x \\)؟",
+        "options": [
+          "\\( 2 \\)",
+          "\\( 3 \\)",
+          "\\( 4 \\)",
+          "\\( 6 \\)"
+        ],
+        "hint": "احتمال سحب كرة زرقاء هو عدد الكرات الزرقاء مقسوماً على العدد الإجمالي للكرات. اكتب المعادلة: \\( \\frac{x}{5 + x + 3} = \\frac{1}{3} \\).",
+        "explanation": "احتمال وقوع حدث هو عدد النتائج المواتية مقسوماً على العدد الإجمالي للنتائج.\nعدد الكرات الزرقاء هو \\( x \\).\nالعدد الإجمالي للكرات في الكيس هو \\( 5 \\text{ (حمراء)} + x \\text{ (زرقاء)} + 3 \\text{ (خضراء)} = 8 + x \\).\nاحتمال سحب كرة زرقاء معطى بأنه \\( \\frac{1}{3} \\).\nنكتب المعادلة كالتالي:\n\\[ \\frac{x}{8 + x} = \\frac{1}{3} \\]\nنضرب ضرباً تبادلياً (طرفين في وسطين) لإيجاد \\( x \\):\n\\[ 3x = 1(8 + x) \\]\n\\[ 3x = 8 + x \\]\nنطرح \\( x \\) من كلا الطرفين:\n\\[ 2x = 8 \\implies x = 4 \\].\nيوجد بالضبط \\( 4 \\) كرات زرقاء في الكيس."
+      }
+    },
+    "correct_index": "2"
   }
 ]
