@@ -21898,5 +21898,705 @@
       }
     },
     "correct_index": "3"
+  },
+  {
+    "id": "KAN-JUN-01",
+    "track": "kangaroo",
+    "level": "Junior",
+    "topic": "Circle Tangents",
+    "type": "MCQ",
+    "difficulty": "medium",
+    "content": {
+      "en": {
+        "question": "Three identical circles, each with a radius of \\( r = 3 \\text{ cm} \\), are mutually tangent to each other externally. What is the exact perimeter of the curved enclosed region between them?<br/><svg viewBox='0 0 200 200' class='w-full max-w-xs mx-auto bg-slate-900/60 rounded-xl p-2 border border-slate-700 shadow-md my-2'><circle cx='100' cy='60' r='35' fill='none' stroke='#38bdf8' stroke-width='2'/><circle cx='65' cy='120' r='35' fill='none' stroke='#38bdf8' stroke-width='2'/><circle cx='135' cy='120' r='35' fill='none' stroke='#38bdf8' stroke-width='2'/></svg>",
+        "options": [
+          "\\( \\pi \\text{ cm} \\)",
+          "\\( 2\\pi \\text{ cm} \\)",
+          "\\( 3\\pi \\text{ cm} \\)",
+          "\\( 4\\pi \\text{ cm} \\)",
+          "\\( 6\\pi \\text{ cm} \\)"
+        ],
+        "hint": "Connect the centers of the three circles to form an equilateral triangle. Each interior angle is \\( 60^\\circ \\).",
+        "explanation": "Connecting the centers of the three circles forms an equilateral triangle with a side length of \\( 2r = 6 \\text{ cm} \\). The interior angles of this triangle are \\( 60^\\circ \\).\nThe boundary of the enclosed central region is made of three circular arcs. Each arc is subtended by a \\( 60^\\circ \\) central angle within its respective circle.\nThe sum of these three angles is \\( 60^\\circ \\times 3 = 180^\\circ \\), which exactly equals half of a full circle (a semicircle).\nThe arc length for a full circle is \\( 2\\pi r \\). For a semicircle, it is \\( \\pi r \\).\nSubstitute \\( r = 3 \\text{ cm} \\): Perimeter = \\( 3\\pi \\text{ cm} \\)."
+      },
+      "ar": {
+        "question": "ثلاث دوائر متطابقة، نصف قطر كل منها \\( r = 3 \\text{ سم} \\)، متماسة فيما بينها من الخارج. ما هو المحيط الدقيق للمنطقة المنحنية المحصورة بينها؟<br/><svg viewBox='0 0 200 200' class='w-full max-w-xs mx-auto bg-slate-900/60 rounded-xl p-2 border border-slate-700 shadow-md my-2'><circle cx='100' cy='60' r='35' fill='none' stroke='#38bdf8' stroke-width='2'/><circle cx='65' cy='120' r='35' fill='none' stroke='#38bdf8' stroke-width='2'/><circle cx='135' cy='120' r='35' fill='none' stroke='#38bdf8' stroke-width='2'/></svg>",
+        "options": [
+          "\\( \\pi \\text{ سم} \\)",
+          "\\( 2\\pi \\text{ سم} \\)",
+          "\\( 3\\pi \\text{ سم} \\)",
+          "\\( 4\\pi \\text{ سم} \\)",
+          "\\( 6\\pi \\text{ سم} \\)"
+        ],
+        "hint": "صل مراكز الدوائر الثلاث لتكوين مثلث متطابق الأضلاع. قياس كل زاوية داخلية فيه هو \\( 60^\\circ \\).",
+        "explanation": "توصيل مراكز الدوائر يشكل مثلثاً متطابق الأضلاع طول ضلعه \\( 2r = 6 \\text{ سم} \\). الزوايا الداخلية لهذا المثلث هي \\( 60^\\circ \\).\nتتكون حدود المنطقة المركزية المحصورة من ثلاثة أقواس دائرية. يقابل كل قوس زاوية مركزية قياسها \\( 60^\\circ \\) في دائرته.\nمجموع هذه الزوايا الثلاث هو \\( 60^\\circ \\times 3 = 180^\\circ \\)، وهو ما يعادل بالضبط نصف دائرة.\nطول القوس للدائرة الكاملة هو \\( 2\\pi r \\). ولنصف الدائرة يكون \\( \\pi r \\).\nبالتعويض بـ \\( r = 3 \\text{ سم} \\): المحيط = \\( 3\\pi \\text{ سم} \\)."
+      }
+    },
+    "correct_index": "2"
+  },
+  {
+    "id": "KAN-JUN-02",
+    "track": "kangaroo",
+    "level": "Junior",
+    "topic": "Polynomial Identities",
+    "type": "MCQ",
+    "difficulty": "medium",
+    "content": {
+      "en": {
+        "question": "Let \\( x \\) be a real number such that \\( x^2 - 4x + 1 = 0 \\). What is the exact value of \\( x^2 + \\frac{1}{x^2} \\)?",
+        "options": [
+          "\\( 12 \\)",
+          "\\( 14 \\)",
+          "\\( 16 \\)",
+          "\\( 18 \\)",
+          "\\( 20 \\)"
+        ],
+        "hint": "Divide the entire equation by \\( x \\) to express \\( x + \\frac{1}{x} \\) in terms of a constant, then square both sides.",
+        "explanation": "Given the equation \\( x^2 - 4x + 1 = 0 \\). Since \\( x \\neq 0 \\), we can divide the entire equation by \\( x \\):\n\\[ x - 4 + \\frac{1}{x} = 0 \\implies x + \\frac{1}{x} = 4 \\]\nNow, square both sides of the equation:\n\\[ \\left(x + \\frac{1}{x}\\right)^2 = 4^2 \\]\n\\[ x^2 + 2\\left(x \\cdot \\frac{1}{x}\\right) + \\frac{1}{x^2} = 16 \\]\n\\[ x^2 + 2 + \\frac{1}{x^2} = 16 \\]\nSubtract 2 from both sides:\n\\[ x^2 + \\frac{1}{x^2} = 14 \\]."
+      },
+      "ar": {
+        "question": "ليكن \\( x \\) عدداً حقيقياً بحيث \\( x^2 - 4x + 1 = 0 \\). ما هي القيمة الدقيقة للمقدار \\( x^2 + \\frac{1}{x^2} \\)؟",
+        "options": [
+          "\\( 12 \\)",
+          "\\( 14 \\)",
+          "\\( 16 \\)",
+          "\\( 18 \\)",
+          "\\( 20 \\)"
+        ],
+        "hint": "اقسم المعادلة بأكملها على \\( x \\) للتعبير عن \\( x + \\frac{1}{x} \\) كقيمة ثابتة، ثم ربع الطرفين.",
+        "explanation": "بناءً على المعادلة \\( x^2 - 4x + 1 = 0 \\). بما أن \\( x \\neq 0 \\)، يمكننا قسمة المعادلة بالكامل على \\( x \\):\n\\[ x - 4 + \\frac{1}{x} = 0 \\implies x + \\frac{1}{x} = 4 \\]\nالآن، قم بتربيع طرفي المعادلة:\n\\[ \\left(x + \\frac{1}{x}\\right)^2 = 4^2 \\]\n\\[ x^2 + 2\\left(x \\cdot \\frac{1}{x}\\right) + \\frac{1}{x^2} = 16 \\]\n\\[ x^2 + 2 + \\frac{1}{x^2} = 16 \\]\nاطرح 2 من كلا الطرفين:\n\\[ x^2 + \\frac{1}{x^2} = 14 \\]."
+      }
+    },
+    "correct_index": "1"
+  },
+  {
+    "id": "KAN-JUN-03",
+    "track": "kangaroo",
+    "level": "Junior",
+    "topic": "Combinatorics",
+    "type": "MCQ",
+    "difficulty": "hard",
+    "content": {
+      "en": {
+        "question": "How many \\( 3 \\)-digit positive integers exist such that the sum of their digits is exactly \\( 5 \\)?",
+        "options": [
+          "\\( 10 \\)",
+          "\\( 12 \\)",
+          "\\( 15 \\)",
+          "\\( 18 \\)",
+          "\\( 21 \\)"
+        ],
+        "hint": "Let the number be ABC where A >= 1. The equation is A + B + C = 5. Set A' = A - 1, then solve A' + B + C = 4 using stars and bars.",
+        "explanation": "Let the 3-digit number be represented by its digits \\( d_1, d_2, d_3 \\). We require \\( d_1 + d_2 + d_3 = 5 \\), with \\( 1 \\le d_1 \\le 5 \\) and \\( 0 \\le d_2, d_3 \\le 5 \\).\nLet \\( d_1' = d_1 - 1 \\). Then \\( d_1' \\ge 0 \\).\nSubstituting this into the equation gives:\n\\[ (d_1' + 1) + d_2 + d_3 = 5 \\implies d_1' + d_2 + d_3 = 4 \\]\nWe now find the number of non-negative integer solutions to this equation using the stars and bars theorem:\n\\[ \\binom{n + k - 1}{k - 1} = \\binom{4 + 3 - 1}{3 - 1} = \\binom{6}{2} \\]\n\\[ \\binom{6}{2} = \\frac{6 \\times 5}{2 \\times 1} = 15 \\].\nThere are exactly 15 such numbers. (E.g., 500, 410, 401, 320, 302, 311, 230, 203, 212, 221, 140, 104, 131, 113, 122)."
+      },
+      "ar": {
+        "question": "كم عدد الأعداد الصحيحة الموجبة المكونة من \\( 3 \\) خانات والتي مجموع أرقامها يساوي \\( 5 \\) بالضبط؟",
+        "options": [
+          "\\( 10 \\)",
+          "\\( 12 \\)",
+          "\\( 15 \\)",
+          "\\( 18 \\)",
+          "\\( 21 \\)"
+        ],
+        "hint": "ليكن العدد ABC حيث A >= 1. المعادلة هي A + B + C = 5. ضع A' = A - 1، ثم حل A' + B + C = 4 باستخدام طريقة النجوم والأعمدة.",
+        "explanation": "ليكن العدد المكون من 3 خانات ممثلاً بأرقامه \\( d_1, d_2, d_3 \\). نشترط أن يكون \\( d_1 + d_2 + d_3 = 5 \\)، حيث \\( 1 \\le d_1 \\le 5 \\) و \\( 0 \\le d_2, d_3 \\le 5 \\).\nنضع \\( d_1' = d_1 - 1 \\). بالتالي \\( d_1' \\ge 0 \\).\nبالتعويض في المعادلة نحصل على:\n\\[ (d_1' + 1) + d_2 + d_3 = 5 \\implies d_1' + d_2 + d_3 = 4 \\]\nنجد الآن عدد الحلول الصحيحة غير السالبة لهذه المعادلة باستخدام نظرية النجوم والأعمدة:\n\\[ \\binom{n + k - 1}{k - 1} = \\binom{4 + 3 - 1}{3 - 1} = \\binom{6}{2} \\]\n\\[ \\binom{6}{2} = \\frac{6 \\times 5}{2 \\times 1} = 15 \\].\nيوجد 15 عدداً بالضبط (مثل: 500, 410, 401, 320...)."
+      }
+    },
+    "correct_index": "2"
+  },
+  {
+    "id": "KAN-JUN-04",
+    "track": "kangaroo",
+    "level": "Junior",
+    "topic": "Functional Algebra",
+    "type": "MCQ",
+    "difficulty": "hard",
+    "content": {
+      "en": {
+        "question": "A function \\( f(x) \\) satisfies the equation \\( f(x) + 2f(1-x) = 3x \\) for all real numbers \\( x \\). What is the exact value of \\( f(2) \\)?",
+        "options": [
+          "\\( -6 \\)",
+          "\\( -4 \\)",
+          "\\( -2 \\)",
+          "\\( 2 \\)",
+          "\\( 4 \\)"
+        ],
+        "hint": "Create a system of equations by substituting \\( x = 2 \\) and \\( x = -1 \\) into the functional equation.",
+        "explanation": "We are given: \\( f(x) + 2f(1-x) = 3x \\).\nSubstitute \\( x = 2 \\) into the equation:\n\\[ f(2) + 2f(1-2) = 3(2) \\implies f(2) + 2f(-1) = 6 \\quad \\text{--- (Equation 1)} \\]\nNow, substitute \\( x = -1 \\) into the original equation:\n\\[ f(-1) + 2f(1 - (-1)) = 3(-1) \\implies f(-1) + 2f(2) = -3 \\quad \\text{--- (Equation 2)} \\]\nWe have a system of two linear equations. From Eq 2, isolate \\( f(-1) \\):\n\\[ f(-1) = -3 - 2f(2) \\]\nSubstitute this expression into Eq 1:\n\\[ f(2) + 2(-3 - 2f(2)) = 6 \\]\n\\[ f(2) - 6 - 4f(2) = 6 \\]\n\\[ -3f(2) = 12 \\implies f(2) = -4 \\]."
+      },
+      "ar": {
+        "question": "دالة \\( f(x) \\) تحقق المعادلة \\( f(x) + 2f(1-x) = 3x \\) لجميع الأعداد الحقيقية \\( x \\). ما هي القيمة الدقيقة لـ \\( f(2) \\)؟",
+        "options": [
+          "\\( -6 \\)",
+          "\\( -4 \\)",
+          "\\( -2 \\)",
+          "\\( 2 \\)",
+          "\\( 4 \\)"
+        ],
+        "hint": "قم بإنشاء نظام معادلات بالتعويض عن \\( x = 2 \\) و \\( x = -1 \\) في المعادلة الدالية.",
+        "explanation": "المعادلة المعطاة: \\( f(x) + 2f(1-x) = 3x \\).\nنعوض بـ \\( x = 2 \\) في المعادلة:\n\\[ f(2) + 2f(1-2) = 3(2) \\implies f(2) + 2f(-1) = 6 \\quad \\text{--- (المعادلة 1)} \\]\nالآن، نعوض بـ \\( x = -1 \\) في المعادلة الأصلية:\n\\[ f(-1) + 2f(1 - (-1)) = 3(-1) \\implies f(-1) + 2f(2) = -3 \\quad \\text{--- (المعادلة 2)} \\]\nلدينا نظام من معادلتين خطيتين. من المعادلة 2، نعزل \\( f(-1) \\):\n\\[ f(-1) = -3 - 2f(2) \\]\nنعوض بهذا المقدار في المعادلة 1:\n\\[ f(2) + 2(-3 - 2f(2)) = 6 \\]\n\\[ f(2) - 6 - 4f(2) = 6 \\]\n\\[ -3f(2) = 12 \\implies f(2) = -4 \\]."
+      }
+    },
+    "correct_index": "1"
+  },
+  {
+    "id": "KAN-JUN-05",
+    "track": "kangaroo",
+    "level": "Junior",
+    "topic": "Number Theory",
+    "type": "MCQ",
+    "difficulty": "medium",
+    "content": {
+      "en": {
+        "question": "What is the final (units) digit of the massive exponential number \\( 7^{2026} \\)?",
+        "options": [
+          "\\( 1 \\)",
+          "\\( 3 \\)",
+          "\\( 5 \\)",
+          "\\( 7 \\)",
+          "\\( 9 \\)"
+        ],
+        "hint": "Analyze the pattern of the last digit of the powers of 7: \\( 7^1, 7^2, 7^3, 7^4 \\), etc. The pattern repeats.",
+        "explanation": "Let's find the sequence of the units digits for the powers of 7:\n\\( 7^1 = 7 \\) (ends in 7)\n\\( 7^2 = 49 \\) (ends in 9)\n\\( 7^3 = 343 \\) (ends in 3)\n\\( 7^4 = 2401 \\) (ends in 1)\n\\( 7^5 = 16807 \\) (ends in 7, the cycle repeats!)\nThe cycle of last digits is \\( [7, 9, 3, 1] \\), which has a length of 4.\nTo find the last digit of \\( 7^{2026} \\), we divide the exponent 2026 by the cycle length (4):\n\\[ 2026 \\div 4 = 506 \\text{ with a remainder of } 2 \\].\nA remainder of 2 means the last digit corresponds to the 2nd number in our cycle pattern.\nThe 2nd number in the cycle \\( [7, 9, 3, 1] \\) is \\( 9 \\)."
+      },
+      "ar": {
+        "question": "ما هو رقم الآحاد (الرقم الأخير) للعدد الأسي الضخم \\( 7^{2026} \\)؟",
+        "options": [
+          "\\( 1 \\)",
+          "\\( 3 \\)",
+          "\\( 5 \\)",
+          "\\( 7 \\)",
+          "\\( 9 \\)"
+        ],
+        "hint": "حلل نمط الرقم الأخير لقوى العدد 7: \\( 7^1, 7^2, 7^3, 7^4 \\)، إلخ. النمط يتكرر.",
+        "explanation": "لنجد تسلسل أرقام الآحاد لقوى العدد 7:\n\\( 7^1 = 7 \\) (ينتهي بـ 7)\n\\( 7^2 = 49 \\) (ينتهي بـ 9)\n\\( 7^3 = 343 \\) (ينتهي بـ 3)\n\\( 7^4 = 2401 \\) (ينتهي بـ 1)\n\\( 7^5 = 16807 \\) (ينتهي بـ 7، تتكرر الدورة!)\nدورة الأرقام الأخيرة هي \\( [7, 9, 3, 1] \\)، وطولها 4.\nلإيجاد الرقم الأخير للعدد \\( 7^{2026} \\)، نقسم الأس 2026 على طول الدورة (4):\n\\[ 2026 \\div 4 = 506 \\text{ والباقي } 2 \\].\nوجود باقٍ قدره 2 يعني أن الرقم الأخير يتوافق مع الرقم الثاني في نمط الدورة الخاص بنا.\nالرقم الثاني في الدورة \\( [7, 9, 3, 1] \\) هو \\( 9 \\)."
+      }
+    },
+    "correct_index": "4"
+  },
+  {
+    "id": "KAN-JUN-06",
+    "track": "kangaroo",
+    "level": "Junior",
+    "topic": "Geometry",
+    "type": "MCQ",
+    "difficulty": "medium",
+    "content": {
+      "en": {
+        "question": "A square with an area of \\( 36 \\text{ cm}^2 \\) is perfectly inscribed inside a circle, touching the circle at all four corners. What is the area of the circle?<br/><svg viewBox='0 0 200 160' class='w-full max-w-xs mx-auto bg-slate-900/60 rounded-xl p-2 border border-slate-700 shadow-md my-2'><circle cx='100' cy='80' r='60' fill='none' stroke='#38bdf8' stroke-width='2'/><rect x='57.6' y='37.6' width='84.8' height='84.8' fill='none' stroke='#10b981' stroke-width='2'/><line x1='57.6' y1='37.6' x2='142.4' y2='122.4' stroke='#f59e0b' stroke-width='2' stroke-dasharray='4,4'/></svg>",
+        "options": [
+          "\\( 9\\pi \\text{ cm}^2 \\)",
+          "\\( 12\\pi \\text{ cm}^2 \\)",
+          "\\( 18\\pi \\text{ cm}^2 \\)",
+          "\\( 24\\pi \\text{ cm}^2 \\)",
+          "\\( 36\\pi \\text{ cm}^2 \\)"
+        ],
+        "hint": "The diagonal of the inscribed square acts as the diameter of the circle. Use the area of the square to find its side length, then find the diagonal using the Pythagorean theorem.",
+        "explanation": "Let the side length of the square be \\( s \\).\nThe area of the square is \\( s^2 = 36 \\), so \\( s = 6 \\text{ cm} \\).\nThe diagonal \\( d \\) of the square can be found using the Pythagorean theorem:\n\\[ d = \\sqrt{s^2 + s^2} = s\\sqrt{2} = 6\\sqrt{2} \\text{ cm} \\].\nBecause the square is inscribed in the circle, the diagonal of the square is equal to the diameter of the circle.\nThus, the radius \\( r \\) of the circle is half the diameter:\n\\[ r = \\frac{6\\sqrt{2}}{2} = 3\\sqrt{2} \\text{ cm} \\].\nFinally, the area of the circle is \\( \\pi r^2 \\):\n\\[ \\text{Area} = \\pi (3\\sqrt{2})^2 = \\pi (9 \\times 2) = 18\\pi \\text{ cm}^2 \\]."
+      },
+      "ar": {
+        "question": "مربع مساحته \\( 36 \\text{ سم}^2 \\) مرسوم بالكامل داخل دائرة، حيث تلامس زواياه الأربع الدائرة. ما هي مساحة الدائرة؟<br/><svg viewBox='0 0 200 160' class='w-full max-w-xs mx-auto bg-slate-900/60 rounded-xl p-2 border border-slate-700 shadow-md my-2'><circle cx='100' cy='80' r='60' fill='none' stroke='#38bdf8' stroke-width='2'/><rect x='57.6' y='37.6' width='84.8' height='84.8' fill='none' stroke='#10b981' stroke-width='2'/><line x1='57.6' y1='37.6' x2='142.4' y2='122.4' stroke='#f59e0b' stroke-width='2' stroke-dasharray='4,4'/></svg>",
+        "options": [
+          "\\( 9\\pi \\text{ سم}^2 \\)",
+          "\\( 12\\pi \\text{ سم}^2 \\)",
+          "\\( 18\\pi \\text{ سم}^2 \\)",
+          "\\( 24\\pi \\text{ سم}^2 \\)",
+          "\\( 36\\pi \\text{ سم}^2 \\)"
+        ],
+        "hint": "قطر المربع المحاط يمثل قطر الدائرة. استخدم مساحة المربع لإيجاد طول ضلعه، ثم أوجد قطره باستخدام نظرية فيثاغورس.",
+        "explanation": "ليكن طول ضلع المربع هو \\( s \\).\nمساحة المربع هي \\( s^2 = 36 \\)، إذن \\( s = 6 \\text{ سم} \\).\nيمكن إيجاد قطر المربع \\( d \\) باستخدام نظرية فيثاغورس:\n\\[ d = \\sqrt{s^2 + s^2} = s\\sqrt{2} = 6\\sqrt{2} \\text{ سم} \\].\nبما أن المربع محاط بالدائرة، فإن قطر المربع يساوي قطر الدائرة.\nوبالتالي، نصف قطر الدائرة \\( r \\) يساوي نصف القطر:\n\\[ r = \\frac{6\\sqrt{2}}{2} = 3\\sqrt{2} \\text{ سم} \\].\nأخيراً، مساحة الدائرة هي \\( \\pi r^2 \\):\n\\[ \\text{المساحة} = \\pi (3\\sqrt{2})^2 = \\pi (9 \\times 2) = 18\\pi \\text{ سم}^2 \\]."
+      }
+    },
+    "correct_index": "2"
+  },
+  {
+    "id": "KAN-JUN-07",
+    "track": "kangaroo",
+    "level": "Junior",
+    "topic": "Polynomial Roots",
+    "type": "MCQ",
+    "difficulty": "medium",
+    "content": {
+      "en": {
+        "question": "A quadratic polynomial \\( P(x) = x^2 + px + q \\) has roots exactly equal to \\( 3 \\) and \\( 4 \\). What is the value of the sum \\( p + q \\)?",
+        "options": [
+          "\\( -5 \\)",
+          "\\( 1 \\)",
+          "\\( 5 \\)",
+          "\\( 7 \\)",
+          "\\( 12 \\)"
+        ],
+        "hint": "Use Vieta's formulas: the sum of the roots is \\( -p \\) and the product of the roots is \\( q \\).",
+        "explanation": "By Vieta's formulas for a quadratic equation \\( ax^2 + bx + c = 0 \\):\n- The sum of the roots \\( r_1 + r_2 = -\\frac{b}{a} \\).\n- The product of the roots \\( r_1 r_2 = \\frac{c}{a} \\).\nHere, \\( a = 1, b = p, c = q \\), and the roots are \\( 3 \\) and \\( 4 \\).\nSum of roots: \\( 3 + 4 = 7 = -p \\implies p = -7 \\).\nProduct of roots: \\( 3 \\times 4 = 12 = q \\implies q = 12 \\).\nWe want to find \\( p + q \\):\n\\[ p + q = (-7) + 12 = 5 \\]."
+      },
+      "ar": {
+        "question": "كثيرة حدود تربيعية \\( P(x) = x^2 + px + q \\) جذراها يساويان \\( 3 \\) و \\( 4 \\) بالضبط. ما هي قيمة المجموع \\( p + q \\)؟",
+        "options": [
+          "\\( -5 \\)",
+          "\\( 1 \\)",
+          "\\( 5 \\)",
+          "\\( 7 \\)",
+          "\\( 12 \\)"
+        ],
+        "hint": "استخدم صيغ فييتا (Vieta): مجموع الجذور هو \\( -p \\) وحاصل ضرب الجذور هو \\( q \\).",
+        "explanation": "بناءً على صيغ فييتا للمعادلة التربيعية \\( ax^2 + bx + c = 0 \\):\n- مجموع الجذور \\( r_1 + r_2 = -\\frac{b}{a} \\).\n- حاصل ضرب الجذور \\( r_1 r_2 = \\frac{c}{a} \\).\nهنا، \\( a = 1, b = p, c = q \\)، والجذور هي \\( 3 \\) و \\( 4 \\).\nمجموع الجذور: \\( 3 + 4 = 7 = -p \\implies p = -7 \\).\nحاصل ضرب الجذور: \\( 3 \\times 4 = 12 = q \\implies q = 12 \\).\nنريد إيجاد \\( p + q \\):\n\\[ p + q = (-7) + 12 = 5 \\]."
+      }
+    },
+    "correct_index": "2"
+  },
+  {
+    "id": "KAN-JUN-08",
+    "track": "kangaroo",
+    "level": "Junior",
+    "topic": "Set Theory",
+    "type": "MCQ",
+    "difficulty": "medium",
+    "content": {
+      "en": {
+        "question": "In a group of \\( 50 \\) students, \\( 30 \\) play soccer, \\( 25 \\) play basketball, and \\( 10 \\) play neither sport. How many students play BOTH soccer and basketball?",
+        "options": [
+          "\\( 5 \\)",
+          "\\( 10 \\)",
+          "\\( 15 \\)",
+          "\\( 20 \\)",
+          "\\( 25 \\)"
+        ],
+        "hint": "First, find out how many students play at least one sport by subtracting the 'neither' group from the total. Then use the Principle of Inclusion-Exclusion.",
+        "explanation": "Total students = 50. Students playing neither = 10.\nNumber of students playing at least one sport (Soccer \\( \\cup \\) Basketball) = \\( 50 - 10 = 40 \\).\nThe Principle of Inclusion-Exclusion states:\n\\[ |S \\cup B| = |S| + |B| - |S \\cap B| \\]\nWhere \\( |S \\cap B| \\) is the number of students playing both sports.\nSubstitute the known values:\n\\[ 40 = 30 + 25 - |S \\cap B| \\]\n\\[ 40 = 55 - |S \\cap B| \\]\n\\[ |S \\cap B| = 55 - 40 = 15 \\].\nThus, 15 students play both sports."
+      },
+      "ar": {
+        "question": "في مجموعة مكونة من \\( 50 \\) طالباً، يلعب \\( 30 \\) طالباً كرة القدم، ويلعب \\( 25 \\) طالباً كرة السلة، و \\( 10 \\) طلاب لا يلعبون أياً من الرياضتين. كم عدد الطلاب الذين يلعبون كلتا الرياضتين (كرة القدم وكرة السلة) معاً؟",
+        "options": [
+          "\\( 5 \\)",
+          "\\( 10 \\)",
+          "\\( 15 \\)",
+          "\\( 20 \\)",
+          "\\( 25 \\)"
+        ],
+        "hint": "أولاً، اكتشف عدد الطلاب الذين يلعبون رياضة واحدة على الأقل بطرح مجموعة 'لا يلعبون أياً منهما' من الإجمالي. ثم استخدم مبدأ التضمين والإقصاء.",
+        "explanation": "إجمالي الطلاب = 50. الطلاب الذين لا يلعبون أي رياضة = 10.\nعدد الطلاب الذين يلعبون رياضة واحدة على الأقل (كرة القدم \\( \\cup \\) كرة السلة) = \\( 50 - 10 = 40 \\).\nينص مبدأ التضمين والإقصاء على:\n\\[ |S \\cup B| = |S| + |B| - |S \\cap B| \\]\nحيث \\( |S \\cap B| \\) هو عدد الطلاب الذين يلعبون كلتا الرياضتين.\nنعوض بالقيم المعروفة:\n\\[ 40 = 30 + 25 - |S \\cap B| \\]\n\\[ 40 = 55 - |S \\cap B| \\]\n\\[ |S \\cap B| = 55 - 40 = 15 \\].\nوبالتالي، هناك 15 طالباً يلعبون كلتا الرياضتين."
+      }
+    },
+    "correct_index": "2"
+  },
+  {
+    "id": "KAN-JUN-09",
+    "track": "kangaroo",
+    "level": "Junior",
+    "topic": "Angle Chase",
+    "type": "MCQ",
+    "difficulty": "hard",
+    "content": {
+      "en": {
+        "question": "In a regular pentagon \\( ABCDE \\), the diagonals \\( CA \\) and \\( CE \\) are drawn. What is the exact measure of the angle \\( \\angle ACE \\)?<br/><svg viewBox='0 0 200 180' class='w-full max-w-xs mx-auto bg-slate-900/60 rounded-xl p-2 border border-slate-700 shadow-md my-2'><polygon points='100,20 170,70 140,150 60,150 30,70' fill='none' stroke='#38bdf8' stroke-width='2'/><line x1='140' y1='150' x2='100' y2='20' stroke='#10b981' stroke-width='2'/><line x1='140' y1='150' x2='30' y2='70' stroke='#10b981' stroke-width='2'/><text x='100' y='15' fill='#e2e8f0' font-size='12' text-anchor='middle'>A</text><text x='180' y='75' fill='#e2e8f0' font-size='12'>B</text><text x='150' y='165' fill='#e2e8f0' font-size='12'>C</text><text x='50' y='165' fill='#e2e8f0' font-size='12'>D</text><text x='15' y='75' fill='#e2e8f0' font-size='12'>E</text><path d='M 130 120 A 15 15 0 0 0 125 140' fill='none' stroke='#f59e0b' stroke-width='2'/><text x='110' y='130' fill='#f59e0b' font-size='12'>?</text></svg>",
+        "options": [
+          "\\( 18^\\circ \\)",
+          "\\( 36^\\circ \\)",
+          "\\( 54^\\circ \\)",
+          "\\( 72^\\circ \\)",
+          "\\( 108^\\circ \\)"
+        ],
+        "hint": "Find the interior angle of a regular pentagon. Then examine the isosceles triangles formed at the sides, like triangle CDE, to find the small angles.",
+        "explanation": "A regular pentagon has \\( 5 \\) equal sides and \\( 5 \\) equal interior angles. \nThe sum of the interior angles is \\( (5-2) \\times 180^\\circ = 540^\\circ \\).\nEach interior angle is \\( 540^\\circ \\div 5 = 108^\\circ \\). So, \\( \\angle BCD = \\angle CDE = \\angle ABC = 108^\\circ \\).\nConsider the triangle \\( CDE \\). It is an isosceles triangle because the sides of the regular pentagon are equal (\\( CD = DE \\)).\nThe base angles of \\( \\triangle CDE \\) are equal:\n\\[ \\angle DCE = \\angle DEC = \\frac{180^\\circ - 108^\\circ}{2} = 36^\\circ \\].\nBy the exact same logic, triangle \\( ABC \\) is also isosceles with \\( BC = AB \\), so:\n\\[ \\angle BCA = \\frac{180^\\circ - 108^\\circ}{2} = 36^\\circ \\].\nThe full interior angle at vertex \\( C \\) is \\( \\angle BCD = 108^\\circ \\).\nThis full angle is made up of three parts: \\( \\angle BCA + \\angle ACE + \\angle DCE \\).\nSubstitute the known values:\n\\[ 36^\\circ + \\angle ACE + 36^\\circ = 108^\\circ \\]\n\\[ 72^\\circ + \\angle ACE = 108^\\circ \\implies \\angle ACE = 36^\\circ \\]."
+      },
+      "ar": {
+        "question": "في خماسي منتظم \\( ABCDE \\)، رُسم القطران \\( CA \\) و \\( CE \\). ما هو القياس الدقيق للزاوية \\( \\angle ACE \\)؟<br/><svg viewBox='0 0 200 180' class='w-full max-w-xs mx-auto bg-slate-900/60 rounded-xl p-2 border border-slate-700 shadow-md my-2'><polygon points='100,20 170,70 140,150 60,150 30,70' fill='none' stroke='#38bdf8' stroke-width='2'/><line x1='140' y1='150' x2='100' y2='20' stroke='#10b981' stroke-width='2'/><line x1='140' y1='150' x2='30' y2='70' stroke='#10b981' stroke-width='2'/><text x='100' y='15' fill='#e2e8f0' font-size='12' text-anchor='middle'>A</text><text x='180' y='75' fill='#e2e8f0' font-size='12'>B</text><text x='150' y='165' fill='#e2e8f0' font-size='12'>C</text><text x='50' y='165' fill='#e2e8f0' font-size='12'>D</text><text x='15' y='75' fill='#e2e8f0' font-size='12'>E</text><path d='M 130 120 A 15 15 0 0 0 125 140' fill='none' stroke='#f59e0b' stroke-width='2'/><text x='110' y='130' fill='#f59e0b' font-size='12'>؟</text></svg>",
+        "options": [
+          "\\( 18^\\circ \\)",
+          "\\( 36^\\circ \\)",
+          "\\( 54^\\circ \\)",
+          "\\( 72^\\circ \\)",
+          "\\( 108^\\circ \\)"
+        ],
+        "hint": "أوجد الزاوية الداخلية للخماسي المنتظم. ثم افحص المثلثات متطابقة الضلعين المتكونة على الأضلاع، مثل المثلث CDE، لإيجاد الزوايا الصغيرة.",
+        "explanation": "يحتوي الخماسي المنتظم على \\( 5 \\) أضلاع متساوية و \\( 5 \\) زوايا داخلية متساوية.\nمجموع الزوايا الداخلية هو \\( (5-2) \\times 180^\\circ = 540^\\circ \\).\nكل زاوية داخلية تساوي \\( 540^\\circ \\div 5 = 108^\\circ \\). إذن، \\( \\angle BCD = \\angle CDE = \\angle ABC = 108^\\circ \\).\nتأمل المثلث \\( CDE \\). إنه مثلث متطابق الضلعين لأن أضلاع الخماسي المنتظم متساوية (\\( CD = DE \\)).\nزاويتا القاعدة للمثلث \\( \\triangle CDE \\) متساويتان:\n\\[ \\angle DCE = \\angle DEC = \\frac{180^\\circ - 108^\\circ}{2} = 36^\\circ \\].\nبنفس المنطق تماماً، المثلث \\( ABC \\) متطابق الضلعين أيضاً حيث \\( BC = AB \\)، لذا:\n\\[ \\angle BCA = \\frac{180^\\circ - 108^\\circ}{2} = 36^\\circ \\].\nالزاوية الداخلية الكاملة عند الرأس \\( C \\) هي \\( \\angle BCD = 108^\\circ \\).\nتتكون هذه الزاوية الكاملة من ثلاثة أجزاء: \\( \\angle BCA + \\angle ACE + \\angle DCE \\).\nنعوض بالقيم المعروفة:\n\\[ 36^\\circ + \\angle ACE + 36^\\circ = 108^\\circ \\]\n\\[ 72^\\circ + \\angle ACE = 108^\\circ \\implies \\angle ACE = 36^\\circ \\]."
+      }
+    },
+    "correct_index": "1"
+  },
+  {
+    "id": "KAN-JUN-10",
+    "track": "kangaroo",
+    "level": "Junior",
+    "topic": "Functions",
+    "type": "MCQ",
+    "difficulty": "medium",
+    "content": {
+      "en": {
+        "question": "Given the function \\( f(x) = \\frac{x}{x-1} \\), what is the value of the triple composition \\( f(f(f(3))) \\)?",
+        "options": [
+          "\\( 1.5 \\)",
+          "\\( 2.0 \\)",
+          "\\( 2.5 \\)",
+          "\\( 3.0 \\)",
+          "\\( 3.5 \\)"
+        ],
+        "hint": "Work from the inside out. First calculate f(3). Then plug that result back into the function, and do it one more time.",
+        "explanation": "Let's evaluate the function step-by-step from the innermost part.\nStep 1: Find \\( f(3) \\).\n\\[ f(3) = \\frac{3}{3-1} = \\frac{3}{2} = 1.5 \\]\nStep 2: Find \\( f(1.5) \\).\n\\[ f(1.5) = \\frac{1.5}{1.5 - 1} = \\frac{1.5}{0.5} = 3 \\]\nWait, we got 3 back! This means the function \\( f(x) \\) is an involution (it is its own inverse), so \\( f(f(x)) = x \\) for any \\( x \\).\nStep 3: Find the third application, \\( f(3) \\) again.\n\\[ f(3) = \\frac{3}{3-1} = \\frac{3}{2} = 1.5 \\].\nSo, \\( f(f(f(3))) = 1.5 \\)."
+      },
+      "ar": {
+        "question": "بناءً على الدالة \\( f(x) = \\frac{x}{x-1} \\)، ما هي قيمة التركيب الثلاثي للدالة \\( f(f(f(3))) \\)؟",
+        "options": [
+          "\\( 1.5 \\)",
+          "\\( 2.0 \\)",
+          "\\( 2.5 \\)",
+          "\\( 3.0 \\)",
+          "\\( 3.5 \\)"
+        ],
+        "hint": "اعمل من الداخل إلى الخارج. احسب أولاً f(3). ثم عوض بالنتيجة في الدالة مرة أخرى، وافعل ذلك مرة أخيرة.",
+        "explanation": "لنقم بحساب الدالة خطوة بخطوة من الجزء الداخلي.\nالخطوة 1: أوجد \\( f(3) \\).\n\\[ f(3) = \\frac{3}{3-1} = \\frac{3}{2} = 1.5 \\]\nالخطوة 2: أوجد \\( f(1.5) \\).\n\\[ f(1.5) = \\frac{1.5}{1.5 - 1} = \\frac{1.5}{0.5} = 3 \\]\nلحظة، لقد حصلنا على 3 مجدداً! هذا يعني أن الدالة \\( f(x) \\) هي دالة ارتدادية (أي أنها معكوس نفسها)، وبالتالي \\( f(f(x)) = x \\) لأي \\( x \\).\nالخطوة 3: أوجد التطبيق الثالث، وهو \\( f(3) \\) مرة أخرى.\n\\[ f(3) = \\frac{3}{3-1} = \\frac{3}{2} = 1.5 \\].\nإذن، \\( f(f(f(3))) = 1.5 \\)."
+      }
+    },
+    "correct_index": "0"
+  },
+  {
+    "id": "KAN-JUN-11",
+    "track": "kangaroo",
+    "level": "Junior",
+    "topic": "Combinatorial Geometry",
+    "type": "MCQ",
+    "difficulty": "medium",
+    "content": {
+      "en": {
+        "question": "How many diagonals can be drawn in a regular convex dodecagon (a polygon with exactly \\( 12 \\) sides)?",
+        "options": [
+          "\\( 48 \\)",
+          "\\( 54 \\)",
+          "\\( 60 \\)",
+          "\\( 66 \\)",
+          "\\( 72 \\)"
+        ],
+        "hint": "A diagonal connects two non-adjacent vertices. Use the combination formula to find all pairs of vertices, then subtract the outer edges.",
+        "explanation": "To find the number of diagonals in an \\( n \\)-sided polygon, we can choose any 2 vertices to draw a line segment. The number of such pairs is \\( \\binom{n}{2} \\).\nHowever, this includes the \\( n \\) edges of the polygon, which are not diagonals. \nSo, the formula for the number of diagonals is \\( \\frac{n(n-3)}{2} \\).\nFor a dodecagon, \\( n = 12 \\).\n\\[ \\text{Diagonals} = \\frac{12(12 - 3)}{2} = \\frac{12 \\times 9}{2} \\]\n\\[ = 6 \\times 9 = 54 \\].\nA regular dodecagon has exactly 54 diagonals."
+      },
+      "ar": {
+        "question": "كم عدد الأقطار التي يمكن رسمها في مضلع منتظم محدب ذي اثني عشر ضلعاً (dodecagon)؟",
+        "options": [
+          "\\( 48 \\)",
+          "\\( 54 \\)",
+          "\\( 60 \\)",
+          "\\( 66 \\)",
+          "\\( 72 \\)"
+        ],
+        "hint": "يصل القطر بين أي رأسين غير متجاورين. استخدم صيغة التوافيق لإيجاد جميع أزواج الرؤوس، ثم اطرح الحواف (الأضلاع) الخارجية.",
+        "explanation": "لإيجاد عدد الأقطار في مضلع ذي \\( n \\) ضلعاً، يمكننا اختيار أي رأسين لرسم قطعة مستقيمة. عدد هذه الأزواج هو \\( \\binom{n}{2} \\).\nومع ذلك، هذا يشمل أضلاع المضلع الـ \\( n \\)، والتي لا تُعتبر أقطاراً.\nلذا، فإن صيغة عدد الأقطار هي \\( \\frac{n(n-3)}{2} \\).\nبالنسبة للمضلع ذي الاثني عشر ضلعاً، \\( n = 12 \\).\n\\[ \\text{الأقطار} = \\frac{12(12 - 3)}{2} = \\frac{12 \\times 9}{2} \\]\n\\[ = 6 \\times 9 = 54 \\].\nيحتوي هذا المضلع على 54 قطراً بالضبط."
+      }
+    },
+    "correct_index": "1"
+  },
+  {
+    "id": "KAN-JUN-12",
+    "track": "kangaroo",
+    "level": "Junior",
+    "topic": "Rates and Work",
+    "type": "MCQ",
+    "difficulty": "medium",
+    "content": {
+      "en": {
+        "question": "Pipe A can completely fill a water tank in \\( 4 \\) hours. Pipe B can fill the same tank in \\( 6 \\) hours. If both pipes are opened at the same time, how long will it take them to fill the empty tank together?",
+        "options": [
+          "\\( 2.0 \\text{ hours} \\)",
+          "\\( 2.2 \\text{ hours} \\)",
+          "\\( 2.4 \\text{ hours} \\)",
+          "\\( 2.6 \\text{ hours} \\)",
+          "\\( 3.0 \\text{ hours} \\)"
+        ],
+        "hint": "Find the fraction of the tank each pipe fills in exactly 1 hour. Add these rates together to find their combined rate.",
+        "explanation": "Let the total capacity of the tank be 1 unit.\nThe rate of Pipe A is \\( \\frac{1}{4} \\) of the tank per hour.\nThe rate of Pipe B is \\( \\frac{1}{6} \\) of the tank per hour.\nWhen working together, their combined rate is the sum of their individual rates:\n\\[ \\text{Combined Rate} = \\frac{1}{4} + \\frac{1}{6} \\]\nFind a common denominator (which is 12):\n\\[ \\frac{3}{12} + \\frac{2}{12} = \\frac{5}{12} \\text{ of the tank per hour} \\].\nThe time required to fill the entire tank is the reciprocal of the combined rate:\n\\[ \\text{Time} = \\frac{12}{5} \\text{ hours} = 2.4 \\text{ hours} \\]."
+      },
+      "ar": {
+        "question": "يمكن للأنبوب A ملء خزان مياه بالكامل في \\( 4 \\) ساعات. ويمكن للأنبوب B ملء نفس الخزان في \\( 6 \\) ساعات. إذا تم فتح كلا الأنبوبين في نفس الوقت، فكم من الوقت سيستغرقان لملء الخزان الفارغ معاً؟",
+        "options": [
+          "\\( 2.0 \\text{ ساعة} \\)",
+          "\\( 2.2 \\text{ ساعة} \\)",
+          "\\( 2.4 \\text{ ساعة} \\)",
+          "\\( 2.6 \\text{ ساعة} \\)",
+          "\\( 3.0 \\text{ ساعة} \\)"
+        ],
+        "hint": "أوجد الكسر (الجزء) من الخزان الذي يملأه كل أنبوب في ساعة واحدة بالضبط. اجمع هذه المعدلات معاً لإيجاد معدلهما المشترك.",
+        "explanation": "لتكن السعة الكلية للخزان هي وحدة واحدة.\nمعدل الأنبوب A هو ملء \\( \\frac{1}{4} \\) الخزان في الساعة.\nومعدل الأنبوب B هو ملء \\( \\frac{1}{6} \\) الخزان في الساعة.\nعندما يعملان معاً، يكون معدلهما المشترك هو مجموع معدليهما الفرديين:\n\\[ \\text{المعدل المشترك} = \\frac{1}{4} + \\frac{1}{6} \\]\nنوحد المقامات (وهو 12):\n\\[ \\frac{3}{12} + \\frac{2}{12} = \\frac{5}{12} \\text{ من الخزان في الساعة} \\].\nالوقت اللازم لملء الخزان بأكمله هو مقلوب المعدل المشترك:\n\\[ \\text{الوقت} = \\frac{12}{5} \\text{ ساعة} = 2.4 \\text{ ساعة} \\]."
+      }
+    },
+    "correct_index": "2"
+  },
+  {
+    "id": "KAN-JUN-13",
+    "track": "kangaroo",
+    "level": "Junior",
+    "topic": "Exponents",
+    "type": "MCQ",
+    "difficulty": "medium",
+    "content": {
+      "en": {
+        "question": "Solve the exponential equation for \\( x \\):\n\\[ 2^{x+2} + 2^x = 40 \\]",
+        "options": [
+          "\\( 1 \\)",
+          "\\( 2 \\)",
+          "\\( 3 \\)",
+          "\\( 4 \\)",
+          "\\( 5 \\)"
+        ],
+        "hint": "Factor out \\( 2^x \\) from both terms on the left side using the exponent rule \\( 2^{x+2} = 2^x \\cdot 2^2 \\).",
+        "explanation": "We are given the equation \\( 2^{x+2} + 2^x = 40 \\).\nUsing the laws of exponents, we can rewrite \\( 2^{x+2} \\) as \\( 2^x \\times 2^2 \\) or \\( 4 \\times 2^x \\).\nSubstitute this back into the equation:\n\\[ 4(2^x) + 1(2^x) = 40 \\]\nFactor out the common term \\( 2^x \\):\n\\[ 2^x(4 + 1) = 40 \\]\n\\[ 2^x(5) = 40 \\]\nDivide both sides by 5:\n\\[ 2^x = 8 \\]\nSince \\( 8 = 2^3 \\), it follows that \\( x = 3 \\)."
+      },
+      "ar": {
+        "question": "حل المعادلة الأسية التالية لإيجاد قيمة \\( x \\):\n\\[ 2^{x+2} + 2^x = 40 \\]",
+        "options": [
+          "\\( 1 \\)",
+          "\\( 2 \\)",
+          "\\( 3 \\)",
+          "\\( 4 \\)",
+          "\\( 5 \\)"
+        ],
+        "hint": "خذ \\( 2^x \\) كعامل مشترك من كلا الحدين في الطرف الأيسر باستخدام قاعدة الأسس \\( 2^{x+2} = 2^x \\cdot 2^2 \\).",
+        "explanation": "لدينا المعادلة \\( 2^{x+2} + 2^x = 40 \\).\nباستخدام قوانين الأسس، يمكننا إعادة كتابة \\( 2^{x+2} \\) على صورة \\( 2^x \\times 2^2 \\) أو \\( 4 \\times 2^x \\).\nنعوض بهذا في المعادلة:\n\\[ 4(2^x) + 1(2^x) = 40 \\]\nنأخذ الحد المشترك \\( 2^x \\) كعامل مشترك:\n\\[ 2^x(4 + 1) = 40 \\]\n\\[ 2^x(5) = 40 \\]\nنقسم كلا الطرفين على 5:\n\\[ 2^x = 8 \\]\nبما أن \\( 8 = 2^3 \\)، ينتج عن ذلك أن \\( x = 3 \\)."
+      }
+    },
+    "correct_index": "2"
+  },
+  {
+    "id": "KAN-JUN-14",
+    "track": "kangaroo",
+    "level": "Junior",
+    "topic": "Logic Puzzles",
+    "type": "MCQ",
+    "difficulty": "medium",
+    "content": {
+      "en": {
+        "question": "A snail wants to climb to the top of a \\( 10 \\text{-meter} \\) wall. During each day, it climbs up \\( 3 \\text{ meters} \\), but during the night while sleeping, it slides down \\( 2 \\text{ meters} \\). On which day will the snail finally reach the exact top of the wall?",
+        "options": [
+          "\\( 7^{\\text{th}} \\text{ day} \\)",
+          "\\( 8^{\\text{th}} \\text{ day} \\)",
+          "\\( 9^{\\text{th}} \\text{ day} \\)",
+          "\\( 10^{\\text{th}} \\text{ day} \\)",
+          "\\( 11^{\\text{th}} \\text{ day} \\)"
+        ],
+        "hint": "The snail's net progress is 1 meter per 24 hours. However, once it reaches the top during the day, it won't slide down again.",
+        "explanation": "Let's track the snail's progress at the end of each daily climbing phase, and then after the sliding phase.\nDay 1: Climbs to 3m, slides to 1m.\nDay 2: Climbs to 4m, slides to 2m.\n...\nAfter 7 complete days and nights, the snail's net progress is \\( 7 \\times 1 = 7 \\text{ meters} \\).\nOn the morning of the 8th day, the snail is at \\( 7 \\text{ meters} \\).\nDuring the 8th day, it climbs \\( 3 \\text{ meters} \\) upwards: \\( 7 + 3 = 10 \\text{ meters} \\).\nIt reaches the top of the wall! Since it has reached the top, the nighttime sliding no longer matters.\nTherefore, it reaches the top on the \\( 8^{\\text{th}} \\text{ day} \\)."
+      },
+      "ar": {
+        "question": "يريد حلزون تسلق جدار يبلغ ارتفاعه \\( 10 \\text{ أمتار} \\). خلال كل نهار، يتسلق إلى الأعلى بمقدار \\( 3 \\text{ أمتار} \\)، ولكنه ينزلق أثناء نومه في الليل بمقدار \\( 2 \\text{ متر} \\). في أي يوم سيصل الحلزون أخيراً إلى قمة الجدار تماماً؟",
+        "options": [
+          "اليوم السابع",
+          "اليوم الثامن",
+          "اليوم التاسع",
+          "اليوم العاشر",
+          "اليوم الحادي عشر"
+        ],
+        "hint": "التقدم الصافي للحلزون هو متر واحد كل 24 ساعة. ومع ذلك، بمجرد وصوله إلى القمة خلال النهار، فإنه لن ينزلق مرة أخرى.",
+        "explanation": "لنتتبع تقدم الحلزون في نهاية كل مرحلة تسلق نهارية، ثم بعد مرحلة الانزلاق الليلية.\nاليوم الأول: يتسلق إلى 3 أمتار، وينزلق إلى متر واحد.\nاليوم الثاني: يتسلق إلى 4 أمتار، وينزلق إلى مترين.\n...\nبعد مرور 7 أيام وليالٍ كاملة، يكون التقدم الصافي للحلزون هو \\( 7 \\times 1 = 7 \\text{ أمتار} \\).\nفي صباح اليوم الثامن، يكون الحلزون عند ارتفاع \\( 7 \\text{ أمتار} \\).\nخلال اليوم الثامن، يتسلق \\( 3 \\text{ أمتار} \\) للأعلى: \\( 7 + 3 = 10 \\text{ أمتار} \\).\nلقد وصل إلى قمة الجدار! وبما أنه وصل للقمة، فإن الانزلاق الليلي لم يعد مهماً.\nلذلك، يصل إلى القمة في اليوم الثامن."
+      }
+    },
+    "correct_index": "1"
+  },
+  {
+    "id": "KAN-JUN-15",
+    "track": "kangaroo",
+    "level": "Junior",
+    "topic": "Spatial Reasoning",
+    "type": "MCQ",
+    "difficulty": "medium",
+    "content": {
+      "en": {
+        "question": "A large solid wooden cube of dimensions \\( 3 \\times 3 \\times 3 \\) is painted completely blue on all its outside faces. It is then cut into \\( 27 \\) smaller unit cubes (\\( 1 \\times 1 \\times 1 \\)). How many of these small unit cubes have EXACTLY ONE face painted blue?",
+        "options": [
+          "\\( 6 \\)",
+          "\\( 8 \\)",
+          "\\( 12 \\)",
+          "\\( 16 \\)",
+          "\\( 24 \\)"
+        ],
+        "hint": "Think about where the cubes with exactly one painted face are located. They must be on the surface, but not touching any edges or corners.",
+        "explanation": "Let's classify the \\( 27 \\) small cubes by their position in the large \\( 3 \\times 3 \\times 3 \\) cube:\n- The cubes with 3 painted faces are at the corners (8 cubes).\n- The cubes with 2 painted faces are along the edges, between the corners (12 edges \\( \\times 1 \\) cube/edge = 12 cubes).\n- The cubes with 1 painted face are located dead in the center of each of the large outer faces of the original cube.\nSince a cube has exactly 6 faces, and there is exactly 1 such cube in the center of each \\( 3 \\times 3 \\) face, there are \\( 6 \\times 1 = 6 \\) cubes with exactly one blue face.\n- (The single remaining cube is hidden perfectly in the core and has 0 painted faces)."
+      },
+      "ar": {
+        "question": "مكعب خشبي صلب كبير أبعاده \\( 3 \\times 3 \\times 3 \\) مطلي بالكامل باللون الأزرق على جميع أوجهه الخارجية. تم تقطيعه بعد ذلك إلى \\( 27 \\) مكعب وحدة أصغر (\\( 1 \\times 1 \\times 1 \\)). كم عدد مكعبات الوحدة الصغيرة هذه التي تحتوي على وجه واحد بالضبط مطلي باللون الأزرق؟",
+        "options": [
+          "\\( 6 \\)",
+          "\\( 8 \\)",
+          "\\( 12 \\)",
+          "\\( 16 \\)",
+          "\\( 24 \\)"
+        ],
+        "hint": "فكر في مكان وجود المكعبات ذات الوجه الواحد المطلي بالضبط. يجب أن تكون على السطح، ولكن دون أن تلامس أي حواف أو زوايا.",
+        "explanation": "دعونا نصنف المكعبات الصغيرة الـ \\( 27 \\) حسب موقعها في المكعب الكبير \\( 3 \\times 3 \\times 3 \\):\n- المكعبات ذات 3 أوجه مطلية تقع في الزوايا (8 مكعبات).\n- المكعبات ذات وجهين مطليين تقع على طول الحواف، بين الزوايا (12 حافة \\( \\times 1 \\) مكعب/حافة = 12 مكعباً).\n- المكعبات ذات الوجه المطلي الواحد تقع تماماً في مركز كل وجه من الأوجه الخارجية الكبيرة للمكعب الأصلي.\nبما أن للمكعب 6 أوجه بالضبط، ويوجد مكعب واحد بالضبط من هذا النوع في مركز كل وجه \\( 3 \\times 3 \\)، فإن هناك \\( 6 \\times 1 = 6 \\) مكعبات لها وجه أزرق واحد بالضبط.\n- (المكعب الوحيد المتبقي مخفي تماماً في القلب وليس له أي وجه مطلي)."
+      }
+    },
+    "correct_index": "0"
+  },
+  {
+    "id": "KAN-JUN-16",
+    "track": "kangaroo",
+    "level": "Junior",
+    "topic": "Absolute Value Equations",
+    "type": "MCQ",
+    "difficulty": "medium",
+    "content": {
+      "en": {
+        "question": "What is the sum of all possible real values of \\( x \\) that satisfy the absolute value equation \\( |2x - 5| = 11 \\)?",
+        "options": [
+          "\\( 0 \\)",
+          "\\( 3 \\)",
+          "\\( 5 \\)",
+          "\\( 8 \\)",
+          "\\( 11 \\)"
+        ],
+        "hint": "An absolute value equation \\( |A| = B \\) splits into two separate cases: \\( A = B \\) and \\( A = -B \\). Solve both for \\( x \\).",
+        "explanation": "The equation \\( |2x - 5| = 11 \\) indicates that the expression inside the absolute value can be either positive 11 or negative 11.\nCase 1: \\( 2x - 5 = 11 \\)\n\\[ 2x = 16 \\implies x = 8 \\]\nCase 2: \\( 2x - 5 = -11 \\)\n\\[ 2x = -6 \\implies x = -3 \\]\nThe two possible values for \\( x \\) are \\( 8 \\) and \\( -3 \\).\nWe are asked for the sum of these values: \\( 8 + (-3) = 5 \\)."
+      },
+      "ar": {
+        "question": "ما هو مجموع كل القيم الحقيقية الممكنة لـ \\( x \\) والتي تحقق معادلة القيمة المطلقة \\( |2x - 5| = 11 \\)؟",
+        "options": [
+          "\\( 0 \\)",
+          "\\( 3 \\)",
+          "\\( 5 \\)",
+          "\\( 8 \\)",
+          "\\( 11 \\)"
+        ],
+        "hint": "تنقسم معادلة القيمة المطلقة \\( |A| = B \\) إلى حالتين منفصلتين: \\( A = B \\) و \\( A = -B \\). حل كلتيهما لإيجاد \\( x \\).",
+        "explanation": "المعادلة \\( |2x - 5| = 11 \\) تشير إلى أن المقدار داخل القيمة المطلقة يمكن أن يكون إما 11 موجباً أو 11 سالباً.\nالحالة 1: \\( 2x - 5 = 11 \\)\n\\[ 2x = 16 \\implies x = 8 \\]\nالحالة 2: \\( 2x - 5 = -11 \\)\n\\[ 2x = -6 \\implies x = -3 \\]\nالقيمتان الممكنتان لـ \\( x \\) هما \\( 8 \\) و \\( -3 \\).\nالمطلوب هو مجموع هذه القيم: \\( 8 + (-3) = 5 \\)."
+      }
+    },
+    "correct_index": "2"
+  },
+  {
+    "id": "KAN-JUN-17",
+    "track": "kangaroo",
+    "level": "Junior",
+    "topic": "Inscribed Circles",
+    "type": "MCQ",
+    "difficulty": "hard",
+    "content": {
+      "en": {
+        "question": "A right-angled triangle has legs of lengths \\( 5 \\text{ cm} \\) and \\( 12 \\text{ cm} \\). What is the exact radius of the circle inscribed within this triangle?<br/><svg viewBox='0 0 200 160' class='w-full max-w-xs mx-auto bg-slate-900/60 rounded-xl p-2 border border-slate-700 shadow-md my-2'><polygon points='40,120 160,120 40,30' fill='none' stroke='#38bdf8' stroke-width='2'/><circle cx='70' cy='90' r='30' fill='none' stroke='#10b981' stroke-width='2'/><text x='100' y='135' fill='#e2e8f0' font-size='12' text-anchor='middle'>12</text><text x='25' y='75' fill='#e2e8f0' font-size='12'>5</text></svg>",
+        "options": [
+          "\\( 1 \\text{ cm} \\)",
+          "\\( 2 \\text{ cm} \\)",
+          "\\( 2.5 \\text{ cm} \\)",
+          "\\( 3 \\text{ cm} \\)",
+          "\\( 4 \\text{ cm} \\)"
+        ],
+        "hint": "Find the hypotenuse first using Pythagoras. The radius of an inscribed circle in a right triangle is \\( r = \\frac{a + b - c}{2} \\) where \\( c \\) is the hypotenuse.",
+        "explanation": "Let the legs of the right triangle be \\( a = 5 \\) and \\( b = 12 \\).\nBy the Pythagorean theorem, the hypotenuse \\( c \\) is:\n\\[ c = \\sqrt{5^2 + 12^2} = \\sqrt{25 + 144} = \\sqrt{169} = 13 \\text{ cm} \\].\nFor any right-angled triangle, there is a special formula for the inradius (radius of the inscribed circle):\n\\[ r = \\frac{a + b - c}{2} \\]\nSubstitute the known side lengths:\n\\[ r = \\frac{5 + 12 - 13}{2} = \\frac{17 - 13}{2} = \\frac{4}{2} = 2 \\text{ cm} \\].\n*(Alternatively, use Area = \\( r \\times s \\), where Area = 30 and semi-perimeter \\( s \\) = 15, yielding \\( r = 30 / 15 = 2 \\)).*"
+      },
+      "ar": {
+        "question": "مثلث قائم الزاوية طولا ضلعي قائمته \\( 5 \\text{ سم} \\) و \\( 12 \\text{ سم} \\). ما هو نصف القطر الدقيق للدائرة المحاطة داخل هذا المثلث؟<br/><svg viewBox='0 0 200 160' class='w-full max-w-xs mx-auto bg-slate-900/60 rounded-xl p-2 border border-slate-700 shadow-md my-2'><polygon points='40,120 160,120 40,30' fill='none' stroke='#38bdf8' stroke-width='2'/><circle cx='70' cy='90' r='30' fill='none' stroke='#10b981' stroke-width='2'/><text x='100' y='135' fill='#e2e8f0' font-size='12' text-anchor='middle'>12</text><text x='25' y='75' fill='#e2e8f0' font-size='12'>5</text></svg>",
+        "options": [
+          "\\( 1 \\text{ سم} \\)",
+          "\\( 2 \\text{ سم} \\)",
+          "\\( 2.5 \\text{ سم} \\)",
+          "\\( 3 \\text{ سم} \\)",
+          "\\( 4 \\text{ سم} \\)"
+        ],
+        "hint": "أوجد الوتر أولاً باستخدام فيثاغورس. نصف قطر الدائرة المحاطة في مثلث قائم الزاوية يُعطى بالصيغة \\( r = \\frac{a + b - c}{2} \\) حيث \\( c \\) هو الوتر.",
+        "explanation": "ليكن طولا ضلعي القائمة في المثلث هما \\( a = 5 \\) و \\( b = 12 \\).\nباستخدام نظرية فيثاغورس، الوتر \\( c \\) هو:\n\\[ c = \\sqrt{5^2 + 12^2} = \\sqrt{25 + 144} = \\sqrt{169} = 13 \\text{ سم} \\].\nلأي مثلث قائم الزاوية، توجد صيغة خاصة لنصف قطر الدائرة الداخلية (المحاطة):\n\\[ r = \\frac{a + b - c}{2} \\]\nنعوض بأطوال الأضلاع المعروفة:\n\\[ r = \\frac{5 + 12 - 13}{2} = \\frac{17 - 13}{2} = \\frac{4}{2} = 2 \\text{ سم} \\].\n*(كطريقة بديلة، استخدم المساحة = \\( r \\times s \\)، حيث المساحة = 30 ونصف المحيط \\( s \\) = 15، مما يعطي \\( r = 30 / 15 = 2 \\)).*"
+      }
+    },
+    "correct_index": "1"
+  },
+  {
+    "id": "KAN-JUN-18",
+    "track": "kangaroo",
+    "level": "Junior",
+    "topic": "Arithmetic Sequences",
+    "type": "MCQ",
+    "difficulty": "medium",
+    "content": {
+      "en": {
+        "question": "In an arithmetic sequence (progression), the \\( 3^{\\text{rd}} \\) term is \\( 10 \\) and the \\( 8^{\\text{th}} \\) term is \\( 25 \\). What is the exact value of the \\( 10^{\\text{th}} \\) term?",
+        "options": [
+          "\\( 28 \\)",
+          "\\( 29 \\)",
+          "\\( 30 \\)",
+          "\\( 31 \\)",
+          "\\( 32 \\)"
+        ],
+        "hint": "The difference between the 8th and 3rd term is exactly 5 'steps' of the common difference. Find this common difference first.",
+        "explanation": "Let the first term be \\( a \\) and the common difference be \\( d \\).\nThe formula for the \\( n \\)-th term is \\( a_n = a + (n-1)d \\).\nWe are given:\n\\[ a_3 = a + 2d = 10 \\]\n\\[ a_8 = a + 7d = 25 \\]\nSubtracting the first equation from the second gives:\n\\[ (a + 7d) - (a + 2d) = 25 - 10 \\]\n\\[ 5d = 15 \\implies d = 3 \\]\nThe common difference is \\( 3 \\).\nWe need to find the 10th term, \\( a_{10} \\). We can find it by just stepping forward from the 8th term:\n\\[ a_{10} = a_8 + 2d = 25 + 2(3) = 25 + 6 = 31 \\].\nThe 10th term is \\( 31 \\)."
+      },
+      "ar": {
+        "question": "في متتالية حسابية، الحد الثالث هو \\( 10 \\) والحد الثامن هو \\( 25 \\). ما هي القيمة الدقيقة للحد العاشر؟",
+        "options": [
+          "\\( 28 \\)",
+          "\\( 29 \\)",
+          "\\( 30 \\)",
+          "\\( 31 \\)",
+          "\\( 32 \\)"
+        ],
+        "hint": "الفرق بين الحد الثامن والحد الثالث يعادل تماماً 5 'خطوات' من أساس المتتالية (الفرق المشترك). أوجد هذا الأساس أولاً.",
+        "explanation": "ليكن الحد الأول \\( a \\) والأساس (الفرق المشترك) \\( d \\).\nصيغة الحد النوني هي \\( a_n = a + (n-1)d \\).\nلدينا المعطيات التالية:\n\\[ a_3 = a + 2d = 10 \\]\n\\[ a_8 = a + 7d = 25 \\]\nبطرح المعادلة الأولى من الثانية نحصل على:\n\\[ (a + 7d) - (a + 2d) = 25 - 10 \\]\n\\[ 5d = 15 \\implies d = 3 \\]\nأساس المتتالية هو \\( 3 \\).\nنحتاج إلى إيجاد الحد العاشر \\( a_{10} \\). يمكننا إيجاده ببساطة بالتقدم للأمام من الحد الثامن:\n\\[ a_{10} = a_8 + 2d = 25 + 2(3) = 25 + 6 = 31 \\].\nإذن الحد العاشر هو \\( 31 \\)."
+      }
+    },
+    "correct_index": "3"
+  },
+  {
+    "id": "KAN-JUN-19",
+    "track": "kangaroo",
+    "level": "Junior",
+    "topic": "Probability",
+    "type": "MCQ",
+    "difficulty": "medium",
+    "content": {
+      "en": {
+        "question": "A bag contains exactly \\( 3 \\) red marbles, \\( 4 \\) blue marbles, and \\( 5 \\) green marbles. If two marbles are drawn randomly one after another WITHOUT replacement, what is the probability that BOTH marbles are blue?",
+        "options": [
+          "\\( \\frac{1}{11} \\)",
+          "\\( \\frac{2}{11} \\)",
+          "\\( \\frac{1}{12} \\)",
+          "\\( \\frac{1}{6} \\)",
+          "\\( \\frac{1}{9} \\)"
+        ],
+        "hint": "Probability of two dependent events = P(1st is blue) × P(2nd is blue | 1st was blue). Note that the total number of marbles decreases for the second draw.",
+        "explanation": "First, calculate the total number of marbles in the bag: \\( 3 + 4 + 5 = 12 \\) marbles.\nProbability that the first marble drawn is blue:\n\\[ P(B_1) = \\frac{4}{12} = \\frac{1}{3} \\].\nSince we are drawing WITHOUT replacement, there are now \\( 11 \\) marbles left in the bag, and only \\( 3 \\) of them are blue.\nProbability that the second marble is blue, given the first was blue:\n\\[ P(B_2 | B_1) = \\frac{3}{11} \\].\nTo find the probability of both events happening, multiply them:\n\\[ P(\\text{Both Blue}) = \\frac{1}{3} \\times \\frac{3}{11} = \\frac{1}{11} \\]."
+      },
+      "ar": {
+        "question": "يحتوي كيس على \\( 3 \\) كرات حمراء، و \\( 4 \\) كرات زرقاء، و \\( 5 \\) كرات خضراء. إذا سُحبت كرتان عشوائياً واحدة تلو الأخرى بدون إرجاع، فما هو احتمال أن تكون كلتا الكرتين زرقاوين؟",
+        "options": [
+          "\\( \\frac{1}{11} \\)",
+          "\\( \\frac{2}{11} \\)",
+          "\\( \\frac{1}{12} \\)",
+          "\\( \\frac{1}{6} \\)",
+          "\\( \\frac{1}{9} \\)"
+        ],
+        "hint": "احتمال حدثين معتمدين = P(الأول أزرق) × P(الثاني أزرق | الأول كان أزرق). لاحظ أن العدد الإجمالي للكرات يقل في السحبة الثانية.",
+        "explanation": "أولاً، نحسب العدد الإجمالي للكرات في الكيس: \\( 3 + 4 + 5 = 12 \\) كرة.\nاحتمال أن تكون الكرة الأولى المسحوبة زرقاء:\n\\[ P(B_1) = \\frac{4}{12} = \\frac{1}{3} \\].\nبما أننا نسحب بدون إرجاع، يتبقى الآن \\( 11 \\) كرة في الكيس، منها \\( 3 \\) كرات زرقاء فقط.\nاحتمال أن تكون الكرة الثانية زرقاء، علماً بأن الأولى كانت زرقاء:\n\\[ P(B_2 | B_1) = \\frac{3}{11} \\].\nلإيجاد احتمال وقوع الحدثين معاً، نضربهما:\n\\[ P(\\text{كلاهما أزرق}) = \\frac{1}{3} \\times \\frac{3}{11} = \\frac{1}{11} \\]."
+      }
+    },
+    "correct_index": "0"
+  },
+  {
+    "id": "KAN-JUN-20",
+    "track": "kangaroo",
+    "level": "Junior",
+    "topic": "Polynomials",
+    "type": "MCQ",
+    "difficulty": "hard",
+    "content": {
+      "en": {
+        "question": "A cubic polynomial is given by \\( P(x) = x^3 - 6x^2 + 11x - 6 = 0 \\). Let its three roots be \\( a, b, \\) and \\( c \\). What is the exact value of the sum of their squares, \\( a^2 + b^2 + c^2 \\)?",
+        "options": [
+          "\\( 10 \\)",
+          "\\( 12 \\)",
+          "\\( 14 \\)",
+          "\\( 16 \\)",
+          "\\( 18 \\)"
+        ],
+        "hint": "Use the algebraic identity \\( a^2 + b^2 + c^2 = (a+b+c)^2 - 2(ab+bc+ca) \\), and find those combinations using Vieta's formulas.",
+        "explanation": "Using Vieta's formulas for a cubic equation \\( Ax^3 + Bx^2 + Cx + D = 0 \\):\n- Sum of roots: \\( a + b + c = -\\frac{B}{A} = -\\frac{-6}{1} = 6 \\)\n- Sum of pairwise products: \\( ab + bc + ca = \\frac{C}{A} = \\frac{11}{1} = 11 \\)\nWe need to find \\( a^2 + b^2 + c^2 \\). We can use the well-known algebraic expansion:\n\\[ (a + b + c)^2 = a^2 + b^2 + c^2 + 2(ab + bc + ca) \\]\nSubstitute the known values from Vieta's formulas:\n\\[ 6^2 = (a^2 + b^2 + c^2) + 2(11) \\]\n\\[ 36 = (a^2 + b^2 + c^2) + 22 \\]\n\\[ a^2 + b^2 + c^2 = 36 - 22 = 14 \\].\nThe sum of the squares of the roots is \\( 14 \\)."
+      },
+      "ar": {
+        "question": "أُعطيت كثيرة الحدود التكعيبية \\( P(x) = x^3 - 6x^2 + 11x - 6 = 0 \\). لتكن جذورها الثلاثة هي \\( a, b, \\) و \\( c \\). ما هي القيمة الدقيقة لمجموع مربعات هذه الجذور، \\( a^2 + b^2 + c^2 \\)؟",
+        "options": [
+          "\\( 10 \\)",
+          "\\( 12 \\)",
+          "\\( 14 \\)",
+          "\\( 16 \\)",
+          "\\( 18 \\)"
+        ],
+        "hint": "استخدم المتطابقة الجبرية \\( a^2 + b^2 + c^2 = (a+b+c)^2 - 2(ab+bc+ca) \\)، وأوجد هذه التوافيق باستخدام صيغ فييتا (Vieta).",
+        "explanation": "باستخدام صيغ فييتا للمعادلة التكعيبية \\( Ax^3 + Bx^2 + Cx + D = 0 \\):\n- مجموع الجذور: \\( a + b + c = -\\frac{B}{A} = -\\frac{-6}{1} = 6 \\)\n- مجموع حواصل الضرب الثنائية: \\( ab + bc + ca = \\frac{C}{A} = \\frac{11}{1} = 11 \\)\nنحتاج إلى إيجاد \\( a^2 + b^2 + c^2 \\). يمكننا استخدام متطابقة الفك الجبرية المعروفة:\n\\[ (a + b + c)^2 = a^2 + b^2 + c^2 + 2(ab + bc + ca) \\]\nنعوض بالقيم المعروفة من صيغ فييتا:\n\\[ 6^2 = (a^2 + b^2 + c^2) + 2(11) \\]\n\\[ 36 = (a^2 + b^2 + c^2) + 22 \\]\n\\[ a^2 + b^2 + c^2 = 36 - 22 = 14 \\].\nمجموع مربعات الجذور هو \\( 14 \\)."
+      }
+    },
+    "correct_index": "2"
   }
 ]
