@@ -1,0 +1,100 @@
+[
+  {
+    "track": "jee",
+    "total": 260,
+    "levels": {
+      "Grade 12": 260
+    },
+    "issues": {
+      "written_response_requires_human_review": 72,
+      "embedded_diagram_needs_question_specific_review": 51,
+      "en_missing_explanation": 2,
+      "ar_missing_explanation": 2
+    }
+  },
+  {
+    "track": "kangaroo",
+    "total": 635,
+    "levels": {
+      "Cadet": 257,
+      "Ecolier": 128,
+      "Benjamin": 124,
+      "Junior": 126
+    },
+    "issues": {
+      "embedded_diagram_needs_question_specific_review": 89,
+      "en_option_count": 10,
+      "ar_option_count": 10,
+      "duplicate_english_stem": 79,
+      "en_duplicate_options": 20,
+      "ar_duplicate_options": 20,
+      "duplicate_id": 6
+    }
+  },
+  {
+    "track": "kaust",
+    "total": 468,
+    "levels": {
+      "Phase 2: Advanced Analysis": 237,
+      "Phase 1: Foundation Research": 125,
+      "Phase 3: Elite Research": 106
+    },
+    "issues": {
+      "written_response_requires_human_review": 100,
+      "embedded_diagram_needs_question_specific_review": 32,
+      "en_missing_explanation": 1,
+      "en_option_count": 12,
+      "ar_option_count": 12,
+      "ar_missing_explanation": 1,
+      "duplicate_id": 23,
+      "en_duplicate_options": 31,
+      "ar_duplicate_options": 31,
+      "duplicate_english_stem": 152
+    }
+  },
+  {
+    "track": "nafes",
+    "total": 704,
+    "levels": {
+      "Grade 3": 206,
+      "Grade 6": 249,
+      "Grade 9": 249
+    },
+    "issues": {
+      "embedded_diagram_needs_question_specific_review": 80,
+      "duplicate_english_stem": 12
+    }
+  },
+  {
+    "track": "nsmo",
+    "total": 431,
+    "levels": {
+      "Phase 2: Intermediate Olympiad (Grades 8-9)": 176,
+      "Phase 1: Junior Olympiad (Grades 5-7)": 127,
+      "Phase 3: Senior National Olympiad (Grades 10-12)": 128
+    },
+    "issues": {
+      "written_response_requires_human_review": 89,
+      "en_option_count": 1,
+      "ar_option_count": 1,
+      "en_missing_explanation": 6,
+      "ar_missing_explanation": 6,
+      "duplicate_id": 31,
+      "embedded_diagram_needs_question_specific_review": 20,
+      "en_duplicate_options": 38,
+      "ar_duplicate_options": 38,
+      "duplicate_english_stem": 90
+    }
+  },
+  {
+    "track": "olympiad",
+    "total": 242,
+    "levels": {
+      "High School": 242
+    },
+    "issues": {
+      "written_response_requires_human_review": 239,
+      "embedded_diagram_needs_question_specific_review": 24
+    }
+  }
+]

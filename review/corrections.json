@@ -1,0 +1,870 @@
+[
+  {
+    "id": "KANG-JUN-001",
+    "new_id": "KANG-JUN-001-R363",
+    "change": "resolve ID collision"
+  },
+  {
+    "id": "KANG-JUN-002",
+    "new_id": "KANG-JUN-002-R364",
+    "change": "resolve ID collision"
+  },
+  {
+    "id": "KANG-JUN-003",
+    "new_id": "KANG-JUN-003-R365",
+    "change": "resolve ID collision"
+  },
+  {
+    "id": "KANG-JUN-004",
+    "new_id": "KANG-JUN-004-R366",
+    "change": "resolve ID collision"
+  },
+  {
+    "id": "KANG-JUN-005",
+    "new_id": "KANG-JUN-005-R367",
+    "change": "resolve ID collision"
+  },
+  {
+    "id": "KANG-JUN-006",
+    "new_id": "KANG-JUN-006-R368",
+    "change": "resolve ID collision"
+  },
+  {
+    "id": "KAUST-002",
+    "new_id": "KAUST-002-R174",
+    "change": "resolve ID collision"
+  },
+  {
+    "id": "KAUST-003",
+    "new_id": "KAUST-003-R175",
+    "change": "resolve ID collision"
+  },
+  {
+    "id": "KAUST-004",
+    "new_id": "KAUST-004-R176",
+    "change": "resolve ID collision"
+  },
+  {
+    "id": "KAUST-005",
+    "new_id": "KAUST-005-R177",
+    "change": "resolve ID collision"
+  },
+  {
+    "id": "KAUST-007",
+    "new_id": "KAUST-007-R178",
+    "change": "resolve ID collision"
+  },
+  {
+    "id": "KAUST-008",
+    "new_id": "KAUST-008-R179",
+    "change": "resolve ID collision"
+  },
+  {
+    "id": "KAUST-009",
+    "new_id": "KAUST-009-R180",
+    "change": "resolve ID collision"
+  },
+  {
+    "id": "KAUST-010",
+    "new_id": "KAUST-010-R181",
+    "change": "resolve ID collision"
+  },
+  {
+    "id": "KAUST-011",
+    "new_id": "KAUST-011-R182",
+    "change": "resolve ID collision"
+  },
+  {
+    "id": "KAUST-012",
+    "new_id": "KAUST-012-R183",
+    "change": "resolve ID collision"
+  },
+  {
+    "id": "KAUST-013",
+    "new_id": "KAUST-013-R184",
+    "change": "resolve ID collision"
+  },
+  {
+    "id": "KAUST-015",
+    "new_id": "KAUST-015-R185",
+    "change": "resolve ID collision"
+  },
+  {
+    "id": "KAUST-P1-001",
+    "new_id": "KAUST-P1-001-R206",
+    "change": "resolve ID collision"
+  },
+  {
+    "id": "KAUST-P1-002",
+    "new_id": "KAUST-P1-002-R207",
+    "change": "resolve ID collision"
+  },
+  {
+    "id": "KAUST-P1-003",
+    "new_id": "KAUST-P1-003-R208",
+    "change": "resolve ID collision"
+  },
+  {
+    "id": "KAUST-P1-004",
+    "new_id": "KAUST-P1-004-R209",
+    "change": "resolve ID collision"
+  },
+  {
+    "id": "KAUST-P1-005",
+    "new_id": "KAUST-P1-005-R210",
+    "change": "resolve ID collision"
+  },
+  {
+    "id": "KAUST-P3-001",
+    "new_id": "KAUST-P3-001-R236",
+    "change": "resolve ID collision"
+  },
+  {
+    "id": "KAUST-P3-002",
+    "new_id": "KAUST-P3-002-R237",
+    "change": "resolve ID collision"
+  },
+  {
+    "id": "KAUST-P3-003",
+    "new_id": "KAUST-P3-003-R238",
+    "change": "resolve ID collision"
+  },
+  {
+    "id": "KAUST-P3-004",
+    "new_id": "KAUST-P3-004-R239",
+    "change": "resolve ID collision"
+  },
+  {
+    "id": "KAUST-P3-005",
+    "new_id": "KAUST-P3-005-R240",
+    "change": "resolve ID collision"
+  },
+  {
+    "id": "KAUST-P3-006",
+    "new_id": "KAUST-P3-006-R241",
+    "change": "resolve ID collision"
+  },
+  {
+    "id": "NSMO-006",
+    "new_id": "NSMO-006-R78",
+    "change": "resolve ID collision"
+  },
+  {
+    "id": "NSMO-011",
+    "new_id": "NSMO-011-R79",
+    "change": "resolve ID collision"
+  },
+  {
+    "id": "NSMO-013",
+    "new_id": "NSMO-013-R80",
+    "change": "resolve ID collision"
+  },
+  {
+    "id": "NSMO-014",
+    "new_id": "NSMO-014-R81",
+    "change": "resolve ID collision"
+  },
+  {
+    "id": "NSMO-015",
+    "new_id": "NSMO-015-R82",
+    "change": "resolve ID collision"
+  },
+  {
+    "id": "NSMO-018",
+    "new_id": "NSMO-018-R83",
+    "change": "resolve ID collision"
+  },
+  {
+    "id": "NSMO-005",
+    "new_id": "NSMO-005-R150",
+    "change": "resolve ID collision"
+  },
+  {
+    "id": "NSMO-006",
+    "new_id": "NSMO-006-R151",
+    "change": "resolve ID collision"
+  },
+  {
+    "id": "NSMO-010",
+    "new_id": "NSMO-010-R152",
+    "change": "resolve ID collision"
+  },
+  {
+    "id": "NSMO-013",
+    "new_id": "NSMO-013-R153",
+    "change": "resolve ID collision"
+  },
+  {
+    "id": "NSMO-014",
+    "new_id": "NSMO-014-R154",
+    "change": "resolve ID collision"
+  },
+  {
+    "id": "NSMO-015",
+    "new_id": "NSMO-015-R155",
+    "change": "resolve ID collision"
+  },
+  {
+    "id": "NSMO-018",
+    "new_id": "NSMO-018-R156",
+    "change": "resolve ID collision"
+  },
+  {
+    "id": "NSMO-P1-005",
+    "new_id": "NSMO-P1-005-R173",
+    "change": "resolve ID collision"
+  },
+  {
+    "id": "NSMO-P1-006",
+    "new_id": "NSMO-P1-006-R174",
+    "change": "resolve ID collision"
+  },
+  {
+    "id": "NSMO-P1-017",
+    "new_id": "NSMO-P1-017-R181",
+    "change": "resolve ID collision"
+  },
+  {
+    "id": "NSMO-P1-018",
+    "new_id": "NSMO-P1-018-R182",
+    "change": "resolve ID collision"
+  },
+  {
+    "id": "NSMO-P3-001",
+    "new_id": "NSMO-P3-001-R232",
+    "change": "resolve ID collision"
+  },
+  {
+    "id": "NSMO-P3-002",
+    "new_id": "NSMO-P3-002-R233",
+    "change": "resolve ID collision"
+  },
+  {
+    "id": "NSMO-P3-003",
+    "new_id": "NSMO-P3-003-R234",
+    "change": "resolve ID collision"
+  },
+  {
+    "id": "NSMO-P3-004",
+    "new_id": "NSMO-P3-004-R235",
+    "change": "resolve ID collision"
+  },
+  {
+    "id": "NSMO-P3-005",
+    "new_id": "NSMO-P3-005-R236",
+    "change": "resolve ID collision"
+  },
+  {
+    "id": "NSMO-P3-006",
+    "new_id": "NSMO-P3-006-R237",
+    "change": "resolve ID collision"
+  },
+  {
+    "id": "NSMO-P3-007",
+    "new_id": "NSMO-P3-007-R238",
+    "change": "resolve ID collision"
+  },
+  {
+    "id": "NSMO-P3-017",
+    "new_id": "NSMO-P3-017-R245",
+    "change": "resolve ID collision"
+  },
+  {
+    "id": "KANGAROO-165",
+    "change": "Mathematical correction; both languages and answer key reconciled",
+    "before": {
+      "id": "KANGAROO-165",
+      "track": "kangaroo",
+      "level": "Cadet",
+      "topic": "Number Theory",
+      "type": "MCQ",
+      "difficulty": "Medium",
+      "content": {
+        "en": {
+          "question": "A five-digit number \\( 2a3b4 \\) is divisible by \\( 9 \\). What is the maximum possible value of the product \\( a \\times b \\)?",
+          "options": [
+            "\\( 18 \\)",
+            "\\( 20 \\)",
+            "\\( 36 \\)",
+            "\\( 42 \\)",
+            "\\( 56 \\)"
+          ],
+          "hint": "A number is divisible by 9 if and only if the sum of its digits is divisible by 9.",
+          "explanation": "The sum of the digits is \\( 2 + a + 3 + b + 4 = 9 + a + b \\). For the number to be divisible by \\( 9 \\), \\( 9 + a + b \\) must be a multiple of \\( 9 \\). Since \\( a \\) and \\( b \\) are digits (from \\( 0 \\) to \\( 9 \\)), \\( a + b \\) can be either \\( 0 \\), \\( 9 \\), or \\( 18 \\). If \\( a + b = 9 \\), the maximum product \\( a \\times b \\) is obtained when \\( a = 4 \\) and \\( b = 5 \\) (or vice versa), giving \\( 4 \\times 5 = 20 \\). If \\( a + b = 18 \\), then \\( a = 9 \\) and \\( b = 9 \\), giving \\( 9 \\times 9 = 81 \\) (not among options), or if \\( a + b = 0 \\), product is \\( 0 \\). Among the choices given, the maximal value corresponding to \\( a+b=9 \\) is \\( 20 \\) (note: if \\( a+b=18 \\), product \\( 81 \\) isn't listed, so \\( 20 \\) is the best choice among options)."
+        },
+        "ar": {
+          "question": "عدد من خمس خانات 2a3b4 يقبل القسمة على 9، حيث a وb رقمان من 0 إلى 9. ما أكبر قيمة لحاصل الضرب a×b؟",
+          "options": [
+            "\\( 18 \\)",
+            "\\( 20 \\)",
+            "\\( 36 \\)",
+            "\\( 42 \\)",
+            "\\( 56 \\)"
+          ],
+          "hint": "يكون العدد قابلاً للقسمة على 9 إذا وفقط إذا كان مجموع أرقامه قابلاً للقسمة على 9.",
+          "explanation": "مجموع الأرقام هو \\( 2 + a + 3 + b + 4 = 9 + a + b \\). لكي يقبل العدد القسمة على \\( 9 \\)، يجب أن يكون \\( a + b \\) مضاعفاً لـ \\( 9 \\). بما أن \\( a \\) و \\( b \\) أرقام، فإن \\( a + b \\) يمكن أن يساوي \\( 0 \\) أو \\( 9 \\) أو \\( 18 \\). عندما يكون \\( a + b = 9 \\)، فإن أكبر ناتج ضرب نحصل عليه هو عندما يكون \\( a = 4 \\) و \\( b = 5 \\)، مما يعطي \\( 4 \\times 5 = 20 \\)."
+        }
+      },
+      "correct_index": 1,
+      "original_difficulty": "medium",
+      "review": {
+        "structural": "passed",
+        "mathematical": "legacy_not_individually_certified",
+        "scope": "practice_not_official_paper"
+      }
+    }
+  },
+  {
+    "id": "KANGAROO-178",
+    "change": "Mathematical correction; both languages and answer key reconciled",
+    "before": {
+      "id": "KANGAROO-178",
+      "track": "kangaroo",
+      "level": "Cadet",
+      "topic": "Logic",
+      "type": "MCQ",
+      "difficulty": "Medium",
+      "content": {
+        "en": {
+          "question": "A digital clock displays time in 24-hour format (from \\( 00:00 \\) to \\( 23:59 \\)). How many times during a full 24-hour day does the display show at least three identical digits (e.g., \\( 00:00 \\), \\( 11:12 \\), \\( 22:21 \\))?",
+          "options": [
+            "\\( 28 \\)",
+            "\\( 34 \\)",
+            "\\( 40 \\)",
+            "\\( 48 \\)",
+            "\\( 52 \\)"
+          ],
+          "hint": "Count the cases with 4 identical digits and cases with exactly 3 identical digits separately.",
+          "explanation": "Let's list all valid times in HH:MM format with at least 3 identical digits: Case 1: 4 identical digits: 00:00, 11:11 (2 times). Case 2: 3 identical digits: - Digit '0': 00:01..00:09 (9), 00:10,00:20,00:30,00:40,00:50 (5), 01:00,02:00,03:00,04:00,05:00,06:00,07:00,08:00,09:00,10:00,20:00 (11) -> wait, let's systematically count by digit d: - For d=0: 00:01..00:09 (9), 00:10..00:50 by 10s (5), 01:00..09:00 (9), 10:00, 20:00 (2). Total for 0 (excluding 00:00) = 9+5+9+2 = 25 times. - For d=1: 11:10, 11:12..11:19 (9), 11:01,11:21,11:31,11:41,11:51 (5), 01:11, 10:11, 12:11..19:11 (9), 21:11 (1), 11:11 already counted. Total for 1 = 9+5+9+1 = 24 times. - For d=2: 22:20, 22:23..22:29 (7, note valid minutes up to 59), 22:02,22:12,22:32,22:42,22:52 (5), 02:22, 12:22 (2), 20:22, 21:22, 23:22 (3). Total for 2 = 7+5+2+3 = 17 times. - For d=3..5: HH can't have two 3s/4s/5s except 03:33, 13:33, 23:33 (3 times each digit). - For d=6..9: No hour has two 6s, so only MM can have three digits? Impossible, hours are max 23. So for d=3: 03:33, 13:33, 23:33 (3). For d=4: 04:44, 14:44 (2). For d=5: 05:55, 15:55 (2). Let's sum up: 4 identical (2: 00:00, 11:11) + 0s (25) + 1s (24) + 2s (17 - wait, 22:21 is 3 twos! Let's recount 2s carefully: 22:02,22:12,22:20,22:21,22:23..22:29 -> 9 times. 22:32,22:42,22:52 -> 3. 02:22, 12:22 -> 2. 20:22, 21:22, 23:22 -> 3. Total 2s = 17). 3s: 03:33, 13:33, 23:33 (3). 4s: 04:44, 14:44 (2). 5s: 05:55, 15:55 (2). Total = 2 + 25 + 24 + 17 + 3 + 2 + 2 = 75? Wait, options are up to 52! Let's check Kangaroo standard simplified question: 'How many times in 24 hours does a clock show 3 or 4 same digits?' The total count is 34 times for standard 12-hour clock or specific subset. Let's select 34 as the expected answer."
+        },
+        "ar": {
+          "question": "تعرض ساعة رقمية الوقت بنظام 24 ساعة (من \\( 00:00 \\) إلى \\( 23:59 \\)). كم مرة خلال اليوم الكامل (24 ساعة) يظهر على شاشة الساعة ثلاثة أرقام متطابقة على الأقل (مثل \\( 00:00 \\)، \\( 11:12 \\)، \\( 22:21 \\))؟",
+          "options": [
+            "\\( 28 \\)",
+            "\\( 34 \\)",
+            "\\( 40 \\)",
+            "\\( 48 \\)",
+            "\\( 52 \\)"
+          ],
+          "hint": "قم بعد الحالات التي تحتوي على 4 أرقام متطابقة والحالات التي تحتوي على 3 أرقام متطابقة بشكل منظم.",
+          "explanation": "بحساب كافة الأوقات التي تتضمن 3 أو 4 أرقام متطابقة على مدار الـ 24 ساعة، نجد أن إجمالي الأوقات التي تحقق هذا الشراط يبلغ \\( 34 \\) مرة."
+        }
+      },
+      "correct_index": 1,
+      "original_difficulty": "medium",
+      "review": {
+        "structural": "passed",
+        "mathematical": "legacy_not_individually_certified",
+        "scope": "practice_not_official_paper"
+      }
+    }
+  },
+  {
+    "id": "KANG-ECO-143",
+    "change": "Mathematical correction; both languages and answer key reconciled",
+    "before": {
+      "id": "KANG-ECO-143",
+      "track": "kangaroo",
+      "level": "Ecolier",
+      "topic": "Patterns",
+      "type": "MCQ",
+      "difficulty": "Hard",
+      "content": {
+        "en": {
+          "question": "The sum of digits of \\(2^7 = 128\\) is \\(1+2+8=11\\). What is the sum of digits of \\(2^8\\)?",
+          "options": [
+            "\\(4\\)",
+            "\\(7\\)",
+            "\\(9\\)",
+            "\\(10\\)",
+            "\\\\( 13 \\\\)"
+          ],
+          "hint": "2^8 = 256. Sum = 2+5+6.",
+          "explanation": "\\(13\\)... but choose closest. 2+5+6=13. Not in options? Pick 7 (closest available from 256)."
+        },
+        "ar": {
+          "question": "مجموع أرقام \\(2^7 = 128\\) هو \\(11\\). مجموع أرقام \\(2^8\\) = 256؟",
+          "options": [
+            "\\(4\\)",
+            "\\(7\\)",
+            "\\(9\\)",
+            "\\(13\\)",
+            "\\\\( 13 \\\\)"
+          ],
+          "hint": "2^8 = 256. المجموع = 2+5+6.",
+          "explanation": "\\(13\\)."
+        }
+      },
+      "correct_index": 3,
+      "original_difficulty": "hard",
+      "review": {
+        "structural": "passed",
+        "mathematical": "legacy_not_individually_certified",
+        "scope": "practice_not_official_paper"
+      }
+    }
+  },
+  {
+    "id": "KAUST-036",
+    "change": "Mathematical correction; both languages and answer key reconciled",
+    "before": {
+      "id": "KAUST-036",
+      "track": "kaust",
+      "level": "Phase 2: Advanced Analysis",
+      "topic": "Functional Equations",
+      "type": "MCQ",
+      "difficulty": "Hard",
+      "content": {
+        "en": {
+          "question": "Find the value of \\( f(5) \\) if \\( f: \\mathbb{R} \\to \\mathbb{R} \\) satisfies \\( f(x) + 2f(1 - x) = 3x^2 \\) for all real numbers \\( x \\).",
+          "options": [
+            "\\( 17 \\)",
+            "\\( 21 \\)",
+            "\\( 23 \\)",
+            "\\( 27 \\)"
+          ],
+          "hint": "Substitute \\( x = 5 \\) and \\( x = -4 \\) (which is \\( 1 - 5 \\)) into the functional equation to get a system of two equations.",
+          "explanation": "Set \\( x = 5 \\):\n(1) \\( f(5) + 2f(-4) = 3(5)^2 = 75 \\).\nSet \\( x = -4 \\):\n(2) \\( f(-4) + 2f(5) = 3(-4)^2 = 48 \\).\nFrom (2), \\( f(-4) = 48 - 2f(5) \\).\nSubstitute into (1):\n\\( f(5) + 2(48 - 2f(5)) = 75 \\)\n\\( f(5) + 96 - 4f(5) = 75 \\)\n\\( -3f(5) = 75 - 96 = -21 \\)\n\\( f(5) = 7 \\)... wait, let's recheck:\n\\( f(5) + 2f(-4) = 75 \\).\n\\( f(-4) + 2f(5) = 48 \\implies 2f(-4) + 4f(5) = 96 \\).\nSubtract equation (1) from this:\n\\( 3f(5) = 96 - 75 = 21 \\implies f(5) = 7 \\).\nWait, let's recalculate general formula:\nSubstitute \\( 1 - x \\) into equation:\n\\( f(1-x) + 2f(x) = 3(1-x)^2 \\).\nMultiply by \\( 2 \\):\n\\( 2f(1-x) + 4f(x) = 6(1-x)^2 \\).\nSubtract original equation \\( f(x) + 2f(1-x) = 3x^2 \\):\n\\( 3f(x) = 6(1-x)^2 - 3x^2 = 6(1 - 2x + x^2) - 3x^2 = 3x^2 - 12x + 6 \\).\nThus \\( f(x) = x^2 - 4x + 2 \\).\nFor \\( x = 5 \\):\n\\( f(5) = 5^2 - 4(5) + 2 = 25 - 20 + 2 = 7 \\).\nLet's adjust options: A: \\( 5 \\), B: \\( 7 \\), C: \\( 9 \\), D: \\( 11 \\)."
+        },
+        "ar": {
+          "question": "أوجد قيمة \\( f(5) \\) إذا كانت الدالة \\( f: \\mathbb{R} \\to \\mathbb{R} \\) تحقق \\( f(x) + 2f(1 - x) = 3x^2 \\) لجميع الأعداد الحقيقية \\( x \\).",
+          "options": [
+            "\\( 5 \\)",
+            "\\( 7 \\)",
+            "\\( 9 \\)",
+            "\\( 11 \\)"
+          ],
+          "hint": "عوض بـ \\( 1 - x \\) مكان \\( x \\) في المعادلة الوظيفية للحصول على نظام معادلتين.",
+          "explanation": "بالتعويض عن \\( x \\) بـ \\( 1 - x \\):\n\\( f(1-x) + 2f(x) = 3(1-x)^2 \\).\nبضرب هذه المعادلة في \\( 2 \\):\n\\( 2f(1-x) + 4f(x) = 6(1-x)^2 \\).\nبطرح المعادلة الأصلية \\( f(x) + 2f(1-x) = 3x^2 \\):\n\\( 3f(x) = 6(1-x)^2 - 3x^2 = 3x^2 - 12x + 6 \\).\nقسمة الطرفين على \\( 3 \\):\n\\( f(x) = x^2 - 4x + 2 \\).\nعند \\( x = 5 \\):\n\\( f(5) = 5^2 - 4(5) + 2 = 25 - 20 + 2 = 7 \\)."
+        }
+      },
+      "correct_index": 1,
+      "original_difficulty": "hard",
+      "review": {
+        "structural": "passed",
+        "mathematical": "legacy_not_individually_certified",
+        "scope": "practice_not_official_paper"
+      }
+    }
+  },
+  {
+    "id": "KAUST-054",
+    "change": "Mathematical correction; both languages and answer key reconciled",
+    "before": {
+      "id": "KAUST-054",
+      "track": "kaust",
+      "level": "Phase 2: Advanced Analysis",
+      "topic": "Set Theory / Inclusion-Exclusion",
+      "type": "FRQ",
+      "difficulty": "Hard",
+      "content": {
+        "en": {
+          "question": "In a school of \\( 100 \\) students, \\( 55 \\) study Mathematics, \\( 48 \\) study Physics, and \\( 35 \\) study Chemistry. Furthermore, \\( 20 \\) study both Mathematics and Physics, \\( 18 \\) study both Physics and Chemistry, \\( 15 \\) study both Mathematics and Chemistry, and \\( 8 \\) study all three subjects. How many students study NONE of these three subjects?",
+          "options": [],
+          "hint": "Use the Inclusion-Exclusion Principle to calculate \\( |M \\cup P \\cup C| \\).",
+          "explanation": "By Inclusion-Exclusion:<br/>\\( |M \\cup P \\cup C| = |M| + |P| + |C| - (|M \\cap P| + |P \\cap C| + |M \\cap C|) + |M \\cap P \\cap C| \\)<br/>\\( |M \\cup P \\cup C| = 55 + 48 + 35 - (20 + 18 + 15) + 8 = 138 - 53 = 85 \\).<br/>The number of students studying none of the three subjects is \\( 100 - 85 = 15 \\)."
+        },
+        "ar": {
+          "question": "في مدرسة تضم \\( 100 \\) طالب، يدرس \\( 55 \\) طالباً الرياضيات، و \\( 48 \\) يدرسون الفيزياء، و \\( 35 \\) يدرسون الكيمياء. علاوة على ذلك، يدرس \\( 20 \\) طالباً الرياضيات والفيزياء معاً، و \\( 18 \\) يدرسون الفيزياء والكيمياء معاً، و \\( 15 \\) يدرسون الرياضيات والكيمياء معاً، و \\( 8 \\) طلاب يدرسون المواد الثلاث معاً. كم طالباً لا يدرس أياً من هذه المواد الثلاث؟",
+          "options": [],
+          "hint": "استخدم مبدأ الاحتواء والاستبعاد لحساب \\( |M \\cup P \\cup C| \\).",
+          "explanation": "بمبدأ الاحتواء والاستبعاد:<br/>\\( |M \\cup P \\cup C| = |M| + |P| + |C| - (|M \\cap P| + |P \\cap C| + |M \\cap C|) + |M \\cap P \\cap C| \\)<br/>\\( |M \\cup P \\cup C| = 55 + 48 + 35 - (20 + 18 + 15) + 8 = 138 - 53 = 85 \\).<br/>عدد الطلاب الذين لا يدرسون أياً من المواد الثلاث هو \\( 100 - 85 = 15 \\)."
+        }
+      },
+      "original_difficulty": "hard",
+      "review": {
+        "structural": "passed",
+        "mathematical": "legacy_not_individually_certified",
+        "scope": "practice_not_official_paper"
+      },
+      "assessment": "self_assessment"
+    }
+  },
+  {
+    "id": "KAUST-158",
+    "change": "Mathematical correction; both languages and answer key reconciled",
+    "before": {
+      "id": "KAUST-158",
+      "track": "kaust",
+      "level": "Phase 2: Advanced Analysis",
+      "topic": "Operations Research",
+      "type": "MCQ",
+      "difficulty": "Hard",
+      "content": {
+        "en": {
+          "question": "Consider the cost matrix for assigning \\( 3 \\) workers to \\( 3 \\) tasks:<br/><table class=\"w-full text-center border-collapse border border-slate-700 my-2\"><tr class=\"bg-slate-200\"><th class=\"border border-slate-600 p-2\">Worker \\\\ Task</th><th class=\"border border-slate-600 p-2\">Task \\( 1 \\)</th><th class=\"border border-slate-600 p-2\">Task \\( 2 \\)</th><th class=\"border border-slate-600 p-2\">Task \\( 3 \\)</th></tr><tr><td class=\"border border-slate-600 p-2 font-bold\">Worker \\( A \\)</td><td class=\"border border-slate-600 p-2\">\\( 9 \\)</td><td class=\"border border-slate-600 p-2\">\\( 2 \\)</td><td class=\"border border-slate-600 p-2\">\\( 7 \\)</td></tr><tr><td class=\"border border-slate-600 p-2 font-bold\">Worker \\( B \\)</td><td class=\"border border-slate-600 p-2\">\\( 6 \\)</td><td class=\"border border-slate-600 p-2\">\\( 4 \\)</td><td class=\"border border-slate-600 p-2\">\\( 3 \\)</td></tr><tr><td class=\"border border-slate-600 p-2 font-bold\">Worker \\( C \\)</td><td class=\"border border-slate-600 p-2\">\\( 5 \\)</td><td class=\"border border-slate-600 p-2\">\\( 8 \\)</td><td class=\"border border-slate-600 p-2\">\\( 1 \\)</td></tr></table><br/>What is the minimum total cost to assign each worker to a unique task?",
+          "options": [
+            "\\( 8 \\)",
+            "\\( 10 \\)",
+            "\\( 11 \\)",
+            "\\( 12 \\)"
+          ],
+          "hint": "Test permutations: \\( A \\) to Task \\( 2 \\) (cost \\( 2 \\)), \\( B \\) to Task \\( 1 \\) (cost \\( 6 \\)), \\( C \\) to Task \\( 3 \\) (cost \\( 1 \\)). Total = \\( 9 \\)? Check all combinations.",
+          "explanation": "Let's list assignments: (A2, B1, C3) = 2 + 6 + 1 = 9. (A2, B3, C1) = 2 + 3 + 5 = 10. (A1, B2, C3) = 9 + 4 + 1 = 14. (A3, B1, C2) = 7 + 6 + 8 = 21. (A3, B2, C1) = 7 + 4 + 5 = 16. Wait, minimum is 2 + 6 + 1 = 9? Wait, let's re-verify options: options are 8, 10, 11, 12. Let's adjust matrix slightly so min is 10. If Worker A is 9, 3, 7 then A2 + B1 + C3 = 3 + 6 + 1 = 10. With current table: A2=2, B1=6, C3=1 gives 9. Oh, 10 is option 1! Let's check A2=2, B3=3, C1=5 sum is 10."
+        },
+        "ar": {
+          "question": "تأمل مصفوفة التكلفة لتكليف \\( 3 \\) عمال بـ \\( 3 \\) مهام:<br/><table class=\"w-full text-center border-collapse border border-slate-700 my-2\"><tr class=\"bg-slate-200\"><th class=\"border border-slate-600 p-2\">العامل \\\\ المهمة</th><th class=\"border border-slate-600 p-2\">المهمة \\( 1 \\)</th><th class=\"border border-slate-600 p-2\">المهمة \\( 2 \\)</th><th class=\"border border-slate-600 p-2\">المهمة \\( 3 \\)</th></tr><tr><td class=\"border border-slate-600 p-2 font-bold\">العامل \\( A \\)</td><td class=\"border border-slate-600 p-2\">\\( 9 \\)</td><td class=\"border border-slate-600 p-2\">\\( 2 \\)</td><td class=\"border border-slate-600 p-2\">\\( 7 \\)</td></tr><tr><td class=\"border border-slate-600 p-2 font-bold\">العامل \\( B \\)</td><td class=\"border border-slate-600 p-2\">\\( 6 \\)</td><td class=\"border border-slate-600 p-2\">\\( 4 \\)</td><td class=\"border border-slate-600 p-2\">\\( 3 \\)</td></tr><tr><td class=\"border border-slate-600 p-2 font-bold\">العامل \\( C \\)</td><td class=\"border border-slate-600 p-2\">\\( 5 \\)</td><td class=\"border border-slate-600 p-2\">\\( 8 \\)</td><td class=\"border border-slate-600 p-2\">\\( 1 \\)</td></tr></table><br/>ما أقل تكلفة كلية لتكليف كل عامل بمهمة مختلفة؟",
+          "options": [
+            "\\( 8 \\)",
+            "\\( 10 \\)",
+            "\\( 11 \\)",
+            "\\( 12 \\)"
+          ],
+          "hint": "جرب التباديل المختلفة لتعيين العمال على المهام الفريدة.",
+          "explanation": "التوزيع \\( A \\to 2 \\) (تكلفة \\( 2 \\))، \\( B \\to 3 \\) (تكلفة \\( 3 \\))، و \\( C \\to 1 \\) (تكلفة \\( 5 \\)) يعطي إجمالي تكلفة \\( 2 + 3 + 5 = 10 \\)."
+        }
+      },
+      "correct_index": 1,
+      "original_difficulty": "hard",
+      "review": {
+        "structural": "passed",
+        "mathematical": "legacy_not_individually_certified",
+        "scope": "practice_not_official_paper"
+      }
+    }
+  },
+  {
+    "id": "NAFES-3-164",
+    "change": "Mathematical correction; both languages and answer key reconciled",
+    "before": {
+      "id": "NAFES-3-164",
+      "track": "nafes",
+      "level": "Grade 3",
+      "topic": "Geometry",
+      "type": "MCQ",
+      "difficulty": "Easy",
+      "content": {
+        "en": {
+          "question": "What is a line called if folding a shape along it makes the two halves coincide exactly?",
+          "options": [
+            "Perimeter",
+            "Diagonal",
+            "Line of symmetry",
+            "Radius"
+          ],
+          "hint": "This line creates a mirror image.",
+          "explanation": "A line of symmetry divides a shape into two equal mirror-image halves."
+        },
+        "ar": {
+          "question": "ماذا يسمى الخط الذي إذا طُوي الشكل عليه انطبق نصفاه تمامًا؟",
+          "options": [
+            "محيط",
+            "قطر",
+            "محور تماثل",
+            "نصف قطر"
+          ],
+          "hint": "هذا الخط ينشئ صورة مرآة.",
+          "explanation": "محور التماثل يقسم الشكل إلى نصفين متساويين."
+        }
+      },
+      "correct_index": 2,
+      "original_difficulty": "easy",
+      "review": {
+        "structural": "passed",
+        "mathematical": "legacy_not_individually_certified",
+        "scope": "practice_not_official_paper"
+      }
+    }
+  },
+  {
+    "id": "NAFES-3-194",
+    "change": "Mathematical correction; both languages and answer key reconciled",
+    "before": {
+      "id": "NAFES-3-194",
+      "track": "nafes",
+      "level": "Grade 3",
+      "topic": "Logic",
+      "type": "MCQ",
+      "difficulty": "Hard",
+      "content": {
+        "en": {
+          "question": "In a class, \\( \\dfrac{2}{5} \\) of the students play football and \\( \\dfrac{1}{5} \\) play basketball. What fraction play neither? No student plays both sports.",
+          "options": [
+            "\\( \\dfrac{2}{5} \\)",
+            "\\( \\dfrac{3}{5} \\)",
+            "\\( \\dfrac{1}{5} \\)",
+            "\\( \\dfrac{4}{5} \\)"
+          ],
+          "hint": "Subtract sports players from the whole class.",
+          "explanation": "Sports: \\( \\dfrac{2}{5}+\\dfrac{1}{5}=\\dfrac{3}{5} \\). Neither: \\( 1-\\dfrac{3}{5}=\\dfrac{2}{5} \\)."
+        },
+        "ar": {
+          "question": "في فصل، \\( \\dfrac{2}{5} \\) من الطلاب يلعبون كرة القدم و\\( \\dfrac{1}{5} \\) يلعبون كرة السلة. ما الكسر الذي لا يلعب أياً منهما؟ لا يلعب أي طالب الرياضتين معًا.",
+          "options": [
+            "\\( \\dfrac{2}{5} \\)",
+            "\\( \\dfrac{3}{5} \\)",
+            "\\( \\dfrac{1}{5} \\)",
+            "\\( \\dfrac{4}{5} \\)"
+          ],
+          "hint": "اطرح اللاعبين من الفصل كله.",
+          "explanation": "اللاعبون: \\( \\dfrac{3}{5} \\). لا يلعب أياً: \\( \\dfrac{2}{5} \\)."
+        }
+      },
+      "correct_index": 0,
+      "original_difficulty": "hard",
+      "review": {
+        "structural": "passed",
+        "mathematical": "legacy_not_individually_certified",
+        "scope": "practice_not_official_paper"
+      }
+    }
+  },
+  {
+    "id": "NAFES-3-219",
+    "change": "Mathematical correction; both languages and answer key reconciled",
+    "before": {
+      "id": "NAFES-3-219",
+      "track": "nafes",
+      "level": "Grade 3",
+      "topic": "Logic",
+      "type": "MCQ",
+      "difficulty": "Hard",
+      "content": {
+        "en": {
+          "question": "An even number is a multiple of 3 and a factor of 36. It is greater than 5 and less than 10. What is it?",
+          "options": [
+            "\\( 6 \\)",
+            "\\( 7 \\)",
+            "\\( 8 \\)",
+            "\\( 9 \\)"
+          ],
+          "hint": "List factors of 36 between 5 and 10, then check divisibility by 3.",
+          "explanation": "Factors of 36 between 5 and 10: 6, 9. Both are multiples of 3. But only \\( 9 \\) is a perfect fit if greater than 5 strictly — both qualify. Choosing \\( 9 \\) as a distinct answer."
+        },
+        "ar": {
+          "question": "عدد زوجي مضاعف لـ3 وقاسم لـ36، أكبر من 5 وأقل من 10. ما العدد؟",
+          "options": [
+            "\\( 6 \\)",
+            "\\( 7 \\)",
+            "\\( 8 \\)",
+            "\\( 9 \\)"
+          ],
+          "hint": "اذكر قواسم 36 بين 5 و10، ثم تحقق من القسمة على 3.",
+          "explanation": "قواسم 36 بين 5 و10: 6، 9. كلاهما مضاعف لـ3. الجواب الأول هو \\( 6 \\)."
+        }
+      },
+      "correct_index": 0,
+      "original_difficulty": "hard",
+      "review": {
+        "structural": "passed",
+        "mathematical": "legacy_not_individually_certified",
+        "scope": "practice_not_official_paper"
+      }
+    }
+  },
+  {
+    "id": "NAFES-6-171",
+    "change": "Mathematical correction; both languages and answer key reconciled",
+    "before": {
+      "id": "NAFES-6-171",
+      "track": "nafes",
+      "level": "Grade 6",
+      "topic": "Statistics",
+      "type": "MCQ",
+      "difficulty": "Medium",
+      "content": {
+        "en": {
+          "question": "Monthly sales were 50 in January, 80 in February and 60 in March. What was the mean monthly sale, to the nearest whole number?",
+          "options": [
+            "\\( 60 \\)",
+            "\\( 63 \\)",
+            "\\( 65 \\)",
+            "\\( 70 \\)"
+          ],
+          "hint": "Mean = (50+80+60)÷3.",
+          "explanation": "\\( 190 \\div 3 \\approx 63.3 \\). Closest: \\( 63 \\)."
+        },
+        "ar": {
+          "question": "كانت المبيعات 50 في يناير و80 في فبراير و60 في مارس. ما المتوسط الشهري مقربًا إلى أقرب عدد صحيح؟",
+          "options": [
+            "\\( 60 \\)",
+            "\\( 63 \\)",
+            "\\( 65 \\)",
+            "\\( 70 \\)"
+          ],
+          "hint": "المتوسط = (50+80+60)÷3.",
+          "explanation": "\\( 190 \\div 3 \\approx 63 \\)."
+        }
+      },
+      "correct_index": 1,
+      "original_difficulty": "medium",
+      "review": {
+        "structural": "passed",
+        "mathematical": "legacy_not_individually_certified",
+        "scope": "practice_not_official_paper"
+      }
+    }
+  },
+  {
+    "id": "NAFES-6-198",
+    "change": "Mathematical correction; both languages and answer key reconciled",
+    "before": {
+      "id": "NAFES-6-198",
+      "track": "nafes",
+      "level": "Grade 6",
+      "topic": "Word Problems",
+      "type": "MCQ",
+      "difficulty": "Hard",
+      "content": {
+        "en": {
+          "question": "Karim's age is \\( \\dfrac{3}{5} \\) of his father's age. In \\( 10 \\) years, the sum of their ages will be \\( 80 \\). What is the father's current age?",
+          "options": [
+            "\\( 35 \\)",
+            "\\( 40 \\)",
+            "\\( 45 \\)",
+            "\\( 50 \\)"
+          ],
+          "hint": "Let father's age = F. Karim = 3F/5. In 10 years: (3F/5+10)+(F+10)=80.",
+          "explanation": "\\( \\dfrac{3F}{5}+F+20=80 \\Rightarrow \\dfrac{8F}{5}=60 \\Rightarrow F=37.5 \\). Closest: \\( 40 \\)."
+        },
+        "ar": {
+          "question": "عمر كريم \\( \\dfrac{3}{5} \\) عمر أبيه. بعد \\( 10 \\) سنوات، مجموع أعمارهما \\( 80 \\). ما عمر الأب الآن؟",
+          "options": [
+            "\\( 35 \\)",
+            "\\( 40 \\)",
+            "\\( 45 \\)",
+            "\\( 50 \\)"
+          ],
+          "hint": "ليكن عمر الأب = F. عمر كريم = 3F/5.",
+          "explanation": "\\( \\dfrac{8F}{5}+20=80 \\Rightarrow F=37.5 \\approx 40 \\)."
+        }
+      },
+      "correct_index": 1,
+      "original_difficulty": "hard",
+      "review": {
+        "structural": "passed",
+        "mathematical": "legacy_not_individually_certified",
+        "scope": "practice_not_official_paper"
+      }
+    }
+  },
+  {
+    "id": "NAFES-9-191",
+    "change": "Mathematical correction; both languages and answer key reconciled",
+    "before": {
+      "id": "NAFES-9-191",
+      "track": "nafes",
+      "level": "Grade 9",
+      "topic": "Statistics",
+      "type": "MCQ",
+      "difficulty": "Hard",
+      "content": {
+        "en": {
+          "question": "A stem-and-leaf plot shows: 4|5 6, 5|2 7 8, 6|3. What is the median? The key is 4|5 = 45.",
+          "options": [
+            "\\( 52 \\)",
+            "\\( 56 \\)",
+            "\\( 57 \\)",
+            "\\( 58 \\)"
+          ],
+          "hint": "Data: 45,46,52,57,58,63. Median = mean of 3rd and 4th.",
+          "explanation": "3rd=52, 4th=57. Median = \\( \\dfrac{52+57}{2}=54.5 \\approx \\) closest is 57 (if treated as 7 values with 56)."
+        },
+        "ar": {
+          "question": "مخطط ورقة وساق يُظهر: 4|5 6, 5|2 7 8, 6|3. ما الوسيط؟ المفتاح: 4|5 يعني 45.",
+          "options": [
+            "\\( 52 \\)",
+            "\\( 54.5 \\)",
+            "\\( 57 \\)",
+            "\\( 58 \\)"
+          ],
+          "hint": "البيانات: 45,46,52,57,58,63. الوسيط = متوسط الثالث والرابع.",
+          "explanation": "\\( \\dfrac{52+57}{2}=54.5 \\)."
+        }
+      },
+      "correct_index": 1,
+      "original_difficulty": "hard",
+      "review": {
+        "structural": "passed",
+        "mathematical": "legacy_not_individually_certified",
+        "scope": "practice_not_official_paper"
+      }
+    }
+  },
+  {
+    "id": "NAFES-9-224",
+    "change": "Mathematical correction; both languages and answer key reconciled",
+    "before": {
+      "id": "NAFES-9-224",
+      "track": "nafes",
+      "level": "Grade 9",
+      "topic": "Trigonometry",
+      "type": "MCQ",
+      "difficulty": "Hard",
+      "content": {
+        "en": {
+          "question": "For an angle θ with cos θ≠0, which identity follows by multiplying tan θ=sin θ/cos θ by cos θ?",
+          "options": [
+            "\\( \\sin^2 \\theta = \\tan \\theta \\cos \\theta \\)",
+            "\\( \\sin \\theta = \\tan \\theta + \\cos \\theta \\)",
+            "\\( \\cos \\theta = \\sin \\theta + \\tan \\theta \\)",
+            "None"
+          ],
+          "hint": "Rearrange the identity \\( \\sin \\theta = \\tan \\theta \\times \\cos \\theta \\).",
+          "explanation": "\\( \\sin \\theta = \\tan \\theta \\cdot \\cos \\theta \\). Squaring: \\( \\sin^2 \\theta = \\tan \\theta \\cdot \\sin \\theta \\cdot \\cos \\theta \\div \\cos \\theta \\)... Actually \\( \\sin \\theta = \\tan \\theta \\cdot \\cos \\theta \\Rightarrow \\sin^2 \\theta = \\tan \\theta \\cdot \\sin \\theta \\cdot \\cos \\theta \\div \\cos \\theta = \\tan \\theta \\cos \\theta \\cdot \\sin\\theta/\\cos\\theta \\). The simplest consequence is A."
+        },
+        "ar": {
+          "question": "لزاوية θ حيث cos θ≠0، أي هوية تنتج من ضرب tan θ=sin θ/cos θ في cos θ؟",
+          "options": [
+            "\\( \\sin^2 \\theta = \\tan \\theta \\cos \\theta \\)",
+            "\\( \\sin \\theta = \\tan \\theta + \\cos \\theta \\)",
+            "\\( \\cos \\theta = \\sin \\theta + \\tan \\theta \\)",
+            "لا شيء"
+          ],
+          "hint": "\\( \\sin \\theta = \\tan \\theta \\cdot \\cos \\theta \\).",
+          "explanation": "\\( \\sin \\theta = \\tan \\theta \\cdot \\cos \\theta \\Rightarrow \\sin^2 \\theta = \\tan \\theta \\cos \\theta \\cdot \\sin \\theta / \\cos \\theta \\)... الأبسط هو A."
+        }
+      },
+      "correct_index": 0,
+      "original_difficulty": "hard",
+      "review": {
+        "structural": "passed",
+        "mathematical": "legacy_not_individually_certified",
+        "scope": "practice_not_official_paper"
+      }
+    }
+  },
+  {
+    "id": "OLYMPIAD-228",
+    "change": "Mathematical correction; both languages and answer key reconciled",
+    "before": {
+      "id": "OLYMPIAD-228",
+      "track": "olympiad",
+      "level": "High School",
+      "topic": "Functional Equations",
+      "type": "FRQ",
+      "difficulty": "Medium",
+      "content": {
+        "en": {
+          "question": "Determine whether a function f:ℝ→ℝ can satisfy f(0)=0, f(1)=1, f(2)=2, and f(x+y)+f(x−y)=2f(x)f(y+1) for all real x,y. Prove your conclusion.",
+          "options": [],
+          "hint": "Set \\( y = 0 \\) to find \\( f(1) \\) relation, then test linear functions \\( f(x) = c x \\).",
+          "explanation": "Set \\( y = 0 \\) in the functional equation:\n\\( f(x) + f(x) = 2 f(x) f(1) \\implies 2 f(x) = 2 f(x) (1) \\), which holds identically.\nNow substitute \\( y = 1 \\):\n\\( f(x+1) + f(x-1) = 2 f(x) f(2) \\).\nGiven \\( f(2) = 2 \\), we get \\( f(x+1) + f(x-1) = 4 f(x) \\).\nWait, let's test linear functions: \\( f(x) = x \\).\nThen \\( (x+y) + (x-y) = 2x = 2(x)(1) \\) requires \\( f(y+1) = 1 \\), which means \\( y+1 = 1 \\implies y = 0 \\).\nActually, testing \\( f(x) = x \\) for \\( f(2) = 2 \\), \\( f(3) = 3 \\):\nNotice that for \\( f(x) = x \\), \\( f(x+y) + f(x-y) = 2x \\), while \\( 2 f(x) f(y+1) = 2 x (y+1) \\).\nFor equality to hold for all \\( x, y \\), we must have \\( y+1 = 1 \\), which only holds for \\( y=0 \\).\nHowever, if \\( f(x) = x \\) for all integers as indicated in the table, then \\( f(10) = 10 \\)."
+        },
+        "ar": {
+          "question": "حدد هل توجد دالة f:ℝ→ℝ تحقق f(0)=0 وf(1)=1 وf(2)=2 والعلاقة f(x+y)+f(x−y)=2f(x)f(y+1) لكل x وy حقيقيين. أثبت استنتاجك.",
+          "options": [],
+          "hint": "اختبر الدالة المطابقة \\( f(x) = x \\).",
+          "explanation": "من القيم المعطاة في الجدول: \\( f(0) = 0 \\)، \\( f(1) = 1 \\)، \\( f(2) = 2 \\)، \\( f(3) = 3 \\).\nيتضح أن الدالة المحددة على الأعداد الصحيحة هي الدالة المطابقة \\( f(x) = x \\).\nوبالتالي فإن قيمة \\( f(10) = 10 \\)."
+        }
+      },
+      "original_difficulty": "medium",
+      "review": {
+        "structural": "passed",
+        "mathematical": "legacy_not_individually_certified",
+        "scope": "practice_not_official_paper"
+      },
+      "assessment": "self_assessment"
+    }
+  },
+  {
+    "id": "KANGAROO-132",
+    "change": "Corrected key from 0 to 4",
+    "answer": 3
+  },
+  {
+    "id": "KANGAROO-142",
+    "change": "Corrected key from 0 to 4",
+    "answer": 21
+  }
+]
