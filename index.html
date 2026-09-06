@@ -3,7 +3,9 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Edugates International School | Math Exam Intelligence & Explorer</title>
+  <title>SuperMath | Mathematics Practice · Edugates International School</title>
+  <meta name="description" content="Explore bilingual mathematics practice by track, grade and topic, with worked solutions and printable practice sheets.">
+  <link rel="stylesheet" href="assets/refinement.css">
   
   <!-- Favicon -->
   <link rel="icon" type="image/jpeg" href="LOGO.jpg">
@@ -24,7 +26,7 @@
     window.MathJax = {
       tex: {
         inlineMath: [['\\(', '\\)']],
-        displayMath: [['$$', '$$']]
+        displayMath: [['$$', '$$'], ['\\[', '\\]']]
       }
     };
   </script>
@@ -185,6 +187,7 @@
   -->
   <!-- CONFIRMATION: NO SVG graphics used. NO Mermaid JS used. -->
 
+  <a class="skip-link" href="#practice">Skip to practice / انتقل للتدريب</a>
   <!-- TOP HEADER / NAVBAR -->
   <header class="bg-slate-900/85 backdrop-blur-xl text-white sticky top-0 z-50 shadow-[0_4px_30px_rgba(0,0,0,0.1)] border-b border-slate-800/50 transition-all duration-300">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -208,7 +211,7 @@
           <!-- Active Track Counter Badge -->
           <div class="hidden lg:flex items-center bg-slate-800 px-3 py-1.5 rounded-lg border border-slate-700 text-xs text-slate-300">
             <span class="w-2 h-2 rounded-full bg-emerald-500 ml-2 animate-pulse"></span>
-            <span id="stat-questions-count">6 المسارات متكاملة (1,000+ سؤال لكل مسار)</span>
+            <span id="stat-questions-count">جاري تحميل بنوك التدريب…</span>
           </div>
 
           <!-- Brilliant Classroom Link -->
@@ -218,7 +221,7 @@
           </a>
 
           <!-- Theme Switcher -->
-          <button id="theme-toggle-btn" onclick="toggleTheme()" class="bg-slate-800/80 hover:bg-slate-700 text-amber-400 border border-slate-700 px-4 py-2 rounded-xl text-sm font-bold transition-all duration-300 flex items-center gap-2 hover:shadow-lg hover:shadow-amber-500/10">
+          <button aria-label="Toggle dark mode / تبديل المظهر" id="theme-toggle-btn" onclick="toggleTheme()" class="bg-slate-800/80 hover:bg-slate-700 text-amber-400 border border-slate-700 px-4 py-2 rounded-xl text-sm font-bold transition-all duration-300 flex items-center gap-2 hover:shadow-lg hover:shadow-amber-500/10">
             <span id="theme-icon">🌙</span>
           </button>
           
@@ -300,59 +303,13 @@
       </div>
 
       <!-- Tracks Grid -->
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6" id="tracks-cards-grid">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6" id="tracks-cards-grid" aria-label="Practice tracks">
         <!-- Rendered via JS -->
       </div>
     </section>
 
-    <!-- SECTION 2: COMPARATIVE ANALYTICS & VISUALIZATIONS (CHART.JS CANVAS) -->
-    <section class="bg-white/80 dark:bg-slate-800/80 backdrop-blur-md rounded-3xl p-6 sm:p-8 shadow-lg shadow-slate-200/40 dark:shadow-slate-900/40 border border-white dark:border-slate-700 space-y-8">
-      <div>
-        <h2 class="text-2xl font-bold text-slate-900 dark:text-white" id="sec2-title">تحليلات المناهج والأبعاد المعرفية</h2>
-        <p class="text-slate-500 dark:text-slate-400 text-sm mt-1" id="sec2-desc">
-          مقارنة بين توزيع المواضيع (الجبر، الهندسة، نظرية الأعداد، التركيبات، التفاضل) وطبيعة الأسئلة في كل مسار
-        </p>
-      </div>
-
-      <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
-        
-        <!-- Radar Chart: Topic Weight Distribution -->
-        <div class="bg-slate-50 dark:bg-slate-900/50 p-5 rounded-xl border border-slate-200 dark:border-slate-700 flex flex-col space-y-4">
-          <div class="flex items-center justify-between">
-            <h3 class="font-bold text-slate-800 dark:text-slate-100 text-sm sm:text-base" id="chart1-title">
-              📊 توزيع المواضيع الرياضية حسب المسار
-            </h3>
-            <span class="text-xs bg-slate-200 dark:bg-slate-700 text-slate-700 dark:text-slate-300 px-2 py-1 rounded">رادار مقارن</span>
-          </div>
-          <div class="chart-container">
-            <canvas id="topicRadarChart"></canvas>
-          </div>
-          <p class="text-xs text-slate-500 dark:text-slate-400 leading-relaxed" id="chart1-caption">
-            يلاحظ تركيز اختبار كانجارو على المنطق والهندسة الفضائية، بينما يركز اختبار JEE على التفاضل والتكامل والجبر المتقدم، وتتميز نافس بتوازن الجبر والقياس.
-          </p>
-        </div>
-
-        <!-- Stacked Bar Chart: Difficulty & Question Format Breakdown -->
-        <div class="bg-slate-50 dark:bg-slate-900/50 p-5 rounded-xl border border-slate-200 dark:border-slate-700 flex flex-col space-y-4">
-          <div class="flex items-center justify-between">
-            <h3 class="font-bold text-slate-800 dark:text-slate-100 text-sm sm:text-base" id="chart2-title">
-              📈 نمط الأسئلة ومستويات التحدي
-            </h3>
-            <span class="text-xs bg-slate-200 dark:bg-slate-700 text-slate-700 dark:text-slate-300 px-2 py-1 rounded">أعمدة مجمعة</span>
-          </div>
-          <div class="chart-container">
-            <canvas id="formatBarChart"></canvas>
-          </div>
-          <p class="text-xs text-slate-500 dark:text-slate-400 leading-relaxed" id="chart2-caption">
-            تتوزع أسئلة كانجارو بين 3 و 4 و 5 نقاط. بينما يعتمد الأولمبياد وبرامج كاوست على الأسئلة المقالية (FRQ) والحلول الكتابية لإثبات البراهين.
-          </p>
-        </div>
-
-      </div>
-    </section>
-
     <!-- SECTION 3: INTERACTIVE QUESTION EXPLORER & LIVE QUIZ ENGINE -->
-    <section class="bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white rounded-3xl p-6 sm:p-10 shadow-2xl shadow-slate-900/20 border border-slate-800 space-y-8 relative overflow-hidden">
+    <section id="practice" class="bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white rounded-3xl p-6 sm:p-10 shadow-2xl shadow-slate-900/20 border border-slate-800 space-y-8 relative overflow-hidden">
       <!-- Decorative glow -->
       <div class="absolute top-0 right-1/4 w-96 h-96 bg-brand-600/20 rounded-full filter blur-[100px] pointer-events-none"></div>
       <div class="absolute bottom-0 left-1/4 w-96 h-96 bg-amber-500/10 rounded-full filter blur-[100px] pointer-events-none"></div>
@@ -453,7 +410,7 @@
       </div>
 
       <!-- Question Viewer Component -->
-      <div id="question-card-container" class="space-y-6">
+      <div id="question-card-container" aria-live="polite" class="space-y-6">
         <!-- Rendered by JavaScript -->
       </div>
 
@@ -469,6 +426,52 @@
           السؤال التالي →
         </button>
       </div>
+      </div>
+    </section>
+
+    <!-- SECTION 2: COMPARATIVE ANALYTICS & VISUALIZATIONS (CHART.JS CANVAS) -->
+    <section class="bg-white/80 dark:bg-slate-800/80 backdrop-blur-md rounded-3xl p-6 sm:p-8 shadow-lg shadow-slate-200/40 dark:shadow-slate-900/40 border border-white dark:border-slate-700 space-y-8">
+      <div>
+        <h2 class="text-2xl font-bold text-slate-900 dark:text-white" id="sec2-title">تحليلات المناهج والأبعاد المعرفية</h2>
+        <p class="text-slate-500 dark:text-slate-400 text-sm mt-1" id="sec2-desc">
+          مقارنة بين توزيع المواضيع (الجبر، الهندسة، نظرية الأعداد، التركيبات، التفاضل) وطبيعة الأسئلة في كل مسار
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
+
+        <!-- Radar Chart: Topic Weight Distribution -->
+        <div class="bg-slate-50 dark:bg-slate-900/50 p-5 rounded-xl border border-slate-200 dark:border-slate-700 flex flex-col space-y-4">
+          <div class="flex items-center justify-between">
+            <h3 class="font-bold text-slate-800 dark:text-slate-100 text-sm sm:text-base" id="chart1-title">
+              📊 توزيع المواضيع الرياضية حسب المسار
+            </h3>
+            <span class="text-xs bg-slate-200 dark:bg-slate-700 text-slate-700 dark:text-slate-300 px-2 py-1 rounded">رادار مقارن</span>
+          </div>
+          <div class="chart-container">
+            <canvas id="topicRadarChart"></canvas>
+          </div>
+          <p class="text-xs text-slate-500 dark:text-slate-400 leading-relaxed" id="chart1-caption">
+            يلاحظ تركيز اختبار كانجارو على المنطق والهندسة الفضائية، بينما يركز اختبار JEE على التفاضل والتكامل والجبر المتقدم، وتتميز نافس بتوازن الجبر والقياس.
+          </p>
+        </div>
+
+        <!-- Stacked Bar Chart: Difficulty & Question Format Breakdown -->
+        <div class="bg-slate-50 dark:bg-slate-900/50 p-5 rounded-xl border border-slate-200 dark:border-slate-700 flex flex-col space-y-4">
+          <div class="flex items-center justify-between">
+            <h3 class="font-bold text-slate-800 dark:text-slate-100 text-sm sm:text-base" id="chart2-title">
+              📈 نمط الأسئلة ومستويات التحدي
+            </h3>
+            <span class="text-xs bg-slate-200 dark:bg-slate-700 text-slate-700 dark:text-slate-300 px-2 py-1 rounded">أعمدة مجمعة</span>
+          </div>
+          <div class="chart-container">
+            <canvas id="formatBarChart"></canvas>
+          </div>
+          <p class="text-xs text-slate-500 dark:text-slate-400 leading-relaxed" id="chart2-caption">
+            تتوزع أسئلة كانجارو بين 3 و 4 و 5 نقاط. بينما يعتمد الأولمبياد وبرامج كاوست على الأسئلة المقالية (FRQ) والحلول الكتابية لإثبات البراهين.
+          </p>
+        </div>
+
       </div>
     </section>
 
@@ -577,7 +580,7 @@
   </main>
 
   <!-- PRINT MODAL -->
-  <div id="print-modal" class="fixed inset-0 z-[100] hidden items-center justify-center bg-black/60 backdrop-blur-sm">
+  <div id="print-modal" role="dialog" aria-modal="true" aria-labelledby="print-modal-title" class="fixed inset-0 z-[100] hidden items-center justify-center bg-black/60 backdrop-blur-sm">
     <div class="bg-slate-900 border border-slate-700 rounded-3xl p-8 max-w-md w-full mx-4 shadow-2xl relative">
       <h3 class="text-xl font-bold text-white mb-2" id="print-modal-title">🖨️ إعداد ورقة الاختبار</h3>
       <p class="text-sm text-slate-400 mb-6" id="print-modal-desc">اختر عدد الأسئلة التي ترغب في طباعتها بناءً على الفلاتر المحددة حالياً. سيتم دمجها في ورقة نظيفة جاهزة للطباعة مع مفتاح الإجابات في النهاية.</p>
@@ -637,6 +640,7 @@
     </div>
   </footer>
 
+  <script src="assets/practice-core.js"></script>
   <!-- APPLICATION JAVASCRIPT CODE -->
   <script>
     // --- 1. BASE DATABASE DATA (STRUCTURAL & QUESTIONS) ---
@@ -762,7 +766,7 @@
       ar: {
         appTitle: "منصة تحليلات مسارات الرياضيات | Edugates International School",
         appSubtitle: "المستودع الذكي والتحليلي لاختبارات كانجارو، نافس، كاوست، JEE، والأولمبياد - برعاية مدرسة بوابة المعرفة العالمية",
-        statQCount: "6 المسارات متكاملة (1,000+ سؤال لكل مسار)",
+        statQCount: "جاري تحميل بنوك التدريب…",
         badgeOverview: "📌 نظرة عامة على قاعدة البيانات والمسارات",
         heroHeading: "محرك الإعداد والمحاكاة التفاعلي للمسابقات الرياضية الهامة",
         heroDesc: "تمنحك هذه المنصة إمكانية استكشاف وهيكلة أحدث قواعد البيانات والأسئلة لـ 6 مسارات عالمية ومحلية استراتيجية. تم تطوير قاعدة البيانات لتغطي الفئات العمرية من الصفوف الابتدائية حتى الثانوية، مع تفكيك دقيق لمستويات صعوبة الأسئلة والحلول النموذجية ثنائية اللغة.",
@@ -821,7 +825,7 @@
       en: {
         appTitle: "Math Path Analytics Platform | Edugates International School",
         appSubtitle: "Smart analytical repository for Kangaroo, Nafes, KAUST, JEE, & Olympiad - Powered by Edugates International School",
-        statQCount: "6 Integrated Tracks (1,000+ Qs per track)",
+        statQCount: "Loading practice banks…",
         badgeOverview: "📌 Database & Track Overview",
         heroHeading: "Interactive Preparation Engine for Elite Math Exams",
         heroDesc: "Explore and structure comprehensive question databases across 6 strategic local and international math tracks. Tailored from Primary grades to High School with structured MCQs, FRQs, and bilingual step-by-step solutions.",
@@ -908,6 +912,9 @@
     }
 
     function extractGradesFromLevelString(levelStr) {
+      const groups = {PreEcolier:[1,2], Ecolier:[3,4], Benjamin:[5,6], Cadet:[7,8], Junior:[9,10], Student:[11,12], 'High School':[7,8,9,10,11,12]};
+      if (groups[levelStr]) return groups[levelStr];
+      if (levelStr?.includes('Research') || levelStr?.includes('Advanced Analysis')) return [11];
       if (!levelStr) return [];
       const match = levelStr.match(/Grade(?:s)?\s+(\d+)(?:-(\d+))?/i);
       if (match) {
@@ -928,6 +935,7 @@
     let formatBarChartInstance = null;
 
     function initCharts() {
+      if (!window.Chart) return;
       // 1. Topic Radar Chart
       const ctxRadar = document.getElementById('topicRadarChart').getContext('2d');
       topicRadarChartInstance = new Chart(ctxRadar, {
@@ -1054,7 +1062,7 @@
       // Update Text Elements
       document.getElementById('app-title').innerText = t.appTitle;
       document.getElementById('app-subtitle').innerText = t.appSubtitle;
-      document.getElementById('stat-questions-count').innerText = t.statQCount;
+      document.getElementById('stat-questions-count').innerText = `${appData.questions.length.toLocaleString()} ${isAr ? 'سؤال تدريبي' : 'practice questions'}`;
       document.getElementById('badge-overview').innerText = t.badgeOverview;
       document.getElementById('hero-heading').innerText = t.heroHeading;
       document.getElementById('hero-desc').innerText = t.heroDesc;
@@ -1115,6 +1123,7 @@
       renderGradeFilters();
       renderTracksGrid();
       renderQuestionCard();
+      renderCharts();
     }
 
     function renderTracksGrid() {
@@ -1138,14 +1147,14 @@
         const naBadge = isApplicable ? '' : `<div class="absolute inset-0 bg-slate-100/50 dark:bg-slate-900/50 flex items-center justify-center rounded-3xl z-10 font-bold text-slate-700 dark:text-slate-200 text-lg backdrop-blur-[1px] shadow-inner">${currentLang === 'ar' ? 'غير متاح لهذا الصف' : 'N/A for this Grade'}</div>`;
 
         const cardHtml = `
-          <div class="relative bg-white/90 dark:bg-slate-800/90 backdrop-blur-sm rounded-3xl p-6 border border-slate-200/60 dark:border-slate-700/60 ${tr.bg} flex flex-col justify-between space-y-4 shadow-lg shadow-slate-200/50 dark:shadow-slate-900/50 hover:shadow-xl hover:-translate-y-2 transition-all duration-300 group cursor-pointer ${opStyle}">
+          <div role="button" tabindex="${isApplicable ? 0 : -1}" aria-disabled="${!isApplicable}" onclick="chooseTrack('${tr.id}')" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();chooseTrack('${tr.id}')}" class="relative bg-white/90 dark:bg-slate-800/90 backdrop-blur-sm rounded-3xl p-6 border border-slate-200/60 dark:border-slate-700/60 ${tr.bg} flex flex-col justify-between space-y-4 shadow-lg shadow-slate-200/50 dark:shadow-slate-900/50 hover:shadow-xl hover:-translate-y-2 transition-all duration-300 group cursor-pointer ${opStyle}">
             ${naBadge}
             <div>
               <div class="flex items-center justify-between mb-3">
                 <span class="text-xs font-bold px-2.5 py-1 rounded-full bg-white dark:bg-slate-700 text-slate-800 dark:text-slate-100 shadow-xs border border-slate-200 dark:border-slate-600">
                   ${badge}
                 </span>
-                <span class="text-xs font-mono text-slate-400 dark:text-slate-500">${idLabel} ${tr.id.toUpperCase()}</span>
+                <span class="text-xs font-mono text-slate-400 dark:text-slate-500">${appData.questions.filter(q=>q.track===tr.id).length} ${currentLang === 'ar' ? 'سؤال' : 'questions'}</span>
               </div>
               <h3 class="text-xl font-display font-extrabold text-slate-900 dark:text-white group-hover:text-brand-600 dark:group-hover:text-brand-400 transition-colors">${name}</h3>
               <p class="text-xs ${tr.accent} font-bold mt-1">${levels}</p>
@@ -1181,6 +1190,7 @@
       }
 
       const q = currentFilteredQuestions[currentQuestionIdx];
+      if (window.MathJax?.typesetClear) window.MathJax.typesetClear([container]);
       const qContent = q.content[currentLang] || q.content['en'];
       const t = dict[currentLang];
 
@@ -1220,54 +1230,13 @@
           </div>
         `;
       } else {
-        optionsMarkup = `
-          <div class="mt-6 space-y-4">
-            <p class="text-sm text-slate-400 font-bold mb-2">
-              ${currentLang === 'ar' ? 'اكتب إجابتك العدديّة / النهائية:' : 'Enter your Numerical / Final Answer:'}
-            </p>
-            <input type="text" id="frq-answer-input" ${isAnswerSubmitted ? 'disabled' : ''} 
-                   class="w-full bg-slate-900/80 border border-slate-700 rounded-xl p-4 text-white font-mono focus:ring-2 focus:ring-amber-500 outline-none" 
-                   placeholder="e.g. 42, 3\pi, x=5">
-            ${isAnswerSubmitted ? `
-              <div class="mt-4 p-4 rounded-xl border border-emerald-500/30 bg-emerald-500/10 text-emerald-400 text-sm">
-                <strong>${currentLang === 'ar' ? 'الإجابة النموذجية المعتمدة:' : 'Official Correct Answer:'}</strong> <span class="font-mono ml-2">${q.correct_answer || qContent.correct_answer}</span>
-              </div>
-            ` : ''}
-          </div>
-        `;
+        optionsMarkup = `<div class="mt-6 space-y-3">
+          <label for="frq-answer-input" class="block text-sm text-slate-300">${currentLang === 'ar' ? 'اكتب خطوات حلك، ثم قارن بالحل المقترح.' : 'Write your reasoning, then compare it with the worked solution.'}</label>
+          <textarea id="frq-answer-input" rows="5" oninput="selectedOptionIdx=this.value" class="w-full bg-slate-900 border border-slate-600 rounded-xl p-4 text-white" ${isAnswerSubmitted ? 'readonly' : ''}></textarea>
+        </div>`;
       }
 
-      // Diagram Smart Matcher
-      let diagramMarkup = '';
-      const qTextLower = qContent.question.toLowerCase();
-      
-      const diagramMapping = [
-        { keys: ['cartesian plane', 'coordinate plane', 'مستوى إحداثي', 'مستوى ديكارتي'], img: 'cartesian_plane.png' },
-        { keys: ['right triangle', 'مثلث قائم'], img: 'right_triangle.png' },
-        { keys: ['unit circle', 'دائرة الوحدة'], img: 'unit_circle.png' },
-        { keys: ['parabola', 'قطع مكافئ'], img: 'parabola.png' },
-        { keys: ['normal distribution', 'توزيع طبيعي'], img: 'normal_distribution.png' },
-        { keys: ['venn diagram', 'شكل فن'], img: 'venn_diagram.png' },
-        { keys: ['bar chart', 'bar graph', 'رسم بياني شريطي'], img: 'bar_chart.png' },
-        { keys: ['intersecting lines', 'مستقيمان متقاطعان', 'خطين متقاطعين'], img: 'intersecting_lines.png' },
-        { keys: ['inscribed triangle', 'مثلث محاط', 'مثلث داخل دائرة'], img: 'inscribed_triangle.png' }
-      ];
-
-      let matchedImg = null;
-      for (let item of diagramMapping) {
-        if (item.keys.some(k => qTextLower.includes(k))) {
-          matchedImg = item.img;
-          break;
-        }
-      }
-
-      if (matchedImg) {
-        diagramMarkup = `
-          <div class="mt-4 mb-4 flex justify-center w-full">
-            <img src="assets/diagrams/${matchedImg}" alt="Mathematical Diagram" class="max-w-full h-auto max-h-48 sm:max-h-64 object-contain rounded-xl bg-white dark:bg-slate-200 p-2 border border-slate-700 shadow-md">
-          </div>
-        `;
-      }
+      const diagramMarkup = qContent.diagram || q.diagram || '';
 
       let gradeLabel = currentLang === 'ar' ? 'الصفوف غير محددة' : 'Grades Not Specified';
       const extractedGrades = extractGradesFromLevelString(q.level);
@@ -1291,7 +1260,7 @@
                 ${gradeLabel}
               </div>
               <span class="px-3 py-1 rounded-full bg-slate-700 text-slate-300">
-                ${q.level}
+                ${q.level.replace('Phase','Training level / مستوى تدريب')}
               </span>
               <span class="px-3 py-1 rounded-full bg-slate-700/60 text-slate-400 border border-slate-600/50">
                 ${q.topic}
@@ -1329,9 +1298,9 @@
 
           <!-- Solution Area (Shown after submit) -->
           ${isAnswerSubmitted ? `
-            <div class="p-5 rounded-xl ${checkIsCorrect() ? 'bg-emerald-500/10 border border-emerald-500/40 text-emerald-200' : 'bg-rose-500/10 border border-rose-500/40 text-rose-200'} space-y-3 animate-fade-in">
+            <div class="p-5 rounded-xl ${q.type !== 'MCQ' || checkIsCorrect() ? 'bg-emerald-500/10 border border-emerald-500/40 text-emerald-200' : 'bg-rose-500/10 border border-rose-500/40 text-rose-200'} space-y-3 animate-fade-in">
               <div class="font-bold text-sm sm:text-base">
-                ${checkIsCorrect() ? t.txtCorrect : t.txtIncorrect}
+                ${q.type !== 'MCQ' ? (currentLang === 'ar' ? 'قارن طريقة حلك — التقييم ذاتي' : 'Compare your reasoning — self-assessment') : (checkIsCorrect() ? t.txtCorrect : t.txtIncorrect)}
               </div>
               <div class="text-xs sm:text-sm leading-relaxed text-slate-300 pt-2 border-t border-slate-700/50">
                 <strong class="text-amber-400 block mb-1">${currentLang === 'ar' ? 'الخطوات والشرح التفصيلي:' : 'Step-by-step Solution:'}</strong>
@@ -1342,6 +1311,9 @@
 
         </div>
       `;
+
+      const writtenAnswer = document.getElementById("frq-answer-input");
+      if (writtenAnswer) writtenAnswer.value = selectedOptionIdx ?? "";
 
       // Trigger MathJax rendering after updating content
       if (window.MathJax && window.MathJax.typesetPromise) {
@@ -1378,7 +1350,7 @@
     }
 
     function submitAnswer() {
-      if (selectedOptionIdx === null) return;
+      if (currentFilteredQuestions[currentQuestionIdx]?.type === 'MCQ' && selectedOptionIdx === null) return;
       isAnswerSubmitted = true;
       renderQuestionCard();
     }
@@ -1404,48 +1376,26 @@
       renderQuestionCard();
     }
 
+    let previousTrack = 'all';
     function filterQuestions() {
       const trackVal = document.getElementById('quiz-track-select').value;
-      const topicVal = document.getElementById('quiz-topic-select').value;
-      const nafesGradeVal = document.getElementById('quiz-nafes-grade-select').value;
-      const kangLevelVal = document.getElementById('quiz-kangaroo-level-select').value;
-      const kaustPhaseVal = document.getElementById('quiz-kaust-phase-select').value;
-      const nsmoPhaseVal = document.getElementById('quiz-nsmo-phase-select').value;
-
-      // Show/hide sub-filters based on track selection
-      const nafesGradeSelect = document.getElementById('quiz-nafes-grade-select');
-      const kangLevelSelect = document.getElementById('quiz-kangaroo-level-select');
-      const kaustPhaseSelect = document.getElementById('quiz-kaust-phase-select');
-      const nsmoPhaseSelect = document.getElementById('quiz-nsmo-phase-select');
-      
-      nafesGradeSelect.style.display = (trackVal === 'nafes' || trackVal === 'all') ? 'block' : 'none';
-      kangLevelSelect.style.display = (trackVal === 'kangaroo' || trackVal === 'all') ? 'block' : 'none';
-      kaustPhaseSelect.style.display = (trackVal === 'kaust' || trackVal === 'all') ? 'block' : 'none';
-      nsmoPhaseSelect.style.display = (trackVal === 'nsmo' || trackVal === 'all') ? 'block' : 'none';
-
-      currentFilteredQuestions = appData.questions.filter(q => {
-        const matchTrack = trackVal === 'all' || q.track === trackVal;
-        const matchTopic = topicVal === 'all' || q.topic === topicVal;
-        
-        // Nafes grade filter
-        const matchNafesGrade = nafesGradeVal === 'all' || (q.track === 'nafes' && q.level === nafesGradeVal);
-        if (nafesGradeVal !== 'all' && q.track !== 'nafes') return false;
-
-        // Kangaroo level filter
-        const matchKangLevel = kangLevelVal === 'all' || (q.track === 'kangaroo' && q.level === kangLevelVal);
-        if (kangLevelVal !== 'all' && q.track !== 'kangaroo') return false;
-
-        // KAUST phase filter
-        const matchKaustPhase = kaustPhaseVal === 'all' || (q.track === 'kaust' && q.level === kaustPhaseVal);
-        if (kaustPhaseVal !== 'all' && q.track !== 'kaust') return false;
-
-        // NSMO phase filter
-        const matchNsmoPhase = nsmoPhaseVal === 'all' || (q.track === 'nsmo' && q.level === nsmoPhaseVal);
-        if (nsmoPhaseVal !== 'all' && q.track !== 'nsmo') return false;
-
-        return matchTrack && matchTopic && matchNafesGrade && matchKangLevel && matchKaustPhase && matchNsmoPhase;
-      });
-
+      const filterIds = {nafes:'quiz-nafes-grade-select',kangaroo:'quiz-kangaroo-level-select',kaust:'quiz-kaust-phase-select',nsmo:'quiz-nsmo-phase-select'};
+      for (const [track,id] of Object.entries(filterIds)) {
+        const el = document.getElementById(id);
+        el.style.display = trackVal === track ? 'block' : 'none';
+        if (trackVal !== track) el.value = 'all';
+      }
+      const level = filterIds[trackVal] ? document.getElementById(filterIds[trackVal]).value : 'all';
+      const pool = appData.questions.filter(q => (trackVal === 'all' || q.track === trackVal) &&
+        (level === 'all' || q.level === level) &&
+        (currentSelectedGrade === 'all' || extractGradesFromLevelString(q.level).includes(currentSelectedGrade)));
+      const topicSelect = document.getElementById('quiz-topic-select');
+      const priorTopic = previousTrack === trackVal ? topicSelect.value : 'all';
+      topicSelect.replaceChildren(new Option(currentLang === 'ar' ? 'كل المواضيع' : 'All topics','all'));
+      [...new Set(pool.map(q=>q.topic))].sort().forEach(topic => topicSelect.add(new Option(topic,topic)));
+      if ([...topicSelect.options].some(o=>o.value===priorTopic)) topicSelect.value = priorTopic;
+      previousTrack = trackVal;
+      currentFilteredQuestions = pool.filter(q=>topicSelect.value==='all' || q.topic===topicSelect.value);
       currentQuestionIdx = 0;
       resetQuestionState();
     }
@@ -1515,7 +1465,8 @@
       // Initial render
       renderApp();
       renderCharts();
-      populateTracksGrid();
+      filterQuestions();
+      updateScaleCalc();
     });
 
     // --- 8. PRINT ENGINE ---
@@ -1657,7 +1608,8 @@
                </div>`;
                
       // Randomize selection
-      const shuffled = [...pool].sort(() => 0.5 - Math.random());
+      const shuffled = [...pool];
+      for (let i=shuffled.length-1;i>0;i--) { const j=Math.floor(Math.random()*(i+1)); [shuffled[i],shuffled[j]]=[shuffled[j],shuffled[i]]; }
       const questionsToPrint = shuffled.slice(0, count);
       
       questionsToPrint.forEach((q, index) => {
@@ -1669,8 +1621,8 @@
             <div class="text-lg leading-relaxed math-font mb-4">${text}</div>
         `;
         
-        if (q.diagram) {
-           html += `<div class="flex justify-center my-4">${q.diagram}</div>`;
+        if (qContent.diagram || q.diagram) {
+           html += `<div class="flex justify-center my-4">${qContent.diagram || q.diagram}</div>`;
         }
         
         if (qContent.options && qContent.options.length > 0) {
@@ -1697,7 +1649,7 @@
       const labels = ['A', 'B', 'C', 'D', 'E'];
       questionsToPrint.forEach((q, index) => {
         let ans = "FRQ";
-        if (q.correct_index !== undefined && q.correct_index !== null) {
+        if (q.type === 'MCQ' && q.correct_index !== undefined && q.correct_index !== null) {
            ans = labels[q.correct_index];
         }
         html += `<div class="border-b border-gray-300 pb-1" style="font-family: monospace; font-size: 1.1rem;">
@@ -1705,12 +1657,16 @@
                  </div>`;
       });
       html += `</div>`;
+      questionsToPrint.filter(q=>q.type!=='MCQ').forEach(q=>{
+        const c=q.content[currentLang] || q.content.en;
+        html += `<div class="no-break my-4"><strong>${q.id}</strong><div>${c.explanation}</div></div>`;
+      });
       html += `</div>`; // end container
       
       container.innerHTML = html;
       
       // Tell MathJax to re-render the print container
-      if (window.MathJax) {
+      if (window.MathJax?.typesetPromise) {
         MathJax.typesetPromise([container]).then(() => {
           setTimeout(() => {
             window.print();
@@ -1721,5 +1677,6 @@
       }
     }
   </script>
+  <script src="assets/refinement.js"></script>
 </body>
 </html>

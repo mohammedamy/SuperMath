@@ -1,0 +1,67 @@
+[
+  {
+    "track": "jee",
+    "total": 500,
+    "levels": {
+      "Grade 12": 500
+    },
+    "issues": {
+      "written_response_requires_human_review": 68
+    }
+  },
+  {
+    "track": "kangaroo",
+    "total": 1000,
+    "levels": {
+      "Cadet": 250,
+      "Ecolier": 250,
+      "Benjamin": 250,
+      "Junior": 250
+    },
+    "issues": {}
+  },
+  {
+    "track": "kaust",
+    "total": 750,
+    "levels": {
+      "Phase 2: Advanced Analysis": 250,
+      "Phase 1: Foundation Research": 250,
+      "Phase 3: Elite Research": 250
+    },
+    "issues": {
+      "written_response_requires_human_review": 94
+    }
+  },
+  {
+    "track": "nafes",
+    "total": 750,
+    "levels": {
+      "Grade 3": 250,
+      "Grade 6": 250,
+      "Grade 9": 250
+    },
+    "issues": {}
+  },
+  {
+    "track": "nsmo",
+    "total": 750,
+    "levels": {
+      "Phase 2: Intermediate Olympiad (Grades 8-9)": 250,
+      "Phase 1: Junior Olympiad (Grades 5-7)": 250,
+      "Phase 3: Senior National Olympiad (Grades 10-12)": 250
+    },
+    "issues": {
+      "written_response_requires_human_review": 79
+    }
+  },
+  {
+    "track": "olympiad",
+    "total": 500,
+    "levels": {
+      "High School": 500
+    },
+    "issues": {
+      "written_response_requires_human_review": 500
+    }
+  }
+]

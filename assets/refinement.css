@@ -1,0 +1,54 @@
+/* SuperMath: clear academic typography, disciplined navy / blue / amber palette. */
+:root {color-scheme:light;scroll-behavior:smooth;scroll-padding-top:110px}
+:root.dark {color-scheme:dark}
+body {background-image:none!important;font-family:Inter,Cairo,sans-serif!important}
+html[lang=ar] body {font-family:Cairo,Inter,sans-serif!important}
+header {background:#101e36!important}
+header h1 {font-size:1.35rem!important;line-height:1.3;max-width:28rem}
+header p {font-size:.8rem!important;max-width:27rem}
+header .h-20 {min-height:88px;height:auto;padding-block:16px;gap:20px}
+header>div>div>div:last-child {flex-shrink:0;gap:8px}
+header a {max-width:170px}
+#app-title {color:#fff;background:none}
+main {display:flex;flex-direction:column;gap:36px;padding-top:32px!important}
+main>section {margin-top:0!important}
+main>section:first-child {padding:28px 32px;box-shadow:none;background:#122441;color:#fff;border:0;border-radius:20px}
+main>section:first-child h2 {color:#fff!important;font-size:clamp(1.7rem,4vw,2.6rem)!important;line-height:1.2;letter-spacing:-.025em;max-width:30ch}
+main>section:first-child p {color:#c7d5e9!important;max-width:75ch}
+main>section:first-child .grid {display:none}
+main>section:first-child .absolute {display:none}
+#badge-overview {color:#bcd8ff;background:#243b5c;border-color:#385171;font-size:.75rem;letter-spacing:.04em}
+#tracks-cards-grid>div {border-radius:16px;box-shadow:0 2px 8px #0f172a06;background:#fff;padding:22px;transform:none;min-width:0;border-top:3px solid #356cd7}
+.dark #tracks-cards-grid>div {background:#19263c}
+#tracks-cards-grid>div:hover {border-color:#3b82f6;box-shadow:0 8px 22px #0f172a14}
+#tracks-cards-grid h3 {font-size:1.25rem}
+#tracks-cards-grid p,#tracks-cards-grid span {font-size:.875rem}
+#tracks-cards-grid [aria-disabled=true] {cursor:default}
+#practice {border-radius:20px;padding:28px;background:#111f35;box-shadow:0 12px 40px #10223e12;scroll-margin-top:110px}
+#practice .absolute {display:none}
+#practice select {font-size:.875rem;min-height:44px;max-width:100%;background:#1a2c46}
+#practice h2 {font-size:1.6rem}
+#practice>div>div:first-child {align-items:flex-start;flex-direction:column}
+#practice>div>div:first-child>div:last-child {width:100%}
+#practice>div>div:first-child>div:first-child>div:first-child {display:none}
+#question-card-container>div {background:#192a44;border-color:#344862;padding:28px}
+#question-card-container .space-y-3>button {width:100%;min-height:52px}
+#question-card-container button>span:first-child {font-size:1rem}
+#question-card-container table {color:#13243b;background:white;width:100%}
+#question-card-container table th,#question-card-container table td {padding:8px;border:1px solid #a7b5c8}
+#question-card-container svg {max-width:100%;height:auto}
+#question-card-container mjx-container {max-width:100%;overflow-x:auto;overflow-y:hidden;padding-block:4px}
+#question-card-container .font-mono {overflow-wrap:anywhere}
+#question-card-container textarea {font-family:inherit;line-height:1.65;resize:vertical}
+#question-card-container .text-xs {font-size:.875rem}
+button:disabled {cursor:default;opacity:.55}
+button,select,a[role=button] {touch-action:manipulation}
+:focus-visible {outline:3px solid #60a5fa!important;outline-offset:4px!important}
+.skip-link {position:fixed;top:8px;left:8px;z-index:100;background:#fff;color:#172a46;padding:12px;transform:translateY(-200%)}
+.skip-link:focus {transform:translateY(0)}
+#bank-notice {font-size:.875rem;color:#bdcee6;line-height:1.6;border-left:3px solid #e5ac4c;padding-left:14px;margin-top:18px}
+html[dir=rtl] #bank-notice {border-left:0;border-right:3px solid #e5ac4c;padding-left:0;padding-right:14px}
+footer {font-size:.875rem!important;margin-top:36px!important}
+@media(max-width:800px){header .h-20 {flex-wrap:wrap}header>div>div>div:last-child {width:100%;justify-content:flex-end}header p {display:none}header a {max-width:none;margin-inline-end:auto}main{padding-inline:16px!important;gap:28px}#practice,main>section:first-child{padding:20px}#question-card-container>div{padding:16px}:root{scroll-padding-top:170px}#practice{scroll-margin-top:170px}}
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important;scroll-behavior:auto!important}}
+@media print {.skip-link{display:none}#print-container{font-size:12pt}#print-container table{border-collapse:collapse}#print-container svg{max-height:220px}#print-container .grid-cols-4{grid-template-columns:repeat(4,1fr)} }
