@@ -50,9 +50,7 @@
       "Phase 1: Junior Olympiad (Grades 5-7)": 250,
       "Phase 3: Senior National Olympiad (Grades 10-12)": 250
     },
-    "issues": {
-      "written_response_requires_human_review": 79
-    }
+    "issues": {}
   },
   {
     "track": "olympiad",
