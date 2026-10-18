@@ -28,7 +28,7 @@ Object.assign(dict.ar, {
 const trackUpdates = {
  kangaroo:{levels_en:'Available: Grades 3–10',levels_ar:'المتاح: الصفوف 3–10',grades:[3,4,5,6,7,8,9,10]},
  kaust:{name_en:'KAUST · STEM preparation',name_ar:'كاوست · إعداد رياضي STEM',format_en:'Independent enrichment levels; placement-test scope unverified',format_ar:'مستويات إثرائية مستقلة؛ نطاق اختبار القبول غير موثق',badge_en:'STEM enrichment',badge_ar:'إثراء رياضي'},
- nsmo:{name_en:'NSMO · Olympiad preparation',name_ar:'نسمو · إعداد للأولمبياد',format_en:'SuperMath training levels; not official competition rounds',format_ar:'مستويات تدريب سوبر ماث، وليست جولات المسابقة الرسمية',levels_en:'Training: Grades 5–12',levels_ar:'تدريب: الصفوف 5–12',grades:[5,6,7,8,9,10,11,12]},
+ nsmo:{name_en:'NSMO · Olympiad preparation',name_ar:'نسمو · إعداد للأولمبياد',format_en:'SuperMath training levels; not official competition rounds',format_ar:'مستويات تدريب سوبر ماث، وليست جولات المسابقة الرسمية',levels_en:'Training: Grades 7–10',levels_ar:'تدريب: الصفوف 7–10',grades:[7,8,9,10]},
  olympiad:{name_en:'Olympiad · Proof practice',name_ar:'الأولمبياد · تدريب البراهين',format_en:'Full written reasoning; foundation to advanced practice',format_ar:'حلول مكتوبة مبررة؛ تدريب تأسيسي ومتقدم'},
  jee:{name_en:'JEE · Mathematics',name_ar:'JEE · الرياضيات',format_en:'Mixed mathematics practice; not a full Main/Advanced mock',format_ar:'تدريب رياضيات متنوع؛ ليس محاكاة كاملة لـ Main أو Advanced'}
 };
@@ -59,6 +59,8 @@ renderApp=function(){
  let notice=document.getElementById('bank-notice');
  if(!notice){notice=document.createElement('p');notice.id='bank-notice';document.getElementById('quiz-subheading').after(notice)}
  notice.textContent=currentLang==='ar'?'مواد تدريب مستقلة. الحلول المكتوبة للتقييم الذاتي. مستويات كاوست ونسمو هنا مستويات تدريبية وليست مراحل رسمية للاختبار.':'Independent practice materials. Written responses are self-assessed. KAUST and NSMO levels here are training levels, not official exam stages.';
+ const jumpEl=document.getElementById('mobile-jump-text');
+ if(jumpEl)jumpEl.textContent=currentLang==='ar'?'التدريب':'Practice';
 };
 loadQuestionsData=async function(){
  const results=await Promise.allSettled(appData.tracks.map(async t=>{const r=await fetch(`data/${t.id}.json`);if(!r.ok)throw Error(t.id);const data=await r.json();if(!Array.isArray(data))throw Error(t.id);return data}));

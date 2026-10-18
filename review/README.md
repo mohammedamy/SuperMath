@@ -14,11 +14,11 @@ The public GitHub Pages site has not been changed. The package is intended for r
 |---|---|---:|---:|
 | Kangaroo | Ecolier 250; Benjamin 250; Cadet 250; Junior 250 | 635 | 1,000 |
 | NAFES | Grade 3: 250; Grade 6: 250; Grade 9: 250 | 704 | 750 |
-| KAUST preparation | Three retained internal training levels, 250 each | 468 | 750 |
+| KAUST preparation | Three retained internal training levels, 450 each | 468 | 1,350 |
 | NSMO preparation | Three retained internal training levels, 250 each | 431 | 750 |
 | JEE mathematics | No subtracks | 260 | 500 |
 | Olympiad proof practice | No subtracks | 242 | 500 |
-| **Total** | **13 subtracks plus 2 standalone tracks** | **2,740** | **4,250** |
+| **Total** | **13 subtracks plus 2 standalone tracks** | **2,740** | **4,850** |
 
 Kangaroo’s actual existing banks cover grades 3–10. The interface no longer advertises nonexistent grade 1–2 and grade 11–12 banks. Those two additional Kangaroo groups were not created in this update.
 

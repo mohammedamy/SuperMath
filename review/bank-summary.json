@@ -22,11 +22,11 @@
   },
   {
     "track": "kaust",
-    "total": 750,
+    "total": 1350,
     "levels": {
-      "Phase 2: Advanced Analysis": 250,
-      "Phase 1: Foundation Research": 250,
-      "Phase 3: Elite Research": 250
+      "Phase 1: Foundation Research": 450,
+      "Phase 2: Advanced Analysis": 450,
+      "Phase 3: Elite Research": 450
     },
     "issues": {
       "written_response_requires_human_review": 94
@@ -47,8 +47,8 @@
     "total": 750,
     "levels": {
       "Phase 2: Intermediate Olympiad (Grades 8-9)": 250,
-      "Phase 1: Junior Olympiad (Grades 5-7)": 250,
-      "Phase 3: Senior National Olympiad (Grades 10-12)": 250
+      "Phase 1: Junior Olympiad (Grade 7)": 250,
+      "Phase 3: Senior National Olympiad (Grade 10)": 250
     },
     "issues": {}
   },

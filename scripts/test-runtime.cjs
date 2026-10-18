@@ -27,9 +27,18 @@ vm.runInContext(fs.readFileSync(path.join(root,'assets/refinement.js'),'utf8'),c
 const run=s=>vm.runInContext(s,context);
 (async()=>{
  for(const callback of events)await callback();
- assert.equal(run('appData.questions.length'),4250);
- assert.equal(run('currentFilteredQuestions.length'),4250);
+ assert.equal(run('appData.questions.length'),4850);
+ assert.equal(run('currentFilteredQuestions.length'),4850);
  // Switching away from a selected subtrack must not retain its hidden filter.
+ elements.get('quiz-track-select').value='kaust';context.filterQuestions();
+ assert.equal(run('currentFilteredQuestions.length'),1350);
+ elements.get('quiz-kaust-phase-select').value='Phase 1: Foundation Research';context.filterQuestions();
+ assert.equal(run('currentFilteredQuestions.length'),450);
+ elements.get('quiz-kaust-phase-select').value='Phase 2: Advanced Analysis';context.filterQuestions();
+ assert.equal(run('currentFilteredQuestions.length'),450);
+ elements.get('quiz-kaust-phase-select').value='Phase 3: Elite Research';context.filterQuestions();
+ assert.equal(run('currentFilteredQuestions.length'),450);
+ elements.get('quiz-kaust-phase-select').value='all';context.filterQuestions();
  elements.get('quiz-track-select').value='nafes';context.filterQuestions();
  elements.get('quiz-nafes-grade-select').value='Grade 3';context.filterQuestions();
  assert.equal(run('currentFilteredQuestions.length'),250);
@@ -40,6 +49,26 @@ const run=s=>vm.runInContext(s,context);
  elements.get('quiz-track-select').value='kangaroo';context.setGradeFilter(4);
  assert.equal(run('currentFilteredQuestions.length'),250);
  assert(run('currentFilteredQuestions.every(q=>q.level==="Ecolier")'));
+ context.setGradeFilter('all');
+ // NSMO is exclusively for grades 7, 8, 9, 10
+ elements.get('quiz-track-select').value='nsmo';context.filterQuestions();
+ assert.equal(run('currentFilteredQuestions.length'),750);
+ for(const g of [5,6,11,12]){
+  context.setGradeFilter(g);
+  assert.equal(run('currentFilteredQuestions.length'),0,`Grade ${g} must yield 0 NSMO questions`);
+ }
+ context.setGradeFilter(7);
+ assert.equal(run('currentFilteredQuestions.length'),250);
+ assert(run('currentFilteredQuestions.every(q=>q.level==="Phase 1: Junior Olympiad (Grade 7)")'));
+ context.setGradeFilter(8);
+ assert.equal(run('currentFilteredQuestions.length'),250);
+ assert(run('currentFilteredQuestions.every(q=>q.level==="Phase 2: Intermediate Olympiad (Grades 8-9)")'));
+ context.setGradeFilter(9);
+ assert.equal(run('currentFilteredQuestions.length'),250);
+ assert(run('currentFilteredQuestions.every(q=>q.level==="Phase 2: Intermediate Olympiad (Grades 8-9)")'));
+ context.setGradeFilter(10);
+ assert.equal(run('currentFilteredQuestions.length'),250);
+ assert(run('currentFilteredQuestions.every(q=>q.level==="Phase 3: Senior National Olympiad (Grade 10)")'));
  context.setGradeFilter('all');
  // Check correct and incorrect answers against keys; next question clears state.
  run('selectedOptionIdx=currentFilteredQuestions[0].correct_index');context.submitAnswer();assert(run('checkIsCorrect()'));
@@ -58,6 +87,18 @@ const run=s=>vm.runInContext(s,context);
  elements.get('print-track-select').value='kangaroo';context.updatePrintPhaseOptions();
  elements.get('print-phase-select').value='Junior';context.updatePrintModalMax();
  assert.equal(elements.get('print-max-q').innerText,250);
+ elements.get('print-track-select').value='nsmo';context.updatePrintPhaseOptions();
+ elements.get('print-phase-select').value='Phase 1: Junior Olympiad (Grade 7)';context.updatePrintModalMax();
+ assert.equal(elements.get('print-max-q').innerText,250);
+ elements.get('print-phase-select').value='Phase 3: Senior National Olympiad (Grade 10)';context.updatePrintModalMax();
+ assert.equal(elements.get('print-max-q').innerText,250);
+ elements.get('print-track-select').value='kaust';context.updatePrintPhaseOptions();
+ elements.get('print-phase-select').value='Phase 1: Foundation Research';context.updatePrintModalMax();
+ assert.equal(elements.get('print-max-q').innerText,450);
+ elements.get('print-phase-select').value='Phase 2: Advanced Analysis';context.updatePrintModalMax();
+ assert.equal(elements.get('print-max-q').innerText,450);
+ elements.get('print-phase-select').value='Phase 3: Elite Research';context.updatePrintModalMax();
+ assert.equal(elements.get('print-max-q').innerText,450);
  context.toggleLanguage();assert.equal(document.documentElement.dir,'rtl');
  context.toggleTheme();
  // A chart CDN failure should not prevent loading the practice banks.

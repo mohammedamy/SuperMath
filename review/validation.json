@@ -1,8 +1,8 @@
 {
   "status": "passed",
-  "total": 4250,
-  "parameterized_additions": 2210,
-  "independently_enumerated_generated_answers": 309,
+  "total": 4850,
+  "parameterized_additions": 2810,
+  "independently_enumerated_generated_answers": 66,
   "scope_certification": false,
   "individual_review_of_every_legacy_answer": false,
   "banks": [
@@ -27,11 +27,11 @@
     },
     {
       "track": "kaust",
-      "total": 750,
+      "total": 1350,
       "levels": {
-        "Phase 2: Advanced Analysis": 250,
-        "Phase 1: Foundation Research": 250,
-        "Phase 3: Elite Research": 250
+        "Phase 1: Foundation Research": 450,
+        "Phase 2: Advanced Analysis": 450,
+        "Phase 3: Elite Research": 450
       }
     },
     {
@@ -39,8 +39,8 @@
       "total": 750,
       "levels": {
         "Phase 2: Intermediate Olympiad (Grades 8-9)": 250,
-        "Phase 1: Junior Olympiad (Grades 5-7)": 250,
-        "Phase 3: Senior National Olympiad (Grades 10-12)": 250
+        "Phase 1: Junior Olympiad (Grade 7)": 250,
+        "Phase 3: Senior National Olympiad (Grade 10)": 250
       }
     },
     {
