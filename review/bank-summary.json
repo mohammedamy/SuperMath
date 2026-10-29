@@ -24,13 +24,11 @@
     "track": "kaust",
     "total": 1350,
     "levels": {
-      "Phase 1: Foundation Research": 450,
-      "Phase 2: Advanced Analysis": 450,
-      "Phase 3: Elite Research": 450
+      "Track 1: Grades 6-7": 450,
+      "Track 2: Grades 8-9": 450,
+      "Track 3: Grades 10-11": 450
     },
-    "issues": {
-      "written_response_requires_human_review": 94
-    }
+    "issues": {}
   },
   {
     "track": "nafes",

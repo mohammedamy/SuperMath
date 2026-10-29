@@ -32,13 +32,31 @@ const run=s=>vm.runInContext(s,context);
  // Switching away from a selected subtrack must not retain its hidden filter.
  elements.get('quiz-track-select').value='kaust';context.filterQuestions();
  assert.equal(run('currentFilteredQuestions.length'),1350);
- elements.get('quiz-kaust-phase-select').value='Phase 1: Foundation Research';context.filterQuestions();
+ assert(run('currentFilteredQuestions.every(q=>q.content.en.options.length===5&&q.content.ar.options.length===5)'));
+ elements.get('quiz-kaust-phase-select').value='Track 1: Grades 6-7';context.filterQuestions();
  assert.equal(run('currentFilteredQuestions.length'),450);
- elements.get('quiz-kaust-phase-select').value='Phase 2: Advanced Analysis';context.filterQuestions();
+ elements.get('quiz-kaust-phase-select').value='Track 2: Grades 8-9';context.filterQuestions();
  assert.equal(run('currentFilteredQuestions.length'),450);
- elements.get('quiz-kaust-phase-select').value='Phase 3: Elite Research';context.filterQuestions();
+ elements.get('quiz-kaust-phase-select').value='Track 3: Grades 10-11';context.filterQuestions();
  assert.equal(run('currentFilteredQuestions.length'),450);
  elements.get('quiz-kaust-phase-select').value='all';context.filterQuestions();
+ // KAUST KMC exclusively covers Grades 6-11 across its 3 official grade bands.
+ for(const g of [1,2,3,4,5,12]){
+  context.setGradeFilter(g);
+  assert.equal(run('currentFilteredQuestions.length'),0,`Grade ${g} must yield 0 KAUST questions`);
+ }
+ for(const [g,expectedLevel] of [[6,'Track 1: Grades 6-7'],[7,'Track 1: Grades 6-7'],[8,'Track 2: Grades 8-9'],[9,'Track 2: Grades 8-9'],[10,'Track 3: Grades 10-11'],[11,'Track 3: Grades 10-11']]){
+  context.setGradeFilter(g);
+  assert.equal(run('currentFilteredQuestions.length'),450);
+  assert(run(`currentFilteredQuestions.every(q=>q.level===${JSON.stringify(expectedLevel)})`));
+ }
+ context.setGradeFilter('all');
+ // Verify KAUST geometry SVG diagram & 5-option (E) rendering in quiz card.
+ elements.get('quiz-topic-select').value='Geometry';context.filterQuestions();
+ assert.equal(run('currentFilteredQuestions.length'),340);
+ assert(elements.get('question-card-container').innerHTML.includes('<svg'));
+ assert(elements.get('question-card-container').innerHTML.includes('>E<')||elements.get('question-card-container').innerHTML.includes('E\n'));
+ elements.get('quiz-topic-select').value='all';context.filterQuestions();
  elements.get('quiz-track-select').value='nafes';context.filterQuestions();
  elements.get('quiz-nafes-grade-select').value='Grade 3';context.filterQuestions();
  assert.equal(run('currentFilteredQuestions.length'),250);
@@ -93,12 +111,14 @@ const run=s=>vm.runInContext(s,context);
  elements.get('print-phase-select').value='Phase 3: Senior National Olympiad (Grade 10)';context.updatePrintModalMax();
  assert.equal(elements.get('print-max-q').innerText,250);
  elements.get('print-track-select').value='kaust';context.updatePrintPhaseOptions();
- elements.get('print-phase-select').value='Phase 1: Foundation Research';context.updatePrintModalMax();
+ elements.get('print-phase-select').value='Track 1: Grades 6-7';context.updatePrintModalMax();
  assert.equal(elements.get('print-max-q').innerText,450);
- elements.get('print-phase-select').value='Phase 2: Advanced Analysis';context.updatePrintModalMax();
+ elements.get('print-phase-select').value='Track 2: Grades 8-9';context.updatePrintModalMax();
  assert.equal(elements.get('print-max-q').innerText,450);
- elements.get('print-phase-select').value='Phase 3: Elite Research';context.updatePrintModalMax();
+ elements.get('print-phase-select').value='Track 3: Grades 10-11';context.updatePrintModalMax();
  assert.equal(elements.get('print-max-q').innerText,450);
+ elements.get('print-q-count').value='15';context.executePrint();
+ assert.equal(prints,2);assert(!elements.get('print-container').innerHTML.includes('undefined'));
  context.toggleLanguage();assert.equal(document.documentElement.dir,'rtl');
  context.toggleTheme();
  // A chart CDN failure should not prevent loading the practice banks.

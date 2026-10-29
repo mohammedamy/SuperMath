@@ -19,7 +19,7 @@ def inspect(q,track,seen,ids):
    if not c.get(key,'').strip():issues.append(f'{lang}_missing_{key}')
   if q.get('type')=='MCQ':
    opts=c.get('options',[])
-   if len(opts)!=(5 if track=='kangaroo' else 4):issues.append(f'{lang}_option_count')
+   if len(opts)!=(5 if track in ('kangaroo','kaust') else 4):issues.append(f'{lang}_option_count')
    if len(set(map(norm,opts)))!=len(opts):issues.append(f'{lang}_duplicate_options')
    try:
     k=int(q.get('correct_index',c.get('correct_index',-1)))

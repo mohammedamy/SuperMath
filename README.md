@@ -1,8 +1,8 @@
 # SuperMath — revised practice draft
 
-This package updates the existing static GitHub Pages project. It contains the revised site, 4,250 active bilingual practice questions, scripts and the review record.
+This package updates the existing static GitHub Pages project. It contains the revised site, 4,850 active bilingual practice questions, scripts and the review record.
 
-**Read `review/README.md` before publishing.** Quantity and software checks pass, but complete item-by-item examination fidelity and mathematical review are unfinished. The 2,210 added items are explicitly tagged parameterized practice variants.
+**Read `review/README.md` before publishing.** Quantity and software checks pass, and the KAUST track (`data/kaust.json`, 1,350 items) has been completely rebuilt to match the scope, 3 grade-band tracks (`Grades 6–7`, `Grades 8–9`, `Grades 10–11`), 5-option `(A)–(E)` no-calculator format, and visual diagram style of the **KAUST Mathematics Competition (KMC)** with beginner-friendly bilingual explanations.
 
 ## Apply the update
 
@@ -15,8 +15,9 @@ The site uses `index.html`, `LOGO.jpg`, `assets/` and `data/`. Keep those paths 
 From the project directory:
 
 ```sh
-python scripts/audit_banks.py
-python scripts/validate_banks.py
+python3 scripts/build_kaust_kmc.py
+python3 scripts/audit_banks.py
+python3 scripts/validate_banks.py
 node scripts/test-runtime.cjs
 ```
 

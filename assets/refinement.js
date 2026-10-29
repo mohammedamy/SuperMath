@@ -27,7 +27,7 @@ Object.assign(dict.ar, {
 });
 const trackUpdates = {
  kangaroo:{levels_en:'Available: Grades 3–10',levels_ar:'المتاح: الصفوف 3–10',grades:[3,4,5,6,7,8,9,10]},
- kaust:{name_en:'KAUST · STEM preparation',name_ar:'كاوست · إعداد رياضي STEM',format_en:'Independent enrichment levels; placement-test scope unverified',format_ar:'مستويات إثرائية مستقلة؛ نطاق اختبار القبول غير موثق',badge_en:'STEM enrichment',badge_ar:'إثراء رياضي'},
+ kaust:{name_en:'KAUST · Math Competition (KMC)',name_ar:'كاوست · مسابقة الرياضيات (KMC)',format_en:'5-option MCQs (A–E) · No calculator · Grades 6–11',format_ar:'اختيار من متعدد (5 خيارات) · بدون آلة حاسبة · الصفوف 6–11',levels_en:'Official KMC Tracks: Grades 6–11',levels_ar:'مسارات KMC: الصفوف 6–11',badge_en:'MCQs (5 Options)',badge_ar:'MCQs (5 خيارات)',grades:[6,7,8,9,10,11]},
  nsmo:{name_en:'NSMO · Olympiad preparation',name_ar:'نسمو · إعداد للأولمبياد',format_en:'SuperMath training levels; not official competition rounds',format_ar:'مستويات تدريب سوبر ماث، وليست جولات المسابقة الرسمية',levels_en:'Training: Grades 7–10',levels_ar:'تدريب: الصفوف 7–10',grades:[7,8,9,10]},
  olympiad:{name_en:'Olympiad · Proof practice',name_ar:'الأولمبياد · تدريب البراهين',format_en:'Full written reasoning; foundation to advanced practice',format_ar:'حلول مكتوبة مبررة؛ تدريب تأسيسي ومتقدم'},
  jee:{name_en:'JEE · Mathematics',name_ar:'JEE · الرياضيات',format_en:'Mixed mathematics practice; not a full Main/Advanced mock',format_ar:'تدريب رياضيات متنوع؛ ليس محاكاة كاملة لـ Main أو Advanced'}
@@ -58,9 +58,14 @@ renderApp=function(){
  for(const select of document.querySelectorAll('select'))select.setAttribute('aria-label',select.id.replace(/-/g,' '));
  let notice=document.getElementById('bank-notice');
  if(!notice){notice=document.createElement('p');notice.id='bank-notice';document.getElementById('quiz-subheading').after(notice)}
- notice.textContent=currentLang==='ar'?'مواد تدريب مستقلة. الحلول المكتوبة للتقييم الذاتي. مستويات كاوست ونسمو هنا مستويات تدريبية وليست مراحل رسمية للاختبار.':'Independent practice materials. Written responses are self-assessed. KAUST and NSMO levels here are training levels, not official exam stages.';
+ notice.textContent=currentLang==='ar'?'مواد تدريب مستقلة. الحلول المكتوبة للتقييم الذاتي. مسارات كاوست تغطي المسارات الثلاثة لمسابقة كاوست للرياضيات (الصفوف 6–11)، ومستويات نسمو مستويات تدريبية.':'Independent practice materials. Written responses are self-assessed. KAUST tracks follow the 3 grade bands of the KAUST Mathematics Competition (Grades 6–11); NSMO levels are training stages.';
  const jumpEl=document.getElementById('mobile-jump-text');
  if(jumpEl)jumpEl.textContent=currentLang==='ar'?'التدريب':'Practice';
+};
+const kmcLevelLabels = {
+ 'Track 1: Grades 6-7': 'Track 1: Grades 6-7 / المسار 1: الصفوف 6-7',
+ 'Track 2: Grades 8-9': 'Track 2: Grades 8-9 / المسار 2: الصفوف 8-9',
+ 'Track 3: Grades 10-11': 'Track 3: Grades 10-11 / المسار 3: الصفوف 10-11'
 };
 loadQuestionsData=async function(){
  const results=await Promise.allSettled(appData.tracks.map(async t=>{const r=await fetch(`data/${t.id}.json`);if(!r.ok)throw Error(t.id);const data=await r.json();if(!Array.isArray(data))throw Error(t.id);return data}));
@@ -70,7 +75,7 @@ loadQuestionsData=async function(){
  const levels=[...new Set(appData.questions.filter(q=>q.track===track).map(q=>q.level))].sort();
  const select=document.getElementById(id);select.replaceChildren(new Option('All levels / كل المستويات','all'));
  printPhases[track]=[{val:'all',text:'All levels / كل المستويات'}];
- levels.forEach(level=>{const label=level.replace('Phase','Training level / مستوى تدريب');select.add(new Option(label,level));printPhases[track].push({val:level,text:label})});
+ levels.forEach(level=>{const label=kmcLevelLabels[level]||level.replace('Phase','Training level / مستوى تدريب');select.add(new Option(label,level));printPhases[track].push({val:level,text:label})});
  }
  const failed=results.flatMap((r,i)=>r.status==='rejected'?[appData.tracks[i].name_en]:[]);
  if(failed.length){const alert=document.createElement('p');alert.setAttribute('role','alert');alert.className='p-4 bg-rose-100 text-rose-900 rounded-xl';alert.textContent=`Some banks could not load: ${failed.join(', ')}. Reload to try again. / تعذر تحميل بعض البنوك. أعد تحميل الصفحة.`;document.querySelector('main').prepend(alert)}

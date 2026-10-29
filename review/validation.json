@@ -1,8 +1,8 @@
 {
   "status": "passed",
   "total": 4850,
-  "parameterized_additions": 2810,
-  "independently_enumerated_generated_answers": 66,
+  "parameterized_additions": 1729,
+  "independently_enumerated_generated_answers": 51,
   "scope_certification": false,
   "individual_review_of_every_legacy_answer": false,
   "banks": [
@@ -29,9 +29,9 @@
       "track": "kaust",
       "total": 1350,
       "levels": {
-        "Phase 1: Foundation Research": 450,
-        "Phase 2: Advanced Analysis": 450,
-        "Phase 3: Elite Research": 450
+        "Track 1: Grades 6-7": 450,
+        "Track 2: Grades 8-9": 450,
+        "Track 3: Grades 10-11": 450
       }
     },
     {

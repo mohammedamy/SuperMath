@@ -1167,7 +1167,7 @@ def render(spec, track, level, index, seen_opts=None):
 TARGETS = {
     "kangaroo": {"Ecolier": 250, "Benjamin": 250, "Cadet": 250, "Junior": 250},
     "nafes": {"Grade 3": 250, "Grade 6": 250, "Grade 9": 250},
-    "kaust": {"Phase 1: Foundation Research": 250, "Phase 2: Advanced Analysis": 250, "Phase 3: Elite Research": 250},
+    "kaust": {"Track 1: Grades 6-7": 450, "Track 2: Grades 8-9": 450, "Track 3: Grades 10-11": 450},
     "nsmo": {"Phase 1: Junior Olympiad (Grade 7)": 250, "Phase 2: Intermediate Olympiad (Grades 8-9)": 250, "Phase 3: Senior National Olympiad (Grade 10)": 250},
     "jee": {"Grade 12": 500},
     "olympiad": {"High School": 500}
@@ -1201,6 +1201,13 @@ def make_banks():
     all_banks = {}
     for track, levels in TARGETS.items():
         path = ROOT / "data" / f"{track}.json"
+        if track == "kaust":
+            # KAUST is strictly built by scripts/build_kaust_kmc.py (official KMC Grades 6-11 scope)
+            kmc_bank = json.loads(path.read_text())
+            for level in levels:
+                cnt = sum(q["level"] == level for q in kmc_bank)
+                report.append({"track": track, "level": level, "retained": cnt, "added": 0, "total": cnt, "new_families": {}})
+            continue
         bank = list(legacy_banks[track])
         idx = 1
         for level, target in levels.items():

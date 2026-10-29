@@ -338,7 +338,7 @@
             <option value="nafes">نافس (Nafes KSA)</option>
             <option value="jee">JEE Advanced</option>
             <option value="olympiad">الأولمبياد (Olympiad)</option>
-            <option value="kaust">كاوست (KAUST)</option>
+            <option value="kaust">مسابقة كاوست (KAUST KMC)</option>
             <option value="nsmo">NSMO</option>
           </select>
 
@@ -359,12 +359,12 @@
             <option value="Junior">🎓 جونيور (Junior: G9-10)</option>
           </select>
 
-          <!-- KAUST Phase Filter (shows only when kaust track is selected) -->
+          <!-- KAUST Track Filter (shows only when kaust track is selected) -->
           <select id="quiz-kaust-phase-select" onchange="filterQuestions()" class="bg-slate-800 text-white border border-teal-500/50 text-xs sm:text-sm rounded-xl px-3 py-2.5 focus:ring-2 focus:ring-teal-500 outline-none">
-            <option value="all">كل مراحل كاوست (All KAUST Phases)</option>
-            <option value="Phase 1: Foundation Research">🧬 المرحلة 1: أساسيات البحث (Phase 1)</option>
-            <option value="Phase 2: Advanced Analysis">🔬 المرحلة 2: التحليل المتقدم (Phase 2)</option>
-            <option value="Phase 3: Elite Research">🚀 المرحلة 3: النمذجة المتقدمة (Phase 3)</option>
+            <option value="all">كل مسارات كاوست (All KAUST Tracks)</option>
+            <option value="Track 1: Grades 6-7">🌱 المسار 1: الصفوف 6-7 (Track 1: G6-7)</option>
+            <option value="Track 2: Grades 8-9">🌿 المسار 2: الصفوف 8-9 (Track 2: G8-9)</option>
+            <option value="Track 3: Grades 10-11">🎓 المسار 3: الصفوف 10-11 (Track 3: G10-11)</option>
           </select>
 
           <!-- NSMO Phase Filter (shows only when nsmo track is selected) -->
@@ -468,7 +468,7 @@
             <canvas id="formatBarChart"></canvas>
           </div>
           <p class="text-xs text-slate-500 dark:text-slate-400 leading-relaxed" id="chart2-caption">
-            تتوزع أسئلة كانجارو بين 3 و 4 و 5 نقاط. بينما يعتمد الأولمبياد وبرامج كاوست على الأسئلة المقالية (FRQ) والحلول الكتابية لإثبات البراهين.
+            تعتمد مسابقتا كانجارو وكاوست للرياضيات (KMC) على أسئلة الاختيار من متعدد ذات الـ 5 خيارات دون آلة حاسبة، بينما يعتمد الأولمبياد على الأسئلة المقالية (FRQ) والحلول البرهانية.
           </p>
         </div>
 
@@ -509,9 +509,9 @@
               2
             </div>
             <div>
-              <h3 class="font-bold text-slate-800 dark:text-slate-100 text-sm sm:text-base" id="step2-t">المرحلة المتوسطة (كانجارو Cadet + نافس 9 + أولمبياد الناشئين)</h3>
+              <h3 class="font-bold text-slate-800 dark:text-slate-100 text-sm sm:text-base" id="step2-t">المرحلة المتوسطة والثانوية التنافسية (كانجارو + مسابقة كاوست KMC + نافس 9 + NSMO)</h3>
               <p class="text-xs text-slate-600 dark:text-slate-300 mt-1" id="step2-d">
-                الانتقال لمفاهيم الجبر الأساسي، متباينات الدرجة الأولى، هندسة إقليدس، ومبادئ نظرية الأعداد والعد.
+                الانتقال لمفاهيم الجبر الأساسي، هندسة إقليدس، ومبادئ نظرية الأعداد والعد والاحتمالات دون آلة حاسبة (الصفوف 6–11).
               </p>
             </div>
           </div>
@@ -522,7 +522,7 @@
               3
             </div>
             <div>
-              <h3 class="font-bold text-slate-800 dark:text-slate-100 text-sm sm:text-base" id="step3-t">المرحلة الثانوية المتقدمة (JEE + كاوست SRSI + الأولمبياد IMO)</h3>
+              <h3 class="font-bold text-slate-800 dark:text-slate-100 text-sm sm:text-base" id="step3-t">المرحلة الثانوية المتقدمة (JEE + الأولمبياد IMO)</h3>
               <p class="text-xs text-slate-600 dark:text-slate-300 mt-1" id="step3-d">
                 الاحتراف في التفاضل والتكامل، الأعداد المركبة، المعادلات الدالية، وإثبات البراهين الرياضية الصارمة.
               </p>
@@ -598,7 +598,7 @@
             <option value="current">Current Filters / الفلاتر الحالية</option>
             <option value="kangaroo">Kangaroo</option>
             <option value="nafes">Nafes (KSA)</option>
-            <option value="kaust">KAUST SRSI</option>
+            <option value="kaust">KAUST Math Competition (KMC)</option>
             <option value="jee">JEE Main/Adv</option>
             <option value="olympiad">Math Olympiad</option>
             <option value="nsmo">NSMO (KSA)</option>
@@ -705,20 +705,20 @@
         },
         {
           id: "kaust",
-          name_ar: "برنامج كاوست SRSI",
-          name_en: "KAUST SRSI",
-          badge_ar: "برنامج بحثي",
-          badge_en: "Research Program",
+          name_ar: "مسابقة كاوست للرياضيات (KMC)",
+          name_en: "KAUST Math Competition (KMC)",
+          badge_ar: "MCQs (5 خيارات)",
+          badge_en: "MCQs (5 Options)",
           color: "border-teal-500",
           bg: "bg-teal-50 dark:bg-teal-900/20",
           accent: "text-teal-600",
-          levels_ar: "الصف 11 فقط",
-          levels_en: "Grade 11 only",
-          format_ar: "امتحان قبول صارم",
-          format_en: "Rigorous Entrance Exam",
-          topics_ar: ["تفاضل وتكامل", "الجبر المتقدم"],
-          topics_en: ["Calculus", "Advanced Algebra"],
-          grades: [11]
+          levels_ar: "الصفوف 6–11 (3 مسارات)",
+          levels_en: "Grades 6–11 (3 Tracks)",
+          format_ar: "اختيار من متعدد (A–E) | بدون آلة حاسبة",
+          format_en: "5-Option MCQs (A–E) | No Calculator",
+          topics_ar: ["نظرية الأعداد", "الجبر", "الهندسة", "التركيبات والاحتمالات"],
+          topics_en: ["Number Theory", "Algebra", "Geometry", "Combinatorics & Probability"],
+          grades: [6, 7, 8, 9, 10, 11]
         },
         {
           id: "olympiad",
@@ -792,7 +792,7 @@
         chart1Title: "📊 توزيع المواضيع الرياضية حسب المسار",
         chart1Caption: "يلاحظ تركيز اختبار كانجارو على المنطق والهندسة الفضائية، بينما يركز اختبار JEE على التفاضل والتكامل، وتتميز نافس بتوازن الجبر والقياس.",
         chart2Title: "📈 نمط الأسئلة ومستويات التحدي",
-        chart2Caption: "تتوزع أسئلة كانجارو بين 3 و 4 و 5 نقاط. بينما يعتمد الأولمبياد وبرامج كاوست على الأسئلة المقالية (FRQ) والحلول الكتابية لإثبات البراهين.",
+        chart2Caption: "تعتمد مسابقتا كانجارو وكاوست للرياضيات (KMC) على أسئلة الاختيار من متعدد ذات الـ 5 خيارات دون آلة حاسبة، بينما يعتمد الأولمبياد على الأسئلة المقالية (FRQ) والحلول البرهانية.",
         quizHeading: "استكشف بنك الأسئلة والحلول النموذجية",
         quizSubheading: "اختر المسار والمستوى لاختبار حل الأسئلة، عرض التلميحات، وفحص خطوات الحل بالتفصيل",
         btnPrevQ: "← السؤال السابق",
@@ -801,9 +801,9 @@
         roadmapSubtitle: "مسار بناء المهارات الرياضية عبر المراحل الدراسية المختلفة",
         step1T: "المرحلة الابتدائية (كانجارو + نافس 3 و 6)",
         step1D: "البدء بالتفكير المنطقي، التعرف على الأشكال، الحساب الأساسي، واستكشاف الأنماط دون استخدام الآلة الحاسبة.",
-        step2T: "المرحلة المتوسطة (كانجارو Cadet + نافس 9 + أولمبياد الناشئين)",
-        step2D: "الانتقال لمفاهيم الجبر الأساسي، متباينات الدرجة الأولى، هندسة إقليدس، ومبادئ نظرية الأعداد والعد.",
-        step3T: "المرحلة الثانوية المتقدمة (JEE + كاوست SRSI + الأولمبياد IMO)",
+        step2T: "المرحلة المتوسطة والثانوية التنافسية (كانجارو + مسابقة كاوست KMC + نافس 9 + NSMO)",
+        step2D: "الانتقال لمفاهيم الجبر الأساسي، هندسة إقليدس، ومبادئ نظرية الأعداد والعد والاحتمالات دون آلة حاسبة (الصفوف 6–11).",
+        step3T: "المرحلة الثانوية المتقدمة (JEE + الأولمبياد IMO)",
         step3D: "الاحتراف في التفاضل والتكامل، الأعداد المركبة، المعادلات الدالية، وإثبات البراهين الرياضية الصارمة.",
         scaleTag: "🚀 التوسع والإنتاج",
         scaleTitle: "محاكي توسيع بنك الأسئلة (1000+ لكل مسار)",
@@ -851,7 +851,7 @@
         chart1Title: "📊 Topic Weight Distribution by Track",
         chart1Caption: "Kangaroo emphasizes logic and spatial puzzles, JEE focuses heavily on calculus and algebra, while Nafes maintains balanced curriculum standards.",
         chart2Title: "📈 Question Formats & Point Breakdown",
-        chart2Caption: "Kangaroo uses 3, 4, and 5-point graded MCQs. Olympiad and KAUST rely heavily on Free Response Questions (FRQ) requiring full proofs.",
+        chart2Caption: "Kangaroo and the KAUST Mathematics Competition (KMC) use 5-option no-calculator MCQs, while Olympiad relies on written proof questions (FRQ).",
         quizHeading: "Interactive Question & Solution Inspector",
         quizSubheading: "Filter by track or topic to test problem solving, view hints, and inspect full solutions.",
         btnPrevQ: "← Previous Question",
@@ -860,9 +860,9 @@
         roadmapSubtitle: "Skill progression from Primary foundations to Elite international standards.",
         step1T: "Primary Stage (Kangaroo + Nafes 3 & 6)",
         step1D: "Building logical reasoning, basic geometry, mental math, and pattern recognition without calculators.",
-        step2T: "Middle School (Kangaroo Cadet + Nafes 9 + Junior Olympiad)",
-        step2D: "Transitioning to basic algebra, linear inequalities, Euclidean geometry, and introductory number theory.",
-        step3T: "Advanced High School (JEE + KAUST SRSI + IMO Olympiad)",
+        step2T: "Middle & High School Competitions (Kangaroo + KAUST KMC + Nafes 9 + NSMO)",
+        step2D: "Developing Olympiad-style algebra, Euclidean geometry, number theory, and combinatorics without calculators (Grades 6–11).",
+        step3T: "Advanced High School (JEE + IMO Olympiad)",
         step3D: "Mastering differential calculus, complex numbers, functional equations, and rigorous mathematical proofs.",
         scaleTag: "🚀 Database Scaling",
         scaleTitle: "Question Bank Expansion Simulator",
@@ -920,7 +920,6 @@
     function extractGradesFromLevelString(levelStr) {
       const groups = {PreEcolier:[1,2], Ecolier:[3,4], Benjamin:[5,6], Cadet:[7,8], Junior:[9,10], Student:[11,12], 'High School':[7,8,9,10,11,12]};
       if (groups[levelStr]) return groups[levelStr];
-      if (levelStr?.includes('Research') || levelStr?.includes('Advanced Analysis')) return [11];
       if (!levelStr) return [];
       const match = levelStr.match(/Grade(?:s)?\s+(\d+)(?:-(\d+))?/i);
       if (match) {
@@ -1014,21 +1013,21 @@
       formatBarChartInstance = new Chart(ctxBar, {
         type: 'bar',
         data: {
-          labels: ['Kangaroo', 'Nafes KSA', 'JEE Main/Adv', 'Math Olympiad', 'KAUST SRSI', 'NSMO (KSA)'],
+          labels: ['Kangaroo', 'Nafes KSA', 'JEE Main/Adv', 'Math Olympiad', 'KAUST KMC', 'NSMO (KSA)'],
           datasets: [
             {
               label: 'MCQs 4-5 Options',
-              data: [100, 100, 60, 0, 40, 50],
+              data: [100, 100, 60, 0, 100, 50],
               backgroundColor: '#3b82f6'
             },
             {
               label: 'Numerical / Integer FRQ',
-              data: [0, 0, 40, 30, 30, 30],
+              data: [0, 0, 40, 30, 0, 30],
               backgroundColor: '#8b5cf6'
             },
             {
               label: 'Rigorous Proof FRQ',
-              data: [0, 0, 0, 70, 30, 20],
+              data: [0, 0, 0, 70, 0, 20],
               backgroundColor: '#f59e0b'
             }
           ]
@@ -1491,10 +1490,10 @@
         { val: "Junior", text: "🎓 جونيور (Junior: G9-10)" }
       ],
       kaust: [
-        { val: "all", text: "كل مراحل كاوست (All KAUST Phases)" },
-        { val: "Phase 1: Foundation Research", text: "🧬 المرحلة 1: أساسيات البحث (Phase 1)" },
-        { val: "Phase 2: Advanced Analysis", text: "🔬 المرحلة 2: التحليل المتقدم (Phase 2)" },
-        { val: "Phase 3: Elite Research", text: "🚀 المرحلة 3: النمذجة المتقدمة (Phase 3)" }
+        { val: "all", text: "كل مسارات كاوست (All KAUST Tracks)" },
+        { val: "Track 1: Grades 6-7", text: "🌱 المسار 1: الصفوف 6-7 (Track 1: G6-7)" },
+        { val: "Track 2: Grades 8-9", text: "🌿 المسار 2: الصفوف 8-9 (Track 2: G8-9)" },
+        { val: "Track 3: Grades 10-11", text: "🎓 المسار 3: الصفوف 10-11 (Track 3: G10-11)" }
       ],
       nsmo: [
         { val: "all", text: "كل مراحل الأولمبياد الوطني NSMO" },

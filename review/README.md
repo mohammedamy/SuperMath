@@ -14,7 +14,7 @@ The public GitHub Pages site has not been changed. The package is intended for r
 |---|---|---:|---:|
 | Kangaroo | Ecolier 250; Benjamin 250; Cadet 250; Junior 250 | 635 | 1,000 |
 | NAFES | Grade 3: 250; Grade 6: 250; Grade 9: 250 | 704 | 750 |
-| KAUST preparation | Three retained internal training levels, 450 each | 468 | 1,350 |
+| KAUST Math Competition (KMC) | Track 1: Grades 6-7 (450); Track 2: Grades 8-9 (450); Track 3: Grades 10-11 (450) | 468 | 1,350 |
 | NSMO preparation | Three retained internal training levels, 250 each | 431 | 750 |
 | JEE mathematics | No subtracks | 260 | 500 |
 | Olympiad proof practice | No subtracks | 242 | 500 |
@@ -72,7 +72,7 @@ Sources were checked on 6 September 2026. These establish general distinctions a
 3. [JEE Main 2026 syllabus](https://jeemain.nta.nic.in/document/syllabus-2026/) and [official syllabus PDF](https://cdnbbsr.s3waas.gov.in/s3f8e59f4b2fe7c5705bf878bbd494ccdf/uploads/2025/10/202510311323551056.pdf). The mathematics syllabus spans sets/functions, complex numbers/quadratics, matrices, counting, binomial theorem, sequences, calculus, differential equations, coordinate/3D geometry, vectors, statistics/probability and trigonometry. The update adds material in previously thin areas, without claiming examination weight matching.
 4. [JEE Advanced 2026 brochure](https://jeeadv.ac.in/documents/IBEnglish_2026.pdf). Main and Advanced must not be treated as interchangeable complete mocks. The current track is mixed mathematics practice.
 5. [IMO competition description](https://www.imo-official.org/about/?language=en). The competition consists of six proof problems over two days, three problems in four and a half hours each day. Routine exercises and short numerical questions alone do not reproduce that standard.
-6. [KAUST SRSI application process](https://academy.kaust.edu.sa/srsi-application-process/). This describes Grade 11 eligibility and a placement test. It does not establish the repository’s three mathematics phases as official test stages. Their content is retained as internal STEM enrichment and is not represented as a verified placement-test syllabus.
+6. **KAUST Mathematics Competition (KMC)**: Rebuilt `data/kaust.json` (1,350 questions via `scripts/build_kaust_kmc.py`) strictly around the three official KMC grade bands (`Track 1: Grades 6-7`, `Track 2: Grades 8-9`, `Track 3: Grades 10-11`, 450 5-option `(A)–(E)` no-calculator MCQs each), removing all out-of-scope university/calculus/linear-algebra/complex-number/trigonometry items, rewriting every English and Arabic explanation into a warm step-by-step teaching format (`Key Idea`, numbered `Steps`, `Quick Check`), and adding 596 KMC past-paper-style SVG diagrams across Geometry, Number Theory, Algebra, Combinatorics, and Data/Probability.
 7. [Mawhiba national gifted olympiad / NSMO scientific track](https://www.mawhiba.sa/discover-mawhiba/competitions/national-gifted-olympiad/). The official competition and training pathway should be distinguished from SuperMath’s existing junior/intermediate/senior grade groupings. Those groupings remain internal practice levels.
 
 ## Required next content pass
