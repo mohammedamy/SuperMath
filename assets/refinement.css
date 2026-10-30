@@ -523,3 +523,78 @@ footer {
     grid-template-columns: repeat(4, 1fr);
   }
 }
+
+/* ===== A4 default, MathJax & SVG polish ===== */
+@page { size: A4 portrait; margin: 12mm 14mm; }
+mjx-container { direction: ltr !important; unicode-bidi: isolate !important; }
+mjx-container[display="true"] { overflow-x: auto; overflow-y: hidden; max-width: 100%; margin: .6em 0 !important; }
+svg[viewBox]:not(mjx-container svg) { max-width: 100%; height: auto; }
+
+/* ===== KAUST study hub (screen) ===== */
+#study-lessons { margin: 2rem 0; }
+.eg-hub { background: #fff; color: #0f172a; border-radius: 1.5rem; padding: 1.5rem; border: 1px solid #e2e8f0; box-shadow: 0 10px 30px rgba(15,23,42,.08); }
+.dark .eg-hub { background: #1e293b; color: #f1f5f9; border-color: #334155; }
+.eg-hub-h { display: flex; gap: 1rem; align-items: center; margin-bottom: 1rem; }
+.eg-hub-logo { width: 56px; height: 80px; object-fit: contain; background: #fff; border-radius: .5rem; padding: 2px; }
+.eg-tab, .eg-btn { padding: .5rem 1rem; border-radius: .75rem; font-weight: 700; font-size: .85rem; border: 1px solid #cbd5e1; background: #f1f5f9; color: #0f172a; cursor: pointer; }
+.dark .eg-tab, .dark .eg-btn { background: #334155; color: #f1f5f9; border-color: #475569; }
+.eg-tab-on, .eg-btn-main { background: #0f766e !important; color: #fff !important; border-color: #0f766e !important; }
+.eg-btn-go { background: #f59e0b !important; color: #1e293b !important; border-color: #f59e0b !important; }
+.eg-grid { display: grid; gap: 1rem; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); }
+.eg-lesson-card { text-align: start; padding: 1rem; border-radius: 1rem; border: 1px solid #cbd5e1; background: #f8fafc; cursor: pointer; transition: transform .15s; }
+.dark .eg-lesson-card { background: #0f172a; border-color: #475569; }
+.eg-lesson-card:hover { transform: translateY(-2px); border-color: #0f766e; }
+.eg-lc-title { font-weight: 800; margin: .5rem 0 .25rem; }
+.eg-lc-meta { font-size: .75rem; opacity: .7; }
+.eg-badge { display: inline-block; background: #0f766e; color: #fff; border-radius: 999px; padding: .1rem .6rem; font-size: .7rem; font-weight: 800; }
+.eg-badge-alt { background: #f59e0b; color: #1e293b; }
+.eg-card { border: 1px solid #cbd5e1; border-radius: .9rem; padding: 1rem; margin: .8rem 0; background: #fff; color: #0f172a; line-height: 1.7; }
+.dark .eg-card { background: #0f172a; color: #f1f5f9; border-color: #475569; }
+.eg-concept { border-inline-start: 5px solid #0f766e; }
+.eg-traps { border-inline-start: 5px solid #dc2626; background: #fef2f2; color: #7f1d1d; }
+.dark .eg-traps { background: #3b1111; color: #fecaca; }
+.eg-example { border-inline-start: 5px solid #f59e0b; }
+.eg-banner { border-radius: 1rem; padding: 1rem; background: linear-gradient(135deg,#ccfbf1,#fef3c7); color: #0f172a; }
+.eg-h2 { font-size: 1.4rem; font-weight: 800; margin: .5rem 0; }
+.eg-h3 { font-weight: 800; font-size: 1.05rem; margin-bottom: .3rem; }
+.eg-ul { margin: 0; padding-inline-start: 1.3rem; list-style: disc; }
+.eg-formula { background: #f0fdfa; border-radius: .6rem; padding: .4rem; margin-top: .5rem; text-align: center; color: #0f172a; }
+.dark .eg-formula { background: #134e4a; color: #f0fdfa; }
+.eg-diagram { display: flex; justify-content: center; background: #fff; border-radius: .6rem; padding: .5rem; margin: .6rem 0; }
+.eg-opts { display: grid; grid-template-columns: repeat(2, minmax(0,1fr)); gap: .4rem .8rem; margin: .6rem 0; }
+.eg-opt { display: flex; gap: .5rem; align-items: center; padding: .25rem .5rem; border-radius: .5rem; border: 1px solid #e2e8f0; }
+.eg-opt-ok { background: #dcfce7; border-color: #16a34a; color: #14532d; font-weight: 700; }
+.eg-opt-l { min-width: 1.5rem; height: 1.5rem; border: 1.5px solid currentColor; border-radius: 999px; display: inline-flex; align-items: center; justify-content: center; font-weight: 800; font-size: .8rem; }
+.eg-sol { background: #fffbeb; border-radius: .6rem; padding: .6rem; margin-top: .4rem; color: #422006; }
+.dark .eg-sol { background: #422006; color: #fef3c7; }
+.eg-sol-h { font-weight: 800; margin-bottom: .2rem; }
+.eg-ex-h { font-weight: 800; color: #b45309; margin-bottom: .3rem; }
+.eg-logo { height: 18mm; width: auto; object-fit: contain; }
+.eg-logo-sm { height: 8mm; width: auto; object-fit: contain; }
+
+/* ===== Edugates A4 print frame (header/footer with logo on EVERY page) ===== */
+@media print {
+  html, body { background: #fff !important; }
+  a[href="#practice"], .no-print, .skip-link, #study-lessons { display: none !important; }
+  * { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+  #print-container { font-size: 11.5pt; color: #000; }
+  .edugates-print-frame { width: 100%; border-collapse: collapse; }
+  .edugates-print-frame > thead { display: table-header-group; }
+  .edugates-print-frame > tfoot { display: table-footer-group; }
+  .edugates-print-frame td { padding: 0; }
+  .eg-head { display: flex; align-items: center; gap: 4mm; border-bottom: 1.5px solid #0f766e; padding-bottom: 2mm; margin-bottom: 4mm; }
+  .eg-school { display: flex; flex-direction: column; font-size: 11pt; line-height: 1.3; flex: 1; }
+  .eg-school b { color: #0f172a; font-size: 12.5pt; }
+  .eg-doc { font-weight: 700; font-size: 10pt; color: #0f766e; text-align: end; max-width: 55mm; }
+  .eg-foot { display: flex; align-items: center; gap: 3mm; justify-content: space-between; border-top: 1px solid #94a3b8; padding-top: 1.5mm; margin-top: 3mm; font-size: 8pt; color: #475569; }
+  #print-container .eg-card, #print-container .eg-banner { break-inside: avoid; page-break-inside: avoid; box-shadow: none; background: #fff !important; color: #000 !important; border: 1px solid #94a3b8; }
+  #print-container .eg-banner { background: #f0fdfa !important; }
+  #print-container .eg-traps { background: #fef2f2 !important; }
+  #print-container .eg-sol { background: #fffbeb !important; color: #000 !important; }
+  #print-container .eg-opt-ok { background: #dcfce7 !important; color: #000 !important; }
+  #print-container .eg-formula { background: #f0fdfa !important; color: #000 !important; }
+  #print-container svg[viewBox]:not(mjx-container svg) { max-height: 55mm; width: auto; break-inside: avoid; }
+  #print-container .eg-diagram { break-inside: avoid; }
+  mjx-container { overflow: visible !important; max-width: none !important; }
+  mjx-container[display="true"] { overflow: visible !important; }
+}

@@ -195,7 +195,7 @@
         
         <!-- Brand / Title -->
         <div class="flex items-center gap-3">
-          <img src="LOGO.jpg" alt="SuperMath Logo" class="w-12 h-12 rounded-xl object-cover shadow-lg shadow-amber-500/30 transform hover:scale-105 transition-transform duration-300 border border-slate-700/50">
+          <img src="LOGO.jpg" alt="SuperMath Logo" class="w-12 h-12 rounded-xl object-contain bg-white p-0.5 shadow-lg shadow-amber-500/30 transform hover:scale-105 transition-transform duration-300 border border-slate-700/50">
           <div>
             <h1 class="text-xl sm:text-2xl font-display font-extrabold tracking-tight text-transparent bg-clip-text bg-gradient-to-r from-white to-slate-300 flex items-center gap-2" id="app-title">
               منصة تحليلات مسارات الرياضيات | Edugates International School
@@ -1668,11 +1668,12 @@
       });
       html += `</div>`; // end container
       
-      container.innerHTML = html;
+      container.innerHTML = window.edugatesFrame ? window.edugatesFrame(html, t.printTitle, isAr) : html;
       
       // Tell MathJax to re-render the print container
       if (window.MathJax?.typesetPromise) {
-        MathJax.typesetPromise([container]).then(() => {
+        const logoWait = [...container.querySelectorAll('img')].map(im => im.complete ? 0 : new Promise(r => { im.onload = im.onerror = r; }));
+        Promise.all([MathJax.typesetPromise([container]), ...logoWait]).then(() => {
           setTimeout(() => {
             window.print();
           }, 500); // give a tiny delay for SVGs/Math to settle
@@ -1683,5 +1684,6 @@
     }
   </script>
   <script src="assets/refinement.js"></script>
+  <script src="assets/kaust-study.js"></script>
 </body>
 </html>

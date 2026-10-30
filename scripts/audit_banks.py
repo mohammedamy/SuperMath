@@ -31,7 +31,7 @@ def inspect(q,track,seen,ids):
 
 def main():
  out=[];summary=[]
- for p in sorted((ROOT/'data').glob('*.json')):
+ for p in sorted(x for x in (ROOT/'data').glob('*.json') if x.name!='kaust_lessons.json'):
   qs=json.loads(p.read_text());seen=set();ids=set();counts=collections.Counter()
   for q in qs:
    issues=inspect(q,p.stem,seen,ids);counts.update(issues)

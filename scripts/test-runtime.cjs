@@ -126,3 +126,22 @@ const run=s=>vm.runInContext(s,context);
  console.log('PASS: startup, all counts, track switching, subtrack/grade filtering, MCQ marking, written work, print keys, Arabic and theme controls.');
  console.log('Runtime tests use lightweight DOM stubs; this is not browser or visual QA.');
 })().catch(e=>{console.error(e);process.exitCode=1});
+
+// ---- KAUST study lessons smoke test ----
+(async()=>{
+  const lessons=JSON.parse(fs.readFileSync(path.join(root,'data/kaust_lessons.json'),'utf8')).lessons;
+  assert.equal(lessons.length,18);
+  const ids=new Set(JSON.parse(fs.readFileSync(path.join(root,'data/kaust.json'),'utf8')).map(q=>q.id));
+  for(const l of lessons){
+    assert(l.en.examples.length>=4&&l.ar.examples.length>=4,l.id);
+    assert.equal(l.bank_example_ids.length,4);
+    l.bank_example_ids.forEach(i=>assert(ids.has(i),i));
+    for(const e of l.en.examples)assert.equal(e.options.length,5);
+  }
+  const css=fs.readFileSync(path.join(root,'assets/refinement.css'),'utf8');
+  assert(css.includes('size: A4 portrait'));
+  const js=fs.readFileSync(path.join(root,'assets/kaust-study.js'),'utf8');
+  assert(js.includes('LOGO.jpg')&&js.includes('Edugates International School'));
+  assert(fs.existsSync(path.join(root,'LOGO.jpg')));
+  console.log('PASS: 18 KAUST lessons, A4 CSS, Edugates branded print frame.');
+})();
