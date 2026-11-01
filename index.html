@@ -628,6 +628,10 @@
             <span>🖨️</span>
             <span id="print-edugates-note">A4 Default · Edugates International School logo on every page</span>
           </div>
+          <button type="button" onclick="closePrintModal();if(window.jumpToKaustStudy)jumpToKaustStudy();" class="mt-2.5 w-full py-2.5 px-3 rounded-xl bg-teal-900/70 hover:bg-teal-800/80 border border-teal-600/60 text-teal-100 text-xs font-bold flex items-center justify-center gap-2 transition-colors">
+            <span>📖</span>
+            <span id="print-study-shortcut-lbl">طباعة شرح دروس كاوست والأمثلة المحلولة (A4)</span>
+          </button>
         </div>
         
         <div class="flex gap-3 pt-4">
@@ -1136,6 +1140,7 @@
       if (document.getElementById('nav-study-text')) document.getElementById('nav-study-text').innerText = isAr ? 'شرح دروس كاوست' : 'KAUST Lessons';
       if (document.getElementById('print-include-solutions-lbl')) document.getElementById('print-include-solutions-lbl').innerText = isAr ? 'تضمين خطوات الحل التفصيلية في مفتاح الإجابات' : 'Include step-by-step worked solutions in Answer Key';
       if (document.getElementById('print-edugates-note')) document.getElementById('print-edugates-note').innerText = isAr ? 'حجم ورق A4 افتراضي · شعار مدرسة بوابة المعرفة العالمية على كل صفحة' : 'A4 Paper Default · Edugates International School logo on all printed pages';
+      if (document.getElementById('print-study-shortcut-lbl')) document.getElementById('print-study-shortcut-lbl').innerText = isAr ? 'طباعة شرح دروس كاوست والأمثلة المحلولة (A4)' : 'Print KAUST Study Lessons & Solved Examples (A4)';
       if (document.getElementById('btn-print-text')) document.getElementById('btn-print-text').innerText = t.printBtnText;
       if (document.getElementById('print-modal-title')) document.getElementById('print-modal-title').innerText = t.printModalTitle;
       if (document.getElementById('print-modal-desc')) document.getElementById('print-modal-desc').innerText = t.printModalDesc;

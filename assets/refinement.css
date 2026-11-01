@@ -927,6 +927,10 @@ svg[viewBox]:not(mjx-container svg) {
   line-height: 1.8;
 }
 
+.eg-mkeep {
+  white-space: nowrap;
+}
+
 .eg-formula {
   background: #f0fdfa;
   border: 1px solid #99f6e4;
@@ -941,6 +945,21 @@ svg[viewBox]:not(mjx-container svg) {
   background: #113c3a;
   border-color: #0f766e;
   color: #f0fdfa;
+}
+
+.eg-f-caption {
+  direction: rtl;
+  unicode-bidi: isolate;
+  font-family: 'Cairo', 'Inter', system-ui, sans-serif;
+  font-size: 0.86rem;
+  font-weight: 700;
+  color: #0f766e;
+  margin-bottom: 0.2rem;
+  text-align: center;
+}
+
+.dark .eg-f-caption {
+  color: #5eead4;
 }
 
 .eg-diagram {
@@ -1410,6 +1429,20 @@ svg[viewBox]:not(mjx-container svg) {
     color: #0f172a !important;
     padding: 1.5mm 3mm !important;
     margin-top: 1.8mm !important;
+  }
+
+  #print-container .eg-f-caption {
+    direction: rtl !important;
+    unicode-bidi: isolate !important;
+    color: #0f766e !important;
+    font-size: 8.8pt !important;
+    font-weight: 700 !important;
+    margin-bottom: 0.8mm !important;
+    text-align: center !important;
+  }
+
+  #print-container .eg-mkeep {
+    white-space: nowrap !important;
   }
 
   #print-container .eg-diagram {
