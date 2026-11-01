@@ -214,6 +214,12 @@
             <span id="stat-questions-count">جاري تحميل بنوك التدريب…</span>
           </div>
 
+          <!-- KAUST Study Lessons Quick Jump -->
+          <a href="#study-lessons" onclick="if(window.jumpToKaustStudy){event.preventDefault();jumpToKaustStudy();}" class="bg-teal-700 hover:bg-teal-600 text-white border border-teal-500/70 px-3 sm:px-4 py-2 rounded-xl text-xs sm:text-sm font-bold transition-all duration-300 flex items-center gap-1.5 sm:gap-2 hover:shadow-lg hover:shadow-teal-500/20 shrink-0">
+            <span>📖</span>
+            <span id="nav-study-text" class="hidden sm:inline">KAUST Study</span>
+          </a>
+
           <!-- Brilliant Classroom Link -->
           <a href="https://brilliant.org/classroom/join-v2/19fe3e01-311f-4170-8c40-52a8982e3111" target="_blank" rel="noopener noreferrer" class="bg-brand-600 hover:bg-brand-500 text-white border border-brand-500 px-3 sm:px-4 py-2 rounded-xl text-xs sm:text-sm font-bold transition-all duration-300 flex items-center gap-1.5 sm:gap-2 hover:shadow-lg hover:shadow-brand-500/20 shrink-0">
             <span>✨</span>
@@ -613,6 +619,15 @@
           
           <label class="block text-sm text-slate-300 mb-1" id="print-modal-lbl">عدد الأسئلة (Max <span id="print-max-q">0</span>)</label>
           <input type="number" id="print-q-count" min="1" value="20" class="w-full bg-slate-800 border border-slate-700 text-white rounded-xl px-4 py-3 focus:ring-2 focus:ring-emerald-500 outline-none">
+
+          <label class="mt-3 flex items-center gap-2.5 text-xs sm:text-sm text-slate-200 cursor-pointer select-none bg-slate-800/70 border border-slate-700/80 rounded-xl px-3.5 py-2.5">
+            <input type="checkbox" id="print-include-solutions" checked class="w-4 h-4 accent-emerald-500 rounded">
+            <span id="print-include-solutions-lbl">Include step-by-step worked solutions / تضمين خطوات الحل التفصيلية</span>
+          </label>
+          <div class="mt-2.5 flex items-center gap-2 text-[11px] text-teal-300 bg-teal-950/60 border border-teal-800/70 rounded-xl px-3 py-2">
+            <span>🖨️</span>
+            <span id="print-edugates-note">A4 Default · Edugates International School logo on every page</span>
+          </div>
         </div>
         
         <div class="flex gap-3 pt-4">
@@ -1118,6 +1133,9 @@
       document.getElementById('footer-text').innerText = t.footerText;
 
       // Print Translations
+      if (document.getElementById('nav-study-text')) document.getElementById('nav-study-text').innerText = isAr ? 'شرح دروس كاوست' : 'KAUST Lessons';
+      if (document.getElementById('print-include-solutions-lbl')) document.getElementById('print-include-solutions-lbl').innerText = isAr ? 'تضمين خطوات الحل التفصيلية في مفتاح الإجابات' : 'Include step-by-step worked solutions in Answer Key';
+      if (document.getElementById('print-edugates-note')) document.getElementById('print-edugates-note').innerText = isAr ? 'حجم ورق A4 افتراضي · شعار مدرسة بوابة المعرفة العالمية على كل صفحة' : 'A4 Paper Default · Edugates International School logo on all printed pages';
       if (document.getElementById('btn-print-text')) document.getElementById('btn-print-text').innerText = t.printBtnText;
       if (document.getElementById('print-modal-title')) document.getElementById('print-modal-title').innerText = t.printModalTitle;
       if (document.getElementById('print-modal-desc')) document.getElementById('print-modal-desc').innerText = t.printModalDesc;
@@ -1171,6 +1189,7 @@
               <div class="flex flex-wrap gap-1">
                 ${topics.map(tp => `<span class="text-[11px] bg-white/80 dark:bg-slate-700/80 px-2 py-0.5 rounded text-slate-600 dark:text-slate-300 border border-slate-200 dark:border-slate-600">${tp}</span>`).join('')}
               </div>
+              ${tr.id === 'kaust' ? `<button type="button" onclick="event.stopPropagation();if(window.jumpToKaustStudy)jumpToKaustStudy();" class="mt-3 w-full py-2 px-3 rounded-xl bg-teal-700 hover:bg-teal-600 text-white text-xs font-extrabold flex items-center justify-center gap-1.5 shadow-sm transition-colors">📖 ${currentLang === 'ar' ? '١٨ درساً مشروحاً مع ١٦٧ مثالاً محلولاً وطباعة A4' : '18 Study Lessons · 167 Solved Examples · A4 Print'}</button>` : ''}
             </div>
           </div>
         `;
@@ -1607,68 +1626,61 @@
       const isAr = currentLang === 'ar';
       const container = document.getElementById('print-container');
       
-      let html = `<div dir="${isAr ? 'rtl' : 'ltr'}" class="max-w-4xl mx-auto">`;
-      html += `<div class="text-center mb-8 border-b-2 border-black pb-4">
-                 <h1 class="text-3xl font-bold">${t.printTitle}</h1>
-               </div>`;
-               
       // Randomize selection
       const shuffled = [...pool];
       for (let i=shuffled.length-1;i>0;i--) { const j=Math.floor(Math.random()*(i+1)); [shuffled[i],shuffled[j]]=[shuffled[j],shuffled[i]]; }
       const questionsToPrint = shuffled.slice(0, count);
-      
-      questionsToPrint.forEach((q, index) => {
-        const qContent = q.content[currentLang] || q.content['en'];
-        const text = qContent.question;
-        html += `
-          <div class="mb-8 no-break">
-            <div class="font-bold mb-2">${t.printQNum} ${index + 1}:</div>
-            <div class="text-lg leading-relaxed math-font mb-4">${text}</div>
-        `;
-        
-        if (qContent.diagram || q.diagram) {
-           html += `<div class="flex justify-center my-4">${qContent.diagram || q.diagram}</div>`;
-        }
-        
-        if (qContent.options && qContent.options.length > 0) {
-          html += `<div class="grid grid-cols-2 gap-4 text-base mt-4">`;
-          const labels = ['A', 'B', 'C', 'D', 'E'];
-          qContent.options.forEach((opt, oIdx) => {
-             html += `<div class="flex items-center gap-2">
-                        <span class="font-bold border border-black rounded-full w-6 h-6 flex items-center justify-center shrink-0" style="min-width: 1.5rem;">${labels[oIdx]}</span>
-                        <span class="math-font">${opt}</span>
-                      </div>`;
-          });
-          html += `</div>`;
-        }
-        html += `</div>`;
-      });
-      
-      // Answer Key Page
-      html += `<div class="page-break"></div>`;
-      html += `<div class="text-center mb-8 border-b-2 border-black pb-4">
-                 <h2 class="text-2xl font-bold">${t.printAnswerKey}</h2>
-               </div>`;
-               
-      html += `<div class="grid grid-cols-4 gap-4">`;
-      const labels = ['A', 'B', 'C', 'D', 'E'];
-      questionsToPrint.forEach((q, index) => {
-        let ans = "FRQ";
-        if (q.type === 'MCQ' && q.correct_index !== undefined && q.correct_index !== null) {
-           ans = labels[q.correct_index];
-        }
-        html += `<div class="border-b border-gray-300 pb-1" style="font-family: monospace; font-size: 1.1rem;">
-                   <span class="font-bold">${index + 1}.</span> ${ans}
+      const includeSolutions = document.getElementById('print-include-solutions') ? !!document.getElementById('print-include-solutions').checked : false;
+      const trackMeta = appData.tracks.find(tr => tr.id === track);
+      const badgeLabel = trackMeta ? `${isAr ? trackMeta.name_ar : trackMeta.name_en} · A4` : (isAr ? 'ورقة اختبار A4' : 'A4 Exam Sheet');
+
+      if (window.buildEdugatesWorksheetHtml) {
+        container.innerHTML = window.buildEdugatesWorksheetHtml(
+          questionsToPrint,
+          t.printTitle,
+          t.printAnswerKey,
+          t.printQNum,
+          badgeLabel,
+          includeSolutions,
+          isAr
+        );
+      } else {
+        let html = `<div dir="${isAr ? 'rtl' : 'ltr'}" class="max-w-4xl mx-auto">`;
+        html += `<div class="text-center mb-8 border-b-2 border-black pb-4">
+                   <h1 class="text-3xl font-bold">${t.printTitle}</h1>
                  </div>`;
-      });
-      html += `</div>`;
-      questionsToPrint.filter(q=>q.type!=='MCQ').forEach(q=>{
-        const c=q.content[currentLang] || q.content.en;
-        html += `<div class="no-break my-4"><strong>${q.id}</strong><div>${c.explanation}</div></div>`;
-      });
-      html += `</div>`; // end container
-      
-      container.innerHTML = window.edugatesFrame ? window.edugatesFrame(html, t.printTitle, isAr) : html;
+        questionsToPrint.forEach((q, index) => {
+          const qContent = q.content[currentLang] || q.content['en'];
+          const text = qContent.question;
+          html += `<div class="mb-8 no-break"><div class="font-bold mb-2">${t.printQNum} ${index + 1}:</div><div class="text-lg leading-relaxed math-font mb-4">${text}</div>`;
+          if (qContent.diagram || q.diagram) {
+            html += `<div class="flex justify-center my-4">${qContent.diagram || q.diagram}</div>`;
+          }
+          if (qContent.options && qContent.options.length > 0) {
+            html += `<div class="grid grid-cols-2 gap-4 text-base mt-4">`;
+            const labels = ['A', 'B', 'C', 'D', 'E'];
+            qContent.options.forEach((opt, oIdx) => {
+              html += `<div class="flex items-center gap-2"><span class="font-bold border border-black rounded-full w-6 h-6 flex items-center justify-center shrink-0" style="min-width: 1.5rem;">${labels[oIdx]}</span><span class="math-font">${opt}</span></div>`;
+            });
+            html += `</div>`;
+          }
+          html += `</div>`;
+        });
+        html += `<div class="page-break"></div><div class="text-center mb-8 border-b-2 border-black pb-4"><h2 class="text-2xl font-bold">${t.printAnswerKey}</h2></div><div class="grid grid-cols-4 gap-4">`;
+        const labels = ['A', 'B', 'C', 'D', 'E'];
+        questionsToPrint.forEach((q, index) => {
+          let ans = "FRQ";
+          if (q.type === 'MCQ' && q.correct_index !== undefined && q.correct_index !== null) ans = labels[q.correct_index];
+          html += `<div class="border-b border-gray-300 pb-1" style="font-family: monospace; font-size: 1.1rem;"><span class="font-bold">${index + 1}.</span> ${ans}</div>`;
+        });
+        html += `</div>`;
+        questionsToPrint.filter(q=>q.type!=='MCQ').forEach(q=>{
+          const c=q.content[currentLang] || q.content.en;
+          html += `<div class="no-break my-4"><strong>${q.id}</strong><div>${c.explanation}</div></div>`;
+        });
+        html += `</div>`;
+        container.innerHTML = window.edugatesFrame ? window.edugatesFrame(html, t.printTitle, isAr) : html;
+      }
       
       // Tell MathJax to re-render the print container
       if (window.MathJax?.typesetPromise) {
