@@ -16,7 +16,7 @@ class El {
  querySelectorAll(){return []}getClientRects(){return [1]}
 }
 for(const m of html.matchAll(/id="([^"]+)"/g))elements.set(m[1],new El(m[1]));
-for(const id of ['frq-answer-input','bank-notice','study-lessons','lesson-filter-pill'])elements.set(id,new El(id));
+for(const id of ['frq-answer-input','bank-notice','study-lessons','kaust-mock-exams','kmc-mock-clock','lesson-filter-pill'])elements.set(id,new El(id));
 elements.get('practice').parentNode={insertBefore(){}};
 elements.get('practice').children=[];
 elements.get('print-include-solutions').checked=true;
@@ -28,6 +28,7 @@ vm.runInContext(fs.readFileSync(path.join(root,'assets/practice-core.js'),'utf8'
 vm.runInContext(app,context);
 vm.runInContext(fs.readFileSync(path.join(root,'assets/refinement.js'),'utf8'),context);
 vm.runInContext(fs.readFileSync(path.join(root,'assets/kaust-study.js'),'utf8'),context);
+vm.runInContext(fs.readFileSync(path.join(root,'assets/kaust-mocks.js'),'utf8'),context);
 const run=s=>vm.runInContext(s,context);
 (async()=>{
  for(const callback of events)await callback();
@@ -151,28 +152,87 @@ const run=s=>vm.runInContext(s,context);
  context.printKaustTrackBooklet('Track 2: Grades 8-9');
  assert.equal(prints,prevPrints+3);
  assert(elements.get('print-container').innerHTML.includes('eg-print-break'));
- console.log('PASS: startup, all counts, track switching, subtrack/grade filtering, MCQ marking, written work, print keys, KAUST study lessons & Edugates A4 print, Arabic and theme controls.');
+ // Verify KAUST Full Mock Exams simulator & Edugates A4 OMR / Booklet / Key print modes
+ assert.equal(run('window.__kaustMocks.mocks.length'),15);
+ assert(elements.get('kaust-mock-exams').innerHTML.includes('Edugates International School'));
+ context.startKaustMock('KMC-MOCK-T3-01');
+ assert.equal(run('window.__kaustMocks.session.questions.length'),30);
+ const q0Ok=run('window.__kaustMocks.session.questions[0].correct_index');
+ const q1Bad=run('(window.__kaustMocks.session.questions[1].correct_index+1)%5');
+ context.selectKaustMockOption(0,q0Ok);
+ context.selectKaustMockOption(1,q1Bad);
+ context.selectKaustMockOption(2,0);
+ context.clearKaustMockOption(2);
+ context.toggleKaustMockFlag(1);
+ context.setKaustMockViewMode('all');
+ assert(!elements.get('kaust-mock-exams').innerHTML.includes('undefined'));
+ context.requestSubmitKaustMock();
+ assert.equal(run('window.__kaustMocks.session.confirmSubmit'),true);
+ context.confirmSubmitKaustMock();
+ assert.equal(run('window.__kaustMocks.session.mode'),'review');
+ assert.equal(run('window.__kaustMocks.session.report.score'),3); // +4 correct -1 wrong + 0 blank = 3
+ assert.equal(run('window.__kaustMocks.session.report.correct'),1);
+ assert.equal(run('window.__kaustMocks.session.report.wrong'),1);
+ assert.equal(run('window.__kaustMocks.session.report.blank'),28);
+ context.setKaustMockReviewFilter('wrong');
+ assert(!elements.get('kaust-mock-exams').innerHTML.includes('undefined'));
+ const mockPrints=prints;
+ context.printKaustMockPaper('KMC-MOCK-T3-01','student');
+ assert.equal(prints,mockPrints+1);
+ assert(elements.get('print-container').innerHTML.includes('eg-omr-sheet'));
+ assert(!elements.get('print-container').innerHTML.includes('eg-omr-shaded'));
+ assert(!elements.get('print-container').innerHTML.includes('undefined'));
+ context.printKaustMockPaper('KMC-MOCK-T3-01','full');
+ assert.equal(prints,mockPrints+2);
+ assert(elements.get('print-container').innerHTML.includes('eg-omr-shaded'));
+ assert(!elements.get('print-container').innerHTML.includes('undefined'));
+ context.printKaustMockPaper('KMC-MOCK-T3-01','key');
+ assert.equal(prints,mockPrints+3);
+ assert(elements.get('print-container').innerHTML.includes('eg-omr-shaded'));
+ context.printBlankKaustOmr('Track 1: Grades 6-7');
+ assert.equal(prints,mockPrints+4);
+ context.exitKaustMock(true);
+ const customId=context.generateCustomKaustMock('Track 2: Grades 8-9');
+ assert(customId&&customId.includes('CUSTOM'));
+ assert.equal(run('window.__kaustMocks.mocks.length'),16);
+ console.log('PASS: startup, all counts, track switching, subtrack/grade filtering, MCQ marking, written work, print keys, KAUST study lessons, KAUST full mock simulator & OMR A4 print, Arabic and theme controls.');
  console.log('Runtime tests use lightweight DOM stubs; this is not browser or visual QA.');
 })().catch(e=>{console.error(e);process.exitCode=1});
 
-// ---- KAUST study lessons static schema test ----
+// ---- KAUST study lessons & mock exams static schema test ----
 (async()=>{
   const lessons=JSON.parse(fs.readFileSync(path.join(root,'data/kaust_lessons.json'),'utf8')).lessons;
+  const mocksDoc=JSON.parse(fs.readFileSync(path.join(root,'data/kaust_mocks.json'),'utf8'));
   assert.equal(lessons.length,18);
+  assert.equal(mocksDoc.mocks.length,15);
   const ids=new Set(JSON.parse(fs.readFileSync(path.join(root,'data/kaust.json'),'utf8')).map(q=>q.id));
+  const lessonUsed=new Set();
   for(const l of lessons){
     assert(l.en.examples.length>=4&&l.ar.examples.length>=4,l.id);
     assert(l.en.concepts.every(c=>c.diagram&&c.diagram.includes('<svg')),l.id+' concept SVG');
     assert.equal(l.bank_example_ids.length,6);
     assert.equal(l.drill_ids.length,6);
-    l.bank_example_ids.forEach(i=>assert(ids.has(i),i));
-    l.drill_ids.forEach(i=>{assert(ids.has(i),i);assert(!l.bank_example_ids.includes(i),'overlap '+i);});
+    l.bank_example_ids.forEach(i=>{assert(ids.has(i),i);lessonUsed.add(i);});
+    l.drill_ids.forEach(i=>{assert(ids.has(i),i);assert(!l.bank_example_ids.includes(i),'overlap '+i);lessonUsed.add(i);});
     for(const e of l.en.examples)assert.equal(e.options.length,5);
   }
+  const mockUsed=new Set();
+  for(const m of mocksDoc.mocks){
+    const exp=m.level==='Track 3: Grades 10-11'?30:24;
+    assert.equal(m.question_ids.length,exp,m.id);
+    assert.equal(m.duration_minutes,120);
+    m.question_ids.forEach(i=>{
+      assert(ids.has(i),i);
+      assert(!lessonUsed.has(i),'lesson overlap '+i);
+      assert(!mockUsed.has(i),'mock duplicate '+i);
+      mockUsed.add(i);
+    });
+  }
+  assert.equal(mockUsed.size,390);
   const css=fs.readFileSync(path.join(root,'assets/refinement.css'),'utf8');
-  assert(css.includes('size: A4 portrait'));
+  assert(css.includes('size: A4 portrait')&&css.includes('.eg-omr-sheet'));
   const js=fs.readFileSync(path.join(root,'assets/kaust-study.js'),'utf8');
   assert(js.includes('LOGO.jpg')&&js.includes('Edugates International School')&&js.includes('printKaustLessonDrills'));
   assert(fs.existsSync(path.join(root,'LOGO.jpg')));
-  console.log('PASS: 18 KAUST lessons (185 solved examples + 108 practice drills, 54/54 concept SVGs), A4 CSS, Edugates branded print frame.');
+  console.log('PASS: 18 KAUST lessons (185 solved examples + 108 practice drills, 54/54 concept SVGs) + 15 Official Mock Exams (390 unique Qs), A4 CSS, Edugates OMR & print frame.');
 })();

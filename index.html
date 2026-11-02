@@ -220,6 +220,12 @@
             <span id="nav-study-text" class="hidden sm:inline">KAUST Study</span>
           </a>
 
+          <!-- KAUST Mock Exams Quick Jump -->
+          <a href="#kaust-mock-exams" onclick="if(window.jumpToKaustMocks){event.preventDefault();jumpToKaustMocks();}" class="bg-amber-600 hover:bg-amber-500 text-white border border-amber-400/70 px-3 sm:px-4 py-2 rounded-xl text-xs sm:text-sm font-bold transition-all duration-300 flex items-center gap-1.5 sm:gap-2 hover:shadow-lg hover:shadow-amber-500/20 shrink-0">
+            <span>⏱️</span>
+            <span id="nav-mocks-text" class="hidden sm:inline">KAUST Mocks</span>
+          </a>
+
           <!-- Brilliant Classroom Link -->
           <a href="https://brilliant.org/classroom/join-v2/19fe3e01-311f-4170-8c40-52a8982e3111" target="_blank" rel="noopener noreferrer" class="bg-brand-600 hover:bg-brand-500 text-white border border-brand-500 px-3 sm:px-4 py-2 rounded-xl text-xs sm:text-sm font-bold transition-all duration-300 flex items-center gap-1.5 sm:gap-2 hover:shadow-lg hover:shadow-brand-500/20 shrink-0">
             <span>✨</span>
@@ -631,6 +637,10 @@
           <button type="button" onclick="closePrintModal();if(window.jumpToKaustStudy)jumpToKaustStudy();" class="mt-2.5 w-full py-2.5 px-3 rounded-xl bg-teal-900/70 hover:bg-teal-800/80 border border-teal-600/60 text-teal-100 text-xs font-bold flex items-center justify-center gap-2 transition-colors">
             <span>📖</span>
             <span id="print-study-shortcut-lbl">طباعة شرح دروس كاوست والأمثلة المحلولة (A4)</span>
+          </button>
+          <button type="button" onclick="closePrintModal();if(window.jumpToKaustMocks)jumpToKaustMocks();" class="mt-2 w-full py-2.5 px-3 rounded-xl bg-amber-900/70 hover:bg-amber-800/80 border border-amber-500/60 text-amber-100 text-xs font-bold flex items-center justify-center gap-2 transition-colors">
+            <span>🫧</span>
+            <span id="print-mocks-shortcut-lbl">طباعة اختبارات كاوست الكاملة وأوراق التظليل OMR (A4)</span>
           </button>
         </div>
         
@@ -1138,9 +1148,11 @@
 
       // Print Translations
       if (document.getElementById('nav-study-text')) document.getElementById('nav-study-text').innerText = isAr ? 'شرح دروس كاوست' : 'KAUST Lessons';
+      if (document.getElementById('nav-mocks-text')) document.getElementById('nav-mocks-text').innerText = isAr ? 'اختبارات كاوست' : 'KAUST Mocks';
       if (document.getElementById('print-include-solutions-lbl')) document.getElementById('print-include-solutions-lbl').innerText = isAr ? 'تضمين خطوات الحل التفصيلية في مفتاح الإجابات' : 'Include step-by-step worked solutions in Answer Key';
       if (document.getElementById('print-edugates-note')) document.getElementById('print-edugates-note').innerText = isAr ? 'حجم ورق A4 افتراضي · شعار مدرسة بوابة المعرفة العالمية على كل صفحة' : 'A4 Paper Default · Edugates International School logo on all printed pages';
       if (document.getElementById('print-study-shortcut-lbl')) document.getElementById('print-study-shortcut-lbl').innerText = isAr ? 'طباعة شرح دروس كاوست والأمثلة المحلولة (A4)' : 'Print KAUST Study Lessons & Solved Examples (A4)';
+      if (document.getElementById('print-mocks-shortcut-lbl')) document.getElementById('print-mocks-shortcut-lbl').innerText = isAr ? 'طباعة اختبارات كاوست الكاملة وأوراق التظليل OMR (A4)' : 'Print KAUST Full Mock Exams & OMR Sheets (A4)';
       if (document.getElementById('btn-print-text')) document.getElementById('btn-print-text').innerText = t.printBtnText;
       if (document.getElementById('print-modal-title')) document.getElementById('print-modal-title').innerText = t.printModalTitle;
       if (document.getElementById('print-modal-desc')) document.getElementById('print-modal-desc').innerText = t.printModalDesc;
@@ -1702,5 +1714,6 @@
   </script>
   <script src="assets/refinement.js"></script>
   <script src="assets/kaust-study.js"></script>
+  <script src="assets/kaust-mocks.js"></script>
 </body>
 </html>

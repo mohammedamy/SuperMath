@@ -1295,6 +1295,271 @@ svg[viewBox]:not(mjx-container svg) {
   display: block;
 }
 
+/* ===== KAUST Full Mock Exam Simulator (Screen — Light & Dark Modes) ===== */
+#kaust-mock-exams {
+  margin: 2.25rem 0;
+  scroll-margin-top: 5.5rem;
+}
+
+.eg-mock-hub {
+  border-top: 4px solid #d97706;
+}
+
+.dark .eg-mock-hub {
+  border-top-color: #f59e0b;
+}
+
+.eg-mock-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.eg-mock-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 0.45rem;
+  margin-top: 0.9rem;
+  padding-top: 0.75rem;
+  border-top: 1px dashed #cbd5e1;
+}
+
+.dark .eg-mock-actions {
+  border-top-color: #334155;
+}
+
+.eg-mock-topbar {
+  position: sticky;
+  top: 4.9rem;
+  z-index: 30;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.65rem;
+  padding: 0.75rem 1rem;
+  margin-bottom: 0.85rem;
+  border-radius: 1rem;
+  background: rgba(255, 255, 255, 0.96);
+  border: 1.5px solid #0f766e;
+  box-shadow: 0 10px 25px -10px rgba(15, 23, 42, 0.18);
+  backdrop-filter: blur(8px);
+}
+
+.dark .eg-mock-topbar {
+  background: rgba(15, 23, 42, 0.95);
+  border-color: #14b8a6;
+}
+
+.eg-clock-box {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  padding: 0.28rem 0.65rem;
+  border-radius: 0.75rem;
+  background: #f0fdfa;
+  border: 1.5px solid #14b8a6;
+}
+
+.dark .eg-clock-box {
+  background: #042f2e;
+  border-color: #0d9488;
+}
+
+.eg-clock {
+  font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+  font-weight: 800;
+  font-size: 1.05rem;
+  color: #0f766e;
+  letter-spacing: 0.03em;
+}
+
+.dark .eg-clock {
+  color: #5eead4;
+}
+
+.eg-clock-warn {
+  color: #d97706 !important;
+}
+
+.eg-clock-crit {
+  color: #dc2626 !important;
+  animation: pulse 1.2s infinite;
+}
+
+.eg-pal-wrap {
+  padding: 0.75rem 0.95rem;
+  margin-bottom: 1rem;
+  border-radius: 0.95rem;
+  background: #f8fafc;
+  border: 1px solid #cbd5e1;
+}
+
+.dark .eg-pal-wrap {
+  background: #0f172a;
+  border-color: #334155;
+}
+
+.eg-pal-label {
+  font-size: 0.78rem;
+  font-weight: 800;
+  margin-bottom: 0.5rem;
+  color: #334155;
+}
+
+.dark .eg-pal-label {
+  color: #cbd5e1;
+}
+
+.eg-pal-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.38rem;
+}
+
+.eg-pal-btn {
+  min-width: 2.3rem;
+  height: 2.15rem;
+  padding: 0 0.35rem;
+  border-radius: 0.55rem;
+  border: 1.5px solid #cbd5e1;
+  background: #ffffff;
+  color: #1e293b;
+  font-size: 0.78rem;
+  font-weight: 800;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.18rem;
+  cursor: pointer;
+  transition: all 0.14s ease;
+}
+
+.dark .eg-pal-btn {
+  background: #1e293b;
+  border-color: #475569;
+  color: #e2e8f0;
+}
+
+.eg-pal-btn small {
+  font-size: 0.65rem;
+  opacity: 0.9;
+  color: #0f766e;
+}
+
+.dark .eg-pal-btn small {
+  color: #5eead4;
+}
+
+.eg-pal-ans {
+  background: #ccfbf1;
+  border-color: #0d9488;
+  color: #115e59;
+}
+
+.dark .eg-pal-ans {
+  background: #134e4a;
+  border-color: #14b8a6;
+  color: #ccfbf1;
+}
+
+.eg-pal-flag {
+  border-color: #f59e0b !important;
+  box-shadow: inset 0 0 0 1.5px #f59e0b;
+}
+
+.eg-pal-cur {
+  outline: 2.5px solid #0284c7;
+  outline-offset: 1px;
+}
+
+.eg-mock-opt-sel {
+  background: #e0f2fe !important;
+  border-color: #0284c7 !important;
+  color: #0c4a6e !important;
+  font-weight: 700;
+}
+
+.dark .eg-mock-opt-sel {
+  background: #0c4a6e !important;
+  border-color: #38bdf8 !important;
+  color: #f0f9ff !important;
+}
+
+.eg-flag-on {
+  background: #fef3c7 !important;
+  border-color: #f59e0b !important;
+  color: #92400e !important;
+}
+
+.dark .eg-flag-on {
+  background: #78350f !important;
+  border-color: #fbbf24 !important;
+  color: #fef3c7 !important;
+}
+
+.eg-btn-danger {
+  background: #dc2626 !important;
+  border-color: #b91c1c !important;
+  color: #ffffff !important;
+}
+
+.eg-mock-alert {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem;
+  padding: 0.85rem 1rem;
+  margin-bottom: 0.9rem;
+  border-radius: 0.9rem;
+  background: #fffbeb;
+  border: 1.5px solid #f59e0b;
+  color: #78350f;
+  font-size: 0.86rem;
+}
+
+.dark .eg-mock-alert {
+  background: #451a03;
+  border-color: #f59e0b;
+  color: #fef3c7;
+}
+
+.eg-score-hero {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.9rem;
+  padding: 0.85rem 1rem;
+  border-radius: 0.9rem;
+  background: rgba(255, 255, 255, 0.7);
+  border: 1px solid rgba(15, 118, 110, 0.25);
+}
+
+.dark .eg-score-hero {
+  background: rgba(15, 23, 42, 0.65);
+  border-color: rgba(45, 212, 191, 0.28);
+}
+
+.eg-stat-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 0.65rem;
+}
+
+.eg-stat-card {
+  padding: 0.65rem 0.85rem;
+  border-radius: 0.8rem;
+  background: rgba(255, 255, 255, 0.75);
+  border: 1px solid rgba(148, 163, 184, 0.45);
+}
+
+.dark .eg-stat-card {
+  background: rgba(15, 23, 42, 0.7);
+  border-color: rgba(71, 85, 105, 0.7);
+}
+
 /* ===== Edugates International School Branded A4 Print Styles ===== */
 @media print {
   html,
@@ -1310,6 +1575,7 @@ svg[viewBox]:not(mjx-container svg) {
   footer,
   #print-modal,
   #study-lessons,
+  #kaust-mock-exams,
   a[href="#practice"],
   .skip-link,
   .no-print {
@@ -1714,6 +1980,185 @@ svg[viewBox]:not(mjx-container svg) {
     background: #f8fafc !important;
     font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
     font-size: 9.5pt;
+  }
+
+  /* Official KMC Mock Exam Cover & Optical OMR Bubble Sheet (Fits 1 A4 Page) */
+  #print-container .eg-mock-cover {
+    break-inside: avoid !important;
+    page-break-inside: avoid !important;
+  }
+
+  #print-container .eg-mock-cover-top {
+    background: #f0fdfa !important;
+    border: 1pt solid #0f766e !important;
+    border-radius: 2.2mm;
+    padding: 2.4mm 3.4mm;
+    margin-bottom: 2.2mm;
+  }
+
+  #print-container .eg-mock-cover-title {
+    font-size: 11.8pt !important;
+    font-weight: 800 !important;
+    color: #0f172a !important;
+    margin: 1.2mm 0 1mm 0 !important;
+    line-height: 1.3 !important;
+  }
+
+  #print-container .eg-mock-cover-specs {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 1.5mm 4mm;
+    font-size: 8.6pt;
+    color: #1e293b;
+  }
+
+  #print-container .eg-mock-cand-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1.6mm 4mm;
+    padding: 2.2mm 3.2mm;
+    margin-bottom: 2.2mm;
+    border: 0.85pt solid #64748b;
+    border-radius: 2mm;
+    background: #f8fafc !important;
+    font-size: 8.8pt;
+  }
+
+  #print-container .eg-mock-rules {
+    padding: 2mm 3.2mm;
+    margin-bottom: 2.4mm;
+    border: 0.75pt solid #cbd5e1;
+    border-inline-start: 2.8pt solid #d97706;
+    border-radius: 2mm;
+    background: #fffbeb !important;
+    font-size: 8.4pt;
+    line-height: 1.38;
+  }
+
+  #print-container .eg-mock-rules-h {
+    font-weight: 800;
+    font-size: 9pt;
+    color: #92400e;
+    margin-bottom: 0.8mm;
+  }
+
+  #print-container .eg-mock-rules ul {
+    margin: 0;
+    padding-inline-start: 4.5mm;
+  }
+
+  #print-container .eg-mock-rules li {
+    margin-bottom: 0.5mm;
+  }
+
+  #print-container .eg-omr-sheet {
+    border: 1pt solid #0f172a;
+    border-radius: 2.4mm;
+    padding: 2.4mm 3.5mm;
+    background: #ffffff !important;
+    break-inside: avoid !important;
+    page-break-inside: avoid !important;
+  }
+
+  #print-container .eg-omr-head {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2mm;
+    font-weight: 800;
+    font-size: 9.6pt;
+    color: #0f766e;
+    padding-bottom: 1.2mm;
+    border-bottom: 0.8pt solid #cbd5e1;
+  }
+
+  #print-container .eg-omr-tag {
+    font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+    font-size: 8pt;
+    padding: 0.4mm 2mm;
+    border-radius: 999px;
+    background: #f1f5f9 !important;
+    border: 0.6pt solid #94a3b8;
+    color: #0f172a;
+  }
+
+  #print-container .eg-omr-legend {
+    font-size: 8pt;
+    color: #475569;
+    margin: 1.2mm 0 1.8mm 0;
+    text-align: center;
+  }
+
+  #print-container .eg-omr-cols {
+    direction: ltr !important;
+    unicode-bidi: isolate !important;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 0 7mm;
+  }
+
+  #print-container .eg-omr-col {
+    display: flex;
+    flex-direction: column;
+    gap: 1.05mm;
+  }
+
+  #print-container .eg-omr-row {
+    direction: ltr !important;
+    unicode-bidi: isolate !important;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.55mm 1.8mm;
+    border-radius: 1.2mm;
+  }
+
+  #print-container .eg-omr-row:nth-child(odd) {
+    background: #f8fafc !important;
+  }
+
+  #print-container .eg-omr-qnum {
+    width: 8mm;
+    font-weight: 800;
+    font-size: 8.8pt;
+    font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+    color: #0f172a;
+  }
+
+  #print-container .eg-omr-bubbles {
+    display: flex;
+    align-items: center;
+    gap: 2.8mm;
+  }
+
+  #print-container .eg-omr-bubble {
+    width: 5.1mm;
+    height: 5.1mm;
+    border-radius: 999px;
+    border: 0.85pt solid #334155;
+    background: #ffffff !important;
+    color: #334155;
+    font-size: 7.4pt;
+    font-weight: 800;
+    font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    line-height: 1;
+  }
+
+  #print-container .eg-omr-shaded {
+    background: #0f172a !important;
+    border-color: #0f172a !important;
+    color: #ffffff !important;
+  }
+
+  #print-container .eg-omr-wrong {
+    background: #fee2e2 !important;
+    border-color: #dc2626 !important;
+    color: #991b1b !important;
+    text-decoration: line-through;
   }
 
   mjx-container {

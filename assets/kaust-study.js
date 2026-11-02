@@ -667,9 +667,14 @@
           <div class="text-xs sm:text-sm opacity-85">
             ✨ ${L('كل درس مزوّد برسوم توضيحية وأمثلة محلولة خطوة بخطوة وتدريبات ختامية متدرجة قابلة للطباعة على ورق A4 بشعار مدرسة بوابة المعرفة العالمية في كل صفحة.', 'Every lesson includes custom diagrams, step-by-step solved examples, and graduated end-of-lesson practice drills — ready to print on A4 paper with the Edugates logo on every page.')}
           </div>
-          <button type="button" onclick="printKaustTrackBooklet('${activeTrack}')" class="eg-btn eg-btn-main shrink-0">
-            📚 ${L('طباعة مذكرة المسار كاملةً (A4)', 'Print Full Track Booklet (A4)')}
-          </button>
+          <div class="flex flex-wrap gap-2 shrink-0">
+            <button type="button" onclick="if(window.jumpToKaustMocks)jumpToKaustMocks('${activeTrack}');" class="eg-btn eg-btn-go">
+              ⏱️ ${L('الاختبارات التجريبية الكاملة (KMC)', 'Full Official Mock Exams')}
+            </button>
+            <button type="button" onclick="printKaustTrackBooklet('${activeTrack}')" class="eg-btn eg-btn-main">
+              📚 ${L('طباعة مذكرة المسار كاملةً (A4)', 'Print Full Track Booklet (A4)')}
+            </button>
+          </div>
         </div>
         <div class="eg-grid">${cards}</div>`;
     }
@@ -678,7 +683,7 @@
     const totalDrillsAll = lessons.reduce((a, x) => a + (x.drill_ids || []).length, 0);
     root.innerHTML = `<div class="eg-hub">
       <div class="eg-hub-h">
-        <div class="eg-hub-logo-box"><img src="LOGO.jpg" alt="Edugates International School" class="eg-hub-logo"></div>
+        <div class="eg-hub-logo-box"><img src="LOGO.jpg" alt="Edugates International School" loading="eager" decoding="sync" class="eg-hub-logo"></div>
         <div class="flex-1">
           <div class="eg-hub-kicker">Edugates International School · مدرسة بوابة المعرفة العالمية</div>
           <h2 class="text-2xl sm:text-3xl font-display font-extrabold">📖 ${L('أكاديمية شرح دروس مسابقة كاوست للرياضيات (KMC)', 'KAUST Math Competition (KMC) Study Lessons')}</h2>
