@@ -22,11 +22,11 @@
   },
   {
     "track": "kaust",
-    "total": 1350,
+    "total": 2250,
     "levels": {
-      "Track 1: Grades 6-7": 450,
-      "Track 2: Grades 8-9": 450,
-      "Track 3: Grades 10-11": 450
+      "Track 1: Grades 6-7": 750,
+      "Track 2: Grades 8-9": 750,
+      "Track 3: Grades 10-11": 750
     },
     "issues": {}
   },

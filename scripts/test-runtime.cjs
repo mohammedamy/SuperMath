@@ -31,18 +31,18 @@ vm.runInContext(fs.readFileSync(path.join(root,'assets/kaust-study.js'),'utf8'),
 const run=s=>vm.runInContext(s,context);
 (async()=>{
  for(const callback of events)await callback();
- assert.equal(run('appData.questions.length'),4850);
- assert.equal(run('currentFilteredQuestions.length'),4850);
+ assert.equal(run('appData.questions.length'),5750);
+ assert.equal(run('currentFilteredQuestions.length'),5750);
  // Switching away from a selected subtrack must not retain its hidden filter.
  elements.get('quiz-track-select').value='kaust';context.filterQuestions();
- assert.equal(run('currentFilteredQuestions.length'),1350);
+ assert.equal(run('currentFilteredQuestions.length'),2250);
  assert(run('currentFilteredQuestions.every(q=>q.content.en.options.length===5&&q.content.ar.options.length===5)'));
  elements.get('quiz-kaust-phase-select').value='Track 1: Grades 6-7';context.filterQuestions();
- assert.equal(run('currentFilteredQuestions.length'),450);
+ assert.equal(run('currentFilteredQuestions.length'),750);
  elements.get('quiz-kaust-phase-select').value='Track 2: Grades 8-9';context.filterQuestions();
- assert.equal(run('currentFilteredQuestions.length'),450);
+ assert.equal(run('currentFilteredQuestions.length'),750);
  elements.get('quiz-kaust-phase-select').value='Track 3: Grades 10-11';context.filterQuestions();
- assert.equal(run('currentFilteredQuestions.length'),450);
+ assert.equal(run('currentFilteredQuestions.length'),750);
  elements.get('quiz-kaust-phase-select').value='all';context.filterQuestions();
  // KAUST KMC exclusively covers Grades 6-11 across its 3 official grade bands.
  for(const g of [1,2,3,4,5,12]){
@@ -51,13 +51,13 @@ const run=s=>vm.runInContext(s,context);
  }
  for(const [g,expectedLevel] of [[6,'Track 1: Grades 6-7'],[7,'Track 1: Grades 6-7'],[8,'Track 2: Grades 8-9'],[9,'Track 2: Grades 8-9'],[10,'Track 3: Grades 10-11'],[11,'Track 3: Grades 10-11']]){
   context.setGradeFilter(g);
-  assert.equal(run('currentFilteredQuestions.length'),450);
+  assert.equal(run('currentFilteredQuestions.length'),750);
   assert(run(`currentFilteredQuestions.every(q=>q.level===${JSON.stringify(expectedLevel)})`));
  }
  context.setGradeFilter('all');
  // Verify KAUST geometry SVG diagram & 5-option (E) rendering in quiz card.
  elements.get('quiz-topic-select').value='Geometry';context.filterQuestions();
- assert.equal(run('currentFilteredQuestions.length'),340);
+ assert.equal(run('currentFilteredQuestions.length'),490);
  assert(elements.get('question-card-container').innerHTML.includes('<svg'));
  assert(elements.get('question-card-container').innerHTML.includes('>E<')||elements.get('question-card-container').innerHTML.includes('E\n'));
  elements.get('quiz-topic-select').value='all';context.filterQuestions();
@@ -116,11 +116,11 @@ const run=s=>vm.runInContext(s,context);
  assert.equal(elements.get('print-max-q').innerText,250);
  elements.get('print-track-select').value='kaust';context.updatePrintPhaseOptions();
  elements.get('print-phase-select').value='Track 1: Grades 6-7';context.updatePrintModalMax();
- assert.equal(elements.get('print-max-q').innerText,450);
+ assert.equal(elements.get('print-max-q').innerText,750);
  elements.get('print-phase-select').value='Track 2: Grades 8-9';context.updatePrintModalMax();
- assert.equal(elements.get('print-max-q').innerText,450);
+ assert.equal(elements.get('print-max-q').innerText,750);
  elements.get('print-phase-select').value='Track 3: Grades 10-11';context.updatePrintModalMax();
- assert.equal(elements.get('print-max-q').innerText,450);
+ assert.equal(elements.get('print-max-q').innerText,750);
  elements.get('print-q-count').value='15';context.executePrint();
  assert.equal(prints,2);assert(!elements.get('print-container').innerHTML.includes('undefined'));
  context.toggleLanguage();assert.equal(document.documentElement.dir,'rtl');
@@ -142,9 +142,14 @@ const run=s=>vm.runInContext(s,context);
  assert.equal(prints,prevPrints+1);
  assert(elements.get('print-container').innerHTML.includes('edugates-print-frame'));
  assert(elements.get('print-container').innerHTML.includes('LOGO.jpg'));
+ assert(elements.get('print-container').innerHTML.includes('End-of-Lesson Student Practice Drills')||elements.get('print-container').innerHTML.includes('تدريبات الطالب'));
+ assert(!elements.get('print-container').innerHTML.includes('undefined'));
+ context.printKaustLessonDrills('KMC-L1-04');
+ assert.equal(prints,prevPrints+2);
+ assert(elements.get('print-container').innerHTML.includes('edugates-print-frame'));
  assert(!elements.get('print-container').innerHTML.includes('undefined'));
  context.printKaustTrackBooklet('Track 2: Grades 8-9');
- assert.equal(prints,prevPrints+2);
+ assert.equal(prints,prevPrints+3);
  assert(elements.get('print-container').innerHTML.includes('eg-print-break'));
  console.log('PASS: startup, all counts, track switching, subtrack/grade filtering, MCQ marking, written work, print keys, KAUST study lessons & Edugates A4 print, Arabic and theme controls.');
  console.log('Runtime tests use lightweight DOM stubs; this is not browser or visual QA.');
@@ -157,14 +162,17 @@ const run=s=>vm.runInContext(s,context);
   const ids=new Set(JSON.parse(fs.readFileSync(path.join(root,'data/kaust.json'),'utf8')).map(q=>q.id));
   for(const l of lessons){
     assert(l.en.examples.length>=4&&l.ar.examples.length>=4,l.id);
-    assert.equal(l.bank_example_ids.length,5);
+    assert(l.en.concepts.every(c=>c.diagram&&c.diagram.includes('<svg')),l.id+' concept SVG');
+    assert.equal(l.bank_example_ids.length,6);
+    assert.equal(l.drill_ids.length,6);
     l.bank_example_ids.forEach(i=>assert(ids.has(i),i));
+    l.drill_ids.forEach(i=>{assert(ids.has(i),i);assert(!l.bank_example_ids.includes(i),'overlap '+i);});
     for(const e of l.en.examples)assert.equal(e.options.length,5);
   }
   const css=fs.readFileSync(path.join(root,'assets/refinement.css'),'utf8');
   assert(css.includes('size: A4 portrait'));
   const js=fs.readFileSync(path.join(root,'assets/kaust-study.js'),'utf8');
-  assert(js.includes('LOGO.jpg')&&js.includes('Edugates International School'));
+  assert(js.includes('LOGO.jpg')&&js.includes('Edugates International School')&&js.includes('printKaustLessonDrills'));
   assert(fs.existsSync(path.join(root,'LOGO.jpg')));
-  console.log('PASS: 18 KAUST lessons (167 solved examples), A4 CSS, Edugates branded print frame.');
+  console.log('PASS: 18 KAUST lessons (185 solved examples + 108 practice drills, 54/54 concept SVGs), A4 CSS, Edugates branded print frame.');
 })();

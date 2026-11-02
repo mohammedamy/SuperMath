@@ -1,4 +1,4 @@
-/* KAUST (KMC) Study Academy + Edugates International School Multi-Page A4 Print Engine */
+/* KAUST (KMC) Study Academy + Interactive Practice Drills + Edugates International School Multi-Page A4 Print Engine */
 (function () {
   'use strict';
 
@@ -13,6 +13,12 @@
     'Algebra': 'الجبر والأنماط',
     'Geometry': 'الهندسة والقياس',
     'Combinatorics & Logic': 'التوافيق والمنطق والاحتمالات',
+    'Data & Probability': 'البيانات والاحتمالات',
+  };
+  const DIFF_AR = {
+    Easy: 'سهل',
+    Medium: 'متوسط',
+    Hard: 'متقدم',
   };
 
   let lessons = [];
@@ -21,11 +27,15 @@
   let selfTestMode = false;
   let revealedExamples = new Set();
   let selectedTryChoice = {};
+  let drillChoice = {};
+  let revealedDrills = new Set();
+  let shownDrillHints = new Set();
 
   const isAr = () => (typeof currentLang !== 'undefined' ? currentLang === 'ar' : false);
   const L = (ar, en) => (isAr() ? ar : en);
   const pick = (o) => (o[isAr() ? 'ar' : 'en'] || o.en);
   const topicLabel = (tp) => (isAr() ? (TOPIC_AR[tp] || tp) : tp);
+  const diffLabel = (df) => (isAr() ? (DIFF_AR[df] || df) : df);
   const getBankQuestions = () => (typeof appData !== 'undefined' && Array.isArray(appData.questions) ? appData.questions : []);
 
   function bankExamples(les) {
@@ -37,11 +47,11 @@
       .filter(Boolean)
       .map((q, idx) => {
         const c = (q.content && (q.content[isAr() ? 'ar' : 'en'] || q.content.en)) || {};
-        const diffBadge = q.difficulty ? ` (${q.difficulty})` : '';
+        const diffBadge = q.difficulty ? ` (${diffLabel(q.difficulty)})` : '';
         return {
           id: q.id,
           correct_index: q.correct_index,
-          title: L(`تطبيق إضافي محلول ${idx + 1} من بنك كاوست${diffBadge}`, `Extra KMC Practice Example ${idx + 1}${diffBadge}`),
+          title: L(`تطبيق إضافي محلول ${idx + 1} من بنك كاوست${diffBadge}`, `Extra KMC Worked Example ${idx + 1}${diffBadge}`),
           question: c.question || '',
           options: c.options || [],
           explanation: c.explanation || '',
@@ -49,6 +59,30 @@
           fromBank: true,
         };
       });
+  }
+
+  function lessonDrillQuestions(les) {
+    const qs = getBankQuestions();
+    if (!qs.length) return [];
+    const byId = new Map(qs.map((q) => [q.id, q]));
+    return (les.drill_ids || []).map((id) => byId.get(id)).filter(Boolean);
+  }
+
+  function lessonDrills(les) {
+    return lessonDrillQuestions(les).map((q) => {
+      const c = (q.content && (q.content[isAr() ? 'ar' : 'en'] || q.content.en)) || {};
+      return {
+        id: q.id,
+        difficulty: q.difficulty || 'Medium',
+        topic: q.topic || les.topic,
+        correct_index: q.correct_index,
+        question: c.question || '',
+        options: c.options || [],
+        hint: c.hint || '',
+        explanation: c.explanation || '',
+        diagram: c.diagram || q.diagram || '',
+      };
+    });
   }
 
   function allExamplesFor(les) {
@@ -110,10 +144,71 @@
     </div>`;
   }
 
+  function drillCardHtml(lesId, dr, num, forPrint) {
+    const dKey = `${lesId}:${dr.id}`;
+    const chosen = drillChoice[dKey];
+    const isRevealed = !forPrint && revealedDrills.has(dKey);
+    const showHint = !forPrint && shownDrillHints.has(dKey);
+    const diffCls = dr.difficulty === 'Easy' ? 'eg-diff-easy' : (dr.difficulty === 'Hard' ? 'eg-diff-hard' : 'eg-diff-med');
+
+    const opts = (dr.options || []).map((opt, idx) => {
+      if (forPrint) {
+        return `<div class="eg-ws-opt"><span class="eg-opt-l">${LABELS[idx]}</span><span class="math-font eg-opt-txt">${opt}</span></div>`;
+      }
+      const isCorrect = idx === dr.correct_index;
+      let cls = 'eg-opt eg-opt-interactive';
+      let badge = '';
+      if (isRevealed && isCorrect) {
+        cls = 'eg-opt eg-opt-ok';
+        badge = '<span class="eg-tick" aria-hidden="true">✓</span>';
+      } else if (chosen === idx && isCorrect) {
+        cls = 'eg-opt eg-opt-ok';
+        badge = '<span class="eg-tick" aria-hidden="true">✓</span>';
+      } else if (chosen === idx && !isCorrect) {
+        cls += ' eg-opt-wrong';
+        badge = '<span class="eg-cross" aria-hidden="true">✗</span>';
+      }
+      if (isRevealed) {
+        return `<div class="${cls}"><span class="eg-opt-l">${LABELS[idx]}</span><span class="math-font eg-opt-txt">${opt}</span>${badge}</div>`;
+      }
+      return `<button type="button" onclick="answerKaustDrill('${dKey}', ${idx})" class="${cls}"><span class="eg-opt-l">${LABELS[idx]}</span><span class="math-font eg-opt-txt">${opt}</span>${badge}</button>`;
+    }).join('');
+
+    const interactiveFooter = forPrint
+      ? ''
+      : `
+        <div class="eg-drill-actions no-print">
+          <div class="flex flex-wrap items-center gap-2">
+            ${dr.hint ? `<button type="button" onclick="toggleKaustDrillHint('${dKey}')" class="eg-btn eg-btn-sm">💡 ${showHint ? L('إخفاء التلميح', 'Hide Hint') : L('تلميح ذكي', 'Hint')}</button>` : ''}
+            ${!isRevealed ? `<button type="button" onclick="revealKaustDrill('${dKey}')" class="eg-btn eg-btn-sm">👁️ ${L('إظهار الحل التفصيلي', 'Show Step-by-Step Solution')}</button>` : ''}
+          </div>
+          <span class="eg-drill-id">${dr.id}</span>
+        </div>
+        ${showHint && dr.hint ? `<div class="eg-drill-hint math-font no-print">💡 <strong>${L('تلميح:', 'Hint:')}</strong> ${dr.hint}</div>` : ''}
+        ${isRevealed ? `<div class="eg-sol no-print">
+          <div class="eg-sol-h">✅ ${L('الإجابة الصحيحة', 'Correct Answer')}: (${LABELS[dr.correct_index]}) — ${L('الشرح التفصيلي', 'Step-by-Step Solution')}</div>
+          <div class="math-font eg-prose">${dr.explanation}</div>
+        </div>` : ''}`;
+
+    return `<div class="eg-card eg-drill no-break">
+      <div class="eg-ex-top">
+        <div class="eg-drill-h">📝 ${L('تدريب تطبيقي', 'Practice Drill')} ${num}</div>
+        <div class="flex items-center gap-1.5">
+          <span class="eg-diff-pill ${diffCls}">${diffLabel(dr.difficulty)}</span>
+        </div>
+      </div>
+      <div class="eg-q math-font">${dr.question}</div>
+      ${dr.diagram ? `<div class="eg-diagram">${dr.diagram}</div>` : ''}
+      <div class="${forPrint ? 'eg-ws-opts' : 'eg-opts'}">${opts}</div>
+      ${interactiveFooter}
+    </div>`;
+  }
+
   function lessonBlocks(les, forPrint) {
     const d = pick(les);
     const tr = TRACKS.find((t) => t.level === les.level) || TRACKS[0];
     const exs = allExamplesFor(les);
+    const drills = lessonDrills(les);
 
     const bannerAndGoals = `
       <div class="eg-banner no-break">
@@ -155,7 +250,40 @@
       return card;
     });
 
-    return [bannerAndGoals, ...conceptBlocks, trapsBlock, ...exampleBlocks];
+    let drillBlocks = [];
+    if (drills.length) {
+      const solvedDrills = drills.filter((dr) => drillChoice[`${les.id}:${dr.id}`] === dr.correct_index).length;
+      const allDrillsOpen = drills.every((dr) => revealedDrills.has(`${les.id}:${dr.id}`));
+
+      const drillIntro = forPrint
+        ? `<div class="eg-sec-heading">📝 ${L('تدريبات الطالب للتطبيق الذاتي — حلّ بدون آلة حاسبة', 'End-of-Lesson Student Practice Drills — Solve Without Calculator')} (${drills.length})</div>`
+        : `<div class="eg-drill-bar no-print">
+            <div>
+              <div class="eg-sec-heading" style="margin:0;border:0;padding:0">📝 ${L('تدريبات نهاية الدرس — اختبر فهمك الآن', 'End-of-Lesson Practice Drills — Test Your Mastery')} (${drills.length})</div>
+              <p class="text-xs opacity-80 mt-0.5">${L('مدرّجة من السهل إلى المتقدم تماماً مثل ورقة مسابقة كاوست. اختر الإجابة للتحقق الفوري أو اطبعها كورقة عمل مستقلة!', 'Graduated Easy → Medium → Hard just like a real KMC paper. Click an option to check instantly, or print as a standalone A4 worksheet!')}</p>
+            </div>
+            <div class="flex flex-wrap items-center gap-2">
+              <span class="eg-lc-pill">${L('النتيجة:', 'Solved:')} ${solvedDrills} / ${drills.length}</span>
+              <button type="button" onclick="toggleAllKaustDrills('${les.id}')" class="eg-btn eg-btn-sm">${allDrillsOpen ? '🔄 ' + L('إعادة ضبط التدريبات', 'Reset Drills') : '👁️ ' + L('إظهار جميع الحلول', 'Show All Solutions')}</button>
+              <button type="button" onclick="printKaustLessonDrills('${les.id}')" class="eg-btn eg-btn-main eg-btn-sm">🖨️ ${L('طباعة ورقة التدريبات (A4)', 'Print Drills Worksheet (A4)')}</button>
+            </div>
+          </div>`;
+
+      drillBlocks = drills.map((dr, i) => {
+        const card = drillCardHtml(les.id, dr, i + 1, forPrint);
+        return i === 0 ? `<div class="no-break">${drillIntro}${card}</div>` : card;
+      });
+
+      if (forPrint) {
+        const keyCells = drills.map((dr, idx) => `<div class="eg-key-cell" dir="ltr"><strong>${idx + 1}.</strong> <span>(${LABELS[dr.correct_index]})</span></div>`).join('');
+        drillBlocks.push(`<div class="eg-key-box no-break">
+          <div class="eg-h3">🔑 ${L('مفتاح إجابات تدريبات نهاية الدرس', 'Answer Key — End-of-Lesson Practice Drills')} (${L('درس', 'Lesson')} ${les.unit_num})</div>
+          <div class="eg-key-grid">${keyCells}</div>
+        </div>`);
+      }
+    }
+
+    return [bannerAndGoals, ...conceptBlocks, trapsBlock, ...exampleBlocks, ...drillBlocks];
   }
 
   function lessonBodyHtml(les, forPrint) {
@@ -212,7 +340,7 @@
     return window.edugatesPrintSection([bodyHtml], title, rtl ? 'ورقة عمل A4' : 'A4 Worksheet', rtl, false);
   };
 
-  /* Dedicated row-paginated Practice Worksheet + Answer Key builder for executePrint() */
+  /* Dedicated row-paginated Practice Worksheet + Answer Key builder for executePrint() & Lesson Drills */
   window.buildEdugatesWorksheetHtml = function (questionsToPrint, docTitle, answerKeyTitle, qLabel, badgeText, includeSolutions, rtl) {
     const studentBar = `<div class="eg-student-bar">
       <div><strong>${rtl ? 'اسم الطالب/ـة:' : 'Student Name:'}</strong> ___________________________</div>
@@ -249,7 +377,7 @@
           const ans = (q.type === 'MCQ' && q.correct_index !== undefined && q.correct_index !== null)
             ? LABELS[q.correct_index]
             : 'FRQ';
-          return `<div class="eg-key-cell"><strong>${idx + 1}.</strong> <span>${ans}</span></div>`;
+          return `<div class="eg-key-cell" dir="ltr"><strong>${idx + 1}.</strong> <span>${ans}</span></div>`;
         }).join('')}
       </div>
     </div>`;
@@ -296,6 +424,21 @@
     const docTitle = `${L('شرح الدرس', 'Study Guide')} ${les.unit_num} — ${pick(les).title}`;
     const badge = `${isAr() ? tr.shortAr : tr.shortEn} · KAUST KMC · A4`;
     c.innerHTML = window.edugatesPrintSection(lessonBlocks(les, true), docTitle, badge, isAr(), false);
+    triggerContainerPrint(c);
+  };
+
+  window.printKaustLessonDrills = function (id) {
+    const les = lessons.find((x) => x.id === id);
+    if (!les) return;
+    const drillQs = lessonDrillQuestions(les);
+    if (!drillQs.length) return;
+    const tr = TRACKS.find((t) => t.level === les.level) || TRACKS[0];
+    const c = document.getElementById('print-container');
+    const docTitle = `${L('ورقة تدريبات الدرس', 'Practice Drills Worksheet')} ${les.unit_num} — ${pick(les).title}`;
+    const keyTitle = `${L('مفتاح الإجابات والحلول التفصيلية — درس', 'Answer Key & Step-by-Step Solutions — Lesson')} ${les.unit_num}`;
+    const qLbl = L('تدريب', 'Drill');
+    const badge = `${isAr() ? tr.shortAr : tr.shortEn} · ${L('ورقة تدريبات A4', 'A4 Drills')} · KMC`;
+    c.innerHTML = window.buildEdugatesWorksheetHtml(drillQs, docTitle, keyTitle, qLbl, badge, true, isAr());
     triggerContainerPrint(c);
   };
 
@@ -365,6 +508,45 @@
     render();
   };
 
+  window.answerKaustDrill = function (dKey, choiceIdx) {
+    drillChoice[dKey] = choiceIdx;
+    const [lesId, qId] = dKey.split(':');
+    const les = lessons.find((x) => x.id === lesId);
+    if (les) {
+      const dr = lessonDrills(les).find((x) => x.id === qId);
+      if (dr && choiceIdx === dr.correct_index) revealedDrills.add(dKey);
+    }
+    render();
+  };
+
+  window.toggleKaustDrillHint = function (dKey) {
+    if (shownDrillHints.has(dKey)) shownDrillHints.delete(dKey);
+    else shownDrillHints.add(dKey);
+    render();
+  };
+
+  window.revealKaustDrill = function (dKey) {
+    revealedDrills.add(dKey);
+    render();
+  };
+
+  window.toggleAllKaustDrills = function (lesId) {
+    const les = lessons.find((x) => x.id === lesId);
+    if (!les) return;
+    const keys = (les.drill_ids || []).map((id) => `${lesId}:${id}`);
+    const allOpen = keys.length > 0 && keys.every((k) => revealedDrills.has(k));
+    keys.forEach((k) => {
+      if (allOpen) {
+        revealedDrills.delete(k);
+        shownDrillHints.delete(k);
+        delete drillChoice[k];
+      } else {
+        revealedDrills.add(k);
+      }
+    });
+    render();
+  };
+
   window.toggleKaustSelfTest = function () {
     selfTestMode = !selfTestMode;
     if (!selfTestMode) {
@@ -419,9 +601,10 @@
     const tabs = TRACKS.map((t) => {
       const tLessons = lessons.filter((x) => x.level === t.level);
       const exTotal = tLessons.reduce((acc, x) => acc + (pick(x).examples || []).length + (x.bank_example_ids || []).length, 0);
+      const drTotal = tLessons.reduce((acc, x) => acc + (x.drill_ids || []).length, 0);
       return `<button type="button" onclick="setKaustTrack('${t.level}')" class="eg-tab${t.level === activeTrack ? ' eg-tab-on' : ''}">
         <span>${isAr() ? t.ar : t.en}</span>
-        <span class="eg-tab-count">${tLessons.length} ${L('دروس', 'Lessons')} · ${exTotal} ${L('مثال', 'Ex')}</span>
+        <span class="eg-tab-count">${tLessons.length} ${L('دروس', 'Lessons')} · ${exTotal} ${L('مثال', 'Ex')} · ${drTotal} ${L('تدريب', 'Drills')}</span>
       </button>`;
     }).join('');
 
@@ -438,12 +621,13 @@
           <div class="flex flex-wrap gap-2">
             <button type="button" onclick="closeKaustLesson()" class="eg-btn">${isAr() ? '→' : '←'} ${L('جميع دروس المسار', 'All Track Lessons')}</button>
             <button type="button" onclick="toggleKaustSelfTest()" class="eg-btn${selfTestMode ? ' eg-tab-on' : ''}">
-              ${selfTestMode ? '🧠 ' + L('وضع اختبر نفسك (مفعّل)', 'Self-Test Mode: ON') : '👁️ ' + L('جميع الحلول معروضة (اضغط للاختبار الذاتي)', 'All Solutions Shown (Try Self-Test)')}
+              ${selfTestMode ? '🧠 ' + L('وضع اختبر نفسك (مفعّل)', 'Self-Test Mode: ON') : '👁️ ' + L('الأمثلة المحلولة معروضة', 'Worked Solutions Shown')}
             </button>
           </div>
           <div class="flex flex-wrap gap-2">
-            <button type="button" onclick="printKaustLesson('${les.id}')" class="eg-btn eg-btn-main">🖨️ ${L('طباعة الدرس A4 بشعار المدرسة', 'Print Lesson (A4)')}</button>
-            <button type="button" onclick="practiceKaustLesson('${les.id}')" class="eg-btn eg-btn-go">⚡ ${L('تدرّب على أسئلة الدرس', 'Practice Lesson')} (${qCount(les)})</button>
+            <button type="button" onclick="printKaustLesson('${les.id}')" class="eg-btn eg-btn-main">🖨️ ${L('طباعة الدرس + التدريبات (A4)', 'Print Lesson + Drills (A4)')}</button>
+            <button type="button" onclick="printKaustLessonDrills('${les.id}')" class="eg-btn">📝 ${L('طباعة ورقة التدريبات فقط (A4)', 'Print Drills Sheet (A4)')}</button>
+            <button type="button" onclick="practiceKaustLesson('${les.id}')" class="eg-btn eg-btn-go">⚡ ${L('بنك الدرس', 'Practice Bank')} (${qCount(les)})</button>
           </div>
         </div>
         <div class="eg-reader">${lessonBodyHtml(les, false)}</div>
@@ -455,6 +639,7 @@
       const cards = lessons.filter((x) => x.level === activeTrack).map((les) => {
         const d = pick(les);
         const solvedCount = (d.examples || []).length + (les.bank_example_ids || []).length;
+        const drillCount = (les.drill_ids || []).length;
         const qc = qCount(les);
         return `<div class="eg-lesson-card">
           <div>
@@ -463,15 +648,16 @@
                 <span class="eg-badge">${L('درس', 'Lesson')} ${les.unit_num}</span>
                 <span class="eg-badge eg-badge-alt">${topicLabel(les.topic)}</span>
               </div>
-              <span class="eg-lc-pill">${solvedCount} ${L('أمثلة محلولة', 'Solved Examples')}</span>
+              <span class="eg-lc-pill">${solvedCount} ${L('مثال محلول', 'Solved')} · ${drillCount} ${L('تدريبات', 'Drills')}</span>
             </div>
             <h3 class="eg-lc-title" onclick="openKaustLesson('${les.id}')">${d.title}</h3>
             <p class="eg-lc-desc math-font">${d.summary}</p>
           </div>
           <div class="eg-lc-actions">
-            <button type="button" onclick="openKaustLesson('${les.id}')" class="eg-btn eg-btn-main eg-btn-sm flex-1">📖 ${L('اقرأ الشرح والأمثلة', 'Study Lesson')}</button>
-            <button type="button" onclick="printKaustLesson('${les.id}')" class="eg-btn eg-btn-sm" title="${L('طباعة A4', 'Print A4')}">🖨️ A4</button>
-            <button type="button" onclick="practiceKaustLesson('${les.id}')" class="eg-btn eg-btn-go eg-btn-sm" title="${L('تدريب', 'Practice')}">⚡ ${qc}</button>
+            <button type="button" onclick="openKaustLesson('${les.id}')" class="eg-btn eg-btn-main eg-btn-sm flex-1">📖 ${L('الشرح والأمثلة والتدريبات', 'Study & Drills')}</button>
+            <button type="button" onclick="printKaustLesson('${les.id}')" class="eg-btn eg-btn-sm" title="${L('طباعة الدرس A4', 'Print Lesson A4')}">🖨️ A4</button>
+            <button type="button" onclick="printKaustLessonDrills('${les.id}')" class="eg-btn eg-btn-sm" title="${L('طباعة ورقة تدريبات الدرس A4', 'Print Drills Worksheet A4')}">📝</button>
+            <button type="button" onclick="practiceKaustLesson('${les.id}')" class="eg-btn eg-btn-go eg-btn-sm" title="${L('بنك الأسئلة', 'Question Bank')}">⚡ ${qc}</button>
           </div>
         </div>`;
       }).join('');
@@ -479,7 +665,7 @@
       inner = `
         <div class="eg-subbar no-print">
           <div class="text-xs sm:text-sm opacity-85">
-            ✨ ${L('كل درس مصمّم بلغة واضحة ومبسّطة خطوة بخطوة مع رسوم هندسية ومخرجات طباعة A4 رسمية تحمل شعار المدرسة في كل صفحة.', 'Every lesson is written step-by-step for easy understanding, loaded with diagrams & worked examples, and formatted for A4 printing with the Edugates logo on every page.')}
+            ✨ ${L('كل درس مزوّد برسوم توضيحية وأمثلة محلولة خطوة بخطوة وتدريبات ختامية متدرجة قابلة للطباعة على ورق A4 بشعار مدرسة بوابة المعرفة العالمية في كل صفحة.', 'Every lesson includes custom diagrams, step-by-step solved examples, and graduated end-of-lesson practice drills — ready to print on A4 paper with the Edugates logo on every page.')}
           </div>
           <button type="button" onclick="printKaustTrackBooklet('${activeTrack}')" class="eg-btn eg-btn-main shrink-0">
             📚 ${L('طباعة مذكرة المسار كاملةً (A4)', 'Print Full Track Booklet (A4)')}
@@ -489,13 +675,14 @@
     }
 
     const totalSolvedAll = lessons.reduce((a, x) => a + (x.en.examples || []).length + (x.bank_example_ids || []).length, 0);
+    const totalDrillsAll = lessons.reduce((a, x) => a + (x.drill_ids || []).length, 0);
     root.innerHTML = `<div class="eg-hub">
       <div class="eg-hub-h">
         <div class="eg-hub-logo-box"><img src="LOGO.jpg" alt="Edugates International School" class="eg-hub-logo"></div>
         <div class="flex-1">
           <div class="eg-hub-kicker">Edugates International School · مدرسة بوابة المعرفة العالمية</div>
           <h2 class="text-2xl sm:text-3xl font-display font-extrabold">📖 ${L('أكاديمية شرح دروس مسابقة كاوست للرياضيات (KMC)', 'KAUST Math Competition (KMC) Study Lessons')}</h2>
-          <p class="text-xs sm:text-sm opacity-80 mt-1">${L(`18 درساً شاملاً · ${totalSolvedAll} مثالاً محلولاً بالتفصيل · رسوم توضيحية دقيقة · طباعة A4 رسمية بشعار المدرسة على جميع الصفحات`, `18 Complete Lessons · ${totalSolvedAll} Step-by-Step Solved Examples · Past-Paper Diagrams · Branded A4 Printouts`)}</p>
+          <p class="text-xs sm:text-sm opacity-80 mt-1">${L(`18 درساً مصوّراً · ${totalSolvedAll} مثالاً محلولاً بالتفصيل · ${totalDrillsAll} تدريباً تطبيقياً · طباعة A4 رسمية بشعار المدرسة على جميع الصفحات`, `18 Illustrated Lessons · ${totalSolvedAll} Step-by-Step Solved Examples · ${totalDrillsAll} Printable Practice Drills · Branded A4 Printouts`)}</p>
         </div>
       </div>
       <div class="eg-tabs no-print">${tabs}</div>

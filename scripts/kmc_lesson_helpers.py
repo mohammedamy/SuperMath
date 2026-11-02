@@ -50,15 +50,7 @@ _AR_FORMULA_MAP = [
 
 def _polish_html(s: str) -> str:
     """Format markdown bold/code, convert newlines to <br>, and glue trailing punctuation to inline math."""
-    out = _format_prose_html(s)
-    out = out.replace("\n", "<br>")
-    # Prevent orphan punctuation (! . , ? ; : ، ؟) wrapping alone onto a new line right after short \( ... \)
-    out = re.sub(
-        r"(\\\([^<>]{1,42}?\\\))([.,!?;:،؟]+)",
-        r'<span class="eg-mkeep">\1\2</span>',
-        out,
-    )
-    return out
+    return _format_prose_html(s)
 
 
 def _localize_formula_ar(formula_en: str, formula_ar: str) -> str:

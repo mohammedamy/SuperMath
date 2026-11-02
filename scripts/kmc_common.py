@@ -117,7 +117,7 @@ def make_5_bilingual_options(pairs: list[tuple[str, str]], correct_pair_idx: int
 
 
 def _format_prose_html(s: str) -> str:
-    """Convert **bold** and `code` (including bold wrapping \\( ... \\)) into clean HTML tags."""
+    """Convert **bold** and `code`, newlines to <br>, and glue trailing punctuation to short inline math."""
     saved: list[str] = []
 
     def _stash(match: re.Match) -> str:
@@ -127,6 +127,16 @@ def _format_prose_html(s: str) -> str:
     masked = re.sub(r"\\\(.*?\\\)", _stash, s.strip(), flags=re.S)
     masked = re.sub(r"\*\*(.+?)\*\*", r"<strong>\1</strong>", masked)
     masked = re.sub(r"`([^`]+)`", r"<code>\1</code>", masked)
+    masked = masked.replace("\n", "<br>")
+
+    def _glue_punct(match: re.Match) -> str:
+        expr = saved[int(match.group(1))]
+        punct = match.group(2)
+        if len(expr) <= 36 and "<" not in expr and ">" not in expr:
+            return f'<span class="eg-mkeep">{expr}{punct}</span>'
+        return f"{expr}{punct}"
+
+    masked = re.sub(r"\x00MATH(\d+)\x00([.,!?;:،؟]+)", _glue_punct, masked)
     return re.sub(r"\x00MATH(\d+)\x00", lambda m_: saved[int(m_.group(1))], masked)
 
 

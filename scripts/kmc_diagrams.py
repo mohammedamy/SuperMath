@@ -25,9 +25,9 @@ RED = "#dc2626"
 def wrap_svg(body: str, w: int = 320, h: int = 200, disp_w: int = 420,
              title: str = "KMC competition diagram / رسم مسابقة كاوست للرياضيات") -> str:
     svg = (
-        f'<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 {w} {h}" '
+        f'<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 {w} {h}" dir="ltr" '
         f'role="img" aria-label="{title}" '
-        f'style="display:block;max-width:100%;width:{disp_w}px;max-height:280px;'
+        f'style="display:block;direction:ltr;max-width:100%;width:{disp_w}px;max-height:280px;'
         f'margin:14px auto;background:#ffffff;border-radius:10px;border:1px solid #cbd5e1">'
         f'<title>{title}</title>{body}</svg>'
     )

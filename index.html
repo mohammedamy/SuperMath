@@ -1194,7 +1194,7 @@
               <div class="flex flex-wrap gap-1">
                 ${topics.map(tp => `<span class="text-[11px] bg-white/80 dark:bg-slate-700/80 px-2 py-0.5 rounded text-slate-600 dark:text-slate-300 border border-slate-200 dark:border-slate-600">${tp}</span>`).join('')}
               </div>
-              ${tr.id === 'kaust' ? `<button type="button" onclick="event.stopPropagation();if(window.jumpToKaustStudy)jumpToKaustStudy();" class="mt-3 w-full py-2 px-3 rounded-xl bg-teal-700 hover:bg-teal-600 text-white text-xs font-extrabold flex items-center justify-center gap-1.5 shadow-sm transition-colors">📖 ${currentLang === 'ar' ? '١٨ درساً مشروحاً مع ١٦٧ مثالاً محلولاً وطباعة A4' : '18 Study Lessons · 167 Solved Examples · A4 Print'}</button>` : ''}
+              ${tr.id === 'kaust' ? `<button type="button" onclick="event.stopPropagation();if(window.jumpToKaustStudy)jumpToKaustStudy();" class="mt-3 w-full py-2 px-3 rounded-xl bg-teal-700 hover:bg-teal-600 text-white text-xs font-extrabold flex items-center justify-center gap-1.5 shadow-sm transition-colors">📖 ${currentLang === 'ar' ? '١٨ درساً مصوّراً · ١٨٥ مثالاً محلولاً · ١٠٨ تدريبات وطباعة A4' : '18 Study Lessons · 185 Solved Examples · 108 Drills · A4 Print'}</button>` : ''}
             </div>
           </div>
         `;

@@ -1159,6 +1159,114 @@ svg[viewBox]:not(mjx-container svg) {
   background: #1e293b;
 }
 
+/* End-of-Lesson Interactive & Printable Practice Drills */
+.eg-drill-bar {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem;
+  margin: 1.5rem 0 0.85rem 0;
+  padding: 0.85rem 1.05rem;
+  border-radius: 0.9rem;
+  background: #f0f9ff;
+  border: 1px solid #bae6fd;
+}
+
+.dark .eg-drill-bar {
+  background: rgba(12, 74, 110, 0.35);
+  border-color: rgba(56, 189, 248, 0.35);
+}
+
+.eg-drill {
+  border-inline-start: 4px solid #0284c7;
+}
+
+.eg-drill-h {
+  font-weight: 800;
+  font-size: 1rem;
+  color: #0369a1;
+}
+
+.dark .eg-drill-h {
+  color: #38bdf8;
+}
+
+.eg-diff-pill {
+  font-size: 0.68rem;
+  font-weight: 800;
+  padding: 0.12rem 0.58rem;
+  border-radius: 999px;
+  border: 1px solid transparent;
+}
+
+.eg-diff-easy {
+  background: #dcfce7;
+  color: #166534;
+  border-color: #86efac;
+}
+
+.eg-diff-med {
+  background: #fef3c7;
+  color: #92400e;
+  border-color: #fcd34d;
+}
+
+.eg-diff-hard {
+  background: #ffe4e6;
+  color: #9f1239;
+  border-color: #fda4af;
+}
+
+.dark .eg-diff-easy {
+  background: rgba(22, 163, 74, 0.22);
+  color: #86efac;
+  border-color: rgba(74, 222, 128, 0.38);
+}
+
+.dark .eg-diff-med {
+  background: rgba(245, 158, 11, 0.22);
+  color: #fde68a;
+  border-color: rgba(251, 191, 36, 0.38);
+}
+
+.dark .eg-diff-hard {
+  background: rgba(244, 63, 94, 0.22);
+  color: #fda4af;
+  border-color: rgba(251, 113, 133, 0.38);
+}
+
+.eg-drill-actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.5rem;
+  margin-top: 0.5rem;
+}
+
+.eg-drill-id {
+  font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+  font-size: 0.72rem;
+  color: #64748b;
+}
+
+.eg-drill-hint {
+  margin-top: 0.55rem;
+  padding: 0.6rem 0.85rem;
+  border-radius: 0.65rem;
+  background: #f0f9ff;
+  border: 1px solid #7dd3fc;
+  color: #0c4a6e;
+  font-size: 0.9rem;
+}
+
+.dark .eg-drill-hint {
+  background: rgba(14, 116, 144, 0.25);
+  border-color: rgba(56, 189, 248, 0.4);
+  color: #e0f2fe;
+}
+
 .eg-nav-footer {
   display: flex;
   flex-wrap: wrap;
@@ -1399,6 +1507,32 @@ svg[viewBox]:not(mjx-container svg) {
     border-inline-start: 3pt solid #d97706 !important;
   }
 
+  #print-container .eg-drill {
+    border-inline-start: 3pt solid #0284c7 !important;
+  }
+
+  #print-container .eg-drill-h {
+    color: #0369a1 !important;
+  }
+
+  #print-container .eg-diff-easy {
+    background: #dcfce7 !important;
+    color: #166534 !important;
+    border: 0.6pt solid #4ade80 !important;
+  }
+
+  #print-container .eg-diff-med {
+    background: #fef3c7 !important;
+    color: #92400e !important;
+    border: 0.6pt solid #f59e0b !important;
+  }
+
+  #print-container .eg-diff-hard {
+    background: #ffe4e6 !important;
+    color: #9f1239 !important;
+    border: 0.6pt solid #fb7185 !important;
+  }
+
   #print-container .eg-sec-heading {
     margin: 1.5mm 0 2mm 0 !important;
     font-size: 11.5pt !important;
@@ -1571,6 +1705,9 @@ svg[viewBox]:not(mjx-container svg) {
   }
 
   .eg-key-cell {
+    direction: ltr !important;
+    unicode-bidi: isolate !important;
+    text-align: center;
     padding: 1.2mm 2mm;
     border: 0.6pt solid #cbd5e1;
     border-radius: 1.4mm;

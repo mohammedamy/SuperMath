@@ -59,28 +59,35 @@ FORBIDDEN_RE = re.compile("|".join(FORBIDDEN_PATTERNS), re.IGNORECASE)
 
 
 def build() -> None:
+    import kmc_t1_extra
+    import kmc_t2_extra
+    import kmc_t3_extra
+
     t1_items = (
         kmc_t1_numbers.generate_t1_numbers()
         + kmc_t1_algebra.generate_t1_algebra()
         + kmc_t1_geometry.generate_t1_geometry()
         + kmc_t1_comb_data.generate_t1_comb_data()
+        + kmc_t1_extra.generate_t1_extra()
     )
     t2_items = (
         kmc_t2_number_theory.generate()
         + kmc_t2_algebra.generate_t2_algebra()
         + kmc_t2_geometry.generate()
         + kmc_t2_comb_data.generate()
+        + kmc_t2_extra.generate_t2_extra()
     )
     t3_items = (
         kmc_t3_number_theory.generate()
         + kmc_t3_algebra.generate()
         + kmc_t3_geometry.generate()
         + kmc_t3_comb_prob.generate()
+        + kmc_t3_extra.generate_t3_extra()
     )
 
-    assert len(t1_items) == 450, f"Track 1 count = {len(t1_items)}"
-    assert len(t2_items) == 450, f"Track 2 count = {len(t2_items)}"
-    assert len(t3_items) == 450, f"Track 3 count = {len(t3_items)}"
+    assert len(t1_items) == 750, f"Track 1 count = {len(t1_items)}"
+    assert len(t2_items) == 750, f"Track 2 count = {len(t2_items)}"
+    assert len(t3_items) == 750, f"Track 3 count = {len(t3_items)}"
 
     for i, q in enumerate(t1_items, 1):
         assert q["level"] == "Track 1: Grades 6-7"
@@ -93,7 +100,7 @@ def build() -> None:
         q["id"] = f"KAUST-G1011-{i:03d}"
 
     all_kaust = t1_items + t2_items + t3_items
-    assert len(all_kaust) == 1350
+    assert len(all_kaust) == 2250
 
     # Load all other 5 banks to guarantee zero cross-bank collisions
     other_en = {}

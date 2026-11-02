@@ -1,6 +1,6 @@
 {
   "status": "passed",
-  "total": 4850,
+  "total": 5750,
   "parameterized_additions": 1729,
   "independently_enumerated_generated_answers": 51,
   "scope_certification": false,
@@ -27,11 +27,11 @@
     },
     {
       "track": "kaust",
-      "total": 1350,
+      "total": 2250,
       "levels": {
-        "Track 1: Grades 6-7": 450,
-        "Track 2: Grades 8-9": 450,
-        "Track 3: Grades 10-11": 450
+        "Track 1: Grades 6-7": 750,
+        "Track 2: Grades 8-9": 750,
+        "Track 3: Grades 10-11": 750
       }
     },
     {
