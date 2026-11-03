@@ -45,6 +45,27 @@
         { level: 'Phase 3: Senior National Olympiad (Grade 10)', en: 'Phase 3 · Grade 10 (Senior)', ar: 'المرحلة ٣ · الصف 10 (المتقدم)', shortEn: 'Grade 10', shortAr: 'الصف 10' },
       ],
     },
+    kangaroo: {
+      id: 'kangaroo',
+      bpField: 'kangaroo_blueprint',
+      quizSelectId: 'quiz-kangaroo-level-select',
+      pillEn: '🦘 Kangaroo Math (Grades 3–10 · 5 Options)',
+      pillAr: '🦘 كانجارو موهبة (الصفوف 3–10 · 5 خيارات)',
+      hubTitleEn: 'Kangaroo Math Competition Study Lessons (Grades 3–10)',
+      hubTitleAr: 'أكاديمية شرح دروس مسابقة كانجارو موهبة للرياضيات (الصفوف 3–10)',
+      badgeEn: 'Kangaroo Math',
+      badgeAr: 'كانجارو موهبة',
+      bankTagEn: 'Kangaroo Bank',
+      bankTagAr: 'من بنك كانجارو',
+      trapsTitleEn: 'Watch Out — Common Kangaroo Math Puzzle Traps!',
+      trapsTitleAr: 'احذر هذه الأخطاء الشائعة في ألغاز مسابقة كانجارو!',
+      tracks: [
+        { level: 'Ecolier', en: 'Ecolier · Grades 3–4', ar: 'إيكولير · الصفان 3–4', shortEn: 'Grades 3–4 (Ecolier)', shortAr: 'الصفان 3–4 (إيكولير)' },
+        { level: 'Benjamin', en: 'Benjamin · Grades 5–6', ar: 'بنجامين · الصفان 5–6', shortEn: 'Grades 5–6 (Benjamin)', shortAr: 'الصفان 5–6 (بنجامين)' },
+        { level: 'Cadet', en: 'Cadet · Grades 7–8', ar: 'كاديت · الصفان 7–8', shortEn: 'Grades 7–8 (Cadet)', shortAr: 'الصفان 7–8 (كاديت)' },
+        { level: 'Junior', en: 'Junior · Grades 9–10', ar: 'جونيور · الصفان 9–10', shortEn: 'Grades 9–10 (Junior)', shortAr: 'الصفان 9–10 (جونيور)' },
+      ],
+    },
   };
 
   const TOPIC_AR = {
@@ -62,10 +83,12 @@
 
   let kaustLessons = [];
   let nsmoLessons = [];
+  let kangarooLessons = [];
   let activeComp = 'kaust';
   let activeTrackByComp = {
     kaust: COMP_CONFIG.kaust.tracks[0].level,
     nsmo: COMP_CONFIG.nsmo.tracks[0].level,
+    kangaroo: COMP_CONFIG.kangaroo.tracks[0].level,
   };
   let activeLessonId = null;
   let selfTestMode = false;
@@ -83,15 +106,20 @@
   const getBankQuestions = () => (typeof appData !== 'undefined' && Array.isArray(appData.questions) ? appData.questions : []);
 
   function allLessons() {
-    return kaustLessons.concat(nsmoLessons);
+    return kaustLessons.concat(nsmoLessons, kangarooLessons);
   }
 
   function currentLessons() {
-    return activeComp === 'nsmo' ? nsmoLessons : kaustLessons;
+    if (activeComp === 'nsmo') return nsmoLessons;
+    if (activeComp === 'kangaroo') return kangarooLessons;
+    return kaustLessons;
   }
 
   function compForLesson(les) {
     if (!les) return COMP_CONFIG[activeComp];
+    if (les.track === 'kangaroo' || String(les.id || '').startsWith('KANG-') || ['Ecolier', 'Benjamin', 'Cadet', 'Junior'].includes(les.level)) {
+      return COMP_CONFIG.kangaroo;
+    }
     if (les.track === 'nsmo' || String(les.id || '').startsWith('NSMO-') || String(les.level || '').startsWith('Phase ')) {
       return COMP_CONFIG.nsmo;
     }
@@ -521,7 +549,7 @@
         optsHtml = `<div class="eg-frq-box${scratchSpace === 'large' ? ' eg-frq-box-lg' : ''}"></div>`;
       }
       const card = `<div class="eg-ws-q no-break">
-        <div class="eg-ws-qh"><span>${qLabel} ${index + 1}</span><span class="eg-ws-qmeta">${topicLabel(q.topic || '')}${q.difficulty ? ' · ' + diffLabel(q.difficulty) : ''}</span></div>
+        <div class="eg-ws-qh"><span>${qLabel} ${index + 1}</span><span class="eg-ws-qmeta">${topicLabel(q.topic || '')}${q.difficulty ? ' · ' + diffLabel(q.difficulty) : ''}${q.kang_points ? ' · ' + q.kang_points + (rtl ? ' نقاط' : ' pts') : ''}</span></div>
         <div class="eg-q math-font">${qContent.question || ''}</div>
         ${diag ? `<div class="eg-diagram">${diag}</div>` : ''}
         ${optsHtml}
@@ -766,8 +794,9 @@
   };
 
   window.setStudyCompetition = function (compId) {
-    if (compId !== 'kaust' && compId !== 'nsmo') return;
+    if (compId !== 'kaust' && compId !== 'nsmo' && compId !== 'kangaroo') return;
     if (compId === 'nsmo' && !nsmoLessons.length) return;
+    if (compId === 'kangaroo' && !kangarooLessons.length) return;
     activeComp = compId;
     activeLessonId = null;
     render();
@@ -792,7 +821,10 @@
   };
 
   window.setKaustTrack = function (level) {
-    if (String(level || '').startsWith('Phase ')) {
+    if (['Ecolier', 'Benjamin', 'Cadet', 'Junior'].includes(level)) {
+      activeComp = 'kangaroo';
+      activeTrackByComp.kangaroo = level;
+    } else if (String(level || '').startsWith('Phase ')) {
       activeComp = 'nsmo';
       activeTrackByComp.nsmo = level;
     } else {
@@ -804,8 +836,10 @@
   };
 
   window.jumpToKaustStudy = function (levelOrComp) {
-    if (levelOrComp === 'kaust' || levelOrComp === 'nsmo') {
-      if (levelOrComp !== 'nsmo' || nsmoLessons.length) activeComp = levelOrComp;
+    if (levelOrComp === 'kaust' || levelOrComp === 'nsmo' || levelOrComp === 'kangaroo') {
+      if ((levelOrComp !== 'nsmo' || nsmoLessons.length) && (levelOrComp !== 'kangaroo' || kangarooLessons.length)) {
+        activeComp = levelOrComp;
+      }
       activeLessonId = null;
     } else if (levelOrComp) {
       window.setKaustTrack(levelOrComp);
@@ -832,10 +866,11 @@
     const cfg = COMP_CONFIG[activeComp];
     const activeTrack = activeTrackByComp[activeComp];
 
-    const compSwitcher = nsmoLessons.length
+    const compSwitcher = (nsmoLessons.length || kangarooLessons.length)
       ? `<div class="eg-comp-switch no-print" role="tablist" aria-label="Study Competition">
+          ${kangarooLessons.length ? `<button type="button" onclick="setStudyCompetition('kangaroo')" class="eg-comp-btn${activeComp === 'kangaroo' ? ' eg-comp-btn-on' : ''}">${isAr() ? COMP_CONFIG.kangaroo.pillAr : COMP_CONFIG.kangaroo.pillEn}</button>` : ''}
           <button type="button" onclick="setStudyCompetition('kaust')" class="eg-comp-btn${activeComp === 'kaust' ? ' eg-comp-btn-on' : ''}">${isAr() ? COMP_CONFIG.kaust.pillAr : COMP_CONFIG.kaust.pillEn}</button>
-          <button type="button" onclick="setStudyCompetition('nsmo')" class="eg-comp-btn${activeComp === 'nsmo' ? ' eg-comp-btn-on' : ''}">${isAr() ? COMP_CONFIG.nsmo.pillAr : COMP_CONFIG.nsmo.pillEn}</button>
+          ${nsmoLessons.length ? `<button type="button" onclick="setStudyCompetition('nsmo')" class="eg-comp-btn${activeComp === 'nsmo' ? ' eg-comp-btn-on' : ''}">${isAr() ? COMP_CONFIG.nsmo.pillAr : COMP_CONFIG.nsmo.pillEn}</button>` : ''}
         </div>`
       : '';
 
@@ -951,9 +986,10 @@
       sec.className = 'no-print-section';
       practice.parentNode.insertBefore(sec, practice);
     }
-    const [kRes, nRes] = await Promise.allSettled([
+    const [kRes, nRes, gRes] = await Promise.allSettled([
       fetch('data/kaust_lessons.json'),
       fetch('data/nsmo_lessons.json'),
+      fetch('data/kangaroo_lessons.json'),
     ]);
     if (kRes.status === 'fulfilled' && kRes.value && kRes.value.ok) {
       try {
@@ -965,7 +1001,12 @@
         nsmoLessons = ((await nRes.value.json()).lessons) || [];
       } catch (_) {}
     }
-    if (!kaustLessons.length && !nsmoLessons.length) return;
+    if (gRes.status === 'fulfilled' && gRes.value && gRes.value.ok) {
+      try {
+        kangarooLessons = ((await gRes.value.json()).lessons) || [];
+      } catch (_) {}
+    }
+    if (!kaustLessons.length && !nsmoLessons.length && !kangarooLessons.length) return;
 
     const t0 = Date.now();
     while (!getBankQuestions().length && Date.now() - t0 < 15000) {
@@ -988,7 +1029,12 @@
       const origGrade = window.setGradeFilter;
       window.setGradeFilter = function (g) {
         const res = origGrade.apply(this, arguments);
-        if (activeComp === 'nsmo') {
+        if (activeComp === 'kangaroo') {
+          if (g === 3 || g === 4) { activeTrackByComp.kangaroo = 'Ecolier'; activeLessonId = null; render(); }
+          else if (g === 5 || g === 6) { activeTrackByComp.kangaroo = 'Benjamin'; activeLessonId = null; render(); }
+          else if (g === 7 || g === 8) { activeTrackByComp.kangaroo = 'Cadet'; activeLessonId = null; render(); }
+          else if (g === 9 || g === 10) { activeTrackByComp.kangaroo = 'Junior'; activeLessonId = null; render(); }
+        } else if (activeComp === 'nsmo') {
           if (g === 7) { activeTrackByComp.nsmo = COMP_CONFIG.nsmo.tracks[0].level; activeLessonId = null; render(); }
           else if (g === 8 || g === 9) { activeTrackByComp.nsmo = COMP_CONFIG.nsmo.tracks[1].level; activeLessonId = null; render(); }
           else if (g === 10) { activeTrackByComp.nsmo = COMP_CONFIG.nsmo.tracks[2].level; activeLessonId = null; render(); }
@@ -1008,6 +1054,7 @@
   window.__kaustStudy = {
     get lessons() { return kaustLessons; },
     get nsmoLessons() { return nsmoLessons; },
+    get kangarooLessons() { return kangarooLessons; },
     get allLessons() { return allLessons(); },
     get activeComp() { return activeComp; },
     render,

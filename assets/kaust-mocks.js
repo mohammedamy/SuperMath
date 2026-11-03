@@ -101,6 +101,67 @@
         },
       ],
     },
+    kangaroo: {
+      id: 'kangaroo',
+      bpField: 'kangaroo_blueprint',
+      optCount: 5,
+      ptsCorrect: 4,
+      tierPoints: { Easy: 3, Medium: 4, Hard: 5 },
+      ptsWrong: 0,
+      ptsBlank: 0,
+      durationMin: 75,
+      pillEn: '🦘 Kangaroo Mocks (Grades 3–10 · 3/4/5 pts)',
+      pillAr: '🦘 اختبارات كانجارو موهبة (الصفوف 3–10 · 3/4/5 نقاط)',
+      hubTitleEn: 'Kangaroo Math Competition Full Official Mock Exams',
+      hubTitleAr: 'محاكي الاختبارات الرسمية الكاملة لمسابقة كانجارو موهبة للرياضيات',
+      badgeEn: 'Kangaroo Math',
+      badgeAr: 'كانجارو موهبة',
+      examNameEn: 'Kangaroo Math Competition (Mawhiba / KSF)',
+      examNameAr: 'مسابقة كانجارو موهبة للرياضيات',
+      scoreTag: '+3/+4/+5 · 0',
+      tracks: [
+        {
+          level: 'Ecolier',
+          code: 'ECO',
+          qCount: 24,
+          tiers: { Easy: 8, Medium: 8, Hard: 8 },
+          en: 'Ecolier · Grades 3–4',
+          ar: 'إيكولير · الصفان 3–4',
+          shortEn: 'Ecolier · Grades 3–4',
+          shortAr: 'إيكولير · الصفان 3–4',
+        },
+        {
+          level: 'Benjamin',
+          code: 'BEN',
+          qCount: 24,
+          tiers: { Easy: 8, Medium: 8, Hard: 8 },
+          en: 'Benjamin · Grades 5–6',
+          ar: 'بنجامين · الصفان 5–6',
+          shortEn: 'Benjamin · Grades 5–6',
+          shortAr: 'بنجامين · الصفان 5–6',
+        },
+        {
+          level: 'Cadet',
+          code: 'CAD',
+          qCount: 30,
+          tiers: { Easy: 10, Medium: 10, Hard: 10 },
+          en: 'Cadet · Grades 7–8',
+          ar: 'كاديت · الصفان 7–8',
+          shortEn: 'Cadet · Grades 7–8',
+          shortAr: 'كاديت · الصفان 7–8',
+        },
+        {
+          level: 'Junior',
+          code: 'JUN',
+          qCount: 30,
+          tiers: { Easy: 10, Medium: 10, Hard: 10 },
+          en: 'Junior · Grades 9–10',
+          ar: 'جونيور · الصفان 9–10',
+          shortEn: 'Junior · Grades 9–10',
+          shortAr: 'جونيور · الصفان 9–10',
+        },
+      ],
+    },
   };
 
   const TOPIC_AR = {
@@ -118,14 +179,18 @@
 
   let kaustDoc = null;
   let nsmoDoc = null;
+  let kangarooDoc = null;
   let kaustMocks = [];
   let nsmoMocks = [];
+  let kangarooMocks = [];
   let customKaustMocks = [];
   let customNsmoMocks = [];
+  let customKangarooMocks = [];
   let activeComp = 'kaust';
   let activeTrackByComp = {
     kaust: COMP_CONFIG.kaust.tracks[0].level,
     nsmo: COMP_CONFIG.nsmo.tracks[0].level,
+    kangaroo: COMP_CONFIG.kangaroo.tracks[0].level,
   };
   let bestScores = {};
 
@@ -142,6 +207,13 @@
 
   function compForPaper(paper) {
     if (!paper) return COMP_CONFIG[activeComp];
+    if (
+      paper.track === 'kangaroo' ||
+      String(paper.id || '').startsWith('KANG-') ||
+      ['Ecolier', 'Benjamin', 'Cadet', 'Junior'].includes(paper.level)
+    ) {
+      return COMP_CONFIG.kangaroo;
+    }
     if (paper.track === 'nsmo' || String(paper.id || '').startsWith('NSMO-') || String(paper.level || '').startsWith('Phase ')) {
       return COMP_CONFIG.nsmo;
     }
@@ -149,7 +221,31 @@
   }
 
   function compForLevel(level) {
+    if (['Ecolier', 'Benjamin', 'Cadet', 'Junior'].includes(level)) return COMP_CONFIG.kangaroo;
     return String(level || '').startsWith('Phase ') ? COMP_CONFIG.nsmo : COMP_CONFIG.kaust;
+  }
+
+  function docForComp(compId) {
+    if (compId === 'kangaroo') return kangarooDoc;
+    if (compId === 'nsmo') return nsmoDoc;
+    return kaustDoc;
+  }
+
+  function qPointsFor(paper, q, cfg) {
+    const tp = (paper && paper.tier_points) || (cfg && cfg.tierPoints) || null;
+    if (tp && q && tp[q.difficulty]) return tp[q.difficulty];
+    if (q && q.kang_points && cfg && cfg.id === 'kangaroo') return q.kang_points;
+    return (paper && paper.points_correct) ?? (cfg && cfg.ptsCorrect) ?? 4;
+  }
+
+  function diffBadgeLabel(q, paper, cfg, rtl) {
+    const tp = (paper && paper.tier_points) || (cfg && cfg.tierPoints) || null;
+    if (tp && q && tp[q.difficulty]) {
+      const pts = tp[q.difficulty];
+      const part = q.difficulty === 'Easy' ? 'A' : q.difficulty === 'Hard' ? 'C' : 'B';
+      return rtl ? `${pts} نقاط (Part ${part})` : `Part ${part} · ${pts} pts`;
+    }
+    return rtl ? DIFF_AR[q.difficulty] || q.difficulty : DIFF_EN[q.difficulty] || q.difficulty;
   }
 
   function allKaustPapers() {
@@ -160,12 +256,18 @@
     return [...nsmoMocks, ...customNsmoMocks];
   }
 
+  function allKangarooPapers() {
+    return [...kangarooMocks, ...customKangarooMocks];
+  }
+
   function allPapersAcrossComps() {
-    return [...allKaustPapers(), ...allNsmoPapers()];
+    return [...allKaustPapers(), ...allNsmoPapers(), ...allKangarooPapers()];
   }
 
   function currentCompPapers() {
-    return activeComp === 'nsmo' ? allNsmoPapers() : allKaustPapers();
+    if (activeComp === 'kangaroo') return allKangarooPapers();
+    if (activeComp === 'nsmo') return allNsmoPapers();
+    return allKaustPapers();
   }
 
   function findPaper(id) {
@@ -247,6 +349,8 @@
     let correct = 0;
     let wrong = 0;
     let blank = 0;
+    let earnedCorrectPts = 0;
+    let maxPoints = 0;
     const byDiff = {
       Easy: { total: 0, correct: 0, wrong: 0, blank: 0, points: 0 },
       Medium: { total: 0, correct: 0, wrong: 0, blank: 0, points: 0 },
@@ -255,12 +359,14 @@
     const byTopic = {};
     const weakLessons = new Map();
 
-    const doc = cfg.id === 'nsmo' ? nsmoDoc : kaustDoc;
+    const doc = docForComp(cfg.id);
     const bpMap = (doc && doc.blueprint_to_lesson) || {};
     const qLesMap = paper.question_lessons || {};
 
     questions.forEach((q, idx) => {
       const choice = answers[idx];
+      const qPts = qPointsFor(paper, q, cfg);
+      maxPoints += qPts;
       const d = byDiff[q.difficulty] || byDiff.Medium;
       d.total += 1;
       if (!byTopic[q.topic]) byTopic[q.topic] = { total: 0, correct: 0, wrong: 0, blank: 0 };
@@ -277,7 +383,8 @@
       } else if (choice === q.correct_index) {
         correct += 1;
         d.correct += 1;
-        d.points += ptsCorrect;
+        d.points += qPts;
+        earnedCorrectPts += qPts;
         byTopic[q.topic].correct += 1;
       } else {
         wrong += 1;
@@ -288,14 +395,14 @@
       }
     });
 
-    const rawScore = correct * ptsCorrect + wrong * ptsWrong + blank * ptsBlank;
+    const rawScore = earnedCorrectPts + wrong * ptsWrong + blank * ptsBlank;
     const score = Math.max(0, rawScore);
-    const maxPoints = questions.length * ptsCorrect;
     const pct = maxPoints > 0 ? Math.round((score / maxPoints) * 100) : 0;
 
     return {
       score,
       rawScore,
+      earnedCorrectPts,
       maxPoints,
       pct,
       correct,
@@ -331,7 +438,7 @@
     if (el) el.scrollIntoView({ behavior: 'smooth' });
   }
 
-  /* ---- Dynamic Balanced Official Mock Generator (Supports BOTH KAUST & NSMO) ---- */
+  /* ---- Dynamic Balanced Official Mock Generator (Supports Kangaroo, KAUST & NSMO) ---- */
   window.generateCustomKaustMock = function (level) {
     const targetLevel = level || activeTrackByComp[activeComp];
     const cfg = compForLevel(targetLevel);
@@ -341,7 +448,7 @@
 
     const usedBps = new Set();
     const chosen = [];
-    const doc = cfg.id === 'nsmo' ? nsmoDoc : kaustDoc;
+    const doc = docForComp(cfg.id);
     const bpMap = (doc && doc.blueprint_to_lesson) || {};
 
     ['Hard', 'Easy', 'Medium'].forEach((diff) => {
@@ -379,8 +486,8 @@
       ...chosen.filter((q) => q.difficulty === 'Hard'),
     ];
 
-    const customList = cfg.id === 'nsmo' ? customNsmoMocks : customKaustMocks;
-    const baseList = cfg.id === 'nsmo' ? nsmoMocks : kaustMocks;
+    const customList = cfg.id === 'kangaroo' ? customKangarooMocks : cfg.id === 'nsmo' ? customNsmoMocks : customKaustMocks;
+    const baseList = cfg.id === 'kangaroo' ? kangarooMocks : cfg.id === 'nsmo' ? nsmoMocks : kaustMocks;
     const baseCountForLevel = baseList.filter((p) => p.level === tr.level).length;
     const customIdx = customList.filter((p) => p.level === tr.level).length + 1;
     const svgCnt = ordered.filter((q) => q.content && q.content.en && q.content.en.diagram).length;
@@ -393,7 +500,10 @@
 
     const eCnt = tr.tiers.Easy;
     const mCnt = tr.tiers.Medium;
-    const prefix = cfg.id === 'nsmo' ? 'NSMO' : 'KMC';
+    const prefix = cfg.id === 'kangaroo' ? 'KANG' : cfg.id === 'nsmo' ? 'NSMO' : 'KMC';
+    const maxPts = cfg.tierPoints
+      ? eCnt * cfg.tierPoints.Easy + mCnt * cfg.tierPoints.Medium + tr.tiers.Hard * cfg.tierPoints.Hard
+      : ordered.length * cfg.ptsCorrect;
 
     const paper = {
       id: `${prefix}-MOCK-${tr.code}-CUSTOM-${customIdx}`,
@@ -407,10 +517,11 @@
       grades_ar: tr.shortAr,
       question_count: ordered.length,
       duration_minutes: cfg.durationMin,
+      tier_points: cfg.tierPoints || null,
       points_correct: cfg.ptsCorrect,
       points_wrong: cfg.ptsWrong,
       points_blank: cfg.ptsBlank,
-      max_points: ordered.length * cfg.ptsCorrect,
+      max_points: maxPts,
       svg_count: svgCnt,
       topic_counts: topicCounts,
       sections: [
@@ -419,24 +530,24 @@
           difficulty: 'Easy',
           start_q: 1,
           end_q: eCnt,
-          en: `Part A — Core Reasoning & Speed (Questions 1–${eCnt})`,
-          ar: `الجزء الأول (A) — التفكير الأساسي والسرعة (الأسئلة 1–${eCnt})`,
+          en: cfg.tierPoints ? `Part A — 3-Point Problems (Questions 1–${eCnt})` : `Part A — Core Reasoning & Speed (Questions 1–${eCnt})`,
+          ar: cfg.tierPoints ? `الجزء الأول (A) — مسائل الـ 3 نقاط (الأسئلة 1–${eCnt})` : `الجزء الأول (A) — التفكير الأساسي والسرعة (الأسئلة 1–${eCnt})`,
         },
         {
           id: 'B',
           difficulty: 'Medium',
           start_q: eCnt + 1,
           end_q: eCnt + mCnt,
-          en: `Part B — Multi-Step Contest Problems (Questions ${eCnt + 1}–${eCnt + mCnt})`,
-          ar: `الجزء الثاني (B) — المسائل التنافسية متعددة الخطوات (الأسئلة ${eCnt + 1}–${eCnt + mCnt})`,
+          en: cfg.tierPoints ? `Part B — 4-Point Problems (Questions ${eCnt + 1}–${eCnt + mCnt})` : `Part B — Multi-Step Contest Problems (Questions ${eCnt + 1}–${eCnt + mCnt})`,
+          ar: cfg.tierPoints ? `الجزء الثاني (B) — مسائل الـ 4 نقاط (الأسئلة ${eCnt + 1}–${eCnt + mCnt})` : `الجزء الثاني (B) — المسائل التنافسية متعددة الخطوات (الأسئلة ${eCnt + 1}–${eCnt + mCnt})`,
         },
         {
           id: 'C',
           difficulty: 'Hard',
           start_q: eCnt + mCnt + 1,
           end_q: ordered.length,
-          en: `Part C — Olympiad Qualifier Challenge (Questions ${eCnt + mCnt + 1}–${ordered.length})`,
-          ar: `الجزء الثالث (C) — تحدي التصفيات الأولمبية (الأسئلة ${eCnt + mCnt + 1}–${ordered.length})`,
+          en: cfg.tierPoints ? `Part C — 5-Point Problems (Questions ${eCnt + mCnt + 1}–${ordered.length})` : `Part C — Olympiad Qualifier Challenge (Questions ${eCnt + mCnt + 1}–${ordered.length})`,
+          ar: cfg.tierPoints ? `الجزء الثالث (C) — مسائل الـ 5 نقاط (الأسئلة ${eCnt + mCnt + 1}–${ordered.length})` : `الجزء الثالث (C) — تحدي التصفيات الأولمبية (الأسئلة ${eCnt + mCnt + 1}–${ordered.length})`,
         },
       ],
       en: {
@@ -460,8 +571,9 @@
 
   /* ---- Simulator Controls ---- */
   window.setMockCompetition = function (compId) {
-    if (compId !== 'kaust' && compId !== 'nsmo') return;
+    if (compId !== 'kaust' && compId !== 'nsmo' && compId !== 'kangaroo') return;
     if (compId === 'nsmo' && !nsmoMocks.length) return;
+    if (compId === 'kangaroo' && !kangarooMocks.length) return;
     if (session && session.mode === 'exam') return;
     session = null;
     activeComp = compId;
@@ -477,11 +589,13 @@
 
   window.jumpToKaustMocks = function (levelOrComp) {
     if (!session) {
-      if (levelOrComp === 'kaust' || levelOrComp === 'nsmo') {
-        if (levelOrComp !== 'nsmo' || nsmoMocks.length) activeComp = levelOrComp;
+      if (levelOrComp === 'kaust' || levelOrComp === 'nsmo' || levelOrComp === 'kangaroo') {
+        if ((levelOrComp !== 'nsmo' || nsmoMocks.length) && (levelOrComp !== 'kangaroo' || kangarooMocks.length)) {
+          activeComp = levelOrComp;
+        }
       } else if (levelOrComp) {
         const cfg = compForLevel(levelOrComp);
-        if (cfg.id !== 'nsmo' || nsmoMocks.length) {
+        if ((cfg.id !== 'nsmo' || nsmoMocks.length) && (cfg.id !== 'kangaroo' || kangarooMocks.length)) {
           activeComp = cfg.id;
           activeTrackByComp[cfg.id] = levelOrComp;
         }
@@ -626,13 +740,22 @@
     const dur = paper.duration_minutes || cfg.durationMin;
     const ptsCorrect = paper.points_correct ?? cfg.ptsCorrect;
     const ptsWrong = paper.points_wrong ?? cfg.ptsWrong;
+    const tp = paper.tier_points || cfg.tierPoints || null;
     const pText = rtl ? paper.ar : paper.en;
     const grades = rtl ? paper.grades_ar : paper.grades_en;
-    const maxPts = totalQ * ptsCorrect;
+    const maxPts = paper.max_points || (tp ? Math.round((totalQ / 3) * (tp.Easy + tp.Medium + tp.Hard)) : totalQ * ptsCorrect);
     const wrongTxtAr = ptsWrong < 0 ? `<span dir="ltr">${ptsWrong}</span> خطأ` : '0 خطأ (بدون خصم)';
     const wrongTxtEn = ptsWrong < 0 ? `<span dir="ltr">${ptsWrong}</span> Wrong` : '0 Wrong (No Penalty)';
 
-    const scoringRuleLi = ptsWrong < 0
+    const scoringSpecHtml = tp
+      ? `<span dir="ltr">+${tp.Easy} / +${tp.Medium} / +${tp.Hard}</span> ${rtl ? 'صحيح' : 'Correct'} · ${rtl ? wrongTxtAr : wrongTxtEn} · <span dir="ltr">0</span> ${rtl ? 'متروك' : 'Blank'}`
+      : `<span dir="ltr">+${ptsCorrect}</span> ${rtl ? 'صحيح' : 'Correct'} · ${rtl ? wrongTxtAr : wrongTxtEn} · <span dir="ltr">0</span> ${rtl ? 'متروك' : 'Blank'}`;
+
+    const scoringRuleLi = tp
+      ? rtl
+        ? `طريقة احتساب درجات كانجارو: <strong>+${tp.Easy} نقاط</strong> لكل سؤال في الجزء A، و<strong>+${tp.Medium} نقاط</strong> في الجزء B، و<strong>+${tp.Hard} نقاط</strong> في الجزء C، و<strong>بدون خصم درجات (0)</strong> للإجابات الخاطئة أو المتروكة.`
+        : `Kangaroo scoring: <strong>+${tp.Easy} points</strong> in Part A, <strong>+${tp.Medium} points</strong> in Part B, and <strong>+${tp.Hard} points</strong> in Part C, with <strong>no penalty (0 points)</strong> for wrong or blank answers.`
+      : ptsWrong < 0
       ? rtl
         ? `طريقة احتساب الدرجات: <strong>+${ptsCorrect} نقاط</strong> لكل إجابة صحيحة، و<strong>خصم نقطة واحدة (−1)</strong> لكل إجابة خاطئة، و<strong>0 نقطة</strong> للسؤال المتروك بدون تظليل.`
         : `Contest scoring: <strong>+${ptsCorrect} points</strong> for each correct choice, <strong>−1 point</strong> for each incorrect choice, and <strong>0 points</strong> for each blank question.`
@@ -651,7 +774,7 @@
         <div class="eg-mock-cover-specs">
           <span><strong>${rtl ? 'عدد الأسئلة:' : 'Questions:'}</strong> ${totalQ} MCQ (${optRange})</span>
           <span><strong>${rtl ? 'الدرجة العظمى:' : 'Maximum Score:'}</strong> ${maxPts} ${rtl ? 'نقطة' : 'pts'}</span>
-          <span><strong>${rtl ? 'نظام التصحيح:' : 'Scoring:'}</strong> <span dir="ltr">+${ptsCorrect}</span> ${rtl ? 'صحيح' : 'Correct'} · ${rtl ? wrongTxtAr : wrongTxtEn} · <span dir="ltr">0</span> ${rtl ? 'متروك' : 'Blank'}</span>
+          <span><strong>${rtl ? 'نظام التصحيح:' : 'Scoring:'}</strong> ${scoringSpecHtml}</span>
         </div>
       </div>
 
@@ -711,7 +834,7 @@
         const qContent = (q.content && (q.content[rtl ? 'ar' : 'en'] || q.content.en)) || {};
         const diag = qContent.diagram || q.diagram || '';
         const diffCls = q.difficulty === 'Easy' ? 'eg-diff-easy' : q.difficulty === 'Hard' ? 'eg-diff-hard' : 'eg-diff-med';
-        const diffLbl = rtl ? DIFF_AR[q.difficulty] || q.difficulty : DIFF_EN[q.difficulty] || q.difficulty;
+        const diffLbl = diffBadgeLabel(q, paper, cfg, rtl);
         const optsHtml = `<div class="eg-ws-opts">${(qContent.options || [])
           .map((opt, oIdx) => `<div class="eg-ws-opt"><span class="eg-opt-l">${LABELS[oIdx]}</span><span class="math-font">${opt}</span></div>`)
           .join('')}</div>`;
@@ -749,7 +872,7 @@
               <span class="eg-badge">${rtl ? 'الدرجة الرسمية:' : 'Official Score:'} ${rep.score} / ${rep.maxPoints} (${rep.pct}%)</span>
             </div>
             <div class="eg-summary" style="margin-top:1.5mm">
-              ${rtl ? 'إجابات صحيحة:' : 'Correct:'} <strong>${rep.correct}</strong> (+${rep.correct * rep.ptsCorrect}) ·
+              ${rtl ? 'إجابات صحيحة:' : 'Correct:'} <strong>${rep.correct}</strong> (+${rep.earnedCorrectPts ?? rep.correct * rep.ptsCorrect}) ·
               ${rtl ? 'إجابات خاطئة:' : 'Wrong:'} <strong>${rep.wrong}</strong> (${wrongPts < 0 ? '−' + rep.wrong : '0'}) ·
               ${rtl ? 'أسئلة متروكة:' : 'Blank:'} <strong>${rep.blank}</strong> (0) ·
               ${rtl ? 'الزمن المستغرق:' : 'Time Used:'} <strong dir="ltr">${formatClock(rep.elapsedSec)}</strong>
@@ -769,12 +892,13 @@
       const solCards = questions.map((q, idx) => {
         const c = (q.content && (q.content[rtl ? 'ar' : 'en'] || q.content.en)) || {};
         const stuChoice = stuAns ? stuAns[idx] : undefined;
+        const qPts = qPointsFor(paper, q, cfg);
         let stuNote = '';
         if (stuAns) {
           if (stuChoice === undefined || stuChoice === null) {
             stuNote = ` · ${rtl ? 'إجابتك: متروك (0)' : 'Your choice: Blank (0)'}`;
           } else if (stuChoice === q.correct_index) {
-            stuNote = ` · ✓ ${rtl ? 'إجابتك صحيحة (+4)' : 'Your choice: Correct (+4)'}`;
+            stuNote = ` · ✓ ${rtl ? `إجابتك صحيحة (+${qPts})` : `Your choice: Correct (+${qPts})`}`;
           } else {
             const wLbl = wrongPts < 0 ? '−1' : '0';
             stuNote = ` · ✗ ${rtl ? `إجابتك: (${LABELS[stuChoice]}) (${wLbl})` : `Your choice: (${LABELS[stuChoice]}) (${wLbl})`}`;
@@ -841,8 +965,12 @@
       track: cfg.id,
       option_count: cfg.optCount,
       duration_minutes: cfg.durationMin,
+      tier_points: cfg.tierPoints || null,
       points_correct: cfg.ptsCorrect,
       points_wrong: cfg.ptsWrong,
+      max_points: cfg.tierPoints
+        ? tr.tiers.Easy * cfg.tierPoints.Easy + tr.tiers.Medium * cfg.tierPoints.Medium + tr.tiers.Hard * cfg.tierPoints.Hard
+        : tr.qCount * cfg.ptsCorrect,
       paper_num: 1,
       grades_en: tr.shortEn,
       grades_ar: tr.shortAr,
@@ -863,12 +991,13 @@
 
   /* ---- Screen Rendering ---- */
   function renderExamQuestionCard(q, idx, total) {
+    const cfg = compForPaper(session.paper);
     const qContent = (q.content && (q.content[isAr() ? 'ar' : 'en'] || q.content.en)) || {};
     const diag = qContent.diagram || q.diagram || '';
     const selected = session.answers[idx];
     const flagged = !!session.flags[idx];
     const diffCls = q.difficulty === 'Easy' ? 'eg-diff-easy' : q.difficulty === 'Hard' ? 'eg-diff-hard' : 'eg-diff-med';
-    const diffLbl = isAr() ? DIFF_AR[q.difficulty] || q.difficulty : DIFF_EN[q.difficulty] || q.difficulty;
+    const diffLbl = diffBadgeLabel(q, session.paper, cfg, isAr());
 
     const opts = (qContent.options || [])
       .map((opt, oIdx) => {
@@ -985,7 +1114,10 @@
         <div class="eg-nav-footer no-print">${prevBtn}${nextBtn}</div>`;
     }
 
-    const scoreHint = wrongPts < 0
+    const tp = p.tier_points || cfg.tierPoints || null;
+    const scoreHint = tp
+      ? L(`+${tp.Easy} / +${tp.Medium} / +${tp.Hard} نقاط · 0 خطأ (بدون خصم) · بدون آلة حاسبة`, `+${tp.Easy} / +${tp.Medium} / +${tp.Hard} pts · 0 Wrong (No Penalty) · No Calculator`)
+      : wrongPts < 0
       ? L('+4 صحيح · −1 خطأ · 0 متروك · بدون آلة حاسبة', '+4 Correct · −1 Wrong · 0 Blank · No Calculator')
       : L('+4 صحيح · 0 خطأ (بدون خصم) · بدون آلة حاسبة', '+4 Correct · 0 Wrong (No Penalty) · No Calculator');
 
@@ -1092,8 +1224,9 @@
 
         const qContent = (q.content && (q.content[isAr() ? 'ar' : 'en'] || q.content.en)) || {};
         const diag = qContent.diagram || q.diagram || '';
+        const qPts = qPointsFor(p, q, cfg);
         const statusTag = isOk
-          ? `<span class="eg-ex-tag eg-diff-easy">✓ +${rep.ptsCorrect} ${L('نقاط (صحيحة)', 'pts (Correct)')}</span>`
+          ? `<span class="eg-ex-tag eg-diff-easy">✓ +${qPts} ${L('نقاط (صحيحة)', 'pts (Correct)')}</span>`
           : isWr
           ? `<span class="eg-ex-tag eg-diff-hard">${wrongPenaltyBadge}</span>`
           : `<span class="eg-ex-tag eg-diff-med">○ 0 ${L('نقاط (متروك)', 'pts (Blank)')}</span>`;
@@ -1190,10 +1323,11 @@
     const trackPapers = compPapers.filter((p) => p.level === activeTrack);
     const optRange = cfg.optCount === 4 ? 'A–D' : 'A–E';
 
-    const compSwitcher = nsmoMocks.length
+    const compSwitcher = (nsmoMocks.length || kangarooMocks.length)
       ? `<div class="eg-comp-switch no-print" role="tablist" aria-label="Mock Exam Competition">
+          ${kangarooMocks.length ? `<button type="button" onclick="setMockCompetition('kangaroo')" class="eg-comp-btn${activeComp === 'kangaroo' ? ' eg-comp-btn-on' : ''}">${isAr() ? COMP_CONFIG.kangaroo.pillAr : COMP_CONFIG.kangaroo.pillEn}</button>` : ''}
           <button type="button" onclick="setMockCompetition('kaust')" class="eg-comp-btn${activeComp === 'kaust' ? ' eg-comp-btn-on' : ''}">${isAr() ? COMP_CONFIG.kaust.pillAr : COMP_CONFIG.kaust.pillEn}</button>
-          <button type="button" onclick="setMockCompetition('nsmo')" class="eg-comp-btn${activeComp === 'nsmo' ? ' eg-comp-btn-on' : ''}">${isAr() ? COMP_CONFIG.nsmo.pillAr : COMP_CONFIG.nsmo.pillEn}</button>
+          ${nsmoMocks.length ? `<button type="button" onclick="setMockCompetition('nsmo')" class="eg-comp-btn${activeComp === 'nsmo' ? ' eg-comp-btn-on' : ''}">${isAr() ? COMP_CONFIG.nsmo.pillAr : COMP_CONFIG.nsmo.pillEn}</button>` : ''}
         </div>`
       : '';
 
@@ -1247,7 +1381,13 @@
       })
       .join('');
 
-    const subText = cfg.id === 'nsmo'
+    const maxDivPts = tr.tiers.Easy * 3 + tr.tiers.Medium * 4 + tr.tiers.Hard * 5;
+    const subText = cfg.id === 'kangaroo'
+      ? L(
+          `نظام كانجارو موهبة الرسمي (${isAr() ? tr.shortAr : tr.shortEn}): <strong>${tr.qCount} سؤال اختيار من متعدد (${optRange})</strong> في <strong>${cfg.durationMin} دقيقة</strong> بدون آلة حاسبة · <strong>3 / 4 / 5 نقاط</strong> حسب الجزء (${maxDivPts} نقطة عظمى) و<strong>بدون خصم (0)</strong> للخاطئة أو المتروكة.`,
+          `Official Mawhiba Kangaroo Format (${tr.shortEn}): <strong>${tr.qCount} MCQs (${optRange})</strong> in <strong>${cfg.durationMin} minutes</strong>, No Calculator · <strong>+3 / +4 / +5 pts</strong> across Parts A, B, C (${maxDivPts} max pts) and <strong>0</strong> penalty for wrong/blank.`
+        )
+      : cfg.id === 'nsmo'
       ? L(
           `نظام أولمبياد نسمو — موهبة (${isAr() ? tr.shortAr : tr.shortEn}): <strong>${tr.qCount} سؤال اختيار من متعدد (${optRange})</strong> في <strong>${cfg.durationMin} دقيقة</strong> بدون آلة حاسبة · <strong>+4</strong> للصحيحة و<strong>بدون خصم (0)</strong> للخاطئة أو المتروكة.`,
           `Official NSMO / Mawhiba Format (${tr.shortEn}): <strong>${tr.qCount} MCQs (${optRange})</strong> in <strong>${cfg.durationMin} minutes</strong>, No Calculator · <strong>+4</strong> Correct, <strong>0</strong> Wrong (No Penalty), <strong>0</strong> Blank.`
@@ -1281,8 +1421,8 @@
     root.setAttribute('dir', isAr() ? 'rtl' : 'ltr');
 
     const cfg = session ? compForPaper(session.paper) : COMP_CONFIG[activeComp];
-    const basePapers = cfg.id === 'nsmo' ? nsmoMocks : kaustMocks;
-    const totalPapers = (cfg.id === 'nsmo' ? allNsmoPapers() : allKaustPapers()).length;
+    const basePapers = cfg.id === 'kangaroo' ? kangarooMocks : cfg.id === 'nsmo' ? nsmoMocks : kaustMocks;
+    const totalPapers = (cfg.id === 'kangaroo' ? allKangarooPapers() : cfg.id === 'nsmo' ? allNsmoPapers() : allKaustPapers()).length;
     const totalUniqueQs = basePapers.reduce((acc, p) => acc + (p.question_count || 0), 0);
 
     const inner = !session
@@ -1323,9 +1463,10 @@
       practice.parentNode.insertBefore(sec, practice);
     }
 
-    const [kRes, nRes] = await Promise.allSettled([
+    const [kRes, nRes, gRes] = await Promise.allSettled([
       fetch('data/kaust_mocks.json'),
       fetch('data/nsmo_mocks.json'),
+      fetch('data/kangaroo_mocks.json'),
     ]);
     if (kRes.status === 'fulfilled' && kRes.value && kRes.value.ok) {
       try {
@@ -1339,7 +1480,13 @@
         nsmoMocks = (nsmoDoc && nsmoDoc.mocks) || [];
       } catch (_) {}
     }
-    if (!kaustMocks.length && !nsmoMocks.length) return;
+    if (gRes.status === 'fulfilled' && gRes.value && gRes.value.ok) {
+      try {
+        kangarooDoc = await gRes.value.json();
+        kangarooMocks = (kangarooDoc && kangarooDoc.mocks) || [];
+      } catch (_) {}
+    }
+    if (!kaustMocks.length && !nsmoMocks.length && !kangarooMocks.length) return;
 
     const t0 = Date.now();
     while (!getBankQuestions().length && Date.now() - t0 < 15000) {
@@ -1366,7 +1513,12 @@
       window.setGradeFilter = function (g) {
         const res = origGrade.apply(this, arguments);
         if (!session) {
-          if (activeComp === 'nsmo') {
+          if (activeComp === 'kangaroo') {
+            if (g === 3 || g === 4) { activeTrackByComp.kangaroo = 'Ecolier'; render(); }
+            else if (g === 5 || g === 6) { activeTrackByComp.kangaroo = 'Benjamin'; render(); }
+            else if (g === 7 || g === 8) { activeTrackByComp.kangaroo = 'Cadet'; render(); }
+            else if (g === 9 || g === 10) { activeTrackByComp.kangaroo = 'Junior'; render(); }
+          } else if (activeComp === 'nsmo') {
             if (g === 7) { activeTrackByComp.nsmo = COMP_CONFIG.nsmo.tracks[0].level; render(); }
             else if (g === 8 || g === 9) { activeTrackByComp.nsmo = COMP_CONFIG.nsmo.tracks[1].level; render(); }
             else if (g === 10) { activeTrackByComp.nsmo = COMP_CONFIG.nsmo.tracks[2].level; render(); }
@@ -1386,6 +1538,9 @@
       },
       get nsmoMocks() {
         return allNsmoPapers();
+      },
+      get kangarooMocks() {
+        return allKangarooPapers();
       },
       get allMocks() {
         return allPapersAcrossComps();

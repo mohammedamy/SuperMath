@@ -1,19 +1,19 @@
 {
   "status": "passed",
-  "total": 6350,
-  "parameterized_additions": 1273,
-  "independently_enumerated_generated_answers": 35,
+  "total": 6790,
+  "parameterized_additions": 713,
+  "independently_enumerated_generated_answers": 16,
   "scope_certification": false,
   "individual_review_of_every_legacy_answer": false,
   "banks": [
     {
       "track": "kangaroo",
-      "total": 1000,
+      "total": 1440,
       "levels": {
-        "Cadet": 250,
-        "Ecolier": 250,
-        "Benjamin": 250,
-        "Junior": 250
+        "Ecolier": 360,
+        "Benjamin": 360,
+        "Cadet": 360,
+        "Junior": 360
       }
     },
     {

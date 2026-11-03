@@ -794,20 +794,20 @@
       tracks: [
         {
           id: "kangaroo",
-          name_ar: "كانجارو للرياضيات",
-          name_en: "Kangaroo Math",
+          name_ar: "كانجارو موهبة للرياضيات",
+          name_en: "Kangaroo Math (Mawhiba)",
           badge_ar: "MCQs (5 خيارات)",
           badge_en: "MCQs (5 Options)",
           color: "border-rose-500",
           bg: "bg-rose-50 dark:bg-rose-900/20",
           accent: "text-rose-600",
-          levels_ar: "الصفوف 1-12 (مقسمة كل صفين)",
-          levels_en: "Grades 1-12 (Pair groupings)",
-          format_ar: "3, 4, 5 نقاط | بدون آلة حاسبة",
+          levels_ar: "الصفوف 3–10 (إيكولير · بنجامين · كاديت · جونيور)",
+          levels_en: "Grades 3–10 (Ecolier · Benjamin · Cadet · Junior)",
+          format_ar: "3، 4، 5 نقاط | بدون آلة حاسبة",
           format_en: "3, 4, 5 points | No Calculator",
-          topics_ar: ["المنطق والأحاجي", "الهندسة الفضائية", "التركيبات والأنماط"],
-          topics_en: ["Logic & Puzzles", "Spatial Geometry", "Combinatorics & Patterns"],
-          grades: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]
+          topics_ar: ["نظرية الأعداد", "الجبر", "الهندسة", "التركيبات والمنطق"],
+          topics_en: ["Number Theory", "Algebra", "Geometry", "Combinatorics & Logic"],
+          grades: [3, 4, 5, 6, 7, 8, 9, 10]
         },
         {
           id: "nafes",
@@ -1317,6 +1317,7 @@
               <div class="flex flex-wrap gap-1">
                 ${topics.map(tp => `<span class="text-[11px] bg-white/80 dark:bg-slate-700/80 px-2 py-0.5 rounded text-slate-600 dark:text-slate-300 border border-slate-200 dark:border-slate-600">${tp}</span>`).join('')}
               </div>
+              ${tr.id === 'kangaroo' ? `<button type="button" onclick="event.stopPropagation();if(window.setStudyCompetition)setStudyCompetition('kangaroo');if(window.jumpToKaustStudy)jumpToKaustStudy();" class="mt-3 w-full py-2 px-3 rounded-xl bg-teal-700 hover:bg-teal-600 text-white text-xs font-extrabold flex items-center justify-center gap-1.5 shadow-sm transition-colors">🦘 ${currentLang === 'ar' ? '٢٤ درساً لكانجارو · ٢٤٠ مثالاً محلولاً · ١٦ اختباراً تجريبياً · A4' : '24 Kangaroo Lessons · 240 Solved Examples · 16 Mocks · A4'}</button>` : ''}
               ${tr.id === 'kaust' ? `<button type="button" onclick="event.stopPropagation();if(window.setStudyCompetition)setStudyCompetition('kaust');if(window.jumpToKaustStudy)jumpToKaustStudy();" class="mt-3 w-full py-2 px-3 rounded-xl bg-teal-700 hover:bg-teal-600 text-white text-xs font-extrabold flex items-center justify-center gap-1.5 shadow-sm transition-colors">📖 ${currentLang === 'ar' ? '١٨ درساً مصوّراً · ١٨٥ مثالاً محلولاً · ١٠٨ تدريبات وطباعة A4' : '18 Study Lessons · 185 Solved Examples · 108 Drills · A4 Print'}</button>` : ''}
               ${tr.id === 'nsmo' ? `<button type="button" onclick="event.stopPropagation();if(window.setStudyCompetition)setStudyCompetition('nsmo');if(window.jumpToKaustStudy)jumpToKaustStudy();" class="mt-3 w-full py-2 px-3 rounded-xl bg-teal-700 hover:bg-teal-600 text-white text-xs font-extrabold flex items-center justify-center gap-1.5 shadow-sm transition-colors">📖 ${currentLang === 'ar' ? '١٨ درساً لموهبة · ١٨٠ مثالاً محلولاً · ١٢ اختباراً تجريبياً · A4' : '18 Mawhiba Lessons · 180 Solved Examples · 12 Mocks · A4'}</button>` : ''}
             </div>
@@ -1418,6 +1419,7 @@
               <span class="px-3 py-1 rounded-full bg-slate-700/60 text-slate-400 border border-slate-600/50">
                 ${q.topic}
               </span>
+              ${q.kang_points ? `<span class="px-3 py-1 rounded-full bg-rose-500/20 text-rose-300 border border-rose-500/40 font-bold">${q.kang_points} ${currentLang === 'ar' ? 'نقاط' : 'pts'}</span>` : ''}
             </div>
             <span class="font-mono text-slate-400">${currentLang === 'ar' ? 'المعرف:' : 'ID:'} ${q.id}</span>
           </div>
