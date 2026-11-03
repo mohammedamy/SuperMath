@@ -5,13 +5,14 @@ from fractions import Fraction
 from audit_banks import ROOT,norm
 from build_practice import TARGETS
 from build_kaust_kmc import FORBIDDEN_RE as KAUST_FORBIDDEN_RE
+from nsmo_common import NSMO_FORBIDDEN_RE
 rows=[];total=0;generated=0;allids=set();independent=0
 for track,levels in TARGETS.items():
  bank=json.loads((ROOT/'data'/f'{track}.json').read_text());stems=set();counts=collections.Counter()
  for q in bank:
   assert q['id'] not in allids,('duplicate id',q['id']);allids.add(q['id'])
   assert q['track']==track
-  if track=='kaust':
+  if track in ('kaust','nsmo'):
    assert q['level'] in levels,(q['id'],q['level'])
   stem=norm(q['content']['en']['question']);assert stem not in stems,('duplicate stem',q['id']);stems.add(stem)
   counts[q['level']]+=1
@@ -23,6 +24,9 @@ for track,levels in TARGETS.items():
    if track=='kaust':
     blob=' '.join([c['question'],' '.join(c['options']),c.get('hint',''),c['explanation']])
     assert not KAUST_FORBIDDEN_RE.search(blob),('kaust out-of-scope term',q['id'])
+   elif track=='nsmo':
+    blob=' '.join([c['question'],' '.join(c['options']),c.get('hint',''),c['explanation']])
+    assert not NSMO_FORBIDDEN_RE.search(blob),('nsmo out-of-scope term',q['id'])
    if q['type']=='MCQ':
     assert len(c['options'])==(5 if track in ('kangaroo','kaust') else 4)
     assert len(set(map(norm,c['options'])))==len(c['options'])

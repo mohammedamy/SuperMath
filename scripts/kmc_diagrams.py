@@ -416,12 +416,14 @@ def svg_square_eighths_shaded(shaded_indices, draw_horiz: bool = False) -> str:
 def svg_number_strip(cells) -> str:
     # cells: list of strings, e.g. ["10", "", "?", "", "130"]
     n = len(cells)
-    cw, ch = 50, 36
+    max_chars = max((len(str(v)) for v in cells), default=2)
+    cw, ch = max(50, min(96, max_chars * 8 + 18)), 38
     total_w = n * cw
     w = max(300, total_w + 48)
     ox = (w - total_w) / 2
-    oy = 24
+    oy = 23
     parts = []
+    font_sz = 13 if max_chars >= 8 else 14
     for i, val in enumerate(cells):
         x = ox + i * cw
         is_q = (val == "?")
@@ -429,8 +431,8 @@ def svg_number_strip(cells) -> str:
         parts.append(f'<rect x="{x:.1f}" y="{oy}" width="{cw}" height="{ch}" fill="{fill}" stroke="{STROKE}" stroke-width="2"/>')
         if val:
             col = "#5b21b6" if is_q else DARK
-            parts.append(_nlabel(x + cw / 2, oy + 23, val, size=14, color=col))
-    return wrap_svg("".join(parts), w=w, h=84, disp_w=400)
+            parts.append(_nlabel(x + cw / 2, oy + 24, val, size=font_sz, color=col))
+    return wrap_svg("".join(parts), w=w, h=84, disp_w=min(440, max(380, w)))
 
 
 # 13. Number-line alternating jumps (KMC G6-7 Q21 style)

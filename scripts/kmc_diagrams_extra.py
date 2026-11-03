@@ -175,21 +175,32 @@ def svg_dot_pattern(mode: str = "L") -> str:
 
 # 8. Two-Step Function Machine Pipeline
 def svg_function_machine(in_lbl: str, op1: str, op2: str, out_lbl: str) -> str:
+    bw = max(78, min(118, max(len(str(op1)), len(str(op2))) * 8 + 20))
+    in_pad = max(62, len(str(in_lbl)) * 8 + 22)
+    out_pad = max(62, len(str(out_lbl)) * 8 + 22)
+    x_a1_s = in_pad
+    x_b1 = x_a1_s + 28
+    x_a2_s = x_b1 + bw
+    x_b2 = x_a2_s + 28
+    x_a3_s = x_b2 + bw
+    x_a3_e = x_a3_s + 28
+    w = x_a3_e + out_pad
+    op_sz = 13 if bw >= 94 else 14
     parts = [
-        _nlabel(34, 92, in_lbl, size=15, color=BLUE),
-        f'<line x1="56" y1="88" x2="86" y2="88" stroke="{DARK}" stroke-width="2"/>',
-        f'<polygon points="86,88 79,83 79,93" fill="{DARK}"/>',
-        f'<rect x="88" y="60" width="76" height="56" rx="10" fill="{WATER}" stroke="{STROKE}" stroke-width="2"/>',
-        _nlabel(126, 93, op1, size=14),
-        f'<line x1="164" y1="88" x2="194" y2="88" stroke="{DARK}" stroke-width="2"/>',
-        f'<polygon points="194,88 187,83 187,93" fill="{DARK}"/>',
-        f'<rect x="196" y="60" width="76" height="56" rx="10" fill="{SHADE}" stroke="{STROKE}" stroke-width="2"/>',
-        _nlabel(234, 93, op2, size=14),
-        f'<line x1="272" y1="88" x2="300" y2="88" stroke="{DARK}" stroke-width="2"/>',
-        f'<polygon points="300,88 293,83 293,93" fill="{DARK}"/>',
-        _nlabel(322, 92, out_lbl, size=15, color=RED),
+        _nlabel(x_a1_s / 2 + 4, 92, in_lbl, size=14, color=BLUE),
+        f'<line x1="{x_a1_s}" y1="88" x2="{x_b1 - 2}" y2="88" stroke="{DARK}" stroke-width="2"/>',
+        f'<polygon points="{x_b1 - 2},88 {x_b1 - 9},83 {x_b1 - 9},93" fill="{DARK}"/>',
+        f'<rect x="{x_b1}" y="60" width="{bw}" height="56" rx="10" fill="{WATER}" stroke="{STROKE}" stroke-width="2"/>',
+        _nlabel(x_b1 + bw / 2, 93, op1, size=op_sz),
+        f'<line x1="{x_a2_s}" y1="88" x2="{x_b2 - 2}" y2="88" stroke="{DARK}" stroke-width="2"/>',
+        f'<polygon points="{x_b2 - 2},88 {x_b2 - 9},83 {x_b2 - 9},93" fill="{DARK}"/>',
+        f'<rect x="{x_b2}" y="60" width="{bw}" height="56" rx="10" fill="{SHADE}" stroke="{STROKE}" stroke-width="2"/>',
+        _nlabel(x_b2 + bw / 2, 93, op2, size=op_sz),
+        f'<line x1="{x_a3_s}" y1="88" x2="{x_a3_e}" y2="88" stroke="{DARK}" stroke-width="2"/>',
+        f'<polygon points="{x_a3_e},88 {x_a3_e - 7},83 {x_a3_e - 7},93" fill="{DARK}"/>',
+        _nlabel(x_a3_e + out_pad / 2 - 4, 92, out_lbl, size=14, color=RED),
     ]
-    return wrap_svg("".join(parts), w=352, h=164, disp_w=400)
+    return wrap_svg("".join(parts), w=w, h=164, disp_w=min(430, max(390, w)))
 
 
 # 9. 3-Row Additive Number Pyramid
@@ -383,23 +394,49 @@ def svg_binary_bulbs(bits=(1, 0, 1, 1, 0), weights=(16, 8, 4, 2, 1)) -> str:
 
 # 19. Geometric Square Completion / (a + b)^2 Partitioned Square
 def svg_area_identity_square(a_lbl: str = "a", b_lbl: str = "b") -> str:
-    x0, y0, sa, sb = 78, 22, 92, 50
-    s = sa + sb
+    def _sq(lbl: str) -> str:
+        s = str(lbl).strip()
+        if any(ch in s for ch in "+-−/²³ "):
+            return f"({s})²"
+        return f"{s}²"
+
+    def _prod(la: str, lb: str) -> str:
+        sa_s, sb_s = str(la).strip(), str(lb).strip()
+        if (sa_s, sb_s) in {("x", "1/x"), ("1/x", "x"), ("x²", "1/x²"), ("1/x²", "x²")}:
+            return "1"
+        wa = f"({sa_s})" if any(ch in sa_s for ch in "+-−/ ") else sa_s
+        wb = f"({sb_s})" if any(ch in sb_s for ch in "+-−/ ") else sb_s
+        if len(sa_s) == 1 and sa_s.isalpha() and len(sb_s) == 1 and sb_s.isalpha():
+            return f"{sa_s}{sb_s}"
+        if sa_s.isdigit() and len(sb_s) == 1 and sb_s.isalpha():
+            return f"{sa_s}{sb_s}"
+        if sb_s.isdigit() and len(sa_s) == 1 and sa_s.isalpha():
+            return f"{sb_s}{sa_s}"
+        if wb.startswith("(") and len(wa) <= 2 and wa.isalpha():
+            return f"{wa}{wb}"
+        if wa.startswith("(") and len(wb) <= 2 and wb.isalpha():
+            return f"{wa}{wb}"
+        return f"{wa}·{wb}"
+
+    sq_a = _sq(a_lbl)
+    sq_b = _sq(b_lbl)
+    pr_ab = _prod(a_lbl, b_lbl)
+    x0, y0, sa, sb = 82, 24, 96, 68
     parts = [
         f'<rect x="{x0}" y="{y0}" width="{sa}" height="{sa}" fill="{WATER}" stroke="{STROKE}" stroke-width="1.8"/>',
         f'<rect x="{x0+sa}" y="{y0}" width="{sb}" height="{sa}" fill="{SHADE}" stroke="{STROKE}" stroke-width="1.8"/>',
         f'<rect x="{x0}" y="{y0+sa}" width="{sa}" height="{sb}" fill="{SHADE}" stroke="{STROKE}" stroke-width="1.8"/>',
         f'<rect x="{x0+sa}" y="{y0+sa}" width="{sb}" height="{sb}" fill="#fde68a" stroke="{STROKE}" stroke-width="1.8"/>',
-        _nlabel(x0 + sa / 2, y0 + sa / 2 + 5, f"{a_lbl}²", size=15),
-        _nlabel(x0 + sa + sb / 2, y0 + sa / 2 + 5, f"{a_lbl}{b_lbl}", size=13),
-        _nlabel(x0 + sa / 2, y0 + sa + sb / 2 + 5, f"{a_lbl}{b_lbl}", size=13),
-        _nlabel(x0 + sa + sb / 2, y0 + sa + sb / 2 + 5, f"{b_lbl}²", size=13),
-        _nlabel(x0 + sa / 2, y0 - 6, a_lbl, size=13, color=BLUE),
-        _nlabel(x0 + sa + sb / 2, y0 - 6, b_lbl, size=13, color=ORANGE),
-        _nlabel(x0 - 14, y0 + sa / 2 + 5, a_lbl, size=13, color=BLUE),
-        _nlabel(x0 - 14, y0 + sa + sb / 2 + 5, b_lbl, size=13, color=ORANGE),
+        _nlabel(x0 + sa / 2, y0 + sa / 2 + 5, sq_a, size=14 if len(sq_a) <= 6 else 12),
+        _nlabel(x0 + sa + sb / 2, y0 + sa / 2 + 5, pr_ab, size=13 if len(pr_ab) <= 5 else 11),
+        _nlabel(x0 + sa / 2, y0 + sa + sb / 2 + 5, pr_ab, size=13 if len(pr_ab) <= 5 else 12),
+        _nlabel(x0 + sa + sb / 2, y0 + sa + sb / 2 + 5, sq_b, size=13 if len(sq_b) <= 5 else 11),
+        _nlabel(x0 + sa / 2, y0 - 7, a_lbl, size=13, color=BLUE),
+        _nlabel(x0 + sa + sb / 2, y0 - 7, b_lbl, size=13, color=ORANGE),
+        _nlabel(x0 - 8, y0 + sa / 2 + 5, a_lbl, size=13, color=BLUE, anchor="end"),
+        _nlabel(x0 - 8, y0 + sa + sb / 2 + 5, b_lbl, size=13, color=ORANGE, anchor="end"),
     ]
-    return wrap_svg("".join(parts), w=300, h=188, disp_w=350)
+    return wrap_svg("".join(parts), w=320, h=206, disp_w=360)
 
 
 # 20. Tank with Inlet (Fill) Pipe and Outlet (Drain) Pipe

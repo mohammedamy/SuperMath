@@ -1,13 +1,52 @@
-/* KAUST (KMC) Study Academy + Interactive Practice Drills + Edugates International School Multi-Page A4 Print Engine */
+/* KAUST (KMC) & NSMO (Mawhiba) Study Academy + Interactive Practice Drills + Edugates International School Multi-Page A4 Print Engine */
 (function () {
   'use strict';
 
   const LABELS = ['A', 'B', 'C', 'D', 'E'];
-  const TRACKS = [
-    { level: 'Track 1: Grades 6-7', en: 'Track 1 · Grades 6–7', ar: 'المسار ١ · الصفوف 6–7', shortEn: 'Grades 6–7', shortAr: 'الصفوف 6–7' },
-    { level: 'Track 2: Grades 8-9', en: 'Track 2 · Grades 8–9', ar: 'المسار ٢ · الصفوف 8–9', shortEn: 'Grades 8–9', shortAr: 'الصفوف 8–9' },
-    { level: 'Track 3: Grades 10-11', en: 'Track 3 · Grades 10–11', ar: 'المسار ٣ · الصفوف 10–11', shortEn: 'Grades 10–11', shortAr: 'الصفوف 10–11' },
-  ];
+
+  const COMP_CONFIG = {
+    kaust: {
+      id: 'kaust',
+      bpField: 'kmc_blueprint',
+      quizSelectId: 'quiz-kaust-phase-select',
+      pillEn: '🏛️ KAUST KMC (Grades 6–11 · 5 Options)',
+      pillAr: '🏛️ مسابقة كاوست KMC (الصفوف 6–11 · 5 خيارات)',
+      hubTitleEn: 'KAUST Math Competition (KMC) Study Lessons',
+      hubTitleAr: 'أكاديمية شرح دروس مسابقة كاوست للرياضيات (KMC)',
+      badgeEn: 'KAUST KMC',
+      badgeAr: 'كاوست KMC',
+      bankTagEn: 'KMC Bank',
+      bankTagAr: 'من بنك كاوست',
+      trapsTitleEn: 'Watch Out — Common KMC Exam Traps!',
+      trapsTitleAr: 'احذر هذه الأخطاء الشائعة في اختبار كاوست!',
+      tracks: [
+        { level: 'Track 1: Grades 6-7', en: 'Track 1 · Grades 6–7', ar: 'المسار ١ · الصفوف 6–7', shortEn: 'Grades 6–7', shortAr: 'الصفوف 6–7' },
+        { level: 'Track 2: Grades 8-9', en: 'Track 2 · Grades 8–9', ar: 'المسار ٢ · الصفوف 8–9', shortEn: 'Grades 8–9', shortAr: 'الصفوف 8–9' },
+        { level: 'Track 3: Grades 10-11', en: 'Track 3 · Grades 10–11', ar: 'المسار ٣ · الصفوف 10–11', shortEn: 'Grades 10–11', shortAr: 'الصفوف 10–11' },
+      ],
+    },
+    nsmo: {
+      id: 'nsmo',
+      bpField: 'nsmo_blueprint',
+      quizSelectId: 'quiz-nsmo-phase-select',
+      pillEn: '🥇 NSMO · Mawhiba (Grades 7–10 · 4 Options)',
+      pillAr: '🥇 أولمبياد نسمو — موهبة (الصفوف 7–10 · 4 خيارات)',
+      hubTitleEn: 'NSMO / Mawhiba National Olympiad Study Lessons',
+      hubTitleAr: 'أكاديمية شرح دروس أولمبياد نسمو الوطني — موهبة',
+      badgeEn: 'NSMO Mawhiba',
+      badgeAr: 'نسمو موهبة',
+      bankTagEn: 'NSMO Bank',
+      bankTagAr: 'من بنك نسمو',
+      trapsTitleEn: 'Watch Out — Common Mawhiba / NSMO Olympiad Traps!',
+      trapsTitleAr: 'احذر هذه الأخطاء الشائعة في أولمبياد نسمو (موهبة)!',
+      tracks: [
+        { level: 'Phase 1: Junior Olympiad (Grade 7)', en: 'Phase 1 · Grade 7 (Junior)', ar: 'المرحلة ١ · الصف 7 (الناشئين)', shortEn: 'Grade 7', shortAr: 'الصف 7' },
+        { level: 'Phase 2: Intermediate Olympiad (Grades 8-9)', en: 'Phase 2 · Grades 8–9 (Intermediate)', ar: 'المرحلة ٢ · الصفان 8–9 (المتوسط)', shortEn: 'Grades 8–9', shortAr: 'الصفان 8–9' },
+        { level: 'Phase 3: Senior National Olympiad (Grade 10)', en: 'Phase 3 · Grade 10 (Senior)', ar: 'المرحلة ٣ · الصف 10 (المتقدم)', shortEn: 'Grade 10', shortAr: 'الصف 10' },
+      ],
+    },
+  };
+
   const TOPIC_AR = {
     'Number Theory': 'نظرية الأعداد',
     'Algebra': 'الجبر والأنماط',
@@ -21,8 +60,13 @@
     Hard: 'متقدم',
   };
 
-  let lessons = [];
-  let activeTrack = TRACKS[0].level;
+  let kaustLessons = [];
+  let nsmoLessons = [];
+  let activeComp = 'kaust';
+  let activeTrackByComp = {
+    kaust: COMP_CONFIG.kaust.tracks[0].level,
+    nsmo: COMP_CONFIG.nsmo.tracks[0].level,
+  };
   let activeLessonId = null;
   let selfTestMode = false;
   let revealedExamples = new Set();
@@ -38,9 +82,31 @@
   const diffLabel = (df) => (isAr() ? (DIFF_AR[df] || df) : df);
   const getBankQuestions = () => (typeof appData !== 'undefined' && Array.isArray(appData.questions) ? appData.questions : []);
 
+  function allLessons() {
+    return kaustLessons.concat(nsmoLessons);
+  }
+
+  function currentLessons() {
+    return activeComp === 'nsmo' ? nsmoLessons : kaustLessons;
+  }
+
+  function compForLesson(les) {
+    if (!les) return COMP_CONFIG[activeComp];
+    if (les.track === 'nsmo' || String(les.id || '').startsWith('NSMO-') || String(les.level || '').startsWith('Phase ')) {
+      return COMP_CONFIG.nsmo;
+    }
+    return COMP_CONFIG.kaust;
+  }
+
+  function trackMetaForLesson(les) {
+    const cfg = compForLesson(les);
+    return cfg.tracks.find((t) => t.level === les.level) || cfg.tracks[0];
+  }
+
   function bankExamples(les) {
     const qs = getBankQuestions();
     if (!qs.length) return [];
+    const cfg = compForLesson(les);
     const byId = new Map(qs.map((q) => [q.id, q]));
     return (les.bank_example_ids || [])
       .map((id) => byId.get(id))
@@ -51,12 +117,17 @@
         return {
           id: q.id,
           correct_index: q.correct_index,
-          title: L(`تطبيق إضافي محلول ${idx + 1} من بنك كاوست${diffBadge}`, `Extra KMC Worked Example ${idx + 1}${diffBadge}`),
+          title: L(
+            `تطبيق إضافي محلول ${idx + 1} (${cfg.bankTagAr})${diffBadge}`,
+            `Extra ${cfg.badgeEn} Worked Example ${idx + 1}${diffBadge}`
+          ),
           question: c.question || '',
           options: c.options || [],
           explanation: c.explanation || '',
           diagram: c.diagram || q.diagram || '',
           fromBank: true,
+          bankTagAr: cfg.bankTagAr,
+          bankTagEn: cfg.bankTagEn,
         };
       });
   }
@@ -119,7 +190,7 @@
 
     const subTitle = cleanExTitle(ex.title);
     const headerBadge = ex.fromBank
-      ? `<span class="eg-ex-tag eg-ex-tag-bank">${L('من بنك كاوست', 'KMC Bank')}</span>`
+      ? `<span class="eg-ex-tag eg-ex-tag-bank">${L(ex.bankTagAr || 'من البنك', ex.bankTagEn || 'Contest Bank')}</span>`
       : `<span class="eg-ex-tag">${L('مثال أساسي', 'Core Example')}</span>`;
 
     const solutionBlock = showAnswer
@@ -206,7 +277,8 @@
 
   function lessonBlocks(les, forPrint) {
     const d = pick(les);
-    const tr = TRACKS.find((t) => t.level === les.level) || TRACKS[0];
+    const cfg = compForLesson(les);
+    const tr = trackMetaForLesson(les);
     const exs = allExamplesFor(les);
     const drills = lessonDrills(les);
 
@@ -215,7 +287,7 @@
         <div class="eg-banner-meta">
           <span class="eg-badge">${L('درس', 'Lesson')} ${les.unit_num}</span>
           <span class="eg-badge eg-badge-alt">${topicLabel(les.topic)}</span>
-          <span class="eg-badge eg-badge-soft">${isAr() ? tr.ar : tr.en}</span>
+          <span class="eg-badge eg-badge-soft">${isAr() ? tr.ar : tr.en} · ${isAr() ? cfg.badgeAr : cfg.badgeEn}</span>
         </div>
         <h2 class="eg-h2">${d.title}</h2>
         <p class="math-font eg-summary">${d.summary}</p>
@@ -235,7 +307,7 @@
 
     const trapsBlock = `
       <div class="eg-card eg-traps no-break">
-        <div class="eg-h3">⚠️ ${L('احذر هذه الأخطاء الشائعة في الاختبار!', 'Watch Out — Common KMC Exam Traps!')}</div>
+        <div class="eg-h3">⚠️ ${L(cfg.trapsTitleAr, cfg.trapsTitleEn)}</div>
         <ul class="eg-ul">${(d.traps || []).map((t) => `<li class="math-font">${t}</li>`).join('')}</ul>
       </div>`;
 
@@ -260,7 +332,7 @@
         : `<div class="eg-drill-bar no-print">
             <div>
               <div class="eg-sec-heading" style="margin:0;border:0;padding:0">📝 ${L('تدريبات نهاية الدرس — اختبر فهمك الآن', 'End-of-Lesson Practice Drills — Test Your Mastery')} (${drills.length})</div>
-              <p class="text-xs opacity-80 mt-0.5">${L('مدرّجة من السهل إلى المتقدم تماماً مثل ورقة مسابقة كاوست. اختر الإجابة للتحقق الفوري أو اطبعها كورقة عمل مستقلة!', 'Graduated Easy → Medium → Hard just like a real KMC paper. Click an option to check instantly, or print as a standalone A4 worksheet!')}</p>
+              <p class="text-xs opacity-80 mt-0.5">${L('مدرّجة من السهل إلى المتقدم تماماً مثل ورقة المسابقة الرسمية. اختر الإجابة للتحقق الفوري أو اطبعها كورقة عمل مستقلة!', 'Graduated Easy → Medium → Hard just like an official competition paper. Click an option to check instantly, or print as a standalone A4 worksheet!')}</p>
             </div>
             <div class="flex flex-wrap items-center gap-2">
               <span class="eg-lc-pill">${L('النتيجة:', 'Solved:')} ${solvedDrills} / ${drills.length}</span>
@@ -302,7 +374,7 @@
         <tr>
           <td>
             <div class="eg-head">
-              <div class="eg-logo-wrap"><img src="LOGO.jpg" alt="Edugates International School" class="eg-logo"></div>
+              <div class="eg-logo-wrap"><img src="LOGO.jpg" alt="Edugates International School" loading="eager" decoding="sync" class="eg-logo"></div>
               <div class="eg-school">
                 <div class="eg-school-en">Edugates International School</div>
                 <div class="eg-school-ar" dir="rtl">مدرسة بوابة المعرفة العالمية</div>
@@ -324,7 +396,7 @@
           <td>
             <div class="eg-foot">
               <div class="eg-foot-brand">
-                <img src="LOGO.jpg" alt="" class="eg-logo-sm">
+                <img src="LOGO.jpg" alt="" loading="eager" decoding="sync" class="eg-logo-sm">
                 <span><strong>Edugates International School</strong> · مدرسة بوابة المعرفة العالمية</span>
               </div>
               <span class="eg-foot-meta">${title} · A4</span>
@@ -340,13 +412,100 @@
     return window.edugatesPrintSection([bodyHtml], title, rtl ? 'ورقة عمل A4' : 'A4 Worksheet', rtl, false);
   };
 
-  /* Dedicated row-paginated Practice Worksheet + Answer Key builder for executePrint() & Lesson Drills */
-  window.buildEdugatesWorksheetHtml = function (questionsToPrint, docTitle, answerKeyTitle, qLabel, badgeText, includeSolutions, rtl) {
+  /* Reusable Adaptive 4-Option (A–D) or 5-Option (A–E) Optical OMR Bubble Grid */
+  window.buildEdugatesOmrSheetHtml = function (totalQ, optCount, shadedMap, studentAnswers, rtl, scoreTag) {
+    const nOpts = optCount === 4 ? 4 : 5;
+    const optLabels = LABELS.slice(0, nOpts);
+    const rangeTxt = `A–${optLabels[nOpts - 1]}`;
+    const cols = totalQ > 32 ? 3 : 2;
+    const perCol = Math.ceil(totalQ / cols);
+
+    const colBlocks = [];
+    for (let c = 0; c < cols; c++) {
+      const sIdx = c * perCol;
+      const eIdx = Math.min(totalQ, (c + 1) * perCol);
+      if (sIdx >= eIdx) continue;
+      const rows = [];
+      for (let i = sIdx; i < eIdx; i++) {
+        const correctOpt = shadedMap ? shadedMap[i] : null;
+        const studentOpt = studentAnswers ? studentAnswers[i] : null;
+        const bubbles = optLabels.map((lbl, oIdx) => {
+          let cls = 'eg-omr-bubble';
+          if (correctOpt === oIdx) cls += ' eg-omr-shaded';
+          else if (studentOpt === oIdx && correctOpt !== null && studentOpt !== correctOpt) cls += ' eg-omr-wrong';
+          return `<span class="${cls}">${lbl}</span>`;
+        }).join('');
+        rows.push(`<div class="eg-omr-row" dir="ltr">
+          <span class="eg-omr-qnum">${i + 1}.</span>
+          <div class="eg-omr-bubbles">${bubbles}</div>
+        </div>`);
+      }
+      colBlocks.push(`<div class="eg-omr-col">${rows.join('')}</div>`);
+    }
+
+    const legend = shadedMap
+      ? `<div class="eg-omr-legend">${
+          rtl
+            ? `● الدائرة المظللة (${rangeTxt}) تمثل الإجابة الصحيحة المعتمدة في مفتاح التصحيح.`
+            : `● Filled dark bubble (${rangeTxt}) indicates the official correct answer choice.`
+        }</div>`
+      : `<div class="eg-omr-legend">${
+          rtl
+            ? `ظلّل دائرة واحدة فقط (${rangeTxt}) لكل سؤال بقلم رصاص داكن أو حبر جاف: ● (صحيح)   ✗ ○ (خطأ)`
+            : `Shade ONE bubble (${rangeTxt}) completely per question using dark pen/pencil: ● (valid)   ✗ ○ (invalid)`
+        }</div>`;
+
+    return `<div class="eg-omr-sheet no-break">
+      <div class="eg-omr-head">
+        <span>🫧 ${
+          shadedMap
+            ? rtl
+              ? `نموذج التظليل البصري المظلل (OMR Master Key · 1–${totalQ})`
+              : `Pre-Shaded Master OMR Answer Sheet (Questions 1–${totalQ})`
+            : rtl
+            ? `ورقة رصد وتظليل الإجابات البصرية (OMR Answer Sheet · 1–${totalQ})`
+            : `Official OMR Optical Answer Bubble Sheet (Questions 1–${totalQ})`
+        }</span>
+        <span class="eg-omr-tag" dir="ltr">${scoreTag || rangeTxt}</span>
+      </div>
+      ${legend}
+      <div class="eg-omr-cols${cols === 3 ? ' eg-omr-cols-3' : ''}" dir="ltr">
+        ${colBlocks.join('')}
+      </div>
+    </div>`;
+  };
+
+  /* Dedicated row-paginated Practice Worksheet + Optional OMR Cover + Scratch Boxes + Answer Key builder */
+  window.buildEdugatesWorksheetHtml = function (questionsToPrint, docTitle, answerKeyTitle, qLabel, badgeText, includeSolutions, rtl, customOpts) {
+    const opts = customOpts || {};
+    const keyMode = opts.keyMode || (includeSolutions ? 'full' : 'quick');
+    const scratchSpace = opts.scratchSpace || 'none'; // 'none' | 'medium' | 'large'
+    const subtitle = opts.subtitle ? String(opts.subtitle).trim() : '';
+    const includeOmr = !!opts.includeOmr;
+
+    const mcqCount = questionsToPrint.filter((q) => q.type === 'MCQ').length;
+    const maxOptLen = questionsToPrint.reduce((mx, q) => {
+      const c = (q.content && (q.content[rtl ? 'ar' : 'en'] || q.content.en)) || {};
+      return Math.max(mx, Array.isArray(c.options) ? c.options.length : 0);
+    }, 4);
+    const optCount = maxOptLen >= 5 ? 5 : 4;
+
+    const subtitleBanner = subtitle
+      ? `<div class="eg-ws-subtitle">${subtitle}</div>`
+      : '';
+
     const studentBar = `<div class="eg-student-bar">
       <div><strong>${rtl ? 'اسم الطالب/ـة:' : 'Student Name:'}</strong> ___________________________</div>
-      <div><strong>${rtl ? 'الصف:' : 'Grade:'}</strong> __________</div>
+      <div><strong>${rtl ? 'الصف / الشعبة:' : 'Grade / Class:'}</strong> __________</div>
       <div><strong>${rtl ? 'الدرجة:' : 'Score:'}</strong> ____ / ${questionsToPrint.length}</div>
     </div>`;
+
+    const scratchLabel = rtl ? 'مساحة خطوات الحل والمسودة:' : 'Scratch Work & Reasoning:';
+    const scratchHtml = scratchSpace === 'large'
+      ? `<div class="eg-scratch-box eg-scratch-lg"><span>${scratchLabel}</span></div>`
+      : scratchSpace === 'medium'
+      ? `<div class="eg-scratch-box eg-scratch-md"><span>${scratchLabel}</span></div>`
+      : '';
 
     const qRows = questionsToPrint.map((q, index) => {
       const qContent = (q.content && (q.content[rtl ? 'ar' : 'en'] || q.content.en)) || {};
@@ -357,50 +516,96 @@
           <div class="eg-ws-opt">
             <span class="eg-opt-l">${LABELS[oIdx]}</span>
             <span class="math-font">${opt}</span>
-          </div>`).join('')}</div>`;
+          </div>`).join('')}</div>${scratchHtml}`;
       } else {
-        optsHtml = `<div class="eg-frq-box"></div>`;
+        optsHtml = `<div class="eg-frq-box${scratchSpace === 'large' ? ' eg-frq-box-lg' : ''}"></div>`;
       }
       const card = `<div class="eg-ws-q no-break">
-        <div class="eg-ws-qh"><span>${qLabel} ${index + 1}</span><span class="eg-ws-qmeta">${q.topic || ''}${q.difficulty ? ' · ' + q.difficulty : ''}</span></div>
+        <div class="eg-ws-qh"><span>${qLabel} ${index + 1}</span><span class="eg-ws-qmeta">${topicLabel(q.topic || '')}${q.difficulty ? ' · ' + diffLabel(q.difficulty) : ''}</span></div>
         <div class="eg-q math-font">${qContent.question || ''}</div>
         ${diag ? `<div class="eg-diagram">${diag}</div>` : ''}
         ${optsHtml}
       </div>`;
-      return index === 0 ? `<div class="no-break">${studentBar}${card}</div>` : card;
+      if (index === 0 && !includeOmr) {
+        return `<div class="no-break">${subtitleBanner}${studentBar}${card}</div>`;
+      }
+      return card;
     });
 
-    const keyGrid = `<div class="eg-key-box no-break">
-      <div class="eg-h3">${answerKeyTitle}</div>
-      <div class="eg-key-grid">
-        ${questionsToPrint.map((q, idx) => {
-          const ans = (q.type === 'MCQ' && q.correct_index !== undefined && q.correct_index !== null)
-            ? LABELS[q.correct_index]
-            : 'FRQ';
-          return `<div class="eg-key-cell" dir="ltr"><strong>${idx + 1}.</strong> <span>${ans}</span></div>`;
-        }).join('')}
-      </div>
-    </div>`;
+    const parts = [];
 
-    const detailItems = questionsToPrint
-      .map((q, idx) => ({ q, idx }))
-      .filter(({ q }) => includeSolutions || q.type !== 'MCQ')
-      .map(({ q, idx }) => {
-        const c = (q.content && (q.content[rtl ? 'ar' : 'en'] || q.content.en)) || {};
-        const ans = (q.type === 'MCQ' && q.correct_index !== undefined && q.correct_index !== null)
-          ? `(${LABELS[q.correct_index]})`
-          : 'FRQ';
-        return `<div class="eg-card eg-sol-card no-break">
-          <div class="eg-sol-h">${qLabel} ${idx + 1} — ${rtl ? 'الإجابة' : 'Answer'}: ${ans} <span class="eg-ws-qmeta">(${q.id})</span></div>
-          <div class="math-font eg-prose">${c.explanation || ''}</div>
-        </div>`;
+    if (includeOmr && mcqCount > 0) {
+      const omrCover = `<div class="eg-mock-cover no-break">
+        <div class="eg-mock-cover-top">
+          <div class="flex flex-wrap items-center justify-between gap-2">
+            <span class="eg-badge">${badgeText}</span>
+            <span class="eg-badge eg-badge-soft">${rtl ? 'بدون آلة حاسبة · ورق A4 رسمي' : 'No Calculator · Official A4 Sheet'}</span>
+          </div>
+          <h2 class="eg-mock-cover-title">${docTitle}</h2>
+          ${subtitle ? `<div class="text-xs font-semibold opacity-80 mb-1">${subtitle}</div>` : ''}
+          <div class="eg-mock-cover-specs">
+            <span><strong>${rtl ? 'عدد الأسئلة:' : 'Total Questions:'}</strong> ${questionsToPrint.length} (${optCount === 5 ? 'A–E' : 'A–D'})</span>
+            <span><strong>${rtl ? 'تعليمات:' : 'Instructions:'}</strong> ${rtl ? 'ظلّل دائرة واحدة فقط لكل سؤال في ورقة الرصد أدناه' : 'Shade exactly ONE bubble per question on the OMR grid below'}</span>
+          </div>
+        </div>
+        <div class="eg-mock-cand-grid">
+          <div><strong>${rtl ? 'اسم الطالب/ـة الرباعي:' : 'Student Full Name:'}</strong> _______________________________</div>
+          <div><strong>${rtl ? 'الصف والشعبة:' : 'Grade / Section:'}</strong> ___________________</div>
+          <div><strong>${rtl ? 'الرقم الأكاديمي:' : 'Student ID:'}</strong> ___________________</div>
+          <div><strong>${rtl ? 'التاريخ:' : 'Date:'}</strong> ____ / ____ / 202__</div>
+          <div><strong>${rtl ? 'الإجابات الصحيحة:' : 'Correct Answers:'}</strong> ______ / ${questionsToPrint.length}</div>
+          <div><strong>${rtl ? 'الدرجة النهائية:' : 'Final Score:'}</strong> ____________</div>
+        </div>
+        ${window.buildEdugatesOmrSheetHtml(questionsToPrint.length, optCount, null, null, rtl, optCount === 5 ? 'A–E' : 'A–D')}
+      </div>`;
+      parts.push(window.edugatesPrintSection([omrCover], docTitle, badgeText, rtl, false));
+      parts.push(window.edugatesPrintSection(qRows, `${docTitle} — ${rtl ? 'الأسئلة' : 'Questions'}`, badgeText, rtl, true));
+    } else {
+      parts.push(window.edugatesPrintSection(qRows, docTitle, badgeText, rtl, false));
+    }
+
+    if (keyMode !== 'none') {
+      const shadedMap = {};
+      questionsToPrint.forEach((q, idx) => {
+        if (q.type === 'MCQ' && typeof q.correct_index === 'number') shadedMap[idx] = q.correct_index;
       });
 
-    const keyRows = [keyGrid, ...detailItems];
-    return (
-      window.edugatesPrintSection(qRows, docTitle, badgeText, rtl, false) +
-      window.edugatesPrintSection(keyRows, answerKeyTitle, badgeText, rtl, true)
-    );
+      const keyGrid = `<div class="eg-key-box no-break">
+        <div class="eg-h3">${answerKeyTitle}</div>
+        <div class="eg-key-grid">
+          ${questionsToPrint.map((q, idx) => {
+            const ans = (q.type === 'MCQ' && q.correct_index !== undefined && q.correct_index !== null)
+              ? LABELS[q.correct_index]
+              : 'FRQ';
+            return `<div class="eg-key-cell" dir="ltr"><strong>${idx + 1}.</strong> <span>${ans}</span></div>`;
+          }).join('')}
+        </div>
+      </div>`;
+
+      const showDetailed = keyMode === 'full';
+      const detailItems = questionsToPrint
+        .map((q, idx) => ({ q, idx }))
+        .filter(({ q }) => showDetailed || q.type !== 'MCQ')
+        .map(({ q, idx }) => {
+          const c = (q.content && (q.content[rtl ? 'ar' : 'en'] || q.content.en)) || {};
+          const ans = (q.type === 'MCQ' && q.correct_index !== undefined && q.correct_index !== null)
+            ? `(${LABELS[q.correct_index]})`
+            : 'FRQ';
+          return `<div class="eg-card eg-sol-card no-break">
+            <div class="eg-sol-h">${qLabel} ${idx + 1} — ${rtl ? 'الإجابة' : 'Answer'}: ${ans} <span class="eg-ws-qmeta">(${q.id})</span></div>
+            <div class="math-font eg-prose">${c.explanation || ''}</div>
+          </div>`;
+        });
+
+      const keyRows = [
+        ...(includeOmr && mcqCount > 0 ? [window.buildEdugatesOmrSheetHtml(questionsToPrint.length, optCount, shadedMap, null, rtl, 'KEY')] : []),
+        keyGrid,
+        ...detailItems,
+      ];
+      parts.push(window.edugatesPrintSection(keyRows, answerKeyTitle, badgeText, rtl, true));
+    }
+
+    return parts.join('');
   };
 
   function triggerContainerPrint(container) {
@@ -417,57 +622,61 @@
   }
 
   window.printKaustLesson = function (id) {
-    const les = lessons.find((x) => x.id === id);
+    const les = allLessons().find((x) => x.id === id);
     if (!les) return;
-    const tr = TRACKS.find((t) => t.level === les.level) || TRACKS[0];
+    const cfg = compForLesson(les);
+    const tr = trackMetaForLesson(les);
     const c = document.getElementById('print-container');
     const docTitle = `${L('شرح الدرس', 'Study Guide')} ${les.unit_num} — ${pick(les).title}`;
-    const badge = `${isAr() ? tr.shortAr : tr.shortEn} · KAUST KMC · A4`;
+    const badge = `${isAr() ? tr.shortAr : tr.shortEn} · ${isAr() ? cfg.badgeAr : cfg.badgeEn} · A4`;
     c.innerHTML = window.edugatesPrintSection(lessonBlocks(les, true), docTitle, badge, isAr(), false);
     triggerContainerPrint(c);
   };
 
   window.printKaustLessonDrills = function (id) {
-    const les = lessons.find((x) => x.id === id);
+    const les = allLessons().find((x) => x.id === id);
     if (!les) return;
     const drillQs = lessonDrillQuestions(les);
     if (!drillQs.length) return;
-    const tr = TRACKS.find((t) => t.level === les.level) || TRACKS[0];
+    const cfg = compForLesson(les);
+    const tr = trackMetaForLesson(les);
     const c = document.getElementById('print-container');
     const docTitle = `${L('ورقة تدريبات الدرس', 'Practice Drills Worksheet')} ${les.unit_num} — ${pick(les).title}`;
     const keyTitle = `${L('مفتاح الإجابات والحلول التفصيلية — درس', 'Answer Key & Step-by-Step Solutions — Lesson')} ${les.unit_num}`;
     const qLbl = L('تدريب', 'Drill');
-    const badge = `${isAr() ? tr.shortAr : tr.shortEn} · ${L('ورقة تدريبات A4', 'A4 Drills')} · KMC`;
+    const badge = `${isAr() ? tr.shortAr : tr.shortEn} · ${L('ورقة تدريبات A4', 'A4 Drills')} · ${isAr() ? cfg.badgeAr : cfg.badgeEn}`;
     c.innerHTML = window.buildEdugatesWorksheetHtml(drillQs, docTitle, keyTitle, qLbl, badge, true, isAr());
     triggerContainerPrint(c);
   };
 
   window.printKaustTrackBooklet = function (level) {
-    const ls = lessons.filter((x) => x.level === level);
+    const ls = allLessons().filter((x) => x.level === level);
     if (!ls.length) return;
-    const tr = TRACKS.find((t) => t.level === level) || TRACKS[0];
+    const cfg = compForLesson(ls[0]);
+    const tr = trackMetaForLesson(ls[0]);
     const c = document.getElementById('print-container');
     c.innerHTML = ls.map((les, idx) => {
       const docTitle = `${L('درس', 'Lesson')} ${les.unit_num} — ${pick(les).title}`;
-      const badge = `${isAr() ? tr.shortAr : tr.shortEn} · ${L('دليل المسار', 'Track Booklet')} · A4`;
+      const badge = `${isAr() ? tr.shortAr : tr.shortEn} · ${isAr() ? cfg.badgeAr : cfg.badgeEn} · A4`;
       return window.edugatesPrintSection(lessonBlocks(les, true), docTitle, badge, isAr(), idx > 0);
     }).join('');
     triggerContainerPrint(c);
   };
 
   window.practiceKaustLesson = function (id) {
-    const les = lessons.find((x) => x.id === id);
+    const les = allLessons().find((x) => x.id === id);
     if (!les) return;
+    const cfg = compForLesson(les);
     if (typeof currentSelectedGrade !== 'undefined') currentSelectedGrade = 'all';
     if (typeof renderGradeFilters === 'function') renderGradeFilters();
     const sel = document.getElementById('quiz-track-select');
-    sel.value = 'kaust';
+    sel.value = cfg.id;
     filterQuestions();
-    const phaseSel = document.getElementById('quiz-kaust-phase-select');
+    const phaseSel = document.getElementById(cfg.quizSelectId);
     if (phaseSel) phaseSel.value = les.level;
     filterQuestions();
     const bpSet = new Set(les.blueprints);
-    currentFilteredQuestions = appData.questions.filter((q) => q.track === 'kaust' && bpSet.has(q.kmc_blueprint));
+    currentFilteredQuestions = appData.questions.filter((q) => q.track === cfg.id && bpSet.has(q[cfg.bpField]));
     currentQuestionIdx = 0;
     resetQuestionState();
     if (typeof renderQuestionCard === 'function') renderQuestionCard();
@@ -495,7 +704,7 @@
   window.tryKaustExample = function (exKey, choiceIdx) {
     selectedTryChoice[exKey] = choiceIdx;
     const [, exId] = exKey.split(':');
-    const les = lessons.find((x) => x.id === activeLessonId);
+    const les = allLessons().find((x) => x.id === activeLessonId);
     if (les) {
       const ex = allExamplesFor(les).find((e, i) => String(e.id || i + 1) === exId);
       if (ex && choiceIdx === ex.correct_index) revealedExamples.add(exKey);
@@ -511,7 +720,7 @@
   window.answerKaustDrill = function (dKey, choiceIdx) {
     drillChoice[dKey] = choiceIdx;
     const [lesId, qId] = dKey.split(':');
-    const les = lessons.find((x) => x.id === lesId);
+    const les = allLessons().find((x) => x.id === lesId);
     if (les) {
       const dr = lessonDrills(les).find((x) => x.id === qId);
       if (dr && choiceIdx === dr.correct_index) revealedDrills.add(dKey);
@@ -531,7 +740,7 @@
   };
 
   window.toggleAllKaustDrills = function (lesId) {
-    const les = lessons.find((x) => x.id === lesId);
+    const les = allLessons().find((x) => x.id === lesId);
     if (!les) return;
     const keys = (les.drill_ids || []).map((id) => `${lesId}:${id}`);
     const allOpen = keys.length > 0 && keys.every((k) => revealedDrills.has(k));
@@ -556,9 +765,21 @@
     render();
   };
 
+  window.setStudyCompetition = function (compId) {
+    if (compId !== 'kaust' && compId !== 'nsmo') return;
+    if (compId === 'nsmo' && !nsmoLessons.length) return;
+    activeComp = compId;
+    activeLessonId = null;
+    render();
+  };
+
   window.openKaustLesson = function (id) {
-    const les = lessons.find((x) => x.id === id);
-    if (les) activeTrack = les.level;
+    const les = allLessons().find((x) => x.id === id);
+    if (les) {
+      const cfg = compForLesson(les);
+      activeComp = cfg.id;
+      activeTrackByComp[cfg.id] = les.level;
+    }
     activeLessonId = id;
     render();
     const el = document.getElementById('study-lessons');
@@ -571,15 +792,23 @@
   };
 
   window.setKaustTrack = function (level) {
-    activeTrack = level;
+    if (String(level || '').startsWith('Phase ')) {
+      activeComp = 'nsmo';
+      activeTrackByComp.nsmo = level;
+    } else {
+      activeComp = 'kaust';
+      activeTrackByComp.kaust = level;
+    }
     activeLessonId = null;
     render();
   };
 
-  window.jumpToKaustStudy = function (level) {
-    if (level) {
-      activeTrack = level;
+  window.jumpToKaustStudy = function (levelOrComp) {
+    if (levelOrComp === 'kaust' || levelOrComp === 'nsmo') {
+      if (levelOrComp !== 'nsmo' || nsmoLessons.length) activeComp = levelOrComp;
       activeLessonId = null;
+    } else if (levelOrComp) {
+      window.setKaustTrack(levelOrComp);
     }
     render();
     const el = document.getElementById('study-lessons');
@@ -589,16 +818,28 @@
   function qCount(les) {
     const qs = getBankQuestions();
     if (!qs.length) return 0;
+    const cfg = compForLesson(les);
     const s = new Set(les.blueprints);
-    return qs.filter((q) => q.track === 'kaust' && s.has(q.kmc_blueprint)).length;
+    return qs.filter((q) => q.track === cfg.id && s.has(q[cfg.bpField])).length;
   }
 
   function render() {
     const root = document.getElementById('study-lessons');
+    const lessons = currentLessons();
     if (!root || !lessons.length) return;
     root.setAttribute('dir', isAr() ? 'rtl' : 'ltr');
 
-    const tabs = TRACKS.map((t) => {
+    const cfg = COMP_CONFIG[activeComp];
+    const activeTrack = activeTrackByComp[activeComp];
+
+    const compSwitcher = nsmoLessons.length
+      ? `<div class="eg-comp-switch no-print" role="tablist" aria-label="Study Competition">
+          <button type="button" onclick="setStudyCompetition('kaust')" class="eg-comp-btn${activeComp === 'kaust' ? ' eg-comp-btn-on' : ''}">${isAr() ? COMP_CONFIG.kaust.pillAr : COMP_CONFIG.kaust.pillEn}</button>
+          <button type="button" onclick="setStudyCompetition('nsmo')" class="eg-comp-btn${activeComp === 'nsmo' ? ' eg-comp-btn-on' : ''}">${isAr() ? COMP_CONFIG.nsmo.pillAr : COMP_CONFIG.nsmo.pillEn}</button>
+        </div>`
+      : '';
+
+    const tabs = cfg.tracks.map((t) => {
       const tLessons = lessons.filter((x) => x.level === t.level);
       const exTotal = tLessons.reduce((acc, x) => acc + (pick(x).examples || []).length + (x.bank_example_ids || []).length, 0);
       const drTotal = tLessons.reduce((acc, x) => acc + (x.drill_ids || []).length, 0);
@@ -612,7 +853,7 @@
     if (activeLessonId) {
       const trackLessons = lessons.filter((x) => x.level === activeTrack);
       const curIdx = trackLessons.findIndex((x) => x.id === activeLessonId);
-      const les = trackLessons[curIdx] || lessons.find((x) => x.id === activeLessonId);
+      const les = trackLessons[curIdx] || allLessons().find((x) => x.id === activeLessonId);
       const prevLes = curIdx > 0 ? trackLessons[curIdx - 1] : null;
       const nextLes = curIdx >= 0 && curIdx < trackLessons.length - 1 ? trackLessons[curIdx + 1] : null;
 
@@ -669,7 +910,7 @@
           </div>
           <div class="flex flex-wrap gap-2 shrink-0">
             <button type="button" onclick="if(window.jumpToKaustMocks)jumpToKaustMocks('${activeTrack}');" class="eg-btn eg-btn-go">
-              ⏱️ ${L('الاختبارات التجريبية الكاملة (KMC)', 'Full Official Mock Exams')}
+              ⏱️ ${L('الاختبارات التجريبية الكاملة', 'Full Official Mock Exams')}
             </button>
             <button type="button" onclick="printKaustTrackBooklet('${activeTrack}')" class="eg-btn eg-btn-main">
               📚 ${L('طباعة مذكرة المسار كاملةً (A4)', 'Print Full Track Booklet (A4)')}
@@ -686,10 +927,11 @@
         <div class="eg-hub-logo-box"><img src="LOGO.jpg" alt="Edugates International School" loading="eager" decoding="sync" class="eg-hub-logo"></div>
         <div class="flex-1">
           <div class="eg-hub-kicker">Edugates International School · مدرسة بوابة المعرفة العالمية</div>
-          <h2 class="text-2xl sm:text-3xl font-display font-extrabold">📖 ${L('أكاديمية شرح دروس مسابقة كاوست للرياضيات (KMC)', 'KAUST Math Competition (KMC) Study Lessons')}</h2>
-          <p class="text-xs sm:text-sm opacity-80 mt-1">${L(`18 درساً مصوّراً · ${totalSolvedAll} مثالاً محلولاً بالتفصيل · ${totalDrillsAll} تدريباً تطبيقياً · طباعة A4 رسمية بشعار المدرسة على جميع الصفحات`, `18 Illustrated Lessons · ${totalSolvedAll} Step-by-Step Solved Examples · ${totalDrillsAll} Printable Practice Drills · Branded A4 Printouts`)}</p>
+          <h2 class="text-2xl sm:text-3xl font-display font-extrabold">📖 ${isAr() ? cfg.hubTitleAr : cfg.hubTitleEn}</h2>
+          <p class="text-xs sm:text-sm opacity-80 mt-1">${L(`${lessons.length} درساً مصوّراً · ${totalSolvedAll} مثالاً محلولاً بالتفصيل · ${totalDrillsAll} تدريباً تطبيقياً · طباعة A4 رسمية بشعار المدرسة على جميع الصفحات`, `${lessons.length} Illustrated Lessons · ${totalSolvedAll} Step-by-Step Solved Examples · ${totalDrillsAll} Printable Practice Drills · Branded A4 Printouts`)}</p>
         </div>
       </div>
+      ${compSwitcher}
       <div class="eg-tabs no-print">${tabs}</div>
       ${inner}
     </div>`;
@@ -709,13 +951,22 @@
       sec.className = 'no-print-section';
       practice.parentNode.insertBefore(sec, practice);
     }
-    try {
-      const res = await fetch('data/kaust_lessons.json');
-      if (res.ok) lessons = (await res.json()).lessons || [];
-    } catch (e) {
-      console.error('Failed to load KAUST study lessons:', e);
-      return;
+    const [kRes, nRes] = await Promise.allSettled([
+      fetch('data/kaust_lessons.json'),
+      fetch('data/nsmo_lessons.json'),
+    ]);
+    if (kRes.status === 'fulfilled' && kRes.value && kRes.value.ok) {
+      try {
+        kaustLessons = ((await kRes.value.json()).lessons) || [];
+      } catch (_) {}
     }
+    if (nRes.status === 'fulfilled' && nRes.value && nRes.value.ok) {
+      try {
+        nsmoLessons = ((await nRes.value.json()).lessons) || [];
+      } catch (_) {}
+    }
+    if (!kaustLessons.length && !nsmoLessons.length) return;
+
     const t0 = Date.now();
     while (!getBankQuestions().length && Date.now() - t0 < 15000) {
       await new Promise((r) => setTimeout(r, 80));
@@ -726,6 +977,8 @@
       const origToggle = window.toggleLanguage;
       window.toggleLanguage = function () {
         const res = origToggle.apply(this, arguments);
+        const navStudy = document.getElementById('nav-study-text');
+        if (navStudy) navStudy.innerText = isAr() ? 'دروس المسابقات' : 'Study Academy';
         render();
         return res;
       };
@@ -735,9 +988,15 @@
       const origGrade = window.setGradeFilter;
       window.setGradeFilter = function (g) {
         const res = origGrade.apply(this, arguments);
-        if (g === 6 || g === 7) { activeTrack = TRACKS[0].level; activeLessonId = null; render(); }
-        else if (g === 8 || g === 9) { activeTrack = TRACKS[1].level; activeLessonId = null; render(); }
-        else if (g === 10 || g === 11) { activeTrack = TRACKS[2].level; activeLessonId = null; render(); }
+        if (activeComp === 'nsmo') {
+          if (g === 7) { activeTrackByComp.nsmo = COMP_CONFIG.nsmo.tracks[0].level; activeLessonId = null; render(); }
+          else if (g === 8 || g === 9) { activeTrackByComp.nsmo = COMP_CONFIG.nsmo.tracks[1].level; activeLessonId = null; render(); }
+          else if (g === 10) { activeTrackByComp.nsmo = COMP_CONFIG.nsmo.tracks[2].level; activeLessonId = null; render(); }
+        } else {
+          if (g === 6 || g === 7) { activeTrackByComp.kaust = COMP_CONFIG.kaust.tracks[0].level; activeLessonId = null; render(); }
+          else if (g === 8 || g === 9) { activeTrackByComp.kaust = COMP_CONFIG.kaust.tracks[1].level; activeLessonId = null; render(); }
+          else if (g === 10 || g === 11) { activeTrackByComp.kaust = COMP_CONFIG.kaust.tracks[2].level; activeLessonId = null; render(); }
+        }
         return res;
       };
     }
@@ -747,7 +1006,10 @@
   else init();
 
   window.__kaustStudy = {
-    get lessons() { return lessons; },
+    get lessons() { return kaustLessons; },
+    get nsmoLessons() { return nsmoLessons; },
+    get allLessons() { return allLessons(); },
+    get activeComp() { return activeComp; },
     render,
     lessonBlocks,
     lessonBodyHtml,

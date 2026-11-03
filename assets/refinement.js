@@ -28,7 +28,7 @@ Object.assign(dict.ar, {
 const trackUpdates = {
  kangaroo:{levels_en:'Available: Grades 3–10',levels_ar:'المتاح: الصفوف 3–10',grades:[3,4,5,6,7,8,9,10]},
  kaust:{name_en:'KAUST · Math Competition (KMC)',name_ar:'كاوست · مسابقة الرياضيات (KMC)',format_en:'5-option MCQs (A–E) · No calculator · Grades 6–11',format_ar:'اختيار من متعدد (5 خيارات) · بدون آلة حاسبة · الصفوف 6–11',levels_en:'Official KMC Tracks: Grades 6–11',levels_ar:'مسارات KMC: الصفوف 6–11',badge_en:'MCQs (5 Options)',badge_ar:'MCQs (5 خيارات)',grades:[6,7,8,9,10,11]},
- nsmo:{name_en:'NSMO · Olympiad preparation',name_ar:'نسمو · إعداد للأولمبياد',format_en:'SuperMath training levels; not official competition rounds',format_ar:'مستويات تدريب سوبر ماث، وليست جولات المسابقة الرسمية',levels_en:'Training: Grades 7–10',levels_ar:'تدريب: الصفوف 7–10',grades:[7,8,9,10]},
+ nsmo:{name_en:'NSMO · Mawhiba Olympiad',name_ar:'نسمو · الأولمبياد الوطني (موهبة)',format_en:'4-option MCQs (A–D) · No calculator · Grades 7–10',format_ar:'اختيار من متعدد (4 خيارات) · بدون آلة حاسبة · الصفوف 7–10',levels_en:'Official Olympiad Scope: Grades 7–10',levels_ar:'نطاق الأولمبياد: الصفوف 7–10',badge_en:'MCQs (4 Options)',badge_ar:'MCQs (4 خيارات)',grades:[7,8,9,10]},
  olympiad:{name_en:'Olympiad · Proof practice',name_ar:'الأولمبياد · تدريب البراهين',format_en:'Full written reasoning; foundation to advanced practice',format_ar:'حلول مكتوبة مبررة؛ تدريب تأسيسي ومتقدم'},
  jee:{name_en:'JEE · Mathematics',name_ar:'JEE · الرياضيات',format_en:'Mixed mathematics practice; not a full Main/Advanced mock',format_ar:'تدريب رياضيات متنوع؛ ليس محاكاة كاملة لـ Main أو Advanced'}
 };
@@ -36,6 +36,7 @@ appData.tracks.forEach(t=>Object.assign(t,trackUpdates[t.id]||{}));
 function chooseTrack(id){
  const track=appData.tracks.find(t=>t.id===id);
  if(!track || (currentSelectedGrade!=='all'&&!track.grades.includes(currentSelectedGrade)))return;
+ if(id==='kaust'||id==='nsmo'){window.setStudyCompetition?.(id);window.setMockCompetition?.(id);}
  document.getElementById('quiz-track-select').value=id;filterQuestions();
  document.getElementById('practice').scrollIntoView({behavior:matchMedia('(prefers-reduced-motion: reduce)').matches?'instant':'smooth'});
  document.getElementById('quiz-track-select').focus({preventScroll:true});
@@ -58,14 +59,17 @@ renderApp=function(){
  for(const select of document.querySelectorAll('select'))select.setAttribute('aria-label',select.id.replace(/-/g,' '));
  let notice=document.getElementById('bank-notice');
  if(!notice){notice=document.createElement('p');notice.id='bank-notice';document.getElementById('quiz-subheading').after(notice)}
- notice.textContent=currentLang==='ar'?'مواد تدريب مستقلة. الحلول المكتوبة للتقييم الذاتي. مسارات كاوست تغطي المسارات الثلاثة لمسابقة كاوست للرياضيات (الصفوف 6–11)، ومستويات نسمو مستويات تدريبية.':'Independent practice materials. Written responses are self-assessed. KAUST tracks follow the 3 grade bands of the KAUST Mathematics Competition (Grades 6–11); NSMO levels are training stages.';
+ notice.textContent=currentLang==='ar'?'مواد تدريب مستقلة. الحلول المكتوبة للتقييم الذاتي. مسارات كاوست (الصفوف 6–11) ومراحل نسمو موهبة (الصفوف 7–10) مزوّدة بشرح الدروس والاختبارات التجريبية وأوراق طباعة A4.':'Independent practice materials. Written responses are self-assessed. KAUST KMC (Grades 6–11) and NSMO Mawhiba (Grades 7–10) include full Study Lessons, Mock Simulators, and branded A4 printouts.';
  const jumpEl=document.getElementById('mobile-jump-text');
  if(jumpEl)jumpEl.textContent=currentLang==='ar'?'التدريب':'Practice';
 };
 const kmcLevelLabels = {
  'Track 1: Grades 6-7': 'Track 1: Grades 6-7 / المسار 1: الصفوف 6-7',
  'Track 2: Grades 8-9': 'Track 2: Grades 8-9 / المسار 2: الصفوف 8-9',
- 'Track 3: Grades 10-11': 'Track 3: Grades 10-11 / المسار 3: الصفوف 10-11'
+ 'Track 3: Grades 10-11': 'Track 3: Grades 10-11 / المسار 3: الصفوف 10-11',
+ 'Phase 1: Junior Olympiad (Grade 7)': 'Phase 1: Grade 7 (Junior) / المرحلة 1: الصف 7',
+ 'Phase 2: Intermediate Olympiad (Grades 8-9)': 'Phase 2: Grades 8-9 (Intermediate) / المرحلة 2: الصفان 8-9',
+ 'Phase 3: Senior National Olympiad (Grade 10)': 'Phase 3: Grade 10 (Senior) / المرحلة 3: الصف 10'
 };
 loadQuestionsData=async function(){
  const results=await Promise.allSettled(appData.tracks.map(async t=>{const r=await fetch(`data/${t.id}.json`);if(!r.ok)throw Error(t.id);const data=await r.json();if(!Array.isArray(data))throw Error(t.id);return data}));

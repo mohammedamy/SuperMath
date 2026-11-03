@@ -1168,7 +1168,7 @@ TARGETS = {
     "kangaroo": {"Ecolier": 250, "Benjamin": 250, "Cadet": 250, "Junior": 250},
     "nafes": {"Grade 3": 250, "Grade 6": 250, "Grade 9": 250},
     "kaust": {"Track 1: Grades 6-7": 750, "Track 2: Grades 8-9": 750, "Track 3: Grades 10-11": 750},
-    "nsmo": {"Phase 1: Junior Olympiad (Grade 7)": 250, "Phase 2: Intermediate Olympiad (Grades 8-9)": 250, "Phase 3: Senior National Olympiad (Grade 10)": 250},
+    "nsmo": {"Phase 1: Junior Olympiad (Grade 7)": 450, "Phase 2: Intermediate Olympiad (Grades 8-9)": 450, "Phase 3: Senior National Olympiad (Grade 10)": 450},
     "jee": {"Grade 12": 500},
     "olympiad": {"High School": 500}
 }
@@ -1201,11 +1201,11 @@ def make_banks():
     all_banks = {}
     for track, levels in TARGETS.items():
         path = ROOT / "data" / f"{track}.json"
-        if track == "kaust":
-            # KAUST is strictly built by scripts/build_kaust_kmc.py (official KMC Grades 6-11 scope)
-            kmc_bank = json.loads(path.read_text())
+        if track in ("kaust", "nsmo"):
+            # KAUST and NSMO are strictly built by scripts/build_kaust_kmc.py and scripts/build_nsmo.py
+            dedicated_bank = json.loads(path.read_text())
             for level in levels:
-                cnt = sum(q["level"] == level for q in kmc_bank)
+                cnt = sum(q["level"] == level for q in dedicated_bank)
                 report.append({"track": track, "level": level, "retained": cnt, "added": 0, "total": cnt, "new_families": {}})
             continue
         bank = list(legacy_banks[track])

@@ -1560,6 +1560,90 @@ svg[viewBox]:not(mjx-container svg) {
   border-color: rgba(71, 85, 105, 0.7);
 }
 
+/* Competition Switcher Pill Bar (KAUST KMC vs NSMO Mawhiba) */
+.eg-comp-switch {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.55rem;
+  margin-bottom: 0.85rem;
+  padding: 0.4rem;
+  border-radius: 1rem;
+  background: rgba(15, 23, 42, 0.06);
+  border: 1px solid rgba(148, 163, 184, 0.35);
+}
+
+.dark .eg-comp-switch {
+  background: rgba(15, 23, 42, 0.65);
+  border-color: rgba(71, 85, 105, 0.65);
+}
+
+.eg-comp-btn {
+  flex: 1 1 240px;
+  padding: 0.6rem 1rem;
+  border-radius: 0.75rem;
+  font-size: 0.85rem;
+  font-weight: 800;
+  color: #334155;
+  background: transparent;
+  border: 1px solid transparent;
+  transition: all 0.18s ease;
+  text-align: center;
+}
+
+.dark .eg-comp-btn {
+  color: #cbd5e1;
+}
+
+.eg-comp-btn:hover {
+  background: rgba(20, 184, 166, 0.1);
+}
+
+.eg-comp-btn-on {
+  background: linear-gradient(135deg, #0f766e, #0d9488) !important;
+  color: #ffffff !important;
+  border-color: #14b8a6 !important;
+  box-shadow: 0 4px 14px rgba(13, 148, 136, 0.28);
+}
+
+/* Edugates A4 Worksheet Customizer Chips */
+.eg-cust-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+}
+
+.eg-cust-chips-scroll {
+  max-height: 112px;
+  overflow-y: auto;
+  padding-right: 4px;
+}
+
+.eg-cust-chip {
+  padding: 0.32rem 0.68rem;
+  border-radius: 999px;
+  font-size: 0.73rem;
+  font-weight: 700;
+  color: #cbd5e1;
+  background: #1e293b;
+  border: 1px solid #334155;
+  transition: all 0.15s ease;
+  max-width: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.eg-cust-chip:hover {
+  border-color: #10b981;
+  color: #ffffff;
+}
+
+.eg-cust-chip-on {
+  background: rgba(16, 185, 129, 0.22) !important;
+  border-color: #10b981 !important;
+  color: #a7f3d0 !important;
+}
+
 /* ===== Edugates International School Branded A4 Print Styles ===== */
 @media print {
   html,
@@ -1897,6 +1981,11 @@ svg[viewBox]:not(mjx-container svg) {
     margin: 1.8mm 0 !important;
   }
 
+  #print-container .eg-opts:has(> :nth-child(4):last-child),
+  #print-container .eg-ws-opts:has(> :nth-child(4):last-child) {
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+  }
+
   #print-container .eg-opt,
   #print-container .eg-ws-opt {
     background: #f8fafc !important;
@@ -1961,6 +2050,48 @@ svg[viewBox]:not(mjx-container svg) {
     border: 0.7pt dashed #cbd5e1;
     border-radius: 1.5mm;
     margin-top: 2mm;
+  }
+
+  .eg-frq-box-lg {
+    height: 40mm;
+  }
+
+  .eg-ws-subtitle {
+    padding: 1.8mm 3mm;
+    margin-bottom: 2.2mm;
+    border-radius: 1.6mm;
+    background: #f0fdfa !important;
+    border: 0.7pt solid #99f6e4;
+    font-size: 9pt;
+    font-weight: 700;
+    color: #0f766e;
+    text-align: center;
+  }
+
+  .eg-scratch-box {
+    margin-top: 2.2mm;
+    padding: 1.2mm 2.4mm;
+    border: 0.7pt dashed #94a3b8;
+    border-radius: 1.6mm;
+    background-color: #fcfdff !important;
+    background-image: radial-gradient(#cbd5e1 0.55pt, transparent 0.55pt) !important;
+    background-size: 4mm 4mm !important;
+    font-size: 7.4pt;
+    font-weight: 700;
+    color: #64748b;
+  }
+
+  .eg-scratch-md {
+    height: 19mm;
+  }
+
+  .eg-scratch-lg {
+    height: 33mm;
+  }
+
+  #print-container .eg-omr-cols-3 {
+    grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+    gap: 0 4.5mm !important;
   }
 
   .eg-key-grid {

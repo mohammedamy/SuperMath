@@ -1,34 +1,107 @@
-/* KAUST Mathematics Competition (KMC) Official Full Mock Exams — Timed Simulator + Edugates A4 Print & OMR Suite */
+/* KAUST (KMC) & NSMO (Mawhiba) Official Full Mock Exams — Timed Simulator + Edugates A4 Print & Adaptive OMR Suite */
 (function () {
-  const TRACKS = [
-    {
-      level: 'Track 1: Grades 6-7',
-      code: 'T1',
-      qCount: 24,
-      en: 'Track 1 · Grades 6–7',
-      ar: 'المسار 1 · الصفوف 6–7',
-      shortEn: 'Grades 6–7 (Junior)',
-      shortAr: 'الصفوف 6–7 (التأسيسي)',
+  const COMP_CONFIG = {
+    kaust: {
+      id: 'kaust',
+      bpField: 'kmc_blueprint',
+      optCount: 5,
+      ptsCorrect: 4,
+      ptsWrong: -1,
+      ptsBlank: 0,
+      durationMin: 120,
+      pillEn: '🏛️ KAUST KMC Mocks (Grades 6–11 · 5 Options)',
+      pillAr: '🏛️ اختبارات كاوست KMC (الصفوف 6–11 · 5 خيارات)',
+      hubTitleEn: 'KAUST Math Competition (KMC) Full Mock Exams',
+      hubTitleAr: 'محاكي الاختبارات الرسمية الكاملة لمسابقة كاوست (KMC)',
+      badgeEn: 'KAUST KMC',
+      badgeAr: 'كاوست KMC',
+      examNameEn: 'KAUST Mathematics Competition (KMC)',
+      examNameAr: 'مسابقة كاوست للرياضيات (KMC)',
+      scoreTag: '+4 / −1 / 0',
+      tracks: [
+        {
+          level: 'Track 1: Grades 6-7',
+          code: 'T1',
+          qCount: 24,
+          tiers: { Easy: 8, Medium: 8, Hard: 8 },
+          en: 'Track 1 · Grades 6–7',
+          ar: 'المسار 1 · الصفوف 6–7',
+          shortEn: 'Grades 6–7 (Junior)',
+          shortAr: 'الصفوف 6–7 (التأسيسي)',
+        },
+        {
+          level: 'Track 2: Grades 8-9',
+          code: 'T2',
+          qCount: 24,
+          tiers: { Easy: 8, Medium: 8, Hard: 8 },
+          en: 'Track 2 · Grades 8–9',
+          ar: 'المسار 2 · الصفوف 8–9',
+          shortEn: 'Grades 8–9 (Intermediate)',
+          shortAr: 'الصفوف 8–9 (المتوسط)',
+        },
+        {
+          level: 'Track 3: Grades 10-11',
+          code: 'T3',
+          qCount: 30,
+          tiers: { Easy: 10, Medium: 10, Hard: 10 },
+          en: 'Track 3 · Grades 10–11',
+          ar: 'المسار 3 · الصفوف 10–11',
+          shortEn: 'Grades 10–11 (Senior)',
+          shortAr: 'الصفوف 10–11 (المتقدم)',
+        },
+      ],
     },
-    {
-      level: 'Track 2: Grades 8-9',
-      code: 'T2',
-      qCount: 24,
-      en: 'Track 2 · Grades 8–9',
-      ar: 'المسار 2 · الصفوف 8–9',
-      shortEn: 'Grades 8–9 (Intermediate)',
-      shortAr: 'الصفوف 8–9 (المتوسط)',
+    nsmo: {
+      id: 'nsmo',
+      bpField: 'nsmo_blueprint',
+      optCount: 4,
+      ptsCorrect: 4,
+      ptsWrong: 0,
+      ptsBlank: 0,
+      durationMin: 90,
+      pillEn: '🥇 NSMO · Mawhiba Mocks (Grades 7–10 · 4 Options)',
+      pillAr: '🥇 اختبارات نسمو — موهبة (الصفوف 7–10 · 4 خيارات)',
+      hubTitleEn: 'NSMO / Mawhiba National Olympiad Full Mock Exams',
+      hubTitleAr: 'محاكي الاختبارات الرسمية الكاملة لأولمبياد نسمو — موهبة',
+      badgeEn: 'NSMO Mawhiba',
+      badgeAr: 'نسمو موهبة',
+      examNameEn: 'NSMO / Mawhiba National Mathematics Olympiad',
+      examNameAr: 'أولمبياد العلوم والرياضيات الوطني (نسمو — موهبة)',
+      scoreTag: '+4 / 0 / 0',
+      tracks: [
+        {
+          level: 'Phase 1: Junior Olympiad (Grade 7)',
+          code: 'P1',
+          qCount: 25,
+          tiers: { Easy: 9, Medium: 9, Hard: 7 },
+          en: 'Phase 1 · Grade 7 (Junior)',
+          ar: 'المرحلة 1 · الصف 7 (الناشئين)',
+          shortEn: 'Grade 7 (Junior Olympiad)',
+          shortAr: 'الصف 7 (أولمبياد الناشئين)',
+        },
+        {
+          level: 'Phase 2: Intermediate Olympiad (Grades 8-9)',
+          code: 'P2',
+          qCount: 25,
+          tiers: { Easy: 9, Medium: 9, Hard: 7 },
+          en: 'Phase 2 · Grades 8–9 (Intermediate)',
+          ar: 'المرحلة 2 · الصفان 8–9 (المتوسط)',
+          shortEn: 'Grades 8–9 (Intermediate Olympiad)',
+          shortAr: 'الصفان 8–9 (الأولمبياد المتوسط)',
+        },
+        {
+          level: 'Phase 3: Senior National Olympiad (Grade 10)',
+          code: 'P3',
+          qCount: 25,
+          tiers: { Easy: 9, Medium: 9, Hard: 7 },
+          en: 'Phase 3 · Grade 10 (Senior)',
+          ar: 'المرحلة 3 · الصف 10 (المتقدم)',
+          shortEn: 'Grade 10 (Senior Olympiad)',
+          shortAr: 'الصف 10 (الأولمبياد المتقدم)',
+        },
+      ],
     },
-    {
-      level: 'Track 3: Grades 10-11',
-      code: 'T3',
-      qCount: 30,
-      en: 'Track 3 · Grades 10–11',
-      ar: 'المسار 3 · الصفوف 10–11',
-      shortEn: 'Grades 10–11 (Senior)',
-      shortAr: 'الصفوف 10–11 (المتقدم)',
-    },
-  ];
+  };
 
   const TOPIC_AR = {
     'Number Theory': 'نظرية الأعداد',
@@ -43,14 +116,20 @@
   const LABELS = ['A', 'B', 'C', 'D', 'E'];
   const STORAGE_KEY = 'supermath_kaust_mock_best_v1';
 
-  let mocksDoc = null;
-  let mocks = [];
-  let customMocks = [];
-  let activeTrack = TRACKS[0].level;
+  let kaustDoc = null;
+  let nsmoDoc = null;
+  let kaustMocks = [];
+  let nsmoMocks = [];
+  let customKaustMocks = [];
+  let customNsmoMocks = [];
+  let activeComp = 'kaust';
+  let activeTrackByComp = {
+    kaust: COMP_CONFIG.kaust.tracks[0].level,
+    nsmo: COMP_CONFIG.nsmo.tracks[0].level,
+  };
   let bestScores = {};
 
-  // Active exam/review session state
-  let session = null; // { mode: 'exam'|'review', paper, questions, answers: {}, flags: {}, currentIdx: 0, viewMode: 'single'|'all', remainingSec: 7200, elapsedSec: 0, paused: false, confirmSubmit: false, confirmExit: false, reviewFilter: 'all', report: null }
+  let session = null;
   let timerHandle = null;
 
   const isAr = () => (typeof currentLang !== 'undefined' ? currentLang === 'ar' : false);
@@ -60,6 +139,46 @@
 
   const getBankQuestions = () =>
     typeof appData !== 'undefined' && Array.isArray(appData.questions) ? appData.questions : [];
+
+  function compForPaper(paper) {
+    if (!paper) return COMP_CONFIG[activeComp];
+    if (paper.track === 'nsmo' || String(paper.id || '').startsWith('NSMO-') || String(paper.level || '').startsWith('Phase ')) {
+      return COMP_CONFIG.nsmo;
+    }
+    return COMP_CONFIG.kaust;
+  }
+
+  function compForLevel(level) {
+    return String(level || '').startsWith('Phase ') ? COMP_CONFIG.nsmo : COMP_CONFIG.kaust;
+  }
+
+  function allKaustPapers() {
+    return [...kaustMocks, ...customKaustMocks];
+  }
+
+  function allNsmoPapers() {
+    return [...nsmoMocks, ...customNsmoMocks];
+  }
+
+  function allPapersAcrossComps() {
+    return [...allKaustPapers(), ...allNsmoPapers()];
+  }
+
+  function currentCompPapers() {
+    return activeComp === 'nsmo' ? allNsmoPapers() : allKaustPapers();
+  }
+
+  function findPaper(id) {
+    return allPapersAcrossComps().find((p) => p.id === id) || null;
+  }
+
+  function resolvePaperQuestions(paper) {
+    const qs = getBankQuestions();
+    if (!qs.length || !paper) return [];
+    const cfg = compForPaper(paper);
+    const byId = new Map(qs.filter((q) => q.track === cfg.id).map((q) => [q.id, q]));
+    return (paper.question_ids || []).map((id) => byId.get(id)).filter(Boolean);
+  }
 
   function loadBestScores() {
     try {
@@ -82,21 +201,6 @@
         }
       } catch (_) {}
     }
-  }
-
-  function allPapers() {
-    return [...mocks, ...customMocks];
-  }
-
-  function findPaper(id) {
-    return allPapers().find((p) => p.id === id) || null;
-  }
-
-  function resolvePaperQuestions(paper) {
-    const qs = getBankQuestions();
-    if (!qs.length || !paper) return [];
-    const byId = new Map(qs.filter((q) => q.track === 'kaust').map((q) => [q.id, q]));
-    return (paper.question_ids || []).map((id) => byId.get(id)).filter(Boolean);
   }
 
   function formatClock(sec) {
@@ -135,9 +239,10 @@
   }
 
   function computeReport(paper, questions, answers, elapsedSec) {
-    const ptsCorrect = paper.points_correct ?? 4;
-    const ptsWrong = paper.points_wrong ?? -1;
-    const ptsBlank = paper.points_blank ?? 0;
+    const cfg = compForPaper(paper);
+    const ptsCorrect = paper.points_correct ?? cfg.ptsCorrect;
+    const ptsWrong = paper.points_wrong ?? cfg.ptsWrong;
+    const ptsBlank = paper.points_blank ?? cfg.ptsBlank;
 
     let correct = 0;
     let wrong = 0;
@@ -150,7 +255,8 @@
     const byTopic = {};
     const weakLessons = new Map();
 
-    const bpMap = (mocksDoc && mocksDoc.blueprint_to_lesson) || {};
+    const doc = cfg.id === 'nsmo' ? nsmoDoc : kaustDoc;
+    const bpMap = (doc && doc.blueprint_to_lesson) || {};
     const qLesMap = paper.question_lessons || {};
 
     questions.forEach((q, idx) => {
@@ -160,7 +266,7 @@
       if (!byTopic[q.topic]) byTopic[q.topic] = { total: 0, correct: 0, wrong: 0, blank: 0 };
       byTopic[q.topic].total += 1;
 
-      const lid = qLesMap[q.id] || bpMap[q.kmc_blueprint] || null;
+      const lid = qLesMap[q.id] || bpMap[q[cfg.bpField]] || null;
 
       if (choice === undefined || choice === null) {
         blank += 1;
@@ -195,6 +301,9 @@
       correct,
       wrong,
       blank,
+      ptsCorrect,
+      ptsWrong,
+      ptsBlank,
       total: questions.length,
       elapsedSec,
       byDiff,
@@ -222,45 +331,44 @@
     if (el) el.scrollIntoView({ behavior: 'smooth' });
   }
 
-  /* ---- Dynamic Balanced Official Mock Generator ---- */
+  /* ---- Dynamic Balanced Official Mock Generator (Supports BOTH KAUST & NSMO) ---- */
   window.generateCustomKaustMock = function (level) {
-    const targetLevel = level || activeTrack;
-    const tr = TRACKS.find((t) => t.level === targetLevel) || TRACKS[0];
-    const bank = getBankQuestions().filter((q) => q.track === 'kaust' && q.level === tr.level);
+    const targetLevel = level || activeTrackByComp[activeComp];
+    const cfg = compForLevel(targetLevel);
+    const tr = cfg.tracks.find((t) => t.level === targetLevel) || cfg.tracks[0];
+    const bank = getBankQuestions().filter((q) => q.track === cfg.id && q.level === tr.level);
     if (!bank.length) return;
 
-    const perTier = tr.qCount / 3; // 8 for 24, 10 for 30
     const usedBps = new Set();
     const chosen = [];
-    const bpMap = (mocksDoc && mocksDoc.blueprint_to_lesson) || {};
+    const doc = cfg.id === 'nsmo' ? nsmoDoc : kaustDoc;
+    const bpMap = (doc && doc.blueprint_to_lesson) || {};
 
     ['Hard', 'Easy', 'Medium'].forEach((diff) => {
+      const targetTierCount = tr.tiers[diff];
       const pool = bank.filter((q) => q.difficulty === diff);
       const shuffled = [...pool].sort(() => Math.random() - 0.5);
       const lessonCounts = {};
-      // First pass: distinct blueprints + lesson balance
-      shuffled.sort((a, b) => (lessonCounts[bpMap[a.kmc_blueprint]] || 0) - (lessonCounts[bpMap[b.kmc_blueprint]] || 0));
+      shuffled.sort((a, b) => (lessonCounts[bpMap[a[cfg.bpField]]] || 0) - (lessonCounts[bpMap[b[cfg.bpField]]] || 0));
       for (const q of shuffled) {
-        if (chosen.filter((x) => x.difficulty === diff).length >= perTier) break;
-        if (usedBps.has(q.kmc_blueprint)) continue;
-        const lid = bpMap[q.kmc_blueprint] || 'misc';
-        const cap = tr.qCount === 30 ? 2 : 2;
-        if ((lessonCounts[lid] || 0) >= cap) continue;
-        usedBps.add(q.kmc_blueprint);
+        if (chosen.filter((x) => x.difficulty === diff).length >= targetTierCount) break;
+        if (usedBps.has(q[cfg.bpField])) continue;
+        const lid = bpMap[q[cfg.bpField]] || 'misc';
+        if ((lessonCounts[lid] || 0) >= 2) continue;
+        usedBps.add(q[cfg.bpField]);
         lessonCounts[lid] = (lessonCounts[lid] || 0) + 1;
         chosen.push(q);
       }
-      // Top-up if needed while keeping distinct IDs
       for (const q of shuffled) {
-        if (chosen.filter((x) => x.difficulty === diff).length >= perTier) break;
+        if (chosen.filter((x) => x.difficulty === diff).length >= targetTierCount) break;
         if (chosen.some((x) => x.id === q.id)) continue;
-        if (!usedBps.has(q.kmc_blueprint)) {
-          usedBps.add(q.kmc_blueprint);
+        if (!usedBps.has(q[cfg.bpField])) {
+          usedBps.add(q[cfg.bpField]);
           chosen.push(q);
         }
       }
       for (const q of shuffled) {
-        if (chosen.filter((x) => x.difficulty === diff).length >= perTier) break;
+        if (chosen.filter((x) => x.difficulty === diff).length >= targetTierCount) break;
         if (!chosen.some((x) => x.id === q.id)) chosen.push(q);
       }
     });
@@ -271,29 +379,38 @@
       ...chosen.filter((q) => q.difficulty === 'Hard'),
     ];
 
-    const customIdx = customMocks.filter((p) => p.level === tr.level).length + 1;
+    const customList = cfg.id === 'nsmo' ? customNsmoMocks : customKaustMocks;
+    const baseList = cfg.id === 'nsmo' ? nsmoMocks : kaustMocks;
+    const baseCountForLevel = baseList.filter((p) => p.level === tr.level).length;
+    const customIdx = customList.filter((p) => p.level === tr.level).length + 1;
     const svgCnt = ordered.filter((q) => q.content && q.content.en && q.content.en.diagram).length;
     const topicCounts = {};
     const qLessons = {};
     ordered.forEach((q) => {
       topicCounts[q.topic] = (topicCounts[q.topic] || 0) + 1;
-      if (bpMap[q.kmc_blueprint]) qLessons[q.id] = bpMap[q.kmc_blueprint];
+      if (bpMap[q[cfg.bpField]]) qLessons[q.id] = bpMap[q[cfg.bpField]];
     });
 
+    const eCnt = tr.tiers.Easy;
+    const mCnt = tr.tiers.Medium;
+    const prefix = cfg.id === 'nsmo' ? 'NSMO' : 'KMC';
+
     const paper = {
-      id: `KMC-MOCK-${tr.code}-CUSTOM-${customIdx}`,
-      paper_num: 5 + customIdx,
+      id: `${prefix}-MOCK-${tr.code}-CUSTOM-${customIdx}`,
+      track: cfg.id,
+      option_count: cfg.optCount,
+      paper_num: baseCountForLevel + customIdx,
       is_custom: true,
       level: tr.level,
       track_code: tr.code,
       grades_en: tr.shortEn,
       grades_ar: tr.shortAr,
       question_count: ordered.length,
-      duration_minutes: 120,
-      points_correct: 4,
-      points_wrong: -1,
-      points_blank: 0,
-      max_points: ordered.length * 4,
+      duration_minutes: cfg.durationMin,
+      points_correct: cfg.ptsCorrect,
+      points_wrong: cfg.ptsWrong,
+      points_blank: cfg.ptsBlank,
+      max_points: ordered.length * cfg.ptsCorrect,
       svg_count: svgCnt,
       topic_counts: topicCounts,
       sections: [
@@ -301,53 +418,75 @@
           id: 'A',
           difficulty: 'Easy',
           start_q: 1,
-          end_q: perTier,
-          en: `Part A — Core Reasoning & Speed (Questions 1–${perTier})`,
-          ar: `الجزء الأول (A) — التفكير الأساسي والسرعة (الأسئلة 1–${perTier})`,
+          end_q: eCnt,
+          en: `Part A — Core Reasoning & Speed (Questions 1–${eCnt})`,
+          ar: `الجزء الأول (A) — التفكير الأساسي والسرعة (الأسئلة 1–${eCnt})`,
         },
         {
           id: 'B',
           difficulty: 'Medium',
-          start_q: perTier + 1,
-          end_q: perTier * 2,
-          en: `Part B — Multi-Step Contest Problems (Questions ${perTier + 1}–${perTier * 2})`,
-          ar: `الجزء الثاني (B) — المسائل التنافسية متعددة الخطوات (الأسئلة ${perTier + 1}–${perTier * 2})`,
+          start_q: eCnt + 1,
+          end_q: eCnt + mCnt,
+          en: `Part B — Multi-Step Contest Problems (Questions ${eCnt + 1}–${eCnt + mCnt})`,
+          ar: `الجزء الثاني (B) — المسائل التنافسية متعددة الخطوات (الأسئلة ${eCnt + 1}–${eCnt + mCnt})`,
         },
         {
           id: 'C',
           difficulty: 'Hard',
-          start_q: perTier * 2 + 1,
+          start_q: eCnt + mCnt + 1,
           end_q: ordered.length,
-          en: `Part C — Olympiad Elimination Challenge (Questions ${perTier * 2 + 1}–${ordered.length})`,
-          ar: `الجزء الثالث (C) — تحدي التصفيات الأولمبية (الأسئلة ${perTier * 2 + 1}–${ordered.length})`,
+          en: `Part C — Olympiad Qualifier Challenge (Questions ${eCnt + mCnt + 1}–${ordered.length})`,
+          ar: `الجزء الثالث (C) — تحدي التصفيات الأولمبية (الأسئلة ${eCnt + mCnt + 1}–${ordered.length})`,
         },
       ],
       en: {
-        title: `Custom Official KMC Mock #${customIdx} — Fresh Balanced Simulation`,
-        focus: `Dynamically sampled ${ordered.length}-question official paper across ${usedBps.size} distinct KMC blueprints.`,
+        title: `Custom Official ${cfg.badgeEn} Mock #${customIdx} — Fresh Balanced Simulation`,
+        focus: `Dynamically sampled ${ordered.length}-question official paper across ${usedBps.size} distinct ${cfg.badgeEn} blueprints.`,
       },
       ar: {
-        title: `اختبار كاوست تجريبي مخصص #${customIdx} — محاكاة متوازنة جديدة`,
+        title: `اختبار ${cfg.badgeAr} تجريبي مخصص #${customIdx} — محاكاة متوازنة جديدة`,
         focus: `ورقة اختبار رسمية مولّدة من ${ordered.length} سؤالاً عبر ${usedBps.size} نمطاً مختلفاً من أنماط المسابقة.`,
       },
       question_ids: ordered.map((q) => q.id),
       question_lessons: qLessons,
     };
 
-    customMocks.unshift(paper);
-    activeTrack = tr.level;
+    customList.unshift(paper);
+    activeComp = cfg.id;
+    activeTrackByComp[cfg.id] = tr.level;
     render();
     return paper.id;
   };
 
   /* ---- Simulator Controls ---- */
-  window.setKaustMockTrack = function (level) {
-    activeTrack = level;
+  window.setMockCompetition = function (compId) {
+    if (compId !== 'kaust' && compId !== 'nsmo') return;
+    if (compId === 'nsmo' && !nsmoMocks.length) return;
+    if (session && session.mode === 'exam') return;
+    session = null;
+    activeComp = compId;
     render();
   };
 
-  window.jumpToKaustMocks = function (level) {
-    if (level) activeTrack = level;
+  window.setKaustMockTrack = function (level) {
+    const cfg = compForLevel(level);
+    activeComp = cfg.id;
+    activeTrackByComp[cfg.id] = level;
+    render();
+  };
+
+  window.jumpToKaustMocks = function (levelOrComp) {
+    if (!session) {
+      if (levelOrComp === 'kaust' || levelOrComp === 'nsmo') {
+        if (levelOrComp !== 'nsmo' || nsmoMocks.length) activeComp = levelOrComp;
+      } else if (levelOrComp) {
+        const cfg = compForLevel(levelOrComp);
+        if (cfg.id !== 'nsmo' || nsmoMocks.length) {
+          activeComp = cfg.id;
+          activeTrackByComp[cfg.id] = levelOrComp;
+        }
+      }
+    }
     render();
     const el = document.getElementById('kaust-mock-exams');
     if (el) el.scrollIntoView({ behavior: 'smooth' });
@@ -358,7 +497,9 @@
     if (!paper) return;
     const qs = resolvePaperQuestions(paper);
     if (!qs.length) return;
-    activeTrack = paper.level;
+    const cfg = compForPaper(paper);
+    activeComp = cfg.id;
+    activeTrackByComp[cfg.id] = paper.level;
     session = {
       mode: 'exam',
       paper,
@@ -367,7 +508,7 @@
       flags: {},
       currentIdx: 0,
       viewMode: 'single',
-      remainingSec: (paper.duration_minutes || 120) * 60,
+      remainingSec: (paper.duration_minutes || cfg.durationMin) * 60,
       elapsedSec: 0,
       paused: false,
       confirmSubmit: false,
@@ -471,76 +612,46 @@
   };
 
   /* ---- Edugates Branded A4 OMR Bubble Sheet + Exam Booklet + Worked Key Builder ---- */
-  function buildOmrBubbleGridHtml(totalQ, shadedMap, studentAnswers, rtl) {
-    const half = Math.ceil(totalQ / 2);
-    const renderCol = (startIdx, endIdx) => {
-      const rows = [];
-      for (let i = startIdx; i < endIdx; i++) {
-        const correctOpt = shadedMap ? shadedMap[i] : null;
-        const studentOpt = studentAnswers ? studentAnswers[i] : null;
-        const bubbles = LABELS.map((lbl, oIdx) => {
-          let cls = 'eg-omr-bubble';
-          if (correctOpt === oIdx) cls += ' eg-omr-shaded';
-          else if (studentOpt === oIdx && correctOpt !== null && studentOpt !== correctOpt) cls += ' eg-omr-wrong';
-          return `<span class="${cls}">${lbl}</span>`;
-        }).join('');
-        rows.push(`<div class="eg-omr-row" dir="ltr">
-          <span class="eg-omr-qnum">${i + 1}.</span>
-          <div class="eg-omr-bubbles">${bubbles}</div>
-        </div>`);
-      }
-      return `<div class="eg-omr-col">${rows.join('')}</div>`;
-    };
-
-    const legend = shadedMap
-      ? `<div class="eg-omr-legend">${
-          rtl
-            ? '● الدائرة المظللة تمثل الإجابة الصحيحة المعتمدة في مفتاح التصحيح.'
-            : '● Filled dark bubble indicates the official correct answer choice.'
-        }</div>`
-      : `<div class="eg-omr-legend">${
-          rtl
-            ? 'ظلّل دائرة واحدة فقط (A–E) لكل سؤال بقلم رصاص داكن أو حبر جاف: ● (صحيح)   ✗ ○ (خطأ)'
-            : 'Shade ONE bubble (A–E) completely per question using dark pen/pencil: ● (valid)   ✗ ○ (invalid)'
-        }</div>`;
-
-    return `<div class="eg-omr-sheet no-break">
-      <div class="eg-omr-head">
-        <span>🫧 ${
-          shadedMap
-            ? rtl
-              ? `نموذج التظليل البصري المظلل (OMR Master Key · 1–${totalQ})`
-              : `Pre-Shaded Master OMR Answer Sheet (Questions 1–${totalQ})`
-            : rtl
-            ? `ورقة رصد وتظليل الإجابات البصرية (OMR Answer Sheet · 1–${totalQ})`
-            : `Official OMR Optical Answer Bubble Sheet (Questions 1–${totalQ})`
-        }</span>
-        <span class="eg-omr-tag" dir="ltr">+4 / −1 / 0</span>
-      </div>
-      ${legend}
-      <div class="eg-omr-cols" dir="ltr">
-        ${renderCol(0, half)}
-        ${renderCol(half, totalQ)}
-      </div>
-    </div>`;
+  function buildOmrBubbleGridHtml(totalQ, optCount, shadedMap, studentAnswers, rtl, scoreTag) {
+    if (typeof window.buildEdugatesOmrSheetHtml === 'function') {
+      return window.buildEdugatesOmrSheetHtml(totalQ, optCount, shadedMap, studentAnswers, rtl, scoreTag);
+    }
+    return '';
   }
 
   function buildCoverPageRowHtml(paper, totalQ, rtl) {
+    const cfg = compForPaper(paper);
+    const optCount = paper.option_count || cfg.optCount;
+    const optRange = optCount === 4 ? 'A–D' : 'A–E';
+    const dur = paper.duration_minutes || cfg.durationMin;
+    const ptsCorrect = paper.points_correct ?? cfg.ptsCorrect;
+    const ptsWrong = paper.points_wrong ?? cfg.ptsWrong;
     const pText = rtl ? paper.ar : paper.en;
     const grades = rtl ? paper.grades_ar : paper.grades_en;
-    const maxPts = totalQ * 4;
-    const coverBanner = `<div class="eg-mock-cover no-break">
+    const maxPts = totalQ * ptsCorrect;
+    const wrongTxtAr = ptsWrong < 0 ? `<span dir="ltr">${ptsWrong}</span> خطأ` : '0 خطأ (بدون خصم)';
+    const wrongTxtEn = ptsWrong < 0 ? `<span dir="ltr">${ptsWrong}</span> Wrong` : '0 Wrong (No Penalty)';
+
+    const scoringRuleLi = ptsWrong < 0
+      ? rtl
+        ? `طريقة احتساب الدرجات: <strong>+${ptsCorrect} نقاط</strong> لكل إجابة صحيحة، و<strong>خصم نقطة واحدة (−1)</strong> لكل إجابة خاطئة، و<strong>0 نقطة</strong> للسؤال المتروك بدون تظليل.`
+        : `Contest scoring: <strong>+${ptsCorrect} points</strong> for each correct choice, <strong>−1 point</strong> for each incorrect choice, and <strong>0 points</strong> for each blank question.`
+      : rtl
+      ? `طريقة احتساب الدرجات: <strong>+${ptsCorrect} نقاط</strong> لكل إجابة صحيحة، و<strong>بدون خصم درجات (0)</strong> للإجابات الخاطئة أو المتروكة.`
+      : `Olympiad scoring: <strong>+${ptsCorrect} points</strong> for each correct choice, with <strong>no penalty (0 points)</strong> for wrong or blank responses.`;
+
+    return `<div class="eg-mock-cover no-break">
       <div class="eg-mock-cover-top">
         <div class="flex flex-wrap items-center justify-between gap-2">
-          <span class="eg-badge">${rtl ? 'مسابقة كاوست للرياضيات (KMC)' : 'KAUST Mathematics Competition (KMC)'}</span>
+          <span class="eg-badge">${rtl ? cfg.examNameAr : cfg.examNameEn}</span>
           <span class="eg-badge eg-badge-alt">${grades}</span>
-          <span class="eg-badge eg-badge-soft">${rtl ? 'الزمن: 120 دقيقة · بدون آلة حاسبة' : 'Time: 120 Minutes · No Calculator'}</span>
+          <span class="eg-badge eg-badge-soft">${rtl ? `الزمن: ${dur} دقيقة · بدون آلة حاسبة` : `Time: ${dur} Minutes · No Calculator`}</span>
         </div>
         <h2 class="eg-mock-cover-title">${pText.title}</h2>
         <div class="eg-mock-cover-specs">
-          <span><strong>${rtl ? 'عدد الأسئلة:' : 'Questions:'}</strong> ${totalQ} MCQ (A–E)</span>
+          <span><strong>${rtl ? 'عدد الأسئلة:' : 'Questions:'}</strong> ${totalQ} MCQ (${optRange})</span>
           <span><strong>${rtl ? 'الدرجة العظمى:' : 'Maximum Score:'}</strong> ${maxPts} ${rtl ? 'نقطة' : 'pts'}</span>
-          <span><strong>${rtl ? 'نظام التصحيح:' : 'Scoring:'}</strong> <span dir="ltr">+4</span> ${rtl ? 'صحيح' : 'Correct'} · <span dir="ltr">−1</span> ${rtl ? 'خطأ' : 'Wrong'} · <span dir="ltr">0</span> ${rtl ? 'متروك' : 'Blank'}</span>
+          <span><strong>${rtl ? 'نظام التصحيح:' : 'Scoring:'}</strong> <span dir="ltr">+${ptsCorrect}</span> ${rtl ? 'صحيح' : 'Correct'} · ${rtl ? wrongTxtAr : wrongTxtEn} · <span dir="ltr">0</span> ${rtl ? 'متروك' : 'Blank'}</span>
         </div>
       </div>
 
@@ -558,32 +669,28 @@
         <ul>
           <li>${
             rtl
-              ? `يتكوّن هذا الاختبار من <strong>${totalQ} سؤالاً</strong> متدرج الصعوبة في ثلاثة أجزاء (Part A, B, C) وزمن الإجابة <strong>ساعتان (120 دقيقة)</strong>.`
-              : `This examination consists of <strong>${totalQ} multiple-choice questions</strong> across three graduated tiers (Parts A, B, C) to be completed in <strong>120 minutes</strong>.`
+              ? `يتكوّن هذا الاختبار من <strong>${totalQ} سؤالاً</strong> متدرج الصعوبة في ثلاثة أجزاء (Part A, B, C) وزمن الإجابة <strong>${dur} دقيقة</strong>.`
+              : `This examination consists of <strong>${totalQ} multiple-choice questions (${optRange})</strong> across three graduated tiers (Parts A, B, C) to be completed in <strong>${dur} minutes</strong>.`
           }</li>
           <li>${
             rtl
               ? 'يُمنع منعاً باتاً استخدام الآلات الحاسبة أو الهواتف الذكية أو الساعات الرقمية أو أي مراجع خارجية.'
               : 'Calculators, smart devices, rulers with formulas, and external notes are strictly prohibited.'
           }</li>
-          <li>${
-            rtl
-              ? 'طريقة احتساب الدرجات: <strong>+4 نقاط</strong> لكل إجابة صحيحة، و<strong>خصم نقطة واحدة (−1)</strong> لكل إجابة خاطئة، و<strong>0 نقطة</strong> للسؤال المتروك بدون تظليل.'
-              : 'Contest scoring: <strong>+4 points</strong> for each correct choice, <strong>−1 point</strong> for each incorrect choice, and <strong>0 points</strong> for each blank question.'
-          }</li>
+          <li>${scoringRuleLi}</li>
         </ul>
       </div>
 
-      ${buildOmrBubbleGridHtml(totalQ, null, null, rtl)}
+      ${buildOmrBubbleGridHtml(totalQ, optCount, null, null, rtl, cfg.scoreTag)}
     </div>`;
-    return coverBanner;
   }
 
   function buildMockExamPrintHtml(paper, questions, mode, rtl, gradedSession) {
-    // mode: 'full' (cover+OMR + questions + master key + solutions) | 'student' (cover+OMR + questions) | 'key' (master key + solutions)
+    const cfg = compForPaper(paper);
+    const optCount = paper.option_count || cfg.optCount;
     const pText = rtl ? paper.ar : paper.en;
     const grades = rtl ? paper.grades_ar : paper.grades_en;
-    const badge = `${grades} · KMC · A4`;
+    const badge = `${grades} · ${rtl ? cfg.badgeAr : cfg.badgeEn} · A4`;
     const totalQ = questions.length;
     const printSection = window.edugatesPrintSection;
     if (typeof printSection !== 'function') return '';
@@ -591,18 +698,8 @@
     const parts = [];
 
     if (mode === 'full' || mode === 'student') {
-      // Page 1: Dedicated Official Cover + Candidate Info + Instructions + Blank OMR Bubble Sheet
-      parts.push(
-        printSection(
-          [buildCoverPageRowHtml(paper, totalQ, rtl)],
-          pText.title,
-          badge,
-          rtl,
-          false
-        )
-      );
+      parts.push(printSection([buildCoverPageRowHtml(paper, totalQ, rtl)], pText.title, badge, rtl, false));
 
-      // Page 2+: Exam Booklet Questions with Part A / B / C section headers glued cleanly to their 1st question
       const sectionStarts = new Map();
       (paper.sections || []).forEach((s) => {
         sectionStarts.set((s.start_q || 1) - 1, s);
@@ -610,17 +707,13 @@
 
       const qRows = questions.map((q, idx) => {
         const sec = sectionStarts.get(idx);
-        const secBanner = sec
-          ? `<div class="eg-sec-heading">${rtl ? sec.ar : sec.en}</div>`
-          : '';
+        const secBanner = sec ? `<div class="eg-sec-heading">${rtl ? sec.ar : sec.en}</div>` : '';
         const qContent = (q.content && (q.content[rtl ? 'ar' : 'en'] || q.content.en)) || {};
         const diag = qContent.diagram || q.diagram || '';
         const diffCls = q.difficulty === 'Easy' ? 'eg-diff-easy' : q.difficulty === 'Hard' ? 'eg-diff-hard' : 'eg-diff-med';
         const diffLbl = rtl ? DIFF_AR[q.difficulty] || q.difficulty : DIFF_EN[q.difficulty] || q.difficulty;
         const optsHtml = `<div class="eg-ws-opts">${(qContent.options || [])
-          .map(
-            (opt, oIdx) => `<div class="eg-ws-opt"><span class="eg-opt-l">${LABELS[oIdx]}</span><span class="math-font">${opt}</span></div>`
-          )
+          .map((opt, oIdx) => `<div class="eg-ws-opt"><span class="eg-opt-l">${LABELS[oIdx]}</span><span class="math-font">${opt}</span></div>`)
           .join('')}</div>`;
         const card = `<div class="eg-ws-q no-break">
           <div class="eg-ws-qh">
@@ -637,15 +730,7 @@
         return secBanner ? `<div class="no-break">${secBanner}${card}</div>` : card;
       });
 
-      parts.push(
-        printSection(
-          qRows,
-          `${pText.title} — ${rtl ? 'كراسة الأسئلة' : 'Question Booklet'}`,
-          badge,
-          rtl,
-          true
-        )
-      );
+      parts.push(printSection(qRows, `${pText.title} — ${rtl ? 'كراسة الأسئلة' : 'Question Booklet'}`, badge, rtl, true));
     }
 
     if (mode === 'full' || mode === 'key') {
@@ -655,16 +740,17 @@
       });
       const stuAns = gradedSession && gradedSession.paper.id === paper.id ? gradedSession.answers : null;
       const rep = gradedSession && gradedSession.paper.id === paper.id ? gradedSession.report : null;
+      const wrongPts = paper.points_wrong ?? cfg.ptsWrong;
 
       const reportBanner = rep
         ? `<div class="eg-banner no-break">
             <div class="flex flex-wrap items-center justify-between gap-2">
               <strong>📊 ${rtl ? 'تقرير أداء الطالب في الاختبار التجريبي' : 'Student Graded Mock Exam Report'}</strong>
-              <span class="eg-badge">${rtl ? 'الدرجة الرسمية:' : 'Official KMC Score:'} ${rep.score} / ${rep.maxPoints} (${rep.pct}%)</span>
+              <span class="eg-badge">${rtl ? 'الدرجة الرسمية:' : 'Official Score:'} ${rep.score} / ${rep.maxPoints} (${rep.pct}%)</span>
             </div>
             <div class="eg-summary" style="margin-top:1.5mm">
-              ${rtl ? 'إجابات صحيحة:' : 'Correct:'} <strong>${rep.correct}</strong> (+${rep.correct * 4}) ·
-              ${rtl ? 'إجابات خاطئة:' : 'Wrong:'} <strong>${rep.wrong}</strong> (−${rep.wrong}) ·
+              ${rtl ? 'إجابات صحيحة:' : 'Correct:'} <strong>${rep.correct}</strong> (+${rep.correct * rep.ptsCorrect}) ·
+              ${rtl ? 'إجابات خاطئة:' : 'Wrong:'} <strong>${rep.wrong}</strong> (${wrongPts < 0 ? '−' + rep.wrong : '0'}) ·
               ${rtl ? 'أسئلة متروكة:' : 'Blank:'} <strong>${rep.blank}</strong> (0) ·
               ${rtl ? 'الزمن المستغرق:' : 'Time Used:'} <strong dir="ltr">${formatClock(rep.elapsedSec)}</strong>
             </div>
@@ -675,10 +761,7 @@
         <div class="eg-h3">🔑 ${rtl ? 'جدول الإجابات السريع' : 'Quick Answer Key Reference'} (1–${totalQ})</div>
         <div class="eg-key-grid">
           ${questions
-            .map(
-              (q, idx) =>
-                `<div class="eg-key-cell" dir="ltr"><strong>${idx + 1}.</strong> <span>(${LABELS[q.correct_index]})</span></div>`
-            )
+            .map((q, idx) => `<div class="eg-key-cell" dir="ltr"><strong>${idx + 1}.</strong> <span>(${LABELS[q.correct_index]})</span></div>`)
             .join('')}
         </div>
       </div>`;
@@ -693,7 +776,8 @@
           } else if (stuChoice === q.correct_index) {
             stuNote = ` · ✓ ${rtl ? 'إجابتك صحيحة (+4)' : 'Your choice: Correct (+4)'}`;
           } else {
-            stuNote = ` · ✗ ${rtl ? `إجابتك: (${LABELS[stuChoice]}) (−1)` : `Your choice: (${LABELS[stuChoice]}) (−1)`}`;
+            const wLbl = wrongPts < 0 ? '−1' : '0';
+            stuNote = ` · ✗ ${rtl ? `إجابتك: (${LABELS[stuChoice]}) (${wLbl})` : `Your choice: (${LABELS[stuChoice]}) (${wLbl})`}`;
           }
         }
         return `<div class="eg-card eg-sol-card no-break">
@@ -704,7 +788,7 @@
 
       const keyRows = [
         ...(reportBanner ? [reportBanner] : []),
-        buildOmrBubbleGridHtml(totalQ, shadedMap, stuAns, rtl),
+        buildOmrBubbleGridHtml(totalQ, optCount, shadedMap, stuAns, rtl, cfg.scoreTag),
         quickKey,
         ...solCards,
       ];
@@ -750,14 +834,20 @@
   };
 
   window.printBlankKaustOmr = function (level) {
-    const targetLevel = level || activeTrack;
-    const tr = TRACKS.find((t) => t.level === targetLevel) || TRACKS[0];
+    const targetLevel = level || activeTrackByComp[activeComp];
+    const cfg = compForLevel(targetLevel);
+    const tr = cfg.tracks.find((t) => t.level === targetLevel) || cfg.tracks[0];
     const templatePaper = {
+      track: cfg.id,
+      option_count: cfg.optCount,
+      duration_minutes: cfg.durationMin,
+      points_correct: cfg.ptsCorrect,
+      points_wrong: cfg.ptsWrong,
       paper_num: 1,
       grades_en: tr.shortEn,
       grades_ar: tr.shortAr,
-      en: { title: `Official KMC Optical Answer Sheet (${tr.qCount} Questions)` },
-      ar: { title: `ورقة رصد وتظليل الإجابات الرسمية لمسابقة كاوست (${tr.qCount} سؤالاً)` },
+      en: { title: `Official ${cfg.badgeEn} Optical Answer Sheet (${tr.qCount} Questions)` },
+      ar: { title: `ورقة رصد وتظليل الإجابات الرسمية (${cfg.badgeAr} · ${tr.qCount} سؤالاً)` },
     };
     const c = document.getElementById('print-container');
     if (!c || typeof window.edugatesPrintSection !== 'function') return;
@@ -817,6 +907,7 @@
 
   function renderExamView() {
     const p = session.paper;
+    const cfg = compForPaper(p);
     const pText = pick(p);
     const total = session.questions.length;
     const answeredCount = Object.keys(session.answers).length;
@@ -824,6 +915,7 @@
     const flagCount = Object.values(session.flags).filter(Boolean).length;
     const clockWarn = session.remainingSec <= 900 && session.remainingSec > 300 ? ' eg-clock-warn' : '';
     const clockCrit = session.remainingSec <= 300 ? ' eg-clock-crit' : '';
+    const wrongPts = p.points_wrong ?? cfg.ptsWrong;
 
     const paletteBtns = session.questions
       .map((q, idx) => {
@@ -847,8 +939,8 @@
           <div>
             <strong>⚠️ ${L('تأكيد تسليم ورقة الاختبار:', 'Confirm Exam Submission:')}</strong>
             ${L(
-              `أجبت عن ${answeredCount} سؤالاً وتركت ${blankCount} بدون إجابة (الأسئلة المتروكة تحصل على 0 نقطة دون خصم). هل تريد إنهاء الاختبار وإصدار التقرير الآن؟`,
-              `You answered ${answeredCount} of ${total} questions and left ${blankCount} blank (blanks score 0 pts with no penalty). Submit and grade now?`
+              `أجبت عن ${answeredCount} سؤالاً وتركت ${blankCount} بدون إجابة. هل تريد إنهاء الاختبار وإصدار التقرير الآن؟`,
+              `You answered ${answeredCount} of ${total} questions and left ${blankCount} blank. Submit and grade now?`
             )}
           </div>
           <div class="flex flex-wrap gap-2">
@@ -893,6 +985,10 @@
         <div class="eg-nav-footer no-print">${prevBtn}${nextBtn}</div>`;
     }
 
+    const scoreHint = wrongPts < 0
+      ? L('+4 صحيح · −1 خطأ · 0 متروك · بدون آلة حاسبة', '+4 Correct · −1 Wrong · 0 Blank · No Calculator')
+      : L('+4 صحيح · 0 خطأ (بدون خصم) · بدون آلة حاسبة', '+4 Correct · 0 Wrong (No Penalty) · No Calculator');
+
     return `
       <div class="eg-mock-topbar no-print">
         <div class="flex flex-wrap items-center gap-2">
@@ -914,7 +1010,7 @@
       </div>
       ${confirmBanner}
       <div class="eg-pal-wrap no-print">
-        <div class="eg-pal-label">${L('لوحة التنقل السريع (OMR):', 'Question & Bubble Navigator:')} <span class="opacity-75 font-normal">(${L('+4 صحيح · −1 خطأ · 0 متروك · بدون آلة حاسبة', '+4 Correct · −1 Wrong · 0 Blank · No Calculator')})</span></div>
+        <div class="eg-pal-label">${L('لوحة التنقل السريع (OMR):', 'Question & Bubble Navigator:')} <span class="opacity-75 font-normal">(${scoreHint})</span></div>
         <div class="eg-pal-grid" dir="ltr">${paletteBtns}</div>
       </div>
       <div class="eg-reader">${bodyCards}</div>`;
@@ -922,13 +1018,14 @@
 
   function renderReviewView() {
     const p = session.paper;
+    const cfg = compForPaper(p);
     const pText = pick(p);
     const rep = session.report;
     const total = session.questions.length;
 
     let tierBadge = '';
     if (rep.pct >= 75) {
-      tierBadge = `<span class="eg-badge" style="background:#dcfce7;color:#166534">🏆 ${L('مستوى تأهل للمرحلة النهائية (ممتاز)', 'Final-Round Contender Pace')}</span>`;
+      tierBadge = `<span class="eg-badge" style="background:#dcfce7;color:#166534">🏆 ${L('مستوى تأهل للمرحلة المتقدمة (ممتاز)', 'Final-Round Contender Pace')}</span>`;
     } else if (rep.pct >= 50) {
       tierBadge = `<span class="eg-badge" style="background:#fef3c7;color:#92400e">⭐ ${L('أداء تنافسي قوي — واصل التدريب', 'Strong Competitive Qualifier Pace')}</span>`;
     } else {
@@ -948,13 +1045,10 @@
       .join('');
 
     const topicPills = Object.entries(rep.byTopic)
-      .map(
-        ([t, st]) =>
-          `<span class="eg-lc-pill"><strong>${topicLabel(t)}:</strong> ${st.correct}/${st.total}</span>`
-      )
+      .map(([t, st]) => `<span class="eg-lc-pill"><strong>${topicLabel(t)}:</strong> ${st.correct}/${st.total}</span>`)
       .join(' ');
 
-    const studyLessons = (window.__kaustStudy && window.__kaustStudy.lessons) || [];
+    const studyLessons = (window.__kaustStudy && (window.__kaustStudy.allLessons || window.__kaustStudy.lessons)) || [];
     const recBtns = rep.weakLessonIds
       .slice(0, 4)
       .map((lid) => {
@@ -979,6 +1073,10 @@
       )
       .join('');
 
+    const wrongPenaltyBadge = rep.ptsWrong < 0
+      ? `✗ −1 ${L('نقطة (خاطئة)', 'pt (Incorrect)')}`
+      : `✗ 0 ${L('نقاط (خاطئة)', 'pts (Incorrect)')}`;
+
     const reviewCards = session.questions
       .map((q, idx) => {
         const choice = session.answers[idx];
@@ -995,9 +1093,9 @@
         const qContent = (q.content && (q.content[isAr() ? 'ar' : 'en'] || q.content.en)) || {};
         const diag = qContent.diagram || q.diagram || '';
         const statusTag = isOk
-          ? `<span class="eg-ex-tag eg-diff-easy">✓ +4 ${L('نقاط (صحيحة)', 'pts (Correct)')}</span>`
+          ? `<span class="eg-ex-tag eg-diff-easy">✓ +${rep.ptsCorrect} ${L('نقاط (صحيحة)', 'pts (Correct)')}</span>`
           : isWr
-          ? `<span class="eg-ex-tag eg-diff-hard">✗ −1 ${L('نقطة (خاطئة)', 'pt (Incorrect)')}</span>`
+          ? `<span class="eg-ex-tag eg-diff-hard">${wrongPenaltyBadge}</span>`
           : `<span class="eg-ex-tag eg-diff-med">○ 0 ${L('نقاط (متروك)', 'pts (Blank)')}</span>`;
 
         const opts = (qContent.options || [])
@@ -1055,7 +1153,7 @@
         </div>
         <div class="eg-score-hero">
           <div class="eg-score-main">
-            <div class="text-xs uppercase font-extrabold opacity-75">${L('الدرجة الرسمية (نظام كاوست +4/−1/0)', 'Official KMC Contest Score (+4 / −1 / 0)')}</div>
+            <div class="text-xs uppercase font-extrabold opacity-75">${L(`الدرجة الرسمية (${cfg.badgeAr} · ${cfg.scoreTag})`, `Official ${cfg.badgeEn} Score (${cfg.scoreTag})`)}</div>
             <div class="text-3xl sm:text-4xl font-extrabold mt-0.5" dir="ltr">${rep.score} <span class="text-lg opacity-70">/ ${rep.maxPoints} pts (${rep.pct}%)</span></div>
           </div>
           <div class="flex flex-wrap gap-2">
@@ -1070,7 +1168,7 @@
         ${
           recBtns
             ? `<div class="mt-3 pt-3 border-t border-teal-500/25">
-                <div class="text-xs font-extrabold mb-1.5">🎯 ${L('دروس مقترحة للمراجعة السريعة بناءً على إجاباتك:', 'Recommended KAUST Study Lessons to Review Next:')}</div>
+                <div class="text-xs font-extrabold mb-1.5">🎯 ${L('دروس مقترحة للمراجعة السريعة بناءً على إجاباتك:', 'Recommended Study Lessons to Review Next:')}</div>
                 <div class="flex flex-wrap gap-1.5">${recBtns}</div>
               </div>`
             : ''
@@ -1085,14 +1183,25 @@
   }
 
   function renderHubView() {
-    const tr = TRACKS.find((t) => t.level === activeTrack) || TRACKS[0];
-    const trackPapers = allPapers().filter((p) => p.level === activeTrack);
+    const cfg = COMP_CONFIG[activeComp];
+    const activeTrack = activeTrackByComp[activeComp];
+    const tr = cfg.tracks.find((t) => t.level === activeTrack) || cfg.tracks[0];
+    const compPapers = currentCompPapers();
+    const trackPapers = compPapers.filter((p) => p.level === activeTrack);
+    const optRange = cfg.optCount === 4 ? 'A–D' : 'A–E';
 
-    const tabs = TRACKS.map((t) => {
-      const cnt = allPapers().filter((p) => p.level === t.level).length;
+    const compSwitcher = nsmoMocks.length
+      ? `<div class="eg-comp-switch no-print" role="tablist" aria-label="Mock Exam Competition">
+          <button type="button" onclick="setMockCompetition('kaust')" class="eg-comp-btn${activeComp === 'kaust' ? ' eg-comp-btn-on' : ''}">${isAr() ? COMP_CONFIG.kaust.pillAr : COMP_CONFIG.kaust.pillEn}</button>
+          <button type="button" onclick="setMockCompetition('nsmo')" class="eg-comp-btn${activeComp === 'nsmo' ? ' eg-comp-btn-on' : ''}">${isAr() ? COMP_CONFIG.nsmo.pillAr : COMP_CONFIG.nsmo.pillEn}</button>
+        </div>`
+      : '';
+
+    const tabs = cfg.tracks.map((t) => {
+      const cnt = compPapers.filter((p) => p.level === t.level).length;
       return `<button type="button" onclick="setKaustMockTrack('${t.level}')" class="eg-tab${t.level === activeTrack ? ' eg-tab-on' : ''}">
         <span>${isAr() ? t.ar : t.en}</span>
-        <span class="eg-tab-count">${cnt} ${L('نماذج رسمية', 'Mock Papers')} · ${t.qCount} ${L('سؤالاً', 'Qs')} · 120 ${L('دقيقة', 'min')}</span>
+        <span class="eg-tab-count">${cnt} ${L('نماذج رسمية', 'Mock Papers')} · ${t.qCount} ${L('سؤالاً', 'Qs')} · ${cfg.durationMin} ${L('دقيقة', 'min')}</span>
       </button>`;
     }).join('');
 
@@ -1100,6 +1209,7 @@
       .map((p) => {
         const pText = pick(p);
         const best = bestScores[p.id];
+        const dur = p.duration_minutes || cfg.durationMin;
         const topicTags = Object.entries(p.topic_counts || {})
           .map(([k, v]) => `${topicLabel(k)}: ${v}`)
           .join(' · ');
@@ -1109,7 +1219,7 @@
             <div class="flex flex-wrap items-center justify-between gap-1.5 mb-2">
               <div class="flex flex-wrap items-center gap-1.5">
                 <span class="eg-badge">${p.is_custom ? '🎲 ' + L('نموذج مخصص', 'Custom') : L('نموذج رسمي', 'Mock Paper') + ' #' + p.paper_num}</span>
-                <span class="eg-badge eg-badge-alt">${p.question_count} ${L('سؤالاً', 'Qs')} · 120 ${L('د', 'min')}</span>
+                <span class="eg-badge eg-badge-alt">${p.question_count} ${L('سؤالاً', 'Qs')} (${optRange}) · ${dur} ${L('د', 'min')}</span>
               </div>
               <span class="eg-lc-pill">${best ? `🏆 ${best.score}/${best.maxPoints}` : `🖼️ ${p.svg_count} ${L('رسمة', 'SVGs')} · ${p.max_points} ${L('نقطة', 'pts')}`}</span>
             </div>
@@ -1119,7 +1229,7 @@
           </div>
           <div class="eg-mock-actions">
             <button type="button" onclick="startKaustMock('${p.id}')" class="eg-btn eg-btn-go eg-btn-sm w-full">
-              ⏱️ ${L('ابدأ الاختبار الموقوت (120 دقيقة)', 'Start Live Timed Exam (120 min)')}
+              ⏱️ ${L(`ابدأ الاختبار الموقوت (${dur} دقيقة)`, `Start Live Timed Exam (${dur} min)`)}
             </button>
             <div class="flex flex-wrap gap-1.5 w-full">
               <button type="button" onclick="printKaustMockPaper('${p.id}', 'full')" class="eg-btn eg-btn-main eg-btn-sm flex-1" title="${L('طباعة الغلاف + ورقة التظليل OMR + الأسئلة + المفتاح والحلول', 'Print Cover + OMR Bubble Sheet + Exam + Worked Key')}">
@@ -1137,15 +1247,21 @@
       })
       .join('');
 
+    const subText = cfg.id === 'nsmo'
+      ? L(
+          `نظام أولمبياد نسمو — موهبة (${isAr() ? tr.shortAr : tr.shortEn}): <strong>${tr.qCount} سؤال اختيار من متعدد (${optRange})</strong> في <strong>${cfg.durationMin} دقيقة</strong> بدون آلة حاسبة · <strong>+4</strong> للصحيحة و<strong>بدون خصم (0)</strong> للخاطئة أو المتروكة.`,
+          `Official NSMO / Mawhiba Format (${tr.shortEn}): <strong>${tr.qCount} MCQs (${optRange})</strong> in <strong>${cfg.durationMin} minutes</strong>, No Calculator · <strong>+4</strong> Correct, <strong>0</strong> Wrong (No Penalty), <strong>0</strong> Blank.`
+        )
+      : L(
+          `نظام التصفيات الرسمي لمسابقة كاوست (${isAr() ? tr.shortAr : tr.shortEn}): <strong>${tr.qCount} سؤالاً (${optRange})</strong> في <strong>${cfg.durationMin} دقيقة</strong> بدون آلة حاسبة · <strong>+4</strong> للإجابة الصحيحة، <strong>−1</strong> للخاطئة، <strong>0</strong> للمتروك.`,
+          `Official KMC Elimination Format (${tr.shortEn}): <strong>${tr.qCount} MCQs (${optRange})</strong> in <strong>${cfg.durationMin} minutes</strong>, No Calculator · <strong>+4</strong> Correct, <strong>−1</strong> Wrong, <strong>0</strong> Blank.`
+        );
+
     return `
+      ${compSwitcher}
       <div class="eg-tabs no-print">${tabs}</div>
       <div class="eg-subbar no-print">
-        <div class="text-xs sm:text-sm opacity-90">
-          🎯 ${L(
-            `نظام التصفيات الرسمي لمسابقة كاوست (${isAr() ? tr.shortAr : tr.shortEn}): <strong>${tr.qCount} سؤالاً</strong> في <strong>120 دقيقة</strong> بدون آلة حاسبة · <strong>+4</strong> للإجابة الصحيحة، <strong>−1</strong> للخاطئة، <strong>0</strong> للمتروك.`,
-            `Official KMC Elimination Format (${tr.shortEn}): <strong>${tr.qCount} MCQs (A–E)</strong> in <strong>120 minutes</strong>, No Calculator · <strong>+4</strong> Correct, <strong>−1</strong> Wrong, <strong>0</strong> Blank.`
-          )}
-        </div>
+        <div class="text-xs sm:text-sm opacity-90">🎯 ${subText}</div>
         <div class="flex flex-wrap gap-2 shrink-0">
           <button type="button" onclick="generateCustomKaustMock('${activeTrack}')" class="eg-btn eg-btn-go">
             🎲 ${L('توليد نموذج تجريبي جديد', 'Generate Fresh Mock')}
@@ -1160,11 +1276,14 @@
 
   function render() {
     const root = document.getElementById('kaust-mock-exams');
-    if (!root || !mocks.length) return;
+    const compPapers = currentCompPapers();
+    if (!root || !compPapers.length) return;
     root.setAttribute('dir', isAr() ? 'rtl' : 'ltr');
 
-    const totalPapers = allPapers().length;
-    const totalUniqueQs = mocks.reduce((acc, p) => acc + (p.question_count || 0), 0);
+    const cfg = session ? compForPaper(session.paper) : COMP_CONFIG[activeComp];
+    const basePapers = cfg.id === 'nsmo' ? nsmoMocks : kaustMocks;
+    const totalPapers = (cfg.id === 'nsmo' ? allNsmoPapers() : allKaustPapers()).length;
+    const totalUniqueQs = basePapers.reduce((acc, p) => acc + (p.question_count || 0), 0);
 
     const inner = !session
       ? renderHubView()
@@ -1177,10 +1296,10 @@
         <div class="eg-hub-logo-box"><img src="LOGO.jpg" alt="Edugates International School" loading="eager" decoding="sync" class="eg-hub-logo"></div>
         <div class="flex-1">
           <div class="eg-hub-kicker">Edugates International School · مدرسة بوابة المعرفة العالمية</div>
-          <h2 class="text-2xl sm:text-3xl font-display font-extrabold">⏱️ ${L('محاكي الاختبارات الرسمية الكاملة لمسابقة كاوست (KMC)', 'KAUST Math Competition (KMC) Full Mock Exams')}</h2>
+          <h2 class="text-2xl sm:text-3xl font-display font-extrabold">⏱️ ${isAr() ? cfg.hubTitleAr : cfg.hubTitleEn}</h2>
           <p class="text-xs sm:text-sm opacity-80 mt-1">${L(
-            `${totalPapers} نموذج اختبار رسمي كامل (${totalUniqueQs} سؤالاً مستقلاً) · مؤقت حي 120 دقيقة · أوراق تظليل بصري OMR ومفاتيح حلول مفصلة جاهزة للطباعة على ورق A4`,
-            `${totalPapers} Full Official Simulation Papers (${totalUniqueQs} dedicated KMC questions) · 120-Min Live Exam Simulator · Printable A4 Exam Booklets, OMR Bubble Sheets & Worked Keys`
+            `${totalPapers} نموذج اختبار رسمي كامل (${totalUniqueQs} سؤالاً مستقلاً) · مؤقت حي ${cfg.durationMin} دقيقة · أوراق تظليل بصري OMR ومفاتيح حلول مفصلة جاهزة للطباعة على ورق A4`,
+            `${totalPapers} Full Official Simulation Papers (${totalUniqueQs} dedicated questions) · ${cfg.durationMin}-Min Live Exam Simulator · Printable A4 Exam Booklets, OMR Bubble Sheets & Worked Keys`
           )}</p>
         </div>
       </div>
@@ -1204,16 +1323,23 @@
       practice.parentNode.insertBefore(sec, practice);
     }
 
-    try {
-      const res = await fetch('data/kaust_mocks.json');
-      if (res.ok) {
-        mocksDoc = await res.json();
-        mocks = (mocksDoc && mocksDoc.mocks) || [];
-      }
-    } catch (e) {
-      console.error('Failed to load KAUST mock exams:', e);
-      return;
+    const [kRes, nRes] = await Promise.allSettled([
+      fetch('data/kaust_mocks.json'),
+      fetch('data/nsmo_mocks.json'),
+    ]);
+    if (kRes.status === 'fulfilled' && kRes.value && kRes.value.ok) {
+      try {
+        kaustDoc = await kRes.value.json();
+        kaustMocks = (kaustDoc && kaustDoc.mocks) || [];
+      } catch (_) {}
     }
+    if (nRes.status === 'fulfilled' && nRes.value && nRes.value.ok) {
+      try {
+        nsmoDoc = await nRes.value.json();
+        nsmoMocks = (nsmoDoc && nsmoDoc.mocks) || [];
+      } catch (_) {}
+    }
+    if (!kaustMocks.length && !nsmoMocks.length) return;
 
     const t0 = Date.now();
     while (!getBankQuestions().length && Date.now() - t0 < 15000) {
@@ -1228,7 +1354,7 @@
       window.toggleLanguage = function () {
         const res = origToggle.apply(this, arguments);
         const navTxt = document.getElementById('nav-mocks-text');
-        if (navTxt) navTxt.innerText = isAr() ? 'اختبارات كاوست' : 'KAUST Mocks';
+        if (navTxt) navTxt.innerText = isAr() ? 'الاختبارات التجريبية' : 'Mock Exams';
         render();
         return res;
       };
@@ -1240,15 +1366,14 @@
       window.setGradeFilter = function (g) {
         const res = origGrade.apply(this, arguments);
         if (!session) {
-          if (g === 6 || g === 7) {
-            activeTrack = TRACKS[0].level;
-            render();
-          } else if (g === 8 || g === 9) {
-            activeTrack = TRACKS[1].level;
-            render();
-          } else if (g === 10 || g === 11) {
-            activeTrack = TRACKS[2].level;
-            render();
+          if (activeComp === 'nsmo') {
+            if (g === 7) { activeTrackByComp.nsmo = COMP_CONFIG.nsmo.tracks[0].level; render(); }
+            else if (g === 8 || g === 9) { activeTrackByComp.nsmo = COMP_CONFIG.nsmo.tracks[1].level; render(); }
+            else if (g === 10) { activeTrackByComp.nsmo = COMP_CONFIG.nsmo.tracks[2].level; render(); }
+          } else {
+            if (g === 6 || g === 7) { activeTrackByComp.kaust = COMP_CONFIG.kaust.tracks[0].level; render(); }
+            else if (g === 8 || g === 9) { activeTrackByComp.kaust = COMP_CONFIG.kaust.tracks[1].level; render(); }
+            else if (g === 10 || g === 11) { activeTrackByComp.kaust = COMP_CONFIG.kaust.tracks[2].level; render(); }
           }
         }
         return res;
@@ -1257,7 +1382,16 @@
 
     window.__kaustMocks = {
       get mocks() {
-        return allPapers();
+        return allKaustPapers();
+      },
+      get nsmoMocks() {
+        return allNsmoPapers();
+      },
+      get allMocks() {
+        return allPapersAcrossComps();
+      },
+      get activeComp() {
+        return activeComp;
       },
       get session() {
         return session;

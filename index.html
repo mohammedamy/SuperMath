@@ -214,16 +214,16 @@
             <span id="stat-questions-count">جاري تحميل بنوك التدريب…</span>
           </div>
 
-          <!-- KAUST Study Lessons Quick Jump -->
+          <!-- Study Academy Quick Jump (KAUST + NSMO) -->
           <a href="#study-lessons" onclick="if(window.jumpToKaustStudy){event.preventDefault();jumpToKaustStudy();}" class="bg-teal-700 hover:bg-teal-600 text-white border border-teal-500/70 px-3 sm:px-4 py-2 rounded-xl text-xs sm:text-sm font-bold transition-all duration-300 flex items-center gap-1.5 sm:gap-2 hover:shadow-lg hover:shadow-teal-500/20 shrink-0">
             <span>📖</span>
-            <span id="nav-study-text" class="hidden sm:inline">KAUST Study</span>
+            <span id="nav-study-text" class="hidden sm:inline">Study Academy</span>
           </a>
 
-          <!-- KAUST Mock Exams Quick Jump -->
+          <!-- Mock Exams Quick Jump (KAUST + NSMO) -->
           <a href="#kaust-mock-exams" onclick="if(window.jumpToKaustMocks){event.preventDefault();jumpToKaustMocks();}" class="bg-amber-600 hover:bg-amber-500 text-white border border-amber-400/70 px-3 sm:px-4 py-2 rounded-xl text-xs sm:text-sm font-bold transition-all duration-300 flex items-center gap-1.5 sm:gap-2 hover:shadow-lg hover:shadow-amber-500/20 shrink-0">
             <span>⏱️</span>
-            <span id="nav-mocks-text" class="hidden sm:inline">KAUST Mocks</span>
+            <span id="nav-mocks-text" class="hidden sm:inline">Mock Exams</span>
           </a>
 
           <!-- Brilliant Classroom Link -->
@@ -597,56 +597,167 @@
     <span id="mobile-jump-text">التدريب</span>
   </a>
 
-  <!-- PRINT MODAL -->
-  <div id="print-modal" role="dialog" aria-modal="true" aria-labelledby="print-modal-title" class="fixed inset-0 z-[100] hidden items-center justify-center bg-black/60 backdrop-blur-sm p-4">
-    <div class="bg-slate-900 border border-slate-700 rounded-3xl p-6 sm:p-8 max-w-md w-full mx-auto shadow-2xl relative max-h-[calc(100dvh-32px)] max-h-[calc(100vh-32px)] flex flex-col overflow-y-auto custom-scrollbar">
-      <h3 class="text-xl font-bold text-white mb-2" id="print-modal-title">🖨️ إعداد ورقة الاختبار</h3>
-      <p class="text-sm text-slate-400 mb-6" id="print-modal-desc">اختر عدد الأسئلة التي ترغب في طباعتها بناءً على الفلاتر المحددة حالياً. سيتم دمجها في ورقة نظيفة جاهزة للطباعة مع مفتاح الإجابات في النهاية.</p>
+  <!-- PRINT MODAL — EDUGATES A4 WORKSHEET & EXAM CUSTOMIZER -->
+  <div id="print-modal" role="dialog" aria-modal="true" aria-labelledby="print-modal-title" class="fixed inset-0 z-[100] hidden items-center justify-center bg-black/65 backdrop-blur-sm p-3 sm:p-4">
+    <div class="bg-slate-900 border border-slate-700 rounded-3xl p-5 sm:p-7 max-w-2xl w-full mx-auto shadow-2xl relative max-h-[calc(100dvh-24px)] max-h-[calc(100vh-24px)] flex flex-col overflow-y-auto custom-scrollbar">
+      <div class="flex flex-wrap items-start justify-between gap-2 mb-1.5">
+        <h3 class="text-lg sm:text-xl font-bold text-white" id="print-modal-title">🖨️ Edugates A4 Worksheet &amp; Exam Customizer</h3>
+        <span id="print-pool-badge" class="text-[11px] font-bold px-2.5 py-1 rounded-full bg-emerald-950/80 text-emerald-300 border border-emerald-700/70">Matching Pool</span>
+      </div>
+      <p class="text-xs sm:text-sm text-slate-400 mb-4" id="print-modal-desc">Customize title, topics/lessons, Easy/Medium/Hard mix, scratch-work boxes, and an optional Page 1 OMR bubble sheet on A4 paper.</p>
       
-      <div class="space-y-4">
-        <div>
-          <label class="block text-sm text-slate-300 mb-1" id="print-modal-track-lbl">المسار (Track)</label>
-          <select id="print-track-select" onchange="updatePrintPhaseOptions()" class="w-full bg-slate-800 border border-slate-700 text-white rounded-xl px-4 py-3 focus:ring-2 focus:ring-emerald-500 outline-none mb-4">
-            <option value="current">Current Filters / الفلاتر الحالية</option>
-            <option value="kangaroo">Kangaroo</option>
-            <option value="nafes">Nafes (KSA)</option>
-            <option value="kaust">KAUST Math Competition (KMC)</option>
-            <option value="jee">JEE Main/Adv</option>
-            <option value="olympiad">Math Olympiad</option>
-            <option value="nsmo">NSMO (KSA)</option>
-          </select>
-          
+      <div class="space-y-3.5">
+        <!-- Custom Title & Subtitle -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+          <div>
+            <label class="block text-xs font-semibold text-slate-300 mb-1" for="print-custom-title" id="print-custom-title-lbl">Custom Worksheet Title (Optional)</label>
+            <input type="text" id="print-custom-title" placeholder="e.g., Grade 8 Olympiad Weekly Quiz #4" class="w-full bg-slate-800 border border-slate-700 text-white text-sm rounded-xl px-3.5 py-2.5 focus:ring-2 focus:ring-emerald-500 outline-none">
+          </div>
+          <div>
+            <label class="block text-xs font-semibold text-slate-300 mb-1" for="print-custom-subtitle" id="print-custom-subtitle-lbl">Class / Teacher / Time Note (Optional)</label>
+            <input type="text" id="print-custom-subtitle" placeholder="e.g., Time: 45 min · No Calculator" class="w-full bg-slate-800 border border-slate-700 text-white text-sm rounded-xl px-3.5 py-2.5 focus:ring-2 focus:ring-emerald-500 outline-none">
+          </div>
+        </div>
+
+        <!-- Track, Phase & Question Count -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+          <div>
+            <label class="block text-xs font-semibold text-slate-300 mb-1" for="print-track-select" id="print-modal-track-lbl">Source Track</label>
+            <select id="print-track-select" onchange="updatePrintPhaseOptions()" class="w-full bg-slate-800 border border-slate-700 text-white text-sm rounded-xl px-3.5 py-2.5 focus:ring-2 focus:ring-emerald-500 outline-none">
+              <option value="current">Current Filters / الفلاتر الحالية</option>
+              <option value="kaust">KAUST Math Competition (KMC)</option>
+              <option value="nsmo">NSMO · Mawhiba (KSA)</option>
+              <option value="kangaroo">Kangaroo</option>
+              <option value="nafes">Nafes (KSA)</option>
+              <option value="jee">JEE Main/Adv</option>
+              <option value="olympiad">Math Olympiad (Proofs)</option>
+            </select>
+          </div>
           <div id="print-phase-container" style="display: none;">
-            <label class="block text-sm text-slate-300 mb-1" id="print-modal-phase-lbl">المرحلة (Phase/Grade)</label>
-            <select id="print-phase-select" onchange="updatePrintModalMax()" class="w-full bg-slate-800 border border-slate-700 text-white rounded-xl px-4 py-3 focus:ring-2 focus:ring-amber-500 outline-none mb-4">
+            <label class="block text-xs font-semibold text-slate-300 mb-1" for="print-phase-select" id="print-modal-phase-lbl">Track Band / Phase</label>
+            <select id="print-phase-select" onchange="updatePrintModalMax()" class="w-full bg-slate-800 border border-slate-700 text-white text-sm rounded-xl px-3.5 py-2.5 focus:ring-2 focus:ring-amber-500 outline-none">
               <option value="all">All</option>
             </select>
           </div>
-          
-          <label class="block text-sm text-slate-300 mb-1" id="print-modal-lbl">عدد الأسئلة (Max <span id="print-max-q">0</span>)</label>
-          <input type="number" id="print-q-count" min="1" value="20" class="w-full bg-slate-800 border border-slate-700 text-white rounded-xl px-4 py-3 focus:ring-2 focus:ring-emerald-500 outline-none">
+        </div>
 
-          <label class="mt-3 flex items-center gap-2.5 text-xs sm:text-sm text-slate-200 cursor-pointer select-none bg-slate-800/70 border border-slate-700/80 rounded-xl px-3.5 py-2.5">
-            <input type="checkbox" id="print-include-solutions" checked class="w-4 h-4 accent-emerald-500 rounded">
-            <span id="print-include-solutions-lbl">Include step-by-step worked solutions / تضمين خطوات الحل التفصيلية</span>
-          </label>
-          <div class="mt-2.5 flex items-center gap-2 text-[11px] text-teal-300 bg-teal-950/60 border border-teal-800/70 rounded-xl px-3 py-2">
-            <span>🖨️</span>
-            <span id="print-edugates-note">A4 Default · Edugates International School logo on every page</span>
+        <!-- Multi-Topic Picker -->
+        <div>
+          <span class="block text-xs font-semibold text-slate-300 mb-1.5" id="print-topics-lbl">Filter by Topics (Multi-Select)</span>
+          <div id="print-topic-chips" class="eg-cust-chips"></div>
+        </div>
+
+        <!-- Multi-Lesson Picker (KAUST & NSMO) -->
+        <div id="print-lessons-wrap" style="display: none;">
+          <span class="block text-xs font-semibold text-amber-300 mb-1.5" id="print-lessons-lbl">Filter by Study Academy Lessons (Multi-Select)</span>
+          <div id="print-lesson-chips" class="eg-cust-chips eg-cust-chips-scroll"></div>
+        </div>
+
+        <!-- Question Count + Quick Presets + Difficulty Mix -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+          <div>
+            <div class="flex items-center justify-between gap-2 mb-1">
+              <label class="text-xs font-semibold text-slate-300" for="print-q-count" id="print-modal-lbl">Questions (Max <span id="print-max-q">0</span>)</label>
+              <div class="flex items-center gap-1">
+                <button type="button" onclick="setPrintQuickCount(10)" class="px-2 py-0.5 text-[11px] font-bold rounded-md bg-slate-800 hover:bg-slate-700 text-slate-200 border border-slate-700">10</button>
+                <button type="button" onclick="setPrintQuickCount(15)" class="px-2 py-0.5 text-[11px] font-bold rounded-md bg-slate-800 hover:bg-slate-700 text-slate-200 border border-slate-700">15</button>
+                <button type="button" onclick="setPrintQuickCount(20)" class="px-2 py-0.5 text-[11px] font-bold rounded-md bg-slate-800 hover:bg-slate-700 text-slate-200 border border-slate-700">20</button>
+                <button type="button" onclick="setPrintQuickCount(25)" class="px-2 py-0.5 text-[11px] font-bold rounded-md bg-slate-800 hover:bg-slate-700 text-slate-200 border border-slate-700">25</button>
+                <button type="button" onclick="setPrintQuickCount(30)" class="px-2 py-0.5 text-[11px] font-bold rounded-md bg-slate-800 hover:bg-slate-700 text-slate-200 border border-slate-700">30</button>
+              </div>
+            </div>
+            <input type="number" id="print-q-count" min="1" value="20" class="w-full bg-slate-800 border border-slate-700 text-white text-sm rounded-xl px-3.5 py-2.5 focus:ring-2 focus:ring-emerald-500 outline-none">
           </div>
-          <button type="button" onclick="closePrintModal();if(window.jumpToKaustStudy)jumpToKaustStudy();" class="mt-2.5 w-full py-2.5 px-3 rounded-xl bg-teal-900/70 hover:bg-teal-800/80 border border-teal-600/60 text-teal-100 text-xs font-bold flex items-center justify-center gap-2 transition-colors">
+
+          <div>
+            <label class="block text-xs font-semibold text-slate-300 mb-1" for="print-diff-mode" id="print-diff-lbl">Difficulty Mix &amp; Ordering</label>
+            <select id="print-diff-mode" onchange="onPrintDiffModeChange()" class="w-full bg-slate-800 border border-slate-700 text-white text-sm rounded-xl px-3.5 py-2.5 focus:ring-2 focus:ring-emerald-500 outline-none">
+              <option value="graduated">Graduated (Easy → Medium → Hard) · متدرج</option>
+              <option value="random">Randomized Mix · عشوائي متنوع</option>
+              <option value="custom">Custom % Mix (Easy / Med / Hard) · نسب مخصصة</option>
+              <option value="easy_only">Easy / Foundation Only · سهل فقط</option>
+              <option value="medium_only">Medium / Multi-Step Only · متوسط فقط</option>
+              <option value="hard_only">Hard / Olympiad Only · متقدم فقط</option>
+            </select>
+          </div>
+        </div>
+
+        <!-- Custom % Mix Inputs (shown when print-diff-mode === 'custom') -->
+        <div id="print-custom-mix-box" style="display: none;" class="grid grid-cols-3 gap-2.5 bg-slate-800/70 border border-slate-700 rounded-xl p-2.5">
+          <div>
+            <label class="block text-[11px] font-bold text-emerald-300 mb-1" for="print-pct-easy">Easy %</label>
+            <input type="number" id="print-pct-easy" min="0" max="100" value="35" class="w-full bg-slate-900 border border-slate-700 text-white text-xs rounded-lg px-2.5 py-1.5">
+          </div>
+          <div>
+            <label class="block text-[11px] font-bold text-amber-300 mb-1" for="print-pct-med">Medium %</label>
+            <input type="number" id="print-pct-med" min="0" max="100" value="40" class="w-full bg-slate-900 border border-slate-700 text-white text-xs rounded-lg px-2.5 py-1.5">
+          </div>
+          <div>
+            <label class="block text-[11px] font-bold text-rose-300 mb-1" for="print-pct-hard">Hard %</label>
+            <input type="number" id="print-pct-hard" min="0" max="100" value="25" class="w-full bg-slate-900 border border-slate-700 text-white text-xs rounded-lg px-2.5 py-1.5">
+          </div>
+        </div>
+
+        <!-- Diagrams, Scratch Space & Answer Key Mode -->
+        <div class="grid grid-cols-1 sm:grid-cols-3 gap-3">
+          <div>
+            <label class="block text-xs font-semibold text-slate-300 mb-1" for="print-diagram-mode" id="print-diagram-lbl">Visual Diagrams (SVG)</label>
+            <select id="print-diagram-mode" onchange="onPrintDiagramModeChange()" class="w-full bg-slate-800 border border-slate-700 text-white text-xs sm:text-sm rounded-xl px-3 py-2.5 focus:ring-2 focus:ring-emerald-500 outline-none">
+              <option value="any">Standard Mix · تلقائي</option>
+              <option value="prefer_svg">Prefer Diagrams · أولوية الرسوم</option>
+              <option value="only_svg">Diagrams Only · مرسومة فقط</option>
+            </select>
+          </div>
+          <div>
+            <label class="block text-xs font-semibold text-slate-300 mb-1" for="print-scratch-space" id="print-scratch-lbl">Student Scratch-Work Space</label>
+            <select id="print-scratch-space" class="w-full bg-slate-800 border border-slate-700 text-white text-xs sm:text-sm rounded-xl px-3 py-2.5 focus:ring-2 focus:ring-emerald-500 outline-none">
+              <option value="none">Compact (No Box) · مدمج</option>
+              <option value="medium">Medium Work Box · متوسط</option>
+              <option value="large">Large Olympiad Grid · كبير</option>
+            </select>
+          </div>
+          <div>
+            <label class="block text-xs font-semibold text-slate-300 mb-1" for="print-key-mode" id="print-key-lbl">Answer Key &amp; Solutions</label>
+            <select id="print-key-mode" onchange="syncPrintKeyMode('select')" class="w-full bg-slate-800 border border-slate-700 text-white text-xs sm:text-sm rounded-xl px-3 py-2.5 focus:ring-2 focus:ring-emerald-500 outline-none">
+              <option value="full">Key + Worked Solutions · شامل</option>
+              <option value="quick">Quick Key Only · مفتاح سريع</option>
+              <option value="none">No Key (Student Only) · بدون مفتاح</option>
+            </select>
+          </div>
+        </div>
+
+        <!-- Checkboxes: Page 1 OMR Bubble Sheet + Worked Solutions Sync -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-2.5">
+          <label class="flex items-center gap-2.5 text-xs text-slate-200 cursor-pointer select-none bg-slate-800/75 border border-slate-700/80 rounded-xl px-3 py-2.5">
+            <input type="checkbox" id="print-include-omr" class="w-4 h-4 accent-amber-500 rounded shrink-0">
+            <span id="print-include-omr-lbl">Prepend Page 1 Official Cover + Optical OMR Bubble Sheet</span>
+          </label>
+          <label class="flex items-center gap-2.5 text-xs text-slate-200 cursor-pointer select-none bg-slate-800/75 border border-slate-700/80 rounded-xl px-3 py-2.5">
+            <input type="checkbox" id="print-include-solutions" checked onchange="syncPrintKeyMode('checkbox')" class="w-4 h-4 accent-emerald-500 rounded shrink-0">
+            <span id="print-include-solutions-lbl">Include full step-by-step worked solutions in key</span>
+          </label>
+        </div>
+
+        <div class="flex items-center gap-2 text-[11px] text-teal-300 bg-teal-950/60 border border-teal-800/70 rounded-xl px-3 py-2">
+          <span>🖨️</span>
+          <span id="print-edugates-note">Default A4 Paper · Edugates International School header &amp; logo repeat on every page</span>
+        </div>
+
+        <!-- Study & Mock Shortcuts -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-2">
+          <button type="button" onclick="closePrintModal();if(window.jumpToKaustStudy)jumpToKaustStudy();" class="py-2 px-3 rounded-xl bg-teal-900/70 hover:bg-teal-800/80 border border-teal-600/60 text-teal-100 text-xs font-bold flex items-center justify-center gap-1.5 transition-colors">
             <span>📖</span>
-            <span id="print-study-shortcut-lbl">طباعة شرح دروس كاوست والأمثلة المحلولة (A4)</span>
+            <span id="print-study-shortcut-lbl">Print KAUST &amp; NSMO Study Guides + Drills (A4)</span>
           </button>
-          <button type="button" onclick="closePrintModal();if(window.jumpToKaustMocks)jumpToKaustMocks();" class="mt-2 w-full py-2.5 px-3 rounded-xl bg-amber-900/70 hover:bg-amber-800/80 border border-amber-500/60 text-amber-100 text-xs font-bold flex items-center justify-center gap-2 transition-colors">
+          <button type="button" onclick="closePrintModal();if(window.jumpToKaustMocks)jumpToKaustMocks();" class="py-2 px-3 rounded-xl bg-amber-900/70 hover:bg-amber-800/80 border border-amber-500/60 text-amber-100 text-xs font-bold flex items-center justify-center gap-1.5 transition-colors">
             <span>🫧</span>
-            <span id="print-mocks-shortcut-lbl">طباعة اختبارات كاوست الكاملة وأوراق التظليل OMR (A4)</span>
+            <span id="print-mocks-shortcut-lbl">Print Full Official Mock Exams &amp; OMR Sheets</span>
           </button>
         </div>
-        
-        <div class="flex gap-3 pt-4">
-          <button onclick="closePrintModal()" class="flex-1 py-3 bg-slate-800 hover:bg-slate-700 text-white font-bold rounded-xl transition-all" id="print-btn-cancel">إلغاء (Cancel)</button>
-          <button onclick="executePrint()" class="flex-1 py-3 bg-emerald-500 hover:bg-emerald-600 text-slate-900 font-bold rounded-xl transition-all" id="print-btn-confirm">توليد وطباعة (Generate)</button>
+
+        <div class="flex gap-3 pt-2">
+          <button onclick="closePrintModal()" class="flex-1 py-3 bg-slate-800 hover:bg-slate-700 text-white font-bold rounded-xl transition-all" id="print-btn-cancel">Cancel</button>
+          <button onclick="executePrint()" class="flex-1 py-3 bg-emerald-500 hover:bg-emerald-600 text-slate-900 font-bold rounded-xl transition-all" id="print-btn-confirm">🖨️ Generate &amp; Print (A4)</button>
         </div>
       </div>
     </div>
@@ -728,8 +839,8 @@
           levels_en: "Grades 7-10",
           format_ar: "MCQs & مقالي | تنافسي",
           format_en: "MCQs & FRQs | Competitive",
-          topics_ar: ["الرياضيات المتقدمة", "المنطق والتحليل"],
-          topics_en: ["Advanced Math", "Logic & Analysis"],
+          topics_ar: ["نظرية الأعداد", "الجبر", "الهندسة", "التركيبات والاحتمالات"],
+          topics_en: ["Number Theory", "Algebra", "Geometry", "Combinatorics & Probability"],
           grades: [7, 8, 9, 10]
         },
         {
@@ -1206,7 +1317,8 @@
               <div class="flex flex-wrap gap-1">
                 ${topics.map(tp => `<span class="text-[11px] bg-white/80 dark:bg-slate-700/80 px-2 py-0.5 rounded text-slate-600 dark:text-slate-300 border border-slate-200 dark:border-slate-600">${tp}</span>`).join('')}
               </div>
-              ${tr.id === 'kaust' ? `<button type="button" onclick="event.stopPropagation();if(window.jumpToKaustStudy)jumpToKaustStudy();" class="mt-3 w-full py-2 px-3 rounded-xl bg-teal-700 hover:bg-teal-600 text-white text-xs font-extrabold flex items-center justify-center gap-1.5 shadow-sm transition-colors">📖 ${currentLang === 'ar' ? '١٨ درساً مصوّراً · ١٨٥ مثالاً محلولاً · ١٠٨ تدريبات وطباعة A4' : '18 Study Lessons · 185 Solved Examples · 108 Drills · A4 Print'}</button>` : ''}
+              ${tr.id === 'kaust' ? `<button type="button" onclick="event.stopPropagation();if(window.setStudyCompetition)setStudyCompetition('kaust');if(window.jumpToKaustStudy)jumpToKaustStudy();" class="mt-3 w-full py-2 px-3 rounded-xl bg-teal-700 hover:bg-teal-600 text-white text-xs font-extrabold flex items-center justify-center gap-1.5 shadow-sm transition-colors">📖 ${currentLang === 'ar' ? '١٨ درساً مصوّراً · ١٨٥ مثالاً محلولاً · ١٠٨ تدريبات وطباعة A4' : '18 Study Lessons · 185 Solved Examples · 108 Drills · A4 Print'}</button>` : ''}
+              ${tr.id === 'nsmo' ? `<button type="button" onclick="event.stopPropagation();if(window.setStudyCompetition)setStudyCompetition('nsmo');if(window.jumpToKaustStudy)jumpToKaustStudy();" class="mt-3 w-full py-2 px-3 rounded-xl bg-teal-700 hover:bg-teal-600 text-white text-xs font-extrabold flex items-center justify-center gap-1.5 shadow-sm transition-colors">📖 ${currentLang === 'ar' ? '١٨ درساً لموهبة · ١٨٠ مثالاً محلولاً · ١٢ اختباراً تجريبياً · A4' : '18 Mawhiba Lessons · 180 Solved Examples · 12 Mocks · A4'}</button>` : ''}
             </div>
           </div>
         `;
@@ -1715,5 +1827,6 @@
   <script src="assets/refinement.js"></script>
   <script src="assets/kaust-study.js"></script>
   <script src="assets/kaust-mocks.js"></script>
+  <script src="assets/worksheet-customizer.js"></script>
 </body>
 </html>

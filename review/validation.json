@@ -1,8 +1,8 @@
 {
   "status": "passed",
-  "total": 5750,
-  "parameterized_additions": 1729,
-  "independently_enumerated_generated_answers": 51,
+  "total": 6350,
+  "parameterized_additions": 1273,
+  "independently_enumerated_generated_answers": 35,
   "scope_certification": false,
   "individual_review_of_every_legacy_answer": false,
   "banks": [
@@ -36,11 +36,11 @@
     },
     {
       "track": "nsmo",
-      "total": 750,
+      "total": 1350,
       "levels": {
-        "Phase 2: Intermediate Olympiad (Grades 8-9)": 250,
-        "Phase 1: Junior Olympiad (Grade 7)": 250,
-        "Phase 3: Senior National Olympiad (Grade 10)": 250
+        "Phase 1: Junior Olympiad (Grade 7)": 450,
+        "Phase 2: Intermediate Olympiad (Grades 8-9)": 450,
+        "Phase 3: Senior National Olympiad (Grade 10)": 450
       }
     },
     {
