@@ -110,16 +110,26 @@
       ptsWrong: 0,
       ptsBlank: 0,
       durationMin: 75,
-      pillEn: '🦘 Kangaroo Mocks (Grades 3–10 · 3/4/5 pts)',
-      pillAr: '🦘 اختبارات كانجارو موهبة (الصفوف 3–10 · 3/4/5 نقاط)',
-      hubTitleEn: 'Kangaroo Math Competition Full Official Mock Exams',
-      hubTitleAr: 'محاكي الاختبارات الرسمية الكاملة لمسابقة كانجارو موهبة للرياضيات',
+      pillEn: '🦘 Kangaroo Mocks (Grades 1–12 · 3/4/5 pts)',
+      pillAr: '🦘 اختبارات كانجارو موهبة (الصفوف 1–12 · 3/4/5 نقاط)',
+      hubTitleEn: 'Kangaroo Math Competition Full Official Mock Exams (Grades 1–12)',
+      hubTitleAr: 'محاكي الاختبارات الرسمية الكاملة لمسابقة كانجارو موهبة للرياضيات (الصفوف 1–12)',
       badgeEn: 'Kangaroo Math',
       badgeAr: 'كانجارو موهبة',
       examNameEn: 'Kangaroo Math Competition (Mawhiba / KSF)',
       examNameAr: 'مسابقة كانجارو موهبة للرياضيات',
       scoreTag: '+3/+4/+5 · 0',
       tracks: [
+        {
+          level: 'PreEcolier',
+          code: 'PRE',
+          qCount: 24,
+          tiers: { Easy: 8, Medium: 8, Hard: 8 },
+          en: 'PreEcolier · Grades 1–2',
+          ar: 'بري إيكولير · الصفان 1–2',
+          shortEn: 'PreEcolier · Grades 1–2',
+          shortAr: 'بري إيكولير · الصفان 1–2',
+        },
         {
           level: 'Ecolier',
           code: 'ECO',
@@ -159,6 +169,16 @@
           ar: 'جونيور · الصفان 9–10',
           shortEn: 'Junior · Grades 9–10',
           shortAr: 'جونيور · الصفان 9–10',
+        },
+        {
+          level: 'Student',
+          code: 'STU',
+          qCount: 30,
+          tiers: { Easy: 10, Medium: 10, Hard: 10 },
+          en: 'Student · Grades 11–12',
+          ar: 'ستيودنت · الصفان 11–12',
+          shortEn: 'Student · Grades 11–12',
+          shortAr: 'ستيودنت · الصفان 11–12',
         },
       ],
     },
@@ -276,7 +296,7 @@
     if (
       paper.track === 'kangaroo' ||
       String(paper.id || '').startsWith('KANG-') ||
-      ['Ecolier', 'Benjamin', 'Cadet', 'Junior'].includes(paper.level)
+      ['PreEcolier', 'Ecolier', 'Benjamin', 'Cadet', 'Junior', 'Student'].includes(paper.level)
     ) {
       return COMP_CONFIG.kangaroo;
     }
@@ -288,7 +308,7 @@
 
   function compForLevel(level) {
     if (['Grade 3', 'Grade 6', 'Grade 9'].includes(level)) return COMP_CONFIG.nafes;
-    if (['Ecolier', 'Benjamin', 'Cadet', 'Junior'].includes(level)) return COMP_CONFIG.kangaroo;
+    if (['PreEcolier', 'Ecolier', 'Benjamin', 'Cadet', 'Junior', 'Student'].includes(level)) return COMP_CONFIG.kangaroo;
     return String(level || '').startsWith('Phase ') ? COMP_CONFIG.nsmo : COMP_CONFIG.kaust;
   }
 
@@ -1671,10 +1691,12 @@
             else if (g === 6) { activeTrackByComp.nafes = 'Grade 6'; render(); }
             else if (g === 9) { activeTrackByComp.nafes = 'Grade 9'; render(); }
           } else if (activeComp === 'kangaroo') {
-            if (g === 3 || g === 4) { activeTrackByComp.kangaroo = 'Ecolier'; render(); }
+            if (g === 1 || g === 2) { activeTrackByComp.kangaroo = 'PreEcolier'; render(); }
+            else if (g === 3 || g === 4) { activeTrackByComp.kangaroo = 'Ecolier'; render(); }
             else if (g === 5 || g === 6) { activeTrackByComp.kangaroo = 'Benjamin'; render(); }
             else if (g === 7 || g === 8) { activeTrackByComp.kangaroo = 'Cadet'; render(); }
             else if (g === 9 || g === 10) { activeTrackByComp.kangaroo = 'Junior'; render(); }
+            else if (g === 11 || g === 12) { activeTrackByComp.kangaroo = 'Student'; render(); }
           } else if (activeComp === 'nsmo') {
             if (g === 7) { activeTrackByComp.nsmo = COMP_CONFIG.nsmo.tracks[0].level; render(); }
             else if (g === 8 || g === 9) { activeTrackByComp.nsmo = COMP_CONFIG.nsmo.tracks[1].level; render(); }

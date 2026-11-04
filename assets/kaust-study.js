@@ -49,10 +49,10 @@
       id: 'kangaroo',
       bpField: 'kangaroo_blueprint',
       quizSelectId: 'quiz-kangaroo-level-select',
-      pillEn: '🦘 Kangaroo Math (Grades 3–10 · 5 Options)',
-      pillAr: '🦘 كانجارو موهبة (الصفوف 3–10 · 5 خيارات)',
-      hubTitleEn: 'Kangaroo Math Competition Study Lessons (Grades 3–10)',
-      hubTitleAr: 'أكاديمية شرح دروس مسابقة كانجارو موهبة للرياضيات (الصفوف 3–10)',
+      pillEn: '🦘 Kangaroo Math (Grades 1–12 · 5 Options)',
+      pillAr: '🦘 كانجارو موهبة (الصفوف 1–12 · 5 خيارات)',
+      hubTitleEn: 'Kangaroo Math Competition Study Lessons (Grades 1–12)',
+      hubTitleAr: 'أكاديمية شرح دروس مسابقة كانجارو موهبة للرياضيات (الصفوف 1–12)',
       badgeEn: 'Kangaroo Math',
       badgeAr: 'كانجارو موهبة',
       bankTagEn: 'Kangaroo Bank',
@@ -60,10 +60,12 @@
       trapsTitleEn: 'Watch Out — Common Kangaroo Math Puzzle Traps!',
       trapsTitleAr: 'احذر هذه الأخطاء الشائعة في ألغاز مسابقة كانجارو!',
       tracks: [
+        { level: 'PreEcolier', en: 'PreEcolier · Grades 1–2', ar: 'بري إيكولير · الصفان 1–2', shortEn: 'Grades 1–2 (PreEcolier)', shortAr: 'الصفان 1–2 (بري إيكولير)' },
         { level: 'Ecolier', en: 'Ecolier · Grades 3–4', ar: 'إيكولير · الصفان 3–4', shortEn: 'Grades 3–4 (Ecolier)', shortAr: 'الصفان 3–4 (إيكولير)' },
         { level: 'Benjamin', en: 'Benjamin · Grades 5–6', ar: 'بنجامين · الصفان 5–6', shortEn: 'Grades 5–6 (Benjamin)', shortAr: 'الصفان 5–6 (بنجامين)' },
         { level: 'Cadet', en: 'Cadet · Grades 7–8', ar: 'كاديت · الصفان 7–8', shortEn: 'Grades 7–8 (Cadet)', shortAr: 'الصفان 7–8 (كاديت)' },
         { level: 'Junior', en: 'Junior · Grades 9–10', ar: 'جونيور · الصفان 9–10', shortEn: 'Grades 9–10 (Junior)', shortAr: 'الصفان 9–10 (جونيور)' },
+        { level: 'Student', en: 'Student · Grades 11–12', ar: 'ستيودنت · الصفان 11–12', shortEn: 'Grades 11–12 (Student)', shortAr: 'الصفان 11–12 (ستيودنت)' },
       ],
     },
     nafes: {
@@ -144,7 +146,7 @@
     if (les.track === 'nafes' || String(les.id || '').startsWith('NAFS-') || ['Grade 3', 'Grade 6', 'Grade 9'].includes(les.level)) {
       return COMP_CONFIG.nafes;
     }
-    if (les.track === 'kangaroo' || String(les.id || '').startsWith('KANG-') || ['Ecolier', 'Benjamin', 'Cadet', 'Junior'].includes(les.level)) {
+    if (les.track === 'kangaroo' || String(les.id || '').startsWith('KANG-') || ['PreEcolier', 'Ecolier', 'Benjamin', 'Cadet', 'Junior', 'Student'].includes(les.level)) {
       return COMP_CONFIG.kangaroo;
     }
     if (les.track === 'nsmo' || String(les.id || '').startsWith('NSMO-') || String(les.level || '').startsWith('Phase ')) {
@@ -852,7 +854,7 @@
     if (['Grade 3', 'Grade 6', 'Grade 9'].includes(level)) {
       activeComp = 'nafes';
       activeTrackByComp.nafes = level;
-    } else if (['Ecolier', 'Benjamin', 'Cadet', 'Junior'].includes(level)) {
+    } else if (['PreEcolier', 'Ecolier', 'Benjamin', 'Cadet', 'Junior', 'Student'].includes(level)) {
       activeComp = 'kangaroo';
       activeTrackByComp.kangaroo = level;
     } else if (String(level || '').startsWith('Phase ')) {
@@ -1076,10 +1078,12 @@
           else if (g === 6) { activeTrackByComp.nafes = 'Grade 6'; activeLessonId = null; render(); }
           else if (g === 9) { activeTrackByComp.nafes = 'Grade 9'; activeLessonId = null; render(); }
         } else if (activeComp === 'kangaroo') {
-          if (g === 3 || g === 4) { activeTrackByComp.kangaroo = 'Ecolier'; activeLessonId = null; render(); }
+          if (g === 1 || g === 2) { activeTrackByComp.kangaroo = 'PreEcolier'; activeLessonId = null; render(); }
+          else if (g === 3 || g === 4) { activeTrackByComp.kangaroo = 'Ecolier'; activeLessonId = null; render(); }
           else if (g === 5 || g === 6) { activeTrackByComp.kangaroo = 'Benjamin'; activeLessonId = null; render(); }
           else if (g === 7 || g === 8) { activeTrackByComp.kangaroo = 'Cadet'; activeLessonId = null; render(); }
           else if (g === 9 || g === 10) { activeTrackByComp.kangaroo = 'Junior'; activeLessonId = null; render(); }
+          else if (g === 11 || g === 12) { activeTrackByComp.kangaroo = 'Student'; activeLessonId = null; render(); }
         } else if (activeComp === 'nsmo') {
           if (g === 7) { activeTrackByComp.nsmo = COMP_CONFIG.nsmo.tracks[0].level; activeLessonId = null; render(); }
           else if (g === 8 || g === 9) { activeTrackByComp.nsmo = COMP_CONFIG.nsmo.tracks[1].level; activeLessonId = null; render(); }

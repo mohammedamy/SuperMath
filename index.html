@@ -365,10 +365,12 @@
           <!-- Kangaroo Level Filter (shows only when kangaroo track is selected) -->
           <select id="quiz-kangaroo-level-select" onchange="filterQuestions()" class="bg-slate-800 text-white border border-rose-500/50 text-xs sm:text-sm rounded-xl px-3 py-2.5 focus:ring-2 focus:ring-rose-500 outline-none">
             <option value="all">كل مستويات كانجارو (All Kangaroo Levels)</option>
+            <option value="PreEcolier">🐣 بري إيكولير (PreEcolier: G1-2)</option>
             <option value="Ecolier">🌱 إيكولير (Ecolier: G3-4)</option>
             <option value="Benjamin">🌿 بنجامين (Benjamin: G5-6)</option>
             <option value="Cadet">🌳 كاديت (Cadet: G7-8)</option>
             <option value="Junior">🎓 جونيور (Junior: G9-10)</option>
+            <option value="Student">🏆 ستيودنت (Student: G11-12)</option>
           </select>
 
           <!-- KAUST Track Filter (shows only when kaust track is selected) -->
@@ -801,13 +803,13 @@
           color: "border-rose-500",
           bg: "bg-rose-50 dark:bg-rose-900/20",
           accent: "text-rose-600",
-          levels_ar: "الصفوف 3–10 (إيكولير · بنجامين · كاديت · جونيور)",
-          levels_en: "Grades 3–10 (Ecolier · Benjamin · Cadet · Junior)",
+          levels_ar: "الصفوف 1–12 (بري إيكولير · إيكولير · بنجامين · كاديت · جونيور · ستيودنت)",
+          levels_en: "Grades 1–12 (PreEcolier · Ecolier · Benjamin · Cadet · Junior · Student)",
           format_ar: "3، 4، 5 نقاط | بدون آلة حاسبة",
           format_en: "3, 4, 5 points | No Calculator",
           topics_ar: ["نظرية الأعداد", "الجبر", "الهندسة", "التركيبات والمنطق"],
           topics_en: ["Number Theory", "Algebra", "Geometry", "Combinatorics & Logic"],
-          grades: [3, 4, 5, 6, 7, 8, 9, 10]
+          grades: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]
         },
         {
           id: "nafes",
@@ -1317,7 +1319,7 @@
               <div class="flex flex-wrap gap-1">
                 ${topics.map(tp => `<span class="text-[11px] bg-white/80 dark:bg-slate-700/80 px-2 py-0.5 rounded text-slate-600 dark:text-slate-300 border border-slate-200 dark:border-slate-600">${tp}</span>`).join('')}
               </div>
-              ${tr.id === 'kangaroo' ? `<button type="button" onclick="event.stopPropagation();if(window.setStudyCompetition)setStudyCompetition('kangaroo');if(window.jumpToKaustStudy)jumpToKaustStudy();" class="mt-3 w-full py-2 px-3 rounded-xl bg-teal-700 hover:bg-teal-600 text-white text-xs font-extrabold flex items-center justify-center gap-1.5 shadow-sm transition-colors">🦘 ${currentLang === 'ar' ? '٢٤ درساً لكانجارو · ٢٤٠ مثالاً محلولاً · ١٦ اختباراً تجريبياً · A4' : '24 Kangaroo Lessons · 240 Solved Examples · 16 Mocks · A4'}</button>` : ''}
+              ${tr.id === 'kangaroo' ? `<button type="button" onclick="event.stopPropagation();if(window.setStudyCompetition)setStudyCompetition('kangaroo');if(window.jumpToKaustStudy)jumpToKaustStudy();" class="mt-3 w-full py-2 px-3 rounded-xl bg-teal-700 hover:bg-teal-600 text-white text-xs font-extrabold flex items-center justify-center gap-1.5 shadow-sm transition-colors">🦘 ${currentLang === 'ar' ? '٣٦ درساً لكانجارو · ٣٦٠ مثالاً محلولاً · ٢٤ اختباراً تجريبياً · A4' : '36 Kangaroo Lessons · 360 Solved Examples · 24 Mocks · A4'}</button>` : ''}
               ${tr.id === 'nafes' ? `<button type="button" onclick="event.stopPropagation();if(window.setStudyCompetition)setStudyCompetition('nafes');if(window.jumpToKaustStudy)jumpToKaustStudy();" class="mt-3 w-full py-2 px-3 rounded-xl bg-teal-700 hover:bg-teal-600 text-white text-xs font-extrabold flex items-center justify-center gap-1.5 shadow-sm transition-colors">🇸🇦 ${currentLang === 'ar' ? '١٨ درساً لنافس · ١٨٠ مثالاً محلولاً · ١٢ اختباراً تجريبياً · A4' : '18 Nafes Lessons · 180 Solved Examples · 12 Mocks · A4'}</button>` : ''}
               ${tr.id === 'kaust' ? `<button type="button" onclick="event.stopPropagation();if(window.setStudyCompetition)setStudyCompetition('kaust');if(window.jumpToKaustStudy)jumpToKaustStudy();" class="mt-3 w-full py-2 px-3 rounded-xl bg-teal-700 hover:bg-teal-600 text-white text-xs font-extrabold flex items-center justify-center gap-1.5 shadow-sm transition-colors">📖 ${currentLang === 'ar' ? '١٨ درساً مصوّراً · ١٨٥ مثالاً محلولاً · ١٠٨ تدريبات وطباعة A4' : '18 Study Lessons · 185 Solved Examples · 108 Drills · A4 Print'}</button>` : ''}
               ${tr.id === 'nsmo' ? `<button type="button" onclick="event.stopPropagation();if(window.setStudyCompetition)setStudyCompetition('nsmo');if(window.jumpToKaustStudy)jumpToKaustStudy();" class="mt-3 w-full py-2 px-3 rounded-xl bg-teal-700 hover:bg-teal-600 text-white text-xs font-extrabold flex items-center justify-center gap-1.5 shadow-sm transition-colors">📖 ${currentLang === 'ar' ? '١٨ درساً لموهبة · ١٨٠ مثالاً محلولاً · ١٢ اختباراً تجريبياً · A4' : '18 Mawhiba Lessons · 180 Solved Examples · 12 Mocks · A4'}</button>` : ''}
@@ -1635,10 +1637,12 @@
       ],
       kangaroo: [
         { val: "all", text: "كل مستويات كانجارو (All Kangaroo Levels)" },
+        { val: "PreEcolier", text: "🐣 بري إيكولير (PreEcolier: G1-2)" },
         { val: "Ecolier", text: "🌱 إيكولير (Ecolier: G3-4)" },
         { val: "Benjamin", text: "🌿 بنجامين (Benjamin: G5-6)" },
         { val: "Cadet", text: "🌳 كاديت (Cadet: G7-8)" },
-        { val: "Junior", text: "🎓 جونيور (Junior: G9-10)" }
+        { val: "Junior", text: "🎓 جونيور (Junior: G9-10)" },
+        { val: "Student", text: "🏆 ستيودنت (Student: G11-12)" }
       ],
       kaust: [
         { val: "all", text: "كل مسارات كاوست (All KAUST Tracks)" },

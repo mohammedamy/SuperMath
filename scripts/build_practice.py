@@ -1165,7 +1165,7 @@ def render(spec, track, level, index, seen_opts=None):
     return out
 
 TARGETS = {
-    "kangaroo": {"Ecolier": 360, "Benjamin": 360, "Cadet": 360, "Junior": 360},
+    "kangaroo": {"PreEcolier": 360, "Ecolier": 360, "Benjamin": 360, "Cadet": 360, "Junior": 360, "Student": 360},
     "nafes": {"Grade 3": 360, "Grade 6": 360, "Grade 9": 360},
     "kaust": {"Track 1: Grades 6-7": 750, "Track 2: Grades 8-9": 750, "Track 3: Grades 10-11": 750},
     "nsmo": {"Phase 1: Junior Olympiad (Grade 7)": 450, "Phase 2: Intermediate Olympiad (Grades 8-9)": 450, "Phase 3: Senior National Olympiad (Grade 10)": 450},

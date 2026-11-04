@@ -11,12 +11,14 @@
   },
   {
     "track": "kangaroo",
-    "total": 1440,
+    "total": 2160,
     "levels": {
+      "PreEcolier": 360,
       "Ecolier": 360,
       "Benjamin": 360,
       "Cadet": 360,
-      "Junior": 360
+      "Junior": 360,
+      "Student": 360
     },
     "issues": {}
   },

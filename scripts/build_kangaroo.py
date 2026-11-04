@@ -1,4 +1,4 @@
-"""Build & strictly validate data/kangaroo.json: 1,440 Official-Scope Kangaroo Math (Grades 3–10: Ecolier, Benjamin, Cadet, Junior) 5-option MCQs."""
+"""Build & strictly validate data/kangaroo.json: 2,160 Official-Scope Kangaroo Math (Grades 1–12: PreEcolier, Ecolier, Benjamin, Cadet, Junior, Student) 5-option MCQs."""
 import json
 import sys
 import xml.etree.ElementTree as ET
@@ -20,20 +20,26 @@ from kangaroo_ben_bank import build_benjamin_bank
 from kangaroo_cad_bank import build_cadet_bank
 from kangaroo_eco_bank import build_ecolier_bank
 from kangaroo_jun_bank import build_junior_bank
+from kangaroo_pre_bank import build_preecolier_bank
+from kangaroo_stu_bank import build_student_bank
 
 
 def main() -> None:
     other_stems = load_other_track_stems()
+    pre = build_preecolier_bank()
     eco = build_ecolier_bank()
     ben = build_benjamin_bank()
     cad = build_cadet_bank()
     jun = build_junior_bank()
+    stu = build_student_bank()
+    assert len(pre) == 360, f"Expected 360 PreEcolier questions, got {len(pre)}"
     assert len(eco) == 360, f"Expected 360 Ecolier questions, got {len(eco)}"
     assert len(ben) == 360, f"Expected 360 Benjamin questions, got {len(ben)}"
     assert len(cad) == 360, f"Expected 360 Cadet questions, got {len(cad)}"
     assert len(jun) == 360, f"Expected 360 Junior questions, got {len(jun)}"
+    assert len(stu) == 360, f"Expected 360 Student questions, got {len(stu)}"
 
-    bank = eco + ben + cad + jun
+    bank = pre + eco + ben + cad + jun + stu
     seen_ids: set[str] = set()
     seen_stems: set[str] = set()
     svg_count = 0
@@ -81,10 +87,10 @@ def main() -> None:
         diff_counts[q["difficulty"]] += 1
         topic_counts[q["topic"]] += 1
 
-    assert len(bp_counts) == 96, f"Expected 96 distinct Kangaroo blueprints, got {len(bp_counts)}"
+    assert len(bp_counts) == 144, f"Expected 144 distinct Kangaroo blueprints, got {len(bp_counts)}"
     for bp, cnt in bp_counts.items():
         assert cnt == 15, f"Expected 15 Qs for blueprint {bp}, got {cnt}"
-    assert svg_count >= 1080, f"Expected >= 1080 SVG diagrams across Kangaroo, got {svg_count}"
+    assert svg_count == 2160, f"Expected 2160/2160 SVG diagrams across Kangaroo, got {svg_count}"
 
     out_path = ROOT / "data" / "kangaroo.json"
     out_path.write_text(json.dumps(bank, ensure_ascii=False, separators=(",", ":")) + "\n", encoding="utf-8")

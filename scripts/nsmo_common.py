@@ -472,9 +472,12 @@ def svg_median_tri(ab_lbl: str = "c", ac_lbl: str = "b", bc_lbl: str = "a", m_lb
 def svg_digit_slots(slot_labels: list[str], top_note: str = "") -> str:
     """Combinatorial digit/seat boxes showing choices per position."""
     n = len(slot_labels)
-    bw, bh, gap = 46, 44, 10
-    total_w = n * bw + (n - 1) * gap
-    x0 = (320 - total_w) / 2
+    max_chars = max((len(str(lbl)) for lbl in slot_labels), default=1)
+    bw = max(46, int(max_chars * 7.8 + 16))
+    bh, gap = 44, 10
+    total_w = n * bw + max(0, n - 1) * gap
+    vw = max(320, total_w + 32)
+    x0 = (vw - total_w) / 2
     y0 = 62
     boxes = []
     for i, lbl in enumerate(slot_labels):
@@ -484,8 +487,8 @@ def svg_digit_slots(slot_labels: list[str], top_note: str = "") -> str:
             f'<text x="{x + bw/2:.1f}" y="{y0 + 27}" text-anchor="middle" font-size="13" font-weight="800" fill="{PAL["ink"]}">{esc(lbl)}</text>'
             f'<text x="{x + bw/2:.1f}" y="{y0 + bh + 16}" text-anchor="middle" font-size="10" font-weight="700" fill="{PAL["muted"]}">#{i+1}</text>'
         )
-    note = f'<text x="160" y="38" text-anchor="middle" font-size="12" font-weight="800" fill="{PAL["teal"]}">{esc(top_note)}</text>' if top_note else ""
-    return wrap_svg(note + "".join(boxes), 320, 142, 390, "Digit slots counting diagram")
+    note = f'<text x="{vw/2:.1f}" y="38" text-anchor="middle" font-size="12" font-weight="800" fill="{PAL["teal"]}">{esc(top_note)}</text>' if top_note else ""
+    return wrap_svg(note + "".join(boxes), vw, 142, max(390, vw + 40), "Digit slots counting diagram")
 
 
 def svg_graph_cycle_chords(n: int = 6, full_kn: bool = True) -> str:

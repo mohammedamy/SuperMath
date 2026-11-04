@@ -1,5 +1,5 @@
-"""Build & strictly validate data/kangaroo_lessons.json: 24 Kangaroo Math (Grades 3–10) study lessons covering
-100% of all 96 blueprints, 72/72 concept SVGs, 240 solved examples, and 144 disjoint printable practice drills."""
+"""Build & strictly validate data/kangaroo_lessons.json: 36 Kangaroo Math (Grades 1–12) study lessons covering
+100% of all 144 blueprints, 108/108 concept SVGs, 360 solved examples, and 216 disjoint printable practice drills."""
 import json
 import sys
 import xml.etree.ElementTree as ET
@@ -14,6 +14,8 @@ from kangaroo_lessons_ben import get_benjamin_lessons
 from kangaroo_lessons_cad import get_cadet_lessons
 from kangaroo_lessons_eco import get_ecolier_lessons
 from kangaroo_lessons_jun import get_junior_lessons
+from kangaroo_lessons_pre import get_preecolier_lessons
+from kangaroo_lessons_stu import get_student_lessons
 
 
 def iter_strings(o):
@@ -36,12 +38,14 @@ def main() -> None:
         bp_level[q["kangaroo_blueprint"]] = q["level"]
 
     lessons = (
-        get_ecolier_lessons()
+        get_preecolier_lessons()
+        + get_ecolier_lessons()
         + get_benjamin_lessons()
         + get_cadet_lessons()
         + get_junior_lessons()
+        + get_student_lessons()
     )
-    assert len(lessons) == 24, f"Expected 24 Kangaroo lessons, got {len(lessons)}"
+    assert len(lessons) == 36, f"Expected 36 Kangaroo lessons, got {len(lessons)}"
 
     seen_bps: list[str] = []
     total_bespoke = 0
@@ -130,14 +134,14 @@ def main() -> None:
             if s.lstrip().startswith("<svg"):
                 ET.fromstring(s)
 
-    assert len(seen_bps) == len(set(seen_bps)) == 96, f"Blueprint mapping count: {len(seen_bps)}"
+    assert len(seen_bps) == len(set(seen_bps)) == 144, f"Blueprint mapping count: {len(seen_bps)}"
     assert set(seen_bps) == set(by_bp), f"Unmapped blueprints: {set(by_bp) - set(seen_bps)}"
-    assert total_concept_svgs == 72, f"Expected 72/72 concept SVGs, got {total_concept_svgs}"
+    assert total_concept_svgs == 108, f"Expected 108/108 concept SVGs, got {total_concept_svgs}"
 
     out = ROOT / "data" / "kangaroo_lessons.json"
     out.write_text(json.dumps({"lessons": lessons}, ensure_ascii=False, separators=(",", ":")) + "\n", encoding="utf-8")
     print(
-        f"OK: {len(lessons)} Kangaroo lessons | {len(seen_bps)} blueprints (100%) | {total_concept_svgs}/72 concept SVGs | "
+        f"OK: {len(lessons)} Kangaroo lessons | {len(seen_bps)} blueprints (100%) | {total_concept_svgs}/108 concept SVGs | "
         f"{total_bespoke} bespoke + {total_bank} bank = {total_bespoke + total_bank} solved examples | "
         f"{total_drills} practice drills | {out.stat().st_size // 1024} KB"
     )

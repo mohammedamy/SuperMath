@@ -1,6 +1,6 @@
-"""Build & strictly validate data/kangaroo_mocks.json: 16 Official-Style Kangaroo Math (Grades 3–10)
-Full Mock Exam Papers (4 per Division: 24 Qs / 96 pts for Ecolier & Benjamin, 30 Qs / 120 pts for Cadet & Junior,
-75 min, 3/4/5-point scoring, 432 unique zero-overlap questions)."""
+"""Build & strictly validate data/kangaroo_mocks.json: 24 Official-Style Kangaroo Math (Grades 1–12)
+Full Mock Exam Papers (4 per Division: 24 Qs / 96 pts for PreEcolier, Ecolier & Benjamin;
+30 Qs / 120 pts for Cadet, Junior & Student; 75 min, 3/4/5-point scoring, 648 unique zero-overlap questions)."""
 import json
 import random
 from collections import Counter, defaultdict
@@ -11,6 +11,42 @@ ROOT = Path(__file__).resolve().parents[1]
 TIER_POINTS = {"Easy": 3, "Medium": 4, "Hard": 5}
 
 DIVISION_SPECS = [
+    {
+        "level": "PreEcolier",
+        "code": "PRE",
+        "grades_en": "PreEcolier · Grades 1–2",
+        "grades_ar": "بري إيكولير · الصفان 1–2",
+        "q_count": 24,
+        "tier_counts": {"Easy": 8, "Medium": 8, "Hard": 8},
+        "max_points": 96,
+        "duration_minutes": 75,
+        "papers": [
+            (
+                "Official Kangaroo Mock Paper 1 — Mawhiba PreEcolier Simulation",
+                "اختبار كانجارو التجريبي الرسمي 1 — محاكاة بري إيكولير (الصفان 1–2)",
+                "Balanced 24-question, 96-point Grades 1–2 simulation across skip-counting hops, toy balances, shape collages, wooden blocks, and clocks.",
+                "محاكاة متوازنة من 24 سؤالاً (96 نقطة) للصفين الأول والثاني تشمل قفزات الأعداد، الموازين، الأشكال الهندسية، المكعبات، والساعات.",
+            ),
+            (
+                "Official Kangaroo Mock Paper 2 — Tens & Ones, Bead Trains & Mirror Stamps",
+                "اختبار كانجارو التجريبي الرسمي 2 — الآحاد والعشرات وقطار الخرز والأختام (الصفان 1–2)",
+                "Highlights two-digit place-value blocks, fruit icon sums, repeating bead necklaces, mirror stamps, and marble bags.",
+                "يركّز على قوالب الآحاد والعشرات، ألغاز الصور، أنماط الخرز، الأختام المنعكسة، وسحب الكرات الملونة.",
+            ),
+            (
+                "Official Kangaroo Mock Paper 3 — Mini Pyramids, Paper Cuts & Coin Purses",
+                "اختبار كانجارو التجريبي الرسمي 3 — الأهرامات الصغيرة وقص الأشرطة والنقود (الصفان 1–2)",
+                "Focuses on mini brick pyramids, odd/even pairs, folded ribbon cuts, opposite die dots, and coin purse totals.",
+                "يركّز على الأهرامات العددية المبسطة، الأزواج والفردي، قص الأشرطة المطوية، نقاط حجر النرد، وجمع النقود.",
+            ),
+            (
+                "Official Kangaroo Mock Paper 4 — Little Kangaroo Gold Medal Rehearsal",
+                "اختبار كانجارو التجريبي الرسمي 4 — البروفة الذهبية لصغار الكنغر (الصفان 1–2)",
+                "Complete 75-minute, 96-point PreEcolier dress rehearsal engineered for Grades 1–2 Mawhiba Kangaroo medalists.",
+                "بروفة شاملة مدتها 75 دقيقة (24 سؤالاً — 96 نقطة) تحاكي معايير الميدالية الذهبية لمستوى بري إيكولير.",
+            ),
+        ],
+    },
     {
         "level": "Ecolier",
         "code": "ECO",
@@ -152,6 +188,42 @@ DIVISION_SPECS = [
                 "اختبار كانجارو التجريبي الرسمي 4 — البروفة الذهبية الكاملة (الصفان 9–10)",
                 "High-rigor 30-question, 75-minute, 120-point Junior dress rehearsal for Grades 9–10 Kangaroo champions.",
                 "البروفة الختامية الكبرى (30 سؤالاً في 75 دقيقة — 120 نقطة) لأبطال مسابقة كانجارو موهبة للصفين التاسع والعاشر.",
+            ),
+        ],
+    },
+    {
+        "level": "Student",
+        "code": "STU",
+        "grades_en": "Student · Grades 11–12",
+        "grades_ar": "ستيودنت · الصفان 11–12",
+        "q_count": 30,
+        "tier_counts": {"Easy": 10, "Medium": 10, "Hard": 10},
+        "max_points": 120,
+        "duration_minutes": 75,
+        "papers": [
+            (
+                "Official Kangaroo Mock Paper 1 — Mawhiba Student Simulation",
+                "اختبار كانجارو التجريبي الرسمي 1 — محاكاة ستيودنت (الصفان 11–12)",
+                "Full 30-question, 120-point senior simulation across Euler coprimes, cubic Vieta sums, Ceva ratios, inscribed spheres, and Catalan paths.",
+                "محاكاة رسمية كاملة من 30 سؤالاً (120 نقطة) تشمل الأعداد الأولية نسبياً، علاقات فييتا التكعيبية، مبرهنة سيفا، الكرات المحاطة، ومسارات كاتالان.",
+            ),
+            (
+                "Official Kangaroo Mock Paper 2 — Frobenius Coins, Tangential Quads & Bayes Trees",
+                "اختبار كانجارو التجريبي الرسمي 2 — مسألة فروبينيوس والرباعيات المماسية والاحتمال الشرطي (الصفان 11–12)",
+                "Highlights Frobenius postage bounds, polynomial remainder reconstruction, Pitot tangential quads, cone frustums, and Bayes urns.",
+                "يركّز على مسألة الطوابع لفروبينيوس، بواقي كثيرات الحدود، الرباعيات المماسية لبيتو، المخاريط الناقصة، والاحتمال الشرطي.",
+            ),
+            (
+                "Official Kangaroo Mock Paper 3 — Functional Equations, Radical Tangents & Expectation",
+                "اختبار كانجارو التجريبي الرسمي 3 — المعادلات الدالية والدوائر المتماسة والتوقع الرياضي (الصفان 11–12)",
+                "Focuses on involutive functional equations, AM-GM extremals, common external tangents, cube cross-sections, and linearity of expectation.",
+                "يركّز على المعادلات الدالية، القيم القصوى بمتباينة الوسطين، المماسات المشتركة، مقاطع المكعب، وخطية التوقع الرياضي.",
+            ),
+            (
+                "Official Kangaroo Mock Paper 4 — Senior Gold Medal Dress Rehearsal",
+                "اختبار كانجارو التجريبي الرسمي 4 — البروفة الذهبية للمرحلة الثانوية (الصفان 11–12)",
+                "Championship 30-question, 75-minute, 120-point Student dress rehearsal calibrated to Grades 11–12 Kangaroo gold medal cutoffs.",
+                "البروفة النهائية الكبرى (30 سؤالاً في 75 دقيقة — 120 نقطة) لأبطال الصفين الحادي عشر والثاني عشر في كانجارو موهبة.",
             ),
         ],
     },
@@ -374,8 +446,8 @@ def main() -> None:
     out = {
         "academy_en": "Edugates International School",
         "academy_ar": "مدرسة بوابة المعرفة العالمية",
-        "competition_en": "Kangaroo Math Competition (Mawhiba / KSF) — Official Simulation Series (Grades 3–10)",
-        "competition_ar": "مسابقة كانجارو موهبة للرياضيات — سلسلة الاختبارات التجريبية الرسمية (الصفوف 3–10)",
+        "competition_en": "Kangaroo Math Competition (Mawhiba / KSF) — Official Simulation Series (Grades 1–12)",
+        "competition_ar": "مسابقة كانجارو موهبة للرياضيات — سلسلة الاختبارات التجريبية الرسمية (الصفوف 1–12)",
         "default_paper": "A4",
         "option_count": 5,
         "scoring": {

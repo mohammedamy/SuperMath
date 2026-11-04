@@ -9,7 +9,7 @@ Object.assign(dict.en, {
  chart2Title:'Question formats in the current banks',chart2Caption:'Actual multiple-choice and written-response proportions. Written solutions are self-assessed.',
  sec2Title:'Explore the banks',sec2Desc:'Understand the content available for practice.',
  scaleTitle:'Practice-bank planning',scaleDesc:'An estimate for planning future additions; this is not a count of available questions.',
- stat1Label:'Practice tracks',stat1Value:'6 tracks',stat4Value:'English & Arabic',stat2Value:'Grades 3–12',
+ stat1Label:'Practice tracks',stat1Value:'6 tracks',stat4Value:'English & Arabic',stat2Value:'Grades 1–12',
  footerText:'© 2026 SuperMath · Edugates International School. Independent practice materials; no exam-board endorsement.'
 });
 Object.assign(dict.ar, {
@@ -22,11 +22,11 @@ Object.assign(dict.ar, {
  chart1Title:'الموضوعات في البنوك الحالية',chart1Caption:'أعداد الأسئلة حسب المجالات العامة، وليست الأوزان الرسمية للاختبارات.',
  chart2Title:'أنماط الأسئلة في البنوك الحالية',chart2Caption:'النسب الفعلية للاختيار من متعدد والإجابة المكتوبة. الحلول المكتوبة للتقييم الذاتي.',
  scaleTitle:'تخطيط بنك التدريب',scaleDesc:'تقدير للتوسعات المستقبلية، وليس عدد الأسئلة المتاحة.',
- stat1Label:'مسارات التدريب',stat1Value:'6 مسارات',stat4Value:'العربية والإنجليزية',stat2Value:'الصفوف 3–12',
+ stat1Label:'مسارات التدريب',stat1Value:'6 مسارات',stat4Value:'العربية والإنجليزية',stat2Value:'الصفوف 1–12',
  footerText:'© 2026 SuperMath · مدرسة بوابة المعرفة العالمية. مواد تدريب مستقلة غير معتمدة من جهات الاختبارات.'
 });
 const trackUpdates = {
- kangaroo:{name_en:'Kangaroo Math (Mawhiba)',name_ar:'كانجارو موهبة للرياضيات',format_en:'5-option MCQs (A–E) · 3, 4, 5 pts · No calculator · Grades 3–10',format_ar:'اختيار من متعدد (5 خيارات) · 3 و4 و5 نقاط · بدون آلة حاسبة · الصفوف 3–10',levels_en:'Official Divisions: Grades 3–10 (Ecolier–Junior)',levels_ar:'مستويات كانجارو: الصفوف 3–10 (إيكولير–جونيور)',badge_en:'MCQs (5 Options)',badge_ar:'MCQs (5 خيارات)',grades:[3,4,5,6,7,8,9,10]},
+ kangaroo:{name_en:'Kangaroo Math (Mawhiba)',name_ar:'كانجارو موهبة للرياضيات',format_en:'5-option MCQs (A–E) · 3, 4, 5 pts · No calculator · Grades 1–12',format_ar:'اختيار من متعدد (5 خيارات) · 3 و4 و5 نقاط · بدون آلة حاسبة · الصفوف 1–12',levels_en:'Official Divisions: Grades 1–12 (PreEcolier–Student)',levels_ar:'مستويات كانجارو: الصفوف 1–12 (بري إيكولير–ستيودنت)',badge_en:'MCQs (5 Options)',badge_ar:'MCQs (5 خيارات)',grades:[1,2,3,4,5,6,7,8,9,10,11,12]},
  nafes:{name_en:'Nafes · KSA National Exam (ETEC)',name_ar:'اختبار نافس الوطني (هيئة تقويم التعليم)',format_en:'4-option MCQs (A–D) · No calculator · Grades 3, 6 & 9',format_ar:'اختيار من متعدد (4 خيارات) · بدون آلة حاسبة · الصفوف 3 و6 و9',levels_en:'Official ETEC Benchmarks: Grades 3, 6 & 9',levels_ar:'الصفوف المستهدفة رسمياً: 3 و6 و9',badge_en:'MCQs (4 Options)',badge_ar:'MCQs (4 خيارات)',grades:[3,6,9]},
  kaust:{name_en:'KAUST · Math Competition (KMC)',name_ar:'كاوست · مسابقة الرياضيات (KMC)',format_en:'5-option MCQs (A–E) · No calculator · Grades 6–11',format_ar:'اختيار من متعدد (5 خيارات) · بدون آلة حاسبة · الصفوف 6–11',levels_en:'Official KMC Tracks: Grades 6–11',levels_ar:'مسارات KMC: الصفوف 6–11',badge_en:'MCQs (5 Options)',badge_ar:'MCQs (5 خيارات)',grades:[6,7,8,9,10,11]},
  nsmo:{name_en:'NSMO · Mawhiba Olympiad',name_ar:'نسمو · الأولمبياد الوطني (موهبة)',format_en:'4-option MCQs (A–D) · No calculator · Grades 7–10',format_ar:'اختيار من متعدد (4 خيارات) · بدون آلة حاسبة · الصفوف 7–10',levels_en:'Official Olympiad Scope: Grades 7–10',levels_ar:'نطاق الأولمبياد: الصفوف 7–10',badge_en:'MCQs (4 Options)',badge_ar:'MCQs (4 خيارات)',grades:[7,8,9,10]},
@@ -60,7 +60,7 @@ renderApp=function(){
  for(const select of document.querySelectorAll('select'))select.setAttribute('aria-label',select.id.replace(/-/g,' '));
  let notice=document.getElementById('bank-notice');
  if(!notice){notice=document.createElement('p');notice.id='bank-notice';document.getElementById('quiz-subheading').after(notice)}
- notice.textContent=currentLang==='ar'?'مواد تدريب مستقلة. الحلول المكتوبة للتقييم الذاتي. مسارات نافس الوطني (الصفوف 3 و6 و9) وكانجارو (الصفوف 3–10) وكاوست (الصفوف 6–11) ونسمو موهبة (الصفوف 7–10) مزوّدة بشرح الدروس والاختبارات التجريبية وأوراق طباعة A4.':'Independent practice materials. Written responses are self-assessed. Nafes KSA (Grades 3, 6 & 9), Kangaroo Math (Grades 3–10), KAUST KMC (Grades 6–11), and NSMO Mawhiba (Grades 7–10) include full Study Lessons, Mock Simulators, and branded A4 printouts.';
+ notice.textContent=currentLang==='ar'?'مواد تدريب مستقلة. الحلول المكتوبة للتقييم الذاتي. مسارات نافس الوطني (الصفوف 3 و6 و9) وكانجارو (الصفوف 1–12) وكاوست (الصفوف 6–11) ونسمو موهبة (الصفوف 7–10) مزوّدة بشرح الدروس والاختبارات التجريبية وأوراق طباعة A4.':'Independent practice materials. Written responses are self-assessed. Nafes KSA (Grades 3, 6 & 9), Kangaroo Math (Grades 1–12), KAUST KMC (Grades 6–11), and NSMO Mawhiba (Grades 7–10) include full Study Lessons, Mock Simulators, and branded A4 printouts.';
  const jumpEl=document.getElementById('mobile-jump-text');
  if(jumpEl)jumpEl.textContent=currentLang==='ar'?'التدريب':'Practice';
 };
@@ -68,10 +68,12 @@ const kmcLevelLabels = {
  'Grade 3': 'Grade 3 (Primary) / الصف الثالث الابتدائي (نافس 3)',
  'Grade 6': 'Grade 6 (Primary) / الصف السادس الابتدائي (نافس 6)',
  'Grade 9': 'Grade 9 (Intermediate) / الصف الثالث المتوسط (نافس 9)',
+ 'PreEcolier': 'PreEcolier (Grades 1-2) / بري إيكولير (الصفان 1-2)',
  'Ecolier': 'Ecolier (Grades 3-4) / إيكولير (الصفان 3-4)',
  'Benjamin': 'Benjamin (Grades 5-6) / بنجامين (الصفان 5-6)',
  'Cadet': 'Cadet (Grades 7-8) / كاديت (الصفان 7-8)',
  'Junior': 'Junior (Grades 9-10) / جونيور (الصفان 9-10)',
+ 'Student': 'Student (Grades 11-12) / ستيودنت (الصفان 11-12)',
  'Track 1: Grades 6-7': 'Track 1: Grades 6-7 / المسار 1: الصفوف 6-7',
  'Track 2: Grades 8-9': 'Track 2: Grades 8-9 / المسار 2: الصفوف 8-9',
  'Track 3: Grades 10-11': 'Track 3: Grades 10-11 / المسار 3: الصفوف 10-11',
@@ -79,7 +81,7 @@ const kmcLevelLabels = {
  'Phase 2: Intermediate Olympiad (Grades 8-9)': 'Phase 2: Grades 8-9 (Intermediate) / المرحلة 2: الصفان 8-9',
  'Phase 3: Senior National Olympiad (Grade 10)': 'Phase 3: Grade 10 (Senior) / المرحلة 3: الصف 10'
 };
-const KANG_LEVEL_ORDER = ['Ecolier','Benjamin','Cadet','Junior'];
+const KANG_LEVEL_ORDER = ['PreEcolier','Ecolier','Benjamin','Cadet','Junior','Student'];
 const NAFES_LEVEL_ORDER = ['Grade 3','Grade 6','Grade 9'];
 loadQuestionsData=async function(){
  const results=await Promise.allSettled(appData.tracks.map(async t=>{const r=await fetch(`data/${t.id}.json`);if(!r.ok)throw Error(t.id);const data=await r.json();if(!Array.isArray(data))throw Error(t.id);return data}));

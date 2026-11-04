@@ -1,6 +1,6 @@
 {
   "status": "passed",
-  "total": 7120,
+  "total": 7840,
   "parameterized_additions": 575,
   "independently_enumerated_generated_answers": 5,
   "scope_certification": false,
@@ -8,12 +8,14 @@
   "banks": [
     {
       "track": "kangaroo",
-      "total": 1440,
+      "total": 2160,
       "levels": {
+        "PreEcolier": 360,
         "Ecolier": 360,
         "Benjamin": 360,
         "Cadet": 360,
-        "Junior": 360
+        "Junior": 360,
+        "Student": 360
       }
     },
     {
