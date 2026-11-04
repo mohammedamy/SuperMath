@@ -1,8 +1,8 @@
 {
   "status": "passed",
-  "total": 6790,
-  "parameterized_additions": 713,
-  "independently_enumerated_generated_answers": 16,
+  "total": 7120,
+  "parameterized_additions": 575,
+  "independently_enumerated_generated_answers": 5,
   "scope_certification": false,
   "individual_review_of_every_legacy_answer": false,
   "banks": [
@@ -18,11 +18,11 @@
     },
     {
       "track": "nafes",
-      "total": 750,
+      "total": 1080,
       "levels": {
-        "Grade 3": 250,
-        "Grade 6": 250,
-        "Grade 9": 250
+        "Grade 3": 360,
+        "Grade 6": 360,
+        "Grade 9": 360
       }
     },
     {

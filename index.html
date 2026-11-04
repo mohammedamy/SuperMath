@@ -811,19 +811,19 @@
         },
         {
           id: "nafes",
-          name_ar: "اختبار نافس (السعودية)",
-          name_en: "Nafes (KSA)",
+          name_ar: "اختبار نافس الوطني (السعودية)",
+          name_en: "Nafes · KSA National Exam (ETEC)",
           badge_ar: "MCQs (4 خيارات)",
           badge_en: "MCQs (4 Options)",
           color: "border-blue-500",
           bg: "bg-blue-50 dark:bg-blue-900/20",
           accent: "text-blue-600",
-          levels_ar: "الصفوف 3، 6، 9",
-          levels_en: "Grades 3, 6, 9",
-          format_ar: "اختبار وطني | مقاييس الأداء",
-          format_en: "National Exam | Performance Metrics",
-          topics_ar: ["الجبر", "القياس", "الإحصاء والبيانات"],
-          topics_en: ["Algebra", "Measurement", "Statistics & Data"],
+          levels_ar: "الصفوف المستهدفة رسمياً: 3، 6، 9",
+          levels_en: "Official ETEC Benchmarks: Grades 3, 6 & 9",
+          format_ar: "اختيار من متعدد (A–D) | بدون آلة حاسبة",
+          format_en: "4-Option MCQs (A–D) | No Calculator",
+          topics_ar: ["الأعداد والعمليات", "الجبر والأنماط", "الهندسة والقياس", "البيانات والاحتمالات"],
+          topics_en: ["Numbers & Operations", "Algebra", "Geometry", "Data & Probability"],
           grades: [3, 6, 9]
         },
         {
@@ -1318,6 +1318,7 @@
                 ${topics.map(tp => `<span class="text-[11px] bg-white/80 dark:bg-slate-700/80 px-2 py-0.5 rounded text-slate-600 dark:text-slate-300 border border-slate-200 dark:border-slate-600">${tp}</span>`).join('')}
               </div>
               ${tr.id === 'kangaroo' ? `<button type="button" onclick="event.stopPropagation();if(window.setStudyCompetition)setStudyCompetition('kangaroo');if(window.jumpToKaustStudy)jumpToKaustStudy();" class="mt-3 w-full py-2 px-3 rounded-xl bg-teal-700 hover:bg-teal-600 text-white text-xs font-extrabold flex items-center justify-center gap-1.5 shadow-sm transition-colors">🦘 ${currentLang === 'ar' ? '٢٤ درساً لكانجارو · ٢٤٠ مثالاً محلولاً · ١٦ اختباراً تجريبياً · A4' : '24 Kangaroo Lessons · 240 Solved Examples · 16 Mocks · A4'}</button>` : ''}
+              ${tr.id === 'nafes' ? `<button type="button" onclick="event.stopPropagation();if(window.setStudyCompetition)setStudyCompetition('nafes');if(window.jumpToKaustStudy)jumpToKaustStudy();" class="mt-3 w-full py-2 px-3 rounded-xl bg-teal-700 hover:bg-teal-600 text-white text-xs font-extrabold flex items-center justify-center gap-1.5 shadow-sm transition-colors">🇸🇦 ${currentLang === 'ar' ? '١٨ درساً لنافس · ١٨٠ مثالاً محلولاً · ١٢ اختباراً تجريبياً · A4' : '18 Nafes Lessons · 180 Solved Examples · 12 Mocks · A4'}</button>` : ''}
               ${tr.id === 'kaust' ? `<button type="button" onclick="event.stopPropagation();if(window.setStudyCompetition)setStudyCompetition('kaust');if(window.jumpToKaustStudy)jumpToKaustStudy();" class="mt-3 w-full py-2 px-3 rounded-xl bg-teal-700 hover:bg-teal-600 text-white text-xs font-extrabold flex items-center justify-center gap-1.5 shadow-sm transition-colors">📖 ${currentLang === 'ar' ? '١٨ درساً مصوّراً · ١٨٥ مثالاً محلولاً · ١٠٨ تدريبات وطباعة A4' : '18 Study Lessons · 185 Solved Examples · 108 Drills · A4 Print'}</button>` : ''}
               ${tr.id === 'nsmo' ? `<button type="button" onclick="event.stopPropagation();if(window.setStudyCompetition)setStudyCompetition('nsmo');if(window.jumpToKaustStudy)jumpToKaustStudy();" class="mt-3 w-full py-2 px-3 rounded-xl bg-teal-700 hover:bg-teal-600 text-white text-xs font-extrabold flex items-center justify-center gap-1.5 shadow-sm transition-colors">📖 ${currentLang === 'ar' ? '١٨ درساً لموهبة · ١٨٠ مثالاً محلولاً · ١٢ اختباراً تجريبياً · A4' : '18 Mawhiba Lessons · 180 Solved Examples · 12 Mocks · A4'}</button>` : ''}
             </div>

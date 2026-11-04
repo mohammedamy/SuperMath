@@ -144,13 +144,13 @@ def svg_matchstick_triangles(counts=(1, 2, 3)) -> str:
 
 
 # 3. Shaded triangle inside rectangle (base = bottom, apex on top edge)
-def svg_shaded_triangle_in_rect(L, W, apex_frac: float = 0.62, unit: str = "cm") -> str:
+def svg_shaded_triangle_in_rect(L, W, apex_frac: float = 0.62, unit: str = "cm", w_lbl: str = None) -> str:
     rx, ry = 55, 26
     rw = 180
     rh = max(84, min(125, int(rw * (W / max(L, 1)))))
     ax = rx + rw * apex_frac
     lbl_l = f"{L} {unit}".strip()
-    lbl_w = f"{W} {unit}".strip()
+    lbl_w = w_lbl if w_lbl is not None else f"{W} {unit}".strip()
     body = (
         f'<rect x="{rx}" y="{ry}" width="{rw}" height="{rh}" fill="#ffffff" stroke="{STROKE}" stroke-width="2"/>'
         f'<polygon points="{rx},{ry+rh} {rx+rw},{ry+rh} {ax:.1f},{ry}" fill="{SHADE}" fill-opacity="0.85" '
@@ -417,16 +417,24 @@ def svg_number_strip(cells) -> str:
     # cells: list of strings, e.g. ["10", "", "?", "", "130"]
     n = len(cells)
     max_chars = max((len(str(v)) for v in cells), default=2)
-    cw, ch = max(50, min(96, max_chars * 8 + 18)), 38
+    if max_chars > 18:
+        font_sz = 11
+        cw = min(194, int(round(max_chars * 6.8 + 20)))
+    elif max_chars > 11:
+        font_sz = 12
+        cw = min(158, int(round(max_chars * 7.4 + 20)))
+    else:
+        font_sz = 13 if max_chars >= 8 else 14
+        cw = max(50, min(104, max_chars * 8 + 20))
+    ch = 38
     total_w = n * cw
     w = max(300, total_w + 48)
     ox = (w - total_w) / 2
     oy = 23
     parts = []
-    font_sz = 13 if max_chars >= 8 else 14
     for i, val in enumerate(cells):
         x = ox + i * cw
-        is_q = (val == "?")
+        is_q = ("?" in str(val))
         fill = "#ede9fe" if is_q else "#ffffff"
         parts.append(f'<rect x="{x:.1f}" y="{oy}" width="{cw}" height="{ch}" fill="{fill}" stroke="{STROKE}" stroke-width="2"/>')
         if val:

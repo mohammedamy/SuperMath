@@ -6,6 +6,7 @@
   'use strict';
 
   const TOPIC_AR = {
+    'Numbers & Operations': 'الأعداد والعمليات عليها',
     'Number Theory': 'نظرية الأعداد',
     Algebra: 'الجبر والأنماط',
     Geometry: 'الهندسة والقياس',
@@ -80,10 +81,12 @@
 
   function getLessonsForActiveSelection() {
     const effTrack = getActiveEffectiveTrack();
-    if (effTrack !== 'kangaroo' && effTrack !== 'kaust' && effTrack !== 'nsmo') return [];
+    if (effTrack !== 'nafes' && effTrack !== 'kangaroo' && effTrack !== 'kaust' && effTrack !== 'nsmo') return [];
     const study = window.__kaustStudy;
     if (!study) return [];
-    const list = effTrack === 'kangaroo'
+    const list = effTrack === 'nafes'
+      ? (study.nafesLessons || [])
+      : effTrack === 'kangaroo'
       ? (study.kangarooLessons || [])
       : effTrack === 'nsmo'
       ? (study.nsmoLessons || [])
@@ -94,7 +97,9 @@
       return list.filter((l) => l.level === phase);
     }
     if (track === 'current') {
-      const phaseSelId = effTrack === 'kangaroo'
+      const phaseSelId = effTrack === 'nafes'
+        ? 'quiz-nafes-grade-select'
+        : effTrack === 'kangaroo'
         ? 'quiz-kangaroo-level-select'
         : effTrack === 'nsmo'
         ? 'quiz-nsmo-phase-select'
@@ -119,7 +124,7 @@
       const allowedBps = new Set();
       lessons.forEach((l) => (l.blueprints || []).forEach((bp) => allowedBps.add(bp)));
       if (allowedBps.size > 0) {
-        pool = pool.filter((q) => allowedBps.has(q.kmc_blueprint) || allowedBps.has(q.nsmo_blueprint) || allowedBps.has(q.kangaroo_blueprint));
+        pool = pool.filter((q) => allowedBps.has(q.kmc_blueprint) || allowedBps.has(q.nsmo_blueprint) || allowedBps.has(q.kangaroo_blueprint) || allowedBps.has(q.nafes_blueprint));
       }
     }
 
@@ -207,7 +212,7 @@
       ['print-modal-track-lbl', L('المسار (Track)', 'Source Track')],
       ['print-modal-phase-lbl', L('المرحلة / الصف (Phase / Grade)', 'Track Band / Phase')],
       ['print-topics-lbl', L('تصفية حسب المواضيع (يمكن اختيار أكثر من موضوع)', 'Filter by Topics (Multi-Select)')],
-      ['print-lessons-lbl', L('تصفية حسب دروس الأكاديمية (كانجارو / كاوست / نسمو)', 'Filter by Study Academy Lessons (Multi-Select)')],
+      ['print-lessons-lbl', L('تصفية حسب دروس الأكاديمية (نافس / كانجارو / كاوست / نسمو)', 'Filter by Study Academy Lessons (Multi-Select)')],
       ['print-diff-lbl', L('توزيع وتدرّج الصعوبة', 'Difficulty Mix & Ordering')],
       ['print-diagram-lbl', L('الرسوم الهندسية والتوضيحية (SVG)', 'Visual Diagrams (SVG)')],
       ['print-scratch-lbl', L('مساحة مسودة الحل تحت كل سؤال', 'Student Scratch-Work Space')],
@@ -215,8 +220,8 @@
       ['print-include-omr-lbl', L('إرفاق غلاف رسمي + ورقة تظليل بصري OMR في الصفحة الأولى', 'Prepend Page 1 Official Cover + Optical OMR Bubble Sheet')],
       ['print-include-solutions-lbl', L('تضمين خطوات الحل التفصيلية في المفتاح', 'Include full step-by-step worked solutions in key')],
       ['print-edugates-note', L('الوضع الافتراضي A4 · شعار مدرسة بوابة المعرفة العالمية يتكرر تلقائياً في جميع الصفحات', 'Default A4 Paper · Edugates International School header & logo repeat on every page')],
-      ['print-study-shortcut-lbl', L('طباعة شرح دروس كانجارو وكاوست ونسمو والأمثلة المحلولة (A4)', 'Print Kangaroo, KAUST & NSMO Study Guides + Drills (A4)')],
-      ['print-mocks-shortcut-lbl', L('طباعة الاختبارات الكاملة وأوراق التظليل OMR (كانجارو + كاوست + نسمو)', 'Print Full Official Mock Exams & OMR Sheets (Kangaroo, KAUST & NSMO)')],
+      ['print-study-shortcut-lbl', L('طباعة شرح دروس نافس وكانجارو وكاوست ونسمو والأمثلة المحلولة (A4)', 'Print Nafes, Kangaroo, KAUST & NSMO Study Guides + Drills (A4)')],
+      ['print-mocks-shortcut-lbl', L('طباعة الاختبارات الكاملة وأوراق التظليل OMR (نافس + كانجارو + كاوست + نسمو)', 'Print Full Official Mock Exams & OMR Sheets (Nafes, Kangaroo, KAUST & NSMO)')],
       ['print-btn-cancel', L('إلغاء', 'Cancel')],
       ['print-btn-confirm', L('🖨️ توليد وطباعة (A4)', '🖨️ Generate & Print (A4)')],
     ];

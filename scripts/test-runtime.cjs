@@ -40,9 +40,10 @@ const run=s=>vm.runInContext(s,context);
 (async()=>{
  for(const callback of events)await callback();
  await new Promise(r=>setImmediate(r));
- assert.equal(run('appData.questions.length'),6790);
- assert.equal(run('currentFilteredQuestions.length'),6790);
+ assert.equal(run('appData.questions.length'),7120);
+ assert.equal(run('currentFilteredQuestions.length'),7120);
  assert.deepEqual(elements.get('quiz-kangaroo-level-select').options.map(o=>o.value),['all','Ecolier','Benjamin','Cadet','Junior']);
+ assert.deepEqual(elements.get('quiz-nafes-grade-select').options.map(o=>o.value),['all','Grade 3','Grade 6','Grade 9']);
  // Switching away from a selected subtrack must not retain its hidden filter.
  elements.get('quiz-track-select').value='kaust';context.filterQuestions();
  assert.equal(run('currentFilteredQuestions.length'),2250);
@@ -72,8 +73,20 @@ const run=s=>vm.runInContext(s,context);
  assert(elements.get('question-card-container').innerHTML.includes('>E<')||elements.get('question-card-container').innerHTML.includes('E\n'));
  elements.get('quiz-topic-select').value='all';context.filterQuestions();
  elements.get('quiz-track-select').value='nafes';context.filterQuestions();
+ assert.equal(run('currentFilteredQuestions.length'),1080);
+ assert(run('currentFilteredQuestions.every(q=>q.content.en.options.length===4&&q.content.ar.options.length===4)'));
+ for(const g of [1,2,4,5,7,8,10,11,12]){
+  context.setGradeFilter(g);
+  assert.equal(run('currentFilteredQuestions.length'),0,`Grade ${g} must yield 0 Nafes questions`);
+ }
+ for(const [g,expectedLevel] of [[3,'Grade 3'],[6,'Grade 6'],[9,'Grade 9']]){
+  context.setGradeFilter(g);
+  assert.equal(run('currentFilteredQuestions.length'),360);
+  assert(run(`currentFilteredQuestions.every(q=>q.level===${JSON.stringify(expectedLevel)})`));
+ }
+ context.setGradeFilter('all');
  elements.get('quiz-nafes-grade-select').value='Grade 3';context.filterQuestions();
- assert.equal(run('currentFilteredQuestions.length'),250);
+ assert.equal(run('currentFilteredQuestions.length'),360);
  elements.get('quiz-track-select').value='jee';context.filterQuestions();
  assert.equal(run('currentFilteredQuestions.length'),500);
  assert.equal(elements.get('quiz-nafes-grade-select').value,'all');
@@ -127,6 +140,13 @@ const run=s=>vm.runInContext(s,context);
  assert.equal(prints,1);assert(!elements.get('print-container').innerHTML.includes('undefined'));
  assert(elements.get('print-container').innerHTML.includes('FRQ'));
  // Grade-level print bank size is exact.
+ elements.get('print-track-select').value='nafes';context.updatePrintPhaseOptions();
+ elements.get('print-phase-select').value='Grade 6';context.updatePrintModalMax();
+ assert.equal(elements.get('print-max-q').innerText,360);
+ context.togglePrintLesson('NAFS-L2-03');
+ assert.equal(elements.get('print-max-q').innerText,60);
+ context.clearPrintLessons();
+ assert.equal(elements.get('print-max-q').innerText,360);
  elements.get('print-track-select').value='kangaroo';context.updatePrintPhaseOptions();
  elements.get('print-phase-select').value='Junior';context.updatePrintModalMax();
  assert.equal(elements.get('print-max-q').innerText,360);
@@ -174,12 +194,21 @@ const run=s=>vm.runInContext(s,context);
  context.toggleTheme();
  // A chart CDN failure should not prevent loading the practice banks.
  context.Chart=undefined;context.initCharts();
- // Verify Unified Kangaroo + KAUST + NSMO Study Hub & Edugates A4 Print Frame runtime methods
+ // Verify Unified Nafes + Kangaroo + KAUST + NSMO Study Hub & Edugates A4 Print Frame runtime methods
  await new Promise(r=>setImmediate(r));
+ assert.equal(run('window.__kaustStudy.nafesLessons.length'),18);
  assert.equal(run('window.__kaustStudy.kangarooLessons.length'),24);
  assert.equal(run('window.__kaustStudy.lessons.length'),18);
  assert.equal(run('window.__kaustStudy.nsmoLessons.length'),18);
  assert(elements.get('study-lessons').innerHTML.includes('Edugates International School'));
+ context.setStudyCompetition('nafes');
+ context.openKaustLesson('NAFS-L1-01');
+ assert(elements.get('study-lessons').innerHTML.includes('<svg'));
+ assert(!elements.get('study-lessons').innerHTML.includes('undefined'));
+ context.practiceKaustLesson('NAFS-L3-04');
+ assert.equal(run('currentFilteredQuestions.length'),60);
+ assert(run('currentFilteredQuestions.every(q=>q.track==="nafes"&&q.level==="Grade 9")'));
+ context.clearKaustLessonFilter();
  context.setStudyCompetition('kangaroo');
  context.openKaustLesson('KANG-L1-01');
  assert(elements.get('study-lessons').innerHTML.includes('<svg'));
@@ -228,10 +257,62 @@ const run=s=>vm.runInContext(s,context);
  assert.equal(prints,prevPrints+6);
  context.printKaustTrackBooklet('Benjamin');
  assert.equal(prints,prevPrints+7);
- // Verify Unified Kangaroo (16 papers, 5-opt, +3/+4/+5 & 0 wrong), KAUST (15 papers, 5-opt, +4/-1/0) & NSMO (12 papers, 4-opt, +4/0/0) Full Mock Simulators
+ context.printKaustLesson('NAFS-L1-01');
+ assert.equal(prints,prevPrints+8);
+ assert(elements.get('print-container').innerHTML.includes('edugates-print-frame'));
+ assert(elements.get('print-container').innerHTML.includes('LOGO.jpg'));
+ assert(!elements.get('print-container').innerHTML.includes('undefined'));
+ context.printKaustLessonDrills('NAFS-L2-02');
+ assert.equal(prints,prevPrints+9);
+ context.printKaustTrackBooklet('Grade 6');
+ assert.equal(prints,prevPrints+10);
+ // Verify Unified Nafes (12 papers, 4-opt, +1/0/0), Kangaroo (16 papers, 5-opt, +3/+4/+5 & 0 wrong), KAUST (15 papers, 5-opt, +4/-1/0) & NSMO (12 papers, 4-opt, +4/0/0) Full Mock Simulators
+ assert.equal(run('window.__kaustMocks.nafesMocks.length'),12);
  assert.equal(run('window.__kaustMocks.kangarooMocks.length'),16);
  assert.equal(run('window.__kaustMocks.mocks.length'),15);
  assert.equal(run('window.__kaustMocks.nsmoMocks.length'),12);
+ // Nafes Timed Mock Simulator: 20 Qs (45 min) for Grade 3, 25 Qs (60 min) for Grade 6, 30 Qs (75 min) for Grade 9, +1 / 0 / 0 scoring
+ context.setMockCompetition('nafes');
+ context.startKaustMock('NAFS-MOCK-G3-01');
+ assert.equal(run('window.__kaustMocks.session.questions.length'),20);
+ assert.equal(run('window.__kaustMocks.session.remainingSec'),2700);
+ context.exitKaustMock(true);
+ context.startKaustMock('NAFS-MOCK-G6-01');
+ assert.equal(run('window.__kaustMocks.session.questions.length'),25);
+ assert.equal(run('window.__kaustMocks.session.remainingSec'),3600);
+ context.exitKaustMock(true);
+ context.startKaustMock('NAFS-MOCK-G9-01');
+ assert.equal(run('window.__kaustMocks.session.questions.length'),30);
+ assert.equal(run('window.__kaustMocks.session.remainingSec'),4500);
+ const f0Ok=run('window.__kaustMocks.session.questions[0].correct_index');
+ const f1Bad=run('(window.__kaustMocks.session.questions[1].correct_index+1)%4');
+ context.selectKaustMockOption(0,f0Ok);
+ context.selectKaustMockOption(1,f1Bad);
+ context.requestSubmitKaustMock();
+ context.confirmSubmitKaustMock();
+ assert.equal(run('window.__kaustMocks.session.report.score'),1); // +1 correct + 0 wrong = 1
+ assert.equal(run('window.__kaustMocks.session.report.maxPoints'),30);
+ assert.equal(run('window.__kaustMocks.session.report.correct'),1);
+ assert.equal(run('window.__kaustMocks.session.report.wrong'),1);
+ assert.equal(run('window.__kaustMocks.session.report.blank'),28);
+ const nafesMockPrints=prints;
+ context.printKaustMockPaper('NAFS-MOCK-G3-01','student');
+ assert.equal(prints,nafesMockPrints+1);
+ assert(elements.get('print-container').innerHTML.includes('eg-omr-sheet'));
+ assert(!elements.get('print-container').innerHTML.includes('eg-omr-shaded'));
+ assert(!elements.get('print-container').innerHTML.includes('undefined'));
+ context.printKaustMockPaper('NAFS-MOCK-G9-01','full');
+ assert.equal(prints,nafesMockPrints+2);
+ assert(elements.get('print-container').innerHTML.includes('eg-omr-shaded'));
+ assert(!elements.get('print-container').innerHTML.includes('undefined'));
+ context.printBlankKaustOmr('Grade 9');
+ assert.equal(prints,nafesMockPrints+3);
+ context.exitKaustMock(true);
+ const customNafesId=context.generateCustomKaustMock('Grade 6');
+ assert(customNafesId&&customNafesId.startsWith('NAFS-MOCK-G6-CUSTOM-'));
+ assert.equal(run('window.__kaustMocks.nafesMocks.length'),13);
+ assert.equal(run(`window.__kaustMocks.nafesMocks.find(p=>p.id===${JSON.stringify(customNafesId)}).duration_minutes`),60);
+ assert.equal(run(`window.__kaustMocks.nafesMocks.find(p=>p.id===${JSON.stringify(customNafesId)}).question_count`),25);
  // Kangaroo Timed Mock Simulator: 24 Qs (96 pts) for Ecolier/Benjamin, 30 Qs (120 pts) for Cadet/Junior, 75 min, +3/+4/+5 tier points & 0 wrong penalty
  context.setMockCompetition('kangaroo');
  context.startKaustMock('KANG-MOCK-BEN-01');
@@ -318,12 +399,48 @@ const run=s=>vm.runInContext(s,context);
  const customNsmoId=context.generateCustomKaustMock('Phase 1: Junior Olympiad (Grade 7)');
  assert(customNsmoId&&customNsmoId.startsWith('NSMO-MOCK-')&&customNsmoId.includes('CUSTOM'));
  assert.equal(run('window.__kaustMocks.nsmoMocks.length'),13);
- console.log('PASS: startup, 6790 questions, Kangaroo + KAUST + NSMO study hubs (60 lessons), Kangaroo + KAUST + NSMO timed mock simulators (43 papers), Edugates A4 Worksheet Customizer & OMR print engine, Arabic & theme controls.');
+ console.log('PASS: startup, 7120 questions, Nafes + Kangaroo + KAUST + NSMO study hubs (78 lessons), Nafes + Kangaroo + KAUST + NSMO timed mock simulators (55 papers), Edugates A4 Worksheet Customizer & OMR print engine, Arabic & theme controls.');
  console.log('Runtime tests use lightweight DOM stubs; this is not browser or visual QA.');
 })().catch(e=>{console.error(e);process.exitCode=1});
 
-// ---- Kangaroo + KAUST + NSMO study lessons & mock exams static schema test ----
+// ---- Nafes + Kangaroo + KAUST + NSMO study lessons & mock exams static schema test ----
 (async()=>{
+  // 0a. Nafes KSA Static Contract
+  const nafesLessons=JSON.parse(fs.readFileSync(path.join(root,'data/nafes_lessons.json'),'utf8')).lessons;
+  const nafesMocksDoc=JSON.parse(fs.readFileSync(path.join(root,'data/nafes_mocks.json'),'utf8'));
+  const nafesBank=JSON.parse(fs.readFileSync(path.join(root,'data/nafes.json'),'utf8'));
+  assert.equal(nafesBank.length,1080);
+  assert(nafesBank.filter(q=>q.content.en.diagram&&q.content.en.diagram.includes('<svg')).length>=900);
+  assert.equal(nafesLessons.length,18);
+  assert.equal(nafesMocksDoc.mocks.length,12);
+  const nafesIds=new Set(nafesBank.map(q=>q.id));
+  const nafesLessonUsed=new Set();
+  for(const l of nafesLessons){
+    assert(l.en.examples.length>=4&&l.ar.examples.length>=4,l.id);
+    assert(l.en.concepts.every(c=>c.diagram&&c.diagram.includes('<svg')),l.id+' concept SVG');
+    assert.equal(l.bank_example_ids.length,6);
+    assert.equal(l.drill_ids.length,6);
+    l.bank_example_ids.forEach(i=>{assert(nafesIds.has(i),i);nafesLessonUsed.add(i);});
+    l.drill_ids.forEach(i=>{assert(nafesIds.has(i),i);assert(!l.bank_example_ids.includes(i),'overlap '+i);nafesLessonUsed.add(i);});
+    for(const e of l.en.examples)assert.equal(e.options.length,4);
+  }
+  const nafesMockUsed=new Set();
+  for(const m of nafesMocksDoc.mocks){
+    const exp=m.level==='Grade 3'?20:m.level==='Grade 6'?25:30;
+    const expDur=m.level==='Grade 3'?45:m.level==='Grade 6'?60:75;
+    assert.equal(m.question_ids.length,exp,m.id);
+    assert.equal(m.max_points,exp,m.id);
+    assert.equal(m.duration_minutes,expDur,m.id);
+    assert.equal(m.points_correct,1,m.id);
+    assert.equal(m.points_wrong,0,m.id);
+    m.question_ids.forEach(i=>{
+      assert(nafesIds.has(i),i);
+      assert(!nafesLessonUsed.has(i),'nafes lesson overlap '+i);
+      assert(!nafesMockUsed.has(i),'nafes mock duplicate '+i);
+      nafesMockUsed.add(i);
+    });
+  }
+  assert.equal(nafesMockUsed.size,300);
   // 0. Kangaroo Math Static Contract
   const kangLessons=JSON.parse(fs.readFileSync(path.join(root,'data/kangaroo_lessons.json'),'utf8')).lessons;
   const kangMocksDoc=JSON.parse(fs.readFileSync(path.join(root,'data/kangaroo_mocks.json'),'utf8'));
@@ -428,5 +545,5 @@ const run=s=>vm.runInContext(s,context);
   const js=fs.readFileSync(path.join(root,'assets/kaust-study.js'),'utf8');
   assert(js.includes('LOGO.jpg')&&js.includes('Edugates International School')&&js.includes('buildEdugatesOmrSheetHtml'));
   assert(fs.existsSync(path.join(root,'LOGO.jpg')));
-  console.log('PASS: Static schema verified for 24 Kangaroo + 18 KAUST + 18 NSMO lessons (180/180 concept SVGs) + 16 Kangaroo + 15 KAUST + 12 NSMO Official Mock Exams (1,122 unique mock Qs), A4 CSS & Edugates OMR.');
+  console.log('PASS: Static schema verified for 18 Nafes + 24 Kangaroo + 18 KAUST + 18 NSMO lessons (234/234 concept SVGs) + 12 Nafes + 16 Kangaroo + 15 KAUST + 12 NSMO Official Mock Exams (1,422 unique mock Qs), A4 CSS & Edugates OMR.');
 })();

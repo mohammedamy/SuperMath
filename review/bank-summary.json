@@ -32,11 +32,11 @@
   },
   {
     "track": "nafes",
-    "total": 750,
+    "total": 1080,
     "levels": {
-      "Grade 3": 250,
-      "Grade 6": 250,
-      "Grade 9": 250
+      "Grade 3": 360,
+      "Grade 6": 360,
+      "Grade 9": 360
     },
     "issues": {}
   },

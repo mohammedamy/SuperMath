@@ -2293,6 +2293,8 @@ svg[viewBox]:not(mjx-container svg) {
   }
 
   mjx-container {
+    direction: ltr !important;
+    unicode-bidi: isolate !important;
     overflow: visible !important;
     max-width: none !important;
   }

@@ -175,7 +175,16 @@ def svg_dot_pattern(mode: str = "L") -> str:
 
 # 8. Two-Step Function Machine Pipeline
 def svg_function_machine(in_lbl: str, op1: str, op2: str, out_lbl: str) -> str:
-    bw = max(78, min(118, max(len(str(op1)), len(str(op2))) * 8 + 20))
+    max_op = max(len(str(op1)), len(str(op2)))
+    if max_op > 16:
+        op_sz = 11
+        bw = min(172, int(round(max_op * 6.8 + 22)))
+    elif max_op > 11:
+        op_sz = 12
+        bw = min(144, int(round(max_op * 7.4 + 22)))
+    else:
+        bw = max(78, min(114, max_op * 8 + 20))
+        op_sz = 13 if bw >= 94 else 14
     in_pad = max(62, len(str(in_lbl)) * 8 + 22)
     out_pad = max(62, len(str(out_lbl)) * 8 + 22)
     x_a1_s = in_pad
@@ -185,7 +194,6 @@ def svg_function_machine(in_lbl: str, op1: str, op2: str, out_lbl: str) -> str:
     x_a3_s = x_b2 + bw
     x_a3_e = x_a3_s + 28
     w = x_a3_e + out_pad
-    op_sz = 13 if bw >= 94 else 14
     parts = [
         _nlabel(x_a1_s / 2 + 4, 92, in_lbl, size=14, color=BLUE),
         f'<line x1="{x_a1_s}" y1="88" x2="{x_b1 - 2}" y2="88" stroke="{DARK}" stroke-width="2"/>',

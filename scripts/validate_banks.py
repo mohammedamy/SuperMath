@@ -7,13 +7,14 @@ from build_practice import TARGETS
 from build_kaust_kmc import FORBIDDEN_RE as KAUST_FORBIDDEN_RE
 from nsmo_common import NSMO_FORBIDDEN_RE
 from kangaroo_common import KANGAROO_FORBIDDEN_RE
+from nafes_common import NAFES_FORBIDDEN_RE
 rows=[];total=0;generated=0;allids=set();independent=0
 for track,levels in TARGETS.items():
  bank=json.loads((ROOT/'data'/f'{track}.json').read_text());stems=set();counts=collections.Counter()
  for q in bank:
   assert q['id'] not in allids,('duplicate id',q['id']);allids.add(q['id'])
   assert q['track']==track
-  if track in ('kaust','nsmo','kangaroo'):
+  if track in ('kaust','nsmo','kangaroo','nafes'):
    assert q['level'] in levels,(q['id'],q['level'])
   stem=norm(q['content']['en']['question']);assert stem not in stems,('duplicate stem',q['id']);stems.add(stem)
   counts[q['level']]+=1
@@ -31,6 +32,9 @@ for track,levels in TARGETS.items():
    elif track=='kangaroo':
     blob=' '.join([c['question'],' '.join(c['options']),c.get('hint',''),c['explanation']])
     assert not KANGAROO_FORBIDDEN_RE.search(blob),('kangaroo out-of-scope term',q['id'])
+   elif track=='nafes':
+    blob=' '.join([c['question'],' '.join(c['options']),c.get('hint',''),c['explanation']])
+    assert not NAFES_FORBIDDEN_RE.search(blob),('nafes out-of-scope term',q['id'])
    if q['type']=='MCQ':
     assert len(c['options'])==(5 if track in ('kangaroo','kaust') else 4)
     assert len(set(map(norm,c['options'])))==len(c['options'])

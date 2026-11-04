@@ -162,9 +162,64 @@
         },
       ],
     },
+    nafes: {
+      id: 'nafes',
+      bpField: 'nafes_blueprint',
+      optCount: 4,
+      ptsCorrect: 1,
+      ptsWrong: 0,
+      ptsBlank: 0,
+      durationMin: 60,
+      durationRangeLabel: '45–75',
+      pillEn: '🇸🇦 Nafes KSA Mocks (Grades 3, 6 & 9 · 4 Options)',
+      pillAr: '🇸🇦 اختبارات نافس الوطنية (الصفوف 3 و6 و9 · 4 خيارات)',
+      hubTitleEn: 'Nafes KSA National Assessment (ETEC) Official Mock Exams',
+      hubTitleAr: 'محاكي الاختبارات الرسمية الكاملة لاختبارات نافس الوطنية (ETEC)',
+      badgeEn: 'Nafes KSA',
+      badgeAr: 'نافس الوطني',
+      examNameEn: 'Nafes National Mathematics Assessment (ETEC — KSA)',
+      examNameAr: 'اختبار نافس الوطني للرياضيات — هيئة تقويم التعليم والتدريب',
+      scoreTag: '+1 / 0 / 0',
+      tracks: [
+        {
+          level: 'Grade 3',
+          code: 'G3',
+          qCount: 20,
+          durationMin: 45,
+          tiers: { Easy: 7, Medium: 8, Hard: 5 },
+          en: 'Grade 3 · Primary (20 Qs)',
+          ar: 'الصف الثالث الابتدائي (20 سؤالاً)',
+          shortEn: 'Grade 3 (Primary Benchmark)',
+          shortAr: 'الصف الثالث الابتدائي (نافس 3)',
+        },
+        {
+          level: 'Grade 6',
+          code: 'G6',
+          qCount: 25,
+          durationMin: 60,
+          tiers: { Easy: 9, Medium: 9, Hard: 7 },
+          en: 'Grade 6 · Upper Primary (25 Qs)',
+          ar: 'الصف السادس الابتدائي (25 سؤالاً)',
+          shortEn: 'Grade 6 (Upper Primary Benchmark)',
+          shortAr: 'الصف السادس الابتدائي (نافس 6)',
+        },
+        {
+          level: 'Grade 9',
+          code: 'G9',
+          qCount: 30,
+          durationMin: 75,
+          tiers: { Easy: 10, Medium: 11, Hard: 9 },
+          en: 'Grade 9 · Intermediate (30 Qs)',
+          ar: 'الصف الثالث المتوسط (30 سؤالاً)',
+          shortEn: 'Grade 9 (Intermediate Benchmark)',
+          shortAr: 'الصف الثالث المتوسط (نافس 9)',
+        },
+      ],
+    },
   };
 
   const TOPIC_AR = {
+    'Numbers & Operations': 'الأعداد والعمليات عليها',
     'Number Theory': 'نظرية الأعداد',
     Algebra: 'الجبر والأنماط',
     Geometry: 'الهندسة والقياس',
@@ -180,17 +235,21 @@
   let kaustDoc = null;
   let nsmoDoc = null;
   let kangarooDoc = null;
+  let nafesDoc = null;
   let kaustMocks = [];
   let nsmoMocks = [];
   let kangarooMocks = [];
+  let nafesMocks = [];
   let customKaustMocks = [];
   let customNsmoMocks = [];
   let customKangarooMocks = [];
+  let customNafesMocks = [];
   let activeComp = 'kaust';
   let activeTrackByComp = {
     kaust: COMP_CONFIG.kaust.tracks[0].level,
     nsmo: COMP_CONFIG.nsmo.tracks[0].level,
     kangaroo: COMP_CONFIG.kangaroo.tracks[0].level,
+    nafes: COMP_CONFIG.nafes.tracks[0].level,
   };
   let bestScores = {};
 
@@ -208,6 +267,13 @@
   function compForPaper(paper) {
     if (!paper) return COMP_CONFIG[activeComp];
     if (
+      paper.track === 'nafes' ||
+      String(paper.id || '').startsWith('NAFS-') ||
+      ['Grade 3', 'Grade 6', 'Grade 9'].includes(paper.level)
+    ) {
+      return COMP_CONFIG.nafes;
+    }
+    if (
       paper.track === 'kangaroo' ||
       String(paper.id || '').startsWith('KANG-') ||
       ['Ecolier', 'Benjamin', 'Cadet', 'Junior'].includes(paper.level)
@@ -221,11 +287,13 @@
   }
 
   function compForLevel(level) {
+    if (['Grade 3', 'Grade 6', 'Grade 9'].includes(level)) return COMP_CONFIG.nafes;
     if (['Ecolier', 'Benjamin', 'Cadet', 'Junior'].includes(level)) return COMP_CONFIG.kangaroo;
     return String(level || '').startsWith('Phase ') ? COMP_CONFIG.nsmo : COMP_CONFIG.kaust;
   }
 
   function docForComp(compId) {
+    if (compId === 'nafes') return nafesDoc;
     if (compId === 'kangaroo') return kangarooDoc;
     if (compId === 'nsmo') return nsmoDoc;
     return kaustDoc;
@@ -260,11 +328,16 @@
     return [...kangarooMocks, ...customKangarooMocks];
   }
 
+  function allNafesPapers() {
+    return [...nafesMocks, ...customNafesMocks];
+  }
+
   function allPapersAcrossComps() {
-    return [...allKaustPapers(), ...allNsmoPapers(), ...allKangarooPapers()];
+    return [...allKaustPapers(), ...allNsmoPapers(), ...allKangarooPapers(), ...allNafesPapers()];
   }
 
   function currentCompPapers() {
+    if (activeComp === 'nafes') return allNafesPapers();
     if (activeComp === 'kangaroo') return allKangarooPapers();
     if (activeComp === 'nsmo') return allNsmoPapers();
     return allKaustPapers();
@@ -486,8 +559,22 @@
       ...chosen.filter((q) => q.difficulty === 'Hard'),
     ];
 
-    const customList = cfg.id === 'kangaroo' ? customKangarooMocks : cfg.id === 'nsmo' ? customNsmoMocks : customKaustMocks;
-    const baseList = cfg.id === 'kangaroo' ? kangarooMocks : cfg.id === 'nsmo' ? nsmoMocks : kaustMocks;
+    const customList =
+      cfg.id === 'nafes'
+        ? customNafesMocks
+        : cfg.id === 'kangaroo'
+        ? customKangarooMocks
+        : cfg.id === 'nsmo'
+        ? customNsmoMocks
+        : customKaustMocks;
+    const baseList =
+      cfg.id === 'nafes'
+        ? nafesMocks
+        : cfg.id === 'kangaroo'
+        ? kangarooMocks
+        : cfg.id === 'nsmo'
+        ? nsmoMocks
+        : kaustMocks;
     const baseCountForLevel = baseList.filter((p) => p.level === tr.level).length;
     const customIdx = customList.filter((p) => p.level === tr.level).length + 1;
     const svgCnt = ordered.filter((q) => q.content && q.content.en && q.content.en.diagram).length;
@@ -500,10 +587,11 @@
 
     const eCnt = tr.tiers.Easy;
     const mCnt = tr.tiers.Medium;
-    const prefix = cfg.id === 'kangaroo' ? 'KANG' : cfg.id === 'nsmo' ? 'NSMO' : 'KMC';
+    const prefix = cfg.id === 'nafes' ? 'NAFS' : cfg.id === 'kangaroo' ? 'KANG' : cfg.id === 'nsmo' ? 'NSMO' : 'KMC';
     const maxPts = cfg.tierPoints
       ? eCnt * cfg.tierPoints.Easy + mCnt * cfg.tierPoints.Medium + tr.tiers.Hard * cfg.tierPoints.Hard
       : ordered.length * cfg.ptsCorrect;
+    const isNafes = cfg.id === 'nafes';
 
     const paper = {
       id: `${prefix}-MOCK-${tr.code}-CUSTOM-${customIdx}`,
@@ -516,7 +604,7 @@
       grades_en: tr.shortEn,
       grades_ar: tr.shortAr,
       question_count: ordered.length,
-      duration_minutes: cfg.durationMin,
+      duration_minutes: tr.durationMin || cfg.durationMin,
       tier_points: cfg.tierPoints || null,
       points_correct: cfg.ptsCorrect,
       points_wrong: cfg.ptsWrong,
@@ -530,24 +618,48 @@
           difficulty: 'Easy',
           start_q: 1,
           end_q: eCnt,
-          en: cfg.tierPoints ? `Part A — 3-Point Problems (Questions 1–${eCnt})` : `Part A — Core Reasoning & Speed (Questions 1–${eCnt})`,
-          ar: cfg.tierPoints ? `الجزء الأول (A) — مسائل الـ 3 نقاط (الأسئلة 1–${eCnt})` : `الجزء الأول (A) — التفكير الأساسي والسرعة (الأسئلة 1–${eCnt})`,
+          en: isNafes
+            ? `Part A — Knowing & Direct Recall (Questions 1–${eCnt})`
+            : cfg.tierPoints
+            ? `Part A — 3-Point Problems (Questions 1–${eCnt})`
+            : `Part A — Core Reasoning & Speed (Questions 1–${eCnt})`,
+          ar: isNafes
+            ? `الجزء الأول (A) — المعرفة والاستدعاء المباشر (الأسئلة 1–${eCnt})`
+            : cfg.tierPoints
+            ? `الجزء الأول (A) — مسائل الـ 3 نقاط (الأسئلة 1–${eCnt})`
+            : `الجزء الأول (A) — التفكير الأساسي والسرعة (الأسئلة 1–${eCnt})`,
         },
         {
           id: 'B',
           difficulty: 'Medium',
           start_q: eCnt + 1,
           end_q: eCnt + mCnt,
-          en: cfg.tierPoints ? `Part B — 4-Point Problems (Questions ${eCnt + 1}–${eCnt + mCnt})` : `Part B — Multi-Step Contest Problems (Questions ${eCnt + 1}–${eCnt + mCnt})`,
-          ar: cfg.tierPoints ? `الجزء الثاني (B) — مسائل الـ 4 نقاط (الأسئلة ${eCnt + 1}–${eCnt + mCnt})` : `الجزء الثاني (B) — المسائل التنافسية متعددة الخطوات (الأسئلة ${eCnt + 1}–${eCnt + mCnt})`,
+          en: isNafes
+            ? `Part B — Applying Concepts & Multi-Step Skills (Questions ${eCnt + 1}–${eCnt + mCnt})`
+            : cfg.tierPoints
+            ? `Part B — 4-Point Problems (Questions ${eCnt + 1}–${eCnt + mCnt})`
+            : `Part B — Multi-Step Contest Problems (Questions ${eCnt + 1}–${eCnt + mCnt})`,
+          ar: isNafes
+            ? `الجزء الثاني (B) — التطبيق وحل المسائل (الأسئلة ${eCnt + 1}–${eCnt + mCnt})`
+            : cfg.tierPoints
+            ? `الجزء الثاني (B) — مسائل الـ 4 نقاط (الأسئلة ${eCnt + 1}–${eCnt + mCnt})`
+            : `الجزء الثاني (B) — المسائل التنافسية متعددة الخطوات (الأسئلة ${eCnt + 1}–${eCnt + mCnt})`,
         },
         {
           id: 'C',
           difficulty: 'Hard',
           start_q: eCnt + mCnt + 1,
           end_q: ordered.length,
-          en: cfg.tierPoints ? `Part C — 5-Point Problems (Questions ${eCnt + mCnt + 1}–${ordered.length})` : `Part C — Olympiad Qualifier Challenge (Questions ${eCnt + mCnt + 1}–${ordered.length})`,
-          ar: cfg.tierPoints ? `الجزء الثالث (C) — مسائل الـ 5 نقاط (الأسئلة ${eCnt + mCnt + 1}–${ordered.length})` : `الجزء الثالث (C) — تحدي التصفيات الأولمبية (الأسئلة ${eCnt + mCnt + 1}–${ordered.length})`,
+          en: isNafes
+            ? `Part C — Mathematical Reasoning & Problem Solving (Questions ${eCnt + mCnt + 1}–${ordered.length})`
+            : cfg.tierPoints
+            ? `Part C — 5-Point Problems (Questions ${eCnt + mCnt + 1}–${ordered.length})`
+            : `Part C — Olympiad Qualifier Challenge (Questions ${eCnt + mCnt + 1}–${ordered.length})`,
+          ar: isNafes
+            ? `الجزء الثالث (C) — الاستدلال الرياضي المتقدم (الأسئلة ${eCnt + mCnt + 1}–${ordered.length})`
+            : cfg.tierPoints
+            ? `الجزء الثالث (C) — مسائل الـ 5 نقاط (الأسئلة ${eCnt + mCnt + 1}–${ordered.length})`
+            : `الجزء الثالث (C) — تحدي التصفيات الأولمبية (الأسئلة ${eCnt + mCnt + 1}–${ordered.length})`,
         },
       ],
       en: {
@@ -571,9 +683,10 @@
 
   /* ---- Simulator Controls ---- */
   window.setMockCompetition = function (compId) {
-    if (compId !== 'kaust' && compId !== 'nsmo' && compId !== 'kangaroo') return;
+    if (compId !== 'kaust' && compId !== 'nsmo' && compId !== 'kangaroo' && compId !== 'nafes') return;
     if (compId === 'nsmo' && !nsmoMocks.length) return;
     if (compId === 'kangaroo' && !kangarooMocks.length) return;
+    if (compId === 'nafes' && !nafesMocks.length) return;
     if (session && session.mode === 'exam') return;
     session = null;
     activeComp = compId;
@@ -589,13 +702,21 @@
 
   window.jumpToKaustMocks = function (levelOrComp) {
     if (!session) {
-      if (levelOrComp === 'kaust' || levelOrComp === 'nsmo' || levelOrComp === 'kangaroo') {
-        if ((levelOrComp !== 'nsmo' || nsmoMocks.length) && (levelOrComp !== 'kangaroo' || kangarooMocks.length)) {
+      if (levelOrComp === 'kaust' || levelOrComp === 'nsmo' || levelOrComp === 'kangaroo' || levelOrComp === 'nafes') {
+        if (
+          (levelOrComp !== 'nsmo' || nsmoMocks.length) &&
+          (levelOrComp !== 'kangaroo' || kangarooMocks.length) &&
+          (levelOrComp !== 'nafes' || nafesMocks.length)
+        ) {
           activeComp = levelOrComp;
         }
       } else if (levelOrComp) {
         const cfg = compForLevel(levelOrComp);
-        if ((cfg.id !== 'nsmo' || nsmoMocks.length) && (cfg.id !== 'kangaroo' || kangarooMocks.length)) {
+        if (
+          (cfg.id !== 'nsmo' || nsmoMocks.length) &&
+          (cfg.id !== 'kangaroo' || kangarooMocks.length) &&
+          (cfg.id !== 'nafes' || nafesMocks.length)
+        ) {
           activeComp = cfg.id;
           activeTrackByComp[cfg.id] = levelOrComp;
         }
@@ -760,8 +881,8 @@
         ? `طريقة احتساب الدرجات: <strong>+${ptsCorrect} نقاط</strong> لكل إجابة صحيحة، و<strong>خصم نقطة واحدة (−1)</strong> لكل إجابة خاطئة، و<strong>0 نقطة</strong> للسؤال المتروك بدون تظليل.`
         : `Contest scoring: <strong>+${ptsCorrect} points</strong> for each correct choice, <strong>−1 point</strong> for each incorrect choice, and <strong>0 points</strong> for each blank question.`
       : rtl
-      ? `طريقة احتساب الدرجات: <strong>+${ptsCorrect} نقاط</strong> لكل إجابة صحيحة، و<strong>بدون خصم درجات (0)</strong> للإجابات الخاطئة أو المتروكة.`
-      : `Olympiad scoring: <strong>+${ptsCorrect} points</strong> for each correct choice, with <strong>no penalty (0 points)</strong> for wrong or blank responses.`;
+      ? `طريقة احتساب الدرجات: <strong>+${ptsCorrect} ${ptsCorrect === 1 ? 'نقطة' : 'نقاط'}</strong> لكل إجابة صحيحة، و<strong>بدون خصم درجات (0)</strong> للإجابات الخاطئة أو المتروكة.`
+      : `${cfg.id === 'nafes' ? 'Official ETEC Nafes' : 'Olympiad'} scoring: <strong>+${ptsCorrect} ${ptsCorrect === 1 ? 'point' : 'points'}</strong> for each correct choice, with <strong>no penalty (0 points)</strong> for wrong or blank responses.`;
 
     return `<div class="eg-mock-cover no-break">
       <div class="eg-mock-cover-top">
@@ -964,7 +1085,7 @@
     const templatePaper = {
       track: cfg.id,
       option_count: cfg.optCount,
-      duration_minutes: cfg.durationMin,
+      duration_minutes: tr.durationMin || cfg.durationMin,
       tier_points: cfg.tierPoints || null,
       points_correct: cfg.ptsCorrect,
       points_wrong: cfg.ptsWrong,
@@ -1115,11 +1236,12 @@
     }
 
     const tp = p.tier_points || cfg.tierPoints || null;
+    const ptsOk = p.points_correct ?? cfg.ptsCorrect;
     const scoreHint = tp
       ? L(`+${tp.Easy} / +${tp.Medium} / +${tp.Hard} نقاط · 0 خطأ (بدون خصم) · بدون آلة حاسبة`, `+${tp.Easy} / +${tp.Medium} / +${tp.Hard} pts · 0 Wrong (No Penalty) · No Calculator`)
       : wrongPts < 0
-      ? L('+4 صحيح · −1 خطأ · 0 متروك · بدون آلة حاسبة', '+4 Correct · −1 Wrong · 0 Blank · No Calculator')
-      : L('+4 صحيح · 0 خطأ (بدون خصم) · بدون آلة حاسبة', '+4 Correct · 0 Wrong (No Penalty) · No Calculator');
+      ? L(`+${ptsOk} صحيح · −1 خطأ · 0 متروك · بدون آلة حاسبة`, `+${ptsOk} Correct · −1 Wrong · 0 Blank · No Calculator`)
+      : L(`+${ptsOk} صحيح · 0 خطأ (بدون خصم) · بدون آلة حاسبة`, `+${ptsOk} Correct · 0 Wrong (No Penalty) · No Calculator`);
 
     return `
       <div class="eg-mock-topbar no-print">
@@ -1226,7 +1348,7 @@
         const diag = qContent.diagram || q.diagram || '';
         const qPts = qPointsFor(p, q, cfg);
         const statusTag = isOk
-          ? `<span class="eg-ex-tag eg-diff-easy">✓ +${qPts} ${L('نقاط (صحيحة)', 'pts (Correct)')}</span>`
+          ? `<span class="eg-ex-tag eg-diff-easy">✓ +${qPts} ${L(qPts === 1 ? 'نقطة (صحيحة)' : 'نقاط (صحيحة)', qPts === 1 ? 'pt (Correct)' : 'pts (Correct)')}</span>`
           : isWr
           ? `<span class="eg-ex-tag eg-diff-hard">${wrongPenaltyBadge}</span>`
           : `<span class="eg-ex-tag eg-diff-med">○ 0 ${L('نقاط (متروك)', 'pts (Blank)')}</span>`;
@@ -1323,8 +1445,9 @@
     const trackPapers = compPapers.filter((p) => p.level === activeTrack);
     const optRange = cfg.optCount === 4 ? 'A–D' : 'A–E';
 
-    const compSwitcher = (nsmoMocks.length || kangarooMocks.length)
+    const compSwitcher = (nsmoMocks.length || kangarooMocks.length || nafesMocks.length)
       ? `<div class="eg-comp-switch no-print" role="tablist" aria-label="Mock Exam Competition">
+          ${nafesMocks.length ? `<button type="button" onclick="setMockCompetition('nafes')" class="eg-comp-btn${activeComp === 'nafes' ? ' eg-comp-btn-on' : ''}">${isAr() ? COMP_CONFIG.nafes.pillAr : COMP_CONFIG.nafes.pillEn}</button>` : ''}
           ${kangarooMocks.length ? `<button type="button" onclick="setMockCompetition('kangaroo')" class="eg-comp-btn${activeComp === 'kangaroo' ? ' eg-comp-btn-on' : ''}">${isAr() ? COMP_CONFIG.kangaroo.pillAr : COMP_CONFIG.kangaroo.pillEn}</button>` : ''}
           <button type="button" onclick="setMockCompetition('kaust')" class="eg-comp-btn${activeComp === 'kaust' ? ' eg-comp-btn-on' : ''}">${isAr() ? COMP_CONFIG.kaust.pillAr : COMP_CONFIG.kaust.pillEn}</button>
           ${nsmoMocks.length ? `<button type="button" onclick="setMockCompetition('nsmo')" class="eg-comp-btn${activeComp === 'nsmo' ? ' eg-comp-btn-on' : ''}">${isAr() ? COMP_CONFIG.nsmo.pillAr : COMP_CONFIG.nsmo.pillEn}</button>` : ''}
@@ -1333,9 +1456,10 @@
 
     const tabs = cfg.tracks.map((t) => {
       const cnt = compPapers.filter((p) => p.level === t.level).length;
+      const tDur = t.durationMin || cfg.durationMin;
       return `<button type="button" onclick="setKaustMockTrack('${t.level}')" class="eg-tab${t.level === activeTrack ? ' eg-tab-on' : ''}">
         <span>${isAr() ? t.ar : t.en}</span>
-        <span class="eg-tab-count">${cnt} ${L('نماذج رسمية', 'Mock Papers')} · ${t.qCount} ${L('سؤالاً', 'Qs')} · ${cfg.durationMin} ${L('دقيقة', 'min')}</span>
+        <span class="eg-tab-count">${cnt} ${L('نماذج رسمية', 'Mock Papers')} · ${t.qCount} ${L('سؤالاً', 'Qs')} · ${tDur} ${L('دقيقة', 'min')}</span>
       </button>`;
     }).join('');
 
@@ -1382,7 +1506,13 @@
       .join('');
 
     const maxDivPts = tr.tiers.Easy * 3 + tr.tiers.Medium * 4 + tr.tiers.Hard * 5;
-    const subText = cfg.id === 'kangaroo'
+    const trDur = tr.durationMin || cfg.durationMin;
+    const subText = cfg.id === 'nafes'
+      ? L(
+          `نظام اختبارات نافس الوطنية الرسمي (${isAr() ? tr.shortAr : tr.shortEn}): <strong>${tr.qCount} سؤال اختيار من متعدد (${optRange})</strong> في <strong>${trDur} دقيقة</strong> بدون آلة حاسبة · <strong>+1 نقطة</strong> لكل إجابة صحيحة (${tr.qCount} نقطة عظمى) و<strong>بدون خصم (0)</strong> للخاطئة أو المتروكة.`,
+          `Official ETEC Nafes Assessment Format (${tr.shortEn}): <strong>${tr.qCount} MCQs (${optRange})</strong> in <strong>${trDur} minutes</strong>, No Calculator · <strong>+1 pt</strong> per correct answer (${tr.qCount} max pts) and <strong>0</strong> penalty for wrong/blank.`
+        )
+      : cfg.id === 'kangaroo'
       ? L(
           `نظام كانجارو موهبة الرسمي (${isAr() ? tr.shortAr : tr.shortEn}): <strong>${tr.qCount} سؤال اختيار من متعدد (${optRange})</strong> في <strong>${cfg.durationMin} دقيقة</strong> بدون آلة حاسبة · <strong>3 / 4 / 5 نقاط</strong> حسب الجزء (${maxDivPts} نقطة عظمى) و<strong>بدون خصم (0)</strong> للخاطئة أو المتروكة.`,
           `Official Mawhiba Kangaroo Format (${tr.shortEn}): <strong>${tr.qCount} MCQs (${optRange})</strong> in <strong>${cfg.durationMin} minutes</strong>, No Calculator · <strong>+3 / +4 / +5 pts</strong> across Parts A, B, C (${maxDivPts} max pts) and <strong>0</strong> penalty for wrong/blank.`
@@ -1421,9 +1551,25 @@
     root.setAttribute('dir', isAr() ? 'rtl' : 'ltr');
 
     const cfg = session ? compForPaper(session.paper) : COMP_CONFIG[activeComp];
-    const basePapers = cfg.id === 'kangaroo' ? kangarooMocks : cfg.id === 'nsmo' ? nsmoMocks : kaustMocks;
-    const totalPapers = (cfg.id === 'kangaroo' ? allKangarooPapers() : cfg.id === 'nsmo' ? allNsmoPapers() : allKaustPapers()).length;
+    const basePapers =
+      cfg.id === 'nafes'
+        ? nafesMocks
+        : cfg.id === 'kangaroo'
+        ? kangarooMocks
+        : cfg.id === 'nsmo'
+        ? nsmoMocks
+        : kaustMocks;
+    const totalPapers = (
+      cfg.id === 'nafes'
+        ? allNafesPapers()
+        : cfg.id === 'kangaroo'
+        ? allKangarooPapers()
+        : cfg.id === 'nsmo'
+        ? allNsmoPapers()
+        : allKaustPapers()
+    ).length;
     const totalUniqueQs = basePapers.reduce((acc, p) => acc + (p.question_count || 0), 0);
+    const durTag = cfg.durationRangeLabel || cfg.durationMin;
 
     const inner = !session
       ? renderHubView()
@@ -1438,8 +1584,8 @@
           <div class="eg-hub-kicker">Edugates International School · مدرسة بوابة المعرفة العالمية</div>
           <h2 class="text-2xl sm:text-3xl font-display font-extrabold">⏱️ ${isAr() ? cfg.hubTitleAr : cfg.hubTitleEn}</h2>
           <p class="text-xs sm:text-sm opacity-80 mt-1">${L(
-            `${totalPapers} نموذج اختبار رسمي كامل (${totalUniqueQs} سؤالاً مستقلاً) · مؤقت حي ${cfg.durationMin} دقيقة · أوراق تظليل بصري OMR ومفاتيح حلول مفصلة جاهزة للطباعة على ورق A4`,
-            `${totalPapers} Full Official Simulation Papers (${totalUniqueQs} dedicated questions) · ${cfg.durationMin}-Min Live Exam Simulator · Printable A4 Exam Booklets, OMR Bubble Sheets & Worked Keys`
+            `${totalPapers} نموذج اختبار رسمي كامل (${totalUniqueQs} سؤالاً مستقلاً) · مؤقت حي ${durTag} دقيقة · أوراق تظليل بصري OMR ومفاتيح حلول مفصلة جاهزة للطباعة على ورق A4`,
+            `${totalPapers} Full Official Simulation Papers (${totalUniqueQs} dedicated questions) · ${durTag}-Min Live Exam Simulator · Printable A4 Exam Booklets, OMR Bubble Sheets & Worked Keys`
           )}</p>
         </div>
       </div>
@@ -1463,10 +1609,11 @@
       practice.parentNode.insertBefore(sec, practice);
     }
 
-    const [kRes, nRes, gRes] = await Promise.allSettled([
+    const [kRes, nRes, gRes, fRes] = await Promise.allSettled([
       fetch('data/kaust_mocks.json'),
       fetch('data/nsmo_mocks.json'),
       fetch('data/kangaroo_mocks.json'),
+      fetch('data/nafes_mocks.json'),
     ]);
     if (kRes.status === 'fulfilled' && kRes.value && kRes.value.ok) {
       try {
@@ -1486,7 +1633,13 @@
         kangarooMocks = (kangarooDoc && kangarooDoc.mocks) || [];
       } catch (_) {}
     }
-    if (!kaustMocks.length && !nsmoMocks.length && !kangarooMocks.length) return;
+    if (fRes.status === 'fulfilled' && fRes.value && fRes.value.ok) {
+      try {
+        nafesDoc = await fRes.value.json();
+        nafesMocks = (nafesDoc && nafesDoc.mocks) || [];
+      } catch (_) {}
+    }
+    if (!kaustMocks.length && !nsmoMocks.length && !kangarooMocks.length && !nafesMocks.length) return;
 
     const t0 = Date.now();
     while (!getBankQuestions().length && Date.now() - t0 < 15000) {
@@ -1513,7 +1666,11 @@
       window.setGradeFilter = function (g) {
         const res = origGrade.apply(this, arguments);
         if (!session) {
-          if (activeComp === 'kangaroo') {
+          if (activeComp === 'nafes') {
+            if (g === 3) { activeTrackByComp.nafes = 'Grade 3'; render(); }
+            else if (g === 6) { activeTrackByComp.nafes = 'Grade 6'; render(); }
+            else if (g === 9) { activeTrackByComp.nafes = 'Grade 9'; render(); }
+          } else if (activeComp === 'kangaroo') {
             if (g === 3 || g === 4) { activeTrackByComp.kangaroo = 'Ecolier'; render(); }
             else if (g === 5 || g === 6) { activeTrackByComp.kangaroo = 'Benjamin'; render(); }
             else if (g === 7 || g === 8) { activeTrackByComp.kangaroo = 'Cadet'; render(); }
@@ -1541,6 +1698,9 @@
       },
       get kangarooMocks() {
         return allKangarooPapers();
+      },
+      get nafesMocks() {
+        return allNafesPapers();
       },
       get allMocks() {
         return allPapersAcrossComps();

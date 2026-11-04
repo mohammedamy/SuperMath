@@ -27,6 +27,7 @@ Object.assign(dict.ar, {
 });
 const trackUpdates = {
  kangaroo:{name_en:'Kangaroo Math (Mawhiba)',name_ar:'كانجارو موهبة للرياضيات',format_en:'5-option MCQs (A–E) · 3, 4, 5 pts · No calculator · Grades 3–10',format_ar:'اختيار من متعدد (5 خيارات) · 3 و4 و5 نقاط · بدون آلة حاسبة · الصفوف 3–10',levels_en:'Official Divisions: Grades 3–10 (Ecolier–Junior)',levels_ar:'مستويات كانجارو: الصفوف 3–10 (إيكولير–جونيور)',badge_en:'MCQs (5 Options)',badge_ar:'MCQs (5 خيارات)',grades:[3,4,5,6,7,8,9,10]},
+ nafes:{name_en:'Nafes · KSA National Exam (ETEC)',name_ar:'اختبار نافس الوطني (هيئة تقويم التعليم)',format_en:'4-option MCQs (A–D) · No calculator · Grades 3, 6 & 9',format_ar:'اختيار من متعدد (4 خيارات) · بدون آلة حاسبة · الصفوف 3 و6 و9',levels_en:'Official ETEC Benchmarks: Grades 3, 6 & 9',levels_ar:'الصفوف المستهدفة رسمياً: 3 و6 و9',badge_en:'MCQs (4 Options)',badge_ar:'MCQs (4 خيارات)',grades:[3,6,9]},
  kaust:{name_en:'KAUST · Math Competition (KMC)',name_ar:'كاوست · مسابقة الرياضيات (KMC)',format_en:'5-option MCQs (A–E) · No calculator · Grades 6–11',format_ar:'اختيار من متعدد (5 خيارات) · بدون آلة حاسبة · الصفوف 6–11',levels_en:'Official KMC Tracks: Grades 6–11',levels_ar:'مسارات KMC: الصفوف 6–11',badge_en:'MCQs (5 Options)',badge_ar:'MCQs (5 خيارات)',grades:[6,7,8,9,10,11]},
  nsmo:{name_en:'NSMO · Mawhiba Olympiad',name_ar:'نسمو · الأولمبياد الوطني (موهبة)',format_en:'4-option MCQs (A–D) · No calculator · Grades 7–10',format_ar:'اختيار من متعدد (4 خيارات) · بدون آلة حاسبة · الصفوف 7–10',levels_en:'Official Olympiad Scope: Grades 7–10',levels_ar:'نطاق الأولمبياد: الصفوف 7–10',badge_en:'MCQs (4 Options)',badge_ar:'MCQs (4 خيارات)',grades:[7,8,9,10]},
  olympiad:{name_en:'Olympiad · Proof practice',name_ar:'الأولمبياد · تدريب البراهين',format_en:'Full written reasoning; foundation to advanced practice',format_ar:'حلول مكتوبة مبررة؛ تدريب تأسيسي ومتقدم'},
@@ -36,7 +37,7 @@ appData.tracks.forEach(t=>Object.assign(t,trackUpdates[t.id]||{}));
 function chooseTrack(id){
  const track=appData.tracks.find(t=>t.id===id);
  if(!track || (currentSelectedGrade!=='all'&&!track.grades.includes(currentSelectedGrade)))return;
- if(id==='kangaroo'||id==='kaust'||id==='nsmo'){window.setStudyCompetition?.(id);window.setMockCompetition?.(id);}
+ if(id==='nafes'||id==='kangaroo'||id==='kaust'||id==='nsmo'){window.setStudyCompetition?.(id);window.setMockCompetition?.(id);}
  document.getElementById('quiz-track-select').value=id;filterQuestions();
  document.getElementById('practice').scrollIntoView({behavior:matchMedia('(prefers-reduced-motion: reduce)').matches?'instant':'smooth'});
  document.getElementById('quiz-track-select').focus({preventScroll:true});
@@ -59,11 +60,14 @@ renderApp=function(){
  for(const select of document.querySelectorAll('select'))select.setAttribute('aria-label',select.id.replace(/-/g,' '));
  let notice=document.getElementById('bank-notice');
  if(!notice){notice=document.createElement('p');notice.id='bank-notice';document.getElementById('quiz-subheading').after(notice)}
- notice.textContent=currentLang==='ar'?'مواد تدريب مستقلة. الحلول المكتوبة للتقييم الذاتي. مسارات كانجارو (الصفوف 3–10) وكاوست (الصفوف 6–11) ونسمو موهبة (الصفوف 7–10) مزوّدة بشرح الدروس والاختبارات التجريبية وأوراق طباعة A4.':'Independent practice materials. Written responses are self-assessed. Kangaroo Math (Grades 3–10), KAUST KMC (Grades 6–11), and NSMO Mawhiba (Grades 7–10) include full Study Lessons, Mock Simulators, and branded A4 printouts.';
+ notice.textContent=currentLang==='ar'?'مواد تدريب مستقلة. الحلول المكتوبة للتقييم الذاتي. مسارات نافس الوطني (الصفوف 3 و6 و9) وكانجارو (الصفوف 3–10) وكاوست (الصفوف 6–11) ونسمو موهبة (الصفوف 7–10) مزوّدة بشرح الدروس والاختبارات التجريبية وأوراق طباعة A4.':'Independent practice materials. Written responses are self-assessed. Nafes KSA (Grades 3, 6 & 9), Kangaroo Math (Grades 3–10), KAUST KMC (Grades 6–11), and NSMO Mawhiba (Grades 7–10) include full Study Lessons, Mock Simulators, and branded A4 printouts.';
  const jumpEl=document.getElementById('mobile-jump-text');
  if(jumpEl)jumpEl.textContent=currentLang==='ar'?'التدريب':'Practice';
 };
 const kmcLevelLabels = {
+ 'Grade 3': 'Grade 3 (Primary) / الصف الثالث الابتدائي (نافس 3)',
+ 'Grade 6': 'Grade 6 (Primary) / الصف السادس الابتدائي (نافس 6)',
+ 'Grade 9': 'Grade 9 (Intermediate) / الصف الثالث المتوسط (نافس 9)',
  'Ecolier': 'Ecolier (Grades 3-4) / إيكولير (الصفان 3-4)',
  'Benjamin': 'Benjamin (Grades 5-6) / بنجامين (الصفان 5-6)',
  'Cadet': 'Cadet (Grades 7-8) / كاديت (الصفان 7-8)',
@@ -76,12 +80,13 @@ const kmcLevelLabels = {
  'Phase 3: Senior National Olympiad (Grade 10)': 'Phase 3: Grade 10 (Senior) / المرحلة 3: الصف 10'
 };
 const KANG_LEVEL_ORDER = ['Ecolier','Benjamin','Cadet','Junior'];
+const NAFES_LEVEL_ORDER = ['Grade 3','Grade 6','Grade 9'];
 loadQuestionsData=async function(){
  const results=await Promise.allSettled(appData.tracks.map(async t=>{const r=await fetch(`data/${t.id}.json`);if(!r.ok)throw Error(t.id);const data=await r.json();if(!Array.isArray(data))throw Error(t.id);return data}));
  appData.questions=results.flatMap(r=>r.status==='fulfilled'?r.value:[]);
  currentFilteredQuestions=[...appData.questions];
  for(const [track,id] of Object.entries({nafes:'quiz-nafes-grade-select',kangaroo:'quiz-kangaroo-level-select',kaust:'quiz-kaust-phase-select',nsmo:'quiz-nsmo-phase-select'})){
- const levels=[...new Set(appData.questions.filter(q=>q.track===track).map(q=>q.level))].sort((a,b)=>track==='kangaroo'?KANG_LEVEL_ORDER.indexOf(a)-KANG_LEVEL_ORDER.indexOf(b):a.localeCompare(b));
+ const levels=[...new Set(appData.questions.filter(q=>q.track===track).map(q=>q.level))].sort((a,b)=>track==='kangaroo'?KANG_LEVEL_ORDER.indexOf(a)-KANG_LEVEL_ORDER.indexOf(b):track==='nafes'?NAFES_LEVEL_ORDER.indexOf(a)-NAFES_LEVEL_ORDER.indexOf(b):a.localeCompare(b));
  const select=document.getElementById(id);select.replaceChildren(new Option('All levels / كل المستويات','all'));
  printPhases[track]=[{val:'all',text:'All levels / كل المستويات'}];
  levels.forEach(level=>{const label=kmcLevelLabels[level]||level.replace('Phase','Training level / مستوى تدريب');select.add(new Option(label,level));printPhases[track].push({val:level,text:label})});
