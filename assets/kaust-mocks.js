@@ -1552,7 +1552,7 @@
       <div class="eg-tabs no-print">${tabs}</div>
       <div class="eg-subbar no-print">
         <div class="text-xs sm:text-sm opacity-90">🎯 ${subText}</div>
-        <div class="flex flex-wrap gap-2 shrink-0">
+        <div class="flex flex-wrap gap-2 max-w-full">
           <button type="button" onclick="generateCustomKaustMock('${activeTrack}')" class="eg-btn eg-btn-go">
             🎲 ${L('توليد نموذج تجريبي جديد', 'Generate Fresh Mock')}
           </button>

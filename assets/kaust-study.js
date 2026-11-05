@@ -981,7 +981,7 @@
           <div class="text-xs sm:text-sm opacity-85">
             ✨ ${L('كل درس مزوّد برسوم توضيحية وأمثلة محلولة خطوة بخطوة وتدريبات ختامية متدرجة قابلة للطباعة على ورق A4 بشعار مدرسة بوابة المعرفة العالمية في كل صفحة.', 'Every lesson includes custom diagrams, step-by-step solved examples, and graduated end-of-lesson practice drills — ready to print on A4 paper with the Edugates logo on every page.')}
           </div>
-          <div class="flex flex-wrap gap-2 shrink-0">
+          <div class="flex flex-wrap gap-2 max-w-full">
             <button type="button" onclick="if(window.jumpToKaustMocks)jumpToKaustMocks('${activeTrack}');" class="eg-btn eg-btn-go">
               ⏱️ ${L('الاختبارات التجريبية الكاملة', 'Full Official Mock Exams')}
             </button>

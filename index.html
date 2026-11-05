@@ -191,7 +191,7 @@
   <!-- TOP HEADER / NAVBAR -->
   <header class="bg-slate-900/85 backdrop-blur-xl text-white sticky top-0 z-50 shadow-[0_4px_30px_rgba(0,0,0,0.1)] border-b border-slate-800/50 transition-all duration-300">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="flex items-center justify-between h-20">
+      <div class="flex flex-wrap items-center justify-between gap-x-3 gap-y-2 min-h-[5rem] py-2">
         
         <!-- Brand / Title -->
         <div class="flex items-center gap-3">
@@ -207,7 +207,7 @@
         </div>
 
         <!-- Global Action Controls -->
-        <div class="flex items-center gap-3">
+        <div class="flex flex-wrap items-center gap-2 sm:gap-3 max-w-full">
           <!-- Active Track Counter Badge -->
           <div class="hidden lg:flex items-center bg-slate-800 px-3 py-1.5 rounded-lg border border-slate-700 text-xs text-slate-300">
             <span class="w-2 h-2 rounded-full bg-emerald-500 ml-2 animate-pulse"></span>
@@ -565,7 +565,7 @@
               <span id="lbl-questions-per-track">عدد الأسئلة لكل مسار:</span>
               <span id="val-q-count" class="font-bold text-amber-400">1,000 سؤال</span>
             </div>
-            <input type="range" id="slider-q-count" min="100" max="2500" step="100" value="1000" oninput="updateScaleCalc()" class="w-full accent-amber-500 cursor-pointer">
+            <input type="range" id="slider-q-count" aria-label="Questions per track / عدد الأسئلة لكل مسار" min="100" max="2500" step="100" value="1000" oninput="updateScaleCalc()" class="w-full accent-amber-500 cursor-pointer">
           </div>
 
           <div class="pt-3 border-t border-slate-700 text-xs space-y-2">
