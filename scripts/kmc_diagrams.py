@@ -61,10 +61,13 @@ def _vlabel(x: float, y: float, text: str, size: int = 15, anchor: str = "middle
 def _nlabel(x: float, y: float, text: str, size: int = 13, color: str = DARK,
             anchor: str = "middle", bold: bool = True) -> str:
     fw = "700" if bold else "500"
+    s_txt = str(text)
+    if any("\u0621" <= ch <= "\u064A" for ch in s_txt) and s_txt.endswith("!"):
+        s_txt = s_txt[:-1]
     return (
         f'<text x="{x:.1f}" y="{y:.1f}" font-family="Inter, system-ui, sans-serif" '
         f'font-size="{size}" font-weight="{fw}" fill="{color}" '
-        f'text-anchor="{anchor}">{_esc(text)}</text>'
+        f'text-anchor="{anchor}">{_esc(s_txt)}</text>'
     )
 
 
@@ -434,7 +437,7 @@ def svg_number_strip(cells) -> str:
     parts = []
     for i, val in enumerate(cells):
         x = ox + i * cw
-        is_q = ("?" in str(val))
+        is_q = ("?" in str(val) or "؟" in str(val))
         fill = "#ede9fe" if is_q else "#ffffff"
         parts.append(f'<rect x="{x:.1f}" y="{oy}" width="{cw}" height="{ch}" fill="{fill}" stroke="{STROKE}" stroke-width="2"/>')
         if val:
@@ -729,10 +732,10 @@ def svg_square_equilateral(inside: bool = True) -> str:
     D = (x0, y0)
     ht = s * math.sqrt(3) / 2
     E = (x0 + s / 2, y0 + s - ht) if inside else (x0 + s / 2, y0 + s + ht * 0.72)
-    h_svg = 180 if inside else 235
+    h_svg = 180 if inside else 248
     if not inside:
-        # shift upward so outward triangle fits cleanly
-        dy = -34
+        # shift upward while preserving >=18px top margin for vertex labels D and C
+        dy = -20
         A, B, C, D, E = [(p[0], p[1] + dy) for p in (A, B, C, D, E)]
     parts = [
         f'<rect x="{D[0]}" y="{D[1]}" width="{s}" height="{s}" fill="#ffffff" stroke="{STROKE}" stroke-width="2"/>',

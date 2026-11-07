@@ -647,6 +647,7 @@ def generate() -> list[dict]:
         if mode == "union":
             ans = union_a
             svg = svg_overlapping_rects(f"Area {a1}", f"Area {a2}", str(ov))
+            svg_ar = svg_overlapping_rects(f"المساحة {a1}", f"المساحة {a2}", str(ov))
             distractors = [a1 + a2, unsh_a, union_a + ov // 2 + 2, max(1, union_a - 4)]
             q_en = (
                 f"Two rectangles of areas {m(a1)} and {m(a2)} overlap in a smaller shaded rectangle of area {m(ov)}, as shown. "
@@ -667,6 +668,7 @@ def generate() -> list[dict]:
         elif mode == "ov":
             ans = ov
             svg = svg_overlapping_rects(f"Area {a1}", f"Area {a2}", "?")
+            svg_ar = svg_overlapping_rects(f"المساحة {a1}", f"المساحة {a2}", "؟")
             distractors = [ov * 2, abs(a1 - a2), ov + 5, max(1, ov - 4)]
             q_en = (
                 f"Two rectangles have areas {m(a1)} and {m(a2)}. When placed overlapping as shown, "
@@ -687,6 +689,7 @@ def generate() -> list[dict]:
         else:
             ans = unsh_a
             svg = svg_overlapping_rects(f"Area {a1}", f"Area {a2}", str(ov))
+            svg_ar = svg_overlapping_rects(f"المساحة {a1}", f"المساحة {a2}", str(ov))
             distractors = [union_a, a1 + a2, unsh_a + ov, max(1, unsh_a - 6)]
             q_en = (
                 f"Two rectangles of areas {m(a1)} and {m(a2)} overlap in a dark-purple region of area {m(ov)}, as shown. "
@@ -712,7 +715,7 @@ def generate() -> list[dict]:
         h_ar = "انتبه: هل نطرح منطقة التقاطع مرة واحدة (المساحة الكلية المغطاة) أم نطرحها من كلا المستطيلين (الأجزاء غير المتقاطعة)؟"
         s_en = explain_en("By the Inclusion-Exclusion Principle, \\( A_{\\text{total}} = A_1 + A_2 - A_{\\text{overlap}} \\), whereas \\( A_{\\text{non-overlap}} = (A_1 - A_{\\text{ov}}) + (A_2 - A_{\\text{ov}}) \\).", steps_en, f"Check: \\( {a1-ov} + {ov} + {a2-ov} = {union_a} \\) total covered area.")
         s_ar = explain_ar("حسب مبدأ التضمين والإقصاء: \\( A_{\\text{الكلية}} = A_1 + A_2 - A_{\\text{التقاطع}} \\)، بينما الأجزاء غير المتقاطعة تساوي \\( (A_1 - A_{\\text{التقاطع}}) + (A_2 - A_{\\text{التقاطع}}) \\).", steps_ar, f"تحقق: \\( {a1-ov} + {ov} + {a2-ov} = {union_a} \\) وهي المساحة الكلية المغطاة.")
-        push(diff, "kmc_g89_overlapping_rects", q_en, q_ar, opts_en, opts_ar, cidx, cans, h_en, h_ar, s_en, s_ar, svg)
+        push(diff, "kmc_g89_overlapping_rects", q_en, q_ar, opts_en, opts_ar, cidx, cans, h_en, h_ar, s_en, s_ar, svg, svg_ar)
 
     # ------------------------------------------------------------------
     # 10. Parallel-line zigzag angle puzzles (9 Qs)

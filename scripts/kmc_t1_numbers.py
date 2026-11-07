@@ -6,6 +6,16 @@ from fractions import Fraction
 import math
 from kmc_common import m, explain_en, explain_ar, make_5_math_options, make_5_bilingual_options, make_kmc_question
 from kmc_diagrams import svg_column_cryptarithm, svg_water_cups
+from kmc_diagrams_extra import (
+    svg_algebra_flow,
+    svg_cycle_ring,
+    svg_digit_cards,
+    svg_pigeonhole_bins,
+    svg_score_table,
+    svg_tape_bar_split,
+    svg_two_jars,
+    svg_venn_2,
+)
 
 LEVEL = "Track 1: Grades 6-7"
 
@@ -68,12 +78,14 @@ def generate_t1_numbers() -> list[dict]:
             ],
             f"الأزمنة المشتركة هي مضاعفات {m(L)} حتى {m(tot_sec)} ثانية، وعددها بالضبط {m(ans)}.",
         )
+        svg_en = svg_cycle_ring([f"{a} s", f"{b} s", "lcm = ?"], top_lbl=f"Next {mins} min → ? times", center_lbl="× ?")
+        svg_ar = svg_cycle_ring([f"{a} ث", f"{b} ث", "م.م.أ = ؟"], top_lbl=f"خلال {mins} دقائق ← ؟ مرة", center_lbl="× ؟")
         items.append(make_kmc_question(
             qid, LEVEL, "Number Theory", "Easy", "g67-lcm-cycles",
             q_en, q_ar, opts_en, opts_ar, cidx, cans,
             f"First find the smallest number of seconds divisible by both {a} and {b}, then convert {mins} minutes into seconds.",
             f"أولًا أوجد أصغر عدد من الثواني يقبل القسمة على {a} و {b} معًا، ثم حوّل {mins} دقائق إلى ثوانٍ.",
-            sol_en, sol_ar
+            sol_en, sol_ar, diagram_en=svg_en, diagram_ar=svg_ar
         ))
 
     # 2. Mixing juice / paint / trail-mix in ratio a : b (8 variants) — KMC G6-7 Sample Q3
@@ -122,12 +134,22 @@ def generate_t1_numbers() -> list[dict]:
             ],
             f"المكوّن الثاني يساوي {m(f'{b} \\times {one_part} = {other}')}، والمجموع {m(f'{ans} + {other} = {tot}')} وهو المطلوب تمامًا.",
         )
+        svg_en = svg_tape_bar_split(
+            [(a, f"{a} parts (?)"), (b, f"{b} parts")],
+            total_lbl=f"Total = {tot}",
+            sub_lbl=f"Ratio {a} : {b}",
+        )
+        svg_ar = svg_tape_bar_split(
+            [(a, f"{a} أجزاء (؟)"), (b, f"{b} أجزاء")],
+            total_lbl=f"المجموع = {tot}",
+            sub_lbl=f"النسبة {a} : {b}",
+        )
         items.append(make_kmc_question(
             qid, LEVEL, "Number Theory", "Easy", "g67-ratio-mixture",
             q_en, q_ar, opts_en, opts_ar, cidx, cans,
             f"Add {a} + {b} to find how many equal parts make up the whole {tot}.",
             f"اجمع {a} + {b} لمعرفة عدد الأجزاء المتساوية التي تكوّن الكمية الكلية {tot}.",
-            sol_en, sol_ar
+            sol_en, sol_ar, diagram_en=svg_en, diagram_ar=svg_ar
         ))
 
     # 3. Counting natural numbers from 1 to N divisible by p or q (8 variants) — KMC G6-7 Sample Q7
@@ -166,12 +188,14 @@ def generate_t1_numbers() -> list[dict]:
             ],
             f"انتبه للخطأ الشائع: جمع {m(f'{cp} + {cq} = {cp+cq}')} دون طرح المكرر يحسب مضاعفات {m(L)} مرتين؛ إذن الجواب الصحيح هو {m(ans)}.",
         )
+        svg_en = svg_venn_2(f"÷ {p}", f"÷ {q}", "?", "lcm", "?", f"1..{N}: ?")
+        svg_ar = svg_venn_2(f"÷ {p}", f"÷ {q}", "؟", "lcm", "؟", f"1..{N}: ؟")
         items.append(make_kmc_question(
             qid, LEVEL, "Number Theory", "Medium", "g67-divisible-or",
             q_en, q_ar, opts_en, opts_ar, cidx, cans,
             f"Count multiples of {p}, count multiples of {q}, and subtract multiples of {L} so you don't count them twice.",
             f"احسب عدد مضاعفات {p} وعدد مضاعفات {q}، ثم اطرح عدد مضاعفات {L} حتى لا تحسبها مرتين.",
-            sol_en, sol_ar
+            sol_en, sol_ar, diagram_en=svg_en, diagram_ar=svg_ar
         ))
 
     # 4. Greatest number of gift bags / children — GCD word problems (8 variants) — KMC Junior Q8
@@ -217,12 +241,22 @@ def generate_t1_numbers() -> list[dict]:
             ],
             f"عند القسمة على {m(ans)} تحصل كل مجموعة على {m(x//ans)} و {m(y//ans)} و {m(z//ans)} من الأصناف الثلاثة دون أي باقٍ.",
         )
+        svg_en = svg_pigeonhole_bins(
+            [("Item 1", str(x)), ("Item 2", str(y)), ("Item 3", str(z))],
+            header_lbl="Max equal groups = ?",
+            footer_lbl=f"gcd({x}, {y}, {z}) = ?",
+        )
+        svg_ar = svg_pigeonhole_bins(
+            [("صنف 1", str(x)), ("صنف 2", str(y)), ("صنف 3", str(z))],
+            header_lbl="أكبر عدد مجموعات = ؟",
+            footer_lbl=f"gcd({x}, {y}, {z}) = ؟",
+        )
         items.append(make_kmc_question(
             qid, LEVEL, "Number Theory", "Easy", "g67-gcd-equal-sharing",
             q_en, q_ar, opts_en, opts_ar, cidx, cans,
             f"Find the largest whole number that divides {x}, {y}, and {z} with no remainder.",
             f"أوجد أكبر عدد صحيح يقسم كلًا من {x} و {y} و {z} دون باقٍ.",
-            sol_en, sol_ar
+            sol_en, sol_ar, diagram_en=svg_en, diagram_ar=svg_ar
         ))
 
     # 5. Repeating word / bead cycle (KMC G6-7 Practice Set 1 Q1 style: KAUSTKAUST...) (8 variants)
@@ -289,12 +323,14 @@ def generate_t1_numbers() -> list[dict]:
             ],
             f"الموقع {m(L * q_quot)} ينتهي عند آخر حرف **{word[-1]}**، ومنه نتحرك {m(rem)} خطوة فنحصل على **{ans_letter}**.",
         )
+        svg_en = svg_cycle_ring(list(word), top_lbl=f"Letter #{pos} → ?", center_lbl=f"Cycle = {L}")
+        svg_ar = svg_cycle_ring(list(word), top_lbl=f"الحرف #{pos} ← ؟", center_lbl=f"الدورة = {L}")
         items.append(make_kmc_question(
             qid, LEVEL, "Number Theory", "Easy", "g67-repeating-word-cycle",
             q_en, q_ar, opts_en, opts_ar, cidx, cans,
             f"Count how many letters are in {word}, then find the remainder when {pos} is divided by {L}.",
             f"احسب عدد أحرف الكلمة {word}، ثم أوجد باقي قسمة {pos} على {L}.",
-            sol_en, sol_ar
+            sol_en, sol_ar, diagram_en=svg_en, diagram_ar=svg_ar
         ))
 
     # 6. Column addition with ★ stars (8 variants with KMC cryptarithm SVG!) — KMC G6-7 Sample Q22
@@ -400,12 +436,22 @@ def generate_t1_numbers() -> list[dict]:
             ],
             f"انتبه للخطأ الشائع: لا نجمع النسبتين، بل نأخذ جزءًا من المجموعة الأولى {m(f'{p1}\\%')} فيكون الناتج أصغر منها وهو {m(f'{ans}\\%')}.",
         )
+        svg_en = svg_tape_bar_split(
+            [(p1, f"{p1}% ({p2}% → ?%)"), (100 - p1, "Rest")],
+            total_lbl="Whole = 100%",
+            sub_lbl=f"{p2}% of {p1}% = ?%",
+        )
+        svg_ar = svg_tape_bar_split(
+            [(p1, f"{p1}% ({p2}% ← ؟%)"), (100 - p1, "الباقي")],
+            total_lbl="الكل = 100%",
+            sub_lbl=f"{p2}% من {p1}% = ؟%",
+        )
         items.append(make_kmc_question(
             qid, LEVEL, "Number Theory", "Easy", "g67-percent-of-percent",
             q_en, q_ar, opts_en, opts_ar, cidx, cans,
             f"Imagine there are 100 in total: first take {p1} of them, then find {p2}% of {p1}.",
             f"تخيّل أن العدد الكلي 100: خذ {p1} منهم أولًا، ثم احسب {p2}% من الـ {p1}.",
-            sol_en, sol_ar
+            sol_en, sol_ar, diagram_en=svg_en, diagram_ar=svg_ar
         ))
 
     # 8. Mistakenly multiplied instead of dividing by a decimal/fraction (8 variants) — KMC G6-7 Practice Set 2 Q2
@@ -454,12 +500,22 @@ def generate_t1_numbers() -> list[dict]:
             ],
             f"احذر من التوقف عند {m(orig_num)}؛ فـ {m(orig_num)} هو العدد الأصلي فقط، بينما ناتج القسمة الصحيح هو {m(ans)}.",
         )
+        svg_en = svg_algebra_flow(
+            [("Wrong", f"? × {dec_str} = {got_val}"), ("Correct", f"? ÷ {dec_str} = ?")],
+            arrows=["fix"],
+            title_lbl=f"Mystery Number & {dec_str}",
+        )
+        svg_ar = svg_algebra_flow(
+            [("بالخطأ", f"؟ × {dec_str} = {got_val}"), ("الصحيح", f"؟ ÷ {dec_str} = ؟")],
+            arrows=["تصحيح"],
+            title_lbl=f"العدد المجهول و {dec_str}",
+        )
         items.append(make_kmc_question(
             qid, LEVEL, "Number Theory", "Medium", "g67-decimal-divide-mistake",
             q_en, q_ar, opts_en, opts_ar, cidx, cans,
             f"Write {dec_str} as 1/{denom}: first find the original number, then divide that original number by 1/{denom}.",
             f"اكتب {dec_str} على صورة 1/{denom}: أوجد العدد الأصلي أولًا، ثم اقسمه على 1/{denom}.",
-            sol_en, sol_ar
+            sol_en, sol_ar, diagram_en=svg_en, diagram_ar=svg_ar
         ))
 
     # 9. Sequential fractions of remainder (books / pocket money / journey) (8 variants)
@@ -519,12 +575,24 @@ def generate_t1_numbers() -> list[dict]:
             ],
             f"تحقق من البداية بالعدد {m(ans)}: بعد المرحلة الأولى يتبقى {m(int(ans * rem1))}، وبعد الثانية يتبقى {m(left_val)} تمامًا.",
         )
+        f1_s = f"{f1.numerator}/{f1.denominator}"
+        f2_s = f"{f2.numerator}/{f2.denominator}"
+        svg_en = svg_tape_bar_split(
+            [(float(f1), f"1st: {f1_s}"), (float(rem1 * f2), f"2nd: {f2_s} rem"), (float(rem2), f"Left = {left_val}")],
+            total_lbl="Original Total = ?",
+            sub_lbl=f"Final remainder = {left_val}",
+        )
+        svg_ar = svg_tape_bar_split(
+            [(float(f1), f"أولًا: {f1_s}"), (float(rem1 * f2), f"ثانيًا: {f2_s} الباقي"), (float(rem2), f"المتبقي = {left_val}")],
+            total_lbl="الإجمالي الأصلي = ؟",
+            sub_lbl=f"المتبقي النهائي = {left_val}",
+        )
         items.append(make_kmc_question(
             qid, LEVEL, "Number Theory", "Medium", "g67-fraction-of-remainder",
             q_en, q_ar, opts_en, opts_ar, cidx, cans,
             "Find what fraction is LEFT after step 1, then find what fraction of that is LEFT after step 2.",
             "احسب الكسر المتبقي بعد الخطوة الأولى، ثم الكسر المتبقي منه بعد الخطوة الثانية.",
-            sol_en, sol_ar
+            sol_en, sol_ar, diagram_en=svg_en, diagram_ar=svg_ar
         ))
 
     # 10. Divisibility by 9 / 3 / 4 missing digit puzzles (8 variants)
@@ -569,12 +637,14 @@ def generate_t1_numbers() -> list[dict]:
             ],
             f"بالتعويض نحصل على العدد {m(filled_num)}، وعند قسمته على {m(9)} يكون الناتج {m(filled_num // 9)} بدون باقٍ.",
         )
+        svg_en = svg_digit_cards(list(pat), badge_lbl="Divisible by 9", note_lbl="Digit □ = ?")
+        svg_ar = svg_digit_cards(list(pat), badge_lbl="يقبل القسمة على 9", note_lbl="الرقم □ = ؟")
         items.append(make_kmc_question(
             qid, LEVEL, "Number Theory", "Easy", "g67-divisibility-by-9",
             q_en, q_ar, opts_en, opts_ar, cidx, cans,
             "Add the visible digits and find what single digit makes the total sum a multiple of 9.",
             "اجمع الأرقام الظاهرة وابحث عن الرقم الذي يجعل مجموع الأرقام من مضاعفات 9.",
-            sol_en, sol_ar
+            sol_en, sol_ar, diagram_en=svg_en, diagram_ar=svg_ar
         ))
 
     # 11. Comparing 5 arithmetic fractions — largest value (8 variants) — KMC G6-7 Sample Q13
@@ -616,12 +686,15 @@ def generate_t1_numbers() -> list[dict]:
             ],
             f"بقية الخيارات إما أصغر من {m(1)} أو ذات بسط أصغر ومقام أكبر، إذن {m(f'\\frac{{{b}+{c}}}{{{a}}}')} هو الأكبر.",
         )
+        cand_row = [f"{a}/({b}+{c})", f"({a}+{b})/{c}", f"({a}+{c})/{b}", f"{c}/({a}+{b})", f"({b}+{c})/{a}"]
+        svg_en = svg_score_table(["#1", "#2", "#3", "#4", "#5"], [cand_row], title_lbl=f"Numbers {a}, {b}, {c} → Largest = ?")
+        svg_ar = svg_score_table(["1", "2", "3", "4", "5"], [cand_row], title_lbl=f"الأعداد {a}، {b}، {c} ← الأكبر = ؟")
         items.append(make_kmc_question(
             qid, LEVEL, "Number Theory", "Easy", "g67-largest-fraction-choice",
             q_en, q_ar, opts_en, opts_ar, cidx, cans,
             "To make a fraction as big as possible, make the numerator as large as possible and the denominator as small as possible.",
             "لجعل الكسر أكبر ما يمكن، اجعل البسط أكبر ما يمكن والمقام أصغر ما يمكن.",
-            sol_en, sol_ar
+            sol_en, sol_ar, diagram_en=svg_en, diagram_ar=svg_ar
         ))
 
     # 12. Pouring water between 3 identical cups (8 variants with KMC water-cups SVG!) — KMC Junior Q5
@@ -648,7 +721,8 @@ def generate_t1_numbers() -> list[dict]:
         mv3 = c3 * p3
         c3 -= mv3; c1 += mv3
         ans_pct = float(c1) if c1.denominator != 1 else int(c1)
-        svg = svg_water_cups((1.0, 0.0, 0.0), ("Cup 1", "Cup 2", "Cup 3"))
+        svg_en = svg_water_cups((1.0, 0.0, 0.0), ("Cup 1", "Cup 2", "Cup 3"))
+        svg_ar = svg_water_cups((1.0, 0.0, 0.0), ("كوب 1", "كوب 2", "كوب 3"))
         q_en = (
             f"Three identical cups stand on a table: Cup 1 is completely full of water ({m('100\\%')}) and Cups 2 and 3 are empty. "
             f"First, Ali pours **{w1_e}** of the water in Cup 1 into Cup 2. "
@@ -690,7 +764,7 @@ def generate_t1_numbers() -> list[dict]:
             q_en, q_ar, opts_en, opts_ar, cidx, cans,
             "Start with 100 units of water in Cup 1 and write down the three cup amounts after each pour.",
             "ابدأ بافتراض وجود 100 وحدة ماء في الكوب 1 وسجّل كمية الماء في الأكواب الثلاثة بعد كل خطوة.",
-            sol_en, sol_ar, diagram_en=svg
+            sol_en, sol_ar, diagram_en=svg_en, diagram_ar=svg_ar
         ))
 
     # 13. Ratio shift when k items join/leave (boys:girls, red:blue) (8 variants) — KMC G6-7 Sample Q9
@@ -741,12 +815,14 @@ def generate_t1_numbers() -> list[dict]:
             ],
             f"تحقق: في الأصل كان العددان {m(a*k)} و {m(b*k)}، وعند إضافة {m(add_n)} إلى {m(a*k)} يصبح {m(a*k + add_n)} مساويًا لـ {m(b*k)} تمامًا!",
         )
+        svg_en = svg_two_jars(f"{a} parts (+{add_n})", round(a / b, 2), f"{b} parts", 1.0, f"+{add_n} → =")
+        svg_ar = svg_two_jars(f"{a} أجزاء (+{add_n})", round(a / b, 2), f"{b} أجزاء", 1.0, f"+{add_n} ← =")
         items.append(make_kmc_question(
             qid, LEVEL, "Number Theory", "Medium", "g67-ratio-equalize",
             q_en, q_ar, opts_en, opts_ar, cidx, cans,
             f"Represent the original counts as {a}k and {b}k. Adding {add_n} bridges the gap ({b} - {a})k!",
             f"مثّل العددين الأصليين بالصورة {a}k و {b}k؛ إضافة {add_n} تسد الفجوة البالغة ({b} - {a})k!",
-            sol_en, sol_ar
+            sol_en, sol_ar, diagram_en=svg_en, diagram_ar=svg_ar
         ))
 
     # 14. Successive percentage increase then decrease (+p% then -p%) (8 variants)
@@ -794,12 +870,22 @@ def generate_t1_numbers() -> list[dict]:
             ],
             f"لاحظ أن أخذ خصم من عدد أكبر ({m(after_up)}) يعطي قيمة مختلفة عن العودة المباشرة للسعر الأول؛ فالسعر النهائي هو {m(ans)} ريالًا.",
         )
+        svg_en = svg_algebra_flow(
+            [("Start", f"{p0}"), ("Step 1", "?"), ("Final", "?")],
+            arrows=[f"+{p_up}%", f"−{p_dn}%"],
+            title_lbl="Successive % Change",
+        )
+        svg_ar = svg_algebra_flow(
+            [("البداية", f"{p0}"), ("خطوة 1", "؟"), ("النهائي", "؟")],
+            arrows=[f"+{p_up}%", f"−{p_dn}%"],
+            title_lbl="تغير متتالٍ للنسبة",
+        )
         items.append(make_kmc_question(
             qid, LEVEL, "Number Theory", "Medium", "g67-successive-percent",
             q_en, q_ar, opts_en, opts_ar, cidx, cans,
             f"First compute the new price after adding {p_up}% to {p0}, then take {p_dn}% off that new price.",
             f"احسب أولًا السعر الجديد بعد زيادة {p_up}% على {p0}، ثم اخفض {p_dn}% من ذلك السعر الجديد.",
-            sol_en, sol_ar
+            sol_en, sol_ar, diagram_en=svg_en, diagram_ar=svg_ar
         ))
 
     # 15. Smallest / largest N-digit number with given digit product or digit sum (8 variants)
@@ -853,12 +939,14 @@ def generate_t1_numbers() -> list[dict]:
             ],
             f"نتحقق من {kind_a} الأرقام: {m(f' {op_sym} '.join(map(str, ds_ans)) + f' = {target_v}')}، وهو أصغر عدد موجب {word_n_a} يحقق الشرط.",
         )
+        svg_en = svg_digit_cards(["?"] * ndig, badge_lbl=f"Smallest {ndig}-digit", note_lbl=f"Digit {kind} = {target_v}")
+        svg_ar = svg_digit_cards(["؟"] * ndig, badge_lbl=f"أصغر عدد ({ndig} خانات)", note_lbl=f"{kind_a} الأرقام = {target_v}")
         items.append(make_kmc_question(
             qid, LEVEL, "Number Theory", "Medium", "g67-smallest-digit-prod-sum",
             q_en, q_ar, opts_en, opts_ar, cidx, cans,
             "Make the leftmost digit as small as possible by placing the largest valid digit (at most 9) on the right.",
             "اجعل الخانة اليسرى أصغر ما يمكن بوضع أكبر رقم مناسب (لا يتجاوز 9) في خانة الآحاد يمينًا.",
-            sol_en, sol_ar
+            sol_en, sol_ar, diagram_en=svg_en, diagram_ar=svg_ar
         ))
 
     assert len(items) == 120, f"Expected 120 items, got {len(items)}"

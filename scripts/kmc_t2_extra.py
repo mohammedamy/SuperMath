@@ -5,6 +5,7 @@ across 18 blueprints (50 questions per lesson group, Lessons 2.1 through 2.6).
 from fractions import Fraction
 import itertools
 import math
+import re
 
 from kmc_common import (
     explain_ar,
@@ -15,20 +16,33 @@ from kmc_common import (
     make_kmc_question,
 )
 from kmc_diagrams_extra import (
+    svg_algebra_flow,
     svg_area_identity_square,
     svg_binary_bulbs,
+    svg_digit_cards,
     svg_factor_tree,
     svg_isosceles_trapezoid,
     svg_motion_timeline,
+    svg_number_line_sign_chart,
+    svg_pan_balance_coins,
     svg_pie_chart,
     svg_pipe_tank,
+    svg_score_table,
+    svg_statement_cards,
     svg_street_grid,
+    svg_telescoping_chain,
     svg_thales_circle,
     svg_two_jars,
     svg_venn_3,
 )
 
 LEVEL = "Track 2: Grades 8-9"
+
+_SUP_MAP = str.maketrans("0123456789+-", "⁰¹²³⁴⁵⁶⁷⁸⁹⁺⁻")
+
+
+def _sup(v) -> str:
+    return str(v).translate(_SUP_MAP)
 
 
 def _prime_factors(n: int) -> list[tuple[int, int]]:
@@ -485,11 +499,19 @@ def _gen_lesson_2_1() -> list[dict]:
 
         qid = f"KMC-T2-EX-21C-{i:02d}"
         opts_en, opts_ar, cidx, cans = make_5_math_options(ans, distractors, qid)
+        svg_en = svg_statement_cards(
+            [(f"÷ {a}", f"Remainder = {ra}"), (f"÷ {b}", f"Remainder = {rb}"), ("Range", f"{lo} ≤ N ≤ {hi}")],
+            header_lbl=f"{ext_en.capitalize()} N = ?",
+        )
+        svg_ar = svg_statement_cards(
+            [(f"÷ {a}", f"الباقي = {ra}"), (f"÷ {b}", f"الباقي = {rb}"), ("النطاق", f"{lo} ≤ N ≤ {hi}")],
+            header_lbl=f"{ext_ar} عدد N = ؟",
+        )
         out.append(
             make_kmc_question(
                 qid, LEVEL, topic, diff, "kmc_g89_simultaneous_remainders",
                 q_en, q_ar, opts_en, opts_ar, cidx, cans,
-                h_en, h_ar, s_en, s_ar,
+                h_en, h_ar, s_en, s_ar, diagram_en=svg_en, diagram_ar=svg_ar,
             )
         )
 
@@ -514,7 +536,8 @@ def _gen_lesson_2_2() -> list[dict]:
         ((0, 1, 1, 0, 1, 1), (32, 16, 8, 4, 2, 1), (32, 8), "Medium"),  # shown 27, flip 32 & 8 -> 27 + 32 - 8 = 51
     ]
     for i, (bits, weights, flips, diff) in enumerate(bin_read_cases, 1):
-        svg = svg_binary_bulbs(bits, weights)
+        svg = svg_binary_bulbs(bits, weights, lang="en")
+        svg_ar = svg_binary_bulbs(bits, weights, lang="ar")
         shown_val = sum(b * w for b, w in zip(bits, weights))
         w_str = ", ".join(str(w) for w in weights)
         state_str = ", ".join(f"{w}:{'ON' if b else 'OFF'}" for b, w in zip(bits, weights))
@@ -594,7 +617,7 @@ def _gen_lesson_2_2() -> list[dict]:
             make_kmc_question(
                 qid, LEVEL, topic, diff, "kmc_g89_binary_switch_panel",
                 q_en, q_ar, opts_en, opts_ar, cidx, cans,
-                h_en, h_ar, s_en, s_ar, diagram_en=svg,
+                h_en, h_ar, s_en, s_ar, diagram_en=svg, diagram_ar=svg_ar,
             )
         )
 
@@ -609,7 +632,8 @@ def _gen_lesson_2_2() -> list[dict]:
     ]
     for j, (target_n, weights, diff) in enumerate(bin_count_cases, 7):
         bits_zero = tuple(0 for _ in weights)
-        svg = svg_binary_bulbs(bits_zero, weights)
+        svg = svg_binary_bulbs(bits_zero, weights, lang="en")
+        svg_ar = svg_binary_bulbs(bits_zero, weights, lang="ar")
         rem = target_n
         chosen = []
         for w in weights:
@@ -657,7 +681,7 @@ def _gen_lesson_2_2() -> list[dict]:
             make_kmc_question(
                 qid, LEVEL, topic, diff, "kmc_g89_binary_switch_panel",
                 q_en, q_ar, opts_en, opts_ar, cidx, cans,
-                h_en, h_ar, s_en, s_ar, diagram_en=svg,
+                h_en, h_ar, s_en, s_ar, diagram_en=svg, diagram_ar=svg_ar,
             )
         )
 
@@ -773,7 +797,8 @@ def _gen_lesson_2_2() -> list[dict]:
         ),
     ]
     for off, (ex_bits, weights, diff, pred, cond_en, cond_ar, h_en, h_ar, idea_en, st_en, idea_ar, st_ar, dists) in enumerate(pat_cases, 13):
-        svg = svg_binary_bulbs(ex_bits, weights)
+        svg = svg_binary_bulbs(ex_bits, weights, lang="en")
+        svg_ar = svg_binary_bulbs(ex_bits, weights, lang="ar")
         ans = sum(
             sum(b * w for b, w in zip(bits, weights))
             for bits in itertools.product((0, 1), repeat=len(weights))
@@ -796,7 +821,7 @@ def _gen_lesson_2_2() -> list[dict]:
             make_kmc_question(
                 qid, LEVEL, topic, diff, "kmc_g89_binary_switch_panel",
                 q_en, q_ar, opts_en, opts_ar, cidx, cans,
-                h_en, h_ar, s_en, s_ar, diagram_en=svg,
+                h_en, h_ar, s_en, s_ar, diagram_en=svg, diagram_ar=svg_ar,
             )
         )
 
@@ -946,11 +971,16 @@ def _gen_lesson_2_2() -> list[dict]:
 
         qid = f"KMC-T2-EX-22B-{i:02d}"
         opts_en, opts_ar, cidx, cans = make_5_math_options(ans, distractors, qid)
+        pal_slots = ["A", "B", "A"] if digs == 3 else ["A", "B", "B", "A"]
+        pal_note_en = {"smallest": "Smallest = ?", "largest": "Largest = ?", "count": "Count = ?"}[ask_m]
+        pal_note_ar = {"smallest": "أصغر متناظر = ؟", "largest": "أكبر متناظر = ؟", "count": "العدد = ؟"}[ask_m]
+        svg_en = svg_digit_cards(pal_slots, badge_lbl=f"Divisible by {dk}", note_lbl=pal_note_en)
+        svg_ar = svg_digit_cards(pal_slots, badge_lbl=f"يقبل القسمة على {dk}", note_lbl=pal_note_ar)
         out.append(
             make_kmc_question(
                 qid, LEVEL, topic, diff, "kmc_g89_palindrome_divisibility",
                 q_en, q_ar, opts_en, opts_ar, cidx, cans,
-                div_hints_en[dk], div_hints_ar[dk], s_en, s_ar,
+                div_hints_en[dk], div_hints_ar[dk], s_en, s_ar, diagram_en=svg_en, diagram_ar=svg_ar,
             )
         )
 
@@ -1108,11 +1138,26 @@ def _gen_lesson_2_2() -> list[dict]:
         distractors = [x for x in (9, 1, 2, 3, 4, 5, 6, 7, 8, 0) if x != ans][:4]
         qid = f"KMC-T2-EX-22C-{i:02d}"
         opts_en, opts_ar, cidx, cans = make_5_math_options(ans, distractors, qid)
+        expr_u = re.sub(
+            r"\^\{(\d+)\}",
+            lambda mo: _sup(mo.group(1)),
+            expr_tex.replace(" \\times ", "×").replace(" - ", " − ").replace(" + ", "+").replace("^2", "²"),
+        )
+        svg_en = svg_algebra_flow(
+            [("Start", expr_u), ("Step", "∑ digits"), ("Digital Root", "?")],
+            arrows=["→", "→"],
+            title_lbl="Repeated Digit Sum",
+        )
+        svg_ar = svg_algebra_flow(
+            [("البداية", expr_u), ("الخطوة", "مجموع الأرقام"), ("الجذر الرقمي", "؟")],
+            arrows=["→", "→"],
+            title_lbl="تكرار جمع الأرقام",
+        )
         out.append(
             make_kmc_question(
                 qid, LEVEL, topic, diff, "kmc_g89_digital_root_invariant",
                 q_en, q_ar, opts_en, opts_ar, cidx, cans,
-                h_en, h_ar, s_en, s_ar,
+                h_en, h_ar, s_en, s_ar, diagram_en=svg_en, diagram_ar=svg_ar,
             )
         )
 
@@ -1444,11 +1489,22 @@ def _gen_lesson_2_3() -> list[dict]:
         q_ar = f"دون استخدام الآلة الحاسبة، أوجد القيمة الدقيقة لحاصل الضرب في أبسط صورة: {m(expr_tex)}."
         qid = f"KMC-T2-EX-23B-{i:02d}"
         opts_en, opts_ar, cidx, cans = make_5_math_options(ans, distractors, qid)
+        if kind == "minus":
+            t_terms = [f"1 − 1/{a}", f"1 − 1/{a+1}", "···", f"1 − 1/{b}"]
+            t_hdr = f"({a-1}/{a}) × ({a}/{a+1}) × ···"
+        elif kind == "plus":
+            t_terms = [f"1 + 1/{a}", f"1 + 1/{a+1}", "···", f"1 + 1/{b}"]
+            t_hdr = f"({a+1}/{a}) × ({a+2}/{a+1}) × ···"
+        else:
+            t_terms = [f"1 − 1/{a}²", f"1 − 1/{a+1}²", "···", f"1 − 1/{b}²"]
+            t_hdr = "1−1/k² = (k−1)(k+1)/k²"
+        svg_en = svg_telescoping_chain(t_terms, op_sym="×", title_lbl=t_hdr, footer_lbl="Product = ?", slash_middle=True)
+        svg_ar = svg_telescoping_chain(t_terms, op_sym="×", title_lbl=t_hdr, footer_lbl="حاصل الضرب = ؟", slash_middle=True)
         out.append(
             make_kmc_question(
                 qid, LEVEL, topic, diff, "kmc_g89_telescoping_fraction_prod",
                 q_en, q_ar, opts_en, opts_ar, cidx, cans,
-                h_en, h_ar, s_en, s_ar,
+                h_en, h_ar, s_en, s_ar, diagram_en=svg_en, diagram_ar=svg_ar,
             )
         )
 
@@ -1592,11 +1648,29 @@ def _gen_lesson_2_3() -> list[dict]:
 
         qid = f"KMC-T2-EX-23C-{i:02d}"
         opts_en, opts_ar, cidx, cans = make_5_math_options(ans, distractors, qid)
+        if fmode in ("count_pos", "sum_int"):
+            fl_ticks = [(str(m_val), True), (f"n/{k}", True), (str(m_val + 1), False)]
+            fl_hdr = f"⌊n / {k}⌋ = {m_val}"
+            fl_ftr_en = "Count of n > 0 = ?" if fmode == "count_pos" else "Sum of n > 0 = ?"
+            fl_ftr_ar = "عدد قيم n الموجبة = ؟" if fmode == "count_pos" else "مجموع قيم n = ؟"
+            fl_ints = ["", "≤", "<", ""]
+        elif fmode == "sqrt_sum":
+            fl_ticks = [("1²", True), ("2²", True), ("3²", True), (f"≤{N}", True)]
+            fl_hdr = f"⌊√1⌋ + ··· + ⌊√{N}⌋"
+            fl_ftr_en, fl_ftr_ar = "Sum = ?", "المجموع = ؟"
+            fl_ints = ["", "⌊√k⌋=1", "⌊√k⌋=2", "···", ""]
+        else:
+            fl_ticks = [("q", True), (f"n/{k}", True), ("q + 1", False)]
+            fl_hdr = f"n + ⌊n / {k}⌋ = {T}"
+            fl_ftr_en, fl_ftr_ar = "Solve n = ?", "أوجد n = ؟"
+            fl_ints = ["", "≤", "<", ""]
+        svg_en = svg_number_line_sign_chart(fl_ticks, intervals=fl_ints, header_lbl=fl_hdr, footer_lbl=fl_ftr_en)
+        svg_ar = svg_number_line_sign_chart(fl_ticks, intervals=fl_ints, header_lbl=fl_hdr, footer_lbl=fl_ftr_ar)
         out.append(
             make_kmc_question(
                 qid, LEVEL, topic, diff, "kmc_g89_linear_floor_equation",
                 q_en, q_ar, opts_en, opts_ar, cidx, cans,
-                h_en, h_ar, s_en, s_ar,
+                h_en, h_ar, s_en, s_ar, diagram_en=svg_en, diagram_ar=svg_ar,
             )
         )
 
@@ -1772,6 +1846,7 @@ def _gen_lesson_2_4() -> list[dict]:
             ans_f = Fraction(1, 1) / net_rate
             ans = int(ans_f) if ans_f.denominator == 1 else ans_f
             svg = svg_pipe_tank(f"+A ({t1})", f"−B ({t2})")
+            svg_ar = svg_pipe_tank(f"+A ({t1})", f"−B ({t2})")
             L_v = math.lcm(t1, t2)
             q_en = (
                 f"Inlet **Pipe A** can fill an empty water tank in {m(t1)} {u_en}, while outlet **Pipe B** at the bottom "
@@ -1816,6 +1891,7 @@ def _gen_lesson_2_4() -> list[dict]:
             leak_rate = Fraction(1, t1) - Fraction(1, T_actual)
             ans = int(Fraction(1, 1) / leak_rate)
             svg = svg_pipe_tank(f"+A ({t1})", "−Leak (?)")
+            svg_ar = svg_pipe_tank(f"+A ({t1})", "−تسرب (؟)")
             L_v = math.lcm(t1, T_actual)
             q_en = (
                 f"Inlet **Pipe A** normally fills an empty tank in {m(t1)} {u_en}. Because of a bottom leak, "
@@ -1853,6 +1929,7 @@ def _gen_lesson_2_4() -> list[dict]:
             ans_f = Fraction(1, 1) / net_rate
             ans = int(ans_f) if ans_f.denominator == 1 else ans_f
             svg = svg_pipe_tank(f"+A({t1}), +B({t2})", f"−C ({t3})")
+            svg_ar = svg_pipe_tank(f"+A({t1})، +B({t2})", f"−C ({t3})")
             L_v = math.lcm(t1, t2, t3)
             q_en = (
                 f"Two inlet pipes **A** and **B** can fill an empty tank in {m(t1)} {u_en} and {m(t2)} {u_en} respectively, "
@@ -1899,7 +1976,7 @@ def _gen_lesson_2_4() -> list[dict]:
             make_kmc_question(
                 qid, LEVEL, topic, diff, "kmc_g89_inlet_outlet_pipe_tank",
                 q_en, q_ar, opts_en, opts_ar, cidx, cans,
-                h_en, h_ar, s_en, s_ar, diagram_en=svg,
+                h_en, h_ar, s_en, s_ar, diagram_en=svg, diagram_ar=svg_ar,
             )
         )
 
@@ -2070,11 +2147,26 @@ def _gen_lesson_2_4() -> list[dict]:
 
         qid = f"KMC-T2-EX-24C-{i:02d}"
         opts_en, opts_ar, cidx, cans = make_5_math_options(ans, distractors, qid)
+        if lmode == "total_pts":
+            lg_rows_en = [["Win / Draw", "3 / 2", f"D = {draws}"], ["All Teams", f"n = {n}", "Total = ?"]]
+            lg_rows_ar = [["فوز / تعادل", "3 / 2", f"تعادل = {draws}"], ["جميع الفرق", f"n = {n}", "المجموع = ؟"]]
+        elif lmode == "find_draws":
+            lg_rows_en = [["Win / Draw", "3 / 2", "D = ?"], ["All Teams", f"n = {n}", f"Total = {P}"]]
+            lg_rows_ar = [["فوز / تعادل", "3 / 2", "تعادل = ؟"], ["جميع الفرق", f"n = {n}", f"المجموع = {P}"]]
+        elif lmode == "last_team":
+            sc_short = ",".join(str(x) for x in known_scores)
+            lg_rows_en = [[f"{n-1} Teams", sc_short, f"D = {draws}"], [f"Team #{n}", "?", "Pts = ?"]]
+            lg_rows_ar = [[f"{n-1} فرق", sc_short, f"تعادل = {draws}"], [f"الفريق {n}", "؟", "النقاط = ؟"]]
+        else:
+            lg_rows_en = [["Wins : Draws", f"{mult} : 1", f"n = {n}"], ["All Teams", "3 / 2", "Total = ?"]]
+            lg_rows_ar = [["فوز : تعادل", f"{mult} : 1", f"n = {n}"], ["جميع الفرق", "3 / 2", "المجموع = ؟"]]
+        svg_en = svg_score_table(["Item", "Pts", "Stat"], lg_rows_en, title_lbl=f"League of {n} teams")
+        svg_ar = svg_score_table(["البند", "النقاط", "الإحصائية"], lg_rows_ar, title_lbl=f"دوري من {n} فرق")
         out.append(
             make_kmc_question(
                 qid, LEVEL, topic, diff, "kmc_g89_league_table_points",
                 q_en, q_ar, opts_en, opts_ar, cidx, cans,
-                h_en, h_ar, s_en, s_ar,
+                h_en, h_ar, s_en, s_ar, diagram_en=svg_en, diagram_ar=svg_ar,
             )
         )
 
@@ -3024,11 +3116,23 @@ def _gen_lesson_2_6() -> list[dict]:
 
         qid = f"KMC-T2-EX-26B-{i:02d}"
         opts_en, opts_ar, cidx, cans = make_5_math_options(ans, distractors, qid)
+        if cmode == "min_w":
+            svg_en = svg_pan_balance_coins(f"N = {N} (1 lighter)", "Pan L", "Pan R", sub_lbl="Min weighings = ?")
+            svg_ar = svg_pan_balance_coins(f"العدد = {N} (1 أخف)", "الكفة 1", "الكفة 2", sub_lbl="أقل عدد وزنات = ؟")
+        elif cmode == "max_c":
+            svg_en = svg_pan_balance_coins(f"At most {k} weighings", "Pan L", "Pan R", sub_lbl="Max coins = ?")
+            svg_ar = svg_pan_balance_coins(f"{k} وزنات على الأكثر", "الكفة 1", "الكفة 2", sub_lbl="أكبر عدد عملات = ؟")
+        elif cmode == "key_match":
+            svg_en = svg_pan_balance_coins(f"{n} locks & {n} keys", f"{n} keys", f"{n} locks", sub_lbl="Match all: trials = ?")
+            svg_ar = svg_pan_balance_coins(f"{n} أقفال و{n} مفاتيح", f"{n} مفاتيح", f"{n} أقفال", sub_lbl="عدد التجارب = ؟")
+        else:
+            svg_en = svg_pan_balance_coins(f"Unlock {n} chests", f"{n} keys", f"{n} chests", sub_lbl="Open all: trials = ?")
+            svg_ar = svg_pan_balance_coins(f"فتح {n} صناديق مقفلة", f"{n} مفاتيح", f"{n} صناديق", sub_lbl="عدد المحاولات = ؟")
         out.append(
             make_kmc_question(
                 qid, LEVEL, "Combinatorics & Logic", diff, "kmc_g89_counterfeit_coin_weighings",
                 q_en, q_ar, opts_en, opts_ar, cidx, cans,
-                h_en, h_ar, s_en, s_ar,
+                h_en, h_ar, s_en, s_ar, diagram_en=svg_en, diagram_ar=svg_ar,
             )
         )
 
@@ -3063,6 +3167,7 @@ def _gen_lesson_2_6() -> list[dict]:
             brute = Fraction(sum(1 for x in balls_A for y in balls_B if x == y), nA * nB)
             assert ans == brute
             svg_en = svg_two_jars(f"A ({rA}R, {bA}B)", rA / nA, f"B ({rB}R, {bB}B)", rB / nB)
+            svg_ar = svg_two_jars(f"صندوق A ({rA}ح، {bA}ز)", rA / nA, f"صندوق B ({rB}ح، {bB}ز)", rB / nB)
             q_en = (
                 f"**Box A** contains {m(rA)} red and {m(bA)} blue balls, while **Box B** contains {m(rB)} red and {m(bB)} blue balls. "
                 f"One ball is drawn at random from **Box A** and one ball is drawn at random from **Box B**. "
@@ -3103,6 +3208,7 @@ def _gen_lesson_2_6() -> list[dict]:
             brute = Fraction(sum(1 for x in balls_A for y in balls_B if x == "R" or y == "R"), nA * nB)
             assert ans == brute
             svg_en = svg_two_jars(f"A ({rA}R, {bA}B)", rA / nA, f"B ({rB}R, {bB}B)", rB / nB)
+            svg_ar = svg_two_jars(f"صندوق A ({rA}ح، {bA}ز)", rA / nA, f"صندوق B ({rB}ح، {bB}ز)", rB / nB)
             q_en = (
                 f"**Box A** has {m(rA)} red and {m(bA)} blue balls, and **Box B** has {m(rB)} red and {m(bB)} blue balls. "
                 f"If one ball is drawn at random from each box, what is the probability of getting **at least one red ball**?"
@@ -3149,6 +3255,7 @@ def _gen_lesson_2_6() -> list[dict]:
                         hits += 1
             assert ans == Fraction(hits, tot_paths)
             svg_en = svg_two_jars(f"A ({rA}R, {bA}B)", rA / nA, f"B ({rB}R, {bB}B)", rB / nB, arrow_txt="1 ball")
+            svg_ar = svg_two_jars(f"صندوق A ({rA}ح، {bA}ز)", rA / nA, f"صندوق B ({rB}ح، {bB}ز)", rB / nB, arrow_txt="كرة واحدة")
             q_en = (
                 f"**Box A** contains {m(rA)} red and {m(bA)} blue balls; **Box B** contains {m(rB)} red and {m(bB)} blue balls. "
                 f"One ball is chosen at random from **Box A** and transferred unseen into **Box B**. Then one ball is drawn at random "
@@ -3192,7 +3299,7 @@ def _gen_lesson_2_6() -> list[dict]:
             make_kmc_question(
                 qid, LEVEL, "Data & Probability", diff, "kmc_g89_two_box_transfer_prob",
                 q_en, q_ar, opts_en, opts_ar, cidx, cans,
-                h_en, h_ar, s_en, s_ar, diagram_en=svg_en,
+                h_en, h_ar, s_en, s_ar, diagram_en=svg_en, diagram_ar=svg_ar,
             )
         )
 

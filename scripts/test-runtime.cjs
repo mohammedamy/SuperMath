@@ -47,7 +47,7 @@ const run=s=>vm.runInContext(s,context);
  // Switching away from a selected subtrack must not retain its hidden filter.
  elements.get('quiz-track-select').value='kaust';context.filterQuestions();
  assert.equal(run('currentFilteredQuestions.length'),2250);
- assert(run('currentFilteredQuestions.every(q=>q.content.en.options.length===5&&q.content.ar.options.length===5)'));
+ assert(run('currentFilteredQuestions.every(q=>q.content.en.options.length===5&&q.content.ar.options.length===5&&q.content.en.diagram?.includes("<svg")&&q.content.ar.diagram?.includes("<svg"))'));
  elements.get('quiz-kaust-phase-select').value='Track 1: Grades 6-7';context.filterQuestions();
  assert.equal(run('currentFilteredQuestions.length'),750);
  elements.get('quiz-kaust-phase-select').value='Track 2: Grades 8-9';context.filterQuestions();

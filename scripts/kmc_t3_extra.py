@@ -12,14 +12,21 @@ from kmc_common import (
     make_kmc_question,
 )
 from kmc_diagrams_extra import (
+    svg_algebra_flow,
     svg_angle_bisector_tri,
     svg_binary_bulbs,
     svg_coord_diamond,
+    svg_digit_cards,
     svg_factor_tree,
+    svg_factorial_padic_bars,
+    svg_number_line_sign_chart,
     svg_parabola_roots,
+    svg_pigeonhole_bins,
     svg_power_of_point,
     svg_right_tri_incircle,
     svg_round_table,
+    svg_symmetry_curve,
+    svg_telescoping_chain,
 )
 
 LEVEL = "Track 3: Grades 10-11"
@@ -203,7 +210,16 @@ def _gen_lesson_3_1(push) -> None:
                 ],
                 f"انتبه: لا تقسم {n} مباشرةً على {base} لأن {base} عدد غير أولي!",
             )
-        push(topic, diff, "kmc_g1011_legendre_prime_factorial", q_en, q_ar, opts_en, opts_ar, cidx, cans, h_en, h_ar, s_en, s_ar)
+        if len(pf) == 1 and next(iter(pf.values())) == 1:
+            cols_leg = [(f"÷{base}", 0.90, f"⌊{n}/{base}⌋"), (f"÷{base*base}", 0.52, f"⌊{n}/{base*base}⌋"), ("···", 0.24, "?")]
+            svg_en = svg_factorial_padic_bars(f"{base}ᵏ | {n}! → k = ?", cols_leg, footer_lbl=f"Legendre sum for {n}!")
+            cols_leg_ar = [(f"÷{base}", 0.90, f"⌊{n}/{base}⌋"), (f"÷{base*base}", 0.52, f"⌊{n}/{base*base}⌋"), ("···", 0.24, "؟")]
+            svg_ar = svg_factorial_padic_bars(f"{base}ᵏ | {n}! ← أكبر k = ؟", cols_leg_ar, footer_lbl=f"مجموع ليجاندر للعدد {n}!")
+        else:
+            cols_leg = [(f"p = {p}", max(0.35, 0.90 - 0.22 * i), f"⌊{n}/{p}⌋+…") for i, (p, _) in enumerate(sorted(pf.items()))]
+            svg_en = svg_factorial_padic_bars(f"{base}ᵏ | {n}! → k = ?", cols_leg, footer_lbl=f"Prime factors of {base}")
+            svg_ar = svg_factorial_padic_bars(f"{base}ᵏ | {n}! ← أكبر k = ؟", cols_leg, footer_lbl=f"العوامل الأولية للأساس {base}")
+        push(topic, diff, "kmc_g1011_legendre_prime_factorial", q_en, q_ar, opts_en, opts_ar, cidx, cans, h_en, h_ar, s_en, s_ar, svg_en, svg_ar)
 
     # ------------------------------------------------------------------
     # 2. kmc_g1011_divisors_of_square_cube (17 Qs: 5 Easy, 8 Medium, 4 Hard)
@@ -488,7 +504,13 @@ def _gen_lesson_3_1(push) -> None:
                 f"انتبه للفرق الدقيق: «أكبر عدد مستحيل» هو {m(max_u)}، بينما «بداية الأعداد الممكنة دائماً» هي {m(ans)}!",
             )
         opts_en, opts_ar, cidx, cans = make_5_math_options(ans, distractors, f"t3x_frob_{v_i}")
-        push(topic, diff, "kmc_g1011_frobenius_coin_stamp", q_en, q_ar, opts_en, opts_ar, cidx, cans, h_en, h_ar, s_en, s_ar)
+        bins_frob_en = [("Type A", f"+{a}"), ("Type B", f"+{b}"), ("Total", f"{a}x + {b}y")]
+        bins_frob_ar = [("الفئة ١", f"+{a}"), ("الفئة ٢", f"+{b}"), ("المجموع", f"{a}x + {b}y")]
+        foot_en = "Largest impossible = ?" if mode == "max" else ("Impossible count = ?" if mode == "count" else "Smallest M (all n ≥ M) = ?")
+        foot_ar = "أكبر عدد مستحيل = ؟" if mode == "max" else ("عدد القيم المستحيلة = ؟" if mode == "count" else "أصغر بداية M = ؟")
+        svg_en = svg_pigeonhole_bins(bins_frob_en, header_lbl=f"gcd({a}, {b}) = 1", footer_lbl=foot_en)
+        svg_ar = svg_pigeonhole_bins(bins_frob_ar, header_lbl=f"gcd({a}, {b}) = 1", footer_lbl=foot_ar)
+        push(topic, diff, "kmc_g1011_frobenius_coin_stamp", q_en, q_ar, opts_en, opts_ar, cidx, cans, h_en, h_ar, s_en, s_ar, svg_en, svg_ar)
 
 
 def _gen_lesson_3_2(push) -> None:
@@ -590,7 +612,15 @@ def _gen_lesson_3_2(push) -> None:
                 ],
                 f"تذكّر حساب الحدود من \\( {max_q * m_div} \\) إلى \\( {n_hi} \\) شاملاً الطرفين بإضافة \\( 1 \\): عددها \\( {tail_cnt} \\)!",
             )
-        push(topic, diff, "kmc_g1011_hermite_paired_floor_sum", q_en, q_ar, opts_en, opts_ar, cidx, cans, h_en, h_ar, s_en, s_ar)
+        if kind == "gauss":
+            terms_flr = [f"⌊{p}/{q}⌋", f"⌊{2*p}/{q}⌋", "···", f"⌊{p*(q-1)}/{q}⌋"]
+            svg_en = svg_telescoping_chain(terms_flr, op_sym="+", title_lbl=f"Sum (k = 1..{q-1}) = ?", footer_lbl=f"Pair k with {q} − k", slash_middle=False)
+            svg_ar = svg_telescoping_chain(terms_flr, op_sym="+", title_lbl=f"المجموع (k = 1..{q-1}) = ؟", footer_lbl=f"تزويج k مع {q} − k", slash_middle=False)
+        else:
+            terms_flr = [f"⌊1/{m_div}⌋", f"⌊2/{m_div}⌋", "···", f"⌊{n_hi}/{m_div}⌋"]
+            svg_en = svg_telescoping_chain(terms_flr, op_sym="+", title_lbl=f"Sum (k = 1..{n_hi}) = ?", footer_lbl=f"Blocks of size {m_div}", slash_middle=False)
+            svg_ar = svg_telescoping_chain(terms_flr, op_sym="+", title_lbl=f"المجموع (k = 1..{n_hi}) = ؟", footer_lbl=f"مجموعات طولها {m_div}", slash_middle=False)
+        push(topic, diff, "kmc_g1011_hermite_paired_floor_sum", q_en, q_ar, opts_en, opts_ar, cidx, cans, h_en, h_ar, s_en, s_ar, svg_en, svg_ar)
 
     # ------------------------------------------------------------------
     # 5. kmc_g1011_base_b_representation (17 Qs: 5 Easy, 8 Medium, 4 Hard)
@@ -636,7 +666,8 @@ def _gen_lesson_3_2(push) -> None:
             bits = payload
             n_b = len(bits)
             weights = tuple(b_val ** (n_b - 1 - i) for i in range(n_b))
-            svg = svg_binary_bulbs(bits, weights)
+            svg_en = svg_binary_bulbs(bits, weights, lang="en")
+            svg_ar = svg_binary_bulbs(bits, weights, lang="ar")
             ans = sum(bit * w for bit, w in zip(bits, weights))
             dig_str = "".join(str(x) for x in bits)
             assert int(dig_str, b_val) == ans
@@ -673,7 +704,7 @@ def _gen_lesson_3_2(push) -> None:
                 ],
                 f"انتبه: الأساس هنا هو {m(b_val)} وليس النظام الثنائي {m(2)}!",
             )
-            push(topic, diff, "kmc_g1011_base_b_representation", q_en, q_ar, opts_en, opts_ar, cidx, cans, h_en, h_ar, s_en, s_ar, svg)
+            push(topic, diff, "kmc_g1011_base_b_representation", q_en, q_ar, opts_en, opts_ar, cidx, cans, h_en, h_ar, s_en, s_ar, svg_en, svg_ar)
 
         elif kind == "to10":
             d2, d1, d0 = payload
@@ -709,7 +740,9 @@ def _gen_lesson_3_2(push) -> None:
                 ],
                 f"تحقق سريع: جميع الأرقام ({m(f'{d2}, {d1}, {d0}')}) أصغر تماماً من الأساس {m(b_val)}.",
             )
-            push(topic, diff, "kmc_g1011_base_b_representation", q_en, q_ar, opts_en, opts_ar, cidx, cans, h_en, h_ar, s_en, s_ar)
+            svg_en = svg_digit_cards([str(d2), str(d1), str(d0)], badge_lbl=f"Base {b_val} → Base 10", note_lbl=f"({dig_str}) = ?")
+            svg_ar = svg_digit_cards([str(d2), str(d1), str(d0)], badge_lbl=f"الأساس {b_val} ← الأساس 10", note_lbl=f"({dig_str}) = ؟")
+            push(topic, diff, "kmc_g1011_base_b_representation", q_en, q_ar, opts_en, opts_ar, cidx, cans, h_en, h_ar, s_en, s_ar, svg_en, svg_ar)
 
         elif kind == "digsum":
             N_dec = payload
@@ -750,7 +783,9 @@ def _gen_lesson_3_2(push) -> None:
                 ],
                 f"تحقق عكسي: {m(' + '.join(f'{d} \\times {b_val}^{{{len(digs)-1-i}}}' for i, d in enumerate(digs)) + f' = {N_dec}')}!",
             )
-            push(topic, diff, "kmc_g1011_base_b_representation", q_en, q_ar, opts_en, opts_ar, cidx, cans, h_en, h_ar, s_en, s_ar)
+            svg_en = svg_digit_cards(["?"] * len(digs), badge_lbl=f"{N_dec} in base {b_val}", note_lbl="Sum of digits = ?")
+            svg_ar = svg_digit_cards(["؟"] * len(digs), badge_lbl=f"العدد {N_dec} في الأساس {b_val}", note_lbl="مجموع الأرقام = ؟")
+            push(topic, diff, "kmc_g1011_base_b_representation", q_en, q_ar, opts_en, opts_ar, cidx, cans, h_en, h_ar, s_en, s_ar, svg_en, svg_ar)
 
         elif kind == "swap":
             da, db, d_step = payload
@@ -805,7 +840,9 @@ def _gen_lesson_3_2(push) -> None:
                 ],
                 f"تحقق: \\( ({da}{db})_{{{b_val}}} = {val_10} \\) وكذلك \\( ({db}{da})_{{{b_val+d_step}}} = {db}({b_val+d_step}) + {da} = {val_10} \\)!",
             )
-            push(topic, diff, "kmc_g1011_base_b_representation", q_en, q_ar, opts_en, opts_ar, cidx, cans, h_en, h_ar, s_en, s_ar)
+            svg_en = svg_digit_cards([f"{da}b + {db}", "=", f"{db}(b+{d_step})+{da}"], badge_lbl="Base Swap", note_lbl=("b = ?" if b_val == 5 else "Base-10 value = ?"))
+            svg_ar = svg_digit_cards([f"{da}b + {db}", "=", f"{db}(b+{d_step})+{da}"], badge_lbl="تبديل الخانات", note_lbl=("b = ؟" if b_val == 5 else "القيمة العشرية = ؟"))
+            push(topic, diff, "kmc_g1011_base_b_representation", q_en, q_ar, opts_en, opts_ar, cidx, cans, h_en, h_ar, s_en, s_ar, svg_en, svg_ar)
 
         else:
             # kind == "find_b": (d2 d1 d0)_b = N_dec -> solve quadratic d2*b^2 + d1*b + d0 = N_dec for integer b > max(d2,d1,d0)
@@ -842,7 +879,9 @@ def _gen_lesson_3_2(push) -> None:
                 ],
                 f"حصر الأساس \\( b \\) يوفّر عليك حل المعادلة التربيعية كاملةً!",
             )
-            push(topic, diff, "kmc_g1011_base_b_representation", q_en, q_ar, opts_en, opts_ar, cidx, cans, h_en, h_ar, s_en, s_ar)
+            svg_en = svg_digit_cards([str(d2), str(d1), str(d0)], badge_lbl=f"{d2}b² + {d1}b + {d0} = {N_dec}", note_lbl="Base b = ?")
+            svg_ar = svg_digit_cards([str(d2), str(d1), str(d0)], badge_lbl=f"{d2}b² + {d1}b + {d0} = {N_dec}", note_lbl="الأساس b = ؟")
+            push(topic, diff, "kmc_g1011_base_b_representation", q_en, q_ar, opts_en, opts_ar, cidx, cans, h_en, h_ar, s_en, s_ar, svg_en, svg_ar)
 
     # ------------------------------------------------------------------
     # 6. kmc_g1011_constrained_sum_prod_extremum (16 Qs: 5 Easy, 7 Medium, 4 Hard)
@@ -1050,7 +1089,24 @@ def _gen_lesson_3_2(push) -> None:
                 ],
                 f"تحقق عند \\( (10, 5) \\): \\( 10^2 + 2(5^2) = 100 + 50 = 150 \\)!",
             )
-        push(topic, diff, "kmc_g1011_constrained_sum_prod_extremum", q_en, q_ar, opts_en, opts_ar, cidx, cans, h_en, h_ar, s_en, s_ar)
+        if kind == "amgm":
+            eu = f"x + {b}/x" if a == 1 else f"{a}x + {b}/x"
+            svg_en = svg_symmetry_curve("extremum", title_lbl=f"Min of {eu} (x > 0)", p1_lbl="Min = ?", p2_lbl="x > 0")
+            svg_ar = svg_symmetry_curve("extremum", title_lbl=f"أصغر قيمة: {eu}", p1_lbl="الأصغر = ؟", p2_lbl="x > 0")
+        elif kind == "amgm_shift":
+            svg_en = svg_symmetry_curve("extremum", title_lbl=f"Min of x + {b}/(x−3)", p1_lbl="Min = ?", p2_lbl="x > 3")
+            svg_ar = svg_symmetry_curve("extremum", title_lbl=f"أصغر قيمة: x + {b}/(x−3)", p1_lbl="الأصغر = ؟", p2_lbl="x > 3")
+        elif kind == "rect_prod":
+            eu = f"x({S} − x)" if k == 1 else f"x({S} − {k}x)"
+            svg_en = svg_symmetry_curve("extremum", title_lbl=f"Max of {eu}", p1_lbl="Max = ?", p2_lbl=f"0 < x < {S}")
+            svg_ar = svg_symmetry_curve("extremum", title_lbl=f"أكبر قيمة: {eu}", p1_lbl="الأكبر = ؟", p2_lbl=f"0 < x < {S}")
+        elif kind == "sum_sq":
+            svg_en = svg_symmetry_curve("extremum", title_lbl=f"x + y = {S} → x²+y²", p1_lbl="Min = ?", p2_lbl=f"x + y = {S}")
+            svg_ar = svg_symmetry_curve("extremum", title_lbl=f"x + y = {S} ← أصغر x²+y²", p1_lbl="الأصغر = ؟", p2_lbl=f"x + y = {S}")
+        else:
+            svg_en = svg_symmetry_curve("extremum", title_lbl="x + y = 15 → x²+2y²", p1_lbl="Min = ?", p2_lbl="x + y = 15")
+            svg_ar = svg_symmetry_curve("extremum", title_lbl="x + y = 15 ← أصغر x²+2y²", p1_lbl="الأصغر = ؟", p2_lbl="x + y = 15")
+        push(topic, diff, "kmc_g1011_constrained_sum_prod_extremum", q_en, q_ar, opts_en, opts_ar, cidx, cans, h_en, h_ar, s_en, s_ar, svg_en, svg_ar)
 
 
 def _gen_lesson_3_3(push) -> None:
@@ -1093,14 +1149,26 @@ def _gen_lesson_3_3(push) -> None:
             s += f" - {abs(c_c)}"
         return s
 
+    def _poly_u(a_c: int, b_c: int, c_c: int) -> str:
+        s = "x²" if a_c == 1 else f"{a_c}x²"
+        if b_c > 0:
+            s += f"+{b_c}x" if b_c != 1 else "+x"
+        elif b_c < 0:
+            s += f"−{abs(b_c)}x" if abs(b_c) != 1 else "−x"
+        if c_c > 0:
+            s += f"+{c_c}"
+        elif c_c < 0:
+            s += f"−{abs(c_c)}"
+        return s
+
     for v_i, item in enumerate(par_cases):
         kind = item[0]
         diff = item[-1]
-        svg = svg_parabola_roots("r₁", "r₂", "V")
         if kind == "vy":
             _, r1, r2, a_l, _ = item
             b_c = -a_l * (r1 + r2)
             c_c = a_l * r1 * r2
+            svg = svg_parabola_roots("r₁", "r₂", f"y = {_poly_u(a_l, b_c, c_c)}")
             vx = (r1 + r2) // 2
             assert (r1 + r2) % 2 == 0
             vy = a_l * (vx - r1) * (vx - r2)
@@ -1142,6 +1210,7 @@ def _gen_lesson_3_3(push) -> None:
             )
         elif kind == "chord":
             _, b_lin, c_const, _ = item
+            svg = svg_parabola_roots("r₁", "r₂", f"y = {_poly_u(1, -b_lin, c_const)}")
             disc = b_lin * b_lin - 4 * c_const
             ans = math.isqrt(disc)
             assert ans * ans == disc
@@ -1181,6 +1250,7 @@ def _gen_lesson_3_3(push) -> None:
             )
         elif kind == "chord_surd":
             _, b_lin, c_const, _ = item
+            svg = svg_parabola_roots("r₁", "r₂", f"y = {_poly_u(1, -b_lin, c_const)}")
             disc = b_lin * b_lin - 4 * c_const
             # Extract largest square factor
             k_out = 1
@@ -1227,6 +1297,7 @@ def _gen_lesson_3_3(push) -> None:
             _, r1, r2, a_l, _ = item
             b_c = -a_l * (r1 + r2)
             c_c = a_l * r1 * r2
+            svg = svg_parabola_roots("r₁", "r₂", f"y = {_poly_u(a_l, b_c, c_c)}")
             vx = (r1 + r2) // 2
             vy = a_l * (vx - r1) * (vx - r2)
             base_len = r2 - r1
@@ -1462,7 +1533,27 @@ def _gen_lesson_3_3(push) -> None:
                 ],
                 f"تحقق بالتعويض: كلا العددين {m(r1)} و{m(r2)} يحققان المعادلة الأصلية تماماً!",
             )
-        push(topic, diff, "kmc_g1011_exp_quadratic_substitution", q_en, q_ar, opts_en, opts_ar, cidx, cans, h_en, h_ar, s_en, s_ar)
+        if kind == "one_pos":
+            mid_u = f"−{B_coef}·{b}ˣ" if B_coef > 0 else (f"+{abs(B_coef)}·{b}ˣ" if B_coef < 0 else "")
+            eq_u = f"{b2}ˣ{mid_u}−{C_coef}=0"
+            cards_en = [("Equation", eq_u), ("Sub", f"u = {b}ˣ > 0"), ("Solve", "x = ?")]
+            cards_ar = [("المعادلة", eq_u), ("التعويض", f"u = {b}ˣ > 0"), ("المطلوب", "x = ؟")]
+        elif kind == "two_clean":
+            eq_u = f"{b2}ˣ−{S_u}·{b}ˣ+{P_u}=0"
+            t_u = "x₁+x₂ = ?" if ask == "sum" else ("|x₂−x₁| = ?" if ask == "diff" else "x₁²+x₂² = ?")
+            cards_en = [("Equation", eq_u), ("Sub", f"u = {b}ˣ"), ("Target", t_u)]
+            cards_ar = [("المعادلة", eq_u), ("التعويض", f"u = {b}ˣ"), ("المطلوب", t_u.replace("?", "؟"))]
+        elif kind == "vieta_prod":
+            eq_u = f"{b2}ˣ−{M_mid}·{b}ˣ+{P_const}=0"
+            cards_en = [("Equation", eq_u), ("Sub", f"u = {b}ˣ"), ("Sum", "x₁ + x₂ = ?")]
+            cards_ar = [("المعادلة", eq_u), ("التعويض", f"u = {b}ˣ"), ("المجموع", "x₁ + x₂ = ؟")]
+        else:
+            eq_u = f"{b}ˣ + {P_c}·{b}⁻ˣ = {S_c}"
+            cards_en = [("Equation", eq_u), ("Sub", f"u = {b}ˣ"), ("Target", "x₁² + x₂² = ?")]
+            cards_ar = [("المعادلة", eq_u), ("التعويض", f"u = {b}ˣ"), ("المطلوب", "x₁² + x₂² = ؟")]
+        svg_en = svg_algebra_flow(cards_en, title_lbl=eq_u)
+        svg_ar = svg_algebra_flow(cards_ar, title_lbl=eq_u)
+        push(topic, diff, "kmc_g1011_exp_quadratic_substitution", q_en, q_ar, opts_en, opts_ar, cidx, cans, h_en, h_ar, s_en, s_ar, svg_en, svg_ar)
 
     # ------------------------------------------------------------------
     # 9. kmc_g1011_reciprocal_cube_power (16 Qs: 5 Easy, 7 Medium, 4 Hard)
@@ -1634,7 +1725,22 @@ def _gen_lesson_3_3(push) -> None:
                 ],
                 f"تجنّب الفخ: لا تنسَ الضرب في \\( ab = {c_n} \\) (فالناتج {m(ans)} وليس {m(k_v**3 - 3*k_v)})!",
             )
-        push(topic, diff, "kmc_g1011_reciprocal_cube_power", q_en, q_ar, opts_en, opts_ar, cidx, cans, h_en, h_ar, s_en, s_ar)
+        if mode == "sum3":
+            g_u, t_u = f"x + 1/x = {k_v}", "x³ + 1/x³ = ?"
+        elif mode == "diff3":
+            g_u, t_u = f"x − 1/x = {k_v}", "x³ − 1/x³ = ?"
+        elif mode in ("sum4", "diff4"):
+            op_u = "+" if mode == "sum4" else "−"
+            g_u, t_u = f"x {op_u} 1/x = {k_v}", "x⁴ + 1/x⁴ = ?"
+        elif mode in ("quad_sum3", "quad_diff3"):
+            cs_u = "+ 1" if mode == "quad_sum3" else "− 1"
+            ts_u = "+" if mode == "quad_sum3" else "−"
+            g_u, t_u = f"x² − {k_v}x {cs_u} = 0", f"x³ {ts_u} 1/x³ = ?"
+        else:
+            g_u, t_u = f"x + {c_n}/x = {k_v}", f"x³ + {c_n**3}/x³ = ?"
+        svg_en = svg_algebra_flow([("Given", g_u), ("Target", t_u)], title_lbl=g_u)
+        svg_ar = svg_algebra_flow([("المعطى", g_u), ("المطلوب", t_u.replace("?", "؟"))], title_lbl=g_u)
+        push(topic, diff, "kmc_g1011_reciprocal_cube_power", q_en, q_ar, opts_en, opts_ar, cidx, cans, h_en, h_ar, s_en, s_ar, svg_en, svg_ar)
 
 
 def _gen_lesson_3_4(push) -> None:
@@ -1753,7 +1859,19 @@ def _gen_lesson_3_4(push) -> None:
                 ],
                 f"تحقق: \\( {a}({fmt_val(ans)}) + ({b})({fmt_val(v_val)}) = {fmt_val(rhs0)} \\)!",
             )
-        push(topic, diff, "kmc_g1011_functional_involution_system", q_en, q_ar, opts_en, opts_ar, cidx, cans, h_en, h_ar, s_en, s_ar)
+        if kind == "comp":
+            bp_u = f"+ {b}f({S}−x)" if b > 1 else (f"+ f({S}−x)" if b == 1 else (f"− f({S}−x)" if b == -1 else f"− {abs(b)}f({S}−x)"))
+            rh_u = f"{m_sl}x" + (f"+{c_con}" if c_con > 0 else (f"−{abs(c_con)}" if c_con < 0 else ""))
+            eq_u = f"{a}f(x) {bp_u} = {rh_u}"
+            sw_u = f"x ↔ {S} − x"
+        else:
+            bp_u = f"+ {b}f(1/x)" if b > 1 else (f"+ f(1/x)" if b == 1 else (f"− f(1/x)" if b == -1 else f"− {abs(b)}f(1/x)"))
+            rh_u = f"{c_x}x" + (f"+{d_inv}/x" if d_inv > 0 else "")
+            eq_u = f"{a}f(x) {bp_u} = {rh_u}"
+            sw_u = "x ↔ 1/x"
+        svg_en = svg_algebra_flow([("Swap", sw_u), ("Target", f"f({x0}) = ?")], title_lbl=eq_u)
+        svg_ar = svg_algebra_flow([("التبديل", sw_u), ("المطلوب", f"f({x0}) = ؟")], title_lbl=eq_u)
+        push(topic, diff, "kmc_g1011_functional_involution_system", q_en, q_ar, opts_en, opts_ar, cidx, cans, h_en, h_ar, s_en, s_ar, svg_en, svg_ar)
 
     # ------------------------------------------------------------------
     # 11. kmc_g1011_manhattan_diamond_area (17 Qs: 5 Easy, 8 Medium, 4 Hard)
@@ -2154,7 +2272,17 @@ def _gen_lesson_3_4(push) -> None:
                 ],
                 f"إخراج العامل \\( 2 \\) أمام الجذر الداخلي هو الخطوة المفتاحية دائماً!",
             )
-        push(topic, diff, "kmc_g1011_nested_radical_denest", q_en, q_ar, opts_en, opts_ar, cidx, cans, h_en, h_ar, s_en, s_ar)
+        if kind == "one_sub":
+            e_u = f"√({A} + 2√{B}) − √{v}"
+        elif kind == "diff_cancel":
+            e_u = f"√({A}+2√{B}) − √({A}−2√{B})"
+        elif kind == "sum_cancel":
+            e_u = f"√({A}+2√{B}) + √({A}−2√{B})"
+        else:
+            e_u = f"√({A} + √{four_B}) − √{v}"
+        svg_en = svg_algebra_flow([("Nested", e_u), ("Denest", "√u ± √v"), ("Value", "?")], title_lbl=f"{e_u} = ?")
+        svg_ar = svg_algebra_flow([("المقدار", e_u), ("الفك", "√u ± √v"), ("القيمة", "؟")], title_lbl=f"{e_u} = ؟")
+        push(topic, diff, "kmc_g1011_nested_radical_denest", q_en, q_ar, opts_en, opts_ar, cidx, cans, h_en, h_ar, s_en, s_ar, svg_en, svg_ar)
 
 
 def _gen_lesson_3_5(push) -> None:
@@ -3124,7 +3252,24 @@ def _gen_lesson_3_6(push) -> None:
                 ],
                 f"تحقق سريع: الثلاثية \\( (2, 2, {N-4}) \\) تقابل \\( (1, 1, {half_N-2}) \\) وهكذا!",
             )
-        push(topic_comb, diff, "kmc_g1011_stars_and_bars_solutions", q_en, q_ar, opts_en, opts_ar, cidx, cans, h_en, h_ar, s_en, s_ar)
+        if kind in ("nonneg_eq", "nonneg_box"):
+            bins_sb = [(vn, "≥ 0") for vn in vars_list[:k]]
+            h_u = f"{' + '.join(vars_list[:k])} = {N}"
+        elif kind in ("pos_eq", "pos_box"):
+            bins_sb = [(vn, "≥ 1") for vn in vars_list[:k]]
+            h_u = f"{' + '.join(vars_list[:k])} = {N}"
+        elif kind == "lower":
+            bins_sb = [(vn, f"≥ {lv}") for vn, lv in zip(v_names, lows)]
+            h_u = f"{v_tex} = {N}"
+        elif kind == "ineq":
+            bins_sb = [(vn, "≥ 0") for vn in v_names]
+            h_u = f"{v_tex} ≤ {N}"
+        else:
+            bins_sb = [("x = 2a", "≥ 2"), ("y = 2b", "≥ 2"), ("z = 2c", "≥ 2")]
+            h_u = f"x + y + z = {N}"
+        svg_en = svg_pigeonhole_bins(bins_sb, header_lbl=h_u, footer_lbl="Solutions = ?")
+        svg_ar = svg_pigeonhole_bins(bins_sb, header_lbl=h_u, footer_lbl="عدد الحلول = ؟")
+        push(topic_comb, diff, "kmc_g1011_stars_and_bars_solutions", q_en, q_ar, opts_en, opts_ar, cidx, cans, h_en, h_ar, s_en, s_ar, svg_en, svg_ar)
 
     # ------------------------------------------------------------------
     # 17. kmc_g1011_circular_seating_derangement (17 Qs: 5 Easy, 8 Medium, 4 Hard)

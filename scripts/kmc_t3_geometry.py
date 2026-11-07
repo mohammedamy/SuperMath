@@ -423,7 +423,7 @@ def generate() -> list[dict]:
         (6, 5, 45, "total", "Hard"),      # unit=5, total=180
     ]
     for v_i, (n_st, g_idx, g_area, ask, diff) in enumerate(sim_cases):
-        svg = svg_subdivided_apex_triangle(2, min(n_st, 4))
+        svg = svg_subdivided_apex_triangle(2, min(n_st, 7))
         odd_g = 2 * g_idx - 1
         assert g_area % odd_g == 0
         unit_a = g_area // odd_g

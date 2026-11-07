@@ -10,6 +10,13 @@ from kmc_diagrams import (
     svg_number_strip,
     svg_number_line_jumps,
 )
+from kmc_diagrams_extra import (
+    svg_function_machine,
+    svg_motion_timeline,
+    svg_number_line_sign_chart,
+    svg_pan_balance_coins,
+    svg_score_table,
+)
 
 LEVEL = "Track 1: Grades 6-7"
 
@@ -456,12 +463,16 @@ def generate_t1_algebra() -> list[dict]:
             ],
             f"تحقق بالتعويض عن {m(f'x = {ans}')}: كلا الطرفين يعطي القيمة {m(res_v)} تمامًا.",
         )
+        op2_box = f"− {abs(c1)}" if c1 < 0 else f"+ {c1}"
+        out_box = f"{m2}x + {c2}" if c2 > 0 else f"{m2}x − {abs(c2)}"
+        svg_en = svg_function_machine("x = ?", f"× {m1}", op2_box, out_box)
+        svg_ar = svg_function_machine("x = ؟", f"× {m1}", op2_box, out_box)
         items.append(make_kmc_question(
             qid, LEVEL, "Algebra", "Easy", "g67-thought-of-number",
             q_en, q_ar, opts_en, opts_ar, cidx, cans,
             f"Let the number be x, write {lhs_s} = {rhs_s}, and solve for x.",
             f"افرض العدد x واكتب المعادلة {lhs_s} = {rhs_s} ثم أوجد قيمة x.",
-            sol_en, sol_ar
+            sol_en, sol_ar, diagram_en=svg_en, diagram_ar=svg_ar
         ))
 
     # 7. Restaurant / hall tables with 3, 4, or 6 chairs (10 variants) — KMC G6-7 Sample Q19
@@ -521,12 +532,22 @@ def generate_t1_algebra() -> list[dict]:
             ],
             f"تحقق: {m(f'{ans}\\times{c_sm} + {t_md}\\times{c_md} + {t_lg}\\times{c_lg} = {cap_all}')} شخصًا ومجموع الطاولات {m(n_tot)}.",
         )
+        svg_en = svg_score_table(
+            ["Seats", "Tables", "People"],
+            [[f"{c_sm} or {c_md}", "?", f"{cap_sm_md}"], [f"{c_lg} seats", "?", "?"], ["Total", f"{n_tot}", f"{cap_all}"]],
+            title_lbl=f"{c_sm}-seat tables = ?",
+        )
+        svg_ar = svg_score_table(
+            ["المقاعد", "الطاولات", "الأشخاص"],
+            [[f"{c_sm} أو {c_md}", "؟", f"{cap_sm_md}"], [f"{c_lg} مقاعد", "؟", "؟"], ["المجموع", f"{n_tot}", f"{cap_all}"]],
+            title_lbl=f"طاولات {c_sm} مقاعد = ؟",
+        )
         items.append(make_kmc_question(
             qid, LEVEL, "Algebra", "Medium", "g67-three-table-sizes",
             q_en, q_ar, opts_en, opts_ar, cidx, cans,
             f"Subtract {cap_sm_md} from {cap_all} first to find how many people sit at the {c_lg}-seat tables!",
             f"اطرح {cap_sm_md} من {cap_all} أولًا لتعرف كم شخصًا يجلسون على طاولات الـ {c_lg} مقاعد!",
-            sol_en, sol_ar
+            sol_en, sol_ar, diagram_en=svg_en, diagram_ar=svg_ar
         ))
 
     # 8. Road signposts / collinear towns distance puzzle (10 variants) — KMC G6-7 Practice Set 2 Q3
@@ -582,12 +603,22 @@ def generate_t1_algebra() -> list[dict]:
             ],
             f"تحقق آخر: اللافتة الثانية تبعد عن {m('B')} مسافة {m(f'{d3} - {AB} = {d3 - AB}')} كم، يضاف إليها {m(d4)} كم حتى {m('C')} فيكون المجموع {m(ans)} كم.",
         )
+        svg_en = svg_number_line_sign_chart(
+            [("A", True), (f"S1 ({d1}|{d2})", False), ("B", True), (f"S2 ({d3}|{d4})", False), ("C", True)],
+            header_lbl="Highway: A — S1 — B — S2 — C",
+            footer_lbl="Distance BC = ? km",
+        )
+        svg_ar = svg_number_line_sign_chart(
+            [("A", True), (f"ل1 ({d1}|{d2})", False), ("B", True), (f"ل2 ({d3}|{d4})", False), ("C", True)],
+            header_lbl="الطريق: A — B — C",
+            footer_lbl="المسافة BC = ؟ كم",
+        )
         items.append(make_kmc_question(
             qid, LEVEL, "Algebra", "Medium", "g67-road-signposts",
             q_en, q_ar, opts_en, opts_ar, cidx, cans,
             "Use Signpost 1 to find the distance from A to B, and Signpost 2 to find the whole distance from A to C.",
             "استخدم اللافتة الأولى لإيجاد المسافة بين A و B، واللافتة الثانية لإيجاد المسافة الكلية بين A و C.",
-            sol_en, sol_ar
+            sol_en, sol_ar, diagram_en=svg_en, diagram_ar=svg_ar
         ))
 
     # 9. Symmetric purchases (pens & notebooks: finding 1 pen + 1 notebook without heavy systems!) (10 variants)
@@ -639,12 +670,24 @@ def generate_t1_algebra() -> list[dict]:
             ],
             f"تحقق سريع: {m(f'{k_sum} \\times {ans} = {c1 + c2}')} ريالًا.",
         )
+        svg_en = svg_pan_balance_coins(
+            "1 + 1 = ? riyals",
+            f"{a1}A + {b1}B = {c1}",
+            f"{a2}A + {b2}B = {c2}",
+            sub_lbl="Combine both baskets",
+        )
+        svg_ar = svg_pan_balance_coins(
+            "1 + 1 = ؟ ريال",
+            f"{a1}أ + {b1}ب = {c1}",
+            f"{a2}أ + {b2}ب = {c2}",
+            sub_lbl="اجمع السلتين معًا",
+        )
         items.append(make_kmc_question(
             qid, LEVEL, "Algebra", "Medium", "g67-symmetric-basket-sum",
             q_en, q_ar, opts_en, opts_ar, cidx, cans,
             "Try adding the two purchases together — look at how many of each item you get!",
             "جرّب جمع المشتريتين معًا ولاحظ كم قطعة ستحصل عليها من كل نوع!",
-            sol_en, sol_ar
+            sol_en, sol_ar, diagram_en=svg_en, diagram_ar=svg_ar
         ))
 
     # 10. Age difference invariance puzzles (10 variants)
@@ -698,12 +741,22 @@ def generate_t1_algebra() -> list[dict]:
             ],
             f"تحقق بعد {m(ans)} سنوات: يصبح العمران {m(a_old + ans)} و {m(a_yng + ans)}، وبالفعل {m(f'{mult} \\times {a_yng + ans} = {a_old + ans}')}.",
         )
+        svg_en = svg_score_table(
+            ["Time", "Older", "Younger"],
+            [["Now", f"{a_old}", f"{a_yng}"], ["+ ? yrs", f"{mult} ×", "1 ×"]],
+            title_lbl=f"Ratio {mult} : 1 in ? yrs",
+        )
+        svg_ar = svg_score_table(
+            ["الزمن", "الأكبر", "الأصغر"],
+            [["الآن", f"{a_old}", f"{a_yng}"], ["بعد ؟ سنة", f"{mult} ×", "1 ×"]],
+            title_lbl=f"النسبة {mult} : 1 بعد ؟ سنة",
+        )
         items.append(make_kmc_question(
             qid, LEVEL, "Algebra", "Medium", "g67-age-difference-invariant",
             q_en, q_ar, opts_en, opts_ar, cidx, cans,
             f"Notice that the age gap ({a_old} - {a_yng} = {diff} years) stays the same forever!",
             f"تذكّر أن فرق العمر بينهما ({a_old} - {a_yng} = {diff} سنة) يبقى ثابتًا لا يتغير!",
-            sol_en, sol_ar
+            sol_en, sol_ar, diagram_en=svg_en, diagram_ar=svg_ar
         ))
 
     # 11. Catching-up / relative speed walking & cycling puzzles (10 variants)
@@ -757,12 +810,14 @@ def generate_t1_algebra() -> list[dict]:
             ],
             f"تحقق من المسافة: خلال {m(ans)} دقيقة يقطع {p2_a} مسافة {m(ans*v2)} م، ويكون {p1_a} قد مشى {m(lead_min + ans)} دقيقة فقطع {m((lead_min+ans)*v1)} م أيضًا!",
         )
+        svg_en = svg_motion_timeline("Start", f"+{lead_min} min", "Catch-up = ? min", f"{v2} m/min", f"{v1} m/min", meet=False)
+        svg_ar = svg_motion_timeline("البداية", f"تقدّم {lead_min} د", "زمن اللحاق = ؟ د", f"{v2} م/د", f"{v1} م/د", meet=False)
         items.append(make_kmc_question(
             qid, LEVEL, "Algebra", "Medium", "g67-catch-up-chase",
             q_en, q_ar, opts_en, opts_ar, cidx, cans,
             f"First multiply {lead_min} × {v1} to find the head-start gap, then divide by ({v2} - {v1}).",
             f"اضرب {lead_min} × {v1} أولًا لإيجاد المسافة الفاصلة، ثم اقسمها على فرق السرعتين ({v2} - {v1}).",
-            sol_en, sol_ar
+            sol_en, sol_ar, diagram_en=svg_en, diagram_ar=svg_ar
         ))
 
     assert len(items) == 110, f"Expected 110 items, got {len(items)}"

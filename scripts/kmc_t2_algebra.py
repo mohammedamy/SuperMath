@@ -5,8 +5,28 @@ Strictly aligned with official KMC Grades 8-9 Junior syllabus (no calculators).
 from fractions import Fraction
 import math
 from kmc_common import m, explain_en, explain_ar, make_5_math_options, make_kmc_question
+from kmc_diagrams import svg_subdivided_rect_2x2
+from kmc_diagrams_extra import (
+    svg_algebra_flow,
+    svg_area_identity_square,
+    svg_gnomon_diff_squares,
+    svg_number_line_sign_chart,
+    svg_score_table,
+    svg_telescoping_chain,
+)
 
 LEVEL = "Track 2: Grades 8-9"
+
+_SUP_MAP = str.maketrans("0123456789+-", "⁰¹²³⁴⁵⁶⁷⁸⁹⁺⁻")
+_SUB_MAP = str.maketrans("0123456789+-", "₀₁₂₃₄₅₆₇₈₉₊₋")
+
+
+def _sup(v) -> str:
+    return str(v).translate(_SUP_MAP)
+
+
+def _sub(v) -> str:
+    return str(v).translate(_SUB_MAP)
 
 
 def generate_t2_algebra() -> list[dict]:
@@ -74,12 +94,22 @@ def generate_t2_algebra() -> list[dict]:
             ],
             f"احذر من الخطأ الشائع بإخراج {m(f'{k} - \\sqrt{{{p}}}')} كما هو دون القيمة المطلقة؛ الناتج الصحيح هو {m(ans)}.",
         )
+        svg_en = svg_algebra_flow(
+            [("Term 1", f"√(({k}−√{p})²)"), ("Term 2", f"√(({hi}−√{p})²)"), ("Value", "?")],
+            arrows=["+", "="],
+            title_lbl="√(A²) = |A| ≥ 0",
+        )
+        svg_ar = svg_algebra_flow(
+            [("الحد 1", f"√(({k}−√{p})²)"), ("الحد 2", f"√(({hi}−√{p})²)"), ("القيمة", "؟")],
+            arrows=["+", "="],
+            title_lbl="√(A²) = |A| ≥ 0",
+        )
         items.append(make_kmc_question(
             qid, LEVEL, "Algebra", "Medium", "g89-nested-radical-abs",
             q_en, q_ar, opts_en, opts_ar, cidx, cans,
             f"Remember √(X²) = |X| ≥ 0! Check whether {k} - √{p} and {hi} - √{p} are positive or negative by squaring {k} and {hi}.",
             f"تذكّر أن √(X²) = |X| ≥ 0 دائمًا! قارن مربعَي {k} و {hi} بالعدد {p} لتعرف إشارة كل قوس.",
-            sol_en, sol_ar
+            sol_en, sol_ar, svg_en, svg_ar
         ))
 
     # 2. Combined work-rate in minutes (10 variants) — KMC Junior Cat A Q2!
@@ -133,12 +163,22 @@ def generate_t2_algebra() -> list[dict]:
             ],
             f"تحقق منطقي: الزمن المشترك ({m(ans)} دقيقة) أقل من زمن الأسرع بمفرده ({m(min(h1,h2)*60)} دقيقة).",
         )
+        svg_en = svg_score_table(
+            ["Worker", "Alone", "Together"],
+            [[p1_e, f"{h1} h", "? min"], [p2_e, f"{h2} h", "—"]],
+            title_lbl=f"1/{h1} + 1/{h2} per hour",
+        )
+        svg_ar = svg_score_table(
+            ["العامل", "بمفرده", "معاً"],
+            [[p1_a, f"{h1} س", "؟ min"], [p2_a, f"{h2} س", "—"]],
+            title_lbl=f"1/{h1} + 1/{h2} في الساعة",
+        )
         items.append(make_kmc_question(
             qid, LEVEL, "Algebra", "Medium", "g89-work-rate-minutes",
             q_en, q_ar, opts_en, opts_ar, cidx, cans,
             f"Find the fraction of the job done in 1 hour together (1/{h1} + 1/{h2}), invert it for hours, and multiply by 60 for minutes!",
             f"اجمع ما ينجزانه في ساعة واحدة (1/{h1} + 1/{h2})، ثم اقلب الكسر واضربه في 60 لتحويله إلى دقائق!",
-            sol_en, sol_ar
+            sol_en, sol_ar, svg_en, svg_ar
         ))
 
     # 3. Powers of 2 factoring & algebraic expression = 2^m (10 variants) — KMC Junior Cat A Q3!
@@ -223,12 +263,42 @@ def generate_t2_algebra() -> list[dict]:
                 ],
                 f"تحقق بإخراج عامل مشترك: {m(f'2^{{{k}}}(1 + 1 + 2 + 4) = 2^{{{k}}} \\times 8 = 2^{{{k}}} \\times 2^3 = 2^{{{ans}}}')}.",
             )
+        if mode == "base4":
+            svg_en = svg_telescoping_chain(
+                ["a²", "2ab", "4b²", f"2{_sup(ec)}"],
+                op_sym="+",
+                title_lbl=f"a = 2{_sup(ea)}, b = 2{_sup(eb)}",
+                footer_lbl="= 2ᵐ → m = ?",
+                slash_middle=False,
+            )
+            svg_ar = svg_telescoping_chain(
+                ["a²", "2ab", "4b²", f"2{_sup(ec)}"],
+                op_sym="+",
+                title_lbl=f"a = 2{_sup(ea)}، b = 2{_sup(eb)}",
+                footer_lbl="= 2ᵐ ← m = ؟",
+                slash_middle=False,
+            )
+        else:
+            svg_en = svg_telescoping_chain(
+                [f"2{_sup(k)}", f"2{_sup(k)}", f"2{_sup(k+1)}", f"2{_sup(k+2)}"],
+                op_sym="+",
+                title_lbl="2ⁿ + 2ⁿ = 2ⁿ⁺¹",
+                footer_lbl="= 2ᵐ → m = ?",
+                slash_middle=False,
+            )
+            svg_ar = svg_telescoping_chain(
+                [f"2{_sup(k)}", f"2{_sup(k)}", f"2{_sup(k+1)}", f"2{_sup(k+2)}"],
+                op_sym="+",
+                title_lbl="2ⁿ + 2ⁿ = 2ⁿ⁺¹",
+                footer_lbl="= 2ᵐ ← m = ؟",
+                slash_middle=False,
+            )
         items.append(make_kmc_question(
             qid, LEVEL, "Algebra", "Medium", "g89-powers-of-two-sum",
             q_en, q_ar, opts_en, opts_ar, cidx, cans,
             "Never add exponents across a '+' sign! Instead, use 2^n + 2^n = 2^(n+1) or factor out the smallest power of 2.",
             "لا تجمع الأسس في عملية الجمع! استخدم العلاقة 2^n + 2^n = 2^(n+1) أو أخرج أصغر قوة لـ 2 عاملًا مشتركًا.",
-            sol_en, sol_ar
+            sol_en, sol_ar, svg_en, svg_ar
         ))
 
     # 4. Contest scoring (+P correct, -D wrong, U unanswered) (10 variants) — KMC Junior Q9!
@@ -285,12 +355,22 @@ def generate_t2_algebra() -> list[dict]:
             ],
             f"تحقق: {m(n_cor)} صحيحة ({m(n_cor*pt_c)}) ناقص خصم {m(ans)} خاطئة ({m(ans*pt_w)}) = {m(score)} نقطة.",
         )
+        svg_en = svg_score_table(
+            ["Answer", "Pts", "Count"],
+            [["✓", f"+{pt_c}", "—"], ["✗", f"−{pt_w}", "?"], ["Blank", "0", str(n_un)]],
+            title_lbl=f"{n_q} Qs | Score = {score}",
+        )
+        svg_ar = svg_score_table(
+            ["الإجابة", "النقاط", "العدد"],
+            [["✓", f"+{pt_c}", "—"], ["✗", f"−{pt_w}", "؟"], ["متروك", "0", str(n_un)]],
+            title_lbl=f"{n_q} س | الدرجة = {score}",
+        )
         items.append(make_kmc_question(
             qid, LEVEL, "Algebra", "Medium", "g89-contest-scoring",
             q_en, q_ar, opts_en, opts_ar, cidx, cans,
             f"First find how many questions were answered ({n_q} - {n_un}). Remember each wrong answer costs ({pt_c} + {pt_w}) points compared to a correct answer!",
             f"احسب أولًا عدد الأسئلة المجاب عنها ({n_q} - {n_un})، وتذكّر أن كل إجابة خاطئة تُفقد ({pt_c} + {pt_w}) نقاط مقارنة بالإجابة الصحيحة!",
-            sol_en, sol_ar
+            sol_en, sol_ar, svg_en, svg_ar
         ))
 
     # 5. Factoring trick: ab + a + b = C for positive integers a, b (find a + b) (10 variants)
@@ -335,12 +415,14 @@ def generate_t2_algebra() -> list[dict]:
             ],
             f"تحقق بالتعويض: {m(f'{a_v}\\times{b_v} + {a_v} + {b_v} = {a_v*b_v} + {ans} = {C}')} بالضبط.",
         )
+        svg_en = svg_subdivided_rect_2x2("ab", "a", "b", "1 (?)")
+        svg_ar = svg_subdivided_rect_2x2("ab", "a", "b", "1 (؟)")
         items.append(make_kmc_question(
             qid, LEVEL, "Algebra", "Hard", "g89-add-one-factoring",
             q_en, q_ar, opts_en, opts_ar, cidx, cans,
             "Add 1 to both sides so the left-hand side becomes ab + a + b + 1 = (a + 1)(b + 1)!",
             "أضف 1 إلى الطرفين ليصبح الطرف الأيسر قابلاً للتحليل على الصورة (a + 1)(b + 1)!",
-            sol_en, sol_ar
+            sol_en, sol_ar, svg_en, svg_ar
         ))
 
     # 6. Mental difference of squares (A^2 - B^2) / D without calculator (10 variants)
@@ -392,12 +474,16 @@ def generate_t2_algebra() -> list[dict]:
             ],
             f"متطابقة الفرق بين مربعين حوّلت العملية الطويلة إلى حساب ذهني سريع نتيجته {m(ans)}.",
         )
+        note_en = f"({A}²−{B}²)" + (f"÷{D} = ?" if D > 1 else " = ?")
+        note_ar = f"({A}²−{B}²)" + (f"÷{D} = ؟" if D > 1 else " = ؟")
+        svg_en = svg_gnomon_diff_squares(str(A), str(B), note_lbl=note_en)
+        svg_ar = svg_gnomon_diff_squares(str(A), str(B), note_lbl=note_ar)
         items.append(make_kmc_question(
             qid, LEVEL, "Algebra", "Easy", "g89-difference-of-squares",
             q_en, q_ar, opts_en, opts_ar, cidx, cans,
             "Use the identity A² - B² = (A - B)(A + B) instead of squaring each number!",
             "استخدم المتطابقة A² - B² = (A - B)(A + B) بدلًا من تربيع كل عدد على حدة!",
-            sol_en, sol_ar
+            sol_en, sol_ar, svg_en, svg_ar
         ))
 
     # 7. Alternating grouped series (1 - 2 + 3 - 4 + ... or 1 + 2 - 3 - 4 + ...) (10 variants)
@@ -483,12 +569,43 @@ def generate_t2_algebra() -> list[dict]:
                 ],
                 f"كل 4 حدود تساهم بـ {m(-4)}، فيكون ناتج الـ {m(n_blocks)} مجموعة هو {m(ans)}.",
             )
+        if mode == "pair_1_minus_2":
+            last_s_u = "−" if N % 2 == 0 else "+"
+            svg_en = svg_telescoping_chain(
+                ["1 − 2", "3 − 4", "···", f"{last_s_u} {N}"],
+                op_sym="+",
+                title_lbl=f"Alternating (1..{N})",
+                footer_lbl="Sum = ?",
+                slash_middle=False,
+            )
+            svg_ar = svg_telescoping_chain(
+                ["1 − 2", "3 − 4", "···", f"{last_s_u} {N}"],
+                op_sym="+",
+                title_lbl=f"مجموع متناوب (1..{N})",
+                footer_lbl="المجموع = ؟",
+                slash_middle=False,
+            )
+        else:
+            svg_en = svg_telescoping_chain(
+                ["1+2−3−4", "5+6−7−8", "···", f"−{N-1}−{N}"],
+                op_sym="+",
+                title_lbl=f"Blocks of 4 (1..{N})",
+                footer_lbl="Sum = ?",
+                slash_middle=False,
+            )
+            svg_ar = svg_telescoping_chain(
+                ["1+2−3−4", "5+6−7−8", "···", f"−{N-1}−{N}"],
+                op_sym="+",
+                title_lbl=f"أرباع متتالية (1..{N})",
+                footer_lbl="المجموع = ؟",
+                slash_middle=False,
+            )
         items.append(make_kmc_question(
             qid, LEVEL, "Algebra", "Medium", "g89-alternating-grouped-sum",
             q_en, q_ar, opts_en, opts_ar, cidx, cans,
             "Group adjacent terms according to the repeating sign cycle and compute the value of one block!",
             "جمّع الحدود المتتالية بحسب طول دورة الإشارات واحسب قيمة المجموعة الواحدة!",
-            sol_en, sol_ar
+            sol_en, sol_ar, svg_en, svg_ar
         ))
 
     # 8. Reciprocal squaring trick: x + 1/x = k => x^2 + 1/x^2 = k^2 - 2 (or x - 1/x = k => x^2 + 1/x^2 = k^2 + 2) (10 variants)
@@ -532,12 +649,14 @@ def generate_t2_algebra() -> list[dict]:
             ],
             f"انتبه من الخطأ الشائع باختيار {m(k*k)} ونسيان الحد الأوسط {m(mid_term)} في فك التربيع!",
         )
+        svg_en = svg_area_identity_square("x", "1/x")
+        svg_ar = svg_area_identity_square("x", "1/x")
         items.append(make_kmc_question(
             qid, LEVEL, "Algebra", "Medium", "g89-reciprocal-square",
             q_en, q_ar, opts_en, opts_ar, cidx, cans,
             f"Square both sides of x {sign} 1/x = {k} using (A {sign} B)² = A² {sign} 2AB + B²!",
             f"ربّع طرفَي المعادلة مستخدمًا متطابقة مربع المجموع أو الفرق وتذكّر أن x × (1/x) = 1!",
-            sol_en, sol_ar
+            sol_en, sol_ar, svg_en, svg_ar
         ))
 
     # 9. Arithmetic progression: finding a target term from two non-adjacent terms (10 variants)
@@ -587,12 +706,24 @@ def generate_t2_algebra() -> list[dict]:
             ],
             f"تحقق من الحد رقم {m(i1)}: {m(f'{v1} + ({i_ask - i1}) \\times ({d}) = {ans}')} أيضًا.",
         )
+        svg_en = svg_number_line_sign_chart(
+            [(f"a{_sub(i1)}={v1}", True), (f"a{_sub(i2)}={v2}", True), (f"a{_sub(i_ask)}=?", False)],
+            intervals=["", f"+{i2-i1}d", f"+{i_ask-i2}d", ""],
+            header_lbl="Arithmetic Sequence",
+            footer_lbl=f"Term #{i_ask} = ?",
+        )
+        svg_ar = svg_number_line_sign_chart(
+            [(f"a{_sub(i1)}={v1}", True), (f"a{_sub(i2)}={v2}", True), (f"a{_sub(i_ask)}=؟", False)],
+            intervals=["", f"+{i2-i1}d", f"+{i_ask-i2}d", ""],
+            header_lbl="متتالية حسابية",
+            footer_lbl=f"الحد رقم {i_ask} = ؟",
+        )
         items.append(make_kmc_question(
             qid, LEVEL, "Algebra", "Easy", "g89-arithmetic-sequence-jump",
             q_en, q_ar, opts_en, opts_ar, cidx, cans,
             f"From the {i1}th term to the {i2}th term is ({i2} - {i1}) equal steps. Divide ({v2} - {v1}) by ({i2} - {i1}) to find one step!",
             f"من الحد {i1} إلى الحد {i2} توجد ({i2} - {i1}) خطوة متساوية؛ اقسم فرق القيمتين على عدد الخطوات لإيجاد مقدار الخطوة!",
-            sol_en, sol_ar
+            sol_en, sol_ar, svg_en, svg_ar
         ))
 
     # 10. Percentage interval smallest whole-number club size (9 variants) — KMC Senior/Junior percentage squeeze!
@@ -649,12 +780,24 @@ def generate_t2_algebra() -> list[dict]:
             ],
             f"تحقق: الكسر {m(f'\\frac{{{witness_a}}}{{{ans}}}')} يعادل تقريبًا {m(f'{pct_actual}\\%')} وهو يقع فعلًا بين {m(f'{p_lo}\\%')} و {m(f'{p_hi}\\%')}.",
         )
+        svg_en = svg_number_line_sign_chart(
+            [(f"{p_lo}%", False), ("k / n", True), (f"{p_hi}%", False)],
+            intervals=["", "<", "<", ""],
+            header_lbl=f"{p_lo}% < k/n < {p_hi}%",
+            footer_lbl="Smallest integer n = ?",
+        )
+        svg_ar = svg_number_line_sign_chart(
+            [(f"{p_lo}%", False), ("k / n", True), (f"{p_hi}%", False)],
+            intervals=["", "<", "<", ""],
+            header_lbl=f"{p_lo}% < k/n < {p_hi}%",
+            footer_lbl="أصغر عدد كلي n = ؟",
+        )
         items.append(make_kmc_question(
             qid, LEVEL, "Algebra", "Hard", "g89-percentage-squeeze",
             q_en, q_ar, opts_en, opts_ar, cidx, cans,
             f"Rewrite the condition as {p_lo}n < 100k < {p_hi}n and test n = 2, 3, 4, ... until a multiple of 100 fits strictly inside!",
             f"اكتب المتباينة بالصورة {p_lo}n < 100k < {p_hi}n وجرّب قيم n الصغيرة تصاعديًا حتى تجد أول فترة تحوي مضاعفًا للعدد 100!",
-            sol_en, sol_ar
+            sol_en, sol_ar, svg_en, svg_ar
         ))
 
     # 11. Linear fractional equations (x - a)/(x - b) = c/d (8 variants)
@@ -721,12 +864,24 @@ def generate_t2_algebra() -> list[dict]:
             ],
             f"تحقق بالتعويض عن {m(f'x = {ans}')}: نحصل على {m(f'\\frac{{{ans + s1}}}{{{ans + s2}}} = \\frac{{{c_n}}}{{{d_n}}}')} تمامًا.",
         )
+        t1_u = t1.replace("-", "−")
+        t2_u = t2.replace("-", "−")
+        svg_en = svg_algebra_flow(
+            [("Fraction", f"({t1_u})/({t2_u})"), ("Ratio", f"{c_n} / {d_n}"), ("Solve", "x = ?")],
+            arrows=["=", "→"],
+            title_lbl=f"{d_n}({t1_u}) = {c_n}({t2_u})",
+        )
+        svg_ar = svg_algebra_flow(
+            [("الكسر", f"({t1_u})/({t2_u})"), ("النسبة", f"{c_n} / {d_n}"), ("المطلوب", "x = ؟")],
+            arrows=["=", "→"],
+            title_lbl=f"{d_n}({t1_u}) = {c_n}({t2_u})",
+        )
         items.append(make_kmc_question(
             qid, LEVEL, "Algebra", "Easy", "g89-fractional-linear-eq",
             q_en, q_ar, opts_en, opts_ar, cidx, cans,
             f"Cross-multiply to get {d_n}({t1}) = {c_n}({t2}), expand both brackets, and solve for x!",
             f"اضرب ضربًا تبادليًا لتحصل على {d_n}({t1}) = {c_n}({t2})، ثم فك القوسين وأوجد x!",
-            sol_en, sol_ar
+            sol_en, sol_ar, svg_en, svg_ar
         ))
 
     # 12. Consecutive odd/even/integer sums — finding largest or smallest (8 variants)
@@ -782,12 +937,26 @@ def generate_t2_algebra() -> list[dict]:
             ],
             f"تحقق بالجمع: {m(' + '.join(map(str, seq)) + f' = {tot_s}')} تمامًا.",
         )
+        svg_en = svg_telescoping_chain(
+            ["n₁", "n₂", "···", f"n{_sub(k_cnt)}"],
+            op_sym="+",
+            title_lbl=f"Sum of {k_cnt} terms = {tot_s}",
+            footer_lbl=f"{extr_e.capitalize()} term = ?",
+            slash_middle=False,
+        )
+        svg_ar = svg_telescoping_chain(
+            ["n₁", "n₂", "···", f"n{_sub(k_cnt)}"],
+            op_sym="+",
+            title_lbl=f"مجموع {k_cnt} أعداد = {tot_s}",
+            footer_lbl=f"{extr_a} عدد = ؟",
+            slash_middle=False,
+        )
         items.append(make_kmc_question(
             qid, LEVEL, "Algebra", "Easy", "g89-consecutive-sum-center",
             q_en, q_ar, opts_en, opts_ar, cidx, cans,
             f"Divide {tot_s} by {k_cnt} first — that gives you the exact middle of the {k_cnt} numbers!",
             f"اقسم {tot_s} على {k_cnt} أولًا؛ سيعطيك ذلك منتصف الأعداد مباشرة!",
-            sol_en, sol_ar
+            sol_en, sol_ar, svg_en, svg_ar
         ))
 
     assert len(items) == 115, f"Expected 115 items, got {len(items)}"

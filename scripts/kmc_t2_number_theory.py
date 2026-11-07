@@ -9,16 +9,34 @@ from kmc_common import (
     make_kmc_question,
 )
 from kmc_diagrams import svg_number_strip
+from kmc_diagrams_extra import (
+    svg_algebra_flow,
+    svg_cycle_ring,
+    svg_digit_cards,
+    svg_divisor_rainbow,
+    svg_factorial_padic_bars,
+)
 
 LEVEL = "Track 2: Grades 8-9"
 TOPIC = "Number Theory"
+
+_SUP_MAP = str.maketrans("0123456789+-", "⁰¹²³⁴⁵⁶⁷⁸⁹⁺⁻")
+_SUB_MAP = str.maketrans("0123456789+-", "₀₁₂₃₄₅₆₇₈₉₊₋")
+
+
+def _sup(v) -> str:
+    return str(v).translate(_SUP_MAP)
+
+
+def _sub(v) -> str:
+    return str(v).translate(_SUB_MAP)
 
 
 def generate() -> list[dict]:
     out: list[dict] = []
     idx = 1
 
-    def push(diff, bp, q_en, q_ar, opts_en, opts_ar, cidx, cans, h_en, h_ar, s_en, s_ar, svg=None):
+    def push(diff, bp, q_en, q_ar, opts_en, opts_ar, cidx, cans, h_en, h_ar, s_en, s_ar, svg_en=None, svg_ar=None):
         nonlocal idx
         qid = f"KMC-T2-NT-{idx:03d}"
         idx += 1
@@ -26,7 +44,7 @@ def generate() -> list[dict]:
             make_kmc_question(
                 qid, LEVEL, TOPIC, diff, bp,
                 q_en, q_ar, opts_en, opts_ar, cidx, cans,
-                h_en, h_ar, s_en, s_ar, svg,
+                h_en, h_ar, s_en, s_ar, svg_en, svg_ar,
             )
         )
 
@@ -159,7 +177,19 @@ def generate() -> list[dict]:
         h_ar = f"قارن المجموع المعطى {S} بأصغر مجموع ممكن لأعداد موجبة مختلفة وهو 1 + 2 + ... + {n} = {min_s}!"
         s_en = explain_en("Whenever distinct positive integers have a sum very close to \\( 1 + 2 + \\dots + n \\), almost all the numbers are forced!", steps_en, f"Check that all {m(n)} numbers are positive, distinct, and sum to {m(S)}.")
         s_ar = explain_ar("عندما يكون مجموع أعداد صحيحة موجبة مختلفة قريباً جداً من \\( 1 + 2 + \\dots + n \\)، فإن الأعداد تتحدد فوراً!", steps_ar, f"تحقق أن جميع الأعداد الـ {m(n)} موجبة ومختلفة ومجموعها {m(S)} بالضبط.")
-        push(diff, "kmc_g89_distinct_sum_product", q_en, q_ar, opts_en, opts_ar, cidx, cans, h_en, h_ar, s_en, s_ar)
+        prod_tag_en = "Product" if extra == 1 else ("Max Product" if mode == "max" else "Min Product")
+        prod_tag_ar = "الجداء" if extra == 1 else ("أكبر جداء" if mode == "max" else "أصغر جداء")
+        svg_en = svg_algebra_flow(
+            [("Distinct", f"a₁ < ··· < a{_sub(n)}"), ("Sum", f"∑ = {S}"), (prod_tag_en, "∏ = ?")],
+            arrows=["+", "→"],
+            title_lbl=f"{n} integers ≥ 1",
+        )
+        svg_ar = svg_algebra_flow(
+            [("مختلفة", f"a₁ < ··· < a{_sub(n)}"), ("المجموع", f"∑ = {S}"), (prod_tag_ar, "∏ = ؟")],
+            arrows=["+", "→"],
+            title_lbl=f"{n} أعداد صحيحة موجبة",
+        )
+        push(diff, "kmc_g89_distinct_sum_product", q_en, q_ar, opts_en, opts_ar, cidx, cans, h_en, h_ar, s_en, s_ar, svg_en, svg_ar)
 
     # ------------------------------------------------------------------
     # 3. Modular number machine cycle (KMC Junior Cat A Q5!) (10 Qs)
@@ -236,7 +266,15 @@ def generate() -> list[dict]:
         h_ar = "لا تحسب مئات الخطوات يدوياً! اكتب المخرجات الأولى فقط حتى يتكرر عدد البداية، ثم استخدم طول الدورة."
         s_en = explain_en("Because there are only finitely many remainders modulo \\( M \\), the machine's outputs quickly lock into a short repeating loop.", steps_en, f"Check step 1: \\( {a}({x0}) + {b} = {a*x0+b} \\), which leaves remainder \\( {orbit[1]} \\) upon division by \\( {M} \\).")
         s_ar = explain_ar("لأن بواقي القسمة على \\( M \\) محدودة العدد، فإن مخرجات الآلة تدخل سريعاً في دورة قصيرة متكررة.", steps_ar, f"تحقق من الخطوة 1: باقي قسمة \\( {a}({x0}) + {b} = {a*x0+b} \\) على \\( {M} \\) هو \\( {orbit[1]} \\).")
-        push(diff, "kmc_g89_mod_machine_cycle", q_en, q_ar, opts_en, opts_ar, cidx, cans, h_en, h_ar, s_en, s_ar)
+        rule_u = f"{a}n" + (f" + {b}" if b > 0 else "")
+        ring_items = [f"n = {x0}", rule_u, f"mod {M}", "↻"]
+        if mode == "return":
+            svg_en = svg_cycle_ring(ring_items, top_lbl=f"Start n = {x0} → repeat", center_lbl="steps = ?")
+            svg_ar = svg_cycle_ring(ring_items, top_lbl=f"البداية n = {x0} ← تكرار", center_lbl="الخطوات = ؟")
+        else:
+            svg_en = svg_cycle_ring(ring_items, top_lbl=f"n₀ = {x0} ({N_steps} steps)", center_lbl="output = ?")
+            svg_ar = svg_cycle_ring(ring_items, top_lbl=f"n₀ = {x0} ({N_steps} خطوة)", center_lbl="الناتج = ؟")
+        push(diff, "kmc_g89_mod_machine_cycle", q_en, q_ar, opts_en, opts_ar, cidx, cans, h_en, h_ar, s_en, s_ar, svg_en, svg_ar)
 
     # ------------------------------------------------------------------
     # 4. Divisor rainbow pairing d_i * d_{k+1-i} = N (10 Qs)
@@ -306,7 +344,18 @@ def generate() -> list[dict]:
         h_ar = "قاعدة أقواس القواسم: حاصل ضرب القاسم الأول والأخير يساوي N، والثاني وما قبل الأخير يساوي N، وعموماً d_i × d_{k+1−i} = N!"
         s_en = explain_en("Every divisor \\( d \\) of \\( N \\) pairs up with \\( N/d \\) at the opposite position in the sorted divisor list.", steps_en, f"Full sorted divisors of {m(N)}: {m(', '.join(str(x) for x in divs))}.")
         s_ar = explain_ar("كل قاسم \\( d \\) للعدد \\( N \\) يقترن بالقاسم \\( N/d \\) في الموقع المناظر له من الطرف الآخر لقائمة القواسم.", steps_ar, f"قائمة قواسم {m(N)} كاملة للتحقق: {m(', '.join(str(x) for x in divs))}.")
-        push(diff, "kmc_g89_divisor_pairing", q_en, q_ar, opts_en, opts_ar, cidx, cans, h_en, h_ar, s_en, s_ar)
+        r_idx_pair = k + 1 - idx_pair
+        if v_i % 2 == 0:
+            rb_nodes_en = ["1", f"d{_sub(idx_pair)}={d_left}", "···", f"d{_sub(r_idx_pair)}={d_right}", "N = ?"]
+            rb_nodes_ar = ["1", f"d{_sub(idx_pair)}={d_left}", "···", f"d{_sub(r_idx_pair)}={d_right}", "N = ؟"]
+            svg_en = svg_divisor_rainbow(f"{k} divisors of N", rb_nodes_en, sub_lbl=f"d{_sub(idx_pair)} × d{_sub(r_idx_pair)} = N = ?")
+            svg_ar = svg_divisor_rainbow(f"{k} قاسماً للعدد N", rb_nodes_ar, sub_lbl=f"d{_sub(idx_pair)} × d{_sub(r_idx_pair)} = N = ؟")
+        else:
+            rb_nodes_en = ["1", f"d{_sub(idx_pair)}={d_left}", "···", f"d{_sub(r_idx_pair)}=?", str(N)]
+            rb_nodes_ar = ["1", f"d{_sub(idx_pair)}={d_left}", "···", f"d{_sub(r_idx_pair)}=؟", str(N)]
+            svg_en = svg_divisor_rainbow(f"{k} divisors of {N}", rb_nodes_en, sub_lbl=f"d{_sub(idx_pair)} × d{_sub(r_idx_pair)} = {N}")
+            svg_ar = svg_divisor_rainbow(f"{k} قاسماً للعدد {N}", rb_nodes_ar, sub_lbl=f"d{_sub(idx_pair)} × d{_sub(r_idx_pair)} = {N}")
+        push(diff, "kmc_g89_divisor_pairing", q_en, q_ar, opts_en, opts_ar, cidx, cans, h_en, h_ar, s_en, s_ar, svg_en, svg_ar)
 
     # ------------------------------------------------------------------
     # 5. Euclidean division remainder -> count valid divisors d (10 Qs)
@@ -362,7 +411,17 @@ def generate() -> list[dict]:
             ],
             f"تنبيه مهم: أي قاسم {m(f'd \\le {r}')} يعطي باقياً أصغر من {m(r)} ولا يحقق الشرط!",
         )
-        push(diff, "kmc_g89_euclidean_remainder_divisors", q_en, q_ar, opts_en, opts_ar, cidx, cans, h_en, h_ar, s_en, s_ar)
+        svg_en = svg_algebra_flow(
+            [("Division", f"{A} = q·d + {r}"), ("Condition", f"d > {r}"), ("Valid d", "?")],
+            arrows=["→", "→"],
+            title_lbl=f"{A} ÷ d → rem {r}",
+        )
+        svg_ar = svg_algebra_flow(
+            [("القسمة", f"{A} = q·d + {r}"), ("الشرط", f"d > {r}"), ("عدد قيم d", "؟")],
+            arrows=["→", "→"],
+            title_lbl=f"باقي {A} ÷ d هو {r}",
+        )
+        push(diff, "kmc_g89_euclidean_remainder_divisors", q_en, q_ar, opts_en, opts_ar, cidx, cans, h_en, h_ar, s_en, s_ar, svg_en, svg_ar)
 
     # ------------------------------------------------------------------
     # 6. Concatenated number stream k-th digit (10 Qs)
@@ -440,7 +499,11 @@ def generate() -> list[dict]:
             ],
             f"تحقق من المقطع المحيط بالخانة {m(k_pos)} للتأكد أن الرقم هو {m(ans)} بالضبط.",
         )
-        push(diff, "kmc_g89_concat_digit_stream", q_en, q_ar, opts_en, opts_ar, cidx, cans, h_en, h_ar, s_en, s_ar)
+        note_en = {"all": "1, 2, 3, 4, 5, …", "even": "2, 4, 6, 8, 10, …", "odd": "1, 3, 5, 7, 9, …"}[kind]
+        note_ar = {"all": "الأعداد: 1، 2، 3، …", "even": "الزوجية: 2، 4، 6، …", "odd": "الفردية: 1، 3، 5، …"}[kind]
+        svg_en = svg_digit_cards(list(stream[:6]) + ["···", "?"], badge_lbl=f"Digit #{k_pos} = ?", note_lbl=note_en)
+        svg_ar = svg_digit_cards(list(stream[:6]) + ["···", "؟"], badge_lbl=f"الخانة رقم {k_pos} = ؟", note_lbl=note_ar)
+        push(diff, "kmc_g89_concat_digit_stream", q_en, q_ar, opts_en, opts_ar, cidx, cans, h_en, h_ar, s_en, s_ar, svg_en, svg_ar)
 
     # ------------------------------------------------------------------
     # 7. Units digit (last digit) of powers a^m + b^n (10 Qs)
@@ -497,7 +560,12 @@ def generate() -> list[dict]:
             ],
             f"تحقق سريع: نقسم كل أس على طول دورته ونأخذ العنصر الموافق للباقي!",
         )
-        push(diff, "kmc_g89_units_digit_powers", q_en, q_ar, opts_en, opts_ar, cidx, cans, h_en, h_ar, s_en, s_ar)
+        op_u = "+" if op == "+" else "×"
+        expr_u = f"{a}{_sup(e1)} {op_u} {b}{_sup(e2)}"
+        pow_ring = [f"{a}¹", f"{a}²", f"{a}³", f"{a}⁴"]
+        svg_en = svg_cycle_ring(pow_ring, top_lbl=f"Ones: {expr_u}", center_lbl="ones = ?")
+        svg_ar = svg_cycle_ring(pow_ring, top_lbl=f"آحاد: {expr_u}", center_lbl="الآحاد = ؟")
+        push(diff, "kmc_g89_units_digit_powers", q_en, q_ar, opts_en, opts_ar, cidx, cans, h_en, h_ar, s_en, s_ar, svg_en, svg_ar)
 
     # ------------------------------------------------------------------
     # 8. Combined divisibility by 72, 88, or 99 (two missing digits) (10 Qs)
@@ -654,7 +722,26 @@ def generate() -> list[dict]:
         h_ar = "أخرج القاسم المشترك بوضع a = g·u وb = g·v حيث gcd(u, v) = 1، وعندئذٍ يكون lcm(a, b) = g·u·v!"
         s_en = explain_en("Writing \\( a = g u \\) and \\( b = g v \\) with \\( \\gcd(u, v) = 1 \\) turns every GCD-LCM problem into a simple factor puzzle on \\( u v = L/g \\).", steps_en, f"Verify with \\( g = {g}, L = {L} \\): both GCD and LCM conditions hold!")
         s_ar = explain_ar("كتابة \\( a = g u \\) و\\( b = g v \\) مع \\( \\gcd(u, v) = 1 \\) تحوّل مسائل القاسم والمضاعف إلى مسألة عوامل بسيطة على \\( u v = L/g \\).", steps_ar, f"بالتحقق عند \\( g = {g}, L = {L} \\) يتطابق القاسم المشترك والمضاعف المشترك تماماً.")
-        push(diff, "kmc_g89_gcd_lcm_product", q_en, q_ar, opts_en, opts_ar, cidx, cans, h_en, h_ar, s_en, s_ar)
+        if mode == "other":
+            gl_c3_en = ("Other", f"a={given_a}, b=?")
+            gl_c3_ar = ("الآخر", f"a={given_a}، b=؟")
+        elif mode == "min_sum":
+            gl_c3_en = ("Min Sum", "a + b = ?")
+            gl_c3_ar = ("أصغر مجموع", "a + b = ؟")
+        else:
+            gl_c3_en = ("Pairs", "(a, b) = ?")
+            gl_c3_ar = ("الأزواج", "(a, b) = ؟")
+        svg_en = svg_algebra_flow(
+            [("GCD", f"gcd = {g}"), ("LCM", f"lcm = {L}"), gl_c3_en],
+            arrows=["×", "→"],
+            title_lbl="gcd(a,b)·lcm(a,b) = ab",
+        )
+        svg_ar = svg_algebra_flow(
+            [("القاسم", f"gcd = {g}"), ("المضاعف", f"lcm = {L}"), gl_c3_ar],
+            arrows=["×", "→"],
+            title_lbl="gcd(a,b)·lcm(a,b) = ab",
+        )
+        push(diff, "kmc_g89_gcd_lcm_product", q_en, q_ar, opts_en, opts_ar, cidx, cans, h_en, h_ar, s_en, s_ar, svg_en, svg_ar)
 
     # ------------------------------------------------------------------
     # 10. Trailing zeros at the end of N! (10 Qs)
@@ -709,7 +796,10 @@ def generate() -> list[dict]:
             ],
             f"تجنبنا الفخ الشهير: الاكتفاء بـ {m(c5)} ينسى عوامل الـ {m(5)} الإضافية الموجودة في {m('25, 50, \\dots')}!",
         )
-        push(diff, "kmc_g89_trailing_zeros_product", q_en, q_ar, opts_en, opts_ar, cidx, cans, h_en, h_ar, s_en, s_ar)
+        cols_data = [("÷ 5", 1.0, f"⌊{N}/5⌋"), ("÷ 25", 0.55, f"⌊{N}/25⌋"), ("÷ 125", 0.25, f"⌊{N}/125⌋")]
+        svg_en = svg_factorial_padic_bars(f"{N}! = 1·2·3· ··· ·{N}", cols_data, footer_lbl="Trailing zeros = ?")
+        svg_ar = svg_factorial_padic_bars(f"{N}! = 1·2·3· ··· ·{N}", cols_data, footer_lbl="الأصفار في النهاية = ؟")
+        push(diff, "kmc_g89_trailing_zeros_product", q_en, q_ar, opts_en, opts_ar, cidx, cans, h_en, h_ar, s_en, s_ar, svg_en, svg_ar)
 
     # ------------------------------------------------------------------
     # 11. Sum of digits of 10^n - k (10 Qs)
@@ -761,7 +851,9 @@ def generate() -> list[dict]:
             ],
             f"تحقق: إجمالي عدد الخانات هو {m(f'{n_nines} + {tail_len} = {n}')} خانة، وهو الصحيح لعدد أصغر قليلاً من {m(f'10^{{{n}}}')}!",
         )
-        push(diff, "kmc_g89_digit_sum_power10_minus_k", q_en, q_ar, opts_en, opts_ar, cidx, cans, h_en, h_ar, s_en, s_ar)
+        svg_en = svg_digit_cards(["9", "9", "···", "9", "?"], badge_lbl=f"10{_sup(n)} − {k}", note_lbl="Sum of digits = ?")
+        svg_ar = svg_digit_cards(["9", "9", "···", "9", "؟"], badge_lbl=f"10{_sup(n)} − {k}", note_lbl="مجموع الأرقام = ؟")
+        push(diff, "kmc_g89_digit_sum_power10_minus_k", q_en, q_ar, opts_en, opts_ar, cidx, cans, h_en, h_ar, s_en, s_ar, svg_en, svg_ar)
 
     assert len(out) == 110, f"Expected 110, got {len(out)}"
     return out

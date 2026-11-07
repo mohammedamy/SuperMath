@@ -15,11 +15,15 @@ from kmc_common import (
 from kmc_diagrams import (
     svg_bar_chart,
     svg_cube_net,
-    svg_grid_polygon,
-    svg_matchstick_squares,
     svg_spinner,
     svg_spiral_walk,
     svg_travel_map,
+)
+from kmc_diagrams_extra import (
+    svg_coord_diamond,
+    svg_graph_chord_polygon,
+    svg_grid_dimensions,
+    svg_pigeonhole_bins,
 )
 
 LEVEL = "Track 3: Grades 10-11"
@@ -153,8 +157,8 @@ def generate() -> list[dict]:
         (12, "<=", "Hard"),
         (15, "<=", "Hard"),
     ]
-    svg_diam = svg_grid_polygon(6, 6, [(3, 0), (6, 3), (3, 6), (0, 3)], ["S", "E", "N", "W"])
     for v_i, (R, rel, diff) in enumerate(lat_cases):
+        svg_diam = svg_coord_diamond(str(R))
         if rel == "<=":
             ans = 2 * R * R + 2 * R + 1
             bf = sum(1 for x in range(-R, R + 1) for y in range(-R, R + 1) if abs(x) + abs(y) <= R)
@@ -271,7 +275,17 @@ def generate() -> list[dict]:
             ],
             "لاحظ أنه بدون إرجاع، إذا كان هناك قطعة واحدة فقط من لون معين فلا يمكن تكرار ذلك اللون في اليومين (0 طرق)!",
         )
-        push("Data & Probability", diff, "kmc_g1011_sequential_prob_no_replace", q_en, q_ar, opts_en, opts_ar, cidx, cans, h_en, h_ar, s_en, s_ar)
+        svg_en = svg_pigeonhole_bins(
+            [("Shirts", f"{rs}R, {bs}B"), ("Shorts", f"{rsh}R, {bsh}B")],
+            header_lbl="2 Days (No Replace)",
+            footer_lbl="Same color both = ?",
+        )
+        svg_ar = svg_pigeonhole_bins(
+            [("قمصان", f"{rs} أحمر، {bs} أزرق"), ("سراويل", f"{rsh} أحمر، {bsh} أزرق")],
+            header_lbl="يومان بدون إرجاع",
+            footer_lbl="اللون نفسه فيهما = ؟",
+        )
+        push("Data & Probability", diff, "kmc_g1011_sequential_prob_no_replace", q_en, q_ar, opts_en, opts_ar, cidx, cans, h_en, h_ar, s_en, s_ar, svg_en, svg_ar)
 
     # ------------------------------------------------------------------
     # 4. Matchstick m x n rectangular grid total sticks (10 Qs, SVG!)
@@ -288,13 +302,14 @@ def generate() -> list[dict]:
         (10, 12, "sticks", "Hard"),
         (6, 14, "cols", "Hard"),
     ]
-    svg_ms = svg_matchstick_squares((1, 2, 3))
     for v_i, (rows, cols, ask, diff) in enumerate(ms_cases):
         h_st = (rows + 1) * cols
         v_st = rows * (cols + 1)
         tot_st = h_st + v_st
         assert tot_st == 2 * rows * cols + rows + cols
         if ask == "sticks":
+            svg_ms_en = svg_grid_dimensions(cols, rows, col_lbl=str(cols), row_lbl=str(rows), mode="matchsticks")
+            svg_ms_ar = svg_ms_en
             ans = tot_st
             distractors = [4 * rows * cols, 2 * rows * cols, tot_st - (rows + cols), tot_st + rows]
             opts_en, opts_ar, cidx, cans = make_5_math_options(ans, distractors, f"t3c_ms_{v_i}")
@@ -318,6 +333,8 @@ def generate() -> list[dict]:
                 f"نجمع الأفقي والرأسي: {m(f'{h_st} + {v_st} = {ans}')} عوداً.",
             ]
         else:
+            svg_ms_en = svg_grid_dimensions(4, rows, col_lbl="n = ?", row_lbl=str(rows), mode="matchsticks")
+            svg_ms_ar = svg_grid_dimensions(4, rows, col_lbl="n = ؟", row_lbl=str(rows), mode="matchsticks")
             ans = cols
             per_col = 2 * rows + 1
             distractors = [cols - 1, cols + 1, tot_st // (3 * rows + 1), cols + 2]
@@ -345,7 +362,7 @@ def generate() -> list[dict]:
         h_ar = "عُدّ جميع الأعواد الأفقية أولاً ((الصفوف + 1) × الأعمدة)، ثم جميع الأعواد الرأسية (الصفوف × (الأعمدة + 1))!"
         s_en = explain_en("Separating horizontal grid segments from vertical grid segments counts every matchstick cleanly without double-counting shared interior edges!", steps_en, f"Check on a 1×1 square: \\( 2(1)(1)+1+1 = 4 \\) matchsticks!")
         s_ar = explain_ar("فصل الأعواد الأفقية عن الأعواد الرأسية يمنع تكرار عدّ الأضلاع المشتركة الداخلية!", steps_ar, f"للتحقق عند مربع واحد 1×1 تعطي القاعدة 4 أعواد بالضبط!")
-        push("Combinatorics & Logic", diff, "kmc_g1011_matchstick_grid_total", q_en, q_ar, opts_en, opts_ar, cidx, cans, h_en, h_ar, s_en, s_ar, svg_ms)
+        push("Combinatorics & Logic", diff, "kmc_g1011_matchstick_grid_total", q_en, q_ar, opts_en, opts_ar, cidx, cans, h_en, h_ar, s_en, s_ar, svg_ms_en, svg_ms_ar)
 
     # ------------------------------------------------------------------
     # 5. Football 3-1-0 tournament point invariant (3G - D = Total Points) (10 Qs)
@@ -398,7 +415,9 @@ def generate() -> list[dict]:
             ],
             f"تحقق: {m(G - draws)} فوز ({m(3*(G-draws))} نقطة) + {m(draws)} تعادل ({m(2*draws)} نقطة) = {m(tot_pts)} نقطة!",
         )
-        push("Combinatorics & Logic", diff, "kmc_g1011_tournament_handshakes", q_en, q_ar, opts_en, opts_ar, cidx, cans, h_en, h_ar, s_en, s_ar)
+        svg_en = svg_graph_chord_polygon(n_teams, sub_lbl=f"{n_teams} teams, {tot_pts} pts → D=?")
+        svg_ar = svg_graph_chord_polygon(n_teams, sub_lbl=f"{n_teams} فرق، {tot_pts} نقطة ← تعادل=؟")
+        push("Combinatorics & Logic", diff, "kmc_g1011_tournament_handshakes", q_en, q_ar, opts_en, opts_ar, cidx, cans, h_en, h_ar, s_en, s_ar, svg_en, svg_ar)
 
     # ------------------------------------------------------------------
     # 6. Cube net maximum corner-vertex product of 3 meeting faces (10 Qs, SVG!)
@@ -632,7 +651,29 @@ def generate() -> list[dict]:
                 ],
                 f"بالتحقق من جميع الثلاثيات البالغ عددها {m(math.comb(n_max, 3))} نجد {m(ans)} ثلاثية بالضبط!",
             )
-        push("Combinatorics & Logic", diff, "kmc_g1011_subset_sum_parity_div", q_en, q_ar, opts_en, opts_ar, cidx, cans, h_en, h_ar, s_en, s_ar)
+        if mode == "even_nonempty":
+            svg_en = svg_pigeonhole_bins(
+                [("Odd", "1, 3, …"), ("Even", "2, 4, …")],
+                header_lbl=f"S: 1, 2, …, {n_max}",
+                footer_lbl="Even-sum subsets = ?",
+            )
+            svg_ar = svg_pigeonhole_bins(
+                [("فردي", "1, 3, …"), ("زوجي", "2, 4, …")],
+                header_lbl=f"الأعداد: 1, 2, …, {n_max}",
+                footer_lbl="مجموعها زوجي = ؟",
+            )
+        else:
+            svg_en = svg_pigeonhole_bins(
+                [("mod 3 = 0", "3, 6, …"), ("mod 3 = 1", "1, 4, …"), ("mod 3 = 2", "2, 5, …")],
+                header_lbl=f"3-subsets of 1..{n_max}",
+                footer_lbl="3 | sum: count = ?",
+            )
+            svg_ar = svg_pigeonhole_bins(
+                [("mod 3 = 0", "3, 6, …"), ("mod 3 = 1", "1, 4, …"), ("mod 3 = 2", "2, 5, …")],
+                header_lbl=f"ثلاثيات من 1..{n_max}",
+                footer_lbl="مجموعها يقبل على 3 = ؟",
+            )
+        push("Combinatorics & Logic", diff, "kmc_g1011_subset_sum_parity_div", q_en, q_ar, opts_en, opts_ar, cidx, cans, h_en, h_ar, s_en, s_ar, svg_en, svg_ar)
 
     # ------------------------------------------------------------------
     # 9. Committee selection with incompatible or inseparable pair (10 Qs)
@@ -705,7 +746,13 @@ def generate() -> list[dict]:
         h_ar = "ثبّت وضع الشخصين الخاصين أولاً: احسب اللجان التي تضمهما معاً (اختيار k−2 من n−2) أو تخلو منهما (اختيار k من n−2)!"
         s_en = explain_en("Conditioning on the special pair breaks any restricted combination problem into clean, smaller binomial coefficients!", steps_en, f"Recall \\( \\binom{{n}}{{r}} = \\frac{{n!}}{{r!(n-r)!}} \\).")
         s_ar = explain_ar("تفصيل الحالات وفق وضع الشخصين المشروطين يحوّل المسألة إلى توافيق بسيطة ومباشرة!", steps_ar, f"تذكّر قانون التوافيق \\( \\binom{{n}}{{r}} = \\frac{{n!}}{{r!(n-r)!}} \\).")
-        push("Combinatorics & Logic", diff, "kmc_g1011_committee_incompatible", q_en, q_ar, opts_en, opts_ar, cidx, cans, h_en, h_ar, s_en, s_ar)
+        if rule == "apart":
+            svg_en = svg_graph_chord_polygon(n_p, sub_lbl=f"Pick {k_sel}/{n_p} (not both) = ?", bad_edge=True)
+            svg_ar = svg_graph_chord_polygon(n_p, sub_lbl=f"اختيار {k_sel} من {n_p} (لا يجتمعان)", bad_edge=True)
+        else:
+            svg_en = svg_graph_chord_polygon(n_p, sub_lbl=f"Pick {k_sel}/{n_p} (both/none) = ?", bad_edge=True)
+            svg_ar = svg_graph_chord_polygon(n_p, sub_lbl=f"اختيار {k_sel} من {n_p} (معاً أو لا)", bad_edge=True)
+        push("Combinatorics & Logic", diff, "kmc_g1011_committee_incompatible", q_en, q_ar, opts_en, opts_ar, cidx, cans, h_en, h_ar, s_en, s_ar, svg_en, svg_ar)
 
     # ------------------------------------------------------------------
     # 10. Unequal-sector spinner spun twice independently (10 Qs, SVG!)
@@ -789,6 +836,7 @@ def generate() -> list[dict]:
         ([36, 44, 38, 50], 5, "Hard"),     # avg4 = 42, avg5 = 47 -> ? = 67
     ]
     days_lbl = ["Sun", "Mon", "Tue", "Wed", "Thu"]
+    days_lbl_ar = ["الأحد", "الإثنين", "الثلاثاء", "الأربعاء", "الخميس"]
     for v_i, (v4, d_chg, diff) in enumerate(b5_cases):
         s4 = sum(v4)
         assert s4 % 4 == 0
@@ -797,8 +845,10 @@ def generate() -> list[dict]:
         s5 = 5 * avg5
         ans = s5 - s4
         assert ans == avg4 + 5 * d_chg
-        bars = [(days_lbl[i], v4[i], str(v4[i])) for i in range(4)] + [("Thu", ans, "?")]
-        svg = svg_bar_chart(bars)
+        bars_en = [(days_lbl[i], v4[i], str(v4[i])) for i in range(4)] + [("Thu", avg4, "?")]
+        bars_ar = [(days_lbl_ar[i], v4[i], str(v4[i])) for i in range(4)] + [("الخميس", avg4, "?")]
+        svg_en = svg_bar_chart(bars_en)
+        svg_ar = svg_bar_chart(bars_ar)
         distractors = [avg4 + d_chg, avg4 + 4 * d_chg, ans + d_chg, ans - 2 * d_chg]
         opts_en, opts_ar, cidx, cans = make_5_math_options(ans, distractors, f"t3c_b5_{v_i}")
         chg_en = f"**increases** the daily average by {m(d_chg)}" if d_chg > 0 else f"**decreases** the daily average by {m(abs(d_chg))}"
@@ -833,7 +883,7 @@ def generate() -> list[dict]:
             ],
             f"اختصار ذهني سريع: لتغيير متوسط 5 أيام بمقدار {m(d_chg)} يجب أن تساوي القيمة الخامسة {m(f'{avg4} + 5({d_chg}) = {ans}')}!",
         )
-        push("Data & Probability", diff, "kmc_g1011_bar_chart_two_missing", q_en, q_ar, opts_en, opts_ar, cidx, cans, h_en, h_ar, s_en, s_ar, svg)
+        push("Data & Probability", diff, "kmc_g1011_bar_chart_two_missing", q_en, q_ar, opts_en, opts_ar, cidx, cans, h_en, h_ar, s_en, s_ar, svg_en, svg_ar)
 
     assert len(out) == 110, f"Expected 110, got {len(out)}"
     return out

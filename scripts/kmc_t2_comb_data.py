@@ -17,6 +17,14 @@ from kmc_diagrams import (
     svg_travel_map,
     svg_water_cups,
 )
+from kmc_diagrams_extra import (
+    svg_algebra_flow,
+    svg_digit_cards,
+    svg_grid_dimensions,
+    svg_pigeonhole_bins,
+    svg_statement_cards,
+    svg_two_dice_grid,
+)
 
 LEVEL = "Track 2: Grades 8-9"
 
@@ -187,7 +195,19 @@ def generate() -> list[dict]:
             ],
             f"لا يمكن الوصول بعدد أقل من {m(ans)} ضغطات بعد التحقق من جميع التفرعات الممكنة.",
         )
-        push("Combinatorics & Logic", diff, "kmc_g89_button_press_bfs", q_en, q_ar, opts_en, opts_ar, cidx, cans, h_en, h_ar, s_en, s_ar)
+        svg_en = svg_algebra_flow(
+            [("Start", str(start)), ("Buttons", f"×{mul_k} , +{add_c}"), ("Target", str(target))],
+            arrows=["→", "→"],
+            title_lbl="Toy Calculator",
+            footer_lbl="Min presses = ?",
+        )
+        svg_ar = svg_algebra_flow(
+            [("البداية", str(start)), ("الأزرار", f"×{mul_k} ، +{add_c}"), ("الهدف", str(target))],
+            arrows=["→", "→"],
+            title_lbl="آلة حاسبة بزرّين",
+            footer_lbl="أقل عدد ضغطات = ؟",
+        )
+        push("Combinatorics & Logic", diff, "kmc_g89_button_press_bfs", q_en, q_ar, opts_en, opts_ar, cidx, cans, h_en, h_ar, s_en, s_ar, svg_en, svg_ar)
 
     # ------------------------------------------------------------------
     # 3. Adjacent / corner-sharing cell pairs on m x n grid (10 Qs)
@@ -257,7 +277,10 @@ def generate() -> list[dict]:
         h_ar = "عُدّ الفواصل الداخلية للشبكة (للأزواج المشتركة في ضلع) أو نقاط التقاطع الداخلية (عند كل نقطة تقاطع داخلية زوجان قطريان)!"
         s_en = explain_en("Counting geometric features (interior borders or interior vertices) avoids double-counting any pair!", steps_en, f"Test on a tiny 2×2 grid: formula gives 4 edge pairs and 2 diagonal pairs — spot on!")
         s_ar = explain_ar("عدّ الفواصل الداخلية أو الرؤوس الداخلية للشبكة يمنع تكرار عدّ أي زوج مرتين!", steps_ar, f"للتحقق على شبكة صغيرة 2×2: تعطي القاعدة 4 أزواج جانبية وزوجين قطريين — صحيح تماماً!")
-        push("Combinatorics & Logic", diff, "kmc_g89_grid_adjacent_pairs", q_en, q_ar, opts_en, opts_ar, cidx, cans, h_en, h_ar, s_en, s_ar)
+        g_mode = "domino" if mode == "edge" else "subrect"
+        svg_en = svg_grid_dimensions(cols, rows, col_lbl=str(cols), row_lbl=str(rows), mode=g_mode)
+        svg_ar = svg_grid_dimensions(cols, rows, col_lbl=str(cols), row_lbl=str(rows), mode=g_mode)
+        push("Combinatorics & Logic", diff, "kmc_g89_grid_adjacent_pairs", q_en, q_ar, opts_en, opts_ar, cidx, cans, h_en, h_ar, s_en, s_ar, svg_en, svg_ar)
 
     # ------------------------------------------------------------------
     # 4. Additive & Multiplicative number triangle puzzles (10 Qs, SVG!)
@@ -386,7 +409,17 @@ def generate() -> list[dict]:
             ],
             f"لاحظ أن قيم {m('y')} الصالحة تكوّن متتابعة حسابية منتظمة!",
         )
-        push("Combinatorics & Logic", diff, "kmc_g89_coin_denominations", q_en, q_ar, opts_en, opts_ar, cidx, cans, h_en, h_ar, s_en, s_ar)
+        svg_en = svg_pigeonhole_bins(
+            [(f"{c1} SAR", "x ≥ 0"), (f"{c2} SAR", "y ≥ 0")],
+            header_lbl=f"Total = {tot} SAR",
+            footer_lbl="Ways (x, y) = ?",
+        )
+        svg_ar = svg_pigeonhole_bins(
+            [(f"{c1} ريالات", "x ≥ 0"), (f"{c2} ريالات", "y ≥ 0")],
+            header_lbl=f"المجموع = {tot} ريالاً",
+            footer_lbl="عدد الطرق (x, y) = ؟",
+        )
+        push("Combinatorics & Logic", diff, "kmc_g89_coin_denominations", q_en, q_ar, opts_en, opts_ar, cidx, cans, h_en, h_ar, s_en, s_ar, svg_en, svg_ar)
 
     # ------------------------------------------------------------------
     # 6. Glass water cups multi-step fractional transfers (KMC Junior Q5!) (10 Qs, SVG!)
@@ -629,7 +662,17 @@ def generate() -> list[dict]:
             ],
             f"تحقق منطقي: المجموع الصالح {m(ans)} مضافاً إليه الممنوع {m(bad)} يعيد الإجمالي {m(tot)}.",
         )
-        push("Combinatorics & Logic", diff, "kmc_g89_counting_with_exclusion", q_en, q_ar, opts_en, opts_ar, cidx, cans, h_en, h_ar, s_en, s_ar)
+        svg_en = svg_digit_cards(
+            [f"×{n1}", f"×{n2}", f"×{n3}"],
+            badge_lbl="Choose 1 of each",
+            note_lbl=f"Exclude {f1}×{f2}×{f3} → ?",
+        )
+        svg_ar = svg_digit_cards(
+            [f"×{n1}", f"×{n2}", f"×{n3}"],
+            badge_lbl="اختر 1 من كل فئة",
+            note_lbl=f"استبعد {f1}×{f2}×{f3} ← ؟",
+        )
+        push("Combinatorics & Logic", diff, "kmc_g89_counting_with_exclusion", q_en, q_ar, opts_en, opts_ar, cidx, cans, h_en, h_ar, s_en, s_ar, svg_en, svg_ar)
 
     # ------------------------------------------------------------------
     # 9. Pigeonhole Principle worst-case draw guarantees (10 Qs)
@@ -706,7 +749,15 @@ def generate() -> list[dict]:
         h_ar = "لضمان تحقق الشرط 100%، اسأل نفسك: «ما أكبر عدد يمكن سحبه في أسوأ حظ ممكن دون تحقق الشرط؟» ثم أضف 1!"
         s_en = explain_en("By the **Pigeonhole Principle**, Minimum Guaranteed Draw = (Maximum Unlucky Draw) + 1.", steps_en, f"With {m(worst)} draws you could still fail, whereas {m(ans)} draws guarantees success 100% of the time.")
         s_ar = explain_ar("حسب **مبدأ برج الحمام**: أقل عدد مضمون = (أكبر عدد في أسوأ حالة فشل) + 1.", steps_ar, f"عند سحب {m(worst)} قد لا يتحقق الشرط، أما عند سحب {m(ans)} فيتحقق الشرط يقيناً بنسبة 100%.")
-        push("Combinatorics & Logic", diff, "kmc_g89_pigeonhole_guarantee", q_en, q_ar, opts_en, opts_ar, cidx, cans, h_en, h_ar, s_en, s_ar)
+        bins_en = [(colors_en[i].capitalize(), str(c)) for i, c in enumerate(cnts)]
+        bins_ar = [(colors_ar[i], str(c)) for i, c in enumerate(cnts)]
+        if mode == "same":
+            ftr_en, ftr_ar = f"Guarantee {k_req} same → ?", f"ضمان {k_req} بنفس اللون ← ؟"
+        else:
+            ftr_en, ftr_ar = "1 of each color → ?", "1 من كل لون ← ؟"
+        svg_en = svg_pigeonhole_bins(bins_en, header_lbl="Worst-case draw", footer_lbl=ftr_en)
+        svg_ar = svg_pigeonhole_bins(bins_ar, header_lbl="السحب في أسوأ حالة", footer_lbl=ftr_ar)
+        push("Combinatorics & Logic", diff, "kmc_g89_pigeonhole_guarantee", q_en, q_ar, opts_en, opts_ar, cidx, cans, h_en, h_ar, s_en, s_ar, svg_en, svg_ar)
 
     # ------------------------------------------------------------------
     # 10. Two fair 6-sided dice probability (10 Qs)
@@ -755,7 +806,19 @@ def generate() -> list[dict]:
             ],
             f"تحقق: بقسمة البسط والمقام على القاسم المشترك الأكبر {m(__import__('math').gcd(cnt, 36))} نحصل على {m(fmt_val(ans))}.",
         )
-        push("Data & Probability", diff, "kmc_g89_two_dice_probability", q_en, q_ar, opts_en, opts_ar, cidx, cans, h_en, h_ar, s_en, s_ar)
+        dice_short_en = [
+            "a + b = 9 → P = ?", "a + b ≥ 10 → P = ?", "|a − b| = 1 → P = ?",
+            "a × b = 12 → P = ?", "a × b odd → P = ?", "a × b even → P = ?",
+            "a × b = k² → P = ?", "3 | (a × b) → P = ?", "4 | (a × b) → P = ?", "a > b → P = ?",
+        ][v_i]
+        dice_short_ar = [
+            "a + b = 9 ← ؟", "a + b ≥ 10 ← ؟", "|a − b| = 1 ← ؟",
+            "a × b = 12 ← ؟", "a × b فردي ← ؟", "a × b زوجي ← ؟",
+            "a × b مربع كامل ← ؟", "a × b يقبل على 3 ← ؟", "a × b يقبل على 4 ← ؟", "a > b ← ؟",
+        ][v_i]
+        svg_en = svg_two_dice_grid(title_lbl=dice_short_en, d1_lbl="Die 1", d2_lbl="Die 2")
+        svg_ar = svg_two_dice_grid(title_lbl=dice_short_ar, d1_lbl="النرد 1", d2_lbl="النرد 2")
+        push("Data & Probability", diff, "kmc_g89_two_dice_probability", q_en, q_ar, opts_en, opts_ar, cidx, cans, h_en, h_ar, s_en, s_ar, svg_en, svg_ar)
 
     # ------------------------------------------------------------------
     # 11. Truth-tellers & Liars island logic (3 speakers, verified unique!) (10 Qs)
@@ -905,7 +968,35 @@ def generate() -> list[dict]:
             ],
             f"تم التحقق من جميع الحالات الـ \\( 2^3 = 8 \\) الممكنة ولا توجد سوى هذه الحالة الصحيحة الوحيدة!",
         )
-        push("Combinatorics & Logic", diff, "kmc_g89_knights_knaves_3", q_en, q_ar, opts_en, opts_ar, cidx, cans, h_en, h_ar, s_en, s_ar)
+        short_en_cards = [
+            ("All 3 are liars", "Exactly 1 truth", "2nd speaker lies"),
+            ("Salim is a liar", "Zaid is a liar", "Hassan & Salim lie"),
+            ("Salim & Zaid true", "Hassan is a liar", "Salim is a liar"),
+            ("Exactly 2 truth", "All 3 are liars", "Exactly 2 truth"),
+            ("Salim & Zaid lie", "Hassan is true", "Salim is a liar"),
+            ("All 3 are true", "Hassan is a liar", "Salim is true"),
+            ("Salim is true", "All 3 are liars", "Salim is a liar"),
+            ("Salim = Zaid type", "Zaid is a liar", "All 3 are true"),
+            ("Exactly 1 truth", "Exactly 2 truth", "All 3 are liars"),
+            ("Zaid is a liar", "Hassan is true", "All 3 are liars"),
+        ][v_i]
+        short_ar_cards = [
+            ("الثلاثة كاذبون", "واحد فقط صادق", "المتحدث 2 كاذب"),
+            ("سالم كاذب", "زيد كاذب", "حسن وسالم كاذبان"),
+            ("سالم وزيد صادقان", "حسن كاذب", "سالم كاذب"),
+            ("اثنان فقط صادقان", "الثلاثة كاذبون", "اثنان فقط صادقان"),
+            ("سالم وزيد كاذبان", "حسن صادق", "سالم كاذب"),
+            ("الثلاثة صادقون", "حسن كاذب", "سالم صادق"),
+            ("سالم صادق", "الثلاثة كاذبون", "سالم كاذب"),
+            ("سالم وزيد متماثلان", "زيد كاذب", "الثلاثة صادقون"),
+            ("واحد فقط صادق", "اثنان فقط صادقان", "الثلاثة كاذبون"),
+            ("زيد كاذب", "حسن صادق", "الثلاثة كاذبون"),
+        ][v_i]
+        hdr_lg_en = "Truth-tellers = ?" if ask_t == "count" else "Who tells truth? (?)"
+        hdr_lg_ar = "عدد الصادقين = ؟" if ask_t == "count" else "مَن الصادق؟ (؟)"
+        svg_en = svg_statement_cards(list(zip(names_en, short_en_cards)), header_lbl=hdr_lg_en)
+        svg_ar = svg_statement_cards(list(zip(names_ar, short_ar_cards)), header_lbl=hdr_lg_ar)
+        push("Combinatorics & Logic", diff, "kmc_g89_knights_knaves_3", q_en, q_ar, opts_en, opts_ar, cidx, cans, h_en, h_ar, s_en, s_ar, svg_en, svg_ar)
 
     assert len(out) == 110, f"Expected 110, got {len(out)}"
     return out

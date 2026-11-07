@@ -9,6 +9,15 @@ from kmc_common import (
     make_5_math_options,
     make_kmc_question,
 )
+from kmc_diagrams_extra import (
+    svg_algebra_flow,
+    svg_number_line_sign_chart,
+    svg_parabola_roots,
+    svg_pigeonhole_bins,
+    svg_score_table,
+    svg_symmetry_curve,
+    svg_telescoping_chain,
+)
 
 LEVEL = "Track 3: Grades 10-11"
 TOPIC = "Algebra"
@@ -18,7 +27,7 @@ def generate() -> list[dict]:
     out: list[dict] = []
     idx = 1
 
-    def push(diff, bp, q_en, q_ar, opts_en, opts_ar, cidx, cans, h_en, h_ar, s_en, s_ar):
+    def push(diff, bp, q_en, q_ar, opts_en, opts_ar, cidx, cans, h_en, h_ar, s_en, s_ar, svg_en=None, svg_ar=None):
         nonlocal idx
         qid = f"KMC-T3-ALG-{idx:03d}"
         idx += 1
@@ -26,7 +35,7 @@ def generate() -> list[dict]:
             make_kmc_question(
                 qid, LEVEL, TOPIC, diff, bp,
                 q_en, q_ar, opts_en, opts_ar, cidx, cans,
-                h_en, h_ar, s_en, s_ar,
+                h_en, h_ar, s_en, s_ar, svg_en, svg_ar or svg_en,
             )
         )
 
@@ -81,7 +90,19 @@ def generate() -> list[dict]:
             ],
             f"تجنبنا الخطأ الشائع: \\( {c}^0 = 1 \\) وليس \\( 0 \\)!",
         )
-        push(diff, "kmc_g1011_neg_zero_exponents", q_en, q_ar, opts_en, opts_ar, cidx, cans, h_en, h_ar, s_en, s_ar)
+        num_u = f"{a}⁻² + {c}⁰"
+        den_u = f"({a}/{b})⁻²"
+        svg_en = svg_algebra_flow(
+            [("Top", num_u), ("Bottom", den_u), ("Value", "?")],
+            arrows=["÷", "="],
+            title_lbl=f"({num_u}) ÷ {den_u}",
+        )
+        svg_ar = svg_algebra_flow(
+            [("البسط", num_u), ("المقام", den_u), ("القيمة", "؟")],
+            arrows=["÷", "="],
+            title_lbl=f"({num_u}) ÷ {den_u}",
+        )
+        push(diff, "kmc_g1011_neg_zero_exponents", q_en, q_ar, opts_en, opts_ar, cidx, cans, h_en, h_ar, s_en, s_ar, svg_en, svg_ar)
 
     # ------------------------------------------------------------------
     # 2. Shifted function evaluation & composition (KMC Senior Cat B Q3!) (10 Qs)
@@ -140,7 +161,19 @@ def generate() -> list[dict]:
             ],
             f"انتبه للإشارات عند التربيع: {m(f'({in1})^2 = {in1**2}')} موجب دائماً!",
         )
-        push(diff, "kmc_g1011_function_shift_comp", q_en, q_ar, opts_en, opts_ar, cidx, cans, h_en, h_ar, s_en, s_ar)
+        f_u = (f"{a}x²" if a > 1 else "x²") + (f"+{b}" if b >= 0 else f"−{abs(b)}")
+        g_u = (f"{c}x" if abs(c) != 1 else ("x" if c == 1 else "−x")) + (f"+{d}" if d >= 0 else f"−{abs(d)}")
+        svg_en = svg_algebra_flow(
+            [(f"F(x+{s})", f_u), (f"G(x−{s})", g_u), (f"H({x0})", "?")],
+            arrows=["+", "="],
+            title_lbl=f"H(x) = F(x+{s}) + G(x−{s})",
+        )
+        svg_ar = svg_algebra_flow(
+            [(f"F(x+{s})", f_u), (f"G(x−{s})", g_u), (f"H({x0})", "؟")],
+            arrows=["+", "="],
+            title_lbl=f"H(x) = F(x+{s}) + G(x−{s})",
+        )
+        push(diff, "kmc_g1011_function_shift_comp", q_en, q_ar, opts_en, opts_ar, cidx, cans, h_en, h_ar, s_en, s_ar, svg_en, svg_ar)
 
     # ------------------------------------------------------------------
     # 3. Symmetric polynomial systems (KMC Senior Cat B Q4 style!) (10 Qs)
@@ -218,7 +251,26 @@ def generate() -> list[dict]:
                 ],
                 f"تحقق: العددان {m(x_v)} و{m(y_v)} مجموعهما {m(S)} ومجموع مكعبيهما {m(C)} وحاصل ضربهما {m(ans)}!",
             )
-        push(diff, "kmc_g1011_poly_system_factor", q_en, q_ar, opts_en, opts_ar, cidx, cans, h_en, h_ar, s_en, s_ar)
+            svg_en = svg_algebra_flow(
+                [("Sum", f"x + y = {S}"), ("Cubes", f"x³+y³ = {C}"), ("Product", "xy = ?")],
+                title_lbl=f"x + y = {S}, x³ + y³ = {C}",
+            )
+            svg_ar = svg_algebra_flow(
+                [("المجموع", f"x + y = {S}"), ("المكعبان", f"x³+y³ = {C}"), ("الضرب", "xy = ؟")],
+                title_lbl=f"x + y = {S}, x³ + y³ = {C}",
+            )
+        if mode == "sq":
+            svg_en = svg_algebra_flow(
+                [("Eq 1", f"x²+xy = {A}"), ("Eq 2", f"xy+y² = {B}"), ("Sum", "x + y = ?")],
+                arrows=["+", "→"],
+                title_lbl="x, y > 0",
+            )
+            svg_ar = svg_algebra_flow(
+                [("معادلة ١", f"x²+xy = {A}"), ("معادلة ٢", f"xy+y² = {B}"), ("المجموع", "x + y = ؟")],
+                arrows=["+", "←"],
+                title_lbl="x, y > 0",
+            )
+        push(diff, "kmc_g1011_poly_system_factor", q_en, q_ar, opts_en, opts_ar, cidx, cans, h_en, h_ar, s_en, s_ar, svg_en, svg_ar)
 
     # ------------------------------------------------------------------
     # 4. Radical equations sqrt(x + a) + sqrt(x + b) = c (10 Qs)
@@ -270,7 +322,19 @@ def generate() -> list[dict]:
             ],
             f"التعويض للتحقق في المعادلة الأصلية: {m(f'\\sqrt{{{u*u}}} + \\sqrt{{{v*v}}} = {u} + {v} = {c}')} — حل صحيح!",
         )
-        push(diff, "kmc_g1011_radical_equations", q_en, q_ar, opts_en, opts_ar, cidx, cans, h_en, h_ar, s_en, s_ar)
+        t1_u = f"x+{a}" if a >= 0 else f"x−{abs(a)}"
+        t2_u = f"x+{b}" if b >= 0 else f"x−{abs(b)}"
+        svg_en = svg_algebra_flow(
+            [("Root 1", f"√({t1_u})"), ("Root 2", f"√({t2_u})"), (f"Sum = {c}", "x = ?")],
+            arrows=["+", "→"],
+            title_lbl=f"√({t1_u}) + √({t2_u}) = {c}",
+        )
+        svg_ar = svg_algebra_flow(
+            [("الجذر ١", f"√({t1_u})"), ("الجذر ٢", f"√({t2_u})"), (f"المجموع = {c}", "x = ؟")],
+            arrows=["+", "←"],
+            title_lbl=f"√({t1_u}) + √({t2_u}) = {c}",
+        )
+        push(diff, "kmc_g1011_radical_equations", q_en, q_ar, opts_en, opts_ar, cidx, cans, h_en, h_ar, s_en, s_ar, svg_en, svg_ar)
 
     # ------------------------------------------------------------------
     # 5. Polynomial sign-chart integer inequalities (KMC Senior Round 1!) (10 Qs)
@@ -333,7 +397,14 @@ def generate() -> list[dict]:
         h_ar = "انتبه جيداً للعامل المربّع! فالمربع غير سالب دائماً، ويساوي صفراً عند جذره (فيُستبعد في حالة «< 0» ويُحسب ضمن الحلول في حالة «≤ 0»)!"
         s_en = explain_en("Squared factors never flip the sign of an inequality, **but** their root makes the whole product zero!", steps_en, f"Programmatic check over all integers confirms exactly {m(ans)} integer solutions.")
         s_ar = explain_ar("العوامل المربّعة لا تغيّر إشارة المتباينة أبداً، **لكن** جذرها يجعل حاصل الضرب الكلي مساوياً للصفر!", steps_ar, f"بالتحقق من أطراف الفترة وجذر العامل المربّع نتأكد أن عدد الحلول الصحيحة هو {m(ans)} بالضبط.")
-        push(diff, "kmc_g1011_sign_chart_inequality", q_en, q_ar, opts_en, opts_ar, cidx, cans, h_en, h_ar, s_en, s_ar)
+        c_u = f"(k−{c})²" if c >= 0 else f"(k+{abs(c)})²"
+        rel_u = ">" if rel == ">" else "≥"
+        ineq_u = f"(k+{a})({b}−k){c_u} {rel_u} 0"
+        closed = (rel == ">=")
+        ticks_sgn = [(f"{r}" if r >= 0 else f"−{abs(r)}", closed) for r in sorted([-a, b, c])]
+        svg_en = svg_number_line_sign_chart(ticks_sgn, None, header_lbl=ineq_u, footer_lbl="Integers k = ?")
+        svg_ar = svg_number_line_sign_chart(ticks_sgn, None, header_lbl=ineq_u, footer_lbl="عدد القيم الصحيحة k = ؟")
+        push(diff, "kmc_g1011_sign_chart_inequality", q_en, q_ar, opts_en, opts_ar, cidx, cans, h_en, h_ar, s_en, s_ar, svg_en, svg_ar)
 
     # ------------------------------------------------------------------
     # 6. Telescoping fraction & radical sums (10 Qs)
@@ -412,7 +483,13 @@ def generate() -> list[dict]:
                 ],
                 f"كلا العددين {m(b)} و{m(a)} مربعان كاملان، فيكون الناتج عدداً صحيحاً بسيطاً هو {m(ans)}!",
             )
-        push(diff, "kmc_g1011_telescoping_sums", q_en, q_ar, opts_en, opts_ar, cidx, cans, h_en, h_ar, s_en, s_ar)
+        if kind == "frac":
+            terms_tel = [f"1/({a}×{a+1})", f"1/({a+1}×{a+2})", "···", f"1/({b-1}×{b})"]
+        else:
+            terms_tel = [f"1/(√{a}+√{a+1})", f"1/(√{a+1}+√{a+2})", "···", f"1/(√{b-1}+√{b})"]
+        svg_en = svg_telescoping_chain(terms_tel, op_sym="+", title_lbl="Sum = ?", footer_lbl=f"{a} → {b}", slash_middle=True)
+        svg_ar = svg_telescoping_chain(terms_tel, op_sym="+", title_lbl="المجموع = ؟", footer_lbl=f"{a} ← {b}", slash_middle=True)
+        push(diff, "kmc_g1011_telescoping_sums", q_en, q_ar, opts_en, opts_ar, cidx, cans, h_en, h_ar, s_en, s_ar, svg_en, svg_ar)
 
     # ------------------------------------------------------------------
     # 7. Maximizing product when incrementing one factor (KMC Senior!) (10 Qs)
@@ -481,7 +558,17 @@ def generate() -> list[dict]:
             ],
             f"انتبه للفخ: زيادة أكبر عامل ({m(c)}) تعطي **أقل** زيادة ({m(g_c)}) وليس أكبرها!",
         )
-        push(diff, "kmc_g1011_increment_factor_max_prod", q_en, q_ar, opts_en, opts_ar, cidx, cans, h_en, h_ar, s_en, s_ar)
+        svg_en = svg_pigeonhole_bins(
+            [("Factor 1", str(a)), ("Factor 2", str(b)), ("Factor 3", str(c)), ("Add to 1", f"+{d}")],
+            header_lbl=f"{a} × {b} × {c}",
+            footer_lbl=("Max increase = ?" if ask == "gain" else "Max product = ?"),
+        )
+        svg_ar = svg_pigeonhole_bins(
+            [("عامل ١", str(a)), ("عامل ٢", str(b)), ("عامل ٣", str(c)), ("إضافة لواحد", f"+{d}")],
+            header_lbl=f"{a} × {b} × {c}",
+            footer_lbl=("أكبر زيادة = ؟" if ask == "gain" else "أكبر جداء = ؟"),
+        )
+        push(diff, "kmc_g1011_increment_factor_max_prod", q_en, q_ar, opts_en, opts_ar, cidx, cans, h_en, h_ar, s_en, s_ar, svg_en, svg_ar)
 
     # ------------------------------------------------------------------
     # 8. Mean & median shift when appending elements to a dataset (10 Qs)
@@ -538,7 +625,17 @@ def generate() -> list[dict]:
             ],
             f"تحقق: \\( \\frac{{{s0} + {x_low} + {ans}}}{{{n1}}} = {m1} \\) بالضبط.",
         )
-        push(diff, "kmc_g1011_dataset_shift_stats", q_en, q_ar, opts_en, opts_ar, cidx, cans, h_en, h_ar, s_en, s_ar)
+        svg_en = svg_score_table(
+            ["Set", "Count", "Mean", "Median"],
+            [["Start", str(n0), str(m0), str(med0)], [f"+{x_low}, +y", str(n1), str(m1), f"{med0} (y=?)"]],
+            title_lbl="Find y = ?",
+        )
+        svg_ar = svg_score_table(
+            ["القائمة", "العدد", "المتوسط", "الوسيط"],
+            [["الأصلية", str(n0), str(m0), str(med0)], [f"+{x_low}، +y", str(n1), str(m1), f"{med0} (y=؟)"]],
+            title_lbl="المطلوب: y = ؟",
+        )
+        push(diff, "kmc_g1011_dataset_shift_stats", q_en, q_ar, opts_en, opts_ar, cidx, cans, h_en, h_ar, s_en, s_ar, svg_en, svg_ar)
 
     # ------------------------------------------------------------------
     # 9. Vieta symmetric quadratic expressions (real roots only!) (9 Qs)
@@ -607,7 +704,8 @@ def generate() -> list[dict]:
         h_ar = f"لا تحل بالقانون العام للجذور! في المعادلة x² − {s}x + {p} = 0، مجموع الجذرين r + t = {s} وحاصل ضربهما r·t = {p}!"
         s_en = explain_en("For any quadratic \\( x^2 - sx + p = 0 \\) with roots \\( r, t \\), expanding \\( (x - r)(x - t) = x^2 - (r+t)x + rt \\) shows \\( r + t = s \\) and \\( rt = p \\).", steps_en, f"Discriminant check: \\( {s}^2 - 4({p}) = {s*s - 4*p} > 0 \\), confirming both roots are real.")
         s_ar = explain_ar("لأي معادلة تربيعية \\( x^2 - sx + p = 0 \\) جذراها \\( r, t \\)، فكّ القوسين \\( (x - r)(x - t) \\) يبيّن أن \\( r + t = s \\) و\\( rt = p \\).", steps_ar, f"تحقق من المميز: \\( {s}^2 - 4({p}) = {s*s - 4*p} > 0 \\)، فالجذران حقيقيان.")
-        push(diff, "kmc_g1011_vieta_real_quadratics", q_en, q_ar, opts_en, opts_ar, cidx, cans, h_en, h_ar, s_en, s_ar)
+        svg_vie = svg_parabola_roots("r", "t", f"x²−{s}x+{p}=0")
+        push(diff, "kmc_g1011_vieta_real_quadratics", q_en, q_ar, opts_en, opts_ar, cidx, cans, h_en, h_ar, s_en, s_ar, svg_vie, svg_vie)
 
     # ------------------------------------------------------------------
     # 10. Sum & difference of cubes mental-math simplification (9 Qs)
@@ -658,7 +756,19 @@ def generate() -> list[dict]:
             ],
             f"جرّب أعداداً صغيرة مثل \\( a=3, b=1 \\) للتأكد من صحة الاختصار!",
         )
-        push(diff, "kmc_g1011_sum_diff_cubes", q_en, q_ar, opts_en, opts_ar, cidx, cans, h_en, h_ar, s_en, s_ar)
+        op_u = "−" if sign == "-" else "+"
+        iop_u = "+" if sign == "-" else "−"
+        svg_en = svg_algebra_flow(
+            [("Top", f"{a}³ {op_u} {b}³"), ("Bottom", f"{a}²{iop_u}{a}×{b}+{b}²"), ("Value", "?")],
+            arrows=["÷", "="],
+            title_lbl=f"a = {a}, b = {b}",
+        )
+        svg_ar = svg_algebra_flow(
+            [("البسط", f"{a}³ {op_u} {b}³"), ("المقام", f"{a}²{iop_u}{a}×{b}+{b}²"), ("القيمة", "؟")],
+            arrows=["÷", "="],
+            title_lbl=f"a = {a}, b = {b}",
+        )
+        push(diff, "kmc_g1011_sum_diff_cubes", q_en, q_ar, opts_en, opts_ar, cidx, cans, h_en, h_ar, s_en, s_ar, svg_en, svg_ar)
 
     # ------------------------------------------------------------------
     # 11. Odd-power polynomial + constant symmetry f(-a) = 2K - f(a) (9 Qs)
@@ -709,7 +819,20 @@ def generate() -> list[dict]:
             ],
             f"تحقق سريع: مجموع القيمتين \\( f({a_in}) + f(-{a_in}) = {f_pos} + ({ans}) = {2*K} \\) وهو ضعف الحد الثابت!",
         )
-        push(diff, "kmc_g1011_odd_plus_const_symmetry", q_en, q_ar, opts_en, opts_ar, cidx, cans, h_en, h_ar, s_en, s_ar)
+        k_u = f"+ {K}" if K >= 0 else f"− {abs(K)}"
+        svg_en = svg_symmetry_curve(
+            "odd_shift",
+            title_lbl=f"f(x) = ax⁵ + bx³ + cx {k_u}",
+            p1_lbl=f"f(−{a_in}) = ?",
+            p2_lbl=f"f({a_in}) = {f_pos}",
+        )
+        svg_ar = svg_symmetry_curve(
+            "odd_shift",
+            title_lbl=f"f(x) = ax⁵ + bx³ + cx {k_u}",
+            p1_lbl=f"f(−{a_in}) = ؟",
+            p2_lbl=f"f({a_in}) = {f_pos}",
+        )
+        push(diff, "kmc_g1011_odd_plus_const_symmetry", q_en, q_ar, opts_en, opts_ar, cidx, cans, h_en, h_ar, s_en, s_ar, svg_en, svg_ar)
 
     # ------------------------------------------------------------------
     # 12. Absolute value distance equations & inequalities (8 Qs)
@@ -762,7 +885,21 @@ def generate() -> list[dict]:
             ]
         s_en = explain_en("Interpreting \\( |x - p| \\) as **distance on a number line** solves absolute-value sums without tedious sign cases!", steps_en, f"Classic trap avoided: when \\( c = b - a \\), there isn't just 2 solutions — the entire interval \\( [{a}, {b}] \\) works!")
         s_ar = explain_ar("تفسير \\( |x - p| \\) على أنه **المسافة على خط الأعداد** يحل معادلات ومتباينات القيمة المطلقة فوراً دون تقسيم مطوّل للحالات!", steps_ar, f"تجنبنا الفخ الشهير: لا يقتصر الحل على طرفين فقط بل يشمل جميع الأعداد الصحيحة في الفترة المستنتجة!")
-        push(diff, "kmc_g1011_abs_piecewise_solutions", q_en, q_ar, opts_en, opts_ar, cidx, cans, h_en, h_ar, s_en, s_ar)
+        ta_u = f"|x−{a}|" if a >= 0 else f"|x+{abs(a)}|"
+        rel_u = "=" if rel == "=" else "≤"
+        svg_en = svg_symmetry_curve(
+            "abs_v",
+            title_lbl=f"{ta_u} + |x−{b}| {rel_u} {c}",
+            p1_lbl=f"[{a}, {b}]",
+            p2_lbl=f"y = {c} (x ∈ ℤ: ?)",
+        )
+        svg_ar = svg_symmetry_curve(
+            "abs_v",
+            title_lbl=f"{ta_u} + |x−{b}| {rel_u} {c}",
+            p1_lbl=f"[{a}, {b}]",
+            p2_lbl=f"y = {c} (x ∈ ℤ: ؟)",
+        )
+        push(diff, "kmc_g1011_abs_piecewise_solutions", q_en, q_ar, opts_en, opts_ar, cidx, cans, h_en, h_ar, s_en, s_ar, svg_en, svg_ar)
 
     assert len(out) == 115, f"Expected 115, got {len(out)}"
     return out

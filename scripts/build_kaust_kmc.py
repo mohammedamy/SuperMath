@@ -137,12 +137,11 @@ def build() -> None:
         assert not m_forb, f"Forbidden out-of-scope term {m_forb.group(0)!r} in {qid}"
         assert "\\\\(" not in blob and ":\\(" not in blob, f"Malformed MathJax delimiter in {qid}"
 
-        # 3. Check SVG XML validity when diagram is present
-        if "diagram" in en or "diagram" in ar:
-            assert "diagram" in en and "diagram" in ar, f"Asymmetric diagram presence in {qid}"
-            ET.fromstring(en["diagram"])
-            ET.fromstring(ar["diagram"])
-            svg_count += 1
+        # 3. Check 100% SVG presence & XML validity in both EN and AR
+        assert "diagram" in en and "diagram" in ar, f"Missing diagram in {qid}"
+        ET.fromstring(en["diagram"])
+        ET.fromstring(ar["diagram"])
+        svg_count += 1
 
         # 4. Check stem uniqueness (internal + cross-bank)
         # Note: if a diagram encodes problem numbers (e.g. number triangle / bar chart / cryptarithm),

@@ -16,6 +16,7 @@ from kmc_common import (
 from kmc_diagrams_extra import (
     svg_analog_clock,
     svg_cube_stack_3d,
+    svg_digit_cards,
     svg_digital_clock,
     svg_dot_pattern,
     svg_fenceposts,
@@ -24,9 +25,11 @@ from kmc_diagrams_extra import (
     svg_magic_square_3x3,
     svg_motion_timeline,
     svg_number_pyramid,
+    svg_pan_balance_coins,
     svg_paper_fold,
     svg_pie_chart,
     svg_street_grid,
+    svg_tape_bar_split,
     svg_two_jars,
     svg_venn_2,
 )
@@ -580,11 +583,33 @@ def _gen_group_1_1(next_id) -> list[dict]:
                 f"تحقق: {m(q_cnt * M)} مجانًا من أصل {m(K)} تساوي {m(f'\\frac{{{q_cnt * M}}}{{{K}}} = {ans}\\%')}.",
             )
 
+        if mode == "cost_k":
+            sub_en = f"Take {val} items → Cost = ?"
+            sub_ar = f"شراء {val} قطع ← التكلفة = ؟"
+        elif mode == "max_items":
+            sub_en = f"Budget {val} riyals → Max = ?"
+            sub_ar = f"مبلغ {val} ريال ← الأقصى = ؟"
+        elif mode == "eff_pct_full":
+            sub_en = f"Take {bundle} items → Discount = ?%"
+            sub_ar = f"أخذ {bundle} قطع ← الخصم = ؟%"
+        else:
+            sub_en = f"Take {val} items → Discount = ?%"
+            sub_ar = f"أخذ {val} قطع ← الخصم = ؟%"
+        svg_en = svg_tape_bar_split(
+            [(N, f"Pay {N}"), (M, f"Free {M} (?)")],
+            total_lbl=f"Buy {N}, Free {M} ({price} ea.)",
+            sub_lbl=sub_en,
+        )
+        svg_ar = svg_tape_bar_split(
+            [(N, f"ادفع {N}"), (M, f"مجانًا {M} (؟)")],
+            total_lbl=f"اشترِ {N} + {M} مجانًا ({price} ريال)",
+            sub_lbl=sub_ar,
+        )
         items.append(
             make_kmc_question(
                 qid, LEVEL, "Number Theory", diff, "g67-bundle-promo-discount",
                 q_en, q_ar, opts_en, opts_ar, cidx, cans,
-                hint_en, hint_ar, sol_en, sol_ar,
+                hint_en, hint_ar, sol_en, sol_ar, diagram_en=svg_en, diagram_ar=svg_ar,
             )
         )
 
@@ -1426,11 +1451,21 @@ def _gen_group_1_2(next_id) -> list[dict]:
             f"تحقق بالقسمة: `{pat.replace('d', str(valid_ds[-1]))} ÷ {div_by} = {int(pat.replace('d', str(valid_ds[-1]))) // div_by}` والباقي صفر!",
         )
 
+        ask_short_map = {
+            "max": ("Max d = ?", "أكبر d = ؟"),
+            "min": ("Min d = ?", "أصغر d = ؟"),
+            "sum": ("Sum of d = ?", "مجموع d = ؟"),
+            "count": ("Count of d = ?", "عدد قيم d = ؟"),
+            "unique": ("Digit d = ?", "الرقم d = ؟"),
+        }
+        note_en, note_ar = ask_short_map[ask_mode]
+        svg_en = svg_digit_cards(list(pat), badge_lbl=f"Divisible by {div_by}", note_lbl=note_en)
+        svg_ar = svg_digit_cards(list(pat), badge_lbl=f"يقبل القسمة على {div_by}", note_lbl=note_ar)
         items.append(
             make_kmc_question(
                 qid, LEVEL, "Number Theory", diff, "g67-missing-digit-div-346",
                 q_en, q_ar, opts_en, opts_ar, cidx, cans,
-                hint_en, hint_ar, sol_en, sol_ar,
+                hint_en, hint_ar, sol_en, sol_ar, diagram_en=svg_en, diagram_ar=svg_ar,
             )
         )
 
@@ -2232,7 +2267,8 @@ def _gen_group_1_4(next_id) -> list[dict]:
             L, d = p1, p2
             gaps = L // d
             ans = gaps + 1
-            svg = svg_fenceposts(f"{d} m", f"{L} m")
+            svg_en = svg_fenceposts(f"{d} m", f"{L} m")
+            svg_ar = svg_fenceposts(f"{d} م", f"{L} م")
             q_en = (
                 f"Workers plant {ctx_en} of length {m(L)} m, placing one every {m(d)} m **including both ends**. "
                 f"How many are placed in total?"
@@ -2267,7 +2303,8 @@ def _gen_group_1_4(next_id) -> list[dict]:
             N, d = p1, p2
             gaps = N - 1
             ans = gaps * d
-            svg = svg_fenceposts(f"{d} m", "? m")
+            svg_en = svg_fenceposts(f"{d} m", "? m")
+            svg_ar = svg_fenceposts(f"{d} م", "؟ م")
             q_en = (
                 f"A straight walkway has {m(N)} {ctx_en} planted in a single row from the very start to the very end, "
                 f"with {m(d)} m between every two consecutive {ctx_en}. What is the total length (in meters) of the walkway?"
@@ -2302,7 +2339,8 @@ def _gen_group_1_4(next_id) -> list[dict]:
             L, d = p1, p2
             one = L // d + 1
             ans = 2 * one
-            svg = svg_fenceposts(f"{d} m", f"{L} m")
+            svg_en = svg_fenceposts(f"{d} m", f"{L} m")
+            svg_ar = svg_fenceposts(f"{d} م", f"{L} م")
             q_en = (
                 f"City planners install {ctx_en} of length {m(L)} m, spaced every {m(d)} m **including both ends on each side**. "
                 f"How many are installed altogether?"
@@ -2336,7 +2374,8 @@ def _gen_group_1_4(next_id) -> list[dict]:
         elif mode == "loop_cnt":
             L, d = p1, p2
             ans = L // d
-            svg = svg_fenceposts(f"{d} m", f"loop {L} m")
+            svg_en = svg_fenceposts(f"{d} m", f"loop {L} m")
+            svg_ar = svg_fenceposts(f"{d} م", f"مسار مغلق {L} م")
             q_en = (
                 f"Organizers place {ctx_en} of total perimeter {m(L)} m, spacing them equally every {m(d)} m all the way around. "
                 f"How many are needed?"
@@ -2372,7 +2411,8 @@ def _gen_group_1_4(next_id) -> list[dict]:
             one = N // 2
             gaps = one - 1
             ans = L // gaps
-            svg = svg_fenceposts("? m", f"{L} m")
+            svg_en = svg_fenceposts("? m", f"{L} m")
+            svg_ar = svg_fenceposts("؟ م", f"{L} م")
             q_en = (
                 f"A straight {m(L)}-m bridge has {m(N)} {ctx_en} in total—equally spaced along **both** sides, including the ends of each side. "
                 f"What is the distance (in meters) between two adjacent {ctx_en} on the same side?"
@@ -2411,7 +2451,8 @@ def _gen_group_1_4(next_id) -> list[dict]:
             g2 = p_end - 1
             sec_per_gap = t1 // g1
             ans = g2 * sec_per_gap
-            svg = svg_fenceposts("1 gap", f"Post 1 → Post {p_end}")
+            svg_en = svg_fenceposts("1 gap", f"Post 1 → Post {p_end}")
+            svg_ar = svg_fenceposts("مسافة 1", f"عمود 1 ← عمود {p_end}")
             q_en = (
                 f"{ctx_en} jogs at a constant speed along a straight row of equally spaced lamp-posts. "
                 f"Starting at the {m(1)}st lamp-post, {ctx_en} reaches the {m(p_mid)}th lamp-post in {m(t1)} seconds. "
@@ -2457,7 +2498,8 @@ def _gen_group_1_4(next_id) -> list[dict]:
             L, d = p1, p2
             gaps = L // d
             ans = gaps - 1
-            svg = svg_fenceposts(f"{d} m", f"{L} m")
+            svg_en = svg_fenceposts(f"{d} m", f"{L} m")
+            svg_ar = svg_fenceposts(f"{d} م", f"{L} م")
             q_en = (
                 f"Two stone gateposts stand {m(L)} m apart at the two ends of a straight wall. "
                 f"Gardeners plant {ctx_en} every {m(d)} m along the wall, **excluding both ends** (since the stone gateposts already occupy the ends). "
@@ -2495,7 +2537,8 @@ def _gen_group_1_4(next_id) -> list[dict]:
             gaps = L // d
             palms = gaps + 1
             ans = gaps * per_gap
-            svg = svg_fenceposts(f"{d} m", f"{L} m")
+            svg_en = svg_fenceposts(f"{d} m", f"{L} m")
+            svg_ar = svg_fenceposts(f"{d} م", f"{L} م")
             q_en = (
                 f"Along one side of a {m(L)}-m straight garden path, palm trees are planted every {m(d)} m **including both ends** ({m(palms)} palms in all). "
                 f"Then {m(per_gap)} {ctx_en} are planted in **every gap** between consecutive palm trees. How many {ctx_en} are planted?"
@@ -2530,7 +2573,7 @@ def _gen_group_1_4(next_id) -> list[dict]:
             make_kmc_question(
                 qid, LEVEL, "Algebra", diff, "g67-fencepost-tree-spacing",
                 q_en, q_ar, opts_en, opts_ar, cidx, cans,
-                hint_en, hint_ar, sol_en, sol_ar, diagram_en=svg,
+                hint_en, hint_ar, sol_en, sol_ar, diagram_en=svg_en, diagram_ar=svg_ar,
             )
         )
 
@@ -2920,11 +2963,37 @@ def _gen_group_1_4(next_id) -> list[dict]:
                 f"تحقق: {m(f'{ans} \\times {w_high} - {cnt_low} \\times {pen} = {total_val}')} نقطة بالضبط!",
             )
 
+        if ask_which in ("high", "low", "diff_hl"):
+            svg_en = svg_pan_balance_coins(
+                f"Total items = {n_tot}",
+                f"Type 1: {w_low} ea.",
+                f"Type 2: {w_high} ea.",
+                sub_lbl=f"Total = {total_val} → ?",
+            )
+            svg_ar = svg_pan_balance_coins(
+                f"إجمالي العدد = {n_tot}",
+                f"النوع 1: {w_low} للواحد",
+                f"النوع 2: {w_high} للواحد",
+                sub_lbl=f"المجموع = {total_val} ← ؟",
+            )
+        else:
+            svg_en = svg_pan_balance_coins(
+                f"Questions = {n_tot}",
+                f"Wrong: −{pen} pt",
+                f"Right: +{w_high} pts",
+                sub_lbl=f"Score = {total_val} → ?",
+            )
+            svg_ar = svg_pan_balance_coins(
+                f"الأسئلة = {n_tot}",
+                f"خطأ: −{pen} نقطة",
+                f"صح: +{w_high} نقاط",
+                sub_lbl=f"المجموع = {total_val} ← ؟",
+            )
         items.append(
             make_kmc_question(
                 qid, LEVEL, "Algebra", diff, "g67-heads-legs-two-values",
                 q_en, q_ar, opts_en, opts_ar, cidx, cans,
-                hint_en, hint_ar, sol_en, sol_ar,
+                hint_en, hint_ar, sol_en, sol_ar, diagram_en=svg_en, diagram_ar=svg_ar,
             )
         )
 

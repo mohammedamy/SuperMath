@@ -13,6 +13,14 @@ from kmc_diagrams import (
     svg_spinner,
     svg_bar_chart,
 )
+from kmc_diagrams_extra import (
+    svg_digit_cards,
+    svg_graph_chord_polygon,
+    svg_grid_dimensions,
+    svg_score_table,
+    svg_statement_cards,
+    svg_tape_bar_split,
+)
 
 LEVEL = "Track 1: Grades 6-7"
 
@@ -231,6 +239,15 @@ def generate_t1_comb_data() -> list[dict]:
         ([25, 18, None, 22, 30], 23, ["D1", "D2", "D3", "D4", "D5"], "laps swum", "الأشواط المقطوعة سباحة"),
         ([14, 10, 18, None, 16], 14, ["Mon", "Tue", "Wed", "Thu", "Fri"], "boxes packed", "الصناديق المعبّأة"),
     ]
+    ar_x_map = {
+        "Sun": "الأحد", "Mon": "الإثنين", "Tue": "الثلاثاء", "Wed": "الأربعاء",
+        "Thu": "الخميس", "Fri": "الجمعة", "Sat": "السبت",
+        "Day 1": "يوم 1", "Day 2": "يوم 2", "Day 3": "يوم 3", "Day 4": "يوم 4", "Day 5": "يوم 5",
+        "W1": "أ1", "W2": "أ2", "W3": "أ3", "W4": "أ4",
+        "G6A": "6أ", "G6B": "6ب", "G6C": "6ج", "G7A": "7أ", "G7B": "7ب",
+        "Q1": "ر1", "Q2": "ر2", "Q3": "ر3", "Q4": "ر4",
+        "D1": "ي1", "D2": "ي2", "D3": "ي3", "D4": "ي4", "D5": "ي5",
+    }
     for vals, mean_v, x_lbls, ctx_e, ctx_a in bar_cases:
         qid = next_id()
         n_b = len(vals)
@@ -239,11 +256,16 @@ def generate_t1_comb_data() -> list[dict]:
         known_sum = sum(known)
         ans = tot_needed - known_sum
         assert ans > 0
-        bars_arg = [
-            (xl, (v if v is not None else ans), (str(v) if v is not None else "?"))
+        bars_arg_en = [
+            (xl, (v if v is not None else mean_v), (str(v) if v is not None else "?"))
             for xl, v in zip(x_lbls, vals)
         ]
-        svg = svg_bar_chart(bars_arg)
+        bars_arg_ar = [
+            (ar_x_map.get(xl, xl), (v if v is not None else mean_v), (str(v) if v is not None else "؟"))
+            for xl, v in zip(x_lbls, vals)
+        ]
+        svg_en = svg_bar_chart(bars_arg_en)
+        svg_ar = svg_bar_chart(bars_arg_ar)
         q_en = (
             f"The bar chart shows the number of {ctx_e} across {m(n_b)} entries, where one bar is missing its value ({m('?')}). "
             f"If the **mean (average)** across all {m(n_b)} entries is {m(mean_v)}, what value belongs on the bar marked {m('?')}?"
@@ -279,7 +301,7 @@ def generate_t1_comb_data() -> list[dict]:
             q_en, q_ar, opts_en, opts_ar, cidx, cans,
             f"Multiply the mean ({mean_v}) by {n_b} to get the total of all bars, then subtract the known bars!",
             f"اضرب المتوسط ({mean_v}) في {n_b} لإيجاد المجموع الكلي لجميع الأعمدة، ثم اطرح مجموع الأعمدة المعلومة!",
-            sol_en, sol_ar, diagram_en=svg
+            sol_en, sol_ar, diagram_en=svg_en, diagram_ar=svg_ar
         ))
 
     # 5. Weighted / combined group averages (10 variants) — KMC G6-7 Sample Q12
@@ -332,12 +354,22 @@ def generate_t1_comb_data() -> list[dict]:
             ],
             f"منطقيًا، المتوسط الكلي {m(ans)} أقرب إلى متوسط المجموعة الأكبر عددًا!",
         )
+        svg_en = svg_score_table(
+            ["Group", "Count", "Mean"],
+            [["Group 1", f"{n1}", f"{m1}"], ["Group 2", f"{n2}", f"{m2}"], ["All", f"{ntot}", "?"]],
+            title_lbl="Combined Mean = ?",
+        )
+        svg_ar = svg_score_table(
+            ["المجموعة", "العدد", "المتوسط"],
+            [["الأولى", f"{n1}", f"{m1}"], ["الثانية", f"{n2}", f"{m2}"], ["الكل", f"{ntot}", "؟"]],
+            title_lbl="المتوسط الكلي = ؟",
+        )
         items.append(make_kmc_question(
             qid, LEVEL, "Data & Probability", "Easy", "g67-combined-group-mean",
             q_en, q_ar, opts_en, opts_ar, cidx, cans,
             f"Find the total score of the {n1} students and the total score of the {n2} students, add them, and divide by {ntot}.",
             f"احسب مجموع درجات الـ {n1} طالبًا ومجموع درجات الـ {n2} طلاب، ثم اجمعهما واقسم على {ntot}.",
-            sol_en, sol_ar
+            sol_en, sol_ar, diagram_en=svg_en, diagram_ar=svg_ar
         ))
 
     # 6. Selfie / club-team double-counting squeeze (10 variants) — KMC G6-7 Sample Q23
@@ -396,12 +428,22 @@ def generate_t1_comb_data() -> list[dict]:
             ],
             f"تحقق: {m(K * ans)} مشاركة تتوزع بسهولة بحيث يشارك بعض الـ {m(F)} بمقدار {m(lo_c)} مرات والبقية {m(hi_c)} مرات.",
         )
+        svg_en = svg_tape_bar_split(
+            [(1, f"Min: {F}×{lo_c}"), (1, f"Groups: ? × {K}"), (1, f"Max: {F}×{hi_c}")],
+            total_lbl=f"{F} people ({lo_c} or {hi_c} each)",
+            sub_lbl=f"Each group = {K} → Total = ?",
+        )
+        svg_ar = svg_tape_bar_split(
+            [(1, f"أقل: {F}×{lo_c}"), (1, f"مجموعات: ؟ × {K}"), (1, f"أكبر: {F}×{hi_c}")],
+            total_lbl=f"{F} أفراد ({lo_c} أو {hi_c} لكل فرد)",
+            sub_lbl=f"كل مجموعة = {K} ← العدد = ؟",
+        )
         items.append(make_kmc_question(
             qid, LEVEL, "Combinatorics & Logic", "Hard", "g67-double-counting-squeeze",
             q_en, q_ar, opts_en, opts_ar, cidx, cans,
             f"Find the minimum ({F} × {lo_c}) and maximum ({F} × {hi_c}) total appearances, then look for a multiple of {K} between them!",
             f"احسب أقل مجموع ظهور ({F} × {lo_c}) وأكبر مجموع ظهور ({F} × {hi_c})، ثم ابحث عن مضاعف للعدد {K} بينهما!",
-            sol_en, sol_ar
+            sol_en, sol_ar, diagram_en=svg_en, diagram_ar=svg_ar
         ))
 
     # 7. Five-statement family logic puzzle (only ONE statement is false!) (10 variants) — KMC G6-7 Sample Q15
@@ -459,12 +501,32 @@ def generate_t1_comb_data() -> list[dict]:
             ],
             f"تحقق: مع وجود {m(B)} أولاد و {m(G)} بنات تصدق أربع عبارات وتفشل واحدة فقط.",
         )
+        svg_en = svg_statement_cards(
+            [
+                ("1", f"{son_e}: {B} bro."),
+                ("2", f"Total: {tot_c} kids"),
+                ("3", f"{dau_e}: {G - 1} sis."),
+                ("4", f"{dau_e}: {B} bro."),
+                ("5", f"{son_e}: {G} sis."),
+            ],
+            header_lbl="4 True, 1 False — Which?",
+        )
+        svg_ar = svg_statement_cards(
+            [
+                ("1", f"{son_a}: {B} إخوة"),
+                ("2", f"المجموع: {tot_c} أبناء"),
+                ("3", f"{dau_a}: {G - 1} أخوات"),
+                ("4", f"{dau_a}: {B} إخوة"),
+                ("5", f"{son_a}: {G} أخوات"),
+            ],
+            header_lbl="4 صحيحة و 1 خاطئة — أيها؟",
+        )
         items.append(make_kmc_question(
             qid, LEVEL, "Combinatorics & Logic", "Hard", "g67-one-false-statement-family",
             q_en, q_ar, opts_en, opts_ar, cidx, cans,
             f"Remember to count {son_e} himself when counting boys, and {dau_e} herself when counting girls! Which two statements disagree on the number of boys?",
             f"لا تنسَ احتساب {son_a} نفسه ضمن الذكور و{dau_a} نفسها ضمن البنات! أي عبارتين تختلفان في عدد الذكور؟",
-            sol_en, sol_ar
+            sol_en, sol_ar, diagram_en=svg_en, diagram_ar=svg_ar
         ))
 
     # 8. Forming 3-digit EVEN/ODD numbers without repeating digits (10 variants)
@@ -517,12 +579,18 @@ def generate_t1_comb_data() -> list[dict]:
             ],
             f"مجموع الأعداد الممكنة كلها بدون شرط هو {m(n_d*(n_d-1)*(n_d-2))}، ونصيب خانة الآحاد المطلوبة منها يعطي {m(ans)} عددًا بالضبط.",
         )
+        svg_en = svg_digit_cards(["H", "T", parity.upper()], badge_lbl=f"Digits: {d_str}", note_lbl="No repeats → Count = ?")
+        svg_ar = svg_digit_cards(
+            ["مئات", "عشرات", "زوجي" if parity == "even" else "فردي"],
+            badge_lbl=f"الأرقام: {d_str}",
+            note_lbl="دون تكرار ← كم عددًا؟",
+        )
         items.append(make_kmc_question(
             qid, LEVEL, "Combinatorics & Logic", "Medium", "g67-three-digit-parity-no-repeat",
             q_en, q_ar, opts_en, opts_ar, cidx, cans,
             f"Fill the ONES place first so the number is guaranteed to be {parity}, then fill the hundreds and tens places!",
             "ابدأ بملء خانة الآحاد أولًا لضمان تحقق شرط الزوجية/الفردية، ثم اختر المئات فالعشرات!",
-            sol_en, sol_ar
+            sol_en, sol_ar, diagram_en=svg_en, diagram_ar=svg_ar
         ))
 
     # 9. Round-robin tournament / handshakes n(n-1)/2 (10 variants)
@@ -564,12 +632,14 @@ def generate_t1_comb_data() -> list[dict]:
             ],
             f"يمكن التحقق بالجمع التراكمي أيضًا: {m(f'{n_p-1} + {n_p-2} + \\dots + 1 = {ans}')}.",
         )
+        svg_en = svg_graph_chord_polygon(n_p, sub_lbl=f"n = {n_p} → Total pairs = ?")
+        svg_ar = svg_graph_chord_polygon(n_p, sub_lbl=f"العدد = {n_p} ← الأزواج = ؟")
         items.append(make_kmc_question(
             qid, LEVEL, "Combinatorics & Logic", "Easy", "g67-pairs-handshakes",
             q_en, q_ar, opts_en, opts_ar, cidx, cans,
             f"Each of the {n_p} meets {n_p - 1} others, then divide by 2 so you don't count A-with-B and B-with-A separately!",
             f"اضرب {n_p} في ({n_p} - 1) ثم اقسم الناتج على 2 حتى لا تحسب كل زوج مرتين!",
-            sol_en, sol_ar
+            sol_en, sol_ar, diagram_en=svg_en, diagram_ar=svg_ar
         ))
 
     # 10. Counting ALL rectangles (including squares) in an m x n grid (10 variants)
@@ -613,12 +683,14 @@ def generate_t1_comb_data() -> list[dict]:
             ],
             f"مجرّد عدّ المربعات الصغيرة {m(r*c)} يغفل المستطيلات المدمجة؛ العدد الكامل هو {m(ans)}.",
         )
+        svg_en = svg_grid_dimensions(c, r, col_lbl=f"{c} cols", row_lbl=f"{r} rows", mode="subrect")
+        svg_ar = svg_grid_dimensions(c, r, col_lbl=f"{c} أعمدة", row_lbl=f"{r} صفوف", mode="subrect")
         items.append(make_kmc_question(
             qid, LEVEL, "Combinatorics & Logic", "Hard", "g67-count-grid-rectangles",
             q_en, q_ar, opts_en, opts_ar, cidx, cans,
             f"Add (1 + ... + {r}) for the rows and (1 + ... + {c}) for the columns, then multiply those two sums!",
             f"اجمع (1 + ... + {r}) للصفوف واجمع (1 + ... + {c}) للأعمدة، ثم اضرب الناتجين معًا!",
-            sol_en, sol_ar
+            sol_en, sol_ar, diagram_en=svg_en, diagram_ar=svg_ar
         ))
 
     # 11. Two-digit positive integers with restricted digit difference |tens - ones| (10 variants) — KMC Junior Q7
@@ -668,12 +740,15 @@ def generate_t1_comb_data() -> list[dict]:
             ],
             f"مراجعة طرفَي الأرقام ({m(0)} و {m(9)}) تحميك من الخطأ بزيادة أو نقصان {m(1)}؛ الجواب الدقيق هو {m(ans)}.",
         )
+        rule_sym = f"|A − B| ≤ {k_val}" if mode == "at_most" else (f"|A − B| = {k_val}" if mode == "exact" else f"|A − B| ≥ {k_val}")
+        svg_en = svg_digit_cards(["A", "B"], badge_lbl=f"10..99: {rule_sym}", note_lbl="How many = ?")
+        svg_ar = svg_digit_cards(["عشرات", "آحاد"], badge_lbl=f"10..99: {rule_sym}", note_lbl="كم عددًا = ؟")
         items.append(make_kmc_question(
             qid, LEVEL, "Combinatorics & Logic", "Medium", "g67-two-digit-diff",
             q_en, q_ar, opts_en, opts_ar, cidx, cans,
             "Check each tens digit from 1 to 9 (tens cannot be 0, while ones CAN be 0) and count matching ones digits!",
             "جرّب كل رقم للعشرات من 1 إلى 9 (العشرات لا تساوي 0، أما الآحاد فيمكن أن تساوي 0) وعدّ الخيارات المتاحة!",
-            sol_en, sol_ar
+            sol_en, sol_ar, diagram_en=svg_en, diagram_ar=svg_ar
         ))
 
     assert len(items) == 110, f"Expected 110 items, got {len(items)}"

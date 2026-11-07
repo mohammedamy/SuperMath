@@ -13,9 +13,23 @@ from kmc_diagrams import (
     svg_column_cryptarithm,
     svg_number_triangle_puzzle,
 )
+from kmc_diagrams_extra import (
+    svg_algebra_flow,
+    svg_factorial_padic_bars,
+    svg_number_line_sign_chart,
+    svg_pigeonhole_bins,
+    svg_statement_cards,
+    svg_telescoping_chain,
+)
 
 LEVEL = "Track 3: Grades 10-11"
 TOPIC = "Number Theory"
+
+_SUP = str.maketrans("0123456789-", "⁰¹²³⁴⁵⁶⁷⁸⁹⁻")
+
+
+def _sup(n: int) -> str:
+    return str(n).translate(_SUP)
 
 
 def is_prime(n: int) -> bool:
@@ -35,7 +49,7 @@ def generate() -> list[dict]:
     out: list[dict] = []
     idx = 1
 
-    def push(diff, bp, q_en, q_ar, opts_en, opts_ar, cidx, cans, h_en, h_ar, s_en, s_ar, svg=None):
+    def push(diff, bp, q_en, q_ar, opts_en, opts_ar, cidx, cans, h_en, h_ar, s_en, s_ar, svg_en=None, svg_ar=None):
         nonlocal idx
         qid = f"KMC-T3-NT-{idx:03d}"
         idx += 1
@@ -43,7 +57,7 @@ def generate() -> list[dict]:
             make_kmc_question(
                 qid, LEVEL, TOPIC, diff, bp,
                 q_en, q_ar, opts_en, opts_ar, cidx, cans,
-                h_en, h_ar, s_en, s_ar, svg,
+                h_en, h_ar, s_en, s_ar, svg_en, svg_ar or svg_en,
             )
         )
 
@@ -103,7 +117,21 @@ def generate() -> list[dict]:
             ],
             f"حيلة تقدير سريعة: \\( k^2 \\approx 2 \\times {N_pos} = {2*N_pos} \\) تقودك مباشرة إلى جوار العدد \\( {ans} \\)!",
         )
-        push(diff, "kmc_g1011_block_sequence_triangular", q_en, q_ar, opts_en, opts_ar, cidx, cans, h_en, h_ar, s_en, s_ar)
+        svg_en = svg_telescoping_chain(
+            ["1", "2, 2", "3, 3, 3", "···", "?"],
+            op_sym="",
+            title_lbl=f"Term #{N_pos} = ?",
+            footer_lbl="Tₖ = k(k + 1) ÷ 2",
+            slash_middle=False,
+        )
+        svg_ar = svg_telescoping_chain(
+            ["1", "2, 2", "3, 3, 3", "···", "؟"],
+            op_sym="",
+            title_lbl=f"الحد رقم {N_pos} = ؟",
+            footer_lbl="Tₖ = k(k + 1) ÷ 2",
+            slash_middle=False,
+        )
+        push(diff, "kmc_g1011_block_sequence_triangular", q_en, q_ar, opts_en, opts_ar, cidx, cans, h_en, h_ar, s_en, s_ar, svg_en, svg_ar)
 
     # ------------------------------------------------------------------
     # 2. Floor function sum \sum_{n=1}^M floor(((kn + 1)^2) / n^2) (KMC Senior Q4!) (10 Qs)
@@ -159,7 +187,19 @@ def generate() -> list[dict]:
             ],
             f"تحقق عند الحد الفاصل {m(f'n = {cutoff}')}: الجزء الكسري أكبر من 1، بينما من {m(cutoff+1)} فصاعداً يصبح أصغر من 1!",
         )
-        push(diff, "kmc_g1011_floor_sum_jump", q_en, q_ar, opts_en, opts_ar, cidx, cans, h_en, h_ar, s_en, s_ar)
+        num_u = f"({k}n + 1)²" if k > 1 else "(n + 1)²"
+        ticks_flr = [("n=1", True), ("n=2", True), ("···", False), (f"n={M}", True)]
+        svg_en = svg_number_line_sign_chart(
+            ticks_flr, None,
+            header_lbl=f"⌊{num_u} ÷ n²⌋",
+            footer_lbl=f"Sum (1 ≤ n ≤ {M}) = ?",
+        )
+        svg_ar = svg_number_line_sign_chart(
+            ticks_flr, None,
+            header_lbl=f"⌊{num_u} ÷ n²⌋",
+            footer_lbl=f"المجموع (1 ≤ n ≤ {M}) = ؟",
+        )
+        push(diff, "kmc_g1011_floor_sum_jump", q_en, q_ar, opts_en, opts_ar, cidx, cans, h_en, h_ar, s_en, s_ar, svg_en, svg_ar)
 
     # ------------------------------------------------------------------
     # 3. Linear Diophantine GCD threshold ax + by >= M (KMC Senior 27x+36y >= 555!) (10 Qs)
@@ -217,7 +257,15 @@ def generate() -> list[dict]:
             ],
             f"مثال تحققي بالأعداد: عند {m(f'x = {x0}, y = {y0}')} نحصل على {m(f'{a}({x0}) + {b}({y0}) = {ans}')} بالضبط!",
         )
-        push(diff, "kmc_g1011_gcd_threshold_min", q_en, q_ar, opts_en, opts_ar, cidx, cans, h_en, h_ar, s_en, s_ar)
+        svg_en = svg_algebra_flow(
+            [("x, y ∈ ℤ", f"{a}x + {b}y"), ("Bound", f"≥ {M_min}"), ("Min", "?")],
+            title_lbl=f"{a}x + {b}y ≥ {M_min}",
+        )
+        svg_ar = svg_algebra_flow(
+            [("x, y ∈ ℤ", f"{a}x + {b}y"), ("الشرط", f"≥ {M_min}"), ("الأصغر", "؟")],
+            title_lbl=f"{a}x + {b}y ≥ {M_min}",
+        )
+        push(diff, "kmc_g1011_gcd_threshold_min", q_en, q_ar, opts_en, opts_ar, cidx, cans, h_en, h_ar, s_en, s_ar, svg_en, svg_ar)
 
     # ------------------------------------------------------------------
     # 4. Prime parity trap: A - n and B - n both prime with A - B odd (KMC Senior!) (10 Qs)
@@ -273,7 +321,15 @@ def generate() -> list[dict]:
             ],
             f"كلا العددين {m(2)} و{m(2 + d)} أوليان، مما يؤكد أن {m(f'n = {ans}')} هو الحل الوحيد!",
         )
-        push(diff, "kmc_g1011_prime_parity_trap", q_en, q_ar, opts_en, opts_ar, cidx, cans, h_en, h_ar, s_en, s_ar)
+        svg_en = svg_statement_cards(
+            [("p₁", f"{A} − n is prime"), ("p₂", f"{B} − n is prime"), ("?", "n = ?")],
+            header_lbl="Both Prime",
+        )
+        svg_ar = svg_statement_cards(
+            [("p₁", f"{A} − n عدد أولي"), ("p₂", f"{B} − n عدد أولي"), ("؟", "n = ؟")],
+            header_lbl="كلاهما عدد أولي",
+        )
+        push(diff, "kmc_g1011_prime_parity_trap", q_en, q_ar, opts_en, opts_ar, cidx, cans, h_en, h_ar, s_en, s_ar, svg_en, svg_ar)
 
     # ------------------------------------------------------------------
     # 5. Factorial product perfect square: n * a! * (a+1)! or n * a! * (a+2)! (KMC Senior!) (10 Qs)
@@ -341,7 +397,17 @@ def generate() -> list[dict]:
             ],
             f"عند {m(f'n = {ans}')} يصبح الجداء الكلي مربعاً كاملاً بالضبط!",
         )
-        push(diff, "kmc_g1011_factorial_square", q_en, q_ar, opts_en, opts_ar, cidx, cans, h_en, h_ar, s_en, s_ar)
+        svg_en = svg_factorial_padic_bars(
+            f"n × {a}! × {b}! = □²",
+            [("n", 0.42, "?"), (f"{a}!", 0.72, f"1..{a}"), (f"{b}!", 0.96, f"1..{b}")],
+            footer_lbl="Smallest n ≥ 1 = ?",
+        )
+        svg_ar = svg_factorial_padic_bars(
+            f"n × {a}! × {b}! = □²",
+            [("n", 0.42, "؟"), (f"{a}!", 0.72, f"1..{a}"), (f"{b}!", 0.96, f"1..{b}")],
+            footer_lbl="أصغر عدد موجب n = ؟",
+        )
+        push(diff, "kmc_g1011_factorial_square", q_en, q_ar, opts_en, opts_ar, cidx, cans, h_en, h_ar, s_en, s_ar, svg_en, svg_ar)
 
     # ------------------------------------------------------------------
     # 6. Highest power of prime p dividing A^k ± B^k (KMC Senior 300^9 style!) (10 Qs)
@@ -405,7 +471,17 @@ def generate() -> list[dict]:
             ],
             f"تم التحقق حسابياً: المقدار يقبل القسمة على {m(f'{p}^{{{ans}}}')} ولا يقبل القسمة على {m(f'{p}^{{{ans+1}}}')}!",
         )
-        push(diff, "kmc_g1011_prime_power_diff", q_en, q_ar, opts_en, opts_ar, cidx, cans, h_en, h_ar, s_en, s_ar)
+        op_u = "+" if sign == "+" else "−"
+        expr_u = f"{A}{_sup(k)} {op_u} {B}{_sup(k)}"
+        svg_en = svg_algebra_flow(
+            [("Value", expr_u), ("Divisor", f"{p}ᵐ"), ("Max m", "?")],
+            title_lbl=f"{p}ᵐ | ({expr_u})",
+        )
+        svg_ar = svg_algebra_flow(
+            [("المقدار", expr_u), ("القاسم", f"{p}ᵐ"), ("أكبر m", "؟")],
+            title_lbl=f"{p}ᵐ | ({expr_u})",
+        )
+        push(diff, "kmc_g1011_prime_power_diff", q_en, q_ar, opts_en, opts_ar, cidx, cans, h_en, h_ar, s_en, s_ar, svg_en, svg_ar)
 
     # ------------------------------------------------------------------
     # 7. Verified unique alphametic column cryptarithms (10 Qs, SVG!)
@@ -535,7 +611,21 @@ def generate() -> list[dict]:
             ],
             f"تحقق سريع بالمتوسط: {m(f'{S_rem} \\div {k_rem} \\approx {S_rem / k_rem:.1f}')} مما يحدد موقع الأعداد فوراً!",
         )
-        push(diff, "kmc_g1011_consecutive_subset_sum", q_en, q_ar, opts_en, opts_ar, cidx, cans, h_en, h_ar, s_en, s_ar)
+        svg_en = svg_telescoping_chain(
+            ["a", "a+1", "···", "✗", "···", f"a+{n_tot-1}"],
+            op_sym="+",
+            title_lbl=f"{n_tot} consecutive → ✗ = ?",
+            footer_lbl=f"Sum ({k_rem} left) = {S_rem}",
+            slash_middle=False,
+        )
+        svg_ar = svg_telescoping_chain(
+            ["a", "a+1", "···", "✗", "···", f"a+{n_tot-1}"],
+            op_sym="+",
+            title_lbl=f"{n_tot} متتالية: الممسوح = ؟",
+            footer_lbl=f"مجموع {k_rem} متبقية = {S_rem}",
+            slash_middle=False,
+        )
+        push(diff, "kmc_g1011_consecutive_subset_sum", q_en, q_ar, opts_en, opts_ar, cidx, cans, h_en, h_ar, s_en, s_ar, svg_en, svg_ar)
 
     # ------------------------------------------------------------------
     # 9. Multiplicative number triangle -> sum of all three vertices (10 Qs, SVG!)
@@ -661,7 +751,14 @@ def generate() -> list[dict]:
 
         s_en = explain_en("Simultaneous remainder problems yield quickly to either a constant offset from the LCM or stepping by the largest modulus!", steps_en, f"Verify: \\( {ans} \\bmod {m1} = {ans%m1} \\), \\( {ans} \\bmod {m2} = {ans%m2} \\), \\( {ans} \\bmod {m3} = {ans%m3} \\)!")
         s_ar = explain_ar("مسائل البواقي المتزامنة تُحل بسهولة بملاحظة الفرق الثابت عن المضاعف المشترك الأصغر أو بالقفز وفق المقسوم الأكبر!", steps_ar, f"تحقق: باقي قسمة {m(ans)} على {m(m1)} و{m(m2)} و{m(m3)} هو {m(r1)} و{m(r2)} و{m(r3)} بالترتيب!")
-        push(diff, "kmc_g1011_multi_constraint_integer", q_en, q_ar, opts_en, opts_ar, cidx, cans, h_en, h_ar, s_en, s_ar)
+        cards_crt = [
+            (f"÷ {m1}", f"n ≡ {r1} (mod {m1})"),
+            (f"÷ {m2}", f"n ≡ {r2} (mod {m2})"),
+            (f"÷ {m3}", f"n ≡ {r3} (mod {m3})"),
+        ]
+        svg_en = svg_statement_cards(cards_crt, header_lbl="Smallest n > 1 = ?")
+        svg_ar = svg_statement_cards(cards_crt, header_lbl="أصغر عدد n > 1 = ؟")
+        push(diff, "kmc_g1011_multi_constraint_integer", q_en, q_ar, opts_en, opts_ar, cidx, cans, h_en, h_ar, s_en, s_ar, svg_en, svg_ar)
 
     # ------------------------------------------------------------------
     # 11. Sum of two squares divisible by p in {3, 7, 11} (10 Qs)
@@ -719,7 +816,10 @@ def generate() -> list[dict]:
             ],
             f"قاعدة ذهبية في نظرية الأعداد: لقسمة مجموع مربعين على عدد أولي يترك باقي 3 عند قسمته على 4 (مثل 3 و7 و11)، يجب أن يقسم العدد الأولي كلا العددين معاً!",
         )
-        push(diff, "kmc_g1011_sum_squares_mod", q_en, q_ar, opts_en, opts_ar, cidx, cans, h_en, h_ar, s_en, s_ar)
+        bins_sqm = [(f"1..{N_max}", "a²"), (f"1..{N_max}", "b²"), (f"mod {p}", "a²+b² ≡ 0")]
+        svg_en = svg_pigeonhole_bins(bins_sqm, header_lbl=f"{p} | (a² + b²)", footer_lbl="Pairs (a, b) = ?")
+        svg_ar = svg_pigeonhole_bins(bins_sqm, header_lbl=f"{p} يقسم (a² + b²)", footer_lbl="الأزواج (a, b) = ؟")
+        push(diff, "kmc_g1011_sum_squares_mod", q_en, q_ar, opts_en, opts_ar, cidx, cans, h_en, h_ar, s_en, s_ar, svg_en, svg_ar)
 
     assert len(out) == 110, f"Expected 110, got {len(out)}"
     return out
