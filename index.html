@@ -389,10 +389,20 @@
             <option value="Phase 3: Senior National Olympiad (Grade 10)">🥇 المرحلة 3: الأولمبياد الوطني (G10)</option>
           </select>
 
+          <!-- Olympiad Tier Filter (shows only when olympiad track is selected) -->
+          <select id="quiz-olympiad-tier-select" onchange="filterQuestions()" class="bg-slate-800 text-white border border-amber-500/50 text-xs sm:text-sm rounded-xl px-3 py-2.5 focus:ring-2 focus:ring-amber-500 outline-none">
+            <option value="all">كل مستويات الأولمبياد الرياضي (All Olympiad Tiers)</option>
+            <option value="Tier 1: Junior Olympiad (Grades 7-8)">🥉 المستوى 1: أولمبياد الناشئين (Tier 1: G7-8)</option>
+            <option value="Tier 2: Intermediate Olympiad (Grades 9-10)">🥈 المستوى 2: الأولمبياد المتوسط (Tier 2: G9-10)</option>
+            <option value="Tier 3: Senior Olympiad (Grades 11-12)">🥇 المستوى 3: الأولمبياد المتقدم (Tier 3: G11-12)</option>
+          </select>
+
           <select id="quiz-topic-select" onchange="filterQuestions()" class="bg-slate-800 text-white border border-slate-700 text-xs sm:text-sm rounded-xl px-3 py-2.5 focus:ring-2 focus:ring-amber-500 outline-none">
             <option value="all">كل المواضيع (All Topics)</option>
             <option value="Algebra">الجبر (Algebra)</option>
             <option value="Geometry">الهندسة (Geometry)</option>
+            <option value="Inequalities">المتباينات (Inequalities)</option>
+            <option value="Combinatorics">التركيبات (Combinatorics)</option>
             <option value="Fractions">الكسور (Fractions)</option>
             <option value="Word Problems">مسائل كلامية (Word Problems)</option>
             <option value="Statistics">الإحصاء (Statistics)</option>
@@ -864,19 +874,19 @@
         },
         {
           id: "olympiad",
-          name_ar: "الأولمبياد الدولي IMO",
-          name_en: "Math Olympiad (IMO)",
-          badge_ar: "براهين وإثباتات",
-          badge_en: "Proofs & Theorems",
+          name_ar: "الأولمبياد الرياضي (IMO / BMO / AMC)",
+          name_en: "Math Olympiad (IMO / BMO / AMC)",
+          badge_ar: "MCQs (5 خيارات)",
+          badge_en: "MCQs (5 Options)",
           color: "border-amber-500",
           bg: "bg-amber-50 dark:bg-amber-900/20",
           accent: "text-amber-600",
-          levels_ar: "الصفوف 7-12",
-          levels_en: "Grades 7-12",
-          format_ar: "مقالي كامل | 3 أسئلة بـ 4.5 ساعات",
-          format_en: "Full FRQ | 3 Questions in 4.5 hrs",
-          topics_ar: ["الأعداد", "التركيبات", "الهندسة الإقليدية"],
-          topics_en: ["Number Theory", "Combinatorics", "Euclidean Geometry"],
+          levels_ar: "الصفوف 7–12 (3 مستويات أولمبية)",
+          levels_en: "Grades 7–12 (3 Olympiad Tiers)",
+          format_ar: "اختيار من متعدد (A–E) · 90 دقيقة · بدون آلة حاسبة",
+          format_en: "5-Option MCQs (A–E) · 90 Min · No Calculator",
+          topics_ar: ["نظرية الأعداد", "الجبر", "المتباينات", "الهندسة", "التركيبات"],
+          topics_en: ["Number Theory", "Algebra", "Inequalities", "Geometry", "Combinatorics"],
           grades: [7, 8, 9, 10, 11, 12]
         },
         {
@@ -1323,6 +1333,7 @@
               ${tr.id === 'nafes' ? `<button type="button" onclick="event.stopPropagation();if(window.setStudyCompetition)setStudyCompetition('nafes');if(window.jumpToKaustStudy)jumpToKaustStudy();" class="mt-3 w-full py-2 px-3 rounded-xl bg-teal-700 hover:bg-teal-600 text-white text-xs font-extrabold flex items-center justify-center gap-1.5 shadow-sm transition-colors">🇸🇦 ${currentLang === 'ar' ? '١٨ درساً لنافس · ١٨٠ مثالاً محلولاً · ١٢ اختباراً تجريبياً · A4' : '18 Nafes Lessons · 180 Solved Examples · 12 Mocks · A4'}</button>` : ''}
               ${tr.id === 'kaust' ? `<button type="button" onclick="event.stopPropagation();if(window.setStudyCompetition)setStudyCompetition('kaust');if(window.jumpToKaustStudy)jumpToKaustStudy();" class="mt-3 w-full py-2 px-3 rounded-xl bg-teal-700 hover:bg-teal-600 text-white text-xs font-extrabold flex items-center justify-center gap-1.5 shadow-sm transition-colors">📖 ${currentLang === 'ar' ? '١٨ درساً مصوّراً · ١٨٥ مثالاً محلولاً · ١٠٨ تدريبات وطباعة A4' : '18 Study Lessons · 185 Solved Examples · 108 Drills · A4 Print'}</button>` : ''}
               ${tr.id === 'nsmo' ? `<button type="button" onclick="event.stopPropagation();if(window.setStudyCompetition)setStudyCompetition('nsmo');if(window.jumpToKaustStudy)jumpToKaustStudy();" class="mt-3 w-full py-2 px-3 rounded-xl bg-teal-700 hover:bg-teal-600 text-white text-xs font-extrabold flex items-center justify-center gap-1.5 shadow-sm transition-colors">📖 ${currentLang === 'ar' ? '١٨ درساً لموهبة · ١٨٠ مثالاً محلولاً · ١٢ اختباراً تجريبياً · A4' : '18 Mawhiba Lessons · 180 Solved Examples · 12 Mocks · A4'}</button>` : ''}
+              ${tr.id === 'olympiad' ? `<button type="button" onclick="event.stopPropagation();if(window.setStudyCompetition)setStudyCompetition('olympiad');if(window.jumpToKaustStudy)jumpToKaustStudy();" class="mt-3 w-full py-2 px-3 rounded-xl bg-teal-700 hover:bg-teal-600 text-white text-xs font-extrabold flex items-center justify-center gap-1.5 shadow-sm transition-colors">🏆 ${currentLang === 'ar' ? '١٨ درساً للأولمبياد · ١٨٠ مثالاً محلولاً · ١٢ اختباراً تجريبياً · A4' : '18 Olympiad Lessons · 180 Solved Examples · 12 Mocks · A4'}</button>` : ''}
             </div>
           </div>
         `;
@@ -1537,7 +1548,7 @@
     let previousTrack = 'all';
     function filterQuestions() {
       const trackVal = document.getElementById('quiz-track-select').value;
-      const filterIds = {nafes:'quiz-nafes-grade-select',kangaroo:'quiz-kangaroo-level-select',kaust:'quiz-kaust-phase-select',nsmo:'quiz-nsmo-phase-select'};
+      const filterIds = {nafes:'quiz-nafes-grade-select',kangaroo:'quiz-kangaroo-level-select',kaust:'quiz-kaust-phase-select',nsmo:'quiz-nsmo-phase-select',olympiad:'quiz-olympiad-tier-select'};
       for (const [track,id] of Object.entries(filterIds)) {
         const el = document.getElementById(id);
         el.style.display = trackVal === track ? 'block' : 'none';
@@ -1655,6 +1666,12 @@
         { val: "Phase 1: Junior Olympiad (Grade 7)", text: "🥉 المرحلة 1: أولمبياد الناشئين (G7)" },
         { val: "Phase 2: Intermediate Olympiad (Grades 8-9)", text: "🥈 المرحلة 2: الأولمبياد المتوسط (G8-9)" },
         { val: "Phase 3: Senior National Olympiad (Grade 10)", text: "🥇 المرحلة 3: الأولمبياد الوطني (G10)" }
+      ],
+      olympiad: [
+        { val: "all", text: "كل مستويات الأولمبياد الرياضي (All Olympiad Tiers)" },
+        { val: "Tier 1: Junior Olympiad (Grades 7-8)", text: "🥉 المستوى 1: أولمبياد الناشئين (Tier 1: G7-8)" },
+        { val: "Tier 2: Intermediate Olympiad (Grades 9-10)", text: "🥈 المستوى 2: الأولمبياد المتوسط (Tier 2: G9-10)" },
+        { val: "Tier 3: Senior Olympiad (Grades 11-12)", text: "🥇 المستوى 3: الأولمبياد المتقدم (Tier 3: G11-12)" }
       ]
     };
 

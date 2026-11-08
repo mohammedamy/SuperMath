@@ -1,7 +1,7 @@
 {
   "status": "passed",
-  "total": 7840,
-  "parameterized_additions": 575,
+  "total": 8420,
+  "parameterized_additions": 293,
   "independently_enumerated_generated_answers": 5,
   "scope_certification": false,
   "individual_review_of_every_legacy_answer": false,
@@ -54,9 +54,11 @@
     },
     {
       "track": "olympiad",
-      "total": 500,
+      "total": 1080,
       "levels": {
-        "High School": 500
+        "Tier 1: Junior Olympiad (Grades 7-8)": 360,
+        "Tier 2: Intermediate Olympiad (Grades 9-10)": 360,
+        "Tier 3: Senior Olympiad (Grades 11-12)": 360
       }
     }
   ]

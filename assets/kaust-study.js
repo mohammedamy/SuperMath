@@ -88,13 +88,35 @@
         { level: 'Grade 9', en: 'Grade 9 · Intermediate Benchmark', ar: 'الصف الثالث المتوسط (نافس 9)', shortEn: 'Grade 9 (Intermediate)', shortAr: 'الصف الثالث المتوسط' },
       ],
     },
+    olympiad: {
+      id: 'olympiad',
+      bpField: 'olympiad_blueprint',
+      quizSelectId: 'quiz-olympiad-tier-select',
+      pillEn: '🏆 Olympiad (Grades 7–12 · 5 Options)',
+      pillAr: '🏆 الأولمبياد الرياضي (الصفوف 7–12 · 5 خيارات)',
+      hubTitleEn: 'Math Olympiad (IMO / BMO / AMC) Study Lessons',
+      hubTitleAr: 'أكاديمية شرح دروس الأولمبياد الرياضي (IMO / BMO / AMC)',
+      badgeEn: 'Math Olympiad',
+      badgeAr: 'الأولمبياد الرياضي',
+      bankTagEn: 'Olympiad Bank',
+      bankTagAr: 'من بنك الأولمبياد',
+      trapsTitleEn: 'Watch Out — Common Math Olympiad Traps!',
+      trapsTitleAr: 'احذر هذه الأخطاء الشائعة في مسائل الأولمبياد الرياضي!',
+      tracks: [
+        { level: 'Tier 1: Junior Olympiad (Grades 7-8)', en: 'Tier 1 · Grades 7–8 (Junior)', ar: 'المستوى ١ · الصفان 7–8 (الناشئين)', shortEn: 'Grades 7–8 (Junior)', shortAr: 'الصفان 7–8 (الناشئين)' },
+        { level: 'Tier 2: Intermediate Olympiad (Grades 9-10)', en: 'Tier 2 · Grades 9–10 (Intermediate)', ar: 'المستوى ٢ · الصفان 9–10 (المتوسط)', shortEn: 'Grades 9–10 (Intermediate)', shortAr: 'الصفان 9–10 (المتوسط)' },
+        { level: 'Tier 3: Senior Olympiad (Grades 11-12)', en: 'Tier 3 · Grades 11–12 (Senior)', ar: 'المستوى ٣ · الصفان 11–12 (المتقدم)', shortEn: 'Grades 11–12 (Senior)', shortAr: 'الصفان 11–12 (المتقدم)' },
+      ],
+    },
   };
 
   const TOPIC_AR = {
     'Numbers & Operations': 'الأعداد والعمليات عليها',
     'Number Theory': 'نظرية الأعداد',
     'Algebra': 'الجبر والأنماط',
+    'Inequalities': 'المتباينات والقيم القصوى',
     'Geometry': 'الهندسة والقياس',
+    'Combinatorics': 'التركيبات والعد',
     'Combinatorics & Logic': 'التوافيق والمنطق والاحتمالات',
     'Data & Probability': 'البيانات والاحتمالات',
   };
@@ -108,12 +130,14 @@
   let nsmoLessons = [];
   let kangarooLessons = [];
   let nafesLessons = [];
+  let olympiadLessons = [];
   let activeComp = 'kaust';
   let activeTrackByComp = {
     kaust: COMP_CONFIG.kaust.tracks[0].level,
     nsmo: COMP_CONFIG.nsmo.tracks[0].level,
     kangaroo: COMP_CONFIG.kangaroo.tracks[0].level,
     nafes: COMP_CONFIG.nafes.tracks[0].level,
+    olympiad: COMP_CONFIG.olympiad.tracks[0].level,
   };
   let activeLessonId = null;
   let selfTestMode = false;
@@ -131,10 +155,11 @@
   const getBankQuestions = () => (typeof appData !== 'undefined' && Array.isArray(appData.questions) ? appData.questions : []);
 
   function allLessons() {
-    return kaustLessons.concat(nsmoLessons, kangarooLessons, nafesLessons);
+    return kaustLessons.concat(nsmoLessons, kangarooLessons, nafesLessons, olympiadLessons);
   }
 
   function currentLessons() {
+    if (activeComp === 'olympiad') return olympiadLessons;
     if (activeComp === 'nafes') return nafesLessons;
     if (activeComp === 'nsmo') return nsmoLessons;
     if (activeComp === 'kangaroo') return kangarooLessons;
@@ -143,6 +168,9 @@
 
   function compForLesson(les) {
     if (!les) return COMP_CONFIG[activeComp];
+    if (les.track === 'olympiad' || String(les.id || '').startsWith('OLYM-') || String(les.level || '').startsWith('Tier ')) {
+      return COMP_CONFIG.olympiad;
+    }
     if (les.track === 'nafes' || String(les.id || '').startsWith('NAFS-') || ['Grade 3', 'Grade 6', 'Grade 9'].includes(les.level)) {
       return COMP_CONFIG.nafes;
     }
@@ -823,10 +851,11 @@
   };
 
   window.setStudyCompetition = function (compId) {
-    if (compId !== 'kaust' && compId !== 'nsmo' && compId !== 'kangaroo' && compId !== 'nafes') return;
+    if (compId !== 'kaust' && compId !== 'nsmo' && compId !== 'kangaroo' && compId !== 'nafes' && compId !== 'olympiad') return;
     if (compId === 'nsmo' && !nsmoLessons.length) return;
     if (compId === 'kangaroo' && !kangarooLessons.length) return;
     if (compId === 'nafes' && !nafesLessons.length) return;
+    if (compId === 'olympiad' && !olympiadLessons.length) return;
     activeComp = compId;
     activeLessonId = null;
     render();
@@ -857,6 +886,9 @@
     } else if (['PreEcolier', 'Ecolier', 'Benjamin', 'Cadet', 'Junior', 'Student'].includes(level)) {
       activeComp = 'kangaroo';
       activeTrackByComp.kangaroo = level;
+    } else if (String(level || '').startsWith('Tier ')) {
+      activeComp = 'olympiad';
+      activeTrackByComp.olympiad = level;
     } else if (String(level || '').startsWith('Phase ')) {
       activeComp = 'nsmo';
       activeTrackByComp.nsmo = level;
@@ -869,11 +901,12 @@
   };
 
   window.jumpToKaustStudy = function (levelOrComp) {
-    if (levelOrComp === 'kaust' || levelOrComp === 'nsmo' || levelOrComp === 'kangaroo' || levelOrComp === 'nafes') {
+    if (levelOrComp === 'kaust' || levelOrComp === 'nsmo' || levelOrComp === 'kangaroo' || levelOrComp === 'nafes' || levelOrComp === 'olympiad') {
       if (
         (levelOrComp !== 'nsmo' || nsmoLessons.length) &&
         (levelOrComp !== 'kangaroo' || kangarooLessons.length) &&
-        (levelOrComp !== 'nafes' || nafesLessons.length)
+        (levelOrComp !== 'nafes' || nafesLessons.length) &&
+        (levelOrComp !== 'olympiad' || olympiadLessons.length)
       ) {
         activeComp = levelOrComp;
       }
@@ -903,12 +936,13 @@
     const cfg = COMP_CONFIG[activeComp];
     const activeTrack = activeTrackByComp[activeComp];
 
-    const compSwitcher = (nsmoLessons.length || kangarooLessons.length || nafesLessons.length)
+    const compSwitcher = (nsmoLessons.length || kangarooLessons.length || nafesLessons.length || olympiadLessons.length)
       ? `<div class="eg-comp-switch no-print" role="tablist" aria-label="Study Competition">
           ${nafesLessons.length ? `<button type="button" onclick="setStudyCompetition('nafes')" class="eg-comp-btn${activeComp === 'nafes' ? ' eg-comp-btn-on' : ''}">${isAr() ? COMP_CONFIG.nafes.pillAr : COMP_CONFIG.nafes.pillEn}</button>` : ''}
           ${kangarooLessons.length ? `<button type="button" onclick="setStudyCompetition('kangaroo')" class="eg-comp-btn${activeComp === 'kangaroo' ? ' eg-comp-btn-on' : ''}">${isAr() ? COMP_CONFIG.kangaroo.pillAr : COMP_CONFIG.kangaroo.pillEn}</button>` : ''}
           <button type="button" onclick="setStudyCompetition('kaust')" class="eg-comp-btn${activeComp === 'kaust' ? ' eg-comp-btn-on' : ''}">${isAr() ? COMP_CONFIG.kaust.pillAr : COMP_CONFIG.kaust.pillEn}</button>
           ${nsmoLessons.length ? `<button type="button" onclick="setStudyCompetition('nsmo')" class="eg-comp-btn${activeComp === 'nsmo' ? ' eg-comp-btn-on' : ''}">${isAr() ? COMP_CONFIG.nsmo.pillAr : COMP_CONFIG.nsmo.pillEn}</button>` : ''}
+          ${olympiadLessons.length ? `<button type="button" onclick="setStudyCompetition('olympiad')" class="eg-comp-btn${activeComp === 'olympiad' ? ' eg-comp-btn-on' : ''}">${isAr() ? COMP_CONFIG.olympiad.pillAr : COMP_CONFIG.olympiad.pillEn}</button>` : ''}
         </div>`
       : '';
 
@@ -1024,11 +1058,12 @@
       sec.className = 'no-print-section';
       practice.parentNode.insertBefore(sec, practice);
     }
-    const [kRes, nRes, gRes, fRes] = await Promise.allSettled([
+    const [kRes, nRes, gRes, fRes, oRes] = await Promise.allSettled([
       fetch('data/kaust_lessons.json'),
       fetch('data/nsmo_lessons.json'),
       fetch('data/kangaroo_lessons.json'),
       fetch('data/nafes_lessons.json'),
+      fetch('data/olympiad_lessons.json'),
     ]);
     if (kRes.status === 'fulfilled' && kRes.value && kRes.value.ok) {
       try {
@@ -1050,7 +1085,12 @@
         nafesLessons = ((await fRes.value.json()).lessons) || [];
       } catch (_) {}
     }
-    if (!kaustLessons.length && !nsmoLessons.length && !kangarooLessons.length && !nafesLessons.length) return;
+    if (oRes.status === 'fulfilled' && oRes.value && oRes.value.ok) {
+      try {
+        olympiadLessons = ((await oRes.value.json()).lessons) || [];
+      } catch (_) {}
+    }
+    if (!kaustLessons.length && !nsmoLessons.length && !kangarooLessons.length && !nafesLessons.length && !olympiadLessons.length) return;
 
     const t0 = Date.now();
     while (!getBankQuestions().length && Date.now() - t0 < 15000) {
@@ -1084,6 +1124,10 @@
           else if (g === 7 || g === 8) { activeTrackByComp.kangaroo = 'Cadet'; activeLessonId = null; render(); }
           else if (g === 9 || g === 10) { activeTrackByComp.kangaroo = 'Junior'; activeLessonId = null; render(); }
           else if (g === 11 || g === 12) { activeTrackByComp.kangaroo = 'Student'; activeLessonId = null; render(); }
+        } else if (activeComp === 'olympiad') {
+          if (g === 7 || g === 8) { activeTrackByComp.olympiad = COMP_CONFIG.olympiad.tracks[0].level; activeLessonId = null; render(); }
+          else if (g === 9 || g === 10) { activeTrackByComp.olympiad = COMP_CONFIG.olympiad.tracks[1].level; activeLessonId = null; render(); }
+          else if (g === 11 || g === 12) { activeTrackByComp.olympiad = COMP_CONFIG.olympiad.tracks[2].level; activeLessonId = null; render(); }
         } else if (activeComp === 'nsmo') {
           if (g === 7) { activeTrackByComp.nsmo = COMP_CONFIG.nsmo.tracks[0].level; activeLessonId = null; render(); }
           else if (g === 8 || g === 9) { activeTrackByComp.nsmo = COMP_CONFIG.nsmo.tracks[1].level; activeLessonId = null; render(); }
@@ -1106,6 +1150,7 @@
     get nsmoLessons() { return nsmoLessons; },
     get kangarooLessons() { return kangarooLessons; },
     get nafesLessons() { return nafesLessons; },
+    get olympiadLessons() { return olympiadLessons; },
     get allLessons() { return allLessons(); },
     get activeComp() { return activeComp; },
     render,

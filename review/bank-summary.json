@@ -54,12 +54,12 @@
   },
   {
     "track": "olympiad",
-    "total": 500,
+    "total": 1080,
     "levels": {
-      "High School": 500
+      "Tier 1: Junior Olympiad (Grades 7-8)": 360,
+      "Tier 2: Intermediate Olympiad (Grades 9-10)": 360,
+      "Tier 3: Senior Olympiad (Grades 11-12)": 360
     },
-    "issues": {
-      "written_response_requires_human_review": 500
-    }
+    "issues": {}
   }
 ]

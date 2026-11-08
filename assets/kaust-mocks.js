@@ -236,13 +236,65 @@
         },
       ],
     },
+    olympiad: {
+      id: 'olympiad',
+      bpField: 'olympiad_blueprint',
+      optCount: 5,
+      ptsCorrect: 6,
+      ptsWrong: 0,
+      ptsBlank: 0,
+      durationMin: 90,
+      pillEn: '🏆 Olympiad Mocks (Grades 7–12 · 5 Options)',
+      pillAr: '🏆 اختبارات الأولمبياد الرياضي (الصفوف 7–12 · 5 خيارات)',
+      hubTitleEn: 'Math Olympiad (IMO / BMO / AMC) Full Mock Exams',
+      hubTitleAr: 'محاكي الاختبارات الرسمية الكاملة للأولمبياد الرياضي (IMO / BMO / AMC)',
+      badgeEn: 'Math Olympiad',
+      badgeAr: 'الأولمبياد الرياضي',
+      examNameEn: 'International & National Mathematical Olympiad Screening',
+      examNameAr: 'اختبارات التصفيات الأولمبية للرياضيات (IMO / BMO / AMC)',
+      scoreTag: '+6 / 0 / 0',
+      tracks: [
+        {
+          level: 'Tier 1: Junior Olympiad (Grades 7-8)',
+          code: 'T1',
+          qCount: 25,
+          tiers: { Easy: 9, Medium: 9, Hard: 7 },
+          en: 'Tier 1 · Grades 7–8 (Junior)',
+          ar: 'المستوى 1 · الصفان 7–8 (الناشئين)',
+          shortEn: 'Grades 7–8 (Junior Olympiad)',
+          shortAr: 'الصفان 7–8 (أولمبياد الناشئين)',
+        },
+        {
+          level: 'Tier 2: Intermediate Olympiad (Grades 9-10)',
+          code: 'T2',
+          qCount: 25,
+          tiers: { Easy: 9, Medium: 9, Hard: 7 },
+          en: 'Tier 2 · Grades 9–10 (Intermediate)',
+          ar: 'المستوى 2 · الصفان 9–10 (المتوسط)',
+          shortEn: 'Grades 9–10 (Intermediate Olympiad)',
+          shortAr: 'الصفان 9–10 (الأولمبياد المتوسط)',
+        },
+        {
+          level: 'Tier 3: Senior Olympiad (Grades 11-12)',
+          code: 'T3',
+          qCount: 25,
+          tiers: { Easy: 9, Medium: 9, Hard: 7 },
+          en: 'Tier 3 · Grades 11–12 (Senior)',
+          ar: 'المستوى 3 · الصفان 11–12 (المتقدم)',
+          shortEn: 'Grades 11–12 (Senior Olympiad)',
+          shortAr: 'الصفان 11–12 (الأولمبياد المتقدم)',
+        },
+      ],
+    },
   };
 
   const TOPIC_AR = {
     'Numbers & Operations': 'الأعداد والعمليات عليها',
     'Number Theory': 'نظرية الأعداد',
     Algebra: 'الجبر والأنماط',
+    Inequalities: 'المتباينات والقيم القصوى',
     Geometry: 'الهندسة والقياس',
+    Combinatorics: 'التركيبات والعد',
     'Combinatorics & Logic': 'التركيبات والمنطق',
     'Data & Probability': 'البيانات والاحتمالات',
   };
@@ -256,20 +308,24 @@
   let nsmoDoc = null;
   let kangarooDoc = null;
   let nafesDoc = null;
+  let olympiadDoc = null;
   let kaustMocks = [];
   let nsmoMocks = [];
   let kangarooMocks = [];
   let nafesMocks = [];
+  let olympiadMocks = [];
   let customKaustMocks = [];
   let customNsmoMocks = [];
   let customKangarooMocks = [];
   let customNafesMocks = [];
+  let customOlympiadMocks = [];
   let activeComp = 'kaust';
   let activeTrackByComp = {
     kaust: COMP_CONFIG.kaust.tracks[0].level,
     nsmo: COMP_CONFIG.nsmo.tracks[0].level,
     kangaroo: COMP_CONFIG.kangaroo.tracks[0].level,
     nafes: COMP_CONFIG.nafes.tracks[0].level,
+    olympiad: COMP_CONFIG.olympiad.tracks[0].level,
   };
   let bestScores = {};
 
@@ -286,6 +342,13 @@
 
   function compForPaper(paper) {
     if (!paper) return COMP_CONFIG[activeComp];
+    if (
+      paper.track === 'olympiad' ||
+      String(paper.id || '').startsWith('OLYM-') ||
+      String(paper.level || '').startsWith('Tier ')
+    ) {
+      return COMP_CONFIG.olympiad;
+    }
     if (
       paper.track === 'nafes' ||
       String(paper.id || '').startsWith('NAFS-') ||
@@ -307,12 +370,14 @@
   }
 
   function compForLevel(level) {
+    if (String(level || '').startsWith('Tier ')) return COMP_CONFIG.olympiad;
     if (['Grade 3', 'Grade 6', 'Grade 9'].includes(level)) return COMP_CONFIG.nafes;
     if (['PreEcolier', 'Ecolier', 'Benjamin', 'Cadet', 'Junior', 'Student'].includes(level)) return COMP_CONFIG.kangaroo;
     return String(level || '').startsWith('Phase ') ? COMP_CONFIG.nsmo : COMP_CONFIG.kaust;
   }
 
   function docForComp(compId) {
+    if (compId === 'olympiad') return olympiadDoc;
     if (compId === 'nafes') return nafesDoc;
     if (compId === 'kangaroo') return kangarooDoc;
     if (compId === 'nsmo') return nsmoDoc;
@@ -352,11 +417,16 @@
     return [...nafesMocks, ...customNafesMocks];
   }
 
+  function allOlympiadPapers() {
+    return [...olympiadMocks, ...customOlympiadMocks];
+  }
+
   function allPapersAcrossComps() {
-    return [...allKaustPapers(), ...allNsmoPapers(), ...allKangarooPapers(), ...allNafesPapers()];
+    return [...allKaustPapers(), ...allNsmoPapers(), ...allKangarooPapers(), ...allNafesPapers(), ...allOlympiadPapers()];
   }
 
   function currentCompPapers() {
+    if (activeComp === 'olympiad') return allOlympiadPapers();
     if (activeComp === 'nafes') return allNafesPapers();
     if (activeComp === 'kangaroo') return allKangarooPapers();
     if (activeComp === 'nsmo') return allNsmoPapers();
@@ -580,7 +650,9 @@
     ];
 
     const customList =
-      cfg.id === 'nafes'
+      cfg.id === 'olympiad'
+        ? customOlympiadMocks
+        : cfg.id === 'nafes'
         ? customNafesMocks
         : cfg.id === 'kangaroo'
         ? customKangarooMocks
@@ -588,7 +660,9 @@
         ? customNsmoMocks
         : customKaustMocks;
     const baseList =
-      cfg.id === 'nafes'
+      cfg.id === 'olympiad'
+        ? olympiadMocks
+        : cfg.id === 'nafes'
         ? nafesMocks
         : cfg.id === 'kangaroo'
         ? kangarooMocks
@@ -607,7 +681,7 @@
 
     const eCnt = tr.tiers.Easy;
     const mCnt = tr.tiers.Medium;
-    const prefix = cfg.id === 'nafes' ? 'NAFS' : cfg.id === 'kangaroo' ? 'KANG' : cfg.id === 'nsmo' ? 'NSMO' : 'KMC';
+    const prefix = cfg.id === 'olympiad' ? 'OLYM' : cfg.id === 'nafes' ? 'NAFS' : cfg.id === 'kangaroo' ? 'KANG' : cfg.id === 'nsmo' ? 'NSMO' : 'KMC';
     const maxPts = cfg.tierPoints
       ? eCnt * cfg.tierPoints.Easy + mCnt * cfg.tierPoints.Medium + tr.tiers.Hard * cfg.tierPoints.Hard
       : ordered.length * cfg.ptsCorrect;
@@ -703,10 +777,11 @@
 
   /* ---- Simulator Controls ---- */
   window.setMockCompetition = function (compId) {
-    if (compId !== 'kaust' && compId !== 'nsmo' && compId !== 'kangaroo' && compId !== 'nafes') return;
+    if (compId !== 'kaust' && compId !== 'nsmo' && compId !== 'kangaroo' && compId !== 'nafes' && compId !== 'olympiad') return;
     if (compId === 'nsmo' && !nsmoMocks.length) return;
     if (compId === 'kangaroo' && !kangarooMocks.length) return;
     if (compId === 'nafes' && !nafesMocks.length) return;
+    if (compId === 'olympiad' && !olympiadMocks.length) return;
     if (session && session.mode === 'exam') return;
     session = null;
     activeComp = compId;
@@ -722,11 +797,12 @@
 
   window.jumpToKaustMocks = function (levelOrComp) {
     if (!session) {
-      if (levelOrComp === 'kaust' || levelOrComp === 'nsmo' || levelOrComp === 'kangaroo' || levelOrComp === 'nafes') {
+      if (levelOrComp === 'kaust' || levelOrComp === 'nsmo' || levelOrComp === 'kangaroo' || levelOrComp === 'nafes' || levelOrComp === 'olympiad') {
         if (
           (levelOrComp !== 'nsmo' || nsmoMocks.length) &&
           (levelOrComp !== 'kangaroo' || kangarooMocks.length) &&
-          (levelOrComp !== 'nafes' || nafesMocks.length)
+          (levelOrComp !== 'nafes' || nafesMocks.length) &&
+          (levelOrComp !== 'olympiad' || olympiadMocks.length)
         ) {
           activeComp = levelOrComp;
         }
@@ -735,7 +811,8 @@
         if (
           (cfg.id !== 'nsmo' || nsmoMocks.length) &&
           (cfg.id !== 'kangaroo' || kangarooMocks.length) &&
-          (cfg.id !== 'nafes' || nafesMocks.length)
+          (cfg.id !== 'nafes' || nafesMocks.length) &&
+          (cfg.id !== 'olympiad' || olympiadMocks.length)
         ) {
           activeComp = cfg.id;
           activeTrackByComp[cfg.id] = levelOrComp;
@@ -1465,12 +1542,13 @@
     const trackPapers = compPapers.filter((p) => p.level === activeTrack);
     const optRange = cfg.optCount === 4 ? 'A–D' : 'A–E';
 
-    const compSwitcher = (nsmoMocks.length || kangarooMocks.length || nafesMocks.length)
+    const compSwitcher = (nsmoMocks.length || kangarooMocks.length || nafesMocks.length || olympiadMocks.length)
       ? `<div class="eg-comp-switch no-print" role="tablist" aria-label="Mock Exam Competition">
           ${nafesMocks.length ? `<button type="button" onclick="setMockCompetition('nafes')" class="eg-comp-btn${activeComp === 'nafes' ? ' eg-comp-btn-on' : ''}">${isAr() ? COMP_CONFIG.nafes.pillAr : COMP_CONFIG.nafes.pillEn}</button>` : ''}
           ${kangarooMocks.length ? `<button type="button" onclick="setMockCompetition('kangaroo')" class="eg-comp-btn${activeComp === 'kangaroo' ? ' eg-comp-btn-on' : ''}">${isAr() ? COMP_CONFIG.kangaroo.pillAr : COMP_CONFIG.kangaroo.pillEn}</button>` : ''}
           <button type="button" onclick="setMockCompetition('kaust')" class="eg-comp-btn${activeComp === 'kaust' ? ' eg-comp-btn-on' : ''}">${isAr() ? COMP_CONFIG.kaust.pillAr : COMP_CONFIG.kaust.pillEn}</button>
           ${nsmoMocks.length ? `<button type="button" onclick="setMockCompetition('nsmo')" class="eg-comp-btn${activeComp === 'nsmo' ? ' eg-comp-btn-on' : ''}">${isAr() ? COMP_CONFIG.nsmo.pillAr : COMP_CONFIG.nsmo.pillEn}</button>` : ''}
+          ${olympiadMocks.length ? `<button type="button" onclick="setMockCompetition('olympiad')" class="eg-comp-btn${activeComp === 'olympiad' ? ' eg-comp-btn-on' : ''}">${isAr() ? COMP_CONFIG.olympiad.pillAr : COMP_CONFIG.olympiad.pillEn}</button>` : ''}
         </div>`
       : '';
 
@@ -1537,6 +1615,11 @@
           `نظام كانجارو موهبة الرسمي (${isAr() ? tr.shortAr : tr.shortEn}): <strong>${tr.qCount} سؤال اختيار من متعدد (${optRange})</strong> في <strong>${cfg.durationMin} دقيقة</strong> بدون آلة حاسبة · <strong>3 / 4 / 5 نقاط</strong> حسب الجزء (${maxDivPts} نقطة عظمى) و<strong>بدون خصم (0)</strong> للخاطئة أو المتروكة.`,
           `Official Mawhiba Kangaroo Format (${tr.shortEn}): <strong>${tr.qCount} MCQs (${optRange})</strong> in <strong>${cfg.durationMin} minutes</strong>, No Calculator · <strong>+3 / +4 / +5 pts</strong> across Parts A, B, C (${maxDivPts} max pts) and <strong>0</strong> penalty for wrong/blank.`
         )
+      : cfg.id === 'olympiad'
+      ? L(
+          `نظام التصفيات الأولمبية للرياضيات (${isAr() ? tr.shortAr : tr.shortEn}): <strong>${tr.qCount} سؤال اختيار من متعدد (${optRange})</strong> في <strong>${cfg.durationMin} دقيقة</strong> بدون آلة حاسبة · <strong>+6 نقاط</strong> لكل إجابة صحيحة (150 نقطة عظمى) و<strong>بدون خصم (0)</strong> للخاطئة أو المتروكة.`,
+          `Official Olympiad Screening Format (${tr.shortEn}): <strong>${tr.qCount} MCQs (${optRange})</strong> in <strong>${cfg.durationMin} minutes</strong>, No Calculator · <strong>+6 pts</strong> Correct (150 max pts), <strong>0</strong> Wrong (No Penalty), <strong>0</strong> Blank.`
+        )
       : cfg.id === 'nsmo'
       ? L(
           `نظام أولمبياد نسمو — موهبة (${isAr() ? tr.shortAr : tr.shortEn}): <strong>${tr.qCount} سؤال اختيار من متعدد (${optRange})</strong> في <strong>${cfg.durationMin} دقيقة</strong> بدون آلة حاسبة · <strong>+4</strong> للصحيحة و<strong>بدون خصم (0)</strong> للخاطئة أو المتروكة.`,
@@ -1572,7 +1655,9 @@
 
     const cfg = session ? compForPaper(session.paper) : COMP_CONFIG[activeComp];
     const basePapers =
-      cfg.id === 'nafes'
+      cfg.id === 'olympiad'
+        ? olympiadMocks
+        : cfg.id === 'nafes'
         ? nafesMocks
         : cfg.id === 'kangaroo'
         ? kangarooMocks
@@ -1580,7 +1665,9 @@
         ? nsmoMocks
         : kaustMocks;
     const totalPapers = (
-      cfg.id === 'nafes'
+      cfg.id === 'olympiad'
+        ? allOlympiadPapers()
+        : cfg.id === 'nafes'
         ? allNafesPapers()
         : cfg.id === 'kangaroo'
         ? allKangarooPapers()
@@ -1629,11 +1716,12 @@
       practice.parentNode.insertBefore(sec, practice);
     }
 
-    const [kRes, nRes, gRes, fRes] = await Promise.allSettled([
+    const [kRes, nRes, gRes, fRes, oRes] = await Promise.allSettled([
       fetch('data/kaust_mocks.json'),
       fetch('data/nsmo_mocks.json'),
       fetch('data/kangaroo_mocks.json'),
       fetch('data/nafes_mocks.json'),
+      fetch('data/olympiad_mocks.json'),
     ]);
     if (kRes.status === 'fulfilled' && kRes.value && kRes.value.ok) {
       try {
@@ -1659,7 +1747,13 @@
         nafesMocks = (nafesDoc && nafesDoc.mocks) || [];
       } catch (_) {}
     }
-    if (!kaustMocks.length && !nsmoMocks.length && !kangarooMocks.length && !nafesMocks.length) return;
+    if (oRes.status === 'fulfilled' && oRes.value && oRes.value.ok) {
+      try {
+        olympiadDoc = await oRes.value.json();
+        olympiadMocks = (olympiadDoc && olympiadDoc.mocks) || [];
+      } catch (_) {}
+    }
+    if (!kaustMocks.length && !nsmoMocks.length && !kangarooMocks.length && !nafesMocks.length && !olympiadMocks.length) return;
 
     const t0 = Date.now();
     while (!getBankQuestions().length && Date.now() - t0 < 15000) {
@@ -1697,6 +1791,10 @@
             else if (g === 7 || g === 8) { activeTrackByComp.kangaroo = 'Cadet'; render(); }
             else if (g === 9 || g === 10) { activeTrackByComp.kangaroo = 'Junior'; render(); }
             else if (g === 11 || g === 12) { activeTrackByComp.kangaroo = 'Student'; render(); }
+          } else if (activeComp === 'olympiad') {
+            if (g === 7 || g === 8) { activeTrackByComp.olympiad = COMP_CONFIG.olympiad.tracks[0].level; render(); }
+            else if (g === 9 || g === 10) { activeTrackByComp.olympiad = COMP_CONFIG.olympiad.tracks[1].level; render(); }
+            else if (g === 11 || g === 12) { activeTrackByComp.olympiad = COMP_CONFIG.olympiad.tracks[2].level; render(); }
           } else if (activeComp === 'nsmo') {
             if (g === 7) { activeTrackByComp.nsmo = COMP_CONFIG.nsmo.tracks[0].level; render(); }
             else if (g === 8 || g === 9) { activeTrackByComp.nsmo = COMP_CONFIG.nsmo.tracks[1].level; render(); }
@@ -1723,6 +1821,9 @@
       },
       get nafesMocks() {
         return allNafesPapers();
+      },
+      get olympiadMocks() {
+        return allOlympiadPapers();
       },
       get allMocks() {
         return allPapersAcrossComps();

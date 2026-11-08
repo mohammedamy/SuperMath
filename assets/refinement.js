@@ -30,14 +30,14 @@ const trackUpdates = {
  nafes:{name_en:'Nafes · KSA National Exam (ETEC)',name_ar:'اختبار نافس الوطني (هيئة تقويم التعليم)',format_en:'4-option MCQs (A–D) · No calculator · Grades 3, 6 & 9',format_ar:'اختيار من متعدد (4 خيارات) · بدون آلة حاسبة · الصفوف 3 و6 و9',levels_en:'Official ETEC Benchmarks: Grades 3, 6 & 9',levels_ar:'الصفوف المستهدفة رسمياً: 3 و6 و9',badge_en:'MCQs (4 Options)',badge_ar:'MCQs (4 خيارات)',grades:[3,6,9]},
  kaust:{name_en:'KAUST · Math Competition (KMC)',name_ar:'كاوست · مسابقة الرياضيات (KMC)',format_en:'5-option MCQs (A–E) · No calculator · Grades 6–11',format_ar:'اختيار من متعدد (5 خيارات) · بدون آلة حاسبة · الصفوف 6–11',levels_en:'Official KMC Tracks: Grades 6–11',levels_ar:'مسارات KMC: الصفوف 6–11',badge_en:'MCQs (5 Options)',badge_ar:'MCQs (5 خيارات)',grades:[6,7,8,9,10,11]},
  nsmo:{name_en:'NSMO · Mawhiba Olympiad',name_ar:'نسمو · الأولمبياد الوطني (موهبة)',format_en:'4-option MCQs (A–D) · No calculator · Grades 7–10',format_ar:'اختيار من متعدد (4 خيارات) · بدون آلة حاسبة · الصفوف 7–10',levels_en:'Official Olympiad Scope: Grades 7–10',levels_ar:'نطاق الأولمبياد: الصفوف 7–10',badge_en:'MCQs (4 Options)',badge_ar:'MCQs (4 خيارات)',grades:[7,8,9,10]},
- olympiad:{name_en:'Olympiad · Proof practice',name_ar:'الأولمبياد · تدريب البراهين',format_en:'Full written reasoning; foundation to advanced practice',format_ar:'حلول مكتوبة مبررة؛ تدريب تأسيسي ومتقدم'},
+ olympiad:{name_en:'Math Olympiad (IMO / BMO / AMC)',name_ar:'الأولمبياد الرياضي (IMO / BMO / AMC)',format_en:'5-option MCQs (A–E) · 90 min · No calculator · Grades 7–12',format_ar:'اختيار من متعدد (5 خيارات) · 90 دقيقة · بدون آلة حاسبة · الصفوف 7–12',levels_en:'Official Olympiad Tiers: Grades 7–12 (Junior · Intermediate · Senior)',levels_ar:'مستويات الأولمبياد: الصفوف 7–12 (الناشئين · المتوسط · المتقدم)',badge_en:'MCQs (5 Options)',badge_ar:'MCQs (5 خيارات)',grades:[7,8,9,10,11,12]},
  jee:{name_en:'JEE · Mathematics',name_ar:'JEE · الرياضيات',format_en:'Mixed mathematics practice; not a full Main/Advanced mock',format_ar:'تدريب رياضيات متنوع؛ ليس محاكاة كاملة لـ Main أو Advanced'}
 };
 appData.tracks.forEach(t=>Object.assign(t,trackUpdates[t.id]||{}));
 function chooseTrack(id){
  const track=appData.tracks.find(t=>t.id===id);
  if(!track || (currentSelectedGrade!=='all'&&!track.grades.includes(currentSelectedGrade)))return;
- if(id==='nafes'||id==='kangaroo'||id==='kaust'||id==='nsmo'){window.setStudyCompetition?.(id);window.setMockCompetition?.(id);}
+ if(id==='nafes'||id==='kangaroo'||id==='kaust'||id==='nsmo'||id==='olympiad'){window.setStudyCompetition?.(id);window.setMockCompetition?.(id);}
  document.getElementById('quiz-track-select').value=id;filterQuestions();
  document.getElementById('practice').scrollIntoView({behavior:matchMedia('(prefers-reduced-motion: reduce)').matches?'instant':'smooth'});
  document.getElementById('quiz-track-select').focus({preventScroll:true});
@@ -79,7 +79,10 @@ const kmcLevelLabels = {
  'Track 3: Grades 10-11': 'Track 3: Grades 10-11 / المسار 3: الصفوف 10-11',
  'Phase 1: Junior Olympiad (Grade 7)': 'Phase 1: Grade 7 (Junior) / المرحلة 1: الصف 7',
  'Phase 2: Intermediate Olympiad (Grades 8-9)': 'Phase 2: Grades 8-9 (Intermediate) / المرحلة 2: الصفان 8-9',
- 'Phase 3: Senior National Olympiad (Grade 10)': 'Phase 3: Grade 10 (Senior) / المرحلة 3: الصف 10'
+ 'Phase 3: Senior National Olympiad (Grade 10)': 'Phase 3: Grade 10 (Senior) / المرحلة 3: الصف 10',
+ 'Tier 1: Junior Olympiad (Grades 7-8)': 'Tier 1: Grades 7-8 (Junior Olympiad) / المستوى 1: الصفان 7-8 (الناشئين)',
+ 'Tier 2: Intermediate Olympiad (Grades 9-10)': 'Tier 2: Grades 9-10 (Intermediate Olympiad) / المستوى 2: الصفان 9-10 (المتوسط)',
+ 'Tier 3: Senior Olympiad (Grades 11-12)': 'Tier 3: Grades 11-12 (Senior Olympiad) / المستوى 3: الصفان 11-12 (المتقدم)'
 };
 const KANG_LEVEL_ORDER = ['PreEcolier','Ecolier','Benjamin','Cadet','Junior','Student'];
 const NAFES_LEVEL_ORDER = ['Grade 3','Grade 6','Grade 9'];
@@ -87,7 +90,7 @@ loadQuestionsData=async function(){
  const results=await Promise.allSettled(appData.tracks.map(async t=>{const r=await fetch(`data/${t.id}.json`);if(!r.ok)throw Error(t.id);const data=await r.json();if(!Array.isArray(data))throw Error(t.id);return data}));
  appData.questions=results.flatMap(r=>r.status==='fulfilled'?r.value:[]);
  currentFilteredQuestions=[...appData.questions];
- for(const [track,id] of Object.entries({nafes:'quiz-nafes-grade-select',kangaroo:'quiz-kangaroo-level-select',kaust:'quiz-kaust-phase-select',nsmo:'quiz-nsmo-phase-select'})){
+ for(const [track,id] of Object.entries({nafes:'quiz-nafes-grade-select',kangaroo:'quiz-kangaroo-level-select',kaust:'quiz-kaust-phase-select',nsmo:'quiz-nsmo-phase-select',olympiad:'quiz-olympiad-tier-select'})){
  const levels=[...new Set(appData.questions.filter(q=>q.track===track).map(q=>q.level))].sort((a,b)=>track==='kangaroo'?KANG_LEVEL_ORDER.indexOf(a)-KANG_LEVEL_ORDER.indexOf(b):track==='nafes'?NAFES_LEVEL_ORDER.indexOf(a)-NAFES_LEVEL_ORDER.indexOf(b):a.localeCompare(b));
  const select=document.getElementById(id);select.replaceChildren(new Option('All levels / كل المستويات','all'));
  printPhases[track]=[{val:'all',text:'All levels / كل المستويات'}];

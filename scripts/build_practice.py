@@ -1170,7 +1170,11 @@ TARGETS = {
     "kaust": {"Track 1: Grades 6-7": 750, "Track 2: Grades 8-9": 750, "Track 3: Grades 10-11": 750},
     "nsmo": {"Phase 1: Junior Olympiad (Grade 7)": 450, "Phase 2: Intermediate Olympiad (Grades 8-9)": 450, "Phase 3: Senior National Olympiad (Grade 10)": 450},
     "jee": {"Grade 12": 500},
-    "olympiad": {"High School": 500}
+    "olympiad": {
+        "Tier 1: Junior Olympiad (Grades 7-8)": 360,
+        "Tier 2: Intermediate Olympiad (Grades 9-10)": 360,
+        "Tier 3: Senior Olympiad (Grades 11-12)": 360,
+    }
 }
 
 TOTAL_JUNIOR = 261
