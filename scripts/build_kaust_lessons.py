@@ -3,7 +3,7 @@
 import json
 import sys
 import xml.etree.ElementTree as ET
-from collections import defaultdict
+from collections import Counter, defaultdict
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -12,6 +12,8 @@ sys.path.insert(0, str(ROOT / "scripts"))
 from build_kaust_kmc import FORBIDDEN_RE
 from kmc_diagrams import svg_number_strip, svg_subdivided_apex_triangle, svg_subdivided_rect_2x2
 import kmc_diagrams_extra as D
+from kmc_lesson_helpers import _polish_html
+from kmc_lessons_enhancements import LESSON_ENHANCEMENTS
 from kmc_lessons_t1 import build_t1_lessons
 from kmc_lessons_t2 import build_t2_lessons
 from kmc_lessons_t3 import build_t3_lessons
@@ -223,6 +225,12 @@ def strings(o):
 
 def main():
     qs = json.loads((ROOT / "data/kaust.json").read_text())
+    mocks_path = ROOT / "data/kaust_mocks.json"
+    mock_used_ids = set()
+    if mocks_path.exists():
+        mocks_doc = json.loads(mocks_path.read_text())
+        mock_used_ids = {qid for m in mocks_doc.get("mocks", []) for qid in m.get("question_ids", [])}
+
     by_bp = defaultdict(list)
     bp_level = {}
     for q in qs:
@@ -246,7 +254,26 @@ def main():
         bps = orig_bps + [bp for bp in extra_bps if bp in by_bp and bp not in orig_bps]
         les["blueprints"] = bps
 
-        # Attach extra concept SVGs so every single concept card in all 18 lessons has a diagram
+        # Apply LESSON_ENHANCEMENTS (5th goal, 4th concept card, 4 traps, cheat-sheet, 6 bespoke examples)
+        enh = LESSON_ENHANCEMENTS.get(lid)
+        assert enh is not None, f"Missing LESSON_ENHANCEMENTS for {lid}"
+        for g_en, g_ar in enh.get("extra_goals", []):
+            les["en"]["goals"].append(_polish_html(g_en))
+            les["ar"]["goals"].append(_polish_html(g_ar))
+        if enh.get("extra_concept"):
+            les["en"]["concepts"].append(enh["extra_concept"]["en"])
+            les["ar"]["concepts"].append(enh["extra_concept"]["ar"])
+        for t_en, t_ar in enh.get("extra_traps", []):
+            les["en"]["traps"].append(_polish_html(t_en))
+            les["ar"]["traps"].append(_polish_html(t_ar))
+        if enh.get("cheat_sheet"):
+            les["en"]["cheat_sheet"] = [c["en"] for c in enh["cheat_sheet"]]
+            les["ar"]["cheat_sheet"] = [c["ar"] for c in enh["cheat_sheet"]]
+        for ex in enh.get("extra_examples", []):
+            les["en"]["examples"].append({"id": ex["id"], "correct_index": ex["correct_index"], **ex["en"]})
+            les["ar"]["examples"].append({"id": ex["id"], "correct_index": ex["correct_index"], **ex["ar"]})
+
+        # Attach extra concept SVGs so every single concept card in all 18 lessons has a diagram (72/72 = 100%)
         for c_idx in range(len(les["en"]["concepts"])):
             if not les["en"]["concepts"][c_idx].get("diagram"):
                 svg_entry = EXTRA_CONCEPT_DIAGRAMS.get((lid, c_idx))
@@ -259,7 +286,7 @@ def main():
             if les["en"]["concepts"][c_idx].get("diagram"):
                 total_concept_svgs += 1
 
-        # Attach extra worked-example SVGs so every single bespoke worked example has a diagram (77/77 = 100%)
+        # Attach extra worked-example SVGs so every single bespoke worked example has a diagram (108/108 = 100%)
         for e_idx, ex_en in enumerate(les["en"]["examples"]):
             if not ex_en.get("diagram") and ex_en["id"] in EXTRA_EXAMPLE_DIAGRAMS:
                 svg_entry = EXTRA_EXAMPLE_DIAGRAMS[ex_en["id"]]
@@ -271,18 +298,22 @@ def main():
             assert les["en"]["examples"][e_idx].get("diagram") and les["ar"]["examples"][e_idx].get("diagram"), (
                 f"Missing diagram on bespoke example {ex_en['id']}"
             )
+        assert len(les["en"]["concepts"]) == 4 and len(les["ar"]["concepts"]) == 4, f"Expected 4 concepts in {lid}"
+        assert len(les["en"]["examples"]) == 6 and len(les["ar"]["examples"]) == 6, f"Expected 6 bespoke examples in {lid}"
+        assert len(les["en"]["traps"]) == 4 and len(les["ar"]["traps"]) == 4, f"Expected 4 traps in {lid}"
+        assert len(les["en"]["cheat_sheet"]) == 4 and len(les["ar"]["cheat_sheet"]) == 4, f"Expected 4 cheat_sheet items in {lid}"
 
         for bp in bps:
             assert bp in by_bp, f"unknown blueprint {bp}"
             assert bp_level[bp] == les["level"], f"{bp} level mismatch"
             seen.append(bp)
 
-        # 1. Pick 6 distinct-blueprint curated worked bank examples (4 from orig + 2 from extra when present)
-        target_k = min(6, len(bps))
+        # 1. Pick 8 distinct-blueprint curated worked bank examples (5 from orig + 3 from extra, zero mock overlap)
+        target_k = min(8, len(bps))
         picked_bps = []
         if extra_bps and all(bp in by_bp for bp in extra_bps):
-            orig_k = 4
-            indices = [round(i * (len(orig_bps) - 1) / (orig_k - 1)) for i in range(orig_k)]
+            orig_k = min(5, len(orig_bps))
+            indices = [round(i * (len(orig_bps) - 1) / max(1, orig_k - 1)) for i in range(orig_k)]
             for idx in indices:
                 if orig_bps[idx] not in picked_bps:
                     picked_bps.append(orig_bps[idx])
@@ -291,23 +322,21 @@ def main():
                     break
                 if bp not in picked_bps:
                     picked_bps.append(bp)
-            picked_bps.extend(extra_bps[:2])
-        else:
-            indices = [round(i * (len(bps) - 1) / (target_k - 1)) for i in range(target_k)]
-            for idx in indices:
-                if bps[idx] not in picked_bps:
-                    picked_bps.append(bps[idx])
-            for bp in bps:
-                if len(picked_bps) >= target_k:
-                    break
-                if bp not in picked_bps:
+            for bp in extra_bps:
+                if len(picked_bps) < target_k and bp not in picked_bps:
                     picked_bps.append(bp)
+        for bp in bps:
+            if len(picked_bps) >= target_k:
+                break
+            if bp not in picked_bps:
+                picked_bps.append(bp)
 
-        diff_pref = ["Easy", "Medium", "Medium", "Hard", "Easy", "Medium"]
+        diff_pref = ["Easy", "Medium", "Medium", "Hard", "Easy", "Medium", "Hard", "Medium"]
         bank_ids = []
         for rank_i, bp in enumerate(picked_bps[:target_k]):
+            non_mock_bp = [item for item in by_bp[bp] if item["id"] not in mock_used_ids]
             cand = sorted(
-                by_bp[bp],
+                non_mock_bp,
                 key=lambda item: (
                     0 if ("diagram" in item["content"]["en"]) else 1,
                     0 if item["difficulty"] == diff_pref[rank_i % len(diff_pref)] else 1,
@@ -315,35 +344,35 @@ def main():
                 ),
             )
             bank_ids.append(cand[0]["id"])
-        assert len(set(bank_ids)) == target_k
+        assert len(set(bank_ids)) == 8, f"Expected 8 distinct bank examples in {lid}"
         les["bank_example_ids"] = bank_ids
 
-        # 2. Pick 6 strictly disjoint graduated Practice Drills (2 Easy, 2 Medium, 2 Hard) across 6 distinct blueprints!
-        # Assign Hard slots first (most constrained), then sort Easy -> Medium -> Hard for student progression.
-        used_ids = set(bank_ids)
-        used_drill_bps = set()
+        # 2. Pick 9 strictly disjoint graduated Practice Drills (3 Easy, 3 Medium, 3 Hard) maximizing blueprint diversity!
+        used_ids = set(bank_ids) | mock_used_ids
+        used_drill_bps = Counter()
         pool = [q for bp in bps for q in by_bp[bp] if q["id"] not in used_ids]
         picked_drills = []
-        for target_diff in ("Hard", "Hard", "Medium", "Medium", "Easy", "Easy"):
+        for target_diff in ("Hard", "Hard", "Hard", "Medium", "Medium", "Medium", "Easy", "Easy", "Easy"):
             cands = sorted(
                 [q for q in pool if q["id"] not in used_ids],
                 key=lambda q: (
-                    0 if q["kmc_blueprint"] not in used_drill_bps else 1,
+                    used_drill_bps[q["kmc_blueprint"]],
                     0 if q["difficulty"] == target_diff else 1,
-                    0 if ("diagram" in q["content"]["en"]) else 1,
                     0 if q["kmc_blueprint"] not in picked_bps else 1,
+                    0 if ("diagram" in q["content"]["en"]) else 1,
                     q["id"],
                 ),
             )
             chosen = cands[0]
             picked_drills.append(chosen)
             used_ids.add(chosen["id"])
-            used_drill_bps.add(chosen["kmc_blueprint"])
+            used_drill_bps[chosen["kmc_blueprint"]] += 1
         diff_rank = {"Easy": 0, "Medium": 1, "Hard": 2}
         picked_drills.sort(key=lambda q: (diff_rank.get(q["difficulty"], 1), q["id"]))
         drill_ids = [q["id"] for q in picked_drills]
-        assert len(set(drill_ids)) == 6 and len(used_drill_bps) == 6, f"Non-distinct drill blueprints in {lid}"
+        assert len(set(drill_ids)) == 9 and len(used_drill_bps) >= min(8, len(bps)), f"Drill blueprint diversity low in {lid}"
         assert not (set(drill_ids) & set(bank_ids)), f"Overlap in {lid}"
+        assert not (set(drill_ids) & mock_used_ids), f"Mock overlap in {lid}"
         les["drill_ids"] = drill_ids
 
         total_bespoke += len(les["en"]["examples"])
@@ -362,12 +391,15 @@ def main():
 
     assert len(seen) == len(set(seen)), "blueprint used twice"
     assert set(seen) == set(by_bp), f"missing: {set(by_bp) - set(seen)}"
-    assert total_concept_svgs == 54, f"Expected 54/54 concept SVGs, got {total_concept_svgs}"
+    assert total_concept_svgs == 72, f"Expected 72/72 concept SVGs, got {total_concept_svgs}"
+    assert total_bespoke == 108, f"Expected 108 bespoke worked examples, got {total_bespoke}"
+    assert total_bank == 144, f"Expected 144 bank worked examples, got {total_bank}"
+    assert total_drills == 162, f"Expected 162 practice drills, got {total_drills}"
 
     out = ROOT / "data/kaust_lessons.json"
     out.write_text(json.dumps({"lessons": lessons}, ensure_ascii=False, separators=(",", ":")))
     print(
-        f"OK: {len(lessons)} lessons | {len(seen)} blueprints (100%) | {total_concept_svgs}/54 concept SVGs | "
+        f"OK: {len(lessons)} lessons | {len(seen)} blueprints (100%) | {total_concept_svgs}/72 concept SVGs | "
         f"{total_bespoke} bespoke + {total_bank} bank = {total_bespoke + total_bank} solved examples | "
         f"{total_drills} practice drills | {out.stat().st_size // 1024} KB"
     )

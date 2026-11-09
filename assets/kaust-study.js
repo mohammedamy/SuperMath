@@ -141,6 +141,7 @@
   };
   let activeLessonId = null;
   let selfTestMode = false;
+  let exampleFilterMode = 'all';
   let revealedExamples = new Set();
   let selectedTryChoice = {};
   let drillChoice = {};
@@ -364,43 +365,91 @@
     const d = pick(les);
     const cfg = compForLesson(les);
     const tr = trackMetaForLesson(les);
-    const exs = allExamplesFor(les);
+    const allExs = allExamplesFor(les);
+    const coreExCount = (d.examples || []).length;
+    const bankExCount = allExs.length - coreExCount;
+    const exs = forPrint
+      ? allExs
+      : allExs.filter((ex) => {
+          if (exampleFilterMode === 'core') return !ex.fromBank;
+          if (exampleFilterMode === 'bank') return !!ex.fromBank;
+          return true;
+        });
     const drills = lessonDrills(les);
+    const cheatSheet = d.cheat_sheet || [];
+
+    const quickNavBar = forPrint
+      ? ''
+      : `<div class="eg-quick-nav no-print flex flex-wrap items-center gap-1.5 mb-3">
+          <span class="text-xs font-bold opacity-75 me-1">🧭 ${L('انتقال سريع:', 'Quick Jump:')}</span>
+          <button type="button" onclick="scrollKaustSection('eg-sec-goals')" class="eg-btn eg-btn-sm">🎯 ${L('الأهداف', 'Goals')} (${(d.goals || []).length})</button>
+          <button type="button" onclick="scrollKaustSection('eg-sec-concepts')" class="eg-btn eg-btn-sm">📐 ${L('المفاهيم والشرح', 'Concepts')} (${(d.concepts || []).length})</button>
+          ${cheatSheet.length ? `<button type="button" onclick="scrollKaustSection('eg-sec-cheatsheet')" class="eg-btn eg-btn-sm">⚡ ${L('ملخص القوانين', 'Cheat-Sheet')} (${cheatSheet.length})</button>` : ''}
+          <button type="button" onclick="scrollKaustSection('eg-sec-traps')" class="eg-btn eg-btn-sm">⚠️ ${L('أخطاء شائعة', 'Exam Traps')} (${(d.traps || []).length})</button>
+          <button type="button" onclick="scrollKaustSection('eg-sec-examples')" class="eg-btn eg-btn-sm">✏️ ${L('الأمثلة المحلولة', 'Solved Examples')} (${allExs.length})</button>
+          ${drills.length ? `<button type="button" onclick="scrollKaustSection('eg-sec-drills')" class="eg-btn eg-btn-sm">📝 ${L('التدريبات', 'Drills')} (${drills.length})</button>` : ''}
+        </div>`;
 
     const bannerAndGoals = `
+      ${quickNavBar}
       <div class="eg-banner no-break">
         <div class="eg-banner-meta">
           <span class="eg-badge">${L('درس', 'Lesson')} ${les.unit_num}</span>
           <span class="eg-badge eg-badge-alt">${topicLabel(les.topic)}</span>
           <span class="eg-badge eg-badge-soft">${isAr() ? tr.ar : tr.en} · ${isAr() ? cfg.badgeAr : cfg.badgeEn}</span>
+          <span class="eg-badge eg-badge-soft">${(les.blueprints || []).length} ${L('مهارة قياسية', 'Blueprints')}</span>
         </div>
         <h2 class="eg-h2">${d.title}</h2>
         <p class="math-font eg-summary">${d.summary}</p>
       </div>
-      <div class="eg-card eg-goals no-break">
+      <div id="eg-sec-goals" class="eg-card eg-goals no-break">
         <div class="eg-h3">🎯 ${L('أهداف الدرس — ماذا سنتعلّم؟', 'Learning Goals — What You Will Master')}</div>
         <ul class="eg-ul">${(d.goals || []).map((g) => `<li class="math-font">${g}</li>`).join('')}</ul>
       </div>`;
 
-    const conceptBlocks = (d.concepts || []).map((c) => `
-      <div class="eg-card eg-concept no-break">
+    const conceptBlocks = (d.concepts || []).map((c, cIdx) => `
+      <div ${cIdx === 0 ? 'id="eg-sec-concepts" ' : ''}class="eg-card eg-concept no-break">
         <div class="eg-h3">${c.title}</div>
         <div class="math-font eg-prose">${c.body}</div>
         ${c.formula ? `<div class="eg-formula math-font" dir="ltr">${c.formula}</div>` : ''}
         ${c.diagram ? `<div class="eg-diagram">${c.diagram}</div>` : ''}
       </div>`);
 
+    const cheatSheetBlocks = cheatSheet.length
+      ? [`<div id="eg-sec-cheatsheet" class="eg-card eg-concept no-break">
+          <div class="eg-h3">⚡ ${L('ملخص القوانين والمفاتيح السريعة للحل', 'Quick Formula & Strategy Cheat-Sheet')}</div>
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-2.5 mt-2">
+            ${cheatSheet.map((cs) => `<div class="p-3 rounded-xl border border-indigo-500/25 bg-indigo-500/5">
+              <div class="font-bold text-sm mb-1">${cs.title}</div>
+              <div class="eg-formula math-font my-1" dir="ltr">${cs.formula}</div>
+              <div class="text-xs opacity-85 math-font">${cs.note}</div>
+            </div>`).join('')}
+          </div>
+        </div>`]
+      : [];
+
     const trapsBlock = `
-      <div class="eg-card eg-traps no-break">
+      <div id="eg-sec-traps" class="eg-card eg-traps no-break">
         <div class="eg-h3">⚠️ ${L(cfg.trapsTitleAr, cfg.trapsTitleEn)}</div>
         <ul class="eg-ul">${(d.traps || []).map((t) => `<li class="math-font">${t}</li>`).join('')}</ul>
       </div>`;
 
+    const exFilterBar = (!forPrint && bankExCount > 0)
+      ? `<div class="flex flex-wrap items-center justify-between gap-2 mb-2.5 no-print">
+          <div class="eg-sec-heading" style="margin:0;border:0;padding:0">✏️ ${L('الأمثلة المحلولة بالتفصيل', 'Fully Worked Examples')} (${exs.length} / ${allExs.length})</div>
+          <div class="flex flex-wrap items-center gap-1.5">
+            <button type="button" onclick="setKaustExampleFilter('all')" class="eg-btn eg-btn-sm${exampleFilterMode === 'all' ? ' eg-tab-on' : ''}">${L('الكل', 'All')} (${allExs.length})</button>
+            <button type="button" onclick="setKaustExampleFilter('core')" class="eg-btn eg-btn-sm${exampleFilterMode === 'core' ? ' eg-tab-on' : ''}">${L('أمثلة الشرح الأساسية', 'Core Examples')} (${coreExCount})</button>
+            <button type="button" onclick="setKaustExampleFilter('bank')" class="eg-btn eg-btn-sm${exampleFilterMode === 'bank' ? ' eg-tab-on' : ''}">${L('أمثلة بنك المسابقة', 'Contest Bank')} (${bankExCount})</button>
+          </div>
+        </div>`
+      : `<div class="eg-sec-heading">✏️ ${L('الأمثلة المحلولة بالتفصيل', 'Fully Worked Examples')} (${exs.length})</div>`;
+
     const exampleBlocks = exs.map((ex, i) => {
       const card = exampleCardHtml(ex, i + 1, forPrint);
       if (i === 0) {
-        return `<div class="no-break">
-          <div class="eg-sec-heading">✏️ ${L('الأمثلة المحلولة بالتفصيل', 'Fully Worked Examples')} (${exs.length})</div>
+        return `<div id="eg-sec-examples" class="no-break">
+          ${exFilterBar}
           ${card}
         </div>`;
       }
@@ -414,7 +463,7 @@
 
       const drillIntro = forPrint
         ? `<div class="eg-sec-heading">📝 ${L('تدريبات الطالب للتطبيق الذاتي — حلّ بدون آلة حاسبة', 'End-of-Lesson Student Practice Drills — Solve Without Calculator')} (${drills.length})</div>`
-        : `<div class="eg-drill-bar no-print">
+        : `<div id="eg-sec-drills" class="eg-drill-bar no-print">
             <div>
               <div class="eg-sec-heading" style="margin:0;border:0;padding:0">📝 ${L('تدريبات نهاية الدرس — اختبر فهمك الآن', 'End-of-Lesson Practice Drills — Test Your Mastery')} (${drills.length})</div>
               <p class="text-xs opacity-80 mt-0.5">${L('مدرّجة من السهل إلى المتقدم تماماً مثل ورقة المسابقة الرسمية. اختر الإجابة للتحقق الفوري أو اطبعها كورقة عمل مستقلة!', 'Graduated Easy → Medium → Hard just like an official competition paper. Click an option to check instantly, or print as a standalone A4 worksheet!')}</p>
@@ -440,7 +489,7 @@
       }
     }
 
-    return [bannerAndGoals, ...conceptBlocks, trapsBlock, ...exampleBlocks, ...drillBlocks];
+    return [bannerAndGoals, ...conceptBlocks, ...cheatSheetBlocks, trapsBlock, ...exampleBlocks, ...drillBlocks];
   }
 
   function lessonBodyHtml(les, forPrint) {
@@ -850,6 +899,19 @@
     render();
   };
 
+  window.setKaustExampleFilter = function (mode) {
+    if (mode !== 'all' && mode !== 'core' && mode !== 'bank') return;
+    exampleFilterMode = mode;
+    render();
+  };
+
+  window.scrollKaustSection = function (secId) {
+    const el = document.getElementById(secId);
+    if (el && typeof el.scrollIntoView === 'function') {
+      el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+  };
+
   window.setStudyCompetition = function (compId) {
     if (compId !== 'kaust' && compId !== 'nsmo' && compId !== 'kangaroo' && compId !== 'nafes' && compId !== 'olympiad') return;
     if (compId === 'nsmo' && !nsmoLessons.length) return;
@@ -858,6 +920,7 @@
     if (compId === 'olympiad' && !olympiadLessons.length) return;
     activeComp = compId;
     activeLessonId = null;
+    exampleFilterMode = 'all';
     render();
   };
 
@@ -869,6 +932,7 @@
       activeTrackByComp[cfg.id] = les.level;
     }
     activeLessonId = id;
+    exampleFilterMode = 'all';
     render();
     const el = document.getElementById('study-lessons');
     if (el) el.scrollIntoView({ behavior: 'smooth' });
