@@ -13,6 +13,7 @@ from nafes_common import NAFES_FORBIDDEN_RE
 from nafes_lessons_g3 import get_grade3_lessons
 from nafes_lessons_g6 import get_grade6_lessons
 from nafes_lessons_g9 import get_grade9_lessons
+from study_academy_enhancements import apply_lesson_enhancements
 
 
 def iter_strings(o):
@@ -36,6 +37,13 @@ def main() -> None:
 
     lessons = get_grade3_lessons() + get_grade6_lessons() + get_grade9_lessons()
     assert len(lessons) == 18, f"Expected 18 Nafes lessons, got {len(lessons)}"
+    apply_lesson_enhancements(lessons)
+
+    mock_path = ROOT / "data" / "nafes_mocks.json"
+    mock_used_ids: set[str] = set()
+    if mock_path.exists():
+        for m in json.loads(mock_path.read_text(encoding="utf-8")).get("mocks", []):
+            mock_used_ids.update(m.get("question_ids", []))
 
     seen_bps: list[str] = []
     total_bespoke = 0
@@ -65,7 +73,7 @@ def main() -> None:
         slot_bps = bps + [bps[0], bps[1]]
         diff_pref = ["Easy", "Medium", "Hard", "Medium", "Easy", "Hard"]
         bank_ids: list[str] = []
-        used_ids: set[str] = set()
+        used_ids: set[str] = set(mock_used_ids)
         for rank_i, bp in enumerate(slot_bps):
             cand = sorted(
                 [q for q in by_bp[bp] if q["id"] not in used_ids],

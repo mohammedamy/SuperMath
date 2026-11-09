@@ -11,6 +11,7 @@ sys.path.insert(0, str(ROOT / "scripts"))
 
 from build_kaust_kmc import FORBIDDEN_RE
 from kmc_diagrams import svg_number_strip, svg_subdivided_apex_triangle, svg_subdivided_rect_2x2
+from ar_svg_localizer import localize_svg_to_ar
 import kmc_diagrams_extra as D
 from kmc_lesson_helpers import _polish_html
 from kmc_lessons_enhancements import LESSON_ENHANCEMENTS
@@ -295,6 +296,7 @@ def main():
                 ET.fromstring(svg_ar)
                 les["en"]["examples"][e_idx]["diagram"] = svg_en
                 les["ar"]["examples"][e_idx]["diagram"] = svg_ar
+            les["ar"]["examples"][e_idx]["diagram"] = localize_svg_to_ar(les["ar"]["examples"][e_idx]["diagram"])
             assert les["en"]["examples"][e_idx].get("diagram") and les["ar"]["examples"][e_idx].get("diagram"), (
                 f"Missing diagram on bespoke example {ex_en['id']}"
             )

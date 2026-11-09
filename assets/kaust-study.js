@@ -420,9 +420,9 @@
           <div class="eg-h3">⚡ ${L('ملخص القوانين والمفاتيح السريعة للحل', 'Quick Formula & Strategy Cheat-Sheet')}</div>
           <div class="grid grid-cols-1 sm:grid-cols-2 gap-2.5 mt-2">
             ${cheatSheet.map((cs) => `<div class="p-3 rounded-xl border border-indigo-500/25 bg-indigo-500/5">
-              <div class="font-bold text-sm mb-1">${cs.title}</div>
-              <div class="eg-formula math-font my-1" dir="ltr">${cs.formula}</div>
-              <div class="text-xs opacity-85 math-font">${cs.note}</div>
+              <div class="font-bold text-sm mb-1">${cs.title || cs.label || ''}</div>
+              ${cs.formula ? `<div class="eg-formula math-font my-1" dir="ltr">${cs.formula}</div>` : ''}
+              ${cs.note ? `<div class="text-xs opacity-85 math-font">${cs.note}</div>` : ''}
             </div>`).join('')}
           </div>
         </div>`]
