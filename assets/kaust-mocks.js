@@ -9,8 +9,8 @@
       ptsWrong: -1,
       ptsBlank: 0,
       durationMin: 120,
-      pillEn: '🏛️ KAUST KMC Mocks (Grades 6–11 · 5 Options)',
-      pillAr: '🏛️ اختبارات كاوست KMC (الصفوف 6–11 · 5 خيارات)',
+      pillEn: 'KAUST KMC · G6–11',
+      pillAr: 'كاوست KMC · 6–11',
       hubTitleEn: 'KAUST Math Competition (KMC) Full Mock Exams',
       hubTitleAr: 'محاكي الاختبارات الرسمية الكاملة لمسابقة كاوست (KMC)',
       badgeEn: 'KAUST KMC',
@@ -59,8 +59,8 @@
       ptsWrong: 0,
       ptsBlank: 0,
       durationMin: 90,
-      pillEn: '🥇 NSMO · Mawhiba Mocks (Grades 7–10 · 4 Options)',
-      pillAr: '🥇 اختبارات نسمو — موهبة (الصفوف 7–10 · 4 خيارات)',
+      pillEn: 'NSMO Mawhiba · G7–10',
+      pillAr: 'نسمو موهبة · 7–10',
       hubTitleEn: 'NSMO / Mawhiba National Olympiad Full Mock Exams',
       hubTitleAr: 'محاكي الاختبارات الرسمية الكاملة لأولمبياد نسمو — موهبة',
       badgeEn: 'NSMO Mawhiba',
@@ -110,8 +110,8 @@
       ptsWrong: 0,
       ptsBlank: 0,
       durationMin: 75,
-      pillEn: '🦘 Kangaroo Mocks (Grades 1–12 · 3/4/5 pts)',
-      pillAr: '🦘 اختبارات كانجارو موهبة (الصفوف 1–12 · 3/4/5 نقاط)',
+      pillEn: 'Kangaroo · G1–12',
+      pillAr: 'كانجارو · 1–12',
       hubTitleEn: 'Kangaroo Math Competition Full Official Mock Exams (Grades 1–12)',
       hubTitleAr: 'محاكي الاختبارات الرسمية الكاملة لمسابقة كانجارو موهبة للرياضيات (الصفوف 1–12)',
       badgeEn: 'Kangaroo Math',
@@ -191,8 +191,8 @@
       ptsBlank: 0,
       durationMin: 60,
       durationRangeLabel: '45–75',
-      pillEn: '🇸🇦 Nafes KSA Mocks (Grades 3, 6 & 9 · 4 Options)',
-      pillAr: '🇸🇦 اختبارات نافس الوطنية (الصفوف 3 و6 و9 · 4 خيارات)',
+      pillEn: 'Nafes KSA · G3/6/9',
+      pillAr: 'نافس الوطني · 3/6/9',
       hubTitleEn: 'Nafes KSA National Assessment (ETEC) Official Mock Exams',
       hubTitleAr: 'محاكي الاختبارات الرسمية الكاملة لاختبارات نافس الوطنية (ETEC)',
       badgeEn: 'Nafes KSA',
@@ -244,8 +244,8 @@
       ptsWrong: 0,
       ptsBlank: 0,
       durationMin: 90,
-      pillEn: '🏆 Olympiad Mocks (Grades 7–12 · 5 Options)',
-      pillAr: '🏆 اختبارات الأولمبياد الرياضي (الصفوف 7–12 · 5 خيارات)',
+      pillEn: 'Olympiad · G7–12',
+      pillAr: 'الأولمبياد · 7–12',
       hubTitleEn: 'Math Olympiad (IMO / BMO / AMC) Full Mock Exams',
       hubTitleAr: 'محاكي الاختبارات الرسمية الكاملة للأولمبياد الرياضي (IMO / BMO / AMC)',
       badgeEn: 'Math Olympiad',
@@ -819,6 +819,7 @@
         }
       }
     }
+    if (typeof window.setAppView === 'function') window.setAppView('mocks', true);
     render();
     const el = document.getElementById('kaust-mock-exams');
     if (el) el.scrollIntoView({ behavior: 'smooth' });
@@ -848,6 +849,7 @@
       reviewFilter: 'all',
       report: null,
     };
+    if (typeof window.setAppView === 'function') window.setAppView('mocks', true);
     startTimer();
     render();
     const el = document.getElementById('kaust-mock-exams');
@@ -1684,20 +1686,29 @@
       ? renderExamView()
       : renderReviewView();
 
-    root.innerHTML = `<div class="eg-hub eg-mock-hub">
+    root.innerHTML = `<div class="eg-hub eg-mock-hub${session ? ' eg-hub-active-exam' : ''}">
       <div class="eg-hub-h">
-        <div class="eg-hub-logo-box"><img src="LOGO.jpg" alt="Edugates International School" loading="eager" decoding="sync" class="eg-hub-logo"></div>
-        <div class="flex-1">
+        <div class="eg-hub-logo-box hidden sm:block"><img src="LOGO.jpg" alt="Edugates International School" loading="eager" decoding="sync" class="eg-hub-logo"></div>
+        <div class="flex-1 min-w-0">
           <div class="eg-hub-kicker">Edugates International School · مدرسة بوابة المعرفة العالمية</div>
-          <h2 class="text-2xl sm:text-3xl font-display font-extrabold">⏱️ ${isAr() ? cfg.hubTitleAr : cfg.hubTitleEn}</h2>
-          <p class="text-xs sm:text-sm opacity-80 mt-1">${L(
-            `${totalPapers} نموذج اختبار رسمي كامل (${totalUniqueQs} سؤالاً مستقلاً) · مؤقت حي ${durTag} دقيقة · أوراق تظليل بصري OMR ومفاتيح حلول مفصلة جاهزة للطباعة على ورق A4`,
-            `${totalPapers} Full Official Simulation Papers (${totalUniqueQs} dedicated questions) · ${durTag}-Min Live Exam Simulator · Printable A4 Exam Booklets, OMR Bubble Sheets & Worked Keys`
+          <h2 class="text-xl sm:text-2xl font-display font-bold">${isAr() ? cfg.hubTitleAr : cfg.hubTitleEn}</h2>
+          <p class="text-xs sm:text-sm opacity-80 mt-0.5">${L(
+            `${totalPapers} نموذج اختبار رسمي (${totalUniqueQs} سؤالاً) · مؤقت حي ${durTag} دقيقة · أوراق تظليل OMR وطباعة A4`,
+            `${totalPapers} Official Simulation Papers (${totalUniqueQs} questions) · ${durTag}-Min Timed Simulator · Printable A4 & OMR Sheets`
           )}</p>
         </div>
       </div>
       ${inner}
     </div>`;
+
+    if (root.querySelectorAll) {
+      root.querySelectorAll('.eg-comp-btn-on, .eg-tab-on, .eg-pal-cur').forEach((btn) => {
+        const p = btn.parentElement;
+        if (p && p.scrollWidth > p.clientWidth) {
+          p.scrollLeft = Math.max(0, btn.offsetLeft - (p.clientWidth - btn.offsetWidth) / 2);
+        }
+      });
+    }
 
     if (window.MathJax && typeof MathJax.typesetPromise === 'function') {
       MathJax.typesetPromise([root]).catch(() => {});
@@ -1768,7 +1779,7 @@
       window.toggleLanguage = function () {
         const res = origToggle.apply(this, arguments);
         const navTxt = document.getElementById('nav-mocks-text');
-        if (navTxt) navTxt.innerText = isAr() ? 'الاختبارات التجريبية' : 'Mock Exams';
+        if (navTxt) navTxt.innerText = isAr() ? 'الاختبارات' : 'Mock Exams';
         render();
         return res;
       };

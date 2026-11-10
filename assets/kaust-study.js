@@ -9,8 +9,8 @@
       id: 'kaust',
       bpField: 'kmc_blueprint',
       quizSelectId: 'quiz-kaust-phase-select',
-      pillEn: '🏛️ KAUST KMC (Grades 6–11 · 5 Options)',
-      pillAr: '🏛️ مسابقة كاوست KMC (الصفوف 6–11 · 5 خيارات)',
+      pillEn: 'KAUST KMC · G6–11',
+      pillAr: 'كاوست KMC · 6–11',
       hubTitleEn: 'KAUST Math Competition (KMC) Study Lessons',
       hubTitleAr: 'أكاديمية شرح دروس مسابقة كاوست للرياضيات (KMC)',
       badgeEn: 'KAUST KMC',
@@ -29,8 +29,8 @@
       id: 'nsmo',
       bpField: 'nsmo_blueprint',
       quizSelectId: 'quiz-nsmo-phase-select',
-      pillEn: '🥇 NSMO · Mawhiba (Grades 7–10 · 4 Options)',
-      pillAr: '🥇 أولمبياد نسمو — موهبة (الصفوف 7–10 · 4 خيارات)',
+      pillEn: 'NSMO Mawhiba · G7–10',
+      pillAr: 'نسمو موهبة · 7–10',
       hubTitleEn: 'NSMO / Mawhiba National Olympiad Study Lessons',
       hubTitleAr: 'أكاديمية شرح دروس أولمبياد نسمو الوطني — موهبة',
       badgeEn: 'NSMO Mawhiba',
@@ -49,8 +49,8 @@
       id: 'kangaroo',
       bpField: 'kangaroo_blueprint',
       quizSelectId: 'quiz-kangaroo-level-select',
-      pillEn: '🦘 Kangaroo Math (Grades 1–12 · 5 Options)',
-      pillAr: '🦘 كانجارو موهبة (الصفوف 1–12 · 5 خيارات)',
+      pillEn: 'Kangaroo · G1–12',
+      pillAr: 'كانجارو · 1–12',
       hubTitleEn: 'Kangaroo Math Competition Study Lessons (Grades 1–12)',
       hubTitleAr: 'أكاديمية شرح دروس مسابقة كانجارو موهبة للرياضيات (الصفوف 1–12)',
       badgeEn: 'Kangaroo Math',
@@ -72,8 +72,8 @@
       id: 'nafes',
       bpField: 'nafes_blueprint',
       quizSelectId: 'quiz-nafes-grade-select',
-      pillEn: '🇸🇦 Nafes KSA (Grades 3, 6 & 9 · 4 Options)',
-      pillAr: '🇸🇦 اختبارات نافس الوطنية (الصفوف 3 و6 و9 · 4 خيارات)',
+      pillEn: 'Nafes KSA · G3/6/9',
+      pillAr: 'نافس الوطني · 3/6/9',
       hubTitleEn: 'Nafes KSA National Assessment (ETEC) Study Lessons',
       hubTitleAr: 'أكاديمية شرح دروس اختبارات نافس الوطنية — هيئة تقويم التعليم والتدريب',
       badgeEn: 'Nafes KSA',
@@ -92,8 +92,8 @@
       id: 'olympiad',
       bpField: 'olympiad_blueprint',
       quizSelectId: 'quiz-olympiad-tier-select',
-      pillEn: '🏆 Olympiad (Grades 7–12 · 5 Options)',
-      pillAr: '🏆 الأولمبياد الرياضي (الصفوف 7–12 · 5 خيارات)',
+      pillEn: 'Olympiad · G7–12',
+      pillAr: 'الأولمبياد · 7–12',
       hubTitleEn: 'Math Olympiad (IMO / BMO / AMC) Study Lessons',
       hubTitleAr: 'أكاديمية شرح دروس الأولمبياد الرياضي (IMO / BMO / AMC)',
       badgeEn: 'Math Olympiad',
@@ -380,14 +380,14 @@
 
     const quickNavBar = forPrint
       ? ''
-      : `<div class="eg-quick-nav no-print flex flex-wrap items-center gap-1.5 mb-3">
-          <span class="text-xs font-bold opacity-75 me-1">🧭 ${L('انتقال سريع:', 'Quick Jump:')}</span>
-          <button type="button" onclick="scrollKaustSection('eg-sec-goals')" class="eg-btn eg-btn-sm">🎯 ${L('الأهداف', 'Goals')} (${(d.goals || []).length})</button>
-          <button type="button" onclick="scrollKaustSection('eg-sec-concepts')" class="eg-btn eg-btn-sm">📐 ${L('المفاهيم والشرح', 'Concepts')} (${(d.concepts || []).length})</button>
-          ${cheatSheet.length ? `<button type="button" onclick="scrollKaustSection('eg-sec-cheatsheet')" class="eg-btn eg-btn-sm">⚡ ${L('ملخص القوانين', 'Cheat-Sheet')} (${cheatSheet.length})</button>` : ''}
-          <button type="button" onclick="scrollKaustSection('eg-sec-traps')" class="eg-btn eg-btn-sm">⚠️ ${L('أخطاء شائعة', 'Exam Traps')} (${(d.traps || []).length})</button>
-          <button type="button" onclick="scrollKaustSection('eg-sec-examples')" class="eg-btn eg-btn-sm">✏️ ${L('الأمثلة المحلولة', 'Solved Examples')} (${allExs.length})</button>
-          ${drills.length ? `<button type="button" onclick="scrollKaustSection('eg-sec-drills')" class="eg-btn eg-btn-sm">📝 ${L('التدريبات', 'Drills')} (${drills.length})</button>` : ''}
+      : `<div class="eg-quick-nav no-print flex items-center gap-1.5 mb-3 overflow-x-auto pb-1">
+          <span class="text-xs font-semibold opacity-70 me-1 shrink-0">${L('أقسام الدرس:', 'Jump to:')}</span>
+          <button type="button" onclick="scrollKaustSection('eg-sec-goals')" class="eg-btn eg-btn-sm shrink-0">${L('الأهداف', 'Goals')} (${(d.goals || []).length})</button>
+          <button type="button" onclick="scrollKaustSection('eg-sec-concepts')" class="eg-btn eg-btn-sm shrink-0">${L('الشرح والمفاهيم', 'Concepts')} (${(d.concepts || []).length})</button>
+          ${cheatSheet.length ? `<button type="button" onclick="scrollKaustSection('eg-sec-cheatsheet')" class="eg-btn eg-btn-sm shrink-0">${L('القوانين', 'Formulas')} (${cheatSheet.length})</button>` : ''}
+          <button type="button" onclick="scrollKaustSection('eg-sec-traps')" class="eg-btn eg-btn-sm shrink-0">${L('تنبيهات', 'Traps')} (${(d.traps || []).length})</button>
+          <button type="button" onclick="scrollKaustSection('eg-sec-examples')" class="eg-btn eg-btn-sm shrink-0">${L('الأمثلة', 'Examples')} (${allExs.length})</button>
+          ${drills.length ? `<button type="button" onclick="scrollKaustSection('eg-sec-drills')" class="eg-btn eg-btn-sm shrink-0">${L('التدريبات', 'Drills')} (${drills.length})</button>` : ''}
         </div>`;
 
     const bannerAndGoals = `
@@ -417,12 +417,12 @@
 
     const cheatSheetBlocks = cheatSheet.length
       ? [`<div id="eg-sec-cheatsheet" class="eg-card eg-concept no-break">
-          <div class="eg-h3">⚡ ${L('ملخص القوانين والمفاتيح السريعة للحل', 'Quick Formula & Strategy Cheat-Sheet')}</div>
+          <div class="eg-h3">${L('ملخص القوانين والمفاتيح السريعة للحل', 'Key Formulas & Strategy Summary')}</div>
           <div class="grid grid-cols-1 sm:grid-cols-2 gap-2.5 mt-2">
-            ${cheatSheet.map((cs) => `<div class="p-3 rounded-xl border border-indigo-500/25 bg-indigo-500/5">
+            ${cheatSheet.map((cs) => `<div class="p-3 rounded-xl border border-slate-200 dark:border-slate-700 bg-slate-50/80 dark:bg-slate-800/40">
               <div class="font-bold text-sm mb-1">${cs.title || cs.label || ''}</div>
-              ${cs.formula ? `<div class="eg-formula math-font my-1" dir="ltr">${cs.formula}</div>` : ''}
-              ${cs.note ? `<div class="text-xs opacity-85 math-font">${cs.note}</div>` : ''}
+              ${cs.formula ? `<div class="eg-formula math-font my-1.5" dir="ltr">${cs.formula}</div>` : ''}
+              ${cs.note ? `<div class="text-xs leading-relaxed opacity-90 math-font">${cs.note}</div>` : ''}
             </div>`).join('')}
           </div>
         </div>`]
@@ -823,8 +823,9 @@
       const sec = document.getElementById('practice');
       sec.insertBefore(pill, sec.children[2] || null);
     }
-    pill.innerHTML = `<span>📖 ${L('تدريب مخصّص لدرس', 'Practicing Lesson')} ${les.unit_num}: ${pick(les).title} (${currentFilteredQuestions.length} ${L('سؤال', 'Qs')})</span>
-      <button type="button" onclick="clearKaustLessonFilter()" class="underline hover:text-white ms-1">${L('عرض كل أسئلة المسار', 'Show all track Qs')}</button>`;
+    pill.innerHTML = `<span>${L('تدريب مخصّص لدرس', 'Practicing Lesson')} ${les.unit_num}: ${pick(les).title} (${currentFilteredQuestions.length} ${L('سؤال', 'Qs')})</span>
+      <button type="button" onclick="clearKaustLessonFilter()" class="underline font-semibold ms-1">${L('عرض كل أسئلة المسار', 'Show all track Qs')}</button>`;
+    if (typeof window.setAppView === 'function') window.setAppView('practice', true);
     document.getElementById('practice').scrollIntoView({ behavior: 'smooth' });
   };
 
@@ -933,6 +934,8 @@
     }
     activeLessonId = id;
     exampleFilterMode = 'all';
+    if (typeof window.setAppView === 'function') window.setAppView('lessons', true);
+    if (typeof window.setAppView === 'function') window.setAppView('lessons', true);
     render();
     const el = document.getElementById('study-lessons');
     if (el) el.scrollIntoView({ behavior: 'smooth' });
@@ -978,6 +981,7 @@
     } else if (levelOrComp) {
       window.setKaustTrack(levelOrComp);
     }
+    if (typeof window.setAppView === 'function') window.setAppView('lessons', true);
     render();
     const el = document.getElementById('study-lessons');
     if (el) el.scrollIntoView({ behavior: 'smooth' });
@@ -1029,18 +1033,14 @@
       const nextLes = curIdx >= 0 && curIdx < trackLessons.length - 1 ? trackLessons[curIdx + 1] : null;
 
       inner = `
-        <div class="eg-toolbar no-print">
-          <div class="flex flex-wrap gap-2">
-            <button type="button" onclick="closeKaustLesson()" class="eg-btn">${isAr() ? '→' : '←'} ${L('جميع دروس المسار', 'All Track Lessons')}</button>
-            <button type="button" onclick="toggleKaustSelfTest()" class="eg-btn${selfTestMode ? ' eg-tab-on' : ''}">
-              ${selfTestMode ? '🧠 ' + L('وضع اختبر نفسك (مفعّل)', 'Self-Test Mode: ON') : '👁️ ' + L('الأمثلة المحلولة معروضة', 'Worked Solutions Shown')}
-            </button>
-          </div>
-          <div class="flex flex-wrap gap-2">
-            <button type="button" onclick="printKaustLesson('${les.id}')" class="eg-btn eg-btn-main">🖨️ ${L('طباعة الدرس + التدريبات (A4)', 'Print Lesson + Drills (A4)')}</button>
-            <button type="button" onclick="printKaustLessonDrills('${les.id}')" class="eg-btn">📝 ${L('طباعة ورقة التدريبات فقط (A4)', 'Print Drills Sheet (A4)')}</button>
-            <button type="button" onclick="practiceKaustLesson('${les.id}')" class="eg-btn eg-btn-go">⚡ ${L('بنك الدرس', 'Practice Bank')} (${qCount(les)})</button>
-          </div>
+        <div class="eg-toolbar eg-reader-toolbar no-print">
+          <button type="button" onclick="closeKaustLesson()" class="eg-btn">${isAr() ? '→' : '←'} ${L('كل الدروس', 'All Lessons')}</button>
+          <button type="button" onclick="practiceKaustLesson('${les.id}')" class="eg-btn eg-btn-go">⚡ ${L('بنك الدرس', 'Practice')} (${qCount(les)})</button>
+          <button type="button" onclick="toggleKaustSelfTest()" class="eg-btn${selfTestMode ? ' eg-tab-on' : ''}">
+            ${selfTestMode ? '🧠 ' + L('اختبر نفسك: مفعّل', 'Self-Test: ON') : '👁️ ' + L('الحلول معروضة', 'Solutions Shown')}
+          </button>
+          <button type="button" onclick="printKaustLesson('${les.id}')" class="eg-btn eg-btn-main">🖨️ ${L('طباعة الدرس A4', 'Print Lesson A4')}</button>
+          <button type="button" onclick="printKaustLessonDrills('${les.id}')" class="eg-btn">📝 ${L('ورقة التدريبات A4', 'Drills Sheet A4')}</button>
         </div>
         <div class="eg-reader">${lessonBodyHtml(les, false)}</div>
         <div class="eg-nav-footer no-print">
@@ -1093,19 +1093,28 @@
 
     const totalSolvedAll = lessons.reduce((a, x) => a + (x.en.examples || []).length + (x.bank_example_ids || []).length, 0);
     const totalDrillsAll = lessons.reduce((a, x) => a + (x.drill_ids || []).length, 0);
-    root.innerHTML = `<div class="eg-hub">
+    root.innerHTML = `<div class="eg-hub${activeLessonId ? ' eg-hub-reading' : ''}">
       <div class="eg-hub-h">
-        <div class="eg-hub-logo-box"><img src="LOGO.jpg" alt="Edugates International School" loading="eager" decoding="sync" class="eg-hub-logo"></div>
-        <div class="flex-1">
+        <div class="eg-hub-logo-box hidden sm:block"><img src="LOGO.jpg" alt="Edugates International School" loading="eager" decoding="sync" class="eg-hub-logo"></div>
+        <div class="flex-1 min-w-0">
           <div class="eg-hub-kicker">Edugates International School · مدرسة بوابة المعرفة العالمية</div>
-          <h2 class="text-2xl sm:text-3xl font-display font-extrabold">📖 ${isAr() ? cfg.hubTitleAr : cfg.hubTitleEn}</h2>
-          <p class="text-xs sm:text-sm opacity-80 mt-1">${L(`${lessons.length} درساً مصوّراً · ${totalSolvedAll} مثالاً محلولاً بالتفصيل · ${totalDrillsAll} تدريباً تطبيقياً · طباعة A4 رسمية بشعار المدرسة على جميع الصفحات`, `${lessons.length} Illustrated Lessons · ${totalSolvedAll} Step-by-Step Solved Examples · ${totalDrillsAll} Printable Practice Drills · Branded A4 Printouts`)}</p>
+          <h2 class="text-xl sm:text-2xl font-display font-bold">${isAr() ? cfg.hubTitleAr : cfg.hubTitleEn}</h2>
+          <p class="text-xs sm:text-sm opacity-80 mt-0.5">${L(`${lessons.length} درساً مصوّراً · ${totalSolvedAll} مثالاً محلولاً · ${totalDrillsAll} تدريباً تطبيقياً · طباعة A4`, `${lessons.length} Illustrated Lessons · ${totalSolvedAll} Solved Examples · ${totalDrillsAll} Practice Drills · A4 Printouts`)}</p>
         </div>
       </div>
       ${compSwitcher}
       <div class="eg-tabs no-print">${tabs}</div>
       ${inner}
     </div>`;
+
+    if (root.querySelectorAll) {
+      root.querySelectorAll('.eg-comp-btn-on, .eg-tab-on').forEach((btn) => {
+        const p = btn.parentElement;
+        if (p && p.scrollWidth > p.clientWidth) {
+          p.scrollLeft = Math.max(0, btn.offsetLeft - (p.clientWidth - btn.offsetWidth) / 2);
+        }
+      });
+    }
 
     if (window.MathJax && typeof MathJax.typesetPromise === 'function') {
       MathJax.typesetPromise([root]).catch(() => {});
@@ -1167,7 +1176,7 @@
       window.toggleLanguage = function () {
         const res = origToggle.apply(this, arguments);
         const navStudy = document.getElementById('nav-study-text');
-        if (navStudy) navStudy.innerText = isAr() ? 'دروس المسابقات' : 'Study Academy';
+        if (navStudy) navStudy.innerText = isAr() ? 'الدروس' : 'Lessons';
         render();
         return res;
       };

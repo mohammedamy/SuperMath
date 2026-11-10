@@ -27,6 +27,11 @@
       tex: {
         inlineMath: [['\\(', '\\)']],
         displayMath: [['$$', '$$'], ['\\[', '\\]']]
+      },
+      chtml: {
+        scale: 1.07,
+        minScale: 0.92,
+        mtextInheritFont: true
       }
     };
   </script>
@@ -41,7 +46,7 @@
             brand: {
               50: '#f4f7fb',
               100: '#e6ecf5',
-              600: '#2563eb',
+              600: '#1d4ed8',
               800: '#1e3a8a',
               900: '#0f172a',
             },
@@ -54,24 +59,8 @@
             }
           },
           fontFamily: {
-            sans: ['Cairo', 'Inter', 'sans-serif'],
-            display: ['Outfit', 'Cairo', 'sans-serif'],
-          },
-          animation: {
-            'blob': 'blob 7s infinite',
-            'float': 'float 3s ease-in-out infinite',
-          },
-          keyframes: {
-            blob: {
-              '0%': { transform: 'translate(0px, 0px) scale(1)' },
-              '33%': { transform: 'translate(30px, -50px) scale(1.1)' },
-              '66%': { transform: 'translate(-20px, 20px) scale(0.9)' },
-              '100%': { transform: 'translate(0px, 0px) scale(1)' },
-            },
-            float: {
-              '0%, 100%': { transform: 'translateY(0)' },
-              '50%': { transform: 'translateY(-10px)' },
-            }
+            sans: ['Inter', 'Cairo', 'system-ui', 'sans-serif'],
+            display: ['Outfit', 'Cairo', 'system-ui', 'sans-serif'],
           }
         }
       }
@@ -79,39 +68,23 @@
   </script>
 
   <style>
-    body {
-      background-attachment: fixed;
-    }
-    body.dark {
-      background-image: 
-        radial-gradient(at 40% 20%, hsla(28,100%,74%,0.05) 0px, transparent 50%),
-        radial-gradient(at 80% 0%, hsla(189,100%,56%,0.05) 0px, transparent 50%),
-        radial-gradient(at 0% 50%, hsla(355,100%,93%,0.02) 0px, transparent 50%);
-    }
-    body:not(.dark) {
-      background-image: 
-        radial-gradient(at 40% 20%, hsla(28,100%,74%,0.15) 0px, transparent 50%),
-        radial-gradient(at 80% 0%, hsla(189,100%,56%,0.15) 0px, transparent 50%),
-        radial-gradient(at 0% 50%, hsla(355,100%,93%,0.1) 0px, transparent 50%);
-    }
-    
     .chart-container {
       position: relative;
       width: 100%;
       max-width: 650px;
       margin-left: auto;
       margin-right: auto;
-      height: 320px;
-      max-height: 400px;
+      height: 300px;
+      max-height: 380px;
     }
     @media (min-width: 768px) {
       .chart-container {
-        height: 360px;
+        height: 340px;
       }
     }
 
     .math-font {
-      font-family: 'Cambria Math', 'Times New Roman', serif;
+      font-family: 'Inter', 'Cairo', system-ui, -apple-system, sans-serif;
     }
 
     .custom-scrollbar::-webkit-scrollbar {
@@ -136,7 +109,7 @@
         min-height: auto !important;
         height: auto !important;
       }
-      header, main, footer, #print-modal {
+      header, nav, main, footer, #print-modal, #mobile-bottom-nav {
         display: none !important;
       }
       #print-container {
@@ -153,7 +126,6 @@
       .page-break {
         page-break-before: always;
       }
-      /* Ensure SVGs print cleanly */
       svg {
         max-width: 100% !important;
       }
@@ -187,434 +159,311 @@
   -->
   <!-- CONFIRMATION: NO SVG graphics used. NO Mermaid JS used. -->
 
-  <a class="skip-link" href="#practice">Skip to practice / انتقل للتدريب</a>
-  <!-- TOP HEADER / NAVBAR -->
-  <header class="bg-slate-900/85 backdrop-blur-xl text-white sticky top-0 z-50 shadow-[0_4px_30px_rgba(0,0,0,0.1)] border-b border-slate-800/50 transition-all duration-300">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="flex flex-wrap items-center justify-between gap-x-3 gap-y-2 min-h-[5rem] py-2">
-        
-        <!-- Brand / Title -->
-        <div class="flex items-center gap-3">
-          <img src="LOGO.jpg" alt="SuperMath Logo" class="w-12 h-12 rounded-xl object-contain bg-white p-0.5 shadow-lg shadow-amber-500/30 transform hover:scale-105 transition-transform duration-300 border border-slate-700/50">
-          <div>
-            <h1 class="text-xl sm:text-2xl font-display font-extrabold tracking-tight text-transparent bg-clip-text bg-gradient-to-r from-white to-slate-300 flex items-center gap-2" id="app-title">
-              منصة تحليلات مسارات الرياضيات | Edugates International School
-            </h1>
-            <p class="text-xs text-slate-400" id="app-subtitle">
-              المستودع الذكي والتحليلي لاختبارات كانجارو، نافس، كاوست، JEE، والأولمبياد - برعاية مدرسة بوابة المعرفة العالمية
-            </p>
+  <a class="skip-link" href="#practice" onclick="if(window.setAppView)setAppView('practice')">Skip to practice / انتقل للتدريب</a>
+
+  <!-- TOP HEADER & PRIMARY WORKSPACE NAVIGATION -->
+  <header class="sm-header sticky top-0 z-50">
+    <div class="max-w-6xl mx-auto px-3.5 sm:px-6 lg:px-8">
+      <div class="sm-header-row">
+        <!-- Brand -->
+        <button type="button" onclick="if(window.setAppView)setAppView('tracks')" class="sm-brand text-start">
+          <img src="LOGO.jpg" alt="Edugates International School" class="sm-brand-logo">
+          <div class="min-w-0">
+            <h1 class="sm-brand-title" id="app-title">SuperMath</h1>
+            <p class="sm-brand-sub" id="app-subtitle">Edugates International School · Mathematics Practice</p>
           </div>
-        </div>
+        </button>
 
-        <!-- Global Action Controls -->
-        <div class="flex flex-wrap items-center gap-2 sm:gap-3 max-w-full">
-          <!-- Active Track Counter Badge -->
-          <div class="hidden lg:flex items-center bg-slate-800 px-3 py-1.5 rounded-lg border border-slate-700 text-xs text-slate-300">
-            <span class="w-2 h-2 rounded-full bg-emerald-500 ml-2 animate-pulse"></span>
-            <span id="stat-questions-count">جاري تحميل بنوك التدريب…</span>
-          </div>
-
-          <!-- Study Academy Quick Jump (KAUST + NSMO) -->
-          <a href="#study-lessons" onclick="if(window.jumpToKaustStudy){event.preventDefault();jumpToKaustStudy();}" class="bg-teal-700 hover:bg-teal-600 text-white border border-teal-500/70 px-3 sm:px-4 py-2 rounded-xl text-xs sm:text-sm font-bold transition-all duration-300 flex items-center gap-1.5 sm:gap-2 hover:shadow-lg hover:shadow-teal-500/20 shrink-0">
-            <span>📖</span>
-            <span id="nav-study-text" class="hidden sm:inline">Study Academy</span>
-          </a>
-
-          <!-- Mock Exams Quick Jump (KAUST + NSMO) -->
-          <a href="#kaust-mock-exams" onclick="if(window.jumpToKaustMocks){event.preventDefault();jumpToKaustMocks();}" class="bg-amber-600 hover:bg-amber-500 text-white border border-amber-400/70 px-3 sm:px-4 py-2 rounded-xl text-xs sm:text-sm font-bold transition-all duration-300 flex items-center gap-1.5 sm:gap-2 hover:shadow-lg hover:shadow-amber-500/20 shrink-0">
-            <span>⏱️</span>
-            <span id="nav-mocks-text" class="hidden sm:inline">Mock Exams</span>
-          </a>
-
-          <!-- Brilliant Classroom Link -->
-          <a href="https://brilliant.org/classroom/join-v2/19fe3e01-311f-4170-8c40-52a8982e3111" target="_blank" rel="noopener noreferrer" class="bg-brand-600 hover:bg-brand-500 text-white border border-brand-500 px-3 sm:px-4 py-2 rounded-xl text-xs sm:text-sm font-bold transition-all duration-300 flex items-center gap-1.5 sm:gap-2 hover:shadow-lg hover:shadow-brand-500/20 shrink-0">
-            <span>✨</span>
-            <span id="brilliant-join-text" class="hidden sm:inline">انضم للفصل في Brilliant</span>
-          </a>
-
-          <!-- Theme Switcher -->
-          <button aria-label="Toggle dark mode / تبديل المظهر" id="theme-toggle-btn" onclick="toggleTheme()" class="bg-slate-800/80 hover:bg-slate-700 text-amber-400 border border-slate-700 px-4 py-2 rounded-xl text-sm font-bold transition-all duration-300 flex items-center gap-2 hover:shadow-lg hover:shadow-amber-500/10">
-            <span id="theme-icon">🌙</span>
+        <!-- Desktop Primary Workspace Switcher -->
+        <nav id="workspace-nav" class="sm-nav-tabs hidden md:flex" aria-label="Primary sections">
+          <button type="button" id="tab-btn-tracks" onclick="setAppView('tracks')" class="sm-nav-tab sm-nav-tab-active">
+            <span id="nav-tracks-text">Tracks</span>
           </button>
-          
-          <!-- Language Switcher -->
-          <button id="lang-toggle-btn" onclick="toggleLanguage()" class="bg-slate-800/80 hover:bg-slate-700 text-amber-400 border border-slate-700 px-4 py-2 rounded-xl text-sm font-bold transition-all duration-300 flex items-center gap-2 hover:shadow-lg hover:shadow-amber-500/10">
-            <span>🌐</span>
+          <button type="button" id="tab-btn-practice" onclick="setAppView('practice')" class="sm-nav-tab">
+            <span id="nav-practice-text">Practice</span>
+          </button>
+          <a href="#study-lessons" id="tab-btn-lessons" onclick="event.preventDefault();if(window.jumpToKaustStudy){jumpToKaustStudy();}else{setAppView('lessons');}" class="sm-nav-tab">
+            <span id="nav-study-text">Lessons</span>
+          </a>
+          <a href="#kaust-mock-exams" id="tab-btn-mocks" onclick="event.preventDefault();if(window.jumpToKaustMocks){jumpToKaustMocks();}else{setAppView('mocks');}" class="sm-nav-tab">
+            <span id="nav-mocks-text">Mock Exams</span>
+          </a>
+          <button type="button" id="tab-btn-insights" onclick="setAppView('insights')" class="sm-nav-tab">
+            <span id="nav-insights-text">Overview</span>
+          </button>
+        </nav>
+
+        <!-- Utility Actions -->
+        <div class="sm-header-actions">
+          <div class="hidden xl:flex items-center sm-count-pill">
+            <span class="w-1.5 h-1.5 rounded-full bg-emerald-600 dark:bg-emerald-400 me-2"></span>
+            <span id="stat-questions-count">Loading…</span>
+          </div>
+
+          <button type="button" onclick="openPrintModal()" class="sm-icon-btn sm-print-trigger" title="Print A4 Worksheet / طباعة ورقة عمل">
+            <svg class="w-4 h-4 shrink-0" fill="none" stroke="currentColor" stroke-width="1.9" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M6 9V4h12v5M6 18H4a2 2 0 01-2-2v-5a2 2 0 012-2h16a2 2 0 012 2v5a2 2 0 01-2 2h-2M6 14h12v6H6v-6z"/></svg>
+            <span id="hdr-print-label" class="hidden sm:inline">Print A4</span>
+          </button>
+
+          <a href="https://brilliant.org/classroom/join-v2/19fe3e01-311f-4170-8c40-52a8982e3111" target="_blank" rel="noopener noreferrer" class="sm-icon-btn hidden lg:inline-flex">
+            <span id="brilliant-join-text">Brilliant</span>
+          </a>
+
+          <button aria-label="Toggle dark mode / تبديل المظهر" id="theme-toggle-btn" onclick="toggleTheme()" class="sm-icon-btn sm-icon-only">
+            <span id="theme-icon" aria-hidden="true">🌙</span>
+          </button>
+
+          <button id="lang-toggle-btn" onclick="toggleLanguage()" class="sm-icon-btn sm-lang-btn">
             <span id="lang-label">العربية</span>
           </button>
         </div>
-
       </div>
     </div>
   </header>
 
-  <!-- MAIN CONTENT CONTAINER -->
-  <main class="flex-grow max-w-7xl w-full mx-auto px-4 sm:px-6 lg:px-8 py-8 space-y-12">
+  <!-- MAIN WORKSPACE -->
+  <main id="main-workspace" class="sm-main flex-grow max-w-6xl w-full mx-auto px-3.5 sm:px-6 lg:px-8">
 
-    <!-- INTRODUCTORY SECTION & STATS TICKER -->
-    <section class="bg-white/70 dark:bg-slate-800/70 backdrop-blur-md rounded-3xl p-6 sm:p-10 shadow-xl shadow-slate-200/50 dark:shadow-slate-900/50 border border-white dark:border-slate-700 relative overflow-hidden">
-      <!-- Decorative blob -->
-      <div class="absolute top-0 right-0 -mr-20 -mt-20 w-64 h-64 rounded-full bg-brand-600/10 mix-blend-multiply filter blur-3xl opacity-70 animate-blob pointer-events-none"></div>
-      <div class="absolute bottom-0 left-0 -ml-20 -mb-20 w-72 h-72 rounded-full bg-amber-500/10 mix-blend-multiply filter blur-3xl opacity-70 animate-blob pointer-events-none" style="animation-delay: 2s"></div>
-      
-      <div class="relative z-10">
-        <div class="max-w-4xl space-y-4">
-          <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-amber-50/80 dark:bg-amber-900/30 text-amber-700 dark:text-amber-400 border border-amber-200/60 dark:border-amber-700/50 text-xs font-bold backdrop-blur-sm" id="badge-overview">
-            📌 نظرة عامة على قاعدة البيانات والمسارات
+    <!-- VIEW 1: TRACKS & GRADE DIRECTORY (DEFAULT HOME) -->
+    <div id="view-tracks" class="sm-view space-y-6">
+      <!-- Compact Editorial Intro Banner -->
+      <section class="sm-intro-card">
+        <div class="sm-intro-grid">
+          <div class="space-y-2">
+            <div class="sm-kicker" id="badge-overview">PRACTISE · REASON · PROGRESS</div>
+            <h2 class="sm-hero-title" id="hero-heading">Find your next mathematical challenge.</h2>
+            <p class="sm-hero-desc" id="hero-desc">Choose your grade or competition below to practice problems, study illustrated lessons, or take a full timed mock exam.</p>
           </div>
-          <h2 class="text-3xl sm:text-4xl md:text-5xl font-display font-extrabold text-slate-900 dark:text-white leading-tight" id="hero-heading">
-          محرك الإعداد والمحاكاة التفاعلي للمسابقات الرياضية الهامة
-        </h2>
-        <p class="text-slate-600 dark:text-slate-300 leading-relaxed text-sm sm:text-base" id="hero-desc">
-          تمنحك هذه المنصة إمكانية استكشاف وهيكلة أحدث قواعد البيانات والأسئلة لـ 5 مسارات عالمية ومحلية استراتيجية. تم تطوير قاعدة البيانات لتغطي الفئات العمرية من الصفوف الابتدائية حتى الثانوية، مع تفكيك دقيق لمستويات صعوبة الأسئلة (اختيار من متعدد والمقالي) والحلول النموذجية ثنائية اللغة (عربي/إنجليزي).
-        </p>
-      </div>
-
-      <!-- Quick Stats Ticker -->
-      <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mt-8 pt-6 border-t border-slate-100 dark:border-slate-700">
-        <div class="bg-white/80 dark:bg-slate-800/80 backdrop-blur-sm p-4 rounded-2xl border border-slate-100/50 dark:border-slate-700/50 text-center shadow-sm hover:shadow-md hover:-translate-y-1 transition-all duration-300">
-          <div class="text-xs text-slate-500 dark:text-slate-400 font-semibold" id="stat-1-label">المسارات المعتمدة</div>
-          <div class="text-2xl font-display font-black text-slate-800 dark:text-slate-100 mt-1" id="stat-1-val">6 مسارات رئيسية</div>
-        </div>
-        <div class="bg-white/80 dark:bg-slate-800/80 backdrop-blur-sm p-4 rounded-2xl border border-slate-100/50 dark:border-slate-700/50 text-center shadow-sm hover:shadow-md hover:-translate-y-1 transition-all duration-300" style="animation-delay: 100ms">
-          <div class="text-xs text-slate-500 dark:text-slate-400 font-semibold" id="stat-2-label">الفئات العمرية والصفوف</div>
-          <div class="text-2xl font-display font-black text-brand-600 dark:text-brand-400 mt-1" id="stat-2-val">من 1 ابتدائي إلى 12 ثانوية</div>
-        </div>
-        <div class="bg-white/80 dark:bg-slate-800/80 backdrop-blur-sm p-4 rounded-2xl border border-slate-100/50 dark:border-slate-700/50 text-center shadow-sm hover:shadow-md hover:-translate-y-1 transition-all duration-300" style="animation-delay: 200ms">
-          <div class="text-xs text-slate-500 dark:text-slate-400 font-semibold" id="stat-3-label">أنماط الأسئلة</div>
-          <div class="text-2xl font-display font-black text-amber-600 dark:text-amber-400 mt-1" id="stat-3-val">MCQ (4-5 خيارات) & FRQ</div>
-        </div>
-        <div class="bg-white/80 dark:bg-slate-800/80 backdrop-blur-sm p-4 rounded-2xl border border-slate-100/50 dark:border-slate-700/50 text-center shadow-sm hover:shadow-md hover:-translate-y-1 transition-all duration-300" style="animation-delay: 300ms">
-          <div class="text-xs text-slate-500 dark:text-slate-400 font-semibold" id="stat-4-label">تغطية اللغات</div>
-          <div class="text-2xl font-display font-black text-emerald-600 dark:text-emerald-400 mt-1" id="stat-4-val">100% عربي & إنجليزي</div>
-        </div>
-      </div>
-      </div>
-    </section>
-
-    <!-- SECTION 1: TRACKS EXPLORER & METADATA -->
-    <section class="space-y-6">
-      <div class="flex flex-col md:flex-row md:items-end justify-between gap-4">
-        <div>
-          <h2 class="text-2xl md:text-3xl font-display font-bold text-slate-900 dark:text-white" id="sec1-title">بطاقات المسارات والصفوف المستهدفة</h2>
-          <p class="text-slate-500 dark:text-slate-400 text-sm mt-1" id="sec1-desc">
-            اختر المسار للاستكشاف ومعاينة معايير الاختبار، عدد الخيارات، والصعوبة المستهدفة
-          </p>
-        </div>
-        <div class="flex gap-2 bg-slate-200/60 dark:bg-slate-700/60 p-1 rounded-xl text-xs font-bold" id="track-filter-btns">
-          <!-- Populated by JS -->
-        </div>
-      </div>
-
-      <!-- Grade Filter -->
-      <div class="bg-white/60 dark:bg-slate-800/60 p-4 rounded-xl border border-slate-200 dark:border-slate-700 mt-4 mb-6">
-        <div class="text-sm font-bold text-slate-700 dark:text-slate-300 mb-3" id="grade-filter-title">Filter by Your Grade / حدد صفك الدراسي</div>
-        <div class="flex flex-wrap gap-2" id="grade-filter-btns">
-          <!-- Populated by JS -->
-        </div>
-      </div>
-
-      <!-- Tracks Grid -->
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6" id="tracks-cards-grid" aria-label="Practice tracks">
-        <!-- Rendered via JS -->
-      </div>
-    </section>
-
-    <!-- SECTION 3: INTERACTIVE QUESTION EXPLORER & LIVE QUIZ ENGINE -->
-    <section id="practice" class="bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white rounded-3xl p-6 sm:p-10 shadow-2xl shadow-slate-900/20 border border-slate-800 space-y-8 relative overflow-hidden">
-      <!-- Decorative glow -->
-      <div class="absolute top-0 right-1/4 w-96 h-96 bg-brand-600/20 rounded-full filter blur-[100px] pointer-events-none"></div>
-      <div class="absolute bottom-0 left-1/4 w-96 h-96 bg-amber-500/10 rounded-full filter blur-[100px] pointer-events-none"></div>
-      
-      <div class="relative z-10">
-      
-      <!-- Section Header & Filter Toolbar -->
-      <div class="flex flex-col lg:flex-row lg:items-center justify-between gap-6 border-b border-slate-800 pb-6">
-        <div>
-          <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-amber-500/10 text-amber-400 border border-amber-500/20 text-xs font-bold mb-2">
-            ⚡ مستكشف الأسئلة والتفاعل الحي
+          <div class="sm-quick-metrics">
+            <div class="sm-metric">
+              <div class="sm-metric-val" id="stat-1-val">6 Tracks</div>
+              <div class="sm-metric-lbl" id="stat-1-label">Competitions</div>
+            </div>
+            <div class="sm-metric">
+              <div class="sm-metric-val" id="stat-2-val">Grades 1–12</div>
+              <div class="sm-metric-lbl" id="stat-2-label">Grade Span</div>
+            </div>
+            <div class="sm-metric">
+              <div class="sm-metric-val" id="stat-3-val">108 Lessons</div>
+              <div class="sm-metric-lbl" id="stat-3-label">Study Guides</div>
+            </div>
+            <div class="sm-metric">
+              <div class="sm-metric-val" id="stat-4-val">EN &amp; AR</div>
+              <div class="sm-metric-lbl" id="stat-4-label">Bilingual</div>
+            </div>
           </div>
-          <h2 class="text-2xl sm:text-3xl font-extrabold text-white" id="quiz-heading">
-            استكشف بنك الأسئلة والحلول النموذجية
-          </h2>
-          <p class="text-slate-400 text-sm mt-1" id="quiz-subheading">
-            اختر المسار والمستوى لاختبار حل الأسئلة، عرض التلميحات، وفحص خطوات الحل بالتفصيل
-          </p>
+        </div>
+      </section>
+
+      <!-- Grade Filter + Competition Cards -->
+      <section class="space-y-4">
+        <div class="sm-grade-bar">
+          <div class="flex flex-wrap items-center justify-between gap-2 mb-2.5">
+            <div>
+              <h2 class="sm-sec-title" id="sec1-title">Choose your track</h2>
+              <p class="sm-sec-sub" id="sec1-desc">Filter by grade or open Practice, Study Lessons, or Mock Exams directly.</p>
+            </div>
+            <div class="hidden" id="track-filter-btns"></div>
+          </div>
+          <div class="sm-grade-lbl" id="grade-filter-title">Filter by Grade</div>
+          <div class="flex gap-1.5" id="grade-filter-btns"></div>
         </div>
 
-        <!-- Filter Controls -->
-        <div class="flex flex-wrap gap-3">
-          <select id="quiz-track-select" onchange="filterQuestions()" class="bg-slate-800 text-white border border-slate-700 text-xs sm:text-sm rounded-xl px-3 py-2.5 focus:ring-2 focus:ring-amber-500 outline-none">
-            <option value="all">كل المسارات (All Tracks)</option>
-            <option value="kangaroo">كانجارو (Kangaroo)</option>
-            <option value="nafes">نافس (Nafes KSA)</option>
-            <option value="jee">JEE Advanced</option>
-            <option value="olympiad">الأولمبياد (Olympiad)</option>
-            <option value="kaust">مسابقة كاوست (KAUST KMC)</option>
-            <option value="nsmo">NSMO</option>
-          </select>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-5" id="tracks-cards-grid" aria-label="Practice tracks"></div>
+      </section>
+    </div>
 
-          <!-- Nafes Grade Filter (shows only when nafes track is selected) -->
-          <select id="quiz-nafes-grade-select" onchange="filterQuestions()" class="bg-slate-800 text-white border border-amber-500/50 text-xs sm:text-sm rounded-xl px-3 py-2.5 focus:ring-2 focus:ring-amber-500 outline-none">
-            <option value="all">كل صفوف نافس (All Nafes Grades)</option>
-            <option value="Grade 3">🟢 نافس الصف 3 (Grade 3)</option>
-            <option value="Grade 6">🔵 نافس الصف 6 (Grade 6)</option>
-            <option value="Grade 9">🟣 نافس الصف 9 (Grade 9)</option>
-          </select>
-
-          <!-- Kangaroo Level Filter (shows only when kangaroo track is selected) -->
-          <select id="quiz-kangaroo-level-select" onchange="filterQuestions()" class="bg-slate-800 text-white border border-rose-500/50 text-xs sm:text-sm rounded-xl px-3 py-2.5 focus:ring-2 focus:ring-rose-500 outline-none">
-            <option value="all">كل مستويات كانجارو (All Kangaroo Levels)</option>
-            <option value="PreEcolier">🐣 بري إيكولير (PreEcolier: G1-2)</option>
-            <option value="Ecolier">🌱 إيكولير (Ecolier: G3-4)</option>
-            <option value="Benjamin">🌿 بنجامين (Benjamin: G5-6)</option>
-            <option value="Cadet">🌳 كاديت (Cadet: G7-8)</option>
-            <option value="Junior">🎓 جونيور (Junior: G9-10)</option>
-            <option value="Student">🏆 ستيودنت (Student: G11-12)</option>
-          </select>
-
-          <!-- KAUST Track Filter (shows only when kaust track is selected) -->
-          <select id="quiz-kaust-phase-select" onchange="filterQuestions()" class="bg-slate-800 text-white border border-teal-500/50 text-xs sm:text-sm rounded-xl px-3 py-2.5 focus:ring-2 focus:ring-teal-500 outline-none">
-            <option value="all">كل مسارات كاوست (All KAUST Tracks)</option>
-            <option value="Track 1: Grades 6-7">🌱 المسار 1: الصفوف 6-7 (Track 1: G6-7)</option>
-            <option value="Track 2: Grades 8-9">🌿 المسار 2: الصفوف 8-9 (Track 2: G8-9)</option>
-            <option value="Track 3: Grades 10-11">🎓 المسار 3: الصفوف 10-11 (Track 3: G10-11)</option>
-          </select>
-
-          <!-- NSMO Phase Filter (shows only when nsmo track is selected) -->
-          <select id="quiz-nsmo-phase-select" onchange="filterQuestions()" class="bg-slate-800 text-white border border-emerald-500/50 text-xs sm:text-sm rounded-xl px-3 py-2.5 focus:ring-2 focus:ring-emerald-500 outline-none">
-            <option value="all">كل مراحل الأولمبياد الوطني NSMO</option>
-            <option value="Phase 1: Junior Olympiad (Grade 7)">🥉 المرحلة 1: أولمبياد الناشئين (G7)</option>
-            <option value="Phase 2: Intermediate Olympiad (Grades 8-9)">🥈 المرحلة 2: الأولمبياد المتوسط (G8-9)</option>
-            <option value="Phase 3: Senior National Olympiad (Grade 10)">🥇 المرحلة 3: الأولمبياد الوطني (G10)</option>
-          </select>
-
-          <!-- Olympiad Tier Filter (shows only when olympiad track is selected) -->
-          <select id="quiz-olympiad-tier-select" onchange="filterQuestions()" class="bg-slate-800 text-white border border-amber-500/50 text-xs sm:text-sm rounded-xl px-3 py-2.5 focus:ring-2 focus:ring-amber-500 outline-none">
-            <option value="all">كل مستويات الأولمبياد الرياضي (All Olympiad Tiers)</option>
-            <option value="Tier 1: Junior Olympiad (Grades 7-8)">🥉 المستوى 1: أولمبياد الناشئين (Tier 1: G7-8)</option>
-            <option value="Tier 2: Intermediate Olympiad (Grades 9-10)">🥈 المستوى 2: الأولمبياد المتوسط (Tier 2: G9-10)</option>
-            <option value="Tier 3: Senior Olympiad (Grades 11-12)">🥇 المستوى 3: الأولمبياد المتقدم (Tier 3: G11-12)</option>
-          </select>
-
-          <select id="quiz-topic-select" onchange="filterQuestions()" class="bg-slate-800 text-white border border-slate-700 text-xs sm:text-sm rounded-xl px-3 py-2.5 focus:ring-2 focus:ring-amber-500 outline-none">
-            <option value="all">كل المواضيع (All Topics)</option>
-            <option value="Algebra">الجبر (Algebra)</option>
-            <option value="Geometry">الهندسة (Geometry)</option>
-            <option value="Inequalities">المتباينات (Inequalities)</option>
-            <option value="Combinatorics">التركيبات (Combinatorics)</option>
-            <option value="Fractions">الكسور (Fractions)</option>
-            <option value="Word Problems">مسائل كلامية (Word Problems)</option>
-            <option value="Statistics">الإحصاء (Statistics)</option>
-            <option value="Probability">الاحتمالات (Probability)</option>
-            <option value="Number Theory">نظرية الأعداد (Number Theory)</option>
-            <option value="Sequences">المتتاليات (Sequences)</option>
-            <option value="Trigonometry">المثلثات (Trigonometry)</option>
-            <option value="Functions">الدوال (Functions)</option>
-            <option value="Quadratic Equations">المعادلات التربيعية (Quadratic)</option>
-            <option value="Coordinate Geometry">الهندسة التحليلية (Coordinate)</option>
-            <option value="Systems of Equations">الأنظمة (Systems)</option>
-            <option value="Integers">الأعداد الصحيحة (Integers)</option>
-            <option value="Percentages">النسب المئوية (Percentages)</option>
-            <option value="Ratio">النسب والتناسب (Ratio)</option>
-            <option value="LCM and HCF">م.م.أ وق.م.أ (LCM & HCF)</option>
-            <option value="Decimals">الأعداد العشرية (Decimals)</option>
-            <option value="Logic">المنطق (Logic)</option>
-            <option value="Logical Puzzles">أحاجي منطقية (Logical Puzzles)</option>
-            <option value="Basic Algebra">الجبر الأساسي (Basic Algebra)</option>
-            <option value="Complex Numbers">الأعداد المركبة (Complex)</option>
-            <option value="Logic and Combinatorics">التركيبات (Combinatorics)</option>
-          </select>
-
-          <!-- Print Button -->
-          <button onclick="openPrintModal()" class="bg-slate-800 hover:bg-slate-700 text-emerald-400 border border-emerald-500/50 text-xs sm:text-sm rounded-xl px-4 py-2.5 font-bold transition-all flex items-center gap-2 shadow-lg hover:shadow-emerald-500/20">
-            🖨️ <span id="btn-print-text">طباعة الاختبار</span>
+    <!-- VIEW 2: INTERACTIVE PRACTICE WORKSPACE -->
+    <section id="practice" class="sm-view sm-view-hidden sm-practice-shell">
+      <div class="sm-practice-header">
+        <div class="flex flex-wrap items-start justify-between gap-3">
+          <div>
+            <h2 class="sm-sec-title" id="quiz-heading">Practice Workspace</h2>
+            <p class="sm-sec-sub" id="quiz-subheading">Select a competition, division, and topic to work through problems at your own pace.</p>
+          </div>
+          <button type="button" onclick="openPrintModal()" class="sm-btn sm-btn-secondary shrink-0">
+            <svg class="w-4 h-4 shrink-0" fill="none" stroke="currentColor" stroke-width="1.9" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M6 9V4h12v5M6 18H4a2 2 0 01-2-2v-5a2 2 0 012-2h16a2 2 0 012 2v5a2 2 0 01-2 2h-2M6 14h12v6H6v-6z"/></svg>
+            <span id="btn-print-text">Print Worksheet</span>
           </button>
+        </div>
+
+        <!-- Clean Filter Bar -->
+        <div class="sm-filter-grid">
+          <select id="quiz-track-select" onchange="filterQuestions()" class="sm-select">
+            <option value="all">All Competitions</option>
+            <option value="kangaroo">Kangaroo Math (Grades 1–12)</option>
+            <option value="nafes">Nafes KSA (Grades 3, 6, 9)</option>
+            <option value="kaust">KAUST KMC (Grades 6–11)</option>
+            <option value="nsmo">NSMO · Mawhiba (Grades 7–10)</option>
+            <option value="olympiad">Math Olympiad (Grades 7–12)</option>
+            <option value="jee">JEE Mathematics (Grade 12)</option>
+          </select>
+
+          <select id="quiz-nafes-grade-select" onchange="filterQuestions()" class="sm-select">
+            <option value="all">All Nafes Grades</option>
+            <option value="Grade 3">Grade 3</option>
+            <option value="Grade 6">Grade 6</option>
+            <option value="Grade 9">Grade 9</option>
+          </select>
+
+          <select id="quiz-kangaroo-level-select" onchange="filterQuestions()" class="sm-select">
+            <option value="all">All Kangaroo Divisions</option>
+            <option value="PreEcolier">PreEcolier (Grades 1–2)</option>
+            <option value="Ecolier">Ecolier (Grades 3–4)</option>
+            <option value="Benjamin">Benjamin (Grades 5–6)</option>
+            <option value="Cadet">Cadet (Grades 7–8)</option>
+            <option value="Junior">Junior (Grades 9–10)</option>
+            <option value="Student">Student (Grades 11–12)</option>
+          </select>
+
+          <select id="quiz-kaust-phase-select" onchange="filterQuestions()" class="sm-select">
+            <option value="all">All KAUST Tracks</option>
+            <option value="Track 1: Grades 6-7">Track 1: Grades 6–7</option>
+            <option value="Track 2: Grades 8-9">Track 2: Grades 8–9</option>
+            <option value="Track 3: Grades 10-11">Track 3: Grades 10–11</option>
+          </select>
+
+          <select id="quiz-nsmo-phase-select" onchange="filterQuestions()" class="sm-select">
+            <option value="all">All NSMO Phases</option>
+            <option value="Phase 1: Junior Olympiad (Grade 7)">Phase 1: Grade 7</option>
+            <option value="Phase 2: Intermediate Olympiad (Grades 8-9)">Phase 2: Grades 8–9</option>
+            <option value="Phase 3: Senior National Olympiad (Grade 10)">Phase 3: Grade 10</option>
+          </select>
+
+          <select id="quiz-olympiad-tier-select" onchange="filterQuestions()" class="sm-select">
+            <option value="all">All Olympiad Tiers</option>
+            <option value="Tier 1: Junior Olympiad (Grades 7-8)">Tier 1: Grades 7–8</option>
+            <option value="Tier 2: Intermediate Olympiad (Grades 9-10)">Tier 2: Grades 9–10</option>
+            <option value="Tier 3: Senior Olympiad (Grades 11-12)">Tier 3: Grades 11–12</option>
+          </select>
+
+          <select id="quiz-topic-select" onchange="filterQuestions()" class="sm-select">
+            <option value="all">All Topics</option>
+          </select>
         </div>
       </div>
 
       <!-- Question Viewer Component -->
-      <div id="question-card-container" aria-live="polite" class="space-y-6">
-        <!-- Rendered by JavaScript -->
-      </div>
+      <div id="question-card-container" aria-live="polite"></div>
 
-      <!-- Quick Navigation Pagination for Questions -->
-      <div class="flex items-center justify-between pt-4 border-t border-slate-800 text-xs sm:text-sm text-slate-400">
-        <button onclick="prevQuestion()" class="px-4 py-2 bg-slate-800 hover:bg-slate-700 text-white rounded-xl font-bold transition-all disabled:opacity-40" id="btn-prev-q">
-          ← السؤال السابق
-        </button>
-        <span id="question-tracker-text" class="font-mono">
-          سؤال 1 من 5
-        </span>
-        <button onclick="nextQuestion()" class="px-4 py-2 bg-amber-500 hover:bg-amber-600 text-slate-900 rounded-xl font-bold transition-all disabled:opacity-40" id="btn-next-q">
-          السؤال التالي →
-        </button>
-      </div>
+      <!-- Question Pagination -->
+      <div id="practice-pager" class="sm-q-pager">
+        <button type="button" onclick="prevQuestion()" class="sm-btn sm-btn-secondary" id="btn-prev-q">← Previous</button>
+        <span id="question-tracker-text" class="sm-q-counter">Question 1 of 5</span>
+        <button type="button" onclick="nextQuestion()" class="sm-btn sm-btn-primary" id="btn-next-q">Next →</button>
       </div>
     </section>
 
-    <!-- SECTION 2: COMPARATIVE ANALYTICS & VISUALIZATIONS (CHART.JS CANVAS) -->
-    <section class="bg-white/80 dark:bg-slate-800/80 backdrop-blur-md rounded-3xl p-6 sm:p-8 shadow-lg shadow-slate-200/40 dark:shadow-slate-900/40 border border-white dark:border-slate-700 space-y-8">
-      <div>
-        <h2 class="text-2xl font-bold text-slate-900 dark:text-white" id="sec2-title">تحليلات المناهج والأبعاد المعرفية</h2>
-        <p class="text-slate-500 dark:text-slate-400 text-sm mt-1" id="sec2-desc">
-          مقارنة بين توزيع المواضيع (الجبر، الهندسة، نظرية الأعداد، التركيبات، التفاضل) وطبيعة الأسئلة في كل مسار
-        </p>
-      </div>
+    <!-- VIEW 3: STUDY ACADEMY LESSONS -->
+    <section id="study-lessons" class="sm-view sm-view-hidden no-print-section"></section>
 
-      <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
+    <!-- VIEW 4: TIMED MOCK EXAMS -->
+    <section id="kaust-mock-exams" class="sm-view sm-view-hidden no-print-section"></section>
 
-        <!-- Radar Chart: Topic Weight Distribution -->
-        <div class="bg-slate-50 dark:bg-slate-900/50 p-5 rounded-xl border border-slate-200 dark:border-slate-700 flex flex-col space-y-4">
-          <div class="flex items-center justify-between">
-            <h3 class="font-bold text-slate-800 dark:text-slate-100 text-sm sm:text-base" id="chart1-title">
-              📊 توزيع المواضيع الرياضية حسب المسار
-            </h3>
-            <span class="text-xs bg-slate-200 dark:bg-slate-700 text-slate-700 dark:text-slate-300 px-2 py-1 rounded">رادار مقارن</span>
-          </div>
-          <div class="chart-container">
-            <canvas id="topicRadarChart"></canvas>
-          </div>
-          <p class="text-xs text-slate-500 dark:text-slate-400 leading-relaxed" id="chart1-caption">
-            يلاحظ تركيز اختبار كانجارو على المنطق والهندسة الفضائية، بينما يركز اختبار JEE على التفاضل والتكامل والجبر المتقدم، وتتميز نافس بتوازن الجبر والقياس.
-          </p>
-        </div>
-
-        <!-- Stacked Bar Chart: Difficulty & Question Format Breakdown -->
-        <div class="bg-slate-50 dark:bg-slate-900/50 p-5 rounded-xl border border-slate-200 dark:border-slate-700 flex flex-col space-y-4">
-          <div class="flex items-center justify-between">
-            <h3 class="font-bold text-slate-800 dark:text-slate-100 text-sm sm:text-base" id="chart2-title">
-              📈 نمط الأسئلة ومستويات التحدي
-            </h3>
-            <span class="text-xs bg-slate-200 dark:bg-slate-700 text-slate-700 dark:text-slate-300 px-2 py-1 rounded">أعمدة مجمعة</span>
-          </div>
-          <div class="chart-container">
-            <canvas id="formatBarChart"></canvas>
-          </div>
-          <p class="text-xs text-slate-500 dark:text-slate-400 leading-relaxed" id="chart2-caption">
-            تعتمد مسابقتا كانجارو وكاوست للرياضيات (KMC) على أسئلة الاختيار من متعدد ذات الـ 5 خيارات دون آلة حاسبة، بينما يعتمد الأولمبياد على الأسئلة المقالية (FRQ) والحلول البرهانية.
-          </p>
-        </div>
-
-      </div>
-    </section>
-
-    <!-- SECTION 4: STUDENT PROGRESSION ROADMAP & DATABASE SCALING SIMULATOR -->
-    <section class="grid grid-cols-1 lg:grid-cols-3 gap-8">
-      
-      <!-- Student Progression Roadmap -->
-      <div class="lg:col-span-2 bg-white/80 dark:bg-slate-800/80 backdrop-blur-md rounded-3xl p-6 sm:p-8 shadow-lg shadow-slate-200/40 dark:shadow-slate-900/40 border border-white dark:border-slate-700 space-y-6 hover:shadow-xl transition-shadow duration-300">
+    <!-- VIEW 5: CURRICULUM OVERVIEW & ANALYTICS -->
+    <div id="view-insights" class="sm-view sm-view-hidden space-y-6">
+      <section class="sm-surface-card space-y-6">
         <div>
-          <h2 class="text-xl sm:text-2xl font-bold text-slate-900 dark:text-white" id="roadmap-title">
-            🗺️ خارطة التدرج المعرفي للطالب (من الابتدائي للتميز العالمي)
-          </h2>
-          <p class="text-slate-500 dark:text-slate-400 text-xs sm:text-sm mt-1" id="roadmap-subtitle">
-            مسار بناء المهارات الرياضية عبر المراحل الدراسية المختلفة
-          </p>
+          <h2 class="sm-sec-title" id="sec2-title">Explore the banks</h2>
+          <p class="sm-sec-sub" id="sec2-desc">Question distribution across topics and response formats.</p>
         </div>
 
-        <div class="space-y-4">
-          <!-- Step 1 -->
-          <div class="flex gap-4 p-4 rounded-xl bg-slate-50 dark:bg-slate-700/50 border border-slate-100 dark:border-slate-600 items-start">
-            <div class="w-10 h-10 rounded-full bg-blue-100 dark:bg-blue-900/50 text-blue-700 dark:text-blue-400 font-bold flex items-center justify-center shrink-0">
-              1
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-6 items-start">
+          <div class="sm-chart-card">
+            <h3 class="sm-chart-title" id="chart1-title">Topics in the current banks</h3>
+            <div class="chart-container">
+              <canvas id="topicRadarChart"></canvas>
             </div>
-            <div>
-              <h3 class="font-bold text-slate-800 dark:text-slate-100 text-sm sm:text-base" id="step1-t">المرحلة الابتدائية (كانجارو + نافس 3 و 6)</h3>
-              <p class="text-xs text-slate-600 dark:text-slate-300 mt-1" id="step1-d">
-                البدء بالتفكير المنطقي، التعرف على الأشكال، الحساب الأساسي، واستكشاف الأنماط دون استخدام الآلة الحاسبة.
-              </p>
-            </div>
+            <p class="sm-chart-caption" id="chart1-caption">Question counts by broad mathematical domain across all six banks.</p>
           </div>
 
-          <!-- Step 2 -->
-          <div class="flex gap-4 p-4 rounded-xl bg-slate-50 dark:bg-slate-700/50 border border-slate-100 dark:border-slate-600 items-start">
-            <div class="w-10 h-10 rounded-full bg-amber-100 dark:bg-amber-900/50 text-amber-700 dark:text-amber-400 font-bold flex items-center justify-center shrink-0">
-              2
+          <div class="sm-chart-card">
+            <h3 class="sm-chart-title" id="chart2-title">Question formats in the current banks</h3>
+            <div class="chart-container">
+              <canvas id="formatBarChart"></canvas>
             </div>
-            <div>
-              <h3 class="font-bold text-slate-800 dark:text-slate-100 text-sm sm:text-base" id="step2-t">المرحلة المتوسطة والثانوية التنافسية (كانجارو + مسابقة كاوست KMC + نافس 9 + NSMO)</h3>
-              <p class="text-xs text-slate-600 dark:text-slate-300 mt-1" id="step2-d">
-                الانتقال لمفاهيم الجبر الأساسي، هندسة إقليدس، ومبادئ نظرية الأعداد والعد والاحتمالات دون آلة حاسبة (الصفوف 6–11).
-              </p>
-            </div>
-          </div>
-
-          <!-- Step 3 -->
-          <div class="flex gap-4 p-4 rounded-xl bg-slate-50 dark:bg-slate-700/50 border border-slate-100 dark:border-slate-600 items-start">
-            <div class="w-10 h-10 rounded-full bg-purple-100 dark:bg-purple-900/50 text-purple-700 dark:text-purple-400 font-bold flex items-center justify-center shrink-0">
-              3
-            </div>
-            <div>
-              <h3 class="font-bold text-slate-800 dark:text-slate-100 text-sm sm:text-base" id="step3-t">المرحلة الثانوية المتقدمة (JEE + الأولمبياد IMO)</h3>
-              <p class="text-xs text-slate-600 dark:text-slate-300 mt-1" id="step3-d">
-                الاحتراف في التفاضل والتكامل، الأعداد المركبة، المعادلات الدالية، وإثبات البراهين الرياضية الصارمة.
-              </p>
-            </div>
+            <p class="sm-chart-caption" id="chart2-caption">Proportion of multiple-choice versus written-response items per bank.</p>
           </div>
         </div>
-      </div>
+      </section>
 
-      <!-- Database Expansion & AI Scaling Engine -->
-      <div class="bg-gradient-to-br from-slate-800 to-slate-900 text-white rounded-3xl p-6 sm:p-8 shadow-lg shadow-slate-800/30 border border-slate-700 flex flex-col justify-between space-y-6 hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
+      <section class="sm-surface-card space-y-5">
         <div>
-          <div class="text-xs font-bold text-amber-400 uppercase tracking-wider mb-1" id="scale-tag">
-            🚀 التوسع والإنتاج
-          </div>
-          <h3 class="text-xl font-bold text-white" id="scale-title">
-            محاكي توسيع بنك الأسئلة (1000+ لكل مسار)
-          </h3>
-          <p class="text-xs text-slate-300 mt-2 leading-relaxed" id="scale-desc">
-            حاسبة تقدير حجم البيانات المتوقعة عند توسيع كل مسار إلى 1,000 سؤال ثنائي اللغة مع الإجابات والخطوات الشاملة.
-          </p>
+          <h2 class="sm-sec-title" id="roadmap-title">Student Progression Path</h2>
+          <p class="sm-sec-sub" id="roadmap-subtitle">Suggested sequence from primary problem solving to senior olympiad competitions.</p>
         </div>
 
-        <div class="space-y-4 bg-slate-800/80 p-4 rounded-xl border border-slate-700/50">
-          <div>
-            <div class="flex justify-between text-xs mb-1">
-              <span id="lbl-questions-per-track">عدد الأسئلة لكل مسار:</span>
-              <span id="val-q-count" class="font-bold text-amber-400">1,000 سؤال</span>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+          <div class="sm-step-card">
+            <div class="sm-step-num">1</div>
+            <div>
+              <h3 class="sm-step-title" id="step1-t">Primary Foundations (Grades 1–6)</h3>
+              <p class="sm-step-desc" id="step1-d">Visual reasoning, number sense, geometry, and pattern discovery via Kangaroo (PreEcolier–Benjamin) and Nafes Grades 3 &amp; 6.</p>
             </div>
-            <input type="range" id="slider-q-count" aria-label="Questions per track / عدد الأسئلة لكل مسار" min="100" max="2500" step="100" value="1000" oninput="updateScaleCalc()" class="w-full accent-amber-500 cursor-pointer">
           </div>
-
-          <div class="pt-3 border-t border-slate-700 text-xs space-y-2">
-            <div class="flex justify-between">
-              <span id="lbl-total-q">إجمالي أسئلة الـ 6 مسارات:</span>
-              <span id="calc-total-q" class="font-bold">6,000 سؤال</span>
+          <div class="sm-step-card">
+            <div class="sm-step-num">2</div>
+            <div>
+              <h3 class="sm-step-title" id="step2-t">Intermediate Competitions (Grades 6–10)</h3>
+              <p class="sm-step-desc" id="step2-d">No-calculator algebra, Euclidean geometry, modular arithmetic, and combinatorics in KAUST KMC, NSMO Mawhiba, Kangaroo, and Nafes Grade 9.</p>
             </div>
-            <div class="flex justify-between">
-              <span id="lbl-json-size">الحجم التقديري لقاعدة البيانات:</span>
-              <span id="calc-json-size" class="font-bold text-emerald-400">~18.5 MB</span>
-            </div>
-            <div class="flex justify-between">
-              <span id="lbl-lang-nodes">عقد المفاهيم ثنائية اللغة:</span>
-              <span id="calc-nodes" class="font-bold text-amber-400">10,000 عقدة</span>
+          </div>
+          <div class="sm-step-card">
+            <div class="sm-step-num">3</div>
+            <div>
+              <h3 class="sm-step-title" id="step3-t">Senior Olympiad &amp; University Prep (Grades 10–12)</h3>
+              <p class="sm-step-desc" id="step3-d">Advanced number theory, inequalities, projective/inversion geometry, extremal combinatorics, and JEE calculus.</p>
             </div>
           </div>
         </div>
 
-        <button onclick="alert(currentLang === 'ar' ? 'تم تجهيز هيكلية JSON الموحدة للتصدير والربط المباشر مع تطبيق الهاتف والويب!' : 'Unified JSON schema ready for direct export to Web and Mobile apps!')" class="w-full py-3 bg-amber-500 hover:bg-amber-600 text-slate-900 font-bold text-xs sm:text-sm rounded-xl transition-all text-center">
-          ⚡ تصدير مواصفات قاعدة البيانات (JSON Schema)
-        </button>
-      </div>
-
-    </section>
+        <!-- Preserved hidden planning calculator nodes for runtime compatibility -->
+        <div id="scale-card-box" class="hidden" aria-hidden="true">
+          <span id="scale-tag"></span><h3 id="scale-title"></h3><p id="scale-desc"></p>
+          <span id="lbl-questions-per-track"></span><span id="val-q-count"></span>
+          <input type="range" id="slider-q-count" min="100" max="2500" step="100" value="1000" oninput="updateScaleCalc()">
+          <span id="lbl-total-q"></span><span id="calc-total-q"></span>
+          <span id="lbl-json-size"></span><span id="calc-json-size"></span>
+          <span id="lbl-lang-nodes"></span><span id="calc-nodes"></span>
+        </div>
+      </section>
+    </div>
 
   </main>
 
-  <!-- Floating Mobile Practice Jump Button -->
-  <a href="#practice" class="fixed bottom-5 end-5 z-40 bg-amber-500 hover:bg-amber-600 active:scale-95 text-slate-900 font-extrabold px-4 py-2.5 rounded-full shadow-2xl flex items-center gap-1.5 text-xs transition-all duration-200 border border-amber-400/60 md:hidden backdrop-blur-sm" aria-label="Jump to Practice / انتقال للتدريب">
-    <span>⚡</span>
-    <span id="mobile-jump-text">التدريب</span>
-  </a>
+  <!-- MOBILE BOTTOM NAVIGATION BAR (< 768px) -->
+  <nav id="mobile-bottom-nav" class="sm-mobile-nav md:hidden no-print" aria-label="Mobile navigation">
+    <button type="button" id="mob-tab-tracks" onclick="setAppView('tracks')" class="sm-mob-item sm-mob-item-active">
+      <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="1.9" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M4 6a2 2 0 012-2h3a2 2 0 012 2v3a2 2 0 01-2 2H6a2 2 0 01-2-2V6zm9 0a2 2 0 012-2h3a2 2 0 012 2v3a2 2 0 01-2 2h-3a2 2 0 01-2-2V6zM4 15a2 2 0 012-2h3a2 2 0 012 2v3a2 2 0 01-2 2H6a2 2 0 01-2-2v-3zm9 0a2 2 0 012-2h3a2 2 0 012 2v3a2 2 0 01-2 2h-3a2 2 0 01-2-2v-3z"/></svg>
+      <span id="mob-tracks-lbl">Tracks</span>
+    </button>
+    <a href="#practice" id="mob-tab-practice" onclick="event.preventDefault();setAppView('practice');" class="sm-mob-item">
+      <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="1.9" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+      <span id="mobile-jump-text">Practice</span>
+    </a>
+    <button type="button" id="mob-tab-lessons" onclick="if(window.jumpToKaustStudy){jumpToKaustStudy();}else{setAppView('lessons');}" class="sm-mob-item">
+      <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="1.9" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"/></svg>
+      <span id="mob-lessons-lbl">Lessons</span>
+    </button>
+    <button type="button" id="mob-tab-mocks" onclick="if(window.jumpToKaustMocks){jumpToKaustMocks();}else{setAppView('mocks');}" class="sm-mob-item">
+      <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="1.9" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+      <span id="mob-mocks-lbl">Mocks</span>
+    </button>
+    <button type="button" id="mob-tab-insights" onclick="setAppView('insights')" class="sm-mob-item">
+      <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="1.9" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"/></svg>
+      <span id="mob-insights-lbl">Overview</span>
+    </button>
+  </nav>
 
   <!-- PRINT MODAL — EDUGATES A4 WORKSHEET & EXAM CUSTOMIZER -->
   <div id="print-modal" role="dialog" aria-modal="true" aria-labelledby="print-modal-title" class="fixed inset-0 z-[100] hidden items-center justify-center bg-black/65 backdrop-blur-sm p-3 sm:p-4">
     <div class="bg-slate-900 border border-slate-700 rounded-3xl p-5 sm:p-7 max-w-2xl w-full mx-auto shadow-2xl relative max-h-[calc(100dvh-24px)] max-h-[calc(100vh-24px)] flex flex-col overflow-y-auto custom-scrollbar">
-      <div class="flex flex-wrap items-start justify-between gap-2 mb-1.5">
-        <h3 class="text-lg sm:text-xl font-bold text-white" id="print-modal-title">🖨️ Edugates A4 Worksheet &amp; Exam Customizer</h3>
-        <span id="print-pool-badge" class="text-[11px] font-bold px-2.5 py-1 rounded-full bg-emerald-950/80 text-emerald-300 border border-emerald-700/70">Matching Pool</span>
+      <div class="flex items-start justify-between gap-2 mb-1.5">
+        <div class="space-y-1 min-w-0">
+          <h3 class="text-lg sm:text-xl font-bold text-white" id="print-modal-title">🖨️ Edugates A4 Worksheet &amp; Exam Customizer</h3>
+          <span id="print-pool-badge" class="inline-block text-[11px] font-bold px-2.5 py-1 rounded-full bg-emerald-950/80 text-emerald-300 border border-emerald-700/70">Matching Pool</span>
+        </div>
+        <button type="button" onclick="closePrintModal()" aria-label="Close print dialog" class="w-9 h-9 rounded-xl border border-slate-700 bg-slate-800 hover:bg-slate-700 text-slate-300 hover:text-white flex items-center justify-center shrink-0 text-base font-bold">✕</button>
       </div>
       <p class="text-xs sm:text-sm text-slate-400 mb-4" id="print-modal-desc">Customize title, topics/lessons, Easy/Medium/Hard mix, scratch-work boxes, and an optional Page 1 OMR bubble sheet on A4 paper.</p>
       
@@ -1041,21 +890,68 @@
       }
     };
 
+    let activeAppView = 'tracks';
+    window.setAppView = function(viewName, skipScroll) {
+      const valid = ['tracks', 'practice', 'lessons', 'mocks', 'insights'];
+      const target = valid.includes(viewName) ? viewName : 'tracks';
+      activeAppView = target;
+
+      const viewMap = {
+        tracks: 'view-tracks',
+        practice: 'practice',
+        lessons: 'study-lessons',
+        mocks: 'kaust-mock-exams',
+        insights: 'view-insights'
+      };
+      Object.entries(viewMap).forEach(([key, elId]) => {
+        const el = document.getElementById(elId);
+        if (el && el.classList) {
+          if (key === target) el.classList.remove('sm-view-hidden');
+          else el.classList.add('sm-view-hidden');
+        }
+      });
+
+      ['tracks', 'practice', 'lessons', 'mocks', 'insights'].forEach((key) => {
+        const dBtn = document.getElementById('tab-btn-' + key);
+        if (dBtn && dBtn.classList) {
+          if (key === target) dBtn.classList.add('sm-nav-tab-active');
+          else dBtn.classList.remove('sm-nav-tab-active');
+        }
+        const mBtn = document.getElementById('mob-tab-' + key);
+        if (mBtn && mBtn.classList) {
+          if (key === target) mBtn.classList.add('sm-mob-item-active');
+          else mBtn.classList.remove('sm-mob-item-active');
+        }
+      });
+
+      if (target === 'insights') {
+        renderCharts();
+        if (topicRadarChartInstance && typeof topicRadarChartInstance.resize === 'function') topicRadarChartInstance.resize();
+        if (formatBarChartInstance && typeof formatBarChartInstance.resize === 'function') formatBarChartInstance.resize();
+      }
+
+      if (!skipScroll && typeof window.scrollTo === 'function') {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      }
+    };
+
     function renderGradeFilters() {
       const container = document.getElementById('grade-filter-btns');
       container.innerHTML = '';
-      
+
       const allBtn = document.createElement('button');
       const isSelectedAll = currentSelectedGrade === 'all';
-      allBtn.className = `px-3 py-1.5 rounded-lg text-sm font-bold transition-all ${isSelectedAll ? 'bg-amber-500 text-slate-900 shadow-md' : 'bg-slate-200 text-slate-600 hover:bg-slate-300'}`;
-      allBtn.innerText = currentLang === 'ar' ? 'الكل' : 'All';
+      allBtn.type = 'button';
+      allBtn.className = `sm-grade-chip ${isSelectedAll ? 'sm-grade-chip-on' : ''}`;
+      allBtn.innerText = currentLang === 'ar' ? 'الكل' : 'All Grades';
       allBtn.onclick = () => setGradeFilter('all');
       container.appendChild(allBtn);
 
       for (let i = 1; i <= 12; i++) {
         const btn = document.createElement('button');
         const isSelected = currentSelectedGrade === i;
-        btn.className = `px-3 py-1.5 rounded-lg text-sm font-bold transition-all ${isSelected ? 'bg-amber-500 text-slate-900 shadow-md' : 'bg-slate-200 text-slate-600 hover:bg-slate-300'}`;
+        btn.type = 'button';
+        btn.className = `sm-grade-chip ${isSelected ? 'sm-grade-chip-on' : ''}`;
         btn.innerText = (currentLang === 'ar' ? 'صف ' : 'G') + i;
         btn.onclick = () => setGradeFilter(i);
         container.appendChild(btn);
@@ -1093,60 +989,33 @@
 
     function initCharts() {
       if (!window.Chart) return;
+      const isDark = document.documentElement.classList.contains('dark');
+      const labelColor = isDark ? '#cbd5e1' : '#334155';
+      const gridColor = isDark ? '#283548' : '#e2e8f0';
+
       // 1. Topic Radar Chart
       const ctxRadar = document.getElementById('topicRadarChart').getContext('2d');
       topicRadarChartInstance = new Chart(ctxRadar, {
         type: 'radar',
         data: {
-          labels: ['الجبر (Algebra)', 'الهندسة (Geometry)', 'الأعداد (Number Theory)', 'التركيبات (Combinatorics)', 'التفاضل (Calculus)'],
-          datasets: [
-            {
-              label: 'Kangaroo',
-              data: [20, 35, 15, 30, 0],
-              borderColor: '#f43f5e',
-              backgroundColor: 'rgba(244, 63, 94, 0.15)',
-              borderWidth: 2
-            },
-            {
-              label: 'Nafes KSA',
-              data: [30, 30, 25, 15, 0],
-              borderColor: '#3b82f6',
-              backgroundColor: 'rgba(59, 130, 246, 0.15)',
-              borderWidth: 2
-            },
-            {
-              label: 'JEE Advanced',
-              data: [30, 20, 10, 10, 30],
-              borderColor: '#a855f7',
-              backgroundColor: 'rgba(168, 85, 247, 0.15)',
-              borderWidth: 2
-            },
-            {
-              label: 'IMO Olympiad',
-              data: [25, 25, 25, 25, 0],
-              borderColor: '#f59e0b',
-              backgroundColor: 'rgba(245, 158, 11, 0.15)',
-              borderWidth: 2
-            },
-            {
-              label: 'NSMO (KSA)',
-              data: [20, 20, 20, 20, 20],
-              borderColor: '#14b8a6',
-              backgroundColor: 'rgba(20, 184, 166, 0.15)',
-              borderWidth: 2
-            }
-          ]
+          labels: ['Algebra', 'Geometry', 'Numbers', 'Combinatorics', 'Calculus', 'Data & Prob.'],
+          datasets: []
         },
         options: {
+          animation: false,
           responsive: true,
           maintainAspectRatio: false,
+          layout: {
+            padding: { top: 10, right: 16, bottom: 6, left: 16 }
+          },
           scales: {
             r: {
-              angleLines: { color: '#e2e8f0' },
-              grid: { color: '#f1f5f9' },
+              angleLines: { color: gridColor },
+              grid: { color: gridColor },
               pointLabels: {
-                font: { family: 'Cairo, Inter', size: 10, weight: 'bold' },
-                color: '#475569'
+                font: { family: 'Inter, Cairo, sans-serif', size: 11, weight: '600' },
+                color: labelColor,
+                padding: 8
               },
               ticks: { display: false }
             }
@@ -1154,57 +1023,63 @@
           plugins: {
             legend: {
               position: 'bottom',
-              labels: { font: { family: 'Cairo, Inter', size: 11 } }
+              labels: {
+                color: labelColor,
+                boxWidth: 12,
+                padding: 12,
+                font: { family: 'Inter, Cairo, sans-serif', size: 11, weight: '600' }
+              }
             }
           }
         }
       });
 
-      // 2. Format Bar Chart
+      // 2. Format Horizontal Bar Chart (prevents X-axis label tilt/overlap on mobile)
       const ctxBar = document.getElementById('formatBarChart').getContext('2d');
       formatBarChartInstance = new Chart(ctxBar, {
         type: 'bar',
         data: {
-          labels: ['Kangaroo', 'Nafes KSA', 'JEE Main/Adv', 'Math Olympiad', 'KAUST KMC', 'NSMO (KSA)'],
-          datasets: [
-            {
-              label: 'MCQs 4-5 Options',
-              data: [100, 100, 60, 0, 100, 50],
-              backgroundColor: '#3b82f6'
-            },
-            {
-              label: 'Numerical / Integer FRQ',
-              data: [0, 0, 40, 30, 0, 30],
-              backgroundColor: '#8b5cf6'
-            },
-            {
-              label: 'Rigorous Proof FRQ',
-              data: [0, 0, 0, 70, 0, 20],
-              backgroundColor: '#f59e0b'
-            }
-          ]
+          labels: ['Kangaroo', 'Nafes', 'NSMO', 'KAUST', 'Olympiad', 'JEE'],
+          datasets: []
         },
         options: {
+          animation: false,
+          indexAxis: 'y',
           responsive: true,
           maintainAspectRatio: false,
+          layout: {
+            padding: { top: 6, right: 14, bottom: 4, left: 6 }
+          },
           scales: {
             x: {
               stacked: true,
-              grid: { display: false },
-              ticks: { font: { family: 'Cairo, Inter', size: 10, weight: 'bold' } }
+              max: 100,
+              grid: { color: gridColor },
+              ticks: {
+                color: labelColor,
+                font: { family: 'Inter, Cairo, sans-serif', size: 11 },
+                callback: function(value) { return value + "%"; }
+              }
             },
             y: {
               stacked: true,
-              max: 100,
+              grid: { display: false },
               ticks: {
-                callback: function(value) { return value + "%"; }
+                color: labelColor,
+                autoSkip: false,
+                font: { family: 'Inter, Cairo, sans-serif', size: 11.5, weight: '600' }
               }
             }
           },
           plugins: {
             legend: {
               position: 'bottom',
-              labels: { font: { family: 'Cairo, Inter', size: 11 } }
+              labels: {
+                color: labelColor,
+                boxWidth: 12,
+                padding: 12,
+                font: { family: 'Inter, Cairo, sans-serif', size: 11, weight: '600' }
+              }
             }
           }
         }
@@ -1219,7 +1094,7 @@
       // Update Text Elements
       document.getElementById('app-title').innerText = t.appTitle;
       document.getElementById('app-subtitle').innerText = t.appSubtitle;
-      document.getElementById('stat-questions-count').innerText = `${appData.questions.length.toLocaleString()} ${isAr ? 'سؤال تدريبي' : 'practice questions'}`;
+      document.getElementById('stat-questions-count').innerText = `${appData.questions.length.toLocaleString()} ${isAr ? 'سؤال تدريبي' : 'questions'}`;
       document.getElementById('badge-overview').innerText = t.badgeOverview;
       document.getElementById('hero-heading').innerText = t.heroHeading;
       document.getElementById('hero-desc').innerText = t.heroDesc;
@@ -1228,12 +1103,12 @@
       document.getElementById('stat-1-val').innerText = t.stat1Value;
       document.getElementById('stat-2-label').innerText = t.stat2Label;
       document.getElementById('stat-2-val').innerText = t.stat2Value;
-      document.getElementById('stat-3-label').innerText = t.stat3Label;
-      document.getElementById('stat-3-val').innerText = t.stat3Value;
+      document.getElementById('stat-3-label').innerText = isAr ? 'دروس مشروحة' : 'Study Guides';
+      document.getElementById('stat-3-val').innerText = isAr ? '108 دروس' : '108 Lessons';
       document.getElementById('stat-4-label').innerText = t.stat4Label;
       document.getElementById('stat-4-val').innerText = t.stat4Value;
-      
-      document.getElementById('brilliant-join-text').innerText = t.btnBrilliant;
+
+      document.getElementById('brilliant-join-text').innerText = isAr ? 'فصل Brilliant' : 'Brilliant';
 
       document.getElementById('sec1-title').innerText = t.sec1Title;
       document.getElementById('sec1-desc').innerText = t.sec1Desc;
@@ -1269,19 +1144,30 @@
       document.getElementById('lbl-lang-nodes').innerText = t.lblLangNodes;
       document.getElementById('footer-text').innerText = t.footerText;
 
-      // Print Translations
-      if (document.getElementById('nav-study-text')) document.getElementById('nav-study-text').innerText = isAr ? 'شرح دروس كاوست' : 'KAUST Lessons';
-      if (document.getElementById('nav-mocks-text')) document.getElementById('nav-mocks-text').innerText = isAr ? 'اختبارات كاوست' : 'KAUST Mocks';
-      if (document.getElementById('print-include-solutions-lbl')) document.getElementById('print-include-solutions-lbl').innerText = isAr ? 'تضمين خطوات الحل التفصيلية في مفتاح الإجابات' : 'Include step-by-step worked solutions in Answer Key';
-      if (document.getElementById('print-edugates-note')) document.getElementById('print-edugates-note').innerText = isAr ? 'حجم ورق A4 افتراضي · شعار مدرسة بوابة المعرفة العالمية على كل صفحة' : 'A4 Paper Default · Edugates International School logo on all printed pages';
-      if (document.getElementById('print-study-shortcut-lbl')) document.getElementById('print-study-shortcut-lbl').innerText = isAr ? 'طباعة شرح دروس كاوست والأمثلة المحلولة (A4)' : 'Print KAUST Study Lessons & Solved Examples (A4)';
-      if (document.getElementById('print-mocks-shortcut-lbl')) document.getElementById('print-mocks-shortcut-lbl').innerText = isAr ? 'طباعة اختبارات كاوست الكاملة وأوراق التظليل OMR (A4)' : 'Print KAUST Full Mock Exams & OMR Sheets (A4)';
-      if (document.getElementById('btn-print-text')) document.getElementById('btn-print-text').innerText = t.printBtnText;
-      if (document.getElementById('print-modal-title')) document.getElementById('print-modal-title').innerText = t.printModalTitle;
-      if (document.getElementById('print-modal-desc')) document.getElementById('print-modal-desc').innerText = t.printModalDesc;
+      // Navigation & Print Translations
+      const setTxt = (id, val) => { const el = document.getElementById(id); if (el) el.innerText = val; };
+      setTxt('nav-tracks-text', isAr ? 'المسارات' : 'Tracks');
+      setTxt('nav-practice-text', isAr ? 'بنك الأسئلة' : 'Practice');
+      setTxt('nav-study-text', isAr ? 'الدروس' : 'Lessons');
+      setTxt('nav-mocks-text', isAr ? 'الاختبارات' : 'Mock Exams');
+      setTxt('nav-insights-text', isAr ? 'نظرة عامة' : 'Overview');
+      setTxt('hdr-print-label', isAr ? 'طباعة A4' : 'Print A4');
+      setTxt('mob-tracks-lbl', isAr ? 'المسارات' : 'Tracks');
+      setTxt('mobile-jump-text', isAr ? 'التدريب' : 'Practice');
+      setTxt('mob-lessons-lbl', isAr ? 'الدروس' : 'Lessons');
+      setTxt('mob-mocks-lbl', isAr ? 'الاختبارات' : 'Mocks');
+      setTxt('mob-insights-lbl', isAr ? 'إحصاءات' : 'Overview');
+
+      setTxt('print-include-solutions-lbl', isAr ? 'تضمين خطوات الحل التفصيلية في مفتاح الإجابات' : 'Include step-by-step worked solutions in Answer Key');
+      setTxt('print-edugates-note', isAr ? 'حجم ورق A4 افتراضي · شعار مدرسة بوابة المعرفة العالمية على كل صفحة' : 'A4 Paper Default · Edugates International School logo on all printed pages');
+      setTxt('print-study-shortcut-lbl', isAr ? 'طباعة الدروس المشروحة والأمثلة المحلولة (A4)' : 'Print Study Guides & Solved Examples (A4)');
+      setTxt('print-mocks-shortcut-lbl', isAr ? 'طباعة الاختبارات الكاملة وأوراق التظليل OMR (A4)' : 'Print Full Mock Exams & OMR Sheets (A4)');
+      setTxt('btn-print-text', t.printBtnText);
+      setTxt('print-modal-title', t.printModalTitle);
+      setTxt('print-modal-desc', t.printModalDesc);
       if (document.getElementById('print-modal-lbl')) document.getElementById('print-modal-lbl').innerHTML = `${t.printModalLbl} (Max <span id="print-max-q">0</span>)`;
-      if (document.getElementById('print-btn-cancel')) document.getElementById('print-btn-cancel').innerText = t.printBtnCancel;
-      if (document.getElementById('print-btn-confirm')) document.getElementById('print-btn-confirm').innerText = t.printBtnConfirm;
+      setTxt('print-btn-cancel', t.printBtnCancel);
+      setTxt('print-btn-confirm', t.printBtnConfirm);
 
       renderGradeFilters();
       renderTracksGrid();
@@ -1289,9 +1175,18 @@
       renderCharts();
     }
 
+    const TRACK_RESOURCE_COUNTS = {
+      kangaroo: { lessons: 36, mocks: 24 },
+      nafes: { lessons: 18, mocks: 12 },
+      kaust: { lessons: 18, mocks: 15 },
+      nsmo: { lessons: 18, mocks: 12 },
+      olympiad: { lessons: 18, mocks: 12 }
+    };
+
     function renderTracksGrid() {
       const grid = document.getElementById('tracks-cards-grid');
       grid.innerHTML = '';
+      const isAr = currentLang === 'ar';
 
       appData.tracks.forEach((tr) => {
         let isApplicable = true;
@@ -1299,41 +1194,45 @@
           isApplicable = false;
         }
 
-        const name = currentLang === 'ar' ? tr.name_ar : tr.name_en;
-        const levels = currentLang === 'ar' ? tr.levels_ar : tr.levels_en;
-        const badge = currentLang === 'ar' ? tr.badge_ar : tr.badge_en;
-        const format = currentLang === 'ar' ? tr.format_ar : tr.format_en;
-        const topics = currentLang === 'ar' ? tr.topics_ar : tr.topics_en;
-        const idLabel = currentLang === 'ar' ? 'المعرف:' : 'ID:';
-        
-        const opStyle = isApplicable ? '' : 'opacity-40 grayscale pointer-events-none filter';
-        const naBadge = isApplicable ? '' : `<div class="absolute inset-0 bg-slate-100/50 dark:bg-slate-900/50 flex items-center justify-center rounded-3xl z-10 font-bold text-slate-700 dark:text-slate-200 text-lg backdrop-blur-[1px] shadow-inner">${currentLang === 'ar' ? 'غير متاح لهذا الصف' : 'N/A for this Grade'}</div>`;
+        const name = isAr ? tr.name_ar : tr.name_en;
+        const levels = isAr ? tr.levels_ar : tr.levels_en;
+        const badge = isAr ? tr.badge_ar : tr.badge_en;
+        const format = isAr ? tr.format_ar : tr.format_en;
+        const topics = isAr ? tr.topics_ar : tr.topics_en;
+        const qCount = appData.questions.filter(q => q.track === tr.id).length;
+        const meta = TRACK_RESOURCE_COUNTS[tr.id];
+
+        const opStyle = isApplicable ? '' : 'sm-track-disabled';
+        const naBadge = isApplicable ? '' : `<div class="sm-track-na">${isAr ? 'غير مخصص لهذا الصف' : 'Not offered for this grade'}</div>`;
+
+        const actionsHtml = meta
+          ? `<div class="sm-track-actions">
+               <button type="button" onclick="event.stopPropagation();chooseTrack('${tr.id}')" class="sm-track-btn sm-track-btn-primary">${isAr ? 'تدريب' : 'Practice'}</button>
+               <button type="button" onclick="event.stopPropagation();if(window.setStudyCompetition)setStudyCompetition('${tr.id}');if(window.jumpToKaustStudy)jumpToKaustStudy('${tr.id}');" class="sm-track-btn">${isAr ? `الدروس (${meta.lessons})` : `Lessons (${meta.lessons})`}</button>
+               <button type="button" onclick="event.stopPropagation();if(window.setMockCompetition)setMockCompetition('${tr.id}');if(window.jumpToKaustMocks)jumpToKaustMocks();" class="sm-track-btn">${isAr ? `اختبارات (${meta.mocks})` : `Mocks (${meta.mocks})`}</button>
+             </div>`
+          : `<div class="sm-track-actions">
+               <button type="button" onclick="event.stopPropagation();chooseTrack('${tr.id}')" class="sm-track-btn sm-track-btn-primary flex-1">${isAr ? 'فتح بنك الأسئلة' : 'Open Practice Bank'}</button>
+             </div>`;
 
         const cardHtml = `
-          <div role="button" tabindex="${isApplicable ? 0 : -1}" aria-disabled="${!isApplicable}" onclick="chooseTrack('${tr.id}')" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();chooseTrack('${tr.id}')}" class="relative bg-white/90 dark:bg-slate-800/90 backdrop-blur-sm rounded-3xl p-6 border border-slate-200/60 dark:border-slate-700/60 ${tr.bg} flex flex-col justify-between space-y-4 shadow-lg shadow-slate-200/50 dark:shadow-slate-900/50 hover:shadow-xl hover:-translate-y-2 transition-all duration-300 group cursor-pointer ${opStyle}">
+          <div role="button" tabindex="${isApplicable ? 0 : -1}" aria-disabled="${!isApplicable}" data-track="${tr.id}" onclick="chooseTrack('${tr.id}')" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();chooseTrack('${tr.id}')}" class="sm-track-card ${opStyle}">
             ${naBadge}
-            <div>
-              <div class="flex items-center justify-between mb-3">
-                <span class="text-xs font-bold px-2.5 py-1 rounded-full bg-white dark:bg-slate-700 text-slate-800 dark:text-slate-100 shadow-xs border border-slate-200 dark:border-slate-600">
-                  ${badge}
-                </span>
-                <span class="text-xs font-mono text-slate-400 dark:text-slate-500">${appData.questions.filter(q=>q.track===tr.id).length} ${currentLang === 'ar' ? 'سؤال' : 'questions'}</span>
+            <div class="space-y-2.5">
+              <div class="flex items-center justify-between gap-2">
+                <span class="sm-track-badge">${badge}</span>
+                <span class="sm-track-count">${qCount ? qCount.toLocaleString() : '—'} ${isAr ? 'سؤال' : 'Qs'}</span>
               </div>
-              <h3 class="text-xl font-display font-extrabold text-slate-900 dark:text-white group-hover:text-brand-600 dark:group-hover:text-brand-400 transition-colors">${name}</h3>
-              <p class="text-xs ${tr.accent} font-bold mt-1">${levels}</p>
-              <p class="text-xs text-slate-500 dark:text-slate-400 mt-2"><strong>${currentLang === 'ar' ? 'النمط:' : 'Format:'}</strong> ${format}</p>
+              <h3 class="sm-track-title">${name}</h3>
+              <p class="sm-track-levels">${levels}</p>
+              <p class="sm-track-format">${format}</p>
             </div>
 
-            <div class="pt-3 border-t border-slate-200/60 dark:border-slate-700/60">
-              <div class="text-xs font-bold text-slate-700 dark:text-slate-300 mb-1.5">${currentLang === 'ar' ? 'المواضيع الرئيسية:' : 'Key Topics:'}</div>
-              <div class="flex flex-wrap gap-1">
-                ${topics.map(tp => `<span class="text-[11px] bg-white/80 dark:bg-slate-700/80 px-2 py-0.5 rounded text-slate-600 dark:text-slate-300 border border-slate-200 dark:border-slate-600">${tp}</span>`).join('')}
+            <div class="pt-3 mt-3 border-t border-slate-200/80 dark:border-slate-700/80 space-y-3">
+              <div class="flex flex-wrap gap-1.5">
+                ${topics.map(tp => `<span class="sm-topic-tag">${tp}</span>`).join('')}
               </div>
-              ${tr.id === 'kangaroo' ? `<button type="button" onclick="event.stopPropagation();if(window.setStudyCompetition)setStudyCompetition('kangaroo');if(window.jumpToKaustStudy)jumpToKaustStudy();" class="mt-3 w-full py-2 px-3 rounded-xl bg-teal-700 hover:bg-teal-600 text-white text-xs font-extrabold flex items-center justify-center gap-1.5 shadow-sm transition-colors">🦘 ${currentLang === 'ar' ? '٣٦ درساً لكانجارو · ٣٦٠ مثالاً محلولاً · ٢٤ اختباراً تجريبياً · A4' : '36 Kangaroo Lessons · 360 Solved Examples · 24 Mocks · A4'}</button>` : ''}
-              ${tr.id === 'nafes' ? `<button type="button" onclick="event.stopPropagation();if(window.setStudyCompetition)setStudyCompetition('nafes');if(window.jumpToKaustStudy)jumpToKaustStudy();" class="mt-3 w-full py-2 px-3 rounded-xl bg-teal-700 hover:bg-teal-600 text-white text-xs font-extrabold flex items-center justify-center gap-1.5 shadow-sm transition-colors">🇸🇦 ${currentLang === 'ar' ? '١٨ درساً لنافس · ١٨٠ مثالاً محلولاً · ١٢ اختباراً تجريبياً · A4' : '18 Nafes Lessons · 180 Solved Examples · 12 Mocks · A4'}</button>` : ''}
-              ${tr.id === 'kaust' ? `<button type="button" onclick="event.stopPropagation();if(window.setStudyCompetition)setStudyCompetition('kaust');if(window.jumpToKaustStudy)jumpToKaustStudy();" class="mt-3 w-full py-2 px-3 rounded-xl bg-teal-700 hover:bg-teal-600 text-white text-xs font-extrabold flex items-center justify-center gap-1.5 shadow-sm transition-colors">📖 ${currentLang === 'ar' ? '١٨ درساً مصوّراً · ١٨٥ مثالاً محلولاً · ١٠٨ تدريبات وطباعة A4' : '18 Study Lessons · 185 Solved Examples · 108 Drills · A4 Print'}</button>` : ''}
-              ${tr.id === 'nsmo' ? `<button type="button" onclick="event.stopPropagation();if(window.setStudyCompetition)setStudyCompetition('nsmo');if(window.jumpToKaustStudy)jumpToKaustStudy();" class="mt-3 w-full py-2 px-3 rounded-xl bg-teal-700 hover:bg-teal-600 text-white text-xs font-extrabold flex items-center justify-center gap-1.5 shadow-sm transition-colors">📖 ${currentLang === 'ar' ? '١٨ درساً لموهبة · ١٨٠ مثالاً محلولاً · ١٢ اختباراً تجريبياً · A4' : '18 Mawhiba Lessons · 180 Solved Examples · 12 Mocks · A4'}</button>` : ''}
-              ${tr.id === 'olympiad' ? `<button type="button" onclick="event.stopPropagation();if(window.setStudyCompetition)setStudyCompetition('olympiad');if(window.jumpToKaustStudy)jumpToKaustStudy();" class="mt-3 w-full py-2 px-3 rounded-xl bg-teal-700 hover:bg-teal-600 text-white text-xs font-extrabold flex items-center justify-center gap-1.5 shadow-sm transition-colors">🏆 ${currentLang === 'ar' ? '١٨ درساً للأولمبياد · ١٨٠ مثالاً محلولاً · ١٢ اختباراً تجريبياً · A4' : '18 Olympiad Lessons · 180 Solved Examples · 12 Mocks · A4'}</button>` : ''}
+              ${actionsHtml}
             </div>
           </div>
         `;
@@ -1344,11 +1243,12 @@
     function renderQuestionCard() {
       const container = document.getElementById('question-card-container');
       const qTrackerText = document.getElementById('question-tracker-text');
+      const isAr = currentLang === 'ar';
 
       if (!currentFilteredQuestions || currentFilteredQuestions.length === 0) {
         container.innerHTML = `
-          <div class="p-8 text-center bg-slate-800 rounded-2xl border border-slate-700">
-            <p class="text-amber-400 font-bold">${currentLang === 'ar' ? 'لا توجد أسئلة تطابق الفلتر المحدد.' : 'No questions match the selected filter.'}</p>
+          <div class="sm-empty-state">
+            <p>${isAr ? 'لا توجد أسئلة تطابق الفلتر المحدد.' : 'No questions match the selected filter.'}</p>
           </div>
         `;
         qTrackerText.innerText = "0 / 0";
@@ -1362,83 +1262,76 @@
       const qContent = q.content[currentLang] || q.content['en'];
       const t = dict[currentLang];
 
-      qTrackerText.innerText = `${currentLang === 'ar' ? 'سؤال' : 'Question'} ${currentQuestionIdx + 1} ${currentLang === 'ar' ? 'من' : 'of'} ${currentFilteredQuestions.length}`;
+      qTrackerText.innerText = `${isAr ? 'سؤال' : 'Question'} ${currentQuestionIdx + 1} ${isAr ? 'من' : 'of'} ${currentFilteredQuestions.length.toLocaleString()}`;
       document.getElementById('btn-prev-q').disabled = (currentQuestionIdx === 0);
       document.getElementById('btn-next-q').disabled = (currentQuestionIdx === currentFilteredQuestions.length - 1);
 
       let optionsMarkup = '';
       if (q.type === 'MCQ' && qContent.options) {
         optionsMarkup = `
-          <div class="space-y-3 mt-6">
+          <div class="sm-opts-grid space-y-2.5">
             ${qContent.options.map((opt, idx) => {
-              let btnStyle = "bg-slate-800/80 hover:bg-slate-700 text-slate-300 border-slate-700";
-              
+              let stateCls = 'sm-opt-default';
+              let statusMark = '';
               if (isAnswerSubmitted) {
                 const correctIdx = parseInt(q.correct_index, 10);
                 if (idx === correctIdx) {
-                  btnStyle = "bg-emerald-500/20 border-emerald-500 text-emerald-400";
+                  stateCls = 'sm-opt-correct';
+                  statusMark = '<span class="sm-opt-mark" aria-hidden="true">✓</span>';
                 } else if (idx === selectedOptionIdx) {
-                  btnStyle = "bg-rose-500/20 border-rose-500 text-rose-400";
+                  stateCls = 'sm-opt-wrong';
+                  statusMark = '<span class="sm-opt-mark" aria-hidden="true">✗</span>';
                 } else {
-                  btnStyle = "bg-slate-900/40 border-slate-800 text-slate-500 opacity-50";
+                  stateCls = 'sm-opt-muted';
                 }
               } else if (idx === selectedOptionIdx) {
-                btnStyle = "bg-amber-500/20 border-amber-500 text-amber-400";
+                stateCls = 'sm-opt-selected';
               }
 
               return `
-                <button onclick="selectOption(${idx})" ${isAnswerSubmitted ? 'disabled' : ''} class="p-3 sm:p-4 rounded-xl border text-start sm:text-start transition-all flex items-center justify-between gap-3 ${btnStyle}">
-                  <span class="text-sm font-medium">${opt}</span>
-                  <span class="w-6 h-6 rounded-full bg-slate-900/60 border border-slate-700 flex items-center justify-center text-xs font-mono shrink-0">
-                    ${String.fromCharCode(65 + idx)}
-                  </span>
+                <button type="button" onclick="selectOption(${idx})" ${isAnswerSubmitted ? 'disabled' : ''} class="sm-opt-btn ${stateCls}">
+                  <span class="sm-opt-badge">${String.fromCharCode(65 + idx)}</span>
+                  <span class="sm-opt-txt math-font">${opt}</span>
+                  ${statusMark}
                 </button>
               `;
             }).join('')}
           </div>
         `;
       } else {
-        optionsMarkup = `<div class="mt-6 space-y-3">
-          <label for="frq-answer-input" class="block text-sm text-slate-300">${currentLang === 'ar' ? 'اكتب خطوات حلك، ثم قارن بالحل المقترح.' : 'Write your reasoning, then compare it with the worked solution.'}</label>
-          <textarea id="frq-answer-input" rows="5" oninput="selectedOptionIdx=this.value" class="w-full bg-slate-900 border border-slate-600 rounded-xl p-4 text-white" ${isAnswerSubmitted ? 'readonly' : ''}></textarea>
+        optionsMarkup = `<div class="mt-5 space-y-2.5">
+          <label for="frq-answer-input" class="block text-sm font-medium text-slate-600 dark:text-slate-300">${isAr ? 'اكتب خطوات حلك، ثم قارن بالحل المقترح.' : 'Write your reasoning, then compare it with the worked solution.'}</label>
+          <textarea id="frq-answer-input" rows="5" oninput="selectedOptionIdx=this.value" class="sm-frq-input" ${isAnswerSubmitted ? 'readonly' : ''}></textarea>
         </div>`;
       }
 
-      const diagramMarkup = qContent.diagram || q.diagram || '';
+      const rawDiagram = (qContent.diagram || q.diagram || '').trim();
+      const diagramMarkup = rawDiagram
+        ? (rawDiagram.includes('eg-diagram') ? rawDiagram : `<div class="eg-diagram sm-quiz-diagram">${rawDiagram}</div>`)
+        : '';
 
-      let gradeLabel = currentLang === 'ar' ? 'الصفوف غير محددة' : 'Grades Not Specified';
+      let gradeLabel = isAr ? 'الصفوف غير محددة' : 'Grades Not Specified';
       const extractedGrades = extractGradesFromLevelString(q.level);
       if (extractedGrades.length === 1) {
-        gradeLabel = (currentLang === 'ar' ? 'الصف ' : 'Grade ') + extractedGrades[0];
+        gradeLabel = (isAr ? 'الصف ' : 'Grade ') + extractedGrades[0];
       } else if (extractedGrades.length > 1) {
-        gradeLabel = (currentLang === 'ar' ? 'الصفوف ' : 'Grades ') + extractedGrades[0] + '-' + extractedGrades[extractedGrades.length - 1];
+        gradeLabel = (isAr ? 'الصفوف ' : 'Grades ') + extractedGrades[0] + '–' + extractedGrades[extractedGrades.length - 1];
       }
 
       container.innerHTML = `
-        <div class="bg-slate-800/60 p-4 sm:p-6 md:p-8 rounded-2xl border border-slate-700 space-y-4 sm:space-y-6">
-          
-          <div class="flex flex-wrap items-center justify-between gap-3 text-[10px] sm:text-xs">
-            <div class="flex flex-wrap items-center gap-2">
-              <div class="flex items-center gap-1 bg-amber-500 text-slate-900 px-3 py-1 rounded-full font-extrabold uppercase shadow-sm">
-                <svg class="w-3 h-3" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
-                ${q.track.toUpperCase()}
-              </div>
-              <div class="flex items-center gap-1 bg-emerald-500/20 border border-emerald-500/50 text-emerald-400 px-3 py-1 rounded-full font-bold shadow-sm">
-                <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 14l9-5-9-5-9 5 9 5z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 14l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14z"></path></svg>
-                ${gradeLabel}
-              </div>
-              <span class="px-3 py-1 rounded-full bg-slate-700 text-slate-300">
-                ${q.level.replace('Phase','Training level / مستوى تدريب')}
-              </span>
-              <span class="px-3 py-1 rounded-full bg-slate-700/60 text-slate-400 border border-slate-600/50">
-                ${q.topic}
-              </span>
-              ${q.kang_points ? `<span class="px-3 py-1 rounded-full bg-rose-500/20 text-rose-300 border border-rose-500/40 font-bold">${q.kang_points} ${currentLang === 'ar' ? 'نقاط' : 'pts'}</span>` : ''}
+        <div class="sm-q-card">
+          <div class="sm-q-meta">
+            <div class="flex flex-wrap items-center gap-1.5">
+              <span class="sm-meta-pill sm-meta-track">${q.track.toUpperCase()}</span>
+              <span class="sm-meta-pill sm-meta-grade">${gradeLabel}</span>
+              <span class="sm-meta-pill">${q.level.replace('Phase','Training level / مستوى تدريب')}</span>
+              <span class="sm-meta-pill">${q.topic}</span>
+              ${q.kang_points ? `<span class="sm-meta-pill sm-meta-pts">${q.kang_points} ${isAr ? 'نقاط' : 'pts'}</span>` : ''}
             </div>
-            <span class="font-mono text-slate-400">${currentLang === 'ar' ? 'المعرف:' : 'ID:'} ${q.id}</span>
+            <span class="sm-q-id">${q.id}</span>
           </div>
 
-          <div class="text-base sm:text-lg md:text-xl font-bold text-white leading-relaxed font-sans">
+          <div class="sm-q-stem math-font">
             ${qContent.question}
           </div>
 
@@ -1446,13 +1339,13 @@
           ${optionsMarkup}
 
           <!-- Action Bar -->
-          <div class="pt-6 border-t border-slate-700 flex flex-wrap gap-4 items-center justify-between">
-            <button onclick="toggleHint()" class="text-slate-400 hover:text-amber-400 text-sm font-bold transition-colors">
+          <div class="sm-q-actions border-t border-slate-200 dark:border-slate-700">
+            <button type="button" onclick="toggleHint()" class="sm-hint-btn">
               ${t.btnHint}
             </button>
-            
+
             ${!isAnswerSubmitted ? `
-              <button onclick="submitAnswer()" class="bg-amber-500 hover:bg-amber-600 text-slate-900 font-bold px-6 py-2.5 rounded-xl transition-all shadow-lg shadow-amber-500/20">
+              <button type="button" onclick="submitAnswer()" class="sm-btn sm-btn-primary">
                 ${t.btnSubmit}
               </button>
             ` : ''}
@@ -1460,24 +1353,23 @@
 
           <!-- Hint Area -->
           ${showHint ? `
-            <div class="mt-4 p-4 rounded-xl bg-amber-500/10 border border-amber-500/30 text-amber-200/90 text-sm leading-relaxed">
-              💡 <strong>${currentLang === 'ar' ? 'التلميح:' : 'Hint:'}</strong> ${qContent.hint}
+            <div class="sm-hint-box math-font">
+              <strong>${isAr ? 'تلميح:' : 'Hint:'}</strong> ${qContent.hint}
             </div>
           ` : ''}
 
           <!-- Solution Area (Shown after submit) -->
           ${isAnswerSubmitted ? `
-            <div class="p-5 rounded-xl ${q.type !== 'MCQ' || checkIsCorrect() ? 'bg-emerald-500/10 border border-emerald-500/40 text-emerald-200' : 'bg-rose-500/10 border border-rose-500/40 text-rose-200'} space-y-3 animate-fade-in">
-              <div class="font-bold text-sm sm:text-base">
-                ${q.type !== 'MCQ' ? (currentLang === 'ar' ? 'قارن طريقة حلك — التقييم ذاتي' : 'Compare your reasoning — self-assessment') : (checkIsCorrect() ? t.txtCorrect : t.txtIncorrect)}
+            <div class="sm-sol-box ${q.type !== 'MCQ' || checkIsCorrect() ? 'sm-sol-ok' : 'sm-sol-wrong'}">
+              <div class="sm-sol-status">
+                ${q.type !== 'MCQ' ? (isAr ? 'قارن طريقة حلك — التقييم ذاتي' : 'Compare your reasoning — self-assessment') : (checkIsCorrect() ? t.txtCorrect : t.txtIncorrect)}
               </div>
-              <div class="text-xs sm:text-sm leading-relaxed text-slate-300 pt-2 border-t border-slate-700/50">
-                <strong class="text-amber-400 block mb-1">${currentLang === 'ar' ? 'الخطوات والشرح التفصيلي:' : 'Step-by-step Solution:'}</strong>
+              <div class="sm-sol-body math-font">
+                <strong class="block mb-1.5">${isAr ? 'خطوات الحل التفصيلية:' : 'Step-by-Step Solution:'}</strong>
                 ${qContent.explanation}
               </div>
             </div>
           ` : ''}
-
         </div>
       `;
 

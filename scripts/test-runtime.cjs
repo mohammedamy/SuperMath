@@ -67,11 +67,19 @@ const run=s=>vm.runInContext(s,context);
   assert(run(`currentFilteredQuestions.every(q=>q.level===${JSON.stringify(expectedLevel)})`));
  }
  context.setGradeFilter('all');
- // Verify KAUST geometry SVG diagram & 5-option (E) rendering in quiz card.
+ // Verify KAUST geometry SVG diagram, crisp .eg-diagram framing & 5-option (E) rendering in quiz card.
  elements.get('quiz-topic-select').value='Geometry';context.filterQuestions();
  assert.equal(run('currentFilteredQuestions.length'),490);
  assert(elements.get('question-card-container').innerHTML.includes('<svg'));
+ assert(elements.get('question-card-container').innerHTML.includes('eg-diagram'));
  assert(elements.get('question-card-container').innerHTML.includes('>E<')||elements.get('question-card-container').innerHTML.includes('E\n'));
+ // Verify organized 5-view workspace navigation (Tracks, Practice, Lessons, Mocks, Insights) & mobile bottom nav sync
+ for(const [v,secId] of [['tracks','view-tracks'],['practice','practice'],['lessons','study-lessons'],['mocks','kaust-mock-exams'],['insights','view-insights']]){
+  context.setAppView(v,true);
+  assert(!elements.get(secId).classList.contains('sm-view-hidden'),secId+' must be visible');
+  assert(elements.get('tab-btn-'+v).classList.contains('sm-nav-tab-active'));
+  assert(elements.get('mob-tab-'+v).classList.contains('sm-mob-item-active'));
+ }
  elements.get('quiz-topic-select').value='all';context.filterQuestions();
  elements.get('quiz-track-select').value='nafes';context.filterQuestions();
  assert.equal(run('currentFilteredQuestions.length'),1080);
@@ -694,6 +702,7 @@ const run=s=>vm.runInContext(s,context);
 
   const css=fs.readFileSync(path.join(root,'assets/refinement.css'),'utf8');
   assert(css.includes('size: A4 portrait')&&css.includes('.eg-omr-sheet')&&css.includes('.eg-scratch-box'));
+  assert(css.includes('mjx-mfrac [size="s"]')&&css.includes('.sm-mobile-nav')&&css.includes('paint-order: stroke fill'));
   const js=fs.readFileSync(path.join(root,'assets/kaust-study.js'),'utf8');
   assert(js.includes('LOGO.jpg')&&js.includes('Edugates International School')&&js.includes('buildEdugatesOmrSheetHtml'));
   assert(fs.existsSync(path.join(root,'LOGO.jpg')));

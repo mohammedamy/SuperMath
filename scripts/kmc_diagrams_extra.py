@@ -126,8 +126,11 @@ def svg_digital_clock(time_str: str = "12:21", sub_lbl: str = "24-hour display")
 
 # 6. Analog Clock Face with Hands at hour h (0..11) and minute m (0..59)
 def svg_analog_clock(h: int = 4, m: int = 30, angle_lbl: str = "?") -> str:
-    cx, cy, r = 150, 95, 72
-    parts = [f'<circle cx="{cx}" cy="{cy}" r="{r}" fill="#ffffff" stroke="{STROKE}" stroke-width="2.2"/>']
+    r = 70
+    w = max(310, int(len(str(angle_lbl)) * 7.8 + 88) if angle_lbl else 310)
+    cx, cy = w / 2, 86
+    h_svg = 198 if angle_lbl else 174
+    parts = [f'<circle cx="{cx:.1f}" cy="{cy}" r="{r}" fill="#ffffff" stroke="{STROKE}" stroke-width="2.2"/>']
     for k in range(1, 13):
         ang = math.radians(k * 30 - 90)
         tx, ty = cx + (r - 15) * math.cos(ang), cy + (r - 15) * math.sin(ang) + 4
@@ -138,12 +141,12 @@ def svg_analog_clock(h: int = 4, m: int = 30, angle_lbl: str = "?") -> str:
     ang_m = ((m * 6) - 90) % 360
     ang_h = (((h % 12) * 30 + m * 0.5) - 90) % 360
     rm, rh = math.radians(ang_m), math.radians(ang_h)
-    parts.append(f'<line x1="{cx}" y1="{cy}" x2="{cx + 54*math.cos(rm):.1f}" y2="{cy + 54*math.sin(rm):.1f}" stroke="{BLUE}" stroke-width="2.6" stroke-linecap="round"/>')
-    parts.append(f'<line x1="{cx}" y1="{cy}" x2="{cx + 38*math.cos(rh):.1f}" y2="{cy + 38*math.sin(rh):.1f}" stroke="{RED}" stroke-width="3.2" stroke-linecap="round"/>')
-    parts.append(f'<circle cx="{cx}" cy="{cy}" r="3.8" fill="{DARK}"/>')
+    parts.append(f'<line x1="{cx:.1f}" y1="{cy}" x2="{cx + 52*math.cos(rm):.1f}" y2="{cy + 52*math.sin(rm):.1f}" stroke="{BLUE}" stroke-width="2.6" stroke-linecap="round"/>')
+    parts.append(f'<line x1="{cx:.1f}" y1="{cy}" x2="{cx + 36*math.cos(rh):.1f}" y2="{cy + 36*math.sin(rh):.1f}" stroke="{RED}" stroke-width="3.2" stroke-linecap="round"/>')
+    parts.append(f'<circle cx="{cx:.1f}" cy="{cy}" r="3.8" fill="{DARK}"/>')
     if angle_lbl:
-        parts.append(_nlabel(258, 98, f"θ = {angle_lbl}", size=13, color=ORANGE))
-    return wrap_svg("".join(parts), w=310, h=190, disp_w=360)
+        parts.append(_nlabel(cx, 182, f"θ = {angle_lbl}", size=12.5, color=ORANGE))
+    return wrap_svg("".join(parts), w=int(w), h=h_svg, disp_w=min(400, int(w) + 40))
 
 
 # 7. Dot Growth Pattern (L-shape or Cross for Step 1, 2, 3)
@@ -387,8 +390,8 @@ def svg_factor_tree(root_lbl: str, left_lbl: str, right_lbl: str, rl_lbl: str, r
 # 18. Binary Light-Bulb Panel (bits e.g. [1,0,1,1,0])
 def svg_binary_bulbs(bits=(1, 0, 1, 1, 0), weights=(16, 8, 4, 2, 1), lang: str = "en") -> str:
     n = len(bits)
-    gap = min(56, max(44, 260 // max(n, 1)))
-    w_box = max(272, n * gap + 36)
+    gap = min(58, max(48, 270 // max(n, 1)))
+    w_box = max(280, n * gap + 40)
     w_svg = w_box + 48
     x0 = w_svg / 2 - (n - 1) * gap / 2
     on_t = "مضاء" if lang == "ar" else "ON"
@@ -398,9 +401,9 @@ def svg_binary_bulbs(bits=(1, 0, 1, 1, 0), weights=(16, 8, 4, 2, 1), lang: str =
         cx = x0 + i * gap
         fc = "#fde047" if b else "#e2e8f0"
         sc = ORANGE if b else MUTED
-        parts.append(f'<circle cx="{cx:.1f}" cy="74" r="18" fill="{fc}" stroke="{sc}" stroke-width="2"/>')
-        parts.append(_nlabel(cx, 78, on_t if b else off_t, size=9, color=DARK))
-        parts.append(_nlabel(cx, 124, str(w), size=13, color=STROKE))
+        parts.append(f'<circle cx="{cx:.1f}" cy="74" r="20" fill="{fc}" stroke="{sc}" stroke-width="2"/>')
+        parts.append(_nlabel(cx, 78, on_t if b else off_t, size=10.5, color=DARK))
+        parts.append(_nlabel(cx, 126, str(w), size=13, color=STROKE))
     return wrap_svg("".join(parts), w=int(w_svg), h=176, disp_w=min(420, int(w_svg) + 50))
 
 
@@ -688,9 +691,10 @@ def svg_tape_bar_split(segments, total_lbl: str = "", sub_lbl: str = "") -> str:
 def svg_cycle_ring(items, top_lbl: str = "", center_lbl: str = "") -> str:
     n = max(2, len(items))
     max_ch = max(len(str(x)) for x in items)
-    nr = max(16, min(24, int(max_ch * 4.2 + 10)))
-    ring_r = max(54, int(n * (nr + 6) / math.pi))
-    ring_r = min(74, ring_r)
+    nr = max(17, min(25, int(max_ch * 4.2 + 11)))
+    min_center_r = int(len(str(center_lbl)) * 3.4 + nr + 14) if center_lbl else 54
+    ring_r = max(54, int(n * (nr + 6) / math.pi), min_center_r)
+    ring_r = min(98, ring_r)
     w = max(310, int(2 * (ring_r + nr) + 76), int(len(str(top_lbl)) * 7.6 + 48))
     cy = (36 if top_lbl else 16) + ring_r + nr + 6
     h = cy + ring_r + nr + 18
@@ -718,11 +722,11 @@ def svg_cycle_ring(items, top_lbl: str = "", center_lbl: str = "") -> str:
     for i, (x, y, _) in enumerate(pts):
         fc = SHADE if i == 0 else WATER
         parts.append(f'<circle cx="{x:.1f}" cy="{y:.1f}" r="{nr}" fill="{fc}" stroke="{STROKE}" stroke-width="1.8"/>')
-        fs = 12 if len(str(items[i])) <= 3 else 10
+        fs = 12 if len(str(items[i])) <= 3 else 10.5
         parts.append(_nlabel(x, y + 4, str(items[i]), size=fs))
     if center_lbl:
         parts.append(_nlabel(cx, cy + 4, center_lbl, size=11, color=STROKE))
-    return wrap_svg("".join(parts), w=int(w), h=int(h), disp_w=min(410, int(w) + 30))
+    return wrap_svg("".join(parts), w=int(w), h=int(h), disp_w=min(420, int(w) + 30))
 
 
 # 31. m x n Grid Dimensions (Counting Sub-Rectangles, Adjacent Pairs, Matchstick Grids)

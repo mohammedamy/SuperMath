@@ -180,3 +180,4 @@ def localize_svg_to_ar(svg: str) -> str:
     out = _TAG_RE.sub(_repl, svg)
     ET.fromstring(out)
     return out
+
