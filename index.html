@@ -19,7 +19,7 @@
   <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700&family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800&family=IBM+Plex+Mono:wght@500;600&family=Outfit:wght@500;600;700;800&family=Source+Sans+3:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
 
   <!-- MathJax -->
   <script>
@@ -59,8 +59,9 @@
             }
           },
           fontFamily: {
-            sans: ['Inter', 'Cairo', 'system-ui', 'sans-serif'],
+            sans: ['"Source Sans 3"', 'Cairo', 'system-ui', 'sans-serif'],
             display: ['Outfit', 'Cairo', 'system-ui', 'sans-serif'],
+            mono: ['"IBM Plex Mono"', 'ui-monospace', 'SFMono-Regular', 'monospace'],
           }
         }
       }
@@ -84,7 +85,7 @@
     }
 
     .math-font {
-      font-family: 'Inter', 'Cairo', system-ui, -apple-system, sans-serif;
+      font-family: 'Source Sans 3', 'Cairo', system-ui, -apple-system, sans-serif;
     }
 
     .custom-scrollbar::-webkit-scrollbar {
@@ -132,7 +133,7 @@
     }
   </style>
 </head>
-<body class="min-h-screen flex flex-col font-sans antialiased selection:bg-amber-500 selection:text-white bg-slate-50 text-slate-900 dark:bg-slate-900 dark:text-slate-100 transition-colors duration-300">
+<body class="min-h-screen flex flex-col font-sans antialiased selection:bg-blue-100 selection:text-blue-900 dark:selection:bg-blue-500/30 dark:selection:text-white bg-slate-50 text-slate-900 dark:bg-slate-900 dark:text-slate-100 transition-colors duration-300">
   <script>
     // Initialize Dark Mode early to prevent flash
     if (localStorage.getItem('theme') === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
@@ -210,7 +211,9 @@
           </a>
 
           <button aria-label="Toggle dark mode / تبديل المظهر" id="theme-toggle-btn" onclick="toggleTheme()" class="sm-icon-btn sm-icon-only">
-            <span id="theme-icon" aria-hidden="true">🌙</span>
+            <svg class="w-4 h-4 dark:hidden" fill="none" stroke="currentColor" stroke-width="1.9" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M21 12.79A9 9 0 1111.21 3a7 7 0 009.79 9.79z"/></svg>
+            <svg class="w-4 h-4 hidden dark:block" fill="none" stroke="currentColor" stroke-width="1.9" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path stroke-linecap="round" stroke-linejoin="round" d="M12 2v2m0 16v2M4.93 4.93l1.41 1.41m11.32 11.32l1.41 1.41M2 12h2m16 0h2M4.93 19.07l1.41-1.41m11.32-11.32l1.41-1.41"/></svg>
+            <span id="theme-icon" class="sr-only" aria-hidden="true">🌙</span>
           </button>
 
           <button id="lang-toggle-btn" onclick="toggleLanguage()" class="sm-icon-btn sm-lang-btn">
@@ -230,7 +233,7 @@
       <section class="sm-intro-card">
         <div class="sm-intro-grid">
           <div class="space-y-2">
-            <div class="sm-kicker" id="badge-overview">PRACTISE · REASON · PROGRESS</div>
+            <div class="hidden" id="badge-overview" aria-hidden="true">PRACTISE · REASON · PROGRESS</div>
             <h2 class="sm-hero-title" id="hero-heading">Find your next mathematical challenge.</h2>
             <p class="sm-hero-desc" id="hero-desc">Choose your grade or competition below to practice problems, study illustrated lessons, or take a full timed mock exam.</p>
           </div>
@@ -460,8 +463,8 @@
     <div class="bg-slate-900 border border-slate-700 rounded-3xl p-5 sm:p-7 max-w-2xl w-full mx-auto shadow-2xl relative max-h-[calc(100dvh-24px)] max-h-[calc(100vh-24px)] flex flex-col overflow-y-auto custom-scrollbar">
       <div class="flex items-start justify-between gap-2 mb-1.5">
         <div class="space-y-1 min-w-0">
-          <h3 class="text-lg sm:text-xl font-bold text-white" id="print-modal-title">🖨️ Edugates A4 Worksheet &amp; Exam Customizer</h3>
-          <span id="print-pool-badge" class="inline-block text-[11px] font-bold px-2.5 py-1 rounded-full bg-emerald-950/80 text-emerald-300 border border-emerald-700/70">Matching Pool</span>
+          <h3 class="text-lg sm:text-xl font-bold text-white" id="print-modal-title">Edugates A4 Worksheet &amp; Exam Customizer</h3>
+          <span id="print-pool-badge" class="inline-block text-xs font-bold px-2.5 py-1 rounded-full bg-emerald-950/80 text-emerald-300 border border-emerald-700/70">Matching Pool</span>
         </div>
         <button type="button" onclick="closePrintModal()" aria-label="Close print dialog" class="w-9 h-9 rounded-xl border border-slate-700 bg-slate-800 hover:bg-slate-700 text-slate-300 hover:text-white flex items-center justify-center shrink-0 text-base font-bold">✕</button>
       </div>
@@ -520,11 +523,11 @@
             <div class="flex items-center justify-between gap-2 mb-1">
               <label class="text-xs font-semibold text-slate-300" for="print-q-count" id="print-modal-lbl">Questions (Max <span id="print-max-q">0</span>)</label>
               <div class="flex items-center gap-1">
-                <button type="button" onclick="setPrintQuickCount(10)" class="px-2 py-0.5 text-[11px] font-bold rounded-md bg-slate-800 hover:bg-slate-700 text-slate-200 border border-slate-700">10</button>
-                <button type="button" onclick="setPrintQuickCount(15)" class="px-2 py-0.5 text-[11px] font-bold rounded-md bg-slate-800 hover:bg-slate-700 text-slate-200 border border-slate-700">15</button>
-                <button type="button" onclick="setPrintQuickCount(20)" class="px-2 py-0.5 text-[11px] font-bold rounded-md bg-slate-800 hover:bg-slate-700 text-slate-200 border border-slate-700">20</button>
-                <button type="button" onclick="setPrintQuickCount(25)" class="px-2 py-0.5 text-[11px] font-bold rounded-md bg-slate-800 hover:bg-slate-700 text-slate-200 border border-slate-700">25</button>
-                <button type="button" onclick="setPrintQuickCount(30)" class="px-2 py-0.5 text-[11px] font-bold rounded-md bg-slate-800 hover:bg-slate-700 text-slate-200 border border-slate-700">30</button>
+                <button type="button" onclick="setPrintQuickCount(10)" class="px-2 py-0.5 text-xs font-bold rounded-md bg-slate-800 hover:bg-slate-700 text-slate-200 border border-slate-700">10</button>
+                <button type="button" onclick="setPrintQuickCount(15)" class="px-2 py-0.5 text-xs font-bold rounded-md bg-slate-800 hover:bg-slate-700 text-slate-200 border border-slate-700">15</button>
+                <button type="button" onclick="setPrintQuickCount(20)" class="px-2 py-0.5 text-xs font-bold rounded-md bg-slate-800 hover:bg-slate-700 text-slate-200 border border-slate-700">20</button>
+                <button type="button" onclick="setPrintQuickCount(25)" class="px-2 py-0.5 text-xs font-bold rounded-md bg-slate-800 hover:bg-slate-700 text-slate-200 border border-slate-700">25</button>
+                <button type="button" onclick="setPrintQuickCount(30)" class="px-2 py-0.5 text-xs font-bold rounded-md bg-slate-800 hover:bg-slate-700 text-slate-200 border border-slate-700">30</button>
               </div>
             </div>
             <input type="number" id="print-q-count" min="1" value="20" class="w-full bg-slate-800 border border-slate-700 text-white text-sm rounded-xl px-3.5 py-2.5 focus:ring-2 focus:ring-emerald-500 outline-none">
@@ -546,15 +549,15 @@
         <!-- Custom % Mix Inputs (shown when print-diff-mode === 'custom') -->
         <div id="print-custom-mix-box" style="display: none;" class="grid grid-cols-3 gap-2.5 bg-slate-800/70 border border-slate-700 rounded-xl p-2.5">
           <div>
-            <label class="block text-[11px] font-bold text-emerald-300 mb-1" for="print-pct-easy">Easy %</label>
+            <label class="block text-xs font-bold text-emerald-300 mb-1" for="print-pct-easy">Easy %</label>
             <input type="number" id="print-pct-easy" min="0" max="100" value="35" class="w-full bg-slate-900 border border-slate-700 text-white text-xs rounded-lg px-2.5 py-1.5">
           </div>
           <div>
-            <label class="block text-[11px] font-bold text-amber-300 mb-1" for="print-pct-med">Medium %</label>
+            <label class="block text-xs font-bold text-amber-300 mb-1" for="print-pct-med">Medium %</label>
             <input type="number" id="print-pct-med" min="0" max="100" value="40" class="w-full bg-slate-900 border border-slate-700 text-white text-xs rounded-lg px-2.5 py-1.5">
           </div>
           <div>
-            <label class="block text-[11px] font-bold text-rose-300 mb-1" for="print-pct-hard">Hard %</label>
+            <label class="block text-xs font-bold text-rose-300 mb-1" for="print-pct-hard">Hard %</label>
             <input type="number" id="print-pct-hard" min="0" max="100" value="25" class="w-full bg-slate-900 border border-slate-700 text-white text-xs rounded-lg px-2.5 py-1.5">
           </div>
         </div>
@@ -599,26 +602,24 @@
           </label>
         </div>
 
-        <div class="flex items-center gap-2 text-[11px] text-teal-300 bg-teal-950/60 border border-teal-800/70 rounded-xl px-3 py-2">
-          <span>🖨️</span>
+        <div class="flex items-center gap-2 text-xs text-teal-300 bg-teal-950/60 border border-teal-800/70 rounded-xl px-3 py-2">
+          <svg class="w-4 h-4 shrink-0" fill="none" stroke="currentColor" stroke-width="1.9" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M6 9V4h12v5M6 18H4a2 2 0 01-2-2v-5a2 2 0 012-2h16a2 2 0 012 2v5a2 2 0 01-2 2h-2M6 14h12v6H6v-6z"/></svg>
           <span id="print-edugates-note">Default A4 Paper · Edugates International School header &amp; logo repeat on every page</span>
         </div>
 
         <!-- Study & Mock Shortcuts -->
         <div class="grid grid-cols-1 sm:grid-cols-2 gap-2">
           <button type="button" onclick="closePrintModal();if(window.jumpToKaustStudy)jumpToKaustStudy();" class="py-2 px-3 rounded-xl bg-teal-900/70 hover:bg-teal-800/80 border border-teal-600/60 text-teal-100 text-xs font-bold flex items-center justify-center gap-1.5 transition-colors">
-            <span>📖</span>
             <span id="print-study-shortcut-lbl">Print KAUST &amp; NSMO Study Guides + Drills (A4)</span>
           </button>
           <button type="button" onclick="closePrintModal();if(window.jumpToKaustMocks)jumpToKaustMocks();" class="py-2 px-3 rounded-xl bg-amber-900/70 hover:bg-amber-800/80 border border-amber-500/60 text-amber-100 text-xs font-bold flex items-center justify-center gap-1.5 transition-colors">
-            <span>🫧</span>
             <span id="print-mocks-shortcut-lbl">Print Full Official Mock Exams &amp; OMR Sheets</span>
           </button>
         </div>
 
         <div class="flex gap-3 pt-2">
           <button onclick="closePrintModal()" class="flex-1 py-3 bg-slate-800 hover:bg-slate-700 text-white font-bold rounded-xl transition-all" id="print-btn-cancel">Cancel</button>
-          <button onclick="executePrint()" class="flex-1 py-3 bg-emerald-500 hover:bg-emerald-600 text-slate-900 font-bold rounded-xl transition-all" id="print-btn-confirm">🖨️ Generate &amp; Print (A4)</button>
+          <button onclick="executePrint()" class="flex-1 py-3 bg-emerald-500 hover:bg-emerald-600 text-slate-900 font-bold rounded-xl transition-all inline-flex items-center justify-center gap-2" id="print-btn-confirm">Generate &amp; Print (A4)</button>
         </div>
       </div>
     </div>
@@ -774,7 +775,7 @@
         appTitle: "منصة تحليلات مسارات الرياضيات | Edugates International School",
         appSubtitle: "المستودع الذكي والتحليلي لاختبارات كانجارو، نافس، كاوست، JEE، والأولمبياد - برعاية مدرسة بوابة المعرفة العالمية",
         statQCount: "جاري تحميل بنوك التدريب…",
-        badgeOverview: "📌 نظرة عامة على قاعدة البيانات والمسارات",
+        badgeOverview: "نظرة عامة على قاعدة البيانات والمسارات",
         heroHeading: "محرك الإعداد والمحاكاة التفاعلي للمسابقات الرياضية الهامة",
         heroDesc: "تمنحك هذه المنصة إمكانية استكشاف وهيكلة أحدث قواعد البيانات والأسئلة لـ 6 مسارات عالمية ومحلية استراتيجية. تم تطوير قاعدة البيانات لتغطي الفئات العمرية من الصفوف الابتدائية حتى الثانوية، مع تفكيك دقيق لمستويات صعوبة الأسئلة والحلول النموذجية ثنائية اللغة.",
         stat1Label: "المسارات المعتمدة",
@@ -790,15 +791,15 @@
         lblFilterGrade: "اختر صفك الدراسي (1-12) لتصفية الأسئلة:",
         sec2Title: "تحليلات المناهج والأبعاد المعرفية",
         sec2Desc: "مقارنة بين توزيع المواضيع وطبيعة الأسئلة في كل مسار",
-        chart1Title: "📊 توزيع المواضيع الرياضية حسب المسار",
+        chart1Title: "توزيع المواضيع الرياضية حسب المسار",
         chart1Caption: "يلاحظ تركيز اختبار كانجارو على المنطق والهندسة الفضائية، بينما يركز اختبار JEE على التفاضل والتكامل، وتتميز نافس بتوازن الجبر والقياس.",
-        chart2Title: "📈 نمط الأسئلة ومستويات التحدي",
+        chart2Title: "نمط الأسئلة ومستويات التحدي",
         chart2Caption: "تعتمد مسابقتا كانجارو وكاوست للرياضيات (KMC) على أسئلة الاختيار من متعدد ذات الـ 5 خيارات دون آلة حاسبة، بينما يعتمد الأولمبياد على الأسئلة المقالية (FRQ) والحلول البرهانية.",
         quizHeading: "استكشف بنك الأسئلة والحلول النموذجية",
         quizSubheading: "اختر المسار والمستوى لاختبار حل الأسئلة، عرض التلميحات، وفحص خطوات الحل بالتفصيل",
         btnPrevQ: "← السؤال السابق",
         btnNextQ: "السؤال التالي →",
-        roadmapTitle: "🗺️ خارطة التدرج المعرفي للطالب (من الابتدائي للتميز العالمي)",
+        roadmapTitle: "خارطة التدرج المعرفي للطالب (من الابتدائي للتميز العالمي)",
         roadmapSubtitle: "مسار بناء المهارات الرياضية عبر المراحل الدراسية المختلفة",
         step1T: "المرحلة الابتدائية (كانجارو + نافس 3 و 6)",
         step1D: "البدء بالتفكير المنطقي، التعرف على الأشكال، الحساب الأساسي، واستكشاف الأنماط دون استخدام الآلة الحاسبة.",
@@ -806,7 +807,7 @@
         step2D: "الانتقال لمفاهيم الجبر الأساسي، هندسة إقليدس، ومبادئ نظرية الأعداد والعد والاحتمالات دون آلة حاسبة (الصفوف 6–11).",
         step3T: "المرحلة الثانوية المتقدمة (JEE + الأولمبياد IMO)",
         step3D: "الاحتراف في التفاضل والتكامل، الأعداد المركبة، المعادلات الدالية، وإثبات البراهين الرياضية الصارمة.",
-        scaleTag: "🚀 التوسع والإنتاج",
+        scaleTag: "التوسع والإنتاج",
         scaleTitle: "محاكي توسيع بنك الأسئلة (1000+ لكل مسار)",
         scaleDesc: "حاسبة تقدير حجم البيانات المتوقعة عند توسيع كل مسار إلى 1,000 سؤال ثنائي اللغة مع الإجابات والخطوات الشاملة.",
         lblQuestionsPerTrack: "عدد الأسئلة لكل مسار:",
@@ -814,12 +815,12 @@
         lblJsonSize: "الحجم التقديري لقاعدة البيانات:",
         lblLangNodes: "عقد المفاهيم ثنائية اللغة:",
         footerText: "© 2026 منصة تحليلات واختبارات الرياضيات | Math Exam Intelligence Platform. جميع الحقوق محفوظة. | Made By: Mr Mohamed Abdallah",
-        btnHint: "💡 عرض التلميح",
+        btnHint: "عرض التلميح",
         btnSubmit: "تأكيد الإجابة",
-        txtCorrect: "✨ إجابة صحيحة! أحسنت العمل.",
-        txtIncorrect: "❌ إجابة غير صحيحة. راجع خطوات الحل أعلاه.",
+        txtCorrect: "إجابة صحيحة! أحسنت العمل.",
+        txtIncorrect: "إجابة غير صحيحة. راجع خطوات الحل أعلاه.",
         printBtnText: "طباعة الاختبار",
-        printModalTitle: "🖨️ إعداد ورقة الاختبار",
+        printModalTitle: "إعداد ورقة الاختبار",
         printModalDesc: "اختر عدد الأسئلة التي ترغب في طباعتها بناءً على الفلاتر المحددة حالياً. سيتم دمجها في ورقة نظيفة جاهزة للطباعة مع مفتاح الإجابات في النهاية.",
         printModalLbl: "عدد الأسئلة",
         printBtnCancel: "إلغاء (Cancel)",
@@ -833,7 +834,7 @@
         appTitle: "Math Path Analytics Platform | Edugates International School",
         appSubtitle: "Smart analytical repository for Kangaroo, Nafes, KAUST, JEE, & Olympiad - Powered by Edugates International School",
         statQCount: "Loading practice banks…",
-        badgeOverview: "📌 Database & Track Overview",
+        badgeOverview: "Database & Track Overview",
         heroHeading: "Interactive Preparation Engine for Elite Math Exams",
         heroDesc: "Explore and structure comprehensive question databases across 6 strategic local and international math tracks. Tailored from Primary grades to High School with structured MCQs, FRQs, and bilingual step-by-step solutions.",
         stat1Label: "Approved Tracks",
@@ -849,15 +850,15 @@
         lblFilterGrade: "Select your Grade (1-12) to filter questions:",
         sec2Title: "Curriculum Analytics & Cognitive Domains",
         sec2Desc: "Comparative analysis of topic distribution and question formats across tracks.",
-        chart1Title: "📊 Topic Weight Distribution by Track",
+        chart1Title: "Topic Weight Distribution by Track",
         chart1Caption: "Kangaroo emphasizes logic and spatial puzzles, JEE focuses heavily on calculus and algebra, while Nafes maintains balanced curriculum standards.",
-        chart2Title: "📈 Question Formats & Point Breakdown",
+        chart2Title: "Question Formats & Point Breakdown",
         chart2Caption: "Kangaroo and the KAUST Mathematics Competition (KMC) use 5-option no-calculator MCQs, while Olympiad relies on written proof questions (FRQ).",
         quizHeading: "Interactive Question & Solution Inspector",
         quizSubheading: "Filter by track or topic to test problem solving, view hints, and inspect full solutions.",
         btnPrevQ: "← Previous Question",
         btnNextQ: "Next Question →",
-        roadmapTitle: "🗺️ Student Cognitive Progression Roadmap",
+        roadmapTitle: "Student Cognitive Progression Roadmap",
         roadmapSubtitle: "Skill progression from Primary foundations to Elite international standards.",
         step1T: "Primary Stage (Kangaroo + Nafes 3 & 6)",
         step1D: "Building logical reasoning, basic geometry, mental math, and pattern recognition without calculators.",
@@ -865,7 +866,7 @@
         step2D: "Developing Olympiad-style algebra, Euclidean geometry, number theory, and combinatorics without calculators (Grades 6–11).",
         step3T: "Advanced High School (JEE + IMO Olympiad)",
         step3D: "Mastering differential calculus, complex numbers, functional equations, and rigorous mathematical proofs.",
-        scaleTag: "🚀 Database Scaling",
+        scaleTag: "Database Scaling",
         scaleTitle: "Question Bank Expansion Simulator",
         scaleDesc: "Estimate dataset footprint when scaling each track to 1,000+ fully structured bilingual questions.",
         lblQuestionsPerTrack: "Questions per track:",
@@ -873,12 +874,12 @@
         lblJsonSize: "Estimated JSON size:",
         lblLangNodes: "Bilingual concept nodes:",
         footerText: "© 2026 Math Exam Intelligence Platform. All rights reserved. | Made By: Mr Mohamed Abdallah",
-        btnHint: "💡 Show Hint",
+        btnHint: "Show Hint",
         btnSubmit: "Submit Answer",
-        txtCorrect: "✨ Correct Answer! Outstanding work.",
-        txtIncorrect: "❌ Incorrect. Check the mathematical breakdown above.",
+        txtCorrect: "Correct Answer! Outstanding work.",
+        txtIncorrect: "Incorrect. Check the mathematical breakdown above.",
         printBtnText: "Print Test",
-        printModalTitle: "🖨️ Setup Print Sheet",
+        printModalTitle: "Setup Print Sheet",
         printModalDesc: "Select the number of questions you want to print based on the currently active filters. They will be merged into a clean, printable sheet with an Answer Key at the end.",
         printModalLbl: "Number of Questions",
         printBtnCancel: "Cancel",
@@ -1013,7 +1014,7 @@
               angleLines: { color: gridColor },
               grid: { color: gridColor },
               pointLabels: {
-                font: { family: 'Inter, Cairo, sans-serif', size: 11, weight: '600' },
+                font: { family: "'Source Sans 3', Cairo, sans-serif", size: 12, weight: '600' },
                 color: labelColor,
                 padding: 8
               },
@@ -1027,7 +1028,7 @@
                 color: labelColor,
                 boxWidth: 12,
                 padding: 12,
-                font: { family: 'Inter, Cairo, sans-serif', size: 11, weight: '600' }
+                font: { family: "'Source Sans 3', Cairo, sans-serif", size: 12, weight: '600' }
               }
             }
           }
@@ -1057,7 +1058,7 @@
               grid: { color: gridColor },
               ticks: {
                 color: labelColor,
-                font: { family: 'Inter, Cairo, sans-serif', size: 11 },
+                font: { family: "'Source Sans 3', Cairo, sans-serif", size: 12 },
                 callback: function(value) { return value + "%"; }
               }
             },
@@ -1067,7 +1068,7 @@
               ticks: {
                 color: labelColor,
                 autoSkip: false,
-                font: { family: 'Inter, Cairo, sans-serif', size: 11.5, weight: '600' }
+                font: { family: "'Source Sans 3', Cairo, sans-serif", size: 12, weight: '600' }
               }
             }
           },
@@ -1078,7 +1079,7 @@
                 color: labelColor,
                 boxWidth: 12,
                 padding: 12,
-                font: { family: 'Inter, Cairo, sans-serif', size: 11, weight: '600' }
+                font: { family: "'Source Sans 3', Cairo, sans-serif", size: 12, weight: '600' }
               }
             }
           }
@@ -1528,42 +1529,50 @@
       renderCharts();
       filterQuestions();
       updateScaleCalc();
+
+      if (typeof window !== 'undefined' && window.location && window.location.search) {
+        const params = new URLSearchParams(window.location.search);
+        const qLang = params.get('lang');
+        if (qLang === 'ar' && currentLang !== 'ar') toggleLanguage();
+        const qView = params.get('view');
+        if (qView && typeof window.setAppView === 'function') window.setAppView(qView, true);
+      }
     });
 
     // --- 8. PRINT ENGINE ---
     const printPhases = {
       nafes: [
         { val: "all", text: "كل صفوف نافس (All Nafes Grades)" },
-        { val: "Grade 3", text: "🟢 نافس الصف 3 (Grade 3)" },
-        { val: "Grade 6", text: "🔵 نافس الصف 6 (Grade 6)" },
-        { val: "Grade 9", text: "🟣 نافس الصف 9 (Grade 9)" }
+        { val: "Grade 3", text: "نافس الصف 3 (Grade 3)" },
+        { val: "Grade 6", text: "نافس الصف 6 (Grade 6)" },
+        { val: "Grade 9", text: "نافس الصف 9 (Grade 9)" }
       ],
       kangaroo: [
         { val: "all", text: "كل مستويات كانجارو (All Kangaroo Levels)" },
-        { val: "PreEcolier", text: "🐣 بري إيكولير (PreEcolier: G1-2)" },
-        { val: "Ecolier", text: "🌱 إيكولير (Ecolier: G3-4)" },
-        { val: "Benjamin", text: "🌿 بنجامين (Benjamin: G5-6)" },
-        { val: "Cadet", text: "🌳 كاديت (Cadet: G7-8)" },
-        { val: "Junior", text: "🎓 جونيور (Junior: G9-10)" },
-        { val: "Student", text: "🏆 ستيودنت (Student: G11-12)" }
+        { val: "PreEcolier", text: "بري إيكولير (PreEcolier: G1-2)" },
+        { val: "Ecolier", text: "إيكولير (Ecolier: G3-4)" },
+        { val: "Benjamin", text: "بنجامين (Benjamin: G5-6)" },
+        { val: "Cadet", text: "كاديت (Cadet: G7-8)" },
+        { val: "Junior", text: "جونيور (Junior: G9-10)" },
+        { val: "Student", text: "ستيودنت (Student: G11-12)" }
       ],
       kaust: [
         { val: "all", text: "كل مسارات كاوست (All KAUST Tracks)" },
-        { val: "Track 1: Grades 6-7", text: "🌱 المسار 1: الصفوف 6-7 (Track 1: G6-7)" },
-        { val: "Track 2: Grades 8-9", text: "🌿 المسار 2: الصفوف 8-9 (Track 2: G8-9)" },
-        { val: "Track 3: Grades 10-11", text: "🎓 المسار 3: الصفوف 10-11 (Track 3: G10-11)" }
+        { val: "Track 1: Grades 6-7", text: "المسار 1: الصفوف 6-7 (Track 1: G6-7)" },
+        { val: "Track 2: Grades 8-9", text: "المسار 2: الصفوف 8-9 (Track 2: G8-9)" },
+        { val: "Track 3: Grades 10-11", text: "المسار 3: الصفوف 10-11 (Track 3: G10-11)" }
       ],
       nsmo: [
         { val: "all", text: "كل مراحل الأولمبياد الوطني NSMO" },
-        { val: "Phase 1: Junior Olympiad (Grade 7)", text: "🥉 المرحلة 1: أولمبياد الناشئين (G7)" },
-        { val: "Phase 2: Intermediate Olympiad (Grades 8-9)", text: "🥈 المرحلة 2: الأولمبياد المتوسط (G8-9)" },
-        { val: "Phase 3: Senior National Olympiad (Grade 10)", text: "🥇 المرحلة 3: الأولمبياد الوطني (G10)" }
+        { val: "Phase 1: Junior Olympiad (Grade 7)", text: "المرحلة 1: أولمبياد الناشئين (G7)" },
+        { val: "Phase 2: Intermediate Olympiad (Grades 8-9)", text: "المرحلة 2: الأولمبياد المتوسط (G8-9)" },
+        { val: "Phase 3: Senior National Olympiad (Grade 10)", text: "المرحلة 3: الأولمبياد الوطني (G10)" }
       ],
       olympiad: [
         { val: "all", text: "كل مستويات الأولمبياد الرياضي (All Olympiad Tiers)" },
-        { val: "Tier 1: Junior Olympiad (Grades 7-8)", text: "🥉 المستوى 1: أولمبياد الناشئين (Tier 1: G7-8)" },
-        { val: "Tier 2: Intermediate Olympiad (Grades 9-10)", text: "🥈 المستوى 2: الأولمبياد المتوسط (Tier 2: G9-10)" },
-        { val: "Tier 3: Senior Olympiad (Grades 11-12)", text: "🥇 المستوى 3: الأولمبياد المتقدم (Tier 3: G11-12)" }
+        { val: "Tier 1: Junior Olympiad (Grades 7-8)", text: "المستوى 1: أولمبياد الناشئين (Tier 1: G7-8)" },
+        { val: "Tier 2: Intermediate Olympiad (Grades 9-10)", text: "المستوى 2: الأولمبياد المتوسط (Tier 2: G9-10)" },
+        { val: "Tier 3: Senior Olympiad (Grades 11-12)", text: "المستوى 3: الأولمبياد المتقدم (Tier 3: G11-12)" }
       ]
     };
 

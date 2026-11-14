@@ -210,7 +210,7 @@
 
   function syncModalLocaleText() {
     const map = [
-      ['print-modal-title', L('🖨️ مصمّم أوراق العمل والاختبارات (Edugates A4)', '🖨️ Edugates A4 Worksheet & Exam Customizer')],
+      ['print-modal-title', L('مصمّم أوراق العمل والاختبارات (Edugates A4)', 'Edugates A4 Worksheet & Exam Customizer')],
       ['print-modal-desc', L('خصّص عنوان الورقة، المواضيع أو الدروس، توزيع الصعوبة، مساحة الحل، وورقة التظليل البصري OMR للطباعة الفورية على ورق A4.', 'Customize title, topics/lessons, Easy/Medium/Hard mix, scratch-work boxes, and an optional Page 1 OMR bubble sheet on A4 paper.')],
       ['print-custom-title-lbl', L('عنوان الورقة المخصّص (اختياري)', 'Custom Worksheet Title (Optional)')],
       ['print-custom-subtitle-lbl', L('بيانات الصف / المعلم / الزمن (اختياري)', 'Class / Teacher / Time Note (Optional)')],
@@ -228,7 +228,7 @@
       ['print-study-shortcut-lbl', L('طباعة شرح دروس نافس وكانجارو وكاوست ونسمو والأولمبياد والأمثلة المحلولة (A4)', 'Print Nafes, Kangaroo, KAUST, NSMO & Olympiad Study Guides + Drills (A4)')],
       ['print-mocks-shortcut-lbl', L('طباعة الاختبارات الكاملة وأوراق التظليل OMR (نافس + كانجارو + كاوست + نسمو + الأولمبياد)', 'Print Full Official Mock Exams & OMR Sheets (Nafes, Kangaroo, KAUST, NSMO & Olympiad)')],
       ['print-btn-cancel', L('إلغاء', 'Cancel')],
-      ['print-btn-confirm', L('🖨️ توليد وطباعة (A4)', '🖨️ Generate & Print (A4)')],
+      ['print-btn-confirm', L('توليد وطباعة (A4)', 'Generate & Print (A4)')],
     ];
     map.forEach(([id, txt]) => {
       const el = document.getElementById(id);

@@ -1088,7 +1088,7 @@
       const reportBanner = rep
         ? `<div class="eg-banner no-break">
             <div class="flex flex-wrap items-center justify-between gap-2">
-              <strong>📊 ${rtl ? 'تقرير أداء الطالب في الاختبار التجريبي' : 'Student Graded Mock Exam Report'}</strong>
+              <strong>${rtl ? 'تقرير أداء الطالب في الاختبار التجريبي' : 'Student Graded Mock Exam Report'}</strong>
               <span class="eg-badge">${rtl ? 'الدرجة الرسمية:' : 'Official Score:'} ${rep.score} / ${rep.maxPoints} (${rep.pct}%)</span>
             </div>
             <div class="eg-summary" style="margin-top:1.5mm">
@@ -1101,7 +1101,7 @@
         : '';
 
       const quickKey = `<div class="eg-key-box no-break">
-        <div class="eg-h3">🔑 ${rtl ? 'جدول الإجابات السريع' : 'Quick Answer Key Reference'} (1–${totalQ})</div>
+        <div class="eg-h3">${rtl ? 'جدول الإجابات السريع' : 'Quick Answer Key Reference'} (1–${totalQ})</div>
         <div class="eg-key-grid">
           ${questions
             .map((q, idx) => `<div class="eg-key-cell" dir="ltr"><strong>${idx + 1}.</strong> <span>(${LABELS[q.correct_index]})</span></div>`)
@@ -1240,11 +1240,11 @@
         <div class="flex flex-wrap items-center gap-1.5">
           ${
             selected !== undefined
-              ? `<button type="button" onclick="clearKaustMockOption(${idx})" class="eg-btn eg-btn-sm">↺ ${L('مسح التظليل (0 نقطة)', 'Clear Choice (0 pt)')}</button>`
+              ? `<button type="button" onclick="clearKaustMockOption(${idx})" class="eg-btn eg-btn-sm">${L('مسح التظليل (0 نقطة)', 'Clear Choice (0 pt)')}</button>`
               : `<span class="eg-lc-pill">${L('متروك (0 نقطة)', 'Blank (0 pts)')}</span>`
           }
           <button type="button" onclick="toggleKaustMockFlag(${idx})" class="eg-btn eg-btn-sm${flagged ? ' eg-flag-on' : ''}">
-            🚩 ${flagged ? L('معلّم للمراجعة', 'Flagged') : L('تعليم للمراجعة', 'Flag')}
+            ${flagged ? L('معلّم للمراجعة', 'Flagged') : L('تعليم للمراجعة', 'Flag')}
           </button>
         </div>
       </div>
@@ -1286,14 +1286,14 @@
     const confirmBanner = session.confirmSubmit
       ? `<div class="eg-mock-alert">
           <div>
-            <strong>⚠️ ${L('تأكيد تسليم ورقة الاختبار:', 'Confirm Exam Submission:')}</strong>
+            <strong>${L('تأكيد تسليم ورقة الاختبار:', 'Confirm Exam Submission:')}</strong>
             ${L(
               `أجبت عن ${answeredCount} سؤالاً وتركت ${blankCount} بدون إجابة. هل تريد إنهاء الاختبار وإصدار التقرير الآن؟`,
               `You answered ${answeredCount} of ${total} questions and left ${blankCount} blank. Submit and grade now?`
             )}
           </div>
           <div class="flex flex-wrap gap-2">
-            <button type="button" onclick="confirmSubmitKaustMock()" class="eg-btn eg-btn-go">✅ ${L('نعم، سلّم وصحّح الآن', 'Yes, Submit & Grade')}</button>
+            <button type="button" onclick="confirmSubmitKaustMock()" class="eg-btn eg-btn-go">${L('نعم، سلّم وصحّح الآن', 'Yes, Submit & Grade')}</button>
             <button type="button" onclick="cancelSubmitKaustMock()" class="eg-btn">${L('متابعة الحل', 'Keep Solving')}</button>
           </div>
         </div>`
@@ -1313,10 +1313,9 @@
     let bodyCards = '';
     if (session.paused) {
       bodyCards = `<div class="eg-card text-center" style="padding:2.5rem 1.5rem">
-        <div class="text-3xl mb-2">⏸️</div>
         <h3 class="eg-h3">${L('الاختبار متوقف مؤقتاً', 'Exam Timer Paused')}</h3>
         <p class="eg-prose opacity-80 mb-4">${L('تم إخفاء الأسئلة لحفظ نزاهة التوقيت. اضغط استئناف للمتابعة.', 'Questions are hidden while the clock is paused. Click Resume to continue.')}</p>
-        <button type="button" onclick="toggleKaustMockPause()" class="eg-btn eg-btn-main">▶️ ${L('استئناف الاختبار', 'Resume Exam')}</button>
+        <button type="button" onclick="toggleKaustMockPause()" class="eg-btn eg-btn-main">${L('استئناف الاختبار', 'Resume Exam')}</button>
       </div>`;
     } else if (session.viewMode === 'all') {
       bodyCards = session.questions.map((q, idx) => renderExamQuestionCard(q, idx, total)).join('');
@@ -1329,7 +1328,7 @@
       const nextBtn =
         idx < total - 1
           ? `<button type="button" onclick="goKaustMockQuestion(${idx + 1})" class="eg-btn eg-btn-main">${L('السؤال التالي', 'Next Question')} ${isAr() ? '←' : '→'}</button>`
-          : `<button type="button" onclick="requestSubmitKaustMock()" class="eg-btn eg-btn-go">✅ ${L('مراجعة وتسليم الورقة', 'Finish & Submit Paper')}</button>`;
+          : `<button type="button" onclick="requestSubmitKaustMock()" class="eg-btn eg-btn-go">${L('مراجعة وتسليم الورقة', 'Finish & Submit Paper')}</button>`;
       bodyCards = `${renderExamQuestionCard(session.questions[idx], idx, total)}
         <div class="eg-nav-footer no-print">${prevBtn}${nextBtn}</div>`;
     }
@@ -1350,15 +1349,14 @@
         </div>
         <div class="flex flex-wrap items-center gap-2">
           <div class="eg-clock-box">
-            <span>⏱️</span>
             <span id="kmc-mock-clock" dir="ltr" class="eg-clock${clockWarn}${clockCrit}">${formatClock(session.remainingSec)}</span>
-            <button type="button" onclick="toggleKaustMockPause()" class="eg-btn eg-btn-sm" title="${L('إيقاف مؤقت / استئناف', 'Pause / Resume')}">${session.paused ? '▶️' : '⏸️'}</button>
+            <button type="button" onclick="toggleKaustMockPause()" class="eg-btn eg-btn-sm" title="${L('إيقاف مؤقت / استئناف', 'Pause / Resume')}">${session.paused ? L('استئناف', 'Resume') : L('إيقاف', 'Pause')}</button>
           </div>
-          <span class="eg-lc-pill">${L('المجاب:', 'Answered:')} ${answeredCount}/${total} · ${L('متروك:', 'Blank:')} ${blankCount}${flagCount ? ` · 🚩 ${flagCount}` : ''}</span>
+          <span class="eg-lc-pill">${L('المجاب:', 'Answered:')} ${answeredCount}/${total} · ${L('متروك:', 'Blank:')} ${blankCount}${flagCount ? ` · ${L('معلّم:', 'Flagged:')} ${flagCount}` : ''}</span>
           <button type="button" onclick="setKaustMockViewMode('${session.viewMode === 'single' ? 'all' : 'single'}')" class="eg-btn eg-btn-sm">
-            ${session.viewMode === 'single' ? '📜 ' + L('عرض الورقة كاملة', 'Full Paper View') : '🎯 ' + L('سؤال بسؤال', 'Single Question')}
+            ${session.viewMode === 'single' ? L('عرض الورقة كاملة', 'Full Paper View') : L('سؤال بسؤال', 'Single Question')}
           </button>
-          <button type="button" onclick="requestSubmitKaustMock()" class="eg-btn eg-btn-go">✅ ${L('تسليم وتصحيح الاختبار', 'Submit & Grade')}</button>
+          <button type="button" onclick="requestSubmitKaustMock()" class="eg-btn eg-btn-go">${L('تسليم وتصحيح الاختبار', 'Submit & Grade')}</button>
         </div>
       </div>
       ${confirmBanner}
@@ -1378,11 +1376,11 @@
 
     let tierBadge = '';
     if (rep.pct >= 75) {
-      tierBadge = `<span class="eg-badge" style="background:#dcfce7;color:#166534">🏆 ${L('مستوى تأهل للمرحلة المتقدمة (ممتاز)', 'Final-Round Contender Pace')}</span>`;
+      tierBadge = `<span class="eg-badge" style="background:#dcfce7;color:#166534">${L('مستوى تأهل للمرحلة المتقدمة (ممتاز)', 'Final-Round Contender Pace')}</span>`;
     } else if (rep.pct >= 50) {
-      tierBadge = `<span class="eg-badge" style="background:#fef3c7;color:#92400e">⭐ ${L('أداء تنافسي قوي — واصل التدريب', 'Strong Competitive Qualifier Pace')}</span>`;
+      tierBadge = `<span class="eg-badge" style="background:#fef3c7;color:#92400e">${L('أداء تنافسي قوي — واصل التدريب', 'Strong Competitive Qualifier Pace')}</span>`;
     } else {
-      tierBadge = `<span class="eg-badge eg-badge-alt">📈 ${L('فرصة ممتازة لتقوية الأساسيات عبر الدروس المقترحة أدناه', 'Build Core Mastery with the Recommended Lessons Below')}</span>`;
+      tierBadge = `<span class="eg-badge eg-badge-alt">${L('فرصة ممتازة لتقوية الأساسيات عبر الدروس المقترحة أدناه', 'Build Core Mastery with the Recommended Lessons Below')}</span>`;
     }
 
     const tierCards = ['Easy', 'Medium', 'Hard']
@@ -1408,7 +1406,7 @@
         const les = studyLessons.find((x) => x.id === lid);
         if (!les) return '';
         const lTitle = isAr() ? les.ar.title : les.en.title;
-        return `<button type="button" onclick="if(window.openKaustLesson){openKaustLesson('${les.id}');document.getElementById('study-lessons').scrollIntoView({behavior:'smooth'});}" class="eg-btn eg-btn-sm">📖 ${L('راجع درس', 'Review Lesson')} ${les.unit_num}: ${lTitle}</button>`;
+        return `<button type="button" onclick="if(window.openKaustLesson){openKaustLesson('${les.id}');document.getElementById('study-lessons').scrollIntoView({behavior:'smooth'});}" class="eg-btn eg-btn-sm">${L('راجع درس', 'Review Lesson')} ${les.unit_num}: ${lTitle}</button>`;
       })
       .filter(Boolean)
       .join('');
@@ -1418,7 +1416,7 @@
       ['wrong', `${L('الخاطئة', 'Incorrect')} (${rep.wrong})`],
       ['blank', `${L('المتروكة', 'Blank')} (${rep.blank})`],
       ['correct', `${L('الصحيحة', 'Correct')} (${rep.correct})`],
-      ['flagged', `🚩 ${L('المعلّمة', 'Flagged')} (${Object.values(session.flags).filter(Boolean).length})`],
+      ['flagged', `${L('المعلّمة', 'Flagged')} (${Object.values(session.flags).filter(Boolean).length})`],
     ]
       .map(
         ([fKey, fLbl]) =>
@@ -1480,7 +1478,7 @@
           ${diag ? `<div class="eg-diagram">${diag}</div>` : ''}
           <div class="eg-opts">${opts}</div>
           <div class="eg-sol">
-            <div class="eg-sol-h">✅ ${L('الحل التفصيلي خطوة بخطوة — الإجابة الصحيحة:', 'Step-by-Step Solution — Correct Answer:')} (${LABELS[q.correct_index]})</div>
+            <div class="eg-sol-h">${L('الحل التفصيلي خطوة بخطوة — الإجابة الصحيحة:', 'Step-by-Step Solution — Correct Answer:')} (${LABELS[q.correct_index]})</div>
             <div class="math-font eg-prose">${qContent.explanation || ''}</div>
           </div>
         </article>`;
@@ -1492,11 +1490,11 @@
       <div class="eg-toolbar no-print">
         <div class="flex flex-wrap gap-2">
           <button type="button" onclick="exitKaustMock(true)" class="eg-btn">${isAr() ? '→' : '←'} ${L('جميع الاختبارات التجريبية', 'All Mock Exams')}</button>
-          <button type="button" onclick="startKaustMock('${p.id}')" class="eg-btn">🔄 ${L('إعادة المحاولة', 'Retake Paper')}</button>
+          <button type="button" onclick="startKaustMock('${p.id}')" class="eg-btn">${L('إعادة المحاولة', 'Retake Paper')}</button>
         </div>
         <div class="flex flex-wrap gap-2">
-          <button type="button" onclick="printKaustMockPaper('${p.id}', 'key')" class="eg-btn eg-btn-main">🖨️ ${L('طباعة تقرير الدرجة والحلول (A4)', 'Print Graded Report & Solutions (A4)')}</button>
-          <button type="button" onclick="printKaustMockPaper('${p.id}', 'full')" class="eg-btn">📦 ${L('طباعة الحزمة الكاملة (A4)', 'Print Full Exam Package (A4)')}</button>
+          <button type="button" onclick="printKaustMockPaper('${p.id}', 'key')" class="eg-btn eg-btn-main">${L('طباعة تقرير الدرجة والحلول (A4)', 'Print Graded Report & Solutions (A4)')}</button>
+          <button type="button" onclick="printKaustMockPaper('${p.id}', 'full')" class="eg-btn">${L('طباعة الحزمة الكاملة (A4)', 'Print Full Exam Package (A4)')}</button>
         </div>
       </div>
 
@@ -1514,7 +1512,7 @@
             <span class="eg-lc-pill">✓ ${L('صحيح:', 'Correct:')} <strong>${rep.correct}</strong></span>
             <span class="eg-lc-pill">✗ ${L('خطأ:', 'Wrong:')} <strong>${rep.wrong}</strong></span>
             <span class="eg-lc-pill">○ ${L('متروك:', 'Blank:')} <strong>${rep.blank}</strong></span>
-            <span class="eg-lc-pill">⏱️ ${L('الزمن:', 'Time:')} <strong dir="ltr">${formatClock(rep.elapsedSec)}</strong></span>
+            <span class="eg-lc-pill">${L('الزمن:', 'Time:')} <strong dir="ltr">${formatClock(rep.elapsedSec)}</strong></span>
           </div>
         </div>
         <div class="eg-stat-grid mt-3">${tierCards}</div>
@@ -1522,7 +1520,7 @@
         ${
           recBtns
             ? `<div class="mt-3 pt-3 border-t border-teal-500/25">
-                <div class="text-xs font-extrabold mb-1.5">🎯 ${L('دروس مقترحة للمراجعة السريعة بناءً على إجاباتك:', 'Recommended Study Lessons to Review Next:')}</div>
+                <div class="text-xs font-extrabold mb-1.5">${L('دروس مقترحة للمراجعة السريعة بناءً على إجاباتك:', 'Recommended Study Lessons to Review Next:')}</div>
                 <div class="flex flex-wrap gap-1.5">${recBtns}</div>
               </div>`
             : ''
@@ -1530,7 +1528,7 @@
       </div>
 
       <div class="flex flex-wrap items-center justify-between gap-2 my-3 no-print">
-        <div class="font-extrabold text-sm">📝 ${L('مراجعة الأسئلة والحلول التفصيلية:', 'Detailed Question-by-Question Review:')}</div>
+        <div class="font-extrabold text-sm">${L('مراجعة الأسئلة والحلول التفصيلية:', 'Detailed Question-by-Question Review:')}</div>
         <div class="flex flex-wrap gap-1.5">${filters}</div>
       </div>
       <div class="eg-reader">${reviewCards || `<div class="eg-card text-center opacity-75">${L('لا توجد أسئلة ضمن هذا الفلتر.', 'No questions match this filter.')}</div>`}</div>`;
@@ -1576,10 +1574,10 @@
           <div>
             <div class="flex flex-wrap items-center justify-between gap-1.5 mb-2">
               <div class="flex flex-wrap items-center gap-1.5">
-                <span class="eg-badge">${p.is_custom ? '🎲 ' + L('نموذج مخصص', 'Custom') : L('نموذج رسمي', 'Mock Paper') + ' #' + p.paper_num}</span>
+                <span class="eg-badge">${p.is_custom ? L('نموذج مخصص', 'Custom') : L('نموذج رسمي', 'Mock Paper') + ' #' + p.paper_num}</span>
                 <span class="eg-badge eg-badge-alt">${p.question_count} ${L('سؤالاً', 'Qs')} (${optRange}) · ${dur} ${L('د', 'min')}</span>
               </div>
-              <span class="eg-lc-pill">${best ? `🏆 ${best.score}/${best.maxPoints}` : `🖼️ ${p.svg_count} ${L('رسمة', 'SVGs')} · ${p.max_points} ${L('نقطة', 'pts')}`}</span>
+              <span class="eg-lc-pill">${best ? `${best.score}/${best.maxPoints}` : `${p.svg_count} ${L('رسمة', 'SVGs')} · ${p.max_points} ${L('نقطة', 'pts')}`}</span>
             </div>
             <h3 class="eg-lc-title" onclick="startKaustMock('${p.id}')">${pText.title}</h3>
             <p class="eg-lc-desc">${pText.focus}</p>
@@ -1587,17 +1585,17 @@
           </div>
           <div class="eg-mock-actions">
             <button type="button" onclick="startKaustMock('${p.id}')" class="eg-btn eg-btn-go eg-btn-sm w-full">
-              ⏱️ ${L(`ابدأ الاختبار الموقوت (${dur} دقيقة)`, `Start Live Timed Exam (${dur} min)`)}
+              ${L(`ابدأ الاختبار الموقوت (${dur} دقيقة)`, `Start Live Timed Exam (${dur} min)`)}
             </button>
             <div class="flex flex-wrap gap-1.5 w-full">
               <button type="button" onclick="printKaustMockPaper('${p.id}', 'full')" class="eg-btn eg-btn-main eg-btn-sm flex-1" title="${L('طباعة الغلاف + ورقة التظليل OMR + الأسئلة + المفتاح والحلول', 'Print Cover + OMR Bubble Sheet + Exam + Worked Key')}">
-                🖨️ ${L('حزمة كاملة A4', 'Full Pack A4')}
+                ${L('حزمة كاملة A4', 'Full Pack A4')}
               </button>
               <button type="button" onclick="printKaustMockPaper('${p.id}', 'student')" class="eg-btn eg-btn-sm" title="${L('طباعة ورقة الطالب والتظليل فقط بدون الإجابات', 'Student Exam + OMR Bubble Sheet Only (No Answers)')}">
-                🫧 ${L('ورقة الطالب', 'Exam + OMR')}
+                ${L('ورقة الطالب', 'Exam + OMR')}
               </button>
               <button type="button" onclick="printKaustMockPaper('${p.id}', 'key')" class="eg-btn eg-btn-sm" title="${L('طباعة مفتاح التصحيح المظلل والحلول فقط', 'Pre-Shaded OMR Master Key & Worked Solutions Only')}">
-                🔑 ${L('المفتاح', 'Key')}
+                ${L('المفتاح', 'Key')}
               </button>
             </div>
           </div>
@@ -1636,13 +1634,13 @@
       ${compSwitcher}
       <div class="eg-tabs no-print">${tabs}</div>
       <div class="eg-subbar no-print">
-        <div class="text-xs sm:text-sm opacity-90">🎯 ${subText}</div>
+        <div class="text-xs sm:text-sm opacity-90">${subText}</div>
         <div class="flex flex-wrap gap-2 max-w-full">
           <button type="button" onclick="generateCustomKaustMock('${activeTrack}')" class="eg-btn eg-btn-go">
-            🎲 ${L('توليد نموذج تجريبي جديد', 'Generate Fresh Mock')}
+            ${L('توليد نموذج تجريبي جديد', 'Generate Fresh Mock')}
           </button>
           <button type="button" onclick="printBlankKaustOmr('${activeTrack}')" class="eg-btn eg-btn-main">
-            🫧 ${L('طباعة ورقة تظليل OMR فارغة (A4)', 'Print Blank OMR Sheet (A4)')}
+            ${L('طباعة ورقة تظليل OMR فارغة (A4)', 'Print Blank OMR Sheet (A4)')}
           </button>
         </div>
       </div>
@@ -1690,11 +1688,10 @@
       <div class="eg-hub-h">
         <div class="eg-hub-logo-box hidden sm:block"><img src="LOGO.jpg" alt="Edugates International School" loading="eager" decoding="sync" class="eg-hub-logo"></div>
         <div class="flex-1 min-w-0">
-          <div class="eg-hub-kicker">Edugates International School · مدرسة بوابة المعرفة العالمية</div>
           <h2 class="text-xl sm:text-2xl font-display font-bold">${isAr() ? cfg.hubTitleAr : cfg.hubTitleEn}</h2>
           <p class="text-xs sm:text-sm opacity-80 mt-0.5">${L(
-            `${totalPapers} نموذج اختبار رسمي (${totalUniqueQs} سؤالاً) · مؤقت حي ${durTag} دقيقة · أوراق تظليل OMR وطباعة A4`,
-            `${totalPapers} Official Simulation Papers (${totalUniqueQs} questions) · ${durTag}-Min Timed Simulator · Printable A4 & OMR Sheets`
+            `Edugates International School · ${totalPapers} نموذج اختبار رسمي (${totalUniqueQs} سؤالاً) · مؤقت حي ${durTag} دقيقة · أوراق تظليل OMR وطباعة A4`,
+            `Edugates International School · ${totalPapers} Official Simulation Papers (${totalUniqueQs} questions) · ${durTag}-Min Timed Simulator · Printable A4 & OMR Sheets`
           )}</p>
         </div>
       </div>
@@ -1772,6 +1769,11 @@
     }
 
     render();
+
+    if (typeof window !== 'undefined' && window.location && window.location.search) {
+      const mid = new URLSearchParams(window.location.search).get('mock');
+      if (mid) window.startKaustMock(mid);
+    }
 
     if (typeof window.toggleLanguage === 'function' && !window.__kaustMockLangHooked) {
       window.__kaustMockLangHooked = true;
