@@ -239,7 +239,7 @@
           </div>
           <div class="sm-quick-metrics">
             <div class="sm-metric">
-              <div class="sm-metric-val" id="stat-1-val">6 Tracks</div>
+              <div class="sm-metric-val" id="stat-1-val">8 Tracks</div>
               <div class="sm-metric-lbl" id="stat-1-label">Competitions</div>
             </div>
             <div class="sm-metric">
@@ -247,7 +247,7 @@
               <div class="sm-metric-lbl" id="stat-2-label">Grade Span</div>
             </div>
             <div class="sm-metric">
-              <div class="sm-metric-val" id="stat-3-val">108 Lessons</div>
+              <div class="sm-metric-val" id="stat-3-val">138 Lessons</div>
               <div class="sm-metric-lbl" id="stat-3-label">Study Guides</div>
             </div>
             <div class="sm-metric">
@@ -295,7 +295,9 @@
           <select id="quiz-track-select" onchange="filterQuestions()" class="sm-select">
             <option value="all">All Competitions</option>
             <option value="kangaroo">Kangaroo Math (Grades 1–12)</option>
-            <option value="nafes">Nafes KSA (Grades 3, 6, 9)</option>
+            <option value="nafes">Nafes Math · KSA (Grades 3, 6, 9)</option>
+            <option value="nafes_science">Nafes Science · KSA (Grades 6, 9)</option>
+            <option value="nafes_english">Nafes English · KSA (Grades 3, 6, 9)</option>
             <option value="kaust">KAUST KMC (Grades 6–11)</option>
             <option value="nsmo">NSMO · Mawhiba (Grades 7–10)</option>
             <option value="olympiad">Math Olympiad (Grades 7–12)</option>
@@ -303,10 +305,23 @@
           </select>
 
           <select id="quiz-nafes-grade-select" onchange="filterQuestions()" class="sm-select">
-            <option value="all">All Nafes Grades</option>
+            <option value="all">All Nafes Math Grades</option>
             <option value="Grade 3">Grade 3</option>
             <option value="Grade 6">Grade 6</option>
             <option value="Grade 9">Grade 9</option>
+          </select>
+
+          <select id="quiz-nafes-science-grade-select" onchange="filterQuestions()" class="sm-select">
+            <option value="all">All Nafes Science Grades</option>
+            <option value="Science · Grade 6">Science · Grade 6</option>
+            <option value="Science · Grade 9">Science · Grade 9</option>
+          </select>
+
+          <select id="quiz-nafes-english-grade-select" onchange="filterQuestions()" class="sm-select">
+            <option value="all">All Nafes English Grades</option>
+            <option value="English · Grade 3">English · Grade 3</option>
+            <option value="English · Grade 6">English · Grade 6</option>
+            <option value="English · Grade 9">English · Grade 9</option>
           </select>
 
           <select id="quiz-kangaroo-level-select" onchange="filterQuestions()" class="sm-select">
@@ -492,7 +507,9 @@
               <option value="kaust">KAUST Math Competition (KMC)</option>
               <option value="nsmo">NSMO · Mawhiba (KSA)</option>
               <option value="kangaroo">Kangaroo</option>
-              <option value="nafes">Nafes (KSA)</option>
+              <option value="nafes">Nafes Math (KSA)</option>
+              <option value="nafes_science">Nafes Science (KSA)</option>
+              <option value="nafes_english">Nafes English (KSA)</option>
               <option value="jee">JEE Main/Adv</option>
               <option value="olympiad">Math Olympiad (Proofs)</option>
             </select>
@@ -673,8 +690,8 @@
         },
         {
           id: "nafes",
-          name_ar: "اختبار نافس الوطني (السعودية)",
-          name_en: "Nafes · KSA National Exam (ETEC)",
+          name_ar: "اختبار نافس — الرياضيات (ETEC)",
+          name_en: "Nafes · Mathematics (ETEC KSA)",
           badge_ar: "MCQs (4 خيارات)",
           badge_en: "MCQs (4 Options)",
           color: "border-blue-500",
@@ -686,6 +703,40 @@
           format_en: "4-Option MCQs (A–D) | No Calculator",
           topics_ar: ["الأعداد والعمليات", "الجبر والأنماط", "الهندسة والقياس", "البيانات والاحتمالات"],
           topics_en: ["Numbers & Operations", "Algebra", "Geometry", "Data & Probability"],
+          grades: [3, 6, 9]
+        },
+        {
+          id: "nafes_science",
+          name_ar: "اختبار نافس — العلوم (ETEC)",
+          name_en: "Nafes · Science (ETEC KSA)",
+          badge_ar: "MCQs (4 خيارات)",
+          badge_en: "MCQs (4 Options)",
+          color: "border-teal-500",
+          bg: "bg-teal-50 dark:bg-teal-900/20",
+          accent: "text-teal-600",
+          levels_ar: "الصفوف المستهدفة رسمياً: 6 و 9",
+          levels_en: "Official ETEC Benchmarks: Grades 6 & 9",
+          format_ar: "اختيار من متعدد (A–D) | استقصاء علمي ورسوم",
+          format_en: "4-Option MCQs (A–D) | Diagrams & Inquiry",
+          topics_ar: ["علوم الحياة", "الكيمياء والمادة", "الفيزياء: القوى والطاقة", "علوم الأرض والفضاء"],
+          topics_en: ["Life Sciences", "Chemistry & Matter", "Physics: Forces & Energy", "Earth & Space Sciences"],
+          grades: [6, 9]
+        },
+        {
+          id: "nafes_english",
+          name_ar: "اختبار نافس — اللغة الإنجليزية (ETEC)",
+          name_en: "Nafes · English Literacy (ETEC KSA)",
+          badge_ar: "MCQs (4 خيارات)",
+          badge_en: "MCQs (4 Options)",
+          color: "border-sky-500",
+          bg: "bg-sky-50 dark:bg-sky-900/20",
+          accent: "text-sky-600",
+          levels_ar: "الصفوف المستهدفة رسمياً: 3، 6، 9",
+          levels_en: "Official ETEC Benchmarks: Grades 3, 6 & 9",
+          format_ar: "فهم المقروء، المفردات والقواعد (A–D)",
+          format_en: "Reading, Vocabulary & Grammar (A–D)",
+          topics_ar: ["فهم المقروء", "تحليل النص والغرض", "المفردات ودلالات السياق", "القواعد وبنية الجملة"],
+          topics_en: ["Reading Comprehension", "Text Analysis & Purpose", "Vocabulary & Context Clues", "Grammar & Sentence Structure"],
           grades: [3, 6, 9]
         },
         {
@@ -777,9 +828,9 @@
         statQCount: "جاري تحميل بنوك التدريب…",
         badgeOverview: "نظرة عامة على قاعدة البيانات والمسارات",
         heroHeading: "محرك الإعداد والمحاكاة التفاعلي للمسابقات الرياضية الهامة",
-        heroDesc: "تمنحك هذه المنصة إمكانية استكشاف وهيكلة أحدث قواعد البيانات والأسئلة لـ 6 مسارات عالمية ومحلية استراتيجية. تم تطوير قاعدة البيانات لتغطي الفئات العمرية من الصفوف الابتدائية حتى الثانوية، مع تفكيك دقيق لمستويات صعوبة الأسئلة والحلول النموذجية ثنائية اللغة.",
+        heroDesc: "تمنحك هذه المنصة إمكانية استكشاف وهيكلة أحدث قواعد البيانات والأسئلة لـ 8 مسارات عالمية ومحلية استراتيجية (الرياضيات، وعلوم نافس، وإنجليزية نافس). تم تطوير قاعدة البيانات لتغطي الفئات العمرية من الصفوف الابتدائية حتى الثانوية، مع تفكيك دقيق لمستويات صعوبة الأسئلة والحلول النموذجية ثنائية اللغة.",
         stat1Label: "المسارات المعتمدة",
-        stat1Value: "6 مسارات رئيسية",
+        stat1Value: "8 مسارات رئيسية",
         stat2Label: "الفئات العمرية والصفوف",
         stat2Value: "من 1 ابتدائي إلى 12 ثانوية",
         stat3Label: "أنماط الأسئلة",
@@ -811,7 +862,7 @@
         scaleTitle: "محاكي توسيع بنك الأسئلة (1000+ لكل مسار)",
         scaleDesc: "حاسبة تقدير حجم البيانات المتوقعة عند توسيع كل مسار إلى 1,000 سؤال ثنائي اللغة مع الإجابات والخطوات الشاملة.",
         lblQuestionsPerTrack: "عدد الأسئلة لكل مسار:",
-        lblTotalQ: "إجمالي أسئلة الـ 6 مسارات:",
+        lblTotalQ: "إجمالي أسئلة الـ 8 مسارات:",
         lblJsonSize: "الحجم التقديري لقاعدة البيانات:",
         lblLangNodes: "عقد المفاهيم ثنائية اللغة:",
         footerText: "© 2026 منصة تحليلات واختبارات الرياضيات | Math Exam Intelligence Platform. جميع الحقوق محفوظة. | Made By: Mr Mohamed Abdallah",
@@ -836,9 +887,9 @@
         statQCount: "Loading practice banks…",
         badgeOverview: "Database & Track Overview",
         heroHeading: "Interactive Preparation Engine for Elite Math Exams",
-        heroDesc: "Explore and structure comprehensive question databases across 6 strategic local and international math tracks. Tailored from Primary grades to High School with structured MCQs, FRQs, and bilingual step-by-step solutions.",
+        heroDesc: "Explore and structure comprehensive question databases across 8 strategic local and international tracks (Mathematics, Nafes Science, and Nafes English). Tailored from Primary grades to High School with structured MCQs, FRQs, and bilingual step-by-step solutions.",
         stat1Label: "Approved Tracks",
-        stat1Value: "6 Core Tracks",
+        stat1Value: "8 Core Tracks",
         stat2Label: "Target Grade Span",
         stat2Value: "Grades 1 to 12",
         stat3Label: "Question Types",
@@ -870,7 +921,7 @@
         scaleTitle: "Question Bank Expansion Simulator",
         scaleDesc: "Estimate dataset footprint when scaling each track to 1,000+ fully structured bilingual questions.",
         lblQuestionsPerTrack: "Questions per track:",
-        lblTotalQ: "Total questions (6 tracks):",
+        lblTotalQ: "Total questions (8 tracks):",
         lblJsonSize: "Estimated JSON size:",
         lblLangNodes: "Bilingual concept nodes:",
         footerText: "© 2026 Math Exam Intelligence Platform. All rights reserved. | Made By: Mr Mohamed Abdallah",
@@ -1105,7 +1156,7 @@
       document.getElementById('stat-2-label').innerText = t.stat2Label;
       document.getElementById('stat-2-val').innerText = t.stat2Value;
       document.getElementById('stat-3-label').innerText = isAr ? 'دروس مشروحة' : 'Study Guides';
-      document.getElementById('stat-3-val').innerText = isAr ? '108 دروس' : '108 Lessons';
+      document.getElementById('stat-3-val').innerText = isAr ? '138 درساً' : '138 Lessons';
       document.getElementById('stat-4-label').innerText = t.stat4Label;
       document.getElementById('stat-4-val').innerText = t.stat4Value;
 
@@ -1179,6 +1230,8 @@
     const TRACK_RESOURCE_COUNTS = {
       kangaroo: { lessons: 36, mocks: 24 },
       nafes: { lessons: 18, mocks: 12 },
+      nafes_science: { lessons: 12, mocks: 8 },
+      nafes_english: { lessons: 18, mocks: 12 },
       kaust: { lessons: 18, mocks: 15 },
       nsmo: { lessons: 18, mocks: 12 },
       olympiad: { lessons: 18, mocks: 12 }
@@ -1441,7 +1494,7 @@
     let previousTrack = 'all';
     function filterQuestions() {
       const trackVal = document.getElementById('quiz-track-select').value;
-      const filterIds = {nafes:'quiz-nafes-grade-select',kangaroo:'quiz-kangaroo-level-select',kaust:'quiz-kaust-phase-select',nsmo:'quiz-nsmo-phase-select',olympiad:'quiz-olympiad-tier-select'};
+      const filterIds = {nafes:'quiz-nafes-grade-select',nafes_science:'quiz-nafes-science-grade-select',nafes_english:'quiz-nafes-english-grade-select',kangaroo:'quiz-kangaroo-level-select',kaust:'quiz-kaust-phase-select',nsmo:'quiz-nsmo-phase-select',olympiad:'quiz-olympiad-tier-select'};
       for (const [track,id] of Object.entries(filterIds)) {
         const el = document.getElementById(id);
         el.style.display = trackVal === track ? 'block' : 'none';
@@ -1466,7 +1519,7 @@
       const val = parseInt(document.getElementById('slider-q-count').value);
       document.getElementById('val-q-count').innerText = `${val.toLocaleString()} ${currentLang === 'ar' ? 'سؤال' : 'Qs'}`;
       
-      const total = val * 6;
+      const total = val * 8;
       document.getElementById('calc-total-q').innerText = `${total.toLocaleString()} ${currentLang === 'ar' ? 'سؤال' : 'questions'}`;
       
       const approxMb = ((total * 3.7) / 1000).toFixed(1);
@@ -1478,7 +1531,7 @@
 
     // --- 7. LOAD DATA & INITIALIZATION ON LOAD ---
     async function loadQuestionsData() {
-      const tracks = ['kangaroo', 'nafes', 'jee', 'olympiad', 'kaust', 'nsmo'];
+      const tracks = ['kangaroo', 'nafes', 'nafes_science', 'nafes_english', 'jee', 'olympiad', 'kaust', 'nsmo'];
       let loadedQuestions = [];
 
       for (const track of tracks) {
@@ -1542,10 +1595,21 @@
     // --- 8. PRINT ENGINE ---
     const printPhases = {
       nafes: [
-        { val: "all", text: "كل صفوف نافس (All Nafes Grades)" },
-        { val: "Grade 3", text: "نافس الصف 3 (Grade 3)" },
-        { val: "Grade 6", text: "نافس الصف 6 (Grade 6)" },
-        { val: "Grade 9", text: "نافس الصف 9 (Grade 9)" }
+        { val: "all", text: "كل صفوف نافس الرياضيات (All Nafes Math Grades)" },
+        { val: "Grade 3", text: "نافس رياضيات الصف 3 (Grade 3)" },
+        { val: "Grade 6", text: "نافس رياضيات الصف 6 (Grade 6)" },
+        { val: "Grade 9", text: "نافس رياضيات الصف 9 (Grade 9)" }
+      ],
+      nafes_science: [
+        { val: "all", text: "كل صفوف نافس العلوم (All Nafes Science Grades)" },
+        { val: "Science · Grade 6", text: "نافس علوم الصف 6 (Science · Grade 6)" },
+        { val: "Science · Grade 9", text: "نافس علوم الصف 9 (Science · Grade 9)" }
+      ],
+      nafes_english: [
+        { val: "all", text: "كل صفوف نافس الإنجليزية (All Nafes English Grades)" },
+        { val: "English · Grade 3", text: "نافس إنجليزي الصف 3 (English · Grade 3)" },
+        { val: "English · Grade 6", text: "نافس إنجليزي الصف 6 (English · Grade 6)" },
+        { val: "English · Grade 9", text: "نافس إنجليزي الصف 9 (English · Grade 9)" }
       ],
       kangaroo: [
         { val: "all", text: "كل مستويات كانجارو (All Kangaroo Levels)" },

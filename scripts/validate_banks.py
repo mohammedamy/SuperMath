@@ -15,7 +15,7 @@ for track,levels in TARGETS.items():
  for q in bank:
   assert q['id'] not in allids,('duplicate id',q['id']);allids.add(q['id'])
   assert q['track']==track
-  if track in ('kaust','nsmo','kangaroo','nafes','olympiad'):
+  if track in ('kaust','nsmo','kangaroo','nafes','nafes_science','nafes_english','olympiad'):
    assert q['level'] in levels,(q['id'],q['level'])
   stem=norm(q['content']['en']['question']);assert stem not in stems,('duplicate stem',q['id']);stems.add(stem)
   counts[q['level']]+=1

@@ -191,12 +191,12 @@
       ptsBlank: 0,
       durationMin: 60,
       durationRangeLabel: '45–75',
-      pillEn: 'Nafes KSA · G3/6/9',
-      pillAr: 'نافس الوطني · 3/6/9',
-      hubTitleEn: 'Nafes KSA National Assessment (ETEC) Official Mock Exams',
-      hubTitleAr: 'محاكي الاختبارات الرسمية الكاملة لاختبارات نافس الوطنية (ETEC)',
-      badgeEn: 'Nafes KSA',
-      badgeAr: 'نافس الوطني',
+      pillEn: 'Nafes Math · G3/6/9',
+      pillAr: 'نافس رياضيات · 3/6/9',
+      hubTitleEn: 'Nafes KSA Mathematics (ETEC) Official Mock Exams',
+      hubTitleAr: 'محاكي الاختبارات الرسمية الكاملة لمادة الرياضيات — نافس (ETEC)',
+      badgeEn: 'Nafes Math',
+      badgeAr: 'نافس رياضيات',
       examNameEn: 'Nafes National Mathematics Assessment (ETEC — KSA)',
       examNameAr: 'اختبار نافس الوطني للرياضيات — هيئة تقويم التعليم والتدريب',
       scoreTag: '+1 / 0 / 0',
@@ -233,6 +233,103 @@
           ar: 'الصف الثالث المتوسط (30 سؤالاً)',
           shortEn: 'Grade 9 (Intermediate Benchmark)',
           shortAr: 'الصف الثالث المتوسط (نافس 9)',
+        },
+      ],
+    },
+    nafes_science: {
+      id: 'nafes_science',
+      bpField: 'nafes_science_blueprint',
+      optCount: 4,
+      ptsCorrect: 1,
+      ptsWrong: 0,
+      ptsBlank: 0,
+      durationMin: 60,
+      durationRangeLabel: '60–75',
+      pillEn: 'Nafes Science · G6/9',
+      pillAr: 'نافس علوم · 6/9',
+      hubTitleEn: 'Nafes KSA National Science (ETEC) Official Mock Exams',
+      hubTitleAr: 'محاكي الاختبارات الرسمية الكاملة لمادة العلوم — نافس (ETEC)',
+      badgeEn: 'Nafes Science',
+      badgeAr: 'نافس علوم',
+      examNameEn: 'Nafes National Science Assessment (ETEC — KSA)',
+      examNameAr: 'اختبار نافس الوطني للعلوم — هيئة تقويم التعليم والتدريب',
+      scoreTag: '+1 / 0 / 0',
+      tracks: [
+        {
+          level: 'Science · Grade 6',
+          code: 'G6',
+          qCount: 25,
+          durationMin: 60,
+          tiers: { Easy: 9, Medium: 9, Hard: 7 },
+          en: 'Science · Grade 6 (25 Qs)',
+          ar: 'العلوم · الصف السادس الابتدائي (25 سؤالاً)',
+          shortEn: 'Science · Grade 6 Benchmark',
+          shortAr: 'العلوم · الصف السادس الابتدائي (نافس 6)',
+        },
+        {
+          level: 'Science · Grade 9',
+          code: 'G9',
+          qCount: 30,
+          durationMin: 75,
+          tiers: { Easy: 10, Medium: 11, Hard: 9 },
+          en: 'Science · Grade 9 (30 Qs)',
+          ar: 'العلوم · الصف الثالث المتوسط (30 سؤالاً)',
+          shortEn: 'Science · Grade 9 Benchmark',
+          shortAr: 'العلوم · الصف الثالث المتوسط (نافس 9)',
+        },
+      ],
+    },
+    nafes_english: {
+      id: 'nafes_english',
+      bpField: 'nafes_english_blueprint',
+      optCount: 4,
+      ptsCorrect: 1,
+      ptsWrong: 0,
+      ptsBlank: 0,
+      durationMin: 60,
+      durationRangeLabel: '45–75',
+      pillEn: 'Nafes English · G3/6/9',
+      pillAr: 'نافس إنجليزي · 3/6/9',
+      hubTitleEn: 'Nafes KSA National English (ETEC) Official Mock Exams',
+      hubTitleAr: 'محاكي الاختبارات الرسمية الكاملة للغة الإنجليزية — نافس (ETEC)',
+      badgeEn: 'Nafes English',
+      badgeAr: 'نافس إنجليزي',
+      examNameEn: 'Nafes National English Assessment (ETEC — KSA)',
+      examNameAr: 'اختبار نافس الوطني للغة الإنجليزية — هيئة تقويم التعليم والتدريب',
+      scoreTag: '+1 / 0 / 0',
+      tracks: [
+        {
+          level: 'English · Grade 3',
+          code: 'G3',
+          qCount: 20,
+          durationMin: 45,
+          tiers: { Easy: 7, Medium: 7, Hard: 6 },
+          en: 'English · Grade 3 (20 Qs)',
+          ar: 'الإنجليزية · الصف الثالث الابتدائي (20 سؤالاً)',
+          shortEn: 'English · Grade 3 Benchmark',
+          shortAr: 'الإنجليزية · الصف الثالث الابتدائي (نافس 3)',
+        },
+        {
+          level: 'English · Grade 6',
+          code: 'G6',
+          qCount: 25,
+          durationMin: 60,
+          tiers: { Easy: 9, Medium: 9, Hard: 7 },
+          en: 'English · Grade 6 (25 Qs)',
+          ar: 'الإنجليزية · الصف السادس الابتدائي (25 سؤالاً)',
+          shortEn: 'English · Grade 6 Benchmark',
+          shortAr: 'الإنجليزية · الصف السادس الابتدائي (نافس 6)',
+        },
+        {
+          level: 'English · Grade 9',
+          code: 'G9',
+          qCount: 30,
+          durationMin: 75,
+          tiers: { Easy: 10, Medium: 11, Hard: 9 },
+          en: 'English · Grade 9 (30 Qs)',
+          ar: 'الإنجليزية · الصف الثالث المتوسط (30 سؤالاً)',
+          shortEn: 'English · Grade 9 Benchmark',
+          shortAr: 'الإنجليزية · الصف الثالث المتوسط (نافس 9)',
         },
       ],
     },
@@ -297,6 +394,14 @@
     Combinatorics: 'التركيبات والعد',
     'Combinatorics & Logic': 'التركيبات والمنطق',
     'Data & Probability': 'البيانات والاحتمالات',
+    'Life Sciences': 'علوم الحياة',
+    'Chemistry & Matter': 'الكيمياء والمادة',
+    'Physics: Forces & Energy': 'الفيزياء: القوى والطاقة',
+    'Earth & Space Sciences': 'علوم الأرض والفضاء',
+    'Reading Comprehension': 'فهم المقروء',
+    'Text Analysis & Purpose': 'تحليل النص والغرض',
+    'Vocabulary & Context Clues': 'المفردات ودلالات السياق',
+    'Grammar & Sentence Structure': 'القواعد وبنية الجملة',
   };
 
   const DIFF_AR = { Easy: 'أساسي (Part A)', Medium: 'متوسط (Part B)', Hard: 'متقدم (Part C)' };
@@ -308,16 +413,22 @@
   let nsmoDoc = null;
   let kangarooDoc = null;
   let nafesDoc = null;
+  let nafesScienceDoc = null;
+  let nafesEnglishDoc = null;
   let olympiadDoc = null;
   let kaustMocks = [];
   let nsmoMocks = [];
   let kangarooMocks = [];
   let nafesMocks = [];
+  let nafesScienceMocks = [];
+  let nafesEnglishMocks = [];
   let olympiadMocks = [];
   let customKaustMocks = [];
   let customNsmoMocks = [];
   let customKangarooMocks = [];
   let customNafesMocks = [];
+  let customNafesScienceMocks = [];
+  let customNafesEnglishMocks = [];
   let customOlympiadMocks = [];
   let activeComp = 'kaust';
   let activeTrackByComp = {
@@ -325,6 +436,8 @@
     nsmo: COMP_CONFIG.nsmo.tracks[0].level,
     kangaroo: COMP_CONFIG.kangaroo.tracks[0].level,
     nafes: COMP_CONFIG.nafes.tracks[0].level,
+    nafes_science: COMP_CONFIG.nafes_science.tracks[0].level,
+    nafes_english: COMP_CONFIG.nafes_english.tracks[0].level,
     olympiad: COMP_CONFIG.olympiad.tracks[0].level,
   };
   let bestScores = {};
@@ -350,6 +463,20 @@
       return COMP_CONFIG.olympiad;
     }
     if (
+      paper.track === 'nafes_science' ||
+      String(paper.id || '').startsWith('NAFS-SCI-') ||
+      String(paper.level || '').startsWith('Science ')
+    ) {
+      return COMP_CONFIG.nafes_science;
+    }
+    if (
+      paper.track === 'nafes_english' ||
+      String(paper.id || '').startsWith('NAFS-ENG-') ||
+      String(paper.level || '').startsWith('English ')
+    ) {
+      return COMP_CONFIG.nafes_english;
+    }
+    if (
       paper.track === 'nafes' ||
       String(paper.id || '').startsWith('NAFS-') ||
       ['Grade 3', 'Grade 6', 'Grade 9'].includes(paper.level)
@@ -371,6 +498,8 @@
 
   function compForLevel(level) {
     if (String(level || '').startsWith('Tier ')) return COMP_CONFIG.olympiad;
+    if (String(level || '').startsWith('Science ')) return COMP_CONFIG.nafes_science;
+    if (String(level || '').startsWith('English ')) return COMP_CONFIG.nafes_english;
     if (['Grade 3', 'Grade 6', 'Grade 9'].includes(level)) return COMP_CONFIG.nafes;
     if (['PreEcolier', 'Ecolier', 'Benjamin', 'Cadet', 'Junior', 'Student'].includes(level)) return COMP_CONFIG.kangaroo;
     return String(level || '').startsWith('Phase ') ? COMP_CONFIG.nsmo : COMP_CONFIG.kaust;
@@ -378,6 +507,8 @@
 
   function docForComp(compId) {
     if (compId === 'olympiad') return olympiadDoc;
+    if (compId === 'nafes_science') return nafesScienceDoc;
+    if (compId === 'nafes_english') return nafesEnglishDoc;
     if (compId === 'nafes') return nafesDoc;
     if (compId === 'kangaroo') return kangarooDoc;
     if (compId === 'nsmo') return nsmoDoc;
@@ -417,16 +548,34 @@
     return [...nafesMocks, ...customNafesMocks];
   }
 
+  function allNafesSciencePapers() {
+    return [...nafesScienceMocks, ...customNafesScienceMocks];
+  }
+
+  function allNafesEnglishPapers() {
+    return [...nafesEnglishMocks, ...customNafesEnglishMocks];
+  }
+
   function allOlympiadPapers() {
     return [...olympiadMocks, ...customOlympiadMocks];
   }
 
   function allPapersAcrossComps() {
-    return [...allKaustPapers(), ...allNsmoPapers(), ...allKangarooPapers(), ...allNafesPapers(), ...allOlympiadPapers()];
+    return [
+      ...allKaustPapers(),
+      ...allNsmoPapers(),
+      ...allKangarooPapers(),
+      ...allNafesPapers(),
+      ...allNafesSciencePapers(),
+      ...allNafesEnglishPapers(),
+      ...allOlympiadPapers(),
+    ];
   }
 
   function currentCompPapers() {
     if (activeComp === 'olympiad') return allOlympiadPapers();
+    if (activeComp === 'nafes_science') return allNafesSciencePapers();
+    if (activeComp === 'nafes_english') return allNafesEnglishPapers();
     if (activeComp === 'nafes') return allNafesPapers();
     if (activeComp === 'kangaroo') return allKangarooPapers();
     if (activeComp === 'nsmo') return allNsmoPapers();
@@ -652,6 +801,10 @@
     const customList =
       cfg.id === 'olympiad'
         ? customOlympiadMocks
+        : cfg.id === 'nafes_science'
+        ? customNafesScienceMocks
+        : cfg.id === 'nafes_english'
+        ? customNafesEnglishMocks
         : cfg.id === 'nafes'
         ? customNafesMocks
         : cfg.id === 'kangaroo'
@@ -662,6 +815,10 @@
     const baseList =
       cfg.id === 'olympiad'
         ? olympiadMocks
+        : cfg.id === 'nafes_science'
+        ? nafesScienceMocks
+        : cfg.id === 'nafes_english'
+        ? nafesEnglishMocks
         : cfg.id === 'nafes'
         ? nafesMocks
         : cfg.id === 'kangaroo'
@@ -681,11 +838,26 @@
 
     const eCnt = tr.tiers.Easy;
     const mCnt = tr.tiers.Medium;
-    const prefix = cfg.id === 'olympiad' ? 'OLYM' : cfg.id === 'nafes' ? 'NAFS' : cfg.id === 'kangaroo' ? 'KANG' : cfg.id === 'nsmo' ? 'NSMO' : 'KMC';
+    const prefix =
+      cfg.id === 'olympiad'
+        ? 'OLYM'
+        : cfg.id === 'nafes_science'
+        ? 'NAFS-SCI'
+        : cfg.id === 'nafes_english'
+        ? 'NAFS-ENG'
+        : cfg.id === 'nafes'
+        ? 'NAFS'
+        : cfg.id === 'kangaroo'
+        ? 'KANG'
+        : cfg.id === 'nsmo'
+        ? 'NSMO'
+        : 'KMC';
     const maxPts = cfg.tierPoints
       ? eCnt * cfg.tierPoints.Easy + mCnt * cfg.tierPoints.Medium + tr.tiers.Hard * cfg.tierPoints.Hard
       : ordered.length * cfg.ptsCorrect;
     const isNafes = cfg.id === 'nafes';
+    const isNafesSci = cfg.id === 'nafes_science';
+    const isNafesEng = cfg.id === 'nafes_english';
 
     const paper = {
       id: `${prefix}-MOCK-${tr.code}-CUSTOM-${customIdx}`,
@@ -712,12 +884,20 @@
           difficulty: 'Easy',
           start_q: 1,
           end_q: eCnt,
-          en: isNafes
+          en: isNafesSci
+            ? `Part A — Scientific Knowledge & Recall (Questions 1–${eCnt})`
+            : isNafesEng
+            ? `Part A — Literal Comprehension & Core Usage (Questions 1–${eCnt})`
+            : isNafes
             ? `Part A — Knowing & Direct Recall (Questions 1–${eCnt})`
             : cfg.tierPoints
             ? `Part A — 3-Point Problems (Questions 1–${eCnt})`
             : `Part A — Core Reasoning & Speed (Questions 1–${eCnt})`,
-          ar: isNafes
+          ar: isNafesSci
+            ? `الجزء الأول (A) — المعرفة والاستدعاء العلمي (الأسئلة 1–${eCnt})`
+            : isNafesEng
+            ? `الجزء الأول (A) — الفهم الحرفي والاستخدام الأساسي (الأسئلة 1–${eCnt})`
+            : isNafes
             ? `الجزء الأول (A) — المعرفة والاستدعاء المباشر (الأسئلة 1–${eCnt})`
             : cfg.tierPoints
             ? `الجزء الأول (A) — مسائل الـ 3 نقاط (الأسئلة 1–${eCnt})`
@@ -728,12 +908,20 @@
           difficulty: 'Medium',
           start_q: eCnt + 1,
           end_q: eCnt + mCnt,
-          en: isNafes
+          en: isNafesSci
+            ? `Part B — Scientific Application & Inquiry (Questions ${eCnt + 1}–${eCnt + mCnt})`
+            : isNafesEng
+            ? `Part B — Context Clues & Sentence Structure (Questions ${eCnt + 1}–${eCnt + mCnt})`
+            : isNafes
             ? `Part B — Applying Concepts & Multi-Step Skills (Questions ${eCnt + 1}–${eCnt + mCnt})`
             : cfg.tierPoints
             ? `Part B — 4-Point Problems (Questions ${eCnt + 1}–${eCnt + mCnt})`
             : `Part B — Multi-Step Contest Problems (Questions ${eCnt + 1}–${eCnt + mCnt})`,
-          ar: isNafes
+          ar: isNafesSci
+            ? `الجزء الثاني (B) — التطبيق والاستقصاء العلمي (الأسئلة ${eCnt + 1}–${eCnt + mCnt})`
+            : isNafesEng
+            ? `الجزء الثاني (B) — دلالات السياق وبنية الجملة (الأسئلة ${eCnt + 1}–${eCnt + mCnt})`
+            : isNafes
             ? `الجزء الثاني (B) — التطبيق وحل المسائل (الأسئلة ${eCnt + 1}–${eCnt + mCnt})`
             : cfg.tierPoints
             ? `الجزء الثاني (B) — مسائل الـ 4 نقاط (الأسئلة ${eCnt + 1}–${eCnt + mCnt})`
@@ -744,12 +932,20 @@
           difficulty: 'Hard',
           start_q: eCnt + mCnt + 1,
           end_q: ordered.length,
-          en: isNafes
+          en: isNafesSci
+            ? `Part C — Scientific Reasoning & Analysis (Questions ${eCnt + mCnt + 1}–${ordered.length})`
+            : isNafesEng
+            ? `Part C — Inference, Purpose & Textual Reasoning (Questions ${eCnt + mCnt + 1}–${ordered.length})`
+            : isNafes
             ? `Part C — Mathematical Reasoning & Problem Solving (Questions ${eCnt + mCnt + 1}–${ordered.length})`
             : cfg.tierPoints
             ? `Part C — 5-Point Problems (Questions ${eCnt + mCnt + 1}–${ordered.length})`
             : `Part C — Olympiad Qualifier Challenge (Questions ${eCnt + mCnt + 1}–${ordered.length})`,
-          ar: isNafes
+          ar: isNafesSci
+            ? `الجزء الثالث (C) — الاستدلال العلمي وتحليل الأدلة (الأسئلة ${eCnt + mCnt + 1}–${ordered.length})`
+            : isNafesEng
+            ? `الجزء الثالث (C) — الاستنتاج وتحليل الغرض والاستدلال النصي (الأسئلة ${eCnt + mCnt + 1}–${ordered.length})`
+            : isNafes
             ? `الجزء الثالث (C) — الاستدلال الرياضي المتقدم (الأسئلة ${eCnt + mCnt + 1}–${ordered.length})`
             : cfg.tierPoints
             ? `الجزء الثالث (C) — مسائل الـ 5 نقاط (الأسئلة ${eCnt + mCnt + 1}–${ordered.length})`
@@ -777,10 +973,20 @@
 
   /* ---- Simulator Controls ---- */
   window.setMockCompetition = function (compId) {
-    if (compId !== 'kaust' && compId !== 'nsmo' && compId !== 'kangaroo' && compId !== 'nafes' && compId !== 'olympiad') return;
+    if (
+      compId !== 'kaust' &&
+      compId !== 'nsmo' &&
+      compId !== 'kangaroo' &&
+      compId !== 'nafes' &&
+      compId !== 'nafes_science' &&
+      compId !== 'nafes_english' &&
+      compId !== 'olympiad'
+    ) return;
     if (compId === 'nsmo' && !nsmoMocks.length) return;
     if (compId === 'kangaroo' && !kangarooMocks.length) return;
     if (compId === 'nafes' && !nafesMocks.length) return;
+    if (compId === 'nafes_science' && !nafesScienceMocks.length) return;
+    if (compId === 'nafes_english' && !nafesEnglishMocks.length) return;
     if (compId === 'olympiad' && !olympiadMocks.length) return;
     if (session && session.mode === 'exam') return;
     session = null;
@@ -797,11 +1003,21 @@
 
   window.jumpToKaustMocks = function (levelOrComp) {
     if (!session) {
-      if (levelOrComp === 'kaust' || levelOrComp === 'nsmo' || levelOrComp === 'kangaroo' || levelOrComp === 'nafes' || levelOrComp === 'olympiad') {
+      if (
+        levelOrComp === 'kaust' ||
+        levelOrComp === 'nsmo' ||
+        levelOrComp === 'kangaroo' ||
+        levelOrComp === 'nafes' ||
+        levelOrComp === 'nafes_science' ||
+        levelOrComp === 'nafes_english' ||
+        levelOrComp === 'olympiad'
+      ) {
         if (
           (levelOrComp !== 'nsmo' || nsmoMocks.length) &&
           (levelOrComp !== 'kangaroo' || kangarooMocks.length) &&
           (levelOrComp !== 'nafes' || nafesMocks.length) &&
+          (levelOrComp !== 'nafes_science' || nafesScienceMocks.length) &&
+          (levelOrComp !== 'nafes_english' || nafesEnglishMocks.length) &&
           (levelOrComp !== 'olympiad' || olympiadMocks.length)
         ) {
           activeComp = levelOrComp;
@@ -812,6 +1028,8 @@
           (cfg.id !== 'nsmo' || nsmoMocks.length) &&
           (cfg.id !== 'kangaroo' || kangarooMocks.length) &&
           (cfg.id !== 'nafes' || nafesMocks.length) &&
+          (cfg.id !== 'nafes_science' || nafesScienceMocks.length) &&
+          (cfg.id !== 'nafes_english' || nafesEnglishMocks.length) &&
           (cfg.id !== 'olympiad' || olympiadMocks.length)
         ) {
           activeComp = cfg.id;
@@ -981,7 +1199,7 @@
         : `Contest scoring: <strong>+${ptsCorrect} points</strong> for each correct choice, <strong>−1 point</strong> for each incorrect choice, and <strong>0 points</strong> for each blank question.`
       : rtl
       ? `طريقة احتساب الدرجات: <strong>+${ptsCorrect} ${ptsCorrect === 1 ? 'نقطة' : 'نقاط'}</strong> لكل إجابة صحيحة، و<strong>بدون خصم درجات (0)</strong> للإجابات الخاطئة أو المتروكة.`
-      : `${cfg.id === 'nafes' ? 'Official ETEC Nafes' : 'Olympiad'} scoring: <strong>+${ptsCorrect} ${ptsCorrect === 1 ? 'point' : 'points'}</strong> for each correct choice, with <strong>no penalty (0 points)</strong> for wrong or blank responses.`;
+      : `${(cfg.id === 'nafes' || cfg.id === 'nafes_science' || cfg.id === 'nafes_english') ? 'Official ETEC Nafes' : 'Olympiad'} scoring: <strong>+${ptsCorrect} ${ptsCorrect === 1 ? 'point' : 'points'}</strong> for each correct choice, with <strong>no penalty (0 points)</strong> for wrong or blank responses.`;
 
     return `<div class="eg-mock-cover no-break">
       <div class="eg-mock-cover-top">
@@ -1542,9 +1760,11 @@
     const trackPapers = compPapers.filter((p) => p.level === activeTrack);
     const optRange = cfg.optCount === 4 ? 'A–D' : 'A–E';
 
-    const compSwitcher = (nsmoMocks.length || kangarooMocks.length || nafesMocks.length || olympiadMocks.length)
+    const compSwitcher = (nsmoMocks.length || kangarooMocks.length || nafesMocks.length || nafesScienceMocks.length || nafesEnglishMocks.length || olympiadMocks.length)
       ? `<div class="eg-comp-switch no-print" role="tablist" aria-label="Mock Exam Competition">
           ${nafesMocks.length ? `<button type="button" onclick="setMockCompetition('nafes')" class="eg-comp-btn${activeComp === 'nafes' ? ' eg-comp-btn-on' : ''}">${isAr() ? COMP_CONFIG.nafes.pillAr : COMP_CONFIG.nafes.pillEn}</button>` : ''}
+          ${nafesScienceMocks.length ? `<button type="button" onclick="setMockCompetition('nafes_science')" class="eg-comp-btn${activeComp === 'nafes_science' ? ' eg-comp-btn-on' : ''}">${isAr() ? COMP_CONFIG.nafes_science.pillAr : COMP_CONFIG.nafes_science.pillEn}</button>` : ''}
+          ${nafesEnglishMocks.length ? `<button type="button" onclick="setMockCompetition('nafes_english')" class="eg-comp-btn${activeComp === 'nafes_english' ? ' eg-comp-btn-on' : ''}">${isAr() ? COMP_CONFIG.nafes_english.pillAr : COMP_CONFIG.nafes_english.pillEn}</button>` : ''}
           ${kangarooMocks.length ? `<button type="button" onclick="setMockCompetition('kangaroo')" class="eg-comp-btn${activeComp === 'kangaroo' ? ' eg-comp-btn-on' : ''}">${isAr() ? COMP_CONFIG.kangaroo.pillAr : COMP_CONFIG.kangaroo.pillEn}</button>` : ''}
           <button type="button" onclick="setMockCompetition('kaust')" class="eg-comp-btn${activeComp === 'kaust' ? ' eg-comp-btn-on' : ''}">${isAr() ? COMP_CONFIG.kaust.pillAr : COMP_CONFIG.kaust.pillEn}</button>
           ${nsmoMocks.length ? `<button type="button" onclick="setMockCompetition('nsmo')" class="eg-comp-btn${activeComp === 'nsmo' ? ' eg-comp-btn-on' : ''}">${isAr() ? COMP_CONFIG.nsmo.pillAr : COMP_CONFIG.nsmo.pillEn}</button>` : ''}
@@ -1580,7 +1800,7 @@
               <span class="eg-lc-pill">${best ? `${best.score}/${best.maxPoints}` : `${p.svg_count} ${L('رسمة', 'SVGs')} · ${p.max_points} ${L('نقطة', 'pts')}`}</span>
             </div>
             <h3 class="eg-lc-title" onclick="startKaustMock('${p.id}')">${pText.title}</h3>
-            <p class="eg-lc-desc">${pText.focus}</p>
+            <p class="eg-lc-desc">${pText.focus || pText.subtitle || ''}</p>
             <div class="text-xs opacity-75 mt-2">${topicTags}</div>
           </div>
           <div class="eg-mock-actions">
@@ -1605,7 +1825,7 @@
 
     const maxDivPts = tr.tiers.Easy * 3 + tr.tiers.Medium * 4 + tr.tiers.Hard * 5;
     const trDur = tr.durationMin || cfg.durationMin;
-    const subText = cfg.id === 'nafes'
+    const subText = (cfg.id === 'nafes' || cfg.id === 'nafes_science' || cfg.id === 'nafes_english')
       ? L(
           `نظام اختبارات نافس الوطنية الرسمي (${isAr() ? tr.shortAr : tr.shortEn}): <strong>${tr.qCount} سؤال اختيار من متعدد (${optRange})</strong> في <strong>${trDur} دقيقة</strong> بدون آلة حاسبة · <strong>+1 نقطة</strong> لكل إجابة صحيحة (${tr.qCount} نقطة عظمى) و<strong>بدون خصم (0)</strong> للخاطئة أو المتروكة.`,
           `Official ETEC Nafes Assessment Format (${tr.shortEn}): <strong>${tr.qCount} MCQs (${optRange})</strong> in <strong>${trDur} minutes</strong>, No Calculator · <strong>+1 pt</strong> per correct answer (${tr.qCount} max pts) and <strong>0</strong> penalty for wrong/blank.`
@@ -1657,6 +1877,10 @@
     const basePapers =
       cfg.id === 'olympiad'
         ? olympiadMocks
+        : cfg.id === 'nafes_science'
+        ? nafesScienceMocks
+        : cfg.id === 'nafes_english'
+        ? nafesEnglishMocks
         : cfg.id === 'nafes'
         ? nafesMocks
         : cfg.id === 'kangaroo'
@@ -1667,6 +1891,10 @@
     const totalPapers = (
       cfg.id === 'olympiad'
         ? allOlympiadPapers()
+        : cfg.id === 'nafes_science'
+        ? allNafesSciencePapers()
+        : cfg.id === 'nafes_english'
+        ? allNafesEnglishPapers()
         : cfg.id === 'nafes'
         ? allNafesPapers()
         : cfg.id === 'kangaroo'
@@ -1724,11 +1952,13 @@
       practice.parentNode.insertBefore(sec, practice);
     }
 
-    const [kRes, nRes, gRes, fRes, oRes] = await Promise.allSettled([
+    const [kRes, nRes, gRes, fRes, fsRes, feRes, oRes] = await Promise.allSettled([
       fetch('data/kaust_mocks.json'),
       fetch('data/nsmo_mocks.json'),
       fetch('data/kangaroo_mocks.json'),
       fetch('data/nafes_mocks.json'),
+      fetch('data/nafes_science_mocks.json'),
+      fetch('data/nafes_english_mocks.json'),
       fetch('data/olympiad_mocks.json'),
     ]);
     if (kRes.status === 'fulfilled' && kRes.value && kRes.value.ok) {
@@ -1755,13 +1985,25 @@
         nafesMocks = (nafesDoc && nafesDoc.mocks) || [];
       } catch (_) {}
     }
+    if (fsRes.status === 'fulfilled' && fsRes.value && fsRes.value.ok) {
+      try {
+        nafesScienceDoc = await fsRes.value.json();
+        nafesScienceMocks = (nafesScienceDoc && nafesScienceDoc.mocks) || [];
+      } catch (_) {}
+    }
+    if (feRes.status === 'fulfilled' && feRes.value && feRes.value.ok) {
+      try {
+        nafesEnglishDoc = await feRes.value.json();
+        nafesEnglishMocks = (nafesEnglishDoc && nafesEnglishDoc.mocks) || [];
+      } catch (_) {}
+    }
     if (oRes.status === 'fulfilled' && oRes.value && oRes.value.ok) {
       try {
         olympiadDoc = await oRes.value.json();
         olympiadMocks = (olympiadDoc && olympiadDoc.mocks) || [];
       } catch (_) {}
     }
-    if (!kaustMocks.length && !nsmoMocks.length && !kangarooMocks.length && !nafesMocks.length && !olympiadMocks.length) return;
+    if (!kaustMocks.length && !nsmoMocks.length && !kangarooMocks.length && !nafesMocks.length && !nafesScienceMocks.length && !nafesEnglishMocks.length && !olympiadMocks.length) return;
 
     const t0 = Date.now();
     while (!getBankQuestions().length && Date.now() - t0 < 15000) {
@@ -1797,6 +2039,13 @@
             if (g === 3) { activeTrackByComp.nafes = 'Grade 3'; render(); }
             else if (g === 6) { activeTrackByComp.nafes = 'Grade 6'; render(); }
             else if (g === 9) { activeTrackByComp.nafes = 'Grade 9'; render(); }
+          } else if (activeComp === 'nafes_science') {
+            if (g === 6) { activeTrackByComp.nafes_science = 'Science · Grade 6'; render(); }
+            else if (g === 9) { activeTrackByComp.nafes_science = 'Science · Grade 9'; render(); }
+          } else if (activeComp === 'nafes_english') {
+            if (g === 3) { activeTrackByComp.nafes_english = 'English · Grade 3'; render(); }
+            else if (g === 6) { activeTrackByComp.nafes_english = 'English · Grade 6'; render(); }
+            else if (g === 9) { activeTrackByComp.nafes_english = 'English · Grade 9'; render(); }
           } else if (activeComp === 'kangaroo') {
             if (g === 1 || g === 2) { activeTrackByComp.kangaroo = 'PreEcolier'; render(); }
             else if (g === 3 || g === 4) { activeTrackByComp.kangaroo = 'Ecolier'; render(); }
@@ -1834,6 +2083,12 @@
       },
       get nafesMocks() {
         return allNafesPapers();
+      },
+      get nafesScienceMocks() {
+        return allNafesSciencePapers();
+      },
+      get nafesEnglishMocks() {
+        return allNafesEnglishPapers();
       },
       get olympiadMocks() {
         return allOlympiadPapers();

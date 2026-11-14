@@ -40,10 +40,12 @@ const run=s=>vm.runInContext(s,context);
 (async()=>{
  for(const callback of events)await callback();
  await new Promise(r=>setImmediate(r));
- assert.equal(run('appData.questions.length'),8420);
- assert.equal(run('currentFilteredQuestions.length'),8420);
+ assert.equal(run('appData.questions.length'),10220);
+ assert.equal(run('currentFilteredQuestions.length'),10220);
  assert.deepEqual(elements.get('quiz-kangaroo-level-select').options.map(o=>o.value),['all','PreEcolier','Ecolier','Benjamin','Cadet','Junior','Student']);
  assert.deepEqual(elements.get('quiz-nafes-grade-select').options.map(o=>o.value),['all','Grade 3','Grade 6','Grade 9']);
+ assert.deepEqual(elements.get('quiz-nafes-science-grade-select').options.map(o=>o.value),['all','Science · Grade 6','Science · Grade 9']);
+ assert.deepEqual(elements.get('quiz-nafes-english-grade-select').options.map(o=>o.value),['all','English · Grade 3','English · Grade 6','English · Grade 9']);
  assert.deepEqual(elements.get('quiz-olympiad-tier-select').options.map(o=>o.value),['all','Tier 1: Junior Olympiad (Grades 7-8)','Tier 2: Intermediate Olympiad (Grades 9-10)','Tier 3: Senior Olympiad (Grades 11-12)']);
  // Switching away from a selected subtrack must not retain its hidden filter.
  elements.get('quiz-track-select').value='kaust';context.filterQuestions();
@@ -99,6 +101,41 @@ const run=s=>vm.runInContext(s,context);
  elements.get('quiz-track-select').value='jee';context.filterQuestions();
  assert.equal(run('currentFilteredQuestions.length'),500);
  assert.equal(elements.get('quiz-nafes-grade-select').value,'all');
+ // Nafes Science covers ONLY Grades 6 & 9 (720 4-option MCQs; Grade 3 must yield 0).
+ elements.get('quiz-track-select').value='nafes_science';context.filterQuestions();
+ assert.equal(run('currentFilteredQuestions.length'),720);
+ assert(run('currentFilteredQuestions.every(q=>q.content.en.options.length===4&&q.content.ar.options.length===4)'));
+ for(const g of [1,2,3,4,5,7,8,10,11,12]){
+  context.setGradeFilter(g);
+  assert.equal(run('currentFilteredQuestions.length'),0,`Grade ${g} must yield 0 Nafes Science questions`);
+ }
+ for(const [g,expectedLevel] of [[6,'Science · Grade 6'],[9,'Science · Grade 9']]){
+  context.setGradeFilter(g);
+  assert.equal(run('currentFilteredQuestions.length'),360);
+  assert(run(`currentFilteredQuestions.every(q=>q.level===${JSON.stringify(expectedLevel)})`));
+ }
+ context.setGradeFilter('all');
+ elements.get('quiz-nafes-science-grade-select').value='Science · Grade 6';context.filterQuestions();
+ assert.equal(run('currentFilteredQuestions.length'),360);
+ // Nafes English covers Grades 3, 6 & 9 (1,080 4-option MCQs across CEFR A1/A2/B1).
+ elements.get('quiz-track-select').value='nafes_english';context.filterQuestions();
+ assert.equal(elements.get('quiz-nafes-science-grade-select').value,'all');
+ assert.equal(run('currentFilteredQuestions.length'),1080);
+ assert(run('currentFilteredQuestions.every(q=>q.content.en.options.length===4&&q.content.ar.options.length===4)'));
+ for(const g of [1,2,4,5,7,8,10,11,12]){
+  context.setGradeFilter(g);
+  assert.equal(run('currentFilteredQuestions.length'),0,`Grade ${g} must yield 0 Nafes English questions`);
+ }
+ for(const [g,expectedLevel] of [[3,'English · Grade 3'],[6,'English · Grade 6'],[9,'English · Grade 9']]){
+  context.setGradeFilter(g);
+  assert.equal(run('currentFilteredQuestions.length'),360);
+  assert(run(`currentFilteredQuestions.every(q=>q.level===${JSON.stringify(expectedLevel)})`));
+ }
+ context.setGradeFilter('all');
+ elements.get('quiz-nafes-english-grade-select').value='English · Grade 3';context.filterQuestions();
+ assert.equal(run('currentFilteredQuestions.length'),360);
+ elements.get('quiz-track-select').value='jee';context.filterQuestions();
+ assert.equal(elements.get('quiz-nafes-english-grade-select').value,'all');
  // Grade filtering acts on questions, not merely the appearance of track cards.
  // Kangaroo Math covers full Grades 1-12 across PreEcolier (360), Ecolier (360), Benjamin (360), Cadet (360), Junior (360), and Student (360) = 2,160 5-option MCQs.
  elements.get('quiz-track-select').value='kangaroo';context.filterQuestions();
@@ -226,6 +263,8 @@ const run=s=>vm.runInContext(s,context);
  // Verify Unified Nafes + Kangaroo + KAUST + NSMO Study Hub & Edugates A4 Print Frame runtime methods
  await new Promise(r=>setImmediate(r));
  assert.equal(run('window.__kaustStudy.nafesLessons.length'),18);
+ assert.equal(run('window.__kaustStudy.nafesScienceLessons.length'),12);
+ assert.equal(run('window.__kaustStudy.nafesEnglishLessons.length'),18);
  assert.equal(run('window.__kaustStudy.kangarooLessons.length'),36);
  assert.equal(run('window.__kaustStudy.lessons.length'),18);
  assert.equal(run('window.__kaustStudy.nsmoLessons.length'),18);
@@ -249,6 +288,22 @@ const run=s=>vm.runInContext(s,context);
  context.practiceKaustLesson('NAFS-L3-04');
  assert.equal(run('currentFilteredQuestions.length'),60);
  assert(run('currentFilteredQuestions.every(q=>q.track==="nafes"&&q.level==="Grade 9")'));
+ context.clearKaustLessonFilter();
+ context.setStudyCompetition('nafes_science');
+ context.openKaustLesson('NAFS-SCI-L2-01');
+ assert(elements.get('study-lessons').innerHTML.includes('<svg'));
+ assert(!elements.get('study-lessons').innerHTML.includes('undefined'));
+ context.practiceKaustLesson('NAFS-SCI-L3-04');
+ assert.equal(run('currentFilteredQuestions.length'),60);
+ assert(run('currentFilteredQuestions.every(q=>q.track==="nafes_science"&&q.level==="Science · Grade 9")'));
+ context.clearKaustLessonFilter();
+ context.setStudyCompetition('nafes_english');
+ context.openKaustLesson('NAFS-ENG-L1-01');
+ assert(elements.get('study-lessons').innerHTML.includes('<svg'));
+ assert(!elements.get('study-lessons').innerHTML.includes('undefined'));
+ context.practiceKaustLesson('NAFS-ENG-L2-03');
+ assert.equal(run('currentFilteredQuestions.length'),60);
+ assert(run('currentFilteredQuestions.every(q=>q.track==="nafes_english"&&q.level==="English · Grade 6")'));
  context.clearKaustLessonFilter();
  context.setStudyCompetition('kangaroo');
  context.openKaustLesson('KANG-L0-01');
@@ -324,6 +379,8 @@ const run=s=>vm.runInContext(s,context);
  assert.equal(prints,prevPrints+13);
  // Verify Unified Nafes (12 papers, 4-opt, +1/0/0), Kangaroo (24 papers, 5-opt, +3/+4/+5 & 0 wrong), KAUST (15 papers, 5-opt, +4/-1/0), NSMO (12 papers, 4-opt, +4/0/0) & Olympiad (12 papers, 5-opt, +6/0/0) Full Mock Simulators
  assert.equal(run('window.__kaustMocks.nafesMocks.length'),12);
+ assert.equal(run('window.__kaustMocks.nafesScienceMocks.length'),8);
+ assert.equal(run('window.__kaustMocks.nafesEnglishMocks.length'),12);
  assert.equal(run('window.__kaustMocks.kangarooMocks.length'),24);
  assert.equal(run('window.__kaustMocks.mocks.length'),15);
  assert.equal(run('window.__kaustMocks.nsmoMocks.length'),12);
@@ -370,6 +427,70 @@ const run=s=>vm.runInContext(s,context);
  assert.equal(run('window.__kaustMocks.nafesMocks.length'),13);
  assert.equal(run(`window.__kaustMocks.nafesMocks.find(p=>p.id===${JSON.stringify(customNafesId)}).duration_minutes`),60);
  assert.equal(run(`window.__kaustMocks.nafesMocks.find(p=>p.id===${JSON.stringify(customNafesId)}).question_count`),25);
+ // Nafes Science Timed Mock Simulator: 25 Qs (60 min) for Grade 6, 30 Qs (75 min) for Grade 9, +1 / 0 / 0 scoring
+ context.setMockCompetition('nafes_science');
+ context.startKaustMock('NAFS-SCI-MOCK-G6-01');
+ assert.equal(run('window.__kaustMocks.session.questions.length'),25);
+ assert.equal(run('window.__kaustMocks.session.remainingSec'),3600);
+ context.exitKaustMock(true);
+ context.startKaustMock('NAFS-SCI-MOCK-G9-01');
+ assert.equal(run('window.__kaustMocks.session.questions.length'),30);
+ assert.equal(run('window.__kaustMocks.session.remainingSec'),4500);
+ const fs0Ok=run('window.__kaustMocks.session.questions[0].correct_index');
+ const fs1Bad=run('(window.__kaustMocks.session.questions[1].correct_index+1)%4');
+ context.selectKaustMockOption(0,fs0Ok);
+ context.selectKaustMockOption(1,fs1Bad);
+ context.requestSubmitKaustMock();
+ context.confirmSubmitKaustMock();
+ assert.equal(run('window.__kaustMocks.session.report.score'),1);
+ assert.equal(run('window.__kaustMocks.session.report.maxPoints'),30);
+ const nafesSciPrints=prints;
+ context.printKaustMockPaper('NAFS-SCI-MOCK-G6-01','student');
+ assert.equal(prints,nafesSciPrints+1);
+ assert(elements.get('print-container').innerHTML.includes('eg-omr-sheet'));
+ assert(!elements.get('print-container').innerHTML.includes('undefined'));
+ context.printBlankKaustOmr('Science · Grade 9');
+ assert.equal(prints,nafesSciPrints+2);
+ context.exitKaustMock(true);
+ const customNafesSciId=context.generateCustomKaustMock('Science · Grade 6');
+ assert(customNafesSciId&&customNafesSciId.startsWith('NAFS-SCI-MOCK-G6-CUSTOM-'));
+ assert.equal(run('window.__kaustMocks.nafesScienceMocks.length'),9);
+ assert.equal(run(`window.__kaustMocks.nafesScienceMocks.find(p=>p.id===${JSON.stringify(customNafesSciId)}).duration_minutes`),60);
+ assert.equal(run(`window.__kaustMocks.nafesScienceMocks.find(p=>p.id===${JSON.stringify(customNafesSciId)}).question_count`),25);
+ // Nafes English Timed Mock Simulator: 20 Qs (45 min) G3, 25 Qs (60 min) G6, 30 Qs (75 min) G9, +1 / 0 / 0 scoring
+ context.setMockCompetition('nafes_english');
+ context.startKaustMock('NAFS-ENG-MOCK-G3-01');
+ assert.equal(run('window.__kaustMocks.session.questions.length'),20);
+ assert.equal(run('window.__kaustMocks.session.remainingSec'),2700);
+ context.exitKaustMock(true);
+ context.startKaustMock('NAFS-ENG-MOCK-G6-01');
+ assert.equal(run('window.__kaustMocks.session.questions.length'),25);
+ assert.equal(run('window.__kaustMocks.session.remainingSec'),3600);
+ context.exitKaustMock(true);
+ context.startKaustMock('NAFS-ENG-MOCK-G9-01');
+ assert.equal(run('window.__kaustMocks.session.questions.length'),30);
+ assert.equal(run('window.__kaustMocks.session.remainingSec'),4500);
+ const fe0Ok=run('window.__kaustMocks.session.questions[0].correct_index');
+ const fe1Bad=run('(window.__kaustMocks.session.questions[1].correct_index+1)%4');
+ context.selectKaustMockOption(0,fe0Ok);
+ context.selectKaustMockOption(1,fe1Bad);
+ context.requestSubmitKaustMock();
+ context.confirmSubmitKaustMock();
+ assert.equal(run('window.__kaustMocks.session.report.score'),1);
+ assert.equal(run('window.__kaustMocks.session.report.maxPoints'),30);
+ const nafesEngPrints=prints;
+ context.printKaustMockPaper('NAFS-ENG-MOCK-G3-01','student');
+ assert.equal(prints,nafesEngPrints+1);
+ assert(elements.get('print-container').innerHTML.includes('eg-omr-sheet'));
+ assert(!elements.get('print-container').innerHTML.includes('undefined'));
+ context.printBlankKaustOmr('English · Grade 9');
+ assert.equal(prints,nafesEngPrints+2);
+ context.exitKaustMock(true);
+ const customNafesEngId=context.generateCustomKaustMock('English · Grade 6');
+ assert(customNafesEngId&&customNafesEngId.startsWith('NAFS-ENG-MOCK-G6-CUSTOM-'));
+ assert.equal(run('window.__kaustMocks.nafesEnglishMocks.length'),13);
+ assert.equal(run(`window.__kaustMocks.nafesEnglishMocks.find(p=>p.id===${JSON.stringify(customNafesEngId)}).duration_minutes`),60);
+ assert.equal(run(`window.__kaustMocks.nafesEnglishMocks.find(p=>p.id===${JSON.stringify(customNafesEngId)}).question_count`),25);
  // Kangaroo Timed Mock Simulator: 24 Qs (96 pts) for PreEcolier/Ecolier/Benjamin, 30 Qs (120 pts) for Cadet/Junior/Student, 75 min, +3/+4/+5 tier points & 0 wrong penalty
  context.setMockCompetition('kangaroo');
  context.startKaustMock('KANG-MOCK-PRE-01');
@@ -494,7 +615,7 @@ const run=s=>vm.runInContext(s,context);
  const customOlymId=context.generateCustomKaustMock('Tier 2: Intermediate Olympiad (Grades 9-10)');
  assert(customOlymId&&customOlymId.startsWith('OLYM-MOCK-T2-CUSTOM-'));
  assert.equal(run('window.__kaustMocks.olympiadMocks.length'),13);
- console.log('PASS: startup, 8420 questions, Nafes + Kangaroo + KAUST + NSMO + Olympiad study hubs (108 lessons), Nafes + Kangaroo + KAUST + NSMO + Olympiad timed mock simulators (75 papers), Edugates A4 Worksheet Customizer & OMR print engine, Arabic & theme controls.');
+ console.log('PASS: startup, 10220 questions, Nafes (Math + Science + English) + Kangaroo + KAUST + NSMO + Olympiad study hubs (138 lessons) & timed mock simulators (95 papers), Edugates A4 Worksheet Customizer & OMR print engine, Arabic & theme controls.');
  console.log('Runtime tests use lightweight DOM stubs; this is not browser or visual QA.');
 })().catch(e=>{console.error(e);process.exitCode=1});
 
@@ -541,6 +662,86 @@ const run=s=>vm.runInContext(s,context);
     });
   }
   assert.equal(nafesMockUsed.size,300);
+  // 0b. Nafes Science Static Contract (Grades 6 & 9 only)
+  const sciLessons=JSON.parse(fs.readFileSync(path.join(root,'data/nafes_science_lessons.json'),'utf8')).lessons;
+  const sciMocksDoc=JSON.parse(fs.readFileSync(path.join(root,'data/nafes_science_mocks.json'),'utf8'));
+  const sciBank=JSON.parse(fs.readFileSync(path.join(root,'data/nafes_science.json'),'utf8'));
+  assert.equal(sciBank.length,720);
+  assert.equal(sciLessons.length,12);
+  assert.equal(sciMocksDoc.mocks.length,8);
+  const sciIds=new Set(sciBank.map(q=>q.id));
+  const sciLessonUsed=new Set();
+  for(const l of sciLessons){
+    assert(l.en.examples.length>=4&&l.ar.examples.length>=4,l.id);
+    assert.equal(l.en.cheat_sheet.length,4,l.id);
+    assert.equal(l.ar.cheat_sheet.length,4,l.id);
+    assert(l.en.concepts.every(c=>c.diagram&&c.diagram.includes('<svg')),l.id+' concept SVG');
+    assert(l.ar.concepts.every(c=>c.diagram&&c.diagram.includes('<svg')),l.id+' AR concept SVG');
+    assert(l.en.examples.every(e=>e.diagram&&e.diagram.includes('<svg')),l.id+' example SVG');
+    assert(l.ar.examples.every(e=>e.diagram&&e.diagram.includes('<svg')),l.id+' AR example SVG');
+    assert.equal(l.bank_example_ids.length,6);
+    assert.equal(l.drill_ids.length,6);
+    l.bank_example_ids.forEach(i=>{assert(sciIds.has(i),i);sciLessonUsed.add(i);});
+    l.drill_ids.forEach(i=>{assert(sciIds.has(i),i);assert(!l.bank_example_ids.includes(i),'overlap '+i);sciLessonUsed.add(i);});
+    for(const e of l.en.examples)assert.equal(e.options.length,4);
+  }
+  const sciMockUsed=new Set();
+  for(const m of sciMocksDoc.mocks){
+    const exp=m.level==='Science · Grade 6'?25:30;
+    const expDur=m.level==='Science · Grade 6'?60:75;
+    assert.equal(m.question_ids.length,exp,m.id);
+    assert.equal(m.max_points,exp,m.id);
+    assert.equal(m.duration_minutes,expDur,m.id);
+    assert.equal(m.points_correct,1,m.id);
+    assert.equal(m.points_wrong,0,m.id);
+    m.question_ids.forEach(i=>{
+      assert(sciIds.has(i),i);
+      assert(!sciLessonUsed.has(i),'nafes_science lesson overlap '+i);
+      assert(!sciMockUsed.has(i),'nafes_science mock duplicate '+i);
+      sciMockUsed.add(i);
+    });
+  }
+  assert.equal(sciMockUsed.size,220);
+  // 0c. Nafes English Static Contract (Grades 3, 6 & 9)
+  const engLessons=JSON.parse(fs.readFileSync(path.join(root,'data/nafes_english_lessons.json'),'utf8')).lessons;
+  const engMocksDoc=JSON.parse(fs.readFileSync(path.join(root,'data/nafes_english_mocks.json'),'utf8'));
+  const engBank=JSON.parse(fs.readFileSync(path.join(root,'data/nafes_english.json'),'utf8'));
+  assert.equal(engBank.length,1080);
+  assert.equal(engLessons.length,18);
+  assert.equal(engMocksDoc.mocks.length,12);
+  const engIds=new Set(engBank.map(q=>q.id));
+  const engLessonUsed=new Set();
+  for(const l of engLessons){
+    assert(l.en.examples.length>=4&&l.ar.examples.length>=4,l.id);
+    assert.equal(l.en.cheat_sheet.length,4,l.id);
+    assert.equal(l.ar.cheat_sheet.length,4,l.id);
+    assert(l.en.concepts.every(c=>c.diagram&&c.diagram.includes('<svg')),l.id+' concept SVG');
+    assert(l.ar.concepts.every(c=>c.diagram&&c.diagram.includes('<svg')),l.id+' AR concept SVG');
+    assert(l.en.examples.every(e=>e.diagram&&e.diagram.includes('<svg')),l.id+' example SVG');
+    assert(l.ar.examples.every(e=>e.diagram&&e.diagram.includes('<svg')),l.id+' AR example SVG');
+    assert.equal(l.bank_example_ids.length,6);
+    assert.equal(l.drill_ids.length,6);
+    l.bank_example_ids.forEach(i=>{assert(engIds.has(i),i);engLessonUsed.add(i);});
+    l.drill_ids.forEach(i=>{assert(engIds.has(i),i);assert(!l.bank_example_ids.includes(i),'overlap '+i);engLessonUsed.add(i);});
+    for(const e of l.en.examples)assert.equal(e.options.length,4);
+  }
+  const engMockUsed=new Set();
+  for(const m of engMocksDoc.mocks){
+    const exp=m.level==='English · Grade 3'?20:m.level==='English · Grade 6'?25:30;
+    const expDur=m.level==='English · Grade 3'?45:m.level==='English · Grade 6'?60:75;
+    assert.equal(m.question_ids.length,exp,m.id);
+    assert.equal(m.max_points,exp,m.id);
+    assert.equal(m.duration_minutes,expDur,m.id);
+    assert.equal(m.points_correct,1,m.id);
+    assert.equal(m.points_wrong,0,m.id);
+    m.question_ids.forEach(i=>{
+      assert(engIds.has(i),i);
+      assert(!engLessonUsed.has(i),'nafes_english lesson overlap '+i);
+      assert(!engMockUsed.has(i),'nafes_english mock duplicate '+i);
+      engMockUsed.add(i);
+    });
+  }
+  assert.equal(engMockUsed.size,300);
   // 0. Kangaroo Math Static Contract
   const kangLessons=JSON.parse(fs.readFileSync(path.join(root,'data/kangaroo_lessons.json'),'utf8')).lessons;
   const kangMocksDoc=JSON.parse(fs.readFileSync(path.join(root,'data/kangaroo_mocks.json'),'utf8'));
@@ -706,5 +907,5 @@ const run=s=>vm.runInContext(s,context);
   const js=fs.readFileSync(path.join(root,'assets/kaust-study.js'),'utf8');
   assert(js.includes('LOGO.jpg')&&js.includes('Edugates International School')&&js.includes('buildEdugatesOmrSheetHtml'));
   assert(fs.existsSync(path.join(root,'LOGO.jpg')));
-  console.log('PASS: Static schema verified for 18 Nafes + 36 Kangaroo + 18 KAUST + 18 NSMO + 18 Olympiad lessons (342/342 concept SVGs, 468/468 bespoke example SVGs, 432/432 cheat-sheet cards) + 12 Nafes + 24 Kangaroo + 15 KAUST + 12 NSMO + 12 Olympiad Official Mock Exams (1,998 unique mock Qs), A4 CSS & Edugates OMR.');
+  console.log('PASS: Static schema verified for 18 Nafes Math + 12 Nafes Science + 18 Nafes English + 36 Kangaroo + 18 KAUST + 18 NSMO + 18 Olympiad lessons (138 total) + 95 Official Mock Exams (2,518 unique mock Qs), A4 CSS & Edugates OMR.');
 })();

@@ -72,20 +72,59 @@
       id: 'nafes',
       bpField: 'nafes_blueprint',
       quizSelectId: 'quiz-nafes-grade-select',
-      pillEn: 'Nafes KSA · G3/6/9',
-      pillAr: 'نافس الوطني · 3/6/9',
-      hubTitleEn: 'Nafes KSA National Assessment (ETEC) Study Lessons',
-      hubTitleAr: 'أكاديمية شرح دروس اختبارات نافس الوطنية — هيئة تقويم التعليم والتدريب',
-      badgeEn: 'Nafes KSA',
-      badgeAr: 'نافس الوطني',
-      bankTagEn: 'Nafes Bank',
-      bankTagAr: 'من بنك نافس',
+      pillEn: 'Nafes Math · G3/6/9',
+      pillAr: 'نافس رياضيات · 3/6/9',
+      hubTitleEn: 'Nafes KSA Mathematics (ETEC) Study Lessons',
+      hubTitleAr: 'أكاديمية شرح دروس نافس للرياضيات — هيئة تقويم التعليم والتدريب',
+      badgeEn: 'Nafes Math',
+      badgeAr: 'نافس رياضيات',
+      bankTagEn: 'Nafes Math Bank',
+      bankTagAr: 'بنك نافس رياضيات',
       trapsTitleEn: 'Watch Out — Common ETEC Nafes Assessment Traps!',
       trapsTitleAr: 'احذر هذه الأخطاء الشائعة في اختبارات نافس الوطنية!',
       tracks: [
         { level: 'Grade 3', en: 'Grade 3 · Primary Benchmark', ar: 'الصف الثالث الابتدائي (نافس 3)', shortEn: 'Grade 3 (Primary)', shortAr: 'الصف الثالث الابتدائي' },
         { level: 'Grade 6', en: 'Grade 6 · Upper Primary Benchmark', ar: 'الصف السادس الابتدائي (نافس 6)', shortEn: 'Grade 6 (Primary)', shortAr: 'الصف السادس الابتدائي' },
         { level: 'Grade 9', en: 'Grade 9 · Intermediate Benchmark', ar: 'الصف الثالث المتوسط (نافس 9)', shortEn: 'Grade 9 (Intermediate)', shortAr: 'الصف الثالث المتوسط' },
+      ],
+    },
+    nafes_science: {
+      id: 'nafes_science',
+      bpField: 'nafes_science_blueprint',
+      quizSelectId: 'quiz-nafes-science-grade-select',
+      pillEn: 'Nafes Science · G6/9',
+      pillAr: 'نافس علوم · 6/9',
+      hubTitleEn: 'Nafes KSA Science (ETEC) Study Lessons',
+      hubTitleAr: 'أكاديمية شرح دروس نافس للعلوم — هيئة تقويم التعليم والتدريب',
+      badgeEn: 'Nafes Science',
+      badgeAr: 'نافس علوم',
+      bankTagEn: 'Nafes Science Bank',
+      bankTagAr: 'بنك نافس علوم',
+      trapsTitleEn: 'Watch Out — Common ETEC Nafes Science Misconceptions!',
+      trapsTitleAr: 'احذر هذه المفاهيم والأخطاء العلمية الشائعة في اختبارات نافس!',
+      tracks: [
+        { level: 'Science · Grade 6', en: 'Science · Grade 6 Benchmark', ar: 'العلوم · الصف السادس الابتدائي (نافس 6)', shortEn: 'Science · Grade 6', shortAr: 'العلوم · الصف 6' },
+        { level: 'Science · Grade 9', en: 'Science · Grade 9 Benchmark', ar: 'العلوم · الصف الثالث المتوسط (نافس 9)', shortEn: 'Science · Grade 9', shortAr: 'العلوم · الصف 9' },
+      ],
+    },
+    nafes_english: {
+      id: 'nafes_english',
+      bpField: 'nafes_english_blueprint',
+      quizSelectId: 'quiz-nafes-english-grade-select',
+      pillEn: 'Nafes English · G3/6/9',
+      pillAr: 'نافس إنجليزي · 3/6/9',
+      hubTitleEn: 'Nafes KSA English Literacy (ETEC) Study Lessons',
+      hubTitleAr: 'أكاديمية شرح دروس نافس للغة الإنجليزية — هيئة تقويم التعليم والتدريب',
+      badgeEn: 'Nafes English',
+      badgeAr: 'نافس إنجليزي',
+      bankTagEn: 'Nafes English Bank',
+      bankTagAr: 'بنك نافس إنجليزي',
+      trapsTitleEn: 'Watch Out — Common ETEC Nafes English Reading & Grammar Traps!',
+      trapsTitleAr: 'احذر هذه الأخطاء الشائعة في فهم المقروء وقواعد اللغة الإنجليزية!',
+      tracks: [
+        { level: 'English · Grade 3', en: 'English · Grade 3 Benchmark', ar: 'الإنجليزية · الصف الثالث الابتدائي (نافس 3)', shortEn: 'English · Grade 3', shortAr: 'الإنجليزية · الصف 3' },
+        { level: 'English · Grade 6', en: 'English · Grade 6 Benchmark', ar: 'الإنجليزية · الصف السادس الابتدائي (نافس 6)', shortEn: 'English · Grade 6', shortAr: 'الإنجليزية · الصف 6' },
+        { level: 'English · Grade 9', en: 'English · Grade 9 Benchmark', ar: 'الإنجليزية · الصف الثالث المتوسط (نافس 9)', shortEn: 'English · Grade 9', shortAr: 'الإنجليزية · الصف 9' },
       ],
     },
     olympiad: {
@@ -119,6 +158,14 @@
     'Combinatorics': 'التركيبات والعد',
     'Combinatorics & Logic': 'التوافيق والمنطق والاحتمالات',
     'Data & Probability': 'البيانات والاحتمالات',
+    'Life Sciences': 'علوم الحياة',
+    'Chemistry & Matter': 'الكيمياء والمادة',
+    'Physics: Forces & Energy': 'الفيزياء: القوى والطاقة',
+    'Earth & Space Sciences': 'علوم الأرض والفضاء',
+    'Reading Comprehension': 'فهم المقروء',
+    'Text Analysis & Purpose': 'تحليل النص والغرض',
+    'Vocabulary & Context Clues': 'المفردات ودلالات السياق',
+    'Grammar & Sentence Structure': 'القواعد وبنية الجملة',
   };
   const DIFF_AR = {
     Easy: 'سهل',
@@ -130,6 +177,8 @@
   let nsmoLessons = [];
   let kangarooLessons = [];
   let nafesLessons = [];
+  let nafesScienceLessons = [];
+  let nafesEnglishLessons = [];
   let olympiadLessons = [];
   let activeComp = 'kaust';
   let activeTrackByComp = {
@@ -137,6 +186,8 @@
     nsmo: COMP_CONFIG.nsmo.tracks[0].level,
     kangaroo: COMP_CONFIG.kangaroo.tracks[0].level,
     nafes: COMP_CONFIG.nafes.tracks[0].level,
+    nafes_science: COMP_CONFIG.nafes_science.tracks[0].level,
+    nafes_english: COMP_CONFIG.nafes_english.tracks[0].level,
     olympiad: COMP_CONFIG.olympiad.tracks[0].level,
   };
   let activeLessonId = null;
@@ -156,11 +207,13 @@
   const getBankQuestions = () => (typeof appData !== 'undefined' && Array.isArray(appData.questions) ? appData.questions : []);
 
   function allLessons() {
-    return kaustLessons.concat(nsmoLessons, kangarooLessons, nafesLessons, olympiadLessons);
+    return kaustLessons.concat(nsmoLessons, kangarooLessons, nafesLessons, nafesScienceLessons, nafesEnglishLessons, olympiadLessons);
   }
 
   function currentLessons() {
     if (activeComp === 'olympiad') return olympiadLessons;
+    if (activeComp === 'nafes_science') return nafesScienceLessons;
+    if (activeComp === 'nafes_english') return nafesEnglishLessons;
     if (activeComp === 'nafes') return nafesLessons;
     if (activeComp === 'nsmo') return nsmoLessons;
     if (activeComp === 'kangaroo') return kangarooLessons;
@@ -171,6 +224,12 @@
     if (!les) return COMP_CONFIG[activeComp];
     if (les.track === 'olympiad' || String(les.id || '').startsWith('OLYM-') || String(les.level || '').startsWith('Tier ')) {
       return COMP_CONFIG.olympiad;
+    }
+    if (les.track === 'nafes_science' || String(les.id || '').startsWith('NAFS-SCI-') || String(les.level || '').startsWith('Science ')) {
+      return COMP_CONFIG.nafes_science;
+    }
+    if (les.track === 'nafes_english' || String(les.id || '').startsWith('NAFS-ENG-') || String(les.level || '').startsWith('English ')) {
+      return COMP_CONFIG.nafes_english;
     }
     if (les.track === 'nafes' || String(les.id || '').startsWith('NAFS-') || ['Grade 3', 'Grade 6', 'Grade 9'].includes(les.level)) {
       return COMP_CONFIG.nafes;
@@ -914,10 +973,20 @@
   };
 
   window.setStudyCompetition = function (compId) {
-    if (compId !== 'kaust' && compId !== 'nsmo' && compId !== 'kangaroo' && compId !== 'nafes' && compId !== 'olympiad') return;
+    if (
+      compId !== 'kaust' &&
+      compId !== 'nsmo' &&
+      compId !== 'kangaroo' &&
+      compId !== 'nafes' &&
+      compId !== 'nafes_science' &&
+      compId !== 'nafes_english' &&
+      compId !== 'olympiad'
+    ) return;
     if (compId === 'nsmo' && !nsmoLessons.length) return;
     if (compId === 'kangaroo' && !kangarooLessons.length) return;
     if (compId === 'nafes' && !nafesLessons.length) return;
+    if (compId === 'nafes_science' && !nafesScienceLessons.length) return;
+    if (compId === 'nafes_english' && !nafesEnglishLessons.length) return;
     if (compId === 'olympiad' && !olympiadLessons.length) return;
     activeComp = compId;
     activeLessonId = null;
@@ -935,7 +1004,6 @@
     activeLessonId = id;
     exampleFilterMode = 'all';
     if (typeof window.setAppView === 'function') window.setAppView('lessons', true);
-    if (typeof window.setAppView === 'function') window.setAppView('lessons', true);
     render();
     const el = document.getElementById('study-lessons');
     if (el) el.scrollIntoView({ behavior: 'smooth' });
@@ -947,7 +1015,13 @@
   };
 
   window.setKaustTrack = function (level) {
-    if (['Grade 3', 'Grade 6', 'Grade 9'].includes(level)) {
+    if (String(level || '').startsWith('Science ')) {
+      activeComp = 'nafes_science';
+      activeTrackByComp.nafes_science = level;
+    } else if (String(level || '').startsWith('English ')) {
+      activeComp = 'nafes_english';
+      activeTrackByComp.nafes_english = level;
+    } else if (['Grade 3', 'Grade 6', 'Grade 9'].includes(level)) {
       activeComp = 'nafes';
       activeTrackByComp.nafes = level;
     } else if (['PreEcolier', 'Ecolier', 'Benjamin', 'Cadet', 'Junior', 'Student'].includes(level)) {
@@ -968,11 +1042,21 @@
   };
 
   window.jumpToKaustStudy = function (levelOrComp) {
-    if (levelOrComp === 'kaust' || levelOrComp === 'nsmo' || levelOrComp === 'kangaroo' || levelOrComp === 'nafes' || levelOrComp === 'olympiad') {
+    if (
+      levelOrComp === 'kaust' ||
+      levelOrComp === 'nsmo' ||
+      levelOrComp === 'kangaroo' ||
+      levelOrComp === 'nafes' ||
+      levelOrComp === 'nafes_science' ||
+      levelOrComp === 'nafes_english' ||
+      levelOrComp === 'olympiad'
+    ) {
       if (
         (levelOrComp !== 'nsmo' || nsmoLessons.length) &&
         (levelOrComp !== 'kangaroo' || kangarooLessons.length) &&
         (levelOrComp !== 'nafes' || nafesLessons.length) &&
+        (levelOrComp !== 'nafes_science' || nafesScienceLessons.length) &&
+        (levelOrComp !== 'nafes_english' || nafesEnglishLessons.length) &&
         (levelOrComp !== 'olympiad' || olympiadLessons.length)
       ) {
         activeComp = levelOrComp;
@@ -1004,9 +1088,11 @@
     const cfg = COMP_CONFIG[activeComp];
     const activeTrack = activeTrackByComp[activeComp];
 
-    const compSwitcher = (nsmoLessons.length || kangarooLessons.length || nafesLessons.length || olympiadLessons.length)
+    const compSwitcher = (nsmoLessons.length || kangarooLessons.length || nafesLessons.length || nafesScienceLessons.length || nafesEnglishLessons.length || olympiadLessons.length)
       ? `<div class="eg-comp-switch no-print" role="tablist" aria-label="Study Competition">
           ${nafesLessons.length ? `<button type="button" onclick="setStudyCompetition('nafes')" class="eg-comp-btn${activeComp === 'nafes' ? ' eg-comp-btn-on' : ''}">${isAr() ? COMP_CONFIG.nafes.pillAr : COMP_CONFIG.nafes.pillEn}</button>` : ''}
+          ${nafesScienceLessons.length ? `<button type="button" onclick="setStudyCompetition('nafes_science')" class="eg-comp-btn${activeComp === 'nafes_science' ? ' eg-comp-btn-on' : ''}">${isAr() ? COMP_CONFIG.nafes_science.pillAr : COMP_CONFIG.nafes_science.pillEn}</button>` : ''}
+          ${nafesEnglishLessons.length ? `<button type="button" onclick="setStudyCompetition('nafes_english')" class="eg-comp-btn${activeComp === 'nafes_english' ? ' eg-comp-btn-on' : ''}">${isAr() ? COMP_CONFIG.nafes_english.pillAr : COMP_CONFIG.nafes_english.pillEn}</button>` : ''}
           ${kangarooLessons.length ? `<button type="button" onclick="setStudyCompetition('kangaroo')" class="eg-comp-btn${activeComp === 'kangaroo' ? ' eg-comp-btn-on' : ''}">${isAr() ? COMP_CONFIG.kangaroo.pillAr : COMP_CONFIG.kangaroo.pillEn}</button>` : ''}
           <button type="button" onclick="setStudyCompetition('kaust')" class="eg-comp-btn${activeComp === 'kaust' ? ' eg-comp-btn-on' : ''}">${isAr() ? COMP_CONFIG.kaust.pillAr : COMP_CONFIG.kaust.pillEn}</button>
           ${nsmoLessons.length ? `<button type="button" onclick="setStudyCompetition('nsmo')" class="eg-comp-btn${activeComp === 'nsmo' ? ' eg-comp-btn-on' : ''}">${isAr() ? COMP_CONFIG.nsmo.pillAr : COMP_CONFIG.nsmo.pillEn}</button>` : ''}
@@ -1130,11 +1216,13 @@
       sec.className = 'no-print-section';
       practice.parentNode.insertBefore(sec, practice);
     }
-    const [kRes, nRes, gRes, fRes, oRes] = await Promise.allSettled([
+    const [kRes, nRes, gRes, fRes, fsRes, feRes, oRes] = await Promise.allSettled([
       fetch('data/kaust_lessons.json'),
       fetch('data/nsmo_lessons.json'),
       fetch('data/kangaroo_lessons.json'),
       fetch('data/nafes_lessons.json'),
+      fetch('data/nafes_science_lessons.json'),
+      fetch('data/nafes_english_lessons.json'),
       fetch('data/olympiad_lessons.json'),
     ]);
     if (kRes.status === 'fulfilled' && kRes.value && kRes.value.ok) {
@@ -1157,12 +1245,22 @@
         nafesLessons = ((await fRes.value.json()).lessons) || [];
       } catch (_) {}
     }
+    if (fsRes.status === 'fulfilled' && fsRes.value && fsRes.value.ok) {
+      try {
+        nafesScienceLessons = ((await fsRes.value.json()).lessons) || [];
+      } catch (_) {}
+    }
+    if (feRes.status === 'fulfilled' && feRes.value && feRes.value.ok) {
+      try {
+        nafesEnglishLessons = ((await feRes.value.json()).lessons) || [];
+      } catch (_) {}
+    }
     if (oRes.status === 'fulfilled' && oRes.value && oRes.value.ok) {
       try {
         olympiadLessons = ((await oRes.value.json()).lessons) || [];
       } catch (_) {}
     }
-    if (!kaustLessons.length && !nsmoLessons.length && !kangarooLessons.length && !nafesLessons.length && !olympiadLessons.length) return;
+    if (!kaustLessons.length && !nsmoLessons.length && !kangarooLessons.length && !nafesLessons.length && !nafesScienceLessons.length && !nafesEnglishLessons.length && !olympiadLessons.length) return;
 
     const t0 = Date.now();
     while (!getBankQuestions().length && Date.now() - t0 < 15000) {
@@ -1193,6 +1291,13 @@
           if (g === 3) { activeTrackByComp.nafes = 'Grade 3'; activeLessonId = null; render(); }
           else if (g === 6) { activeTrackByComp.nafes = 'Grade 6'; activeLessonId = null; render(); }
           else if (g === 9) { activeTrackByComp.nafes = 'Grade 9'; activeLessonId = null; render(); }
+        } else if (activeComp === 'nafes_science') {
+          if (g === 6) { activeTrackByComp.nafes_science = 'Science · Grade 6'; activeLessonId = null; render(); }
+          else if (g === 9) { activeTrackByComp.nafes_science = 'Science · Grade 9'; activeLessonId = null; render(); }
+        } else if (activeComp === 'nafes_english') {
+          if (g === 3) { activeTrackByComp.nafes_english = 'English · Grade 3'; activeLessonId = null; render(); }
+          else if (g === 6) { activeTrackByComp.nafes_english = 'English · Grade 6'; activeLessonId = null; render(); }
+          else if (g === 9) { activeTrackByComp.nafes_english = 'English · Grade 9'; activeLessonId = null; render(); }
         } else if (activeComp === 'kangaroo') {
           if (g === 1 || g === 2) { activeTrackByComp.kangaroo = 'PreEcolier'; activeLessonId = null; render(); }
           else if (g === 3 || g === 4) { activeTrackByComp.kangaroo = 'Ecolier'; activeLessonId = null; render(); }
@@ -1226,6 +1331,8 @@
     get nsmoLessons() { return nsmoLessons; },
     get kangarooLessons() { return kangarooLessons; },
     get nafesLessons() { return nafesLessons; },
+    get nafesScienceLessons() { return nafesScienceLessons; },
+    get nafesEnglishLessons() { return nafesEnglishLessons; },
     get olympiadLessons() { return olympiadLessons; },
     get allLessons() { return allLessons(); },
     get activeComp() { return activeComp; },

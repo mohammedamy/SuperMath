@@ -1,6 +1,6 @@
 {
   "status": "passed",
-  "total": 8420,
+  "total": 10220,
   "parameterized_additions": 293,
   "independently_enumerated_generated_answers": 5,
   "scope_certification": false,
@@ -25,6 +25,23 @@
         "Grade 3": 360,
         "Grade 6": 360,
         "Grade 9": 360
+      }
+    },
+    {
+      "track": "nafes_science",
+      "total": 720,
+      "levels": {
+        "Science · Grade 6": 360,
+        "Science · Grade 9": 360
+      }
+    },
+    {
+      "track": "nafes_english",
+      "total": 1080,
+      "levels": {
+        "English · Grade 3": 360,
+        "English · Grade 6": 360,
+        "English · Grade 9": 360
       }
     },
     {

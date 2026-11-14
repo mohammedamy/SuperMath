@@ -20,6 +20,14 @@
     Fractions: 'الكسور والنسب',
     Measurement: 'القياس',
     'Numbers and Operations': 'الأعداد والعمليات',
+    'Life Sciences': 'علوم الحياة',
+    'Chemistry & Matter': 'الكيمياء والمادة',
+    'Physics: Forces & Energy': 'الفيزياء: القوى والطاقة',
+    'Earth & Space Sciences': 'علوم الأرض والفضاء',
+    'Reading Comprehension': 'فهم المقروء',
+    'Text Analysis & Purpose': 'تحليل النص والغرض',
+    'Vocabulary & Context Clues': 'المفردات ودلالات السياق',
+    'Grammar & Sentence Structure': 'القواعد وبنية الجملة',
   };
 
   let selectedTopics = new Set();
@@ -82,13 +90,25 @@
 
   function getLessonsForActiveSelection() {
     const effTrack = getActiveEffectiveTrack();
-    if (effTrack !== 'nafes' && effTrack !== 'kangaroo' && effTrack !== 'kaust' && effTrack !== 'nsmo' && effTrack !== 'olympiad') return [];
+    if (
+      effTrack !== 'nafes' &&
+      effTrack !== 'nafes_science' &&
+      effTrack !== 'nafes_english' &&
+      effTrack !== 'kangaroo' &&
+      effTrack !== 'kaust' &&
+      effTrack !== 'nsmo' &&
+      effTrack !== 'olympiad'
+    ) return [];
     const study = window.__kaustStudy;
     if (!study) return [];
     const list = effTrack === 'olympiad'
       ? (study.olympiadLessons || [])
       : effTrack === 'nafes'
       ? (study.nafesLessons || [])
+      : effTrack === 'nafes_science'
+      ? (study.nafesScienceLessons || [])
+      : effTrack === 'nafes_english'
+      ? (study.nafesEnglishLessons || [])
       : effTrack === 'kangaroo'
       ? (study.kangarooLessons || [])
       : effTrack === 'nsmo'
@@ -104,6 +124,10 @@
         ? 'quiz-olympiad-tier-select'
         : effTrack === 'nafes'
         ? 'quiz-nafes-grade-select'
+        : effTrack === 'nafes_science'
+        ? 'quiz-nafes-science-grade-select'
+        : effTrack === 'nafes_english'
+        ? 'quiz-nafes-english-grade-select'
         : effTrack === 'kangaroo'
         ? 'quiz-kangaroo-level-select'
         : effTrack === 'nsmo'
@@ -129,7 +153,15 @@
       const allowedBps = new Set();
       lessons.forEach((l) => (l.blueprints || []).forEach((bp) => allowedBps.add(bp)));
       if (allowedBps.size > 0) {
-        pool = pool.filter((q) => allowedBps.has(q.kmc_blueprint) || allowedBps.has(q.nsmo_blueprint) || allowedBps.has(q.kangaroo_blueprint) || allowedBps.has(q.nafes_blueprint) || allowedBps.has(q.olympiad_blueprint));
+        pool = pool.filter((q) =>
+          allowedBps.has(q.kmc_blueprint) ||
+          allowedBps.has(q.nsmo_blueprint) ||
+          allowedBps.has(q.kangaroo_blueprint) ||
+          allowedBps.has(q.nafes_blueprint) ||
+          allowedBps.has(q.nafes_science_blueprint) ||
+          allowedBps.has(q.nafes_english_blueprint) ||
+          allowedBps.has(q.olympiad_blueprint)
+        );
       }
     }
 
