@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
   <title>SuperMath | Mathematics Practice · Edugates International School</title>
   <meta name="description" content="Explore bilingual mathematics practice by track, grade and topic, with worked solutions and printable practice sheets.">
-  <link rel="stylesheet" href="assets/refinement.css">
+  <link rel="stylesheet" href="assets/refinement.css?v=20261114-nafes-se">
   
   <!-- Favicon -->
   <link rel="icon" type="image/jpeg" href="LOGO.jpg">
@@ -665,9 +665,10 @@
     </div>
   </footer>
 
-  <script src="assets/practice-core.js"></script>
+  <script src="assets/practice-core.js?v=20261114-nafes-se"></script>
   <!-- APPLICATION JAVASCRIPT CODE -->
   <script>
+    window.SM_ASSET_VER = '20261114-nafes-se';
     // --- 1. BASE DATABASE DATA (STRUCTURAL & QUESTIONS) ---
     const appData = {
       tracks: [
@@ -1536,7 +1537,7 @@
 
       for (const track of tracks) {
         try {
-          const res = await fetch(`data/${track}.json`);
+          const res = await fetch(`data/${track}.json?v=${window.SM_ASSET_VER || '20261114-nafes-se'}`);
           if (res.ok) {
             const trackQuestions = await res.json();
             loadedQuestions = loadedQuestions.concat(trackQuestions);
@@ -1813,9 +1814,9 @@
       }
     }
   </script>
-  <script src="assets/refinement.js"></script>
-  <script src="assets/kaust-study.js"></script>
-  <script src="assets/kaust-mocks.js"></script>
-  <script src="assets/worksheet-customizer.js"></script>
+  <script src="assets/refinement.js?v=20261114-nafes-se"></script>
+  <script src="assets/kaust-study.js?v=20261114-nafes-se"></script>
+  <script src="assets/kaust-mocks.js?v=20261114-nafes-se"></script>
+  <script src="assets/worksheet-customizer.js?v=20261114-nafes-se"></script>
 </body>
 </html>

@@ -28,7 +28,7 @@ elements.get('print-pct-med').value='40';
 elements.get('print-pct-hard').value='25';
 const document={documentElement:new El('html'),body:new El('body'),activeElement:null,getElementById:id=>{assert(elements.has(id),'Unknown element '+id);return elements.get(id)},createElement:tag=>new El(tag),querySelectorAll:s=>s==='select'?[...elements.values()].filter(e=>e.id.includes('select')):[],querySelector:()=>new El('main'),addEventListener(){}};
 elements.get('slider-q-count').value='1000';
-const context=vm.createContext({document,console,Option:class{constructor(text,value){this.text=this.innerText=text;this.value=value}},Chart:class{constructor(ctx,opts){Object.assign(this,opts)}update(){}},matchMedia:()=>({matches:false}),localStorage:{setItem(){}},setTimeout:f=>f(),fetch:async url=>({ok:true,json:async()=>JSON.parse(fs.readFileSync(path.join(root,url),'utf8'))})});
+const context=vm.createContext({document,console,Option:class{constructor(text,value){this.text=this.innerText=text;this.value=value}},Chart:class{constructor(ctx,opts){Object.assign(this,opts)}update(){}},matchMedia:()=>({matches:false}),localStorage:{setItem(){}},setTimeout:f=>f(),fetch:async url=>({ok:true,json:async()=>JSON.parse(fs.readFileSync(path.join(root,String(url).split('?')[0]),'utf8'))})});
 context.window=context;context.addEventListener=(name,fn)=>{if(name==='DOMContentLoaded')events.push(fn)};let prints=0;context.print=()=>prints++;
 vm.runInContext(fs.readFileSync(path.join(root,'assets/practice-core.js'),'utf8'),context);
 vm.runInContext(app,context);

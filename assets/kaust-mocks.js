@@ -1952,14 +1952,15 @@
       practice.parentNode.insertBefore(sec, practice);
     }
 
+    const vq = '?v=' + (window.SM_ASSET_VER || '20261114-nafes-se');
     const [kRes, nRes, gRes, fRes, fsRes, feRes, oRes] = await Promise.allSettled([
-      fetch('data/kaust_mocks.json'),
-      fetch('data/nsmo_mocks.json'),
-      fetch('data/kangaroo_mocks.json'),
-      fetch('data/nafes_mocks.json'),
-      fetch('data/nafes_science_mocks.json'),
-      fetch('data/nafes_english_mocks.json'),
-      fetch('data/olympiad_mocks.json'),
+      fetch('data/kaust_mocks.json' + vq),
+      fetch('data/nsmo_mocks.json' + vq),
+      fetch('data/kangaroo_mocks.json' + vq),
+      fetch('data/nafes_mocks.json' + vq),
+      fetch('data/nafes_science_mocks.json' + vq),
+      fetch('data/nafes_english_mocks.json' + vq),
+      fetch('data/olympiad_mocks.json' + vq),
     ]);
     if (kRes.status === 'fulfilled' && kRes.value && kRes.value.ok) {
       try {

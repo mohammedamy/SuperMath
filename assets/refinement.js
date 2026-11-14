@@ -197,7 +197,7 @@ const kmcLevelLabels = {
 const KANG_LEVEL_ORDER = ['PreEcolier','Ecolier','Benjamin','Cadet','Junior','Student'];
 const NAFES_LEVEL_ORDER = ['Grade 3','Grade 6','Grade 9','Science · Grade 6','Science · Grade 9','English · Grade 3','English · Grade 6','English · Grade 9'];
 loadQuestionsData=async function(){
- const results=await Promise.allSettled(appData.tracks.map(async t=>{const r=await fetch(`data/${t.id}.json`);if(!r.ok)throw Error(t.id);const data=await r.json();if(!Array.isArray(data))throw Error(t.id);return data}));
+ const results=await Promise.allSettled(appData.tracks.map(async t=>{const r=await fetch(`data/${t.id}.json?v=${window.SM_ASSET_VER||'20261114-nafes-se'}`);if(!r.ok)throw Error(t.id);const data=await r.json();if(!Array.isArray(data))throw Error(t.id);return data}));
  appData.questions=results.flatMap(r=>r.status==='fulfilled'?r.value:[]);
  currentFilteredQuestions=[...appData.questions];
  const isAr=currentLang==='ar';

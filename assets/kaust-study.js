@@ -1216,14 +1216,15 @@
       sec.className = 'no-print-section';
       practice.parentNode.insertBefore(sec, practice);
     }
+    const vq = '?v=' + (window.SM_ASSET_VER || '20261114-nafes-se');
     const [kRes, nRes, gRes, fRes, fsRes, feRes, oRes] = await Promise.allSettled([
-      fetch('data/kaust_lessons.json'),
-      fetch('data/nsmo_lessons.json'),
-      fetch('data/kangaroo_lessons.json'),
-      fetch('data/nafes_lessons.json'),
-      fetch('data/nafes_science_lessons.json'),
-      fetch('data/nafes_english_lessons.json'),
-      fetch('data/olympiad_lessons.json'),
+      fetch('data/kaust_lessons.json' + vq),
+      fetch('data/nsmo_lessons.json' + vq),
+      fetch('data/kangaroo_lessons.json' + vq),
+      fetch('data/nafes_lessons.json' + vq),
+      fetch('data/nafes_science_lessons.json' + vq),
+      fetch('data/nafes_english_lessons.json' + vq),
+      fetch('data/olympiad_lessons.json' + vq),
     ]);
     if (kRes.status === 'fulfilled' && kRes.value && kRes.value.ok) {
       try {
